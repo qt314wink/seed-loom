@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/qt314wink/seed-loom/schemas/project-intake.schema.json",
+  "title": "Seed Loom Project Intake",
+  "type": "object",
+  "required": ["project_name", "raw_materials", "desired_outputs", "success_criteria"],
+  "properties": {
+    "project_name": { "type": "string", "minLength": 1 },
+    "project_slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "raw_materials": {
+      "type": "object",
+      "properties": {
+        "images": { "type": "array", "items": { "type": "string" } },
+        "notes": { "type": "array", "items": { "type": "string" } },
+        "files": { "type": "array", "items": { "type": "string" } },
+        "links": { "type": "array", "items": { "type": "string" } },
+        "code": { "type": "array", "items": { "type": "string" } },
+        "references": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": true
+    },
+    "desired_outputs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "essay",
+          "design_system",
+          "product_pack",
+          "web_build",
+          "prompt_pack",
+          "case_study",
+          "pitch",
+          "figma_board",
+          "github_repo",
+          "gumroad_listing",
+          "metadata_csv",
+          "technical_spec"
+        ]
+      }
+    },
+    "audience": { "type": "string" },
+    "platform": { "type": "string" },
+    "deadline": { "type": "string" },
+    "aesthetic_keywords": { "type": "array", "items": { "type": "string" } },
+    "conceptual_keywords": { "type": "array", "items": { "type": "string" } },
+    "technical_constraints": { "type": "array", "items": { "type": "string" } },
+    "commercial_goal": { "type": "string" },
+    "existing_assets": { "type": "array", "items": { "type": "string" } },
+    "unknowns": { "type": "array", "items": { "type": "string" } },
+    "success_criteria": { "type": "array", "items": { "type": "string" }, "minItems": 1 }
+  },
+  "additionalProperties": true
+}
