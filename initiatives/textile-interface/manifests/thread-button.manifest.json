@@ -1,0 +1,32 @@
+{
+  "version": "0.1.0",
+  "component": "ThreadButton",
+  "description": "A commit control whose stitched boundary tightens to indicate readiness and settles after activation.",
+  "material": "canvas",
+  "operation": "stitch",
+  "forces": {
+    "tension": 0.42,
+    "compression": 0.26,
+    "elasticity": 0.36,
+    "recovery": 0.66
+  },
+  "states": ["default", "hover", "focus", "active", "disabled", "loading", "success", "error"],
+  "a11y": {
+    "semanticRole": "button",
+    "reducedMotion": "Replace path and compression motion with immediate border-weight and label changes.",
+    "keyboardContract": "Uses native button behavior. Enter and Space activate; focus-visible receives a persistent outline.",
+    "nonVisualEquivalent": "Loading, success, and error states are announced through text and aria-live messaging."
+  },
+  "performance": {
+    "tier": "core",
+    "maxMainThreadMs": 4,
+    "fallbackTier": "core"
+  },
+  "evidence": {
+    "visualRegression": true,
+    "keyboardTest": true,
+    "reducedMotionTest": true,
+    "performanceTest": true,
+    "traceabilityId": "TIL-COMP-THREAD-BUTTON-001"
+  }
+}
