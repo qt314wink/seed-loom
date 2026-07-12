@@ -13,20 +13,21 @@ ROOT = Path(__file__).resolve().parents[1]
 INITIATIVE = ROOT / "initiatives" / "textile-interface"
 SCHEMA_PATH = INITIATIVE / "schemas" / "textile-language.schema.json"
 MANIFEST_DIR = INITIATIVE / "manifests"
-SWATCH_REFERENCE = INITIATIVE / "reference" / "core" / "swatch-card" / "index.html"
+SWATCH_REFERENCE = INITIATIVE / "reference" / "swatch-card" / "index.html"
 EXPECTED_MANIFESTS = {
-    "swatch-card.manifest.json",
-    "thread-button.manifest.json",
-    "quilt-panel.manifest.json",
+    "swatch-card.json",
+    "thread-button.json",
+    "quilt-panel.json",
 }
 REQUIRED_SWATCH_MARKERS = {
     "TIL-COMP-SWATCH-001",
     "prefers-reduced-motion",
     "forced-colors",
     "aria-live",
-    "aria-pressed",
+    "aria-expanded",
+    "aria-controls",
     "focus-visible",
-    "customElements.define('textile-swatch-card'",
+    "data-state",
 }
 
 
@@ -48,8 +49,11 @@ def main() -> int:
 
     actual_manifests = {path.name for path in MANIFEST_DIR.glob("*.json")}
     missing = EXPECTED_MANIFESTS - actual_manifests
+    unexpected = actual_manifests - EXPECTED_MANIFESTS
     if missing:
         return fail(f"Missing manifests: {', '.join(sorted(missing))}")
+    if unexpected:
+        return fail(f"Unexpected manifests create an ambiguous canonical set: {', '.join(sorted(unexpected))}")
 
     traceability_ids: set[str] = set()
     components: set[str] = set()
@@ -66,7 +70,6 @@ def main() -> int:
 
         component = manifest["component"]
         traceability_id = manifest["evidence"]["traceabilityId"]
-
         if component in components:
             return fail(f"Duplicate component name: {component}")
         if traceability_id in traceability_ids:
@@ -84,7 +87,7 @@ def main() -> int:
     if missing_markers:
         return fail(f"SwatchCard reference is missing required markers: {', '.join(missing_markers)}")
 
-    swatch_manifest = load_json(MANIFEST_DIR / "swatch-card.manifest.json")
+    swatch_manifest = load_json(MANIFEST_DIR / "swatch-card.json")
     if swatch_manifest["performance"]["tier"] != "core":
         return fail("SwatchCard manifest must declare Core fidelity")
     if swatch_manifest["operation"] != "pleat":
@@ -92,7 +95,7 @@ def main() -> int:
     if swatch_manifest["evidence"]["traceabilityId"] not in reference:
         return fail("SwatchCard reference does not expose its manifest traceability ID")
 
-    print("PASS: Core SwatchCard contains required accessibility and traceability markers")
+    print("PASS: Core SwatchCard contains required semantics, fallbacks, and traceability markers")
     print(f"Textile Interface validation passed: {len(components)} manifests, 1 executable Core reference.")
     return 0
 
