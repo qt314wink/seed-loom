@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.dev/schemas/textile-language.schema.json",
+  "title": "Textile Interface Language Component Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "component", "material", "operation", "forces", "states", "a11y", "performance", "evidence"],
+  "properties": {
+    "version": { "type": "string", "pattern": "^0\\.1\\.[0-9]+$" },
+    "component": { "type": "string", "minLength": 1 },
+    "description": { "type": "string" },
+    "material": {
+      "type": "string",
+      "enum": ["linen", "canvas", "silk", "felt", "mesh", "custom"]
+    },
+    "operation": {
+      "type": "string",
+      "enum": ["weave", "stitch", "pleat", "gather", "fold", "drape", "knot", "fray", "mend", "unravel"]
+    },
+    "forces": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tension", "compression", "recovery"],
+      "properties": {
+        "tension": { "$ref": "#/$defs/normalized" },
+        "compression": { "$ref": "#/$defs/normalized" },
+        "slack": { "$ref": "#/$defs/normalized" },
+        "gravity": { "$ref": "#/$defs/normalized" },
+        "friction": { "$ref": "#/$defs/normalized" },
+        "elasticity": { "$ref": "#/$defs/normalized" },
+        "drag": { "$ref": "#/$defs/normalized" },
+        "recovery": { "$ref": "#/$defs/normalized" }
+      }
+    },
+    "states": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": ["default", "hover", "focus", "active", "selected", "disabled", "loading", "error", "success", "expanded", "collapsed"]
+      }
+    },
+    "a11y": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["semanticRole", "reducedMotion"],
+      "properties": {
+        "semanticRole": { "type": "string", "minLength": 1 },
+        "reducedMotion": { "type": "string", "minLength": 1 },
+        "keyboardContract": { "type": "string" },
+        "nonVisualEquivalent": { "type": "string" }
+      }
+    },
+    "performance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["tier", "maxMainThreadMs"],
+      "properties": {
+        "tier": { "type": "string", "enum": ["core", "enhanced", "immersive"] },
+        "maxMainThreadMs": { "type": "number", "minimum": 0, "maximum": 16.7 },
+        "fallbackTier": { "type": "string", "enum": ["core", "enhanced"] }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["visualRegression", "keyboardTest", "reducedMotionTest"],
+      "properties": {
+        "visualRegression": { "type": "boolean" },
+        "keyboardTest": { "type": "boolean" },
+        "reducedMotionTest": { "type": "boolean" },
+        "performanceTest": { "type": "boolean" },
+        "traceabilityId": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "normalized": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}
