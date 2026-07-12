@@ -1,0 +1,34 @@
+{
+  "version": "0.1.0",
+  "component": "SwatchCard",
+  "description": "A semantic content card that uses linen material behavior and pleat compression to reveal retained detail without losing spatial origin.",
+  "material": "linen",
+  "operation": "pleat",
+  "forces": {
+    "tension": 0.24,
+    "compression": 0.18,
+    "slack": 0.08,
+    "friction": 0.62,
+    "elasticity": 0.36,
+    "recovery": 0.58
+  },
+  "states": ["default", "hover", "focus", "active", "selected", "disabled", "loading", "error", "expanded", "collapsed"],
+  "a11y": {
+    "semanticRole": "article",
+    "reducedMotion": "Remove displacement and compression; preserve state using border weight, shadow, and immediate content reveal.",
+    "keyboardContract": "The action is a native button. Enter or Space toggles expansion; focus remains on the control.",
+    "nonVisualEquivalent": "Expanded state is exposed with aria-expanded and the detail region is labelled by the card heading."
+  },
+  "performance": {
+    "tier": "core",
+    "maxMainThreadMs": 8,
+    "fallbackTier": "core"
+  },
+  "evidence": {
+    "visualRegression": true,
+    "keyboardTest": true,
+    "reducedMotionTest": true,
+    "performanceTest": true,
+    "traceabilityId": "TIL-COMP-SWATCH-001"
+  }
+}
