@@ -1,0 +1,24 @@
+{
+  "asset_id": "ast_nacre_inquiry_engine",
+  "kind": "tooling",
+  "name": "Nacre Inquiry Engine",
+  "description": "A deterministic inquiry schema that discovers design properties through metaphor, Socratic thinking, and semantic polarity — then outputs machine-readable profiles that drive tokens, components, and interaction rules.",
+  "github": {
+    "repository_id": "1294271391",
+    "owner": "MelodicBloom",
+    "repository": "nacre-inquiry-engine",
+    "default_branch": "main"
+  },
+  "lifecycle": {
+    "state": "active",
+    "disposition": "anchor",
+    "review_due": "2026-08-13"
+  },
+  "relations": [
+    {
+      "target_asset_id": "ast_nacre_orchid_atelier",
+      "relation": "produces_profile_consumed_by",
+      "confidence": "verified"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "asset_id": "ast_nacre_orchid_atelier",
+  "kind": "design_system",
+  "name": "Nacre Orchid Atelier",
+  "description": "Living material design system — tokens, GLSL shaders, React MaterialSurface, Next.js docs atlas. Powered by the Nacre Inquiry Engine.",
+  "github": {
+    "repository_id": "1297047112",
+    "owner": "MelodicBloom",
+    "repository": "nacre-orchid-atelier",
+    "default_branch": "main"
+  },
+  "lifecycle": {
+    "state": "active",
+    "disposition": "anchor_candidate",
+    "gate_status": "Gate 1 — In Progress",
+    "review_due": "2026-08-13"
+  },
+  "relations": [
+    {
+      "target_asset_id": "ast_nacre_inquiry_engine",
+      "relation": "consumes_profile_output",
+      "confidence": "verified"
+    },
+    {
+      "target_asset_id": "ast_aether",
+      "relation": "depends_on_shader_library",
+      "confidence": "hypothesis"
+    }
+  ]
+}

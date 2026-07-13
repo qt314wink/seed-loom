@@ -1,0 +1,24 @@
+{
+  "asset_id": "ast_aether",
+  "kind": "npm_package",
+  "name": "AETHER",
+  "description": "Premium iridescent GLSL shader library for React / Next.js. Freemium gallery + paid source package.",
+  "github": {
+    "repository_id": "1291666714",
+    "owner": "MelodicBloom",
+    "repository": "aether",
+    "default_branch": "main"
+  },
+  "lifecycle": {
+    "state": "active",
+    "disposition": "assess",
+    "review_due": "2026-07-20"
+  },
+  "relations": [
+    {
+      "target_asset_id": "ast_nacre_orchid_atelier",
+      "relation": "candidate_shader_provider",
+      "confidence": "hypothesis"
+    }
+  ]
+}
