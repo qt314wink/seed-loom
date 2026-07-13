@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/qt314wink/seed-loom/schemas/evidence-event.schema.json",
+  "title": "Evidence Event",
+  "description": "An immutable record of a CI result, gate verification, human decision, or provenance attestation.",
+  "type": "object",
+  "required": ["event_id", "schema_version", "event_type", "occurred_at", "asset", "actor", "confidence"],
+  "properties": {
+    "event_id": { "type": "string" },
+    "schema_version": { "type": "string", "enum": ["v1"] },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "asset.registered",
+        "asset.discovered",
+        "ci.completed",
+        "ci.failed",
+        "gate.check_started",
+        "gate.check_passed",
+        "gate.check_failed",
+        "gate.item_verified",
+        "gate.item_blocked",
+        "tag.proposed",
+        "tag.approved",
+        "tag.overridden",
+        "maturity.scored",
+        "disposition.proposed",
+        "disposition.approved",
+        "disposition.reversed",
+        "provenance.attested",
+        "relation.proposed",
+        "relation.verified",
+        "relation.dissolved",
+        "asset.archived",
+        "asset.restored"
+      ]
+    },
+    "occurred_at": { "type": "string", "format": "date-time" },
+    "asset": {
+      "type": "object",
+      "required": ["provider", "owner", "repo", "commit_sha"],
+      "properties": {
+        "provider": { "type": "string" },
+        "owner": { "type": "string" },
+        "repo": { "type": "string" },
+        "commit_sha": { "type": "string" },
+        "ref": { "type": "string" }
+      }
+    },
+    "actor": {
+      "type": "object",
+      "required": ["type", "id"],
+      "properties": {
+        "type": { "type": "string", "enum": ["system", "human", "workflow", "policy"] },
+        "id": { "type": "string" }
+      }
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["verified", "supported", "hypothesis", "aspirational"]
+    },
+    "claims": { "type": "object" },
+    "gate": {
+      "type": "object",
+      "properties": {
+        "gate_id": { "type": "string" },
+        "gate_name": { "type": "string" },
+        "item": { "type": "string" },
+        "result": { "type": "string", "enum": ["pass", "fail", "blocked", "unverified"] },
+        "evidence_url": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "workflow": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "run_id": { "type": "string" },
+        "run_url": { "type": "string" },
+        "conclusion": { "type": "string" }
+      }
+    },
+    "previous_event_id": { "type": "string" }
+  },
+  "additionalProperties": false
+}

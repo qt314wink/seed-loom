@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/qt314wink/seed-loom/schemas/asset.schema.json",
+  "title": "Portfolio Asset",
+  "type": "object",
+  "required": ["asset_id", "kind", "name", "github", "lifecycle"],
+  "properties": {
+    "asset_id": {
+      "type": "string",
+      "description": "Durable enterprise asset ID. Never changes across renames or transfers.",
+      "pattern": "^ast_[A-Za-z0-9_-]+$"
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "source_repository",
+        "npm_package",
+        "design_system",
+        "curriculum",
+        "platform",
+        "tooling",
+        "specification",
+        "non_code_artifact"
+      ]
+    },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "github": {
+      "type": "object",
+      "required": ["repository_id", "owner", "repository"],
+      "properties": {
+        "repository_id": {
+          "type": "string",
+          "description": "GitHub numeric repository ID — stable across renames and org transfers."
+        },
+        "node_id": { "type": "string" },
+        "owner": { "type": "string" },
+        "repository": { "type": "string" },
+        "default_branch": { "type": "string" }
+      }
+    },
+    "lifecycle": {
+      "type": "object",
+      "required": ["state", "disposition"],
+      "properties": {
+        "state": {
+          "type": "string",
+          "enum": ["active", "incubating", "preserved", "archived", "retired"]
+        },
+        "disposition": {
+          "type": "string",
+          "enum": [
+            "anchor_candidate",
+            "anchor",
+            "incubate",
+            "integrate",
+            "preserve",
+            "archive",
+            "retire",
+            "assess"
+          ]
+        },
+        "gate_status": { "type": "string" },
+        "review_due": { "type": "string", "format": "date" }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["target_asset_id", "relation"],
+        "properties": {
+          "target_asset_id": { "type": "string" },
+          "relation": { "type": "string" },
+          "confidence": { "type": "string" }
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}
