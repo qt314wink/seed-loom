@@ -17,5 +17,8 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install validation dependencies
+        run: pip install jsonschema
+
       - name: Validate Seed Loom scaffold
         run: python scripts/check_pipeline.py
