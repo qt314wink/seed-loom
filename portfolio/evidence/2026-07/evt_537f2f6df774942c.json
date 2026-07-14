@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_537f2f6df774942c",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-14T07:47:31.523041Z",
+  "asset": {
+    "provider": "github",
+    "owner": "MelodicBloom",
+    "repo": "opensre",
+    "commit_sha": "2026-07-04T17:42:05Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1289413252,
+    "github_node_id": "R_kgDOTNrihA",
+    "language": null,
+    "archived": false,
+    "private": false,
+    "fork": true,
+    "description": "Build your own AI SRE agents. The open source toolkit for the AI era.",
+    "pushed_at": "2026-07-04T17:42:05Z",
+    "created_at": "2026-07-04T18:07:11Z",
+    "open_issues_count": 0
+  }
+}

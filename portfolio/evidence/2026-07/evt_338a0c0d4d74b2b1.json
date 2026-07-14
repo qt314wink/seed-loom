@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_338a0c0d4d74b2b1",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-14T07:47:30.770400Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "comic-pop-system",
+    "commit_sha": "2026-06-01T21:53:32Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1247990821,
+    "github_node_id": "R_kgDOSmLUJQ",
+    "language": "CSS",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": "Comic book & pop art UI design system \u2014 halftone patterns, speech bubbles, panel cards, bold borders, sticker components. CSS tokens + GitHub Pages showcase.",
+    "pushed_at": "2026-06-01T21:53:32Z",
+    "created_at": "2026-05-24T03:34:25Z",
+    "open_issues_count": 1
+  }
+}

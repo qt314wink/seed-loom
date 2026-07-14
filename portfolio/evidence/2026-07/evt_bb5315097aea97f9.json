@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_bb5315097aea97f9",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-14T07:47:30.772168Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "nova-digital",
+    "commit_sha": "2026-06-07T14:12:45Z",
+    "ref": "master"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1247399656,
+    "github_node_id": "R_kgDOSlnO6A",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": null,
+    "pushed_at": "2026-06-07T14:12:45Z",
+    "created_at": "2026-05-23T09:04:16Z",
+    "open_issues_count": 1
+  }
+}

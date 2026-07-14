@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_5eed4bc7b14abfac",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-14T07:47:30.770829Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "design.md",
+    "commit_sha": "2026-07-01T02:53:14Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1281784708,
+    "github_node_id": "R_kgDOTGZ7hA",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": true,
+    "description": "A format specification for describing a visual identity to coding agents. DESIGN.md gives agents a persistent, structured understanding of a design system.",
+    "pushed_at": "2026-07-01T02:53:14Z",
+    "created_at": "2026-06-26T23:29:17Z",
+    "open_issues_count": 0
+  }
+}

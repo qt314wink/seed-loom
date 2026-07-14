@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_a26786cb4f61ee45",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-14T07:47:30.769445Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "Attached-Assets",
+    "commit_sha": "2026-06-01T21:48:12Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1251917391,
+    "github_node_id": "R_kgDOSp6-Tw",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": "Repository for https://replit.com/@coexistcocreate/Attached-Assets",
+    "pushed_at": "2026-06-01T21:48:12Z",
+    "created_at": "2026-05-28T02:54:17Z",
+    "open_issues_count": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_298a0949b2203225",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-14T07:47:30.772713Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "prompt-eng-interactive-tutorial",
+    "commit_sha": "2026-06-29T03:35:23Z",
+    "ref": "master"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1283568425,
+    "github_node_id": "R_kgDOTIGzKQ",
+    "language": "Jupyter Notebook",
+    "archived": false,
+    "private": false,
+    "fork": true,
+    "description": "Anthropic's Interactive Prompt Engineering Tutorial",
+    "pushed_at": "2026-06-29T03:35:23Z",
+    "created_at": "2026-06-29T03:33:12Z",
+    "open_issues_count": 0
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_1eb8f61037ff2c70",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-14T07:47:30.770194Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "chromaflora-sitezip",
+    "commit_sha": "2026-06-01T21:47:58Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1213255620,
+    "github_node_id": "R_kgDOSFDPxA",
+    "language": "HTML",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": "Imported from zip",
+    "pushed_at": "2026-06-01T21:47:58Z",
+    "created_at": "2026-04-17T07:37:00Z",
+    "open_issues_count": 1
+  }
+}

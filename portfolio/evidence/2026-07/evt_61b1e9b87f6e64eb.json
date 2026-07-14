@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_61b1e9b87f6e64eb",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-14T07:47:30.773127Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "shader-gallery",
+    "commit_sha": "2026-06-01T21:53:34Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1247977168,
+    "github_node_id": "R_kgDOSmKe0A",
+    "language": "HTML",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": "Interactive GLSL fragment shader collection \u2014 aurora, stained glass, psychedelic fluid & more. Live WebGL art.",
+    "pushed_at": "2026-06-01T21:53:34Z",
+    "created_at": "2026-05-24T03:01:02Z",
+    "open_issues_count": 1
+  }
+}

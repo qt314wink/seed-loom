@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_5a37b382af08dfac",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-14T07:47:30.774807Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "volcanic-obsidian-ember",
+    "commit_sha": "2026-06-01T21:48:09Z",
+    "ref": "master"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1248041802,
+    "github_node_id": "R_kgDOSmObSg",
+    "language": "HTML",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": null,
+    "pushed_at": "2026-06-01T21:48:09Z",
+    "created_at": "2026-05-24T05:32:55Z",
+    "open_issues_count": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_cc4f779a6f81afb3",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-14T07:47:30.771738Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "mochi-ui",
+    "commit_sha": "2026-07-08T17:05:22Z",
+    "ref": "master"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1256314036,
+    "github_node_id": "R_kgDOSuHUtA",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": "Claymorphism design system for React \u2014 spring physics, haptics, bento grids Claymorphism\u2009 \u2009react\u2009 \u2009design-system\u2009 \u2009typescript\u2009 \u2009animation\u2009 \u2009ui-components",
+    "pushed_at": "2026-07-08T17:05:22Z",
+    "created_at": "2026-06-01T16:56:15Z",
+    "open_issues_count": 1
+  }
+}

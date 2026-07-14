@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_aa924faba39d9d65",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-14T07:47:30.769177Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "agithub",
+    "commit_sha": "2024-06-24T18:35:09Z",
+    "ref": "master"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1282319599,
+    "github_node_id": "R_kgDOTG6k7w",
+    "language": null,
+    "archived": false,
+    "private": false,
+    "fork": true,
+    "description": "Agnostic Github client API -- An EDSL for connecting to REST servers",
+    "pushed_at": "2024-06-24T18:35:09Z",
+    "created_at": "2026-06-27T16:03:45Z",
+    "open_issues_count": 0
+  }
+}

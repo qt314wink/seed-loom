@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_37326df8be7225c5",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-14T07:47:30.774592Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "solar-cyberpunk-botanist",
+    "commit_sha": "2026-06-01T21:53:34Z",
+    "ref": "master"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1248041537,
+    "github_node_id": "R_kgDOSmOaQQ",
+    "language": "HTML",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": null,
+    "pushed_at": "2026-06-01T21:53:34Z",
+    "created_at": "2026-05-24T05:32:21Z",
+    "open_issues_count": 1
+  }
+}

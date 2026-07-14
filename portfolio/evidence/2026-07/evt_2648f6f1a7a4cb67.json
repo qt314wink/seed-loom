@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_2648f6f1a7a4cb67",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-14T07:47:30.772333Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "omni-loom-case-study",
+    "commit_sha": "2026-07-08T22:29:01Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1276368647,
+    "github_node_id": "R_kgDOTBPXBw",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": "Omni-Loom flagship case study \u2014 a deterministic generative compiler for cyber-physical creativity. Built with Next.js, TypeScript, Tailwind, and shadcn/ui.",
+    "pushed_at": "2026-07-08T22:29:01Z",
+    "created_at": "2026-06-21T22:29:30Z",
+    "open_issues_count": 0
+  }
+}

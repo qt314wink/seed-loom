@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_83c0e2e6a6d9a3bc",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-14T07:47:30.773028Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "retrieval-agent-template-js",
+    "commit_sha": "2025-06-03T20:52:37Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1283564299,
+    "github_node_id": "R_kgDOTIGjCw",
+    "language": null,
+    "archived": false,
+    "private": false,
+    "fork": true,
+    "description": null,
+    "pushed_at": "2025-06-03T20:52:37Z",
+    "created_at": "2026-06-29T03:25:57Z",
+    "open_issues_count": 0
+  }
+}

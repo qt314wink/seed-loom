@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_fb033612583e9e1a",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-14T07:47:30.773713Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "aether",
+    "commit_sha": "2026-07-07T02:06:57Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1291663400,
+    "github_node_id": "R_kgDOTP04KA",
+    "language": null,
+    "archived": true,
+    "private": false,
+    "fork": false,
+    "description": "AETHER \u2014 Premium iridescent GLSL shader library for React / Next.js. Freemium gallery + paid source package.",
+    "pushed_at": "2026-07-07T02:06:57Z",
+    "created_at": "2026-07-07T02:02:13Z",
+    "open_issues_count": 0
+  }
+}

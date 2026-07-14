@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_762299ad027f79e8",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-14T07:47:30.771974Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "morphism-nextjs",
+    "commit_sha": "2026-06-07T11:30:17Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1261912569,
+    "github_node_id": "R_kgDOSzdB-Q",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": null,
+    "pushed_at": "2026-06-07T11:30:17Z",
+    "created_at": "2026-06-07T10:21:27Z",
+    "open_issues_count": 0
+  }
+}
