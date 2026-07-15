@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Textile Interface — Core SwatchCard</title>
+  <style>
+    :root {
+      --linen: #f5f0e8;
+      --surface: #faf7f2;
+      --ink: #2c2c2c;
+      --indigo: #2c3e7e;
+      --saffron: #ff9f1c;
+      --emerald: #0a8c6b;
+      --rose: #e85d75;
+      --focus: #0b62ce;
+      --recovery: 220ms cubic-bezier(.2,.8,.2,1);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      color: var(--ink);
+      background:
+        repeating-linear-gradient(0deg, transparent 0 5px, rgb(44 62 126 / 2%) 5px 6px),
+        var(--linen);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    }
+
+    main { width: min(100%, 54rem); }
+    h1 { font: 700 clamp(2.5rem, 8vw, 5rem)/.95 Georgia, serif; margin: 0 0 1rem; }
+
+    .swatch-card {
+      display: grid;
+      gap: 1rem;
+      margin-top: 2rem;
+      padding: 1rem;
+      border: 2px dashed var(--indigo);
+      border-radius: 1rem;
+      background: var(--surface);
+      box-shadow: 0 18px 35px rgb(44 44 44 / 12%), inset 0 1px white;
+      transition: transform var(--recovery), box-shadow var(--recovery), border-style var(--recovery);
+    }
+
+    .swatch-card:hover,
+    .swatch-card:focus-within {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 45px rgb(44 44 44 / 16%), inset 0 1px white;
+    }
+
+    .swatch-card[data-state="expanded"] { border-style: solid; }
+
+    .swatch-card__sample {
+      min-height: 12rem;
+      border-radius: .75rem;
+      background:
+        radial-gradient(circle at 75% 20%, var(--saffron) 0 9%, transparent 10%),
+        radial-gradient(circle at 24% 70%, var(--rose) 0 12%, transparent 13%),
+        linear-gradient(135deg, var(--indigo), var(--emerald));
+    }
+
+    .swatch-card__meta { display: flex; justify-content: space-between; gap: 1rem; }
+    .swatch-card h2 { margin: 0; font: 700 2rem/1 Georgia, serif; }
+    .swatch-card p { line-height: 1.55; }
+
+    button {
+      justify-self: start;
+      min-height: 2.75rem;
+      padding: .65rem 1rem;
+      border: 2px dashed var(--indigo);
+      border-radius: .75rem;
+      color: var(--indigo);
+      background: transparent;
+      font: inherit;
+      font-weight: 750;
+      cursor: pointer;
+    }
+
+    button:hover { background: rgb(44 62 126 / 7%); }
+    button:active { transform: scale(.97); }
+    button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+    button[aria-expanded="true"] { color: white; background: var(--indigo); border-style: solid; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: .001ms !important; animation-duration: .001ms !important; }
+      .swatch-card:hover, .swatch-card:focus-within { transform: none; }
+    }
+
+    @media (forced-colors: active) {
+      .swatch-card, button { border-style: solid; }
+      .swatch-card__sample { border: 1px solid CanvasText; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p><strong>TIL-COMP-SWATCH-001</strong> · Core fidelity · zero dependencies</p>
+    <h1>SwatchCard</h1>
+    <p>The card remains understandable without texture or motion. Textile behavior reinforces state; it does not carry the state alone.</p>
+
+    <article class="swatch-card" data-state="collapsed" aria-labelledby="swatch-title">
+      <div class="swatch-card__sample" role="img" aria-label="Abstract indigo, emerald, saffron, and rose textile swatch"></div>
+      <div class="swatch-card__meta"><span>Linen</span><span>Pleat · Core</span></div>
+      <h2 id="swatch-title">Open Loom</h2>
+      <p>Structured enough to hold meaning; porous enough to let context breathe.</p>
+      <div id="swatch-details" hidden>
+        <dl>
+          <div><dt>Tension</dt><dd>0.24</dd></div>
+          <div><dt>Compression</dt><dd>0.18</dd></div>
+          <div><dt>Recovery</dt><dd>0.58</dd></div>
+        </dl>
+        <p>Expansion preserves the card’s source position and reveals retained detail.</p>
+      </div>
+      <button type="button" aria-expanded="false" aria-controls="swatch-details">Unfold details</button>
+      <span aria-live="polite" id="state-message" class="visually-hidden"></span>
+    </article>
+  </main>
+
+  <script>
+    const card = document.querySelector('.swatch-card');
+    const button = card.querySelector('button');
+    const details = document.getElementById('swatch-details');
+    const message = document.getElementById('state-message');
+
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      const next = !expanded;
+      button.setAttribute('aria-expanded', String(next));
+      button.textContent = next ? 'Pleat details' : 'Unfold details';
+      details.hidden = !next;
+      card.dataset.state = next ? 'expanded' : 'collapsed';
+      message.textContent = next ? 'Details unfolded.' : 'Details pleated.';
+    });
+  </script>
+</body>
+</html>

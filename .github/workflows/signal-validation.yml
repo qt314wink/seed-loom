@@ -22,3 +22,20 @@ jobs:
 
       - name: Validate Seed Loom scaffold
         run: python scripts/check_pipeline.py
+
+  validate-textile-interface:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install schema validator
+        run: python -m pip install --disable-pip-version-check jsonschema==4.23.0
+
+      - name: Validate manifests and Core reference
+        run: python scripts/validate_textile_interface.py
