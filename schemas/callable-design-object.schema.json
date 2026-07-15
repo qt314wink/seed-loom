@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.dev/schemas/callable-design-object.schema.json",
+  "title": "Callable Design Object",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "version",
+    "names",
+    "roles",
+    "capabilities",
+    "sourceEvidence",
+    "interpretations",
+    "invariants",
+    "parameters",
+    "invocationRules",
+    "adaptationRules",
+    "compatibility",
+    "verification",
+    "provenance"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:[.-][a-z0-9]+)*$" },
+    "version": { "type": "string" },
+    "names": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "roles": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+    "capabilities": { "type": "array", "items": { "type": "string" } },
+    "sourceEvidence": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/ref" } },
+    "interpretations": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/ref" } },
+    "invariants": { "type": "array", "items": { "$ref": "#/$defs/invariant" } },
+    "parameters": { "type": "array", "items": { "$ref": "#/$defs/parameter" } },
+    "variants": { "type": "array", "items": { "$ref": "#/$defs/variant" } },
+    "materials": { "type": "array", "items": { "$ref": "#/$defs/ref" } },
+    "motion": { "type": "array", "items": { "$ref": "#/$defs/ref" } },
+    "narrativeRoles": { "type": "array", "items": { "type": "string" } },
+    "commercialRoles": { "type": "array", "items": { "type": "string" } },
+    "invocationRules": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/rule" } },
+    "adaptationRules": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/adaptationRule" } },
+    "compatibility": { "$ref": "#/$defs/compatibility" },
+    "verification": { "$ref": "#/$defs/verification" },
+    "provenance": { "$ref": "#/$defs/provenance" }
+  },
+  "$defs": {
+    "ref": {
+      "type": "object",
+      "required": ["id"],
+      "properties": {
+        "id": { "type": "string" },
+        "version": { "type": "string" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "invariant": {
+      "type": "object",
+      "required": ["id", "statement", "severity"],
+      "properties": {
+        "id": { "type": "string" },
+        "statement": { "type": "string" },
+        "severity": { "enum": ["required", "protected", "preferred"] },
+        "evidenceRefs": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "parameter": {
+      "type": "object",
+      "required": ["path", "type", "required", "mutable"],
+      "properties": {
+        "path": { "type": "string" },
+        "type": { "enum": ["string", "number", "boolean", "color", "duration", "enum", "object", "array"] },
+        "required": { "type": "boolean" },
+        "mutable": { "type": "boolean" },
+        "default": {},
+        "allowedValues": { "type": "array" },
+        "minimum": { "type": "number" },
+        "maximum": { "type": "number" },
+        "semanticMeaning": { "type": "string" }
+      }
+    },
+    "variant": {
+      "type": "object",
+      "required": ["id", "parameterOverrides"],
+      "properties": {
+        "id": { "type": "string" },
+        "description": { "type": "string" },
+        "parameterOverrides": { "type": "object" },
+        "conditions": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "rule": {
+      "type": "object",
+      "required": ["id", "when", "effect"],
+      "properties": {
+        "id": { "type": "string" },
+        "when": { "type": "object" },
+        "effect": { "enum": ["include", "prefer", "exclude", "require-review"] },
+        "explanation": { "type": "string" }
+      }
+    },
+    "adaptationRule": {
+      "type": "object",
+      "required": ["target", "allowed", "requiresVerification"],
+      "properties": {
+        "target": { "type": "string" },
+        "allowed": { "type": "boolean" },
+        "range": {},
+        "requiresVerification": { "type": "boolean" },
+        "preservesInvariants": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "compatibility": {
+      "type": "object",
+      "required": ["requiredCapabilities", "conflicts", "performance"],
+      "properties": {
+        "requiredCapabilities": { "type": "array", "items": { "type": "string" } },
+        "preferredContexts": { "type": "array", "items": { "type": "string" } },
+        "conflicts": { "type": "array", "items": { "type": "string" } },
+        "performance": {
+          "type": "object",
+          "properties": {
+            "estimatedBytes": { "type": "integer", "minimum": 0 },
+            "renderCost": { "enum": ["low", "medium", "high"] },
+            "requiresGPU": { "type": "boolean" }
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["checks", "definitionOfDone"],
+      "properties": {
+        "checks": { "type": "array", "items": { "type": "string" } },
+        "definitionOfDone": { "type": "array", "items": { "type": "string" } },
+        "visualBaselines": { "type": "array", "items": { "type": "string" } },
+        "humanReviewRequired": { "type": "boolean" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["createdAt", "createdBy", "sourceRunIds", "decisionIds"],
+      "properties": {
+        "createdAt": { "type": "string", "format": "date-time" },
+        "createdBy": { "type": "string" },
+        "sourceRunIds": { "type": "array", "items": { "type": "string" } },
+        "decisionIds": { "type": "array", "items": { "type": "string" } },
+        "parentObjectIds": { "type": "array", "items": { "type": "string" } },
+        "license": { "type": "string" }
+      }
+    }
+  }
+}
