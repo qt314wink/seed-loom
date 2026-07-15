@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "system": {
+    "id": "seed-loom.flora-cactus-material.v0.2",
+    "inherits": [
+      "seed-loom.signal-to-system",
+      "omni-loom.fabrication-language",
+      "melodicbloom.evidence-graph"
+    ],
+    "rules": {
+      "floraMustEncodeMeaning": true,
+      "cactusMustEncodeBoundaryOrConstraint": true,
+      "minimumMaterialLayersAdvancedComponent": 3,
+      "minimumMaterialLayersHero": 5,
+      "maximumDominantOrganismsPerScreen": 1,
+      "maximumSupportingFragmentsPerScreen": 3
+    }
+  },
+  "color": {
+    "ground.linen": {"value": "#E7D8BD", "role": "woven ground"},
+    "ground.paper": {"value": "#F3E8D6", "role": "raised paper panel"},
+    "ground.ink": {"value": "#342621", "role": "thread and typography"},
+    "ground.deepTeal": {"value": "#203F3C", "role": "loom chamber"},
+    "botanical.cactus": {"value": "#3F7564", "role": "durable boundary"},
+    "botanical.cactusShadow": {"value": "#244D43", "role": "rib depth"},
+    "botanical.leaf": {"value": "#6E8B59", "role": "reusable artifact"},
+    "botanical.limeThread": {"value": "#A8B85E", "role": "active growth trace"},
+    "floral.coral": {"value": "#D56E62", "role": "validated synthesis"},
+    "floral.raspberry": {"value": "#A64D6C", "role": "alternate interpretation"},
+    "floral.violet": {"value": "#756487", "role": "symbolic inference"},
+    "floral.saffron": {"value": "#DBA53D", "role": "pollen and attention"},
+    "material.copper": {"value": "#A86638", "role": "verified attachment"},
+    "material.brass": {"value": "#C39A53", "role": "stable reference point"},
+    "material.aquaFilament": {"value": "#58A9A1", "role": "active translation"},
+    "status.error": {"value": "#8F3F3C", "role": "spine warning"},
+    "status.uncertain": {"value": "#B46F74", "role": "unresolved bud"}
+  },
+  "material": {
+    "linen": {"roughness": 0.86, "grain": 0.24, "depthPx": 1, "lightResponse": "diffuse"},
+    "pressedPaper": {"roughness": 0.78, "grain": 0.16, "depthPx": 3, "lightResponse": "soft"},
+    "quiltedLeaf": {"roughness": 0.62, "grain": 0.18, "depthPx": 9, "lightResponse": "broad"},
+    "vellumPetal": {"roughness": 0.34, "transmission": 0.24, "depthPx": 4, "lightResponse": "anisotropic"},
+    "ceramicCactus": {"roughness": 0.31, "specular": 0.68, "depthPx": 18, "lightResponse": "ridge-gloss"},
+    "copperStamen": {"roughness": 0.32, "metalness": 0.76, "depthPx": 5, "lightResponse": "narrow-warm"},
+    "embroideredThread": {"roughness": 0.92, "fiberWidthPx": 2, "depthPx": 2, "lightResponse": "matte"},
+    "flockedShadow": {"roughness": 1, "opacity": 0.3, "blurPx": 22, "lightResponse": "absorptive"}
+  },
+  "depth": {
+    "ground": 0,
+    "pigment": 1,
+    "emboss": 2,
+    "stitch": 3,
+    "botanicalBody": 4,
+    "metalAttachment": 5,
+    "translucentHighlight": 6,
+    "interactiveParticle": 7
+  },
+  "shape": {
+    "radius.thread": "7px",
+    "radius.patch": "20px",
+    "radius.specimen": "30px",
+    "radius.petal": "44% 56% 52% 48% / 58% 44% 56% 42%",
+    "radius.cactusRib": "46% 54% 48% 52% / 14% 14% 86% 86%",
+    "border.stitch": "2px dashed rgba(52,38,33,.42)",
+    "border.selvedge": "3px double rgba(52,38,33,.35)"
+  },
+  "light": {
+    "key": {"x": -0.35, "y": -0.5, "intensity": 0.8, "temperature": "warm"},
+    "fill": {"x": 0.65, "y": 0.2, "intensity": 0.35, "temperature": "aqua"},
+    "rim": {"x": 0.2, "y": -0.8, "intensity": 0.52, "temperature": "neutral"},
+    "pointerMaxRotationUtilityDeg": 5,
+    "pointerMaxRotationHeroDeg": 9
+  },
+  "parallax": {
+    "groundWeave": 0.15,
+    "botanicalSilhouette": 0.35,
+    "leafPetalBody": 0.6,
+    "metalDetail": 0.85,
+    "pollenSpineHighlight": 1
+  },
+  "motion": {
+    "germinate": {"durationMs": 620, "easing": [0.22, 1, 0.36, 1], "meaning": "source becomes active run"},
+    "rootTrace": {"durationMs": 520, "easing": [0.16, 1, 0.3, 1], "meaning": "provenance becomes visible"},
+    "branchFork": {"durationMs": 420, "easing": [0.65, 0, 0.35, 1], "meaning": "alternatives become visible"},
+    "leafUnfurl": {"durationMs": 480, "easing": [0.22, 1, 0.36, 1], "meaning": "reusable artifact is exposed"},
+    "bloomValidate": {"durationMs": 760, "easing": [0.16, 1, 0.3, 1], "meaning": "synthesis passes verification"},
+    "spineAlert": {"durationMs": 180, "easing": [0.4, 0, 1, 1], "meaning": "constraint interrupts progress"},
+    "cactusBreathe": {"durationMs": 4200, "easing": "ease-in-out", "iterations": "infinite", "meaning": "durable system remains alive"},
+    "pollenDrift": {"durationRangeMs": [6000, 9000], "meaning": "ambient noncritical activity"},
+    "fabricSettle": {"durationMs": 760, "easing": [0.16, 1, 0.3, 1], "meaning": "material layer gains weight"}
+  },
+  "behavior": {
+    "hover": {"depthDeltaPx": 6, "showProvenanceRoot": true, "lightShift": 0.12},
+    "press": {"depthScale": 0.48, "stitchInsetPx": 2, "shadowScale": 0.45},
+    "focus": {"marker": "brass-areole", "minimumOutlinePx": 3},
+    "selected": {"marker": "copper-eyelet", "persistentTrace": true},
+    "uncertain": {"form": "closed-bud", "edge": "split-seam", "showAlternatives": true},
+    "validated": {"form": "open-flower", "motion": "bloomValidate"},
+    "invalid": {"form": "spine-fray", "preserveReason": true},
+    "protected": {"form": "cactus-rib", "requiresExplicitOverride": true}
+  },
+  "accessibility": {
+    "textureNeverCarriesMeaningAlone": true,
+    "depthNeverCarriesMeaningAlone": true,
+    "motionNeverCarriesMeaningAlone": true,
+    "minimumTextContrast": 4.5,
+    "minimumLargeTextContrast": 3,
+    "minimumTapTargetPx": 44,
+    "reducedMotion": {
+      "disableParallax": true,
+      "replaceGrowthWithOpacity": true,
+      "persistTraceLines": true,
+      "showStateLabels": true
+    }
+  }
+}
