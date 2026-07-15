@@ -72,60 +72,47 @@ const stages: Stage[] = [
   }
 ];
 
-let active: StageId = 'evidence';
+const materials = [
+  ['satin','Satin / iridescent lamé','Broad anisotropic light and spectral shift'],
+  ['velvet','Velvet / flock','Deep pile, absorbed light, protected emphasis'],
+  ['quilt','Quilted batting','Compressed volume and stage containment'],
+  ['lace','Crochet / lace','Open-work logic, permeability, connective tissue'],
+  ['braid','Braided cord','Explicit translation path and durable linkage'],
+  ['denim','Denim / twill','Technical substrate, repeatable work surface'],
+  ['embroidery','Embroidery','Semantic contour, route, annotation, proof'],
+  ['parchment','Parchment / paper','Documentation, audit, reversible record'],
+  ['wood','Wood grain','Organic structure and directional inheritance'],
+  ['glass','Glass','Preview, transparency, inspectable overlay'],
+  ['silicone','Silicone','Flexible industrial boundary and safe compression'],
+  ['metal','Copper / brass','Attachment, verification, conductive state']
+] as const;
 
+let active: StageId = 'evidence';
 const app = document.querySelector<HTMLDivElement>('#app');
 if (!app) throw new Error('Seed-Loom app root was not found.');
 
 app.innerHTML = `
   <header class="site-header">
     <a class="brand" href="#top" aria-label="Seed-Loom home">Seed-<em>Loom</em></a>
-    <nav aria-label="Primary navigation">
-      <a href="#analyzer">Analyzer</a><a href="#trace">Evidence</a><a href="#commerce">Systems</a>
-    </nav>
+    <nav aria-label="Primary navigation"><a href="#analyzer">Analyzer</a><a href="#materials">Materials</a><a href="#trace">Evidence</a><a href="#commerce">Systems</a></nav>
     <button class="small-action" type="button">Start a run</button>
   </header>
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow">Traceable creative intelligence</p>
-        <h1 id="hero-title">A living system can be soft, thorned, and exact.</h1>
-        <p class="lede">Seed-Loom turns visual signals into evidence, interpretations, tokens, code, and verified systems—without hiding the thread between them.</p>
-        <div class="hero-actions"><a class="button primary" href="#analyzer">Enter analyzer</a><a class="button" href="#trace">Follow a trace</a></div>
-      </div>
-      <div class="organism-shell" aria-label="Interactive five-rib cactus analyzer">
-        <div class="flower" aria-hidden="true">${Array.from({length:8},(_,i)=>`<span class="petal" style="--i:${i}"></span>`).join('')}<span class="flower-core"></span></div>
-        <div class="cactus" role="tablist" aria-label="Analyzer stages">
-          ${stages.map((stage, i) => `<button class="rib ${i===0?'is-active':''}" role="tab" aria-selected="${i===0}" aria-controls="stage-panel" data-stage="${stage.id}" style="--rib:${i}" title="${stage.label}"><span>${stage.index}</span><b>${stage.label}</b></button>`).join('')}
-          <span class="spine-field" aria-hidden="true"></span>
-        </div>
-        <div class="pot"><span>OMNI-LOOM REFERENCE</span><b>material logic → executable system</b></div>
-      </div>
+      <div class="hero-copy"><p class="eyebrow">Traceable creative intelligence</p><h1 id="hero-title">A living system can be soft, thorned, and exact.</h1><p class="lede">Seed-Loom turns visual signals into evidence, interpretations, tokens, code, and verified systems—without hiding the thread between them.</p><div class="hero-actions"><a class="button primary" href="#analyzer">Enter analyzer</a><a class="button" href="#materials">Inspect materials</a></div></div>
+      <div class="organism-shell" aria-label="Interactive five-rib cactus analyzer"><div class="flower" aria-hidden="true">${Array.from({length:8},(_,i)=>`<span class="petal" style="--i:${i}"></span>`).join('')}<span class="flower-core"></span></div><div class="cactus" role="tablist" aria-label="Analyzer stages">${stages.map((stage, i) => `<button class="rib ${i===0?'is-active':''}" role="tab" aria-selected="${i===0}" aria-controls="stage-panel" data-stage="${stage.id}" style="--rib:${i}" title="${stage.label}"><span>${stage.index}</span><b>${stage.label}</b></button>`).join('')}<span class="spine-field" aria-hidden="true"></span></div><div class="pot"><span>OMNI-LOOM REFERENCE</span><b>material logic → executable system</b></div></div>
     </section>
 
-    <section class="analyzer-section" id="analyzer" aria-labelledby="analyzer-title">
-      <div class="section-heading"><p class="eyebrow">Live analyzer shell</p><h2 id="analyzer-title">Five ribs. One inspectable transformation.</h2></div>
-      <div class="analyzer-grid">
-        <aside class="stage-rail" aria-label="Analyzer stage controls">
-          ${stages.map((stage,i)=>`<button data-stage="${stage.id}" class="stage-button ${i===0?'is-active':''}"><span>${stage.index}</span><span><b>${stage.label}</b><small>${stage.botanicalState}</small></span></button>`).join('')}
-        </aside>
-        <article class="stage-panel" id="stage-panel" tabindex="-1" aria-live="polite"></article>
-      </div>
+    <section class="material-section" id="materials" aria-labelledby="materials-title">
+      <div class="section-heading"><p class="eyebrow">Inherited material atlas</p><h2 id="materials-title">The deck's textures are now first-class system fields.</h2><p class="material-intro">Each swatch is both visible and operational: it defines light response, depth, interaction, semantic role, allowed density, and translation targets.</p></div>
+      <div class="material-grid">${materials.map(([id,name,role])=>`<article class="material-card material-${id}" data-material="${id}"><div class="material-swatch" aria-hidden="true"><span></span></div><div><h3>${name}</h3><p>${role}</p><code>material.${id}</code></div></article>`).join('')}</div>
     </section>
 
-    <section class="trace-section" id="trace" aria-labelledby="trace-title">
-      <div><p class="eyebrow">Provenance field</p><h2 id="trace-title">Every transformation leaves a root and a thread.</h2></div>
-      <ol class="trace-chain">
-        <li><span>Source region</span><b>OMNI / 07</b></li><li><span>Evidence</span><b>ceramic rib</b></li><li><span>Interpretation</span><b>durable structure</b></li><li><span>Token</span><b>material.cactus</b></li><li><span>Code</span><b>CSS + JSON</b></li><li><span>Gate</span><b>visual stable</b></li>
-      </ol>
-    </section>
+    <section class="analyzer-section" id="analyzer" aria-labelledby="analyzer-title"><div class="section-heading"><p class="eyebrow">Live analyzer shell</p><h2 id="analyzer-title">Five ribs. One inspectable transformation.</h2></div><div class="analyzer-grid"><aside class="stage-rail" aria-label="Analyzer stage controls">${stages.map((stage,i)=>`<button data-stage="${stage.id}" class="stage-button ${i===0?'is-active':''}"><span>${stage.index}</span><span><b>${stage.label}</b><small>${stage.botanicalState}</small></span></button>`).join('')}</aside><article class="stage-panel" id="stage-panel" tabindex="-1" aria-live="polite"></article></div></section>
 
-    <section class="commerce-section" id="commerce" aria-labelledby="commerce-title">
-      <div class="section-heading"><p class="eyebrow">Cultivation architecture</p><h2 id="commerce-title">Reusable systems, grown under explicit constraints.</h2></div>
-      <div class="plans">
-        ${[['Seed','Explore public references'],['Garden','Compile private design systems'],['Conservatory','Validate teams and production'],['Biome','Govern enterprise ontologies']].map(([name,desc],i)=>`<article class="plan"><span class="plan-symbol">${['✦','❋','✺','✹'][i]}</span><h3>${name}</h3><p>${desc}</p><button type="button">Inspect ${name}</button></article>`).join('')}
-      </div>
-    </section>
+    <section class="trace-section" id="trace" aria-labelledby="trace-title"><div><p class="eyebrow">Provenance field</p><h2 id="trace-title">Every transformation leaves a root and a thread.</h2></div><ol class="trace-chain"><li><span>Source region</span><b>OMNI / 07</b></li><li><span>Evidence</span><b>ceramic rib</b></li><li><span>Interpretation</span><b>durable structure</b></li><li><span>Token</span><b>material.cactus</b></li><li><span>Code</span><b>CSS + JSON</b></li><li><span>Gate</span><b>visual stable</b></li></ol></section>
+
+    <section class="commerce-section" id="commerce" aria-labelledby="commerce-title"><div class="section-heading"><p class="eyebrow">Cultivation architecture</p><h2 id="commerce-title">Reusable systems, grown under explicit constraints.</h2></div><div class="plans">${[['Seed','Explore public references'],['Garden','Compile private design systems'],['Conservatory','Validate teams and production'],['Biome','Govern enterprise ontologies']].map(([name,desc],i)=>`<article class="plan"><span class="plan-symbol">${['✦','❋','✺','✹'][i]}</span><h3>${name}</h3><p>${desc}</p><button type="button">Inspect ${name}</button></article>`).join('')}</div></section>
   </main>
   <footer><a class="brand" href="#top">Seed-<em>Loom</em></a><p>Every transformation leaves a thread.</p></footer>
 `;
@@ -138,38 +125,11 @@ function renderStage(stageId: StageId, focus = false) {
   if (!stage) return;
   active = stageId;
   document.documentElement.dataset.stage = stageId;
-  document.querySelectorAll<HTMLElement>('[data-stage]').forEach((control) => {
-    const selected = control.dataset.stage === stageId;
-    control.classList.toggle('is-active', selected);
-    if (control.getAttribute('role') === 'tab') control.setAttribute('aria-selected', String(selected));
-  });
-  panel.innerHTML = `
-    <header class="panel-header"><div><p class="panel-index">${stage.index} / ${stage.botanicalState}</p><h3>${stage.label}</h3></div><div class="metric"><strong>${stage.metric}</strong><span>${stage.metricLabel}</span></div></header>
-    <p class="panel-summary">${stage.summary}</p>
-    <div class="specimens">${stage.items.map((item) => `<article class="specimen"><span class="specimen-node" aria-hidden="true"></span><div><h4>${item.title}</h4><p>${item.detail}</p>${item.confidence === undefined ? '' : `<div class="confidence"><i style="width:${item.confidence*100}%"></i></div>`}</div></article>`).join('')}</div>
-    <div class="trace-readout"><span>TRACE</span><code>${stage.trace}</code></div>`;
+  document.querySelectorAll<HTMLElement>('[data-stage]').forEach((control) => { const selected = control.dataset.stage === stageId; control.classList.toggle('is-active', selected); if (control.getAttribute('role') === 'tab') control.setAttribute('aria-selected', String(selected)); });
+  panel.innerHTML = `<header class="panel-header"><div><p class="panel-index">${stage.index} / ${stage.botanicalState}</p><h3>${stage.label}</h3></div><div class="metric"><strong>${stage.metric}</strong><span>${stage.metricLabel}</span></div></header><p class="panel-summary">${stage.summary}</p><div class="specimens">${stage.items.map((item) => `<article class="specimen"><span class="specimen-node" aria-hidden="true"></span><div><h4>${item.title}</h4><p>${item.detail}</p>${item.confidence === undefined ? '' : `<div class="confidence"><i style="width:${item.confidence*100}%"></i></div>`}</div></article>`).join('')}</div><div class="trace-readout"><span>TRACE</span><code>${stage.trace}</code></div>`;
   if (focus) panel.focus();
 }
 
-document.addEventListener('click', (event) => {
-  const target = (event.target as HTMLElement).closest<HTMLElement>('[data-stage]');
-  const stage = target?.dataset.stage as StageId | undefined;
-  if (stage) renderStage(stage, target?.getAttribute('role') !== 'tab');
-});
-
-document.querySelector('.cactus')?.addEventListener('keydown', (event) => {
-  if (!(event instanceof KeyboardEvent) || !['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(event.key)) return;
-  event.preventDefault();
-  const index = stages.findIndex((stage) => stage.id === active);
-  let next = index;
-  if (event.key === 'Home') next = 0;
-  else if (event.key === 'End') next = stages.length - 1;
-  else next = (index + (event.key === 'ArrowRight' || event.key === 'ArrowDown' ? 1 : -1) + stages.length) % stages.length;
-  const stage = stages[next];
-  if (stage) {
-    renderStage(stage.id);
-    document.querySelector<HTMLButtonElement>(`.rib[data-stage="${stage.id}"]`)?.focus();
-  }
-});
-
+document.addEventListener('click', (event) => { const target = (event.target as HTMLElement).closest<HTMLElement>('[data-stage]'); const stage = target?.dataset.stage as StageId | undefined; if (stage) renderStage(stage, target?.getAttribute('role') !== 'tab'); });
+document.querySelector('.cactus')?.addEventListener('keydown', (event) => { if (!(event instanceof KeyboardEvent) || !['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(event.key)) return; event.preventDefault(); const index = stages.findIndex((stage) => stage.id === active); let next = index; if (event.key === 'Home') next = 0; else if (event.key === 'End') next = stages.length - 1; else next = (index + (event.key === 'ArrowRight' || event.key === 'ArrowDown' ? 1 : -1) + stages.length) % stages.length; const stage = stages[next]; if (stage) { renderStage(stage.id); document.querySelector<HTMLButtonElement>(`.rib[data-stage="${stage.id}"]`)?.focus(); } });
 renderStage(active);
