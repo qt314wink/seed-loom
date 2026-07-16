@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_176aa7eee4ae87ed",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-16T07:55:43.907912Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "chromaflora-prime",
+    "commit_sha": "2026-07-15T17:17:02Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1261976307,
+    "github_node_id": "R_kgDOSzg68w",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": null,
+    "pushed_at": "2026-07-15T17:17:02Z",
+    "created_at": "2026-06-07T12:09:32Z",
+    "open_issues_count": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_ac79a1a474e0521a",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-16T07:55:44.642357Z",
+  "asset": {
+    "provider": "github",
+    "owner": "MelodicBloom",
+    "repo": ".github",
+    "commit_sha": "2026-07-15T17:02:46Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1290576280,
+    "github_node_id": "R_kgDOTOyhmA",
+    "language": null,
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": "MelodicBloom organization profile",
+    "pushed_at": "2026-07-15T17:02:46Z",
+    "created_at": "2026-07-06T04:10:12Z",
+    "open_issues_count": 1
+  }
+}
