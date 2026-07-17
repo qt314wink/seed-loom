@@ -1,0 +1,205 @@
+{
+  "id": "vc:material-pattern:flush-pearl-resin-inlay-walnut:v0.1",
+  "name": "Flush Pearl and Amber Resin Inlay on Satin Rift-Sawn Walnut",
+  "type": "visual_construct",
+  "version": "0.1.0",
+  "lifecycle_state": "tested",
+  "source": {
+    "source_type": "constructed_example",
+    "description": "Seed example used to test VOC v0.1 material, surface, depth, pattern, prompt, code, QA, and decision logic."
+  },
+  "confidence": 0.86,
+  "parameters": [
+    {
+      "name": "material_family",
+      "family": "material",
+      "definition": "Primary substrate family.",
+      "value": "wood",
+      "scale_or_unit": "controlled_vocabulary",
+      "confidence": 0.95,
+      "evidence": ["Walnut base is explicitly specified."],
+      "compiler_mappings": {
+        "prompt": "satin rift-sawn walnut base",
+        "css_svg": "directional grain turbulence and warm brown base layer",
+        "webgl": "low metalness, satin roughness, subtle normal map"
+      },
+      "qa_rule": "Wood grain direction must remain coherent unless burl or end-grain is specified."
+    },
+    {
+      "name": "grain_directionality",
+      "family": "surface_physics",
+      "definition": "Degree to which surface features flow in a single dominant direction.",
+      "value": 0.86,
+      "scale_or_unit": "0.0_to_1.0",
+      "confidence": 0.82,
+      "evidence": ["Rift-sawn walnut implies strong linear grain."],
+      "compiler_mappings": {
+        "css_svg": "use directional turbulence stretched along Y axis",
+        "prompt": "directional linear walnut grain"
+      },
+      "qa_rule": "Reject random grain unless a mutation explicitly changes the cut or figure."
+    },
+    {
+      "name": "wood_displacement_strength",
+      "family": "surface_physics",
+      "definition": "Canonical low-amplitude tactile grain relief.",
+      "value": 0.22,
+      "scale_or_unit": "0.0_to_1.0",
+      "confidence": 0.78,
+      "evidence": ["Satin finished walnut should show subtle relief, not heavy carving."],
+      "compiler_mappings": {
+        "svg": "feDisplacementMap scale low to medium",
+        "webgl": "displacementScale low, normalScale moderate",
+        "prompt": "low-amplitude grain displacement"
+      },
+      "qa_rule": "Do not exaggerate grain into carved channels unless explicitly transformed."
+    },
+    {
+      "name": "depth_level_resin_fill",
+      "family": "depth",
+      "definition": "Depth position of the resin fill relative to the walnut base plane.",
+      "value": 0,
+      "scale_or_unit": "relative_depth_level",
+      "confidence": 0.90,
+      "evidence": ["Flush inlay means fill rises to the base plane."],
+      "compiler_mappings": {
+        "css": "avoid drop shadow; use edge-darkening and specular overlay",
+        "prompt": "flush translucent amber resin inlay"
+      },
+      "qa_rule": "Flush inlay should not cast the same shadow as an applied ornament."
+    },
+    {
+      "name": "pearl_iridescence",
+      "family": "surface_physics",
+      "definition": "Subtle structural color effect from mother-of-pearl fragments.",
+      "value": 0.54,
+      "scale_or_unit": "0.0_to_1.0",
+      "confidence": 0.82,
+      "evidence": ["Mother-of-pearl implies pearlescent optical scattering."],
+      "compiler_mappings": {
+        "prompt": "subtle iridescent mother-of-pearl fragments suspended beneath clear resin",
+        "css_svg": "low-opacity prismatic highlight masks",
+        "webgl": "clearcoat plus subtle color-shifted Fresnel"
+      },
+      "qa_rule": "Avoid rainbow overload unless experimental mode is active."
+    },
+    {
+      "name": "complexity",
+      "family": "qa",
+      "definition": "Overall visual density and cognitive load.",
+      "value": 0.64,
+      "scale_or_unit": "0.0_to_1.0",
+      "confidence": 0.74,
+      "evidence": ["Wood grain, resin, pearl, carved channels, and optional brass create richness but remain bounded."],
+      "qa_rule": "Normal range is 0.45 to 0.72."
+    }
+  ],
+  "relationships": [
+    {
+      "source_entity_id": "vc:material-pattern:flush-pearl-resin-inlay-walnut:v0.1",
+      "target_entity_id": "material:black-walnut:rift-sawn:satin",
+      "relationship_type": "uses_material",
+      "direction": "directed",
+      "strength": 0.95,
+      "confidence": 0.95,
+      "evidence": ["Walnut substrate is explicitly specified."],
+      "compiler_effect": "Provides base color, grain, roughness, displacement, and prompt language."
+    },
+    {
+      "source_entity_id": "vc:material-pattern:flush-pearl-resin-inlay-walnut:v0.1",
+      "target_entity_id": "depth:flush-inlay",
+      "relationship_type": "has_depth",
+      "direction": "directed",
+      "strength": 0.92,
+      "confidence": 0.90,
+      "evidence": ["Resin fill is described as flush."],
+      "qa_effect": "Requires edge-darkening instead of raised drop shadow."
+    },
+    {
+      "source_entity_id": "vc:material-pattern:flush-pearl-resin-inlay-walnut:v0.1",
+      "target_entity_id": "pattern:radial-marquetry-inlay",
+      "relationship_type": "arranged_as",
+      "direction": "directed",
+      "strength": 0.78,
+      "confidence": 0.70,
+      "evidence": ["Example pattern supports radial channels, though final layout remains adjustable."],
+      "constraint_effect": "Mutation may switch radial to asymmetrical marquetry only if pattern QA remains above threshold."
+    }
+  ],
+  "constraints": {
+    "preserve": [
+      "directional walnut grain",
+      "satin finish",
+      "flush carved inlay logic",
+      "subtle pearlescent optical behavior",
+      "physically plausible shadows"
+    ],
+    "avoid": [
+      "floating inlay",
+      "random glitter",
+      "inconsistent grain direction",
+      "plastic varnish",
+      "neon acrylic base in production mode",
+      "cartoon outlines",
+      "muddy resin opacity"
+    ],
+    "hard_constraints": [
+      "Flush resin fill must remain at base-plane level unless transformed into applied ornament.",
+      "Gold or pearl particles must remain inside the resin or channel boundary."
+    ],
+    "soft_constraints": [
+      "Prefer warm museum lighting.",
+      "Prefer low-to-medium ornament density."
+    ],
+    "exception_rules": [
+      "High iridescence is allowed in wild-lab mode only."
+    ]
+  },
+  "transformations": [
+    {
+      "operation_type": "compile_prompt",
+      "input_entity_ids": ["vc:material-pattern:flush-pearl-resin-inlay-walnut:v0.1"],
+      "output_entity_ids": ["prompt:flush-pearl-resin-inlay-walnut:v0.1"],
+      "parameters_changed": [],
+      "reason": "Create a reusable image-generation prompt from canonical material, surface, depth, and pattern values.",
+      "constraints_applied": ["avoid floating inlay", "preserve satin walnut", "preserve flush resin"],
+      "qa_score_before": 0.82,
+      "qa_score_after": 0.86,
+      "alternatives_considered": ["short aesthetic prompt", "SVG-first material description"],
+      "failure_risks": ["Prompt overload", "over-saturated pearl colors"],
+      "reviewer_status": "draft_compiled"
+    }
+  ],
+  "qa": {
+    "identity_fit": 0.88,
+    "material_plausibility": 0.86,
+    "depth_plausibility": 0.91,
+    "surface_coherence": 0.82,
+    "craft_plausibility": 0.78,
+    "cultural_confidence": 0.55,
+    "prompt_clarity": 0.84,
+    "code_feasibility": 0.79,
+    "complexity": 0.64,
+    "novelty": 0.29,
+    "status": "approved_with_notes",
+    "notes": [
+      "Use process language such as inlay-inspired or marquetry-inspired unless a specific tradition is documented.",
+      "SVG implementation should keep displacement subtle for performance."
+    ]
+  },
+  "decision_log": [
+    {
+      "decision_id": "decision:v0.1:surface-source-of-truth",
+      "context": "How to store rendering values for material surfaces.",
+      "chosen_path": "Canonical surface profile first, renderer-specific mappings second.",
+      "why_chosen": "Preserves interoperability across prompt, SVG, CSS, WebGL, Figma, and future targets.",
+      "alternative_1": "SVG-first feTurbulence and feDisplacement values.",
+      "why_not_alternative_1_now": "Too renderer-specific for the root ontology.",
+      "alternative_2": "Prompt-first descriptive material phrases.",
+      "why_not_alternative_2_now": "Useful but not precise enough for code and QA.",
+      "risk": "Requires compiler mappings before visual output is automatic.",
+      "revisit_condition": "If the first product export is SVG-only.",
+      "future_use": "Create an SVG-first lightweight asset pack pathway."
+    }
+  ]
+}

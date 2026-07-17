@@ -1,0 +1,274 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/qt314wink/seed-loom/schemas/universal-entity.schema.json",
+  "title": "VOC Universal Entity",
+  "description": "Starter schema for the Visual Ontology Compiler universal entity model.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "type",
+    "version",
+    "lifecycle_state",
+    "confidence",
+    "parameters",
+    "relationships",
+    "constraints",
+    "qa",
+    "decision_log"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_.:-]*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 3
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "visual_construct",
+        "image",
+        "material",
+        "surface_profile",
+        "pattern",
+        "texture",
+        "craft_process",
+        "cultural_reference",
+        "prompt",
+        "negative_prompt",
+        "design_token",
+        "ui_component",
+        "shader",
+        "svg_filter",
+        "css_recipe",
+        "code_module",
+        "qa_rule",
+        "decision_record",
+        "mutation_candidate",
+        "cluster",
+        "product_export"
+      ]
+    },
+    "version": {
+      "type": "string"
+    },
+    "lifecycle_state": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "observed",
+        "defined",
+        "tested",
+        "approved",
+        "production",
+        "experimental",
+        "dormant",
+        "rejected",
+        "deprecated",
+        "archived"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "parameters": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/parameter"
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relationship"
+      }
+    },
+    "constraints": {
+      "$ref": "#/$defs/constraints"
+    },
+    "transformations": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/transformation"
+      }
+    },
+    "qa": {
+      "$ref": "#/$defs/qa"
+    },
+    "decision_log": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/decision"
+      }
+    }
+  },
+  "$defs": {
+    "parameter": {
+      "type": "object",
+      "required": ["name", "family", "value", "confidence"],
+      "properties": {
+        "name": { "type": "string" },
+        "family": {
+          "type": "string",
+          "enum": [
+            "identity",
+            "material",
+            "surface_physics",
+            "depth",
+            "pattern",
+            "craft_process",
+            "cultural_provenance",
+            "prompt",
+            "code_rendering",
+            "qa",
+            "governance",
+            "evolution"
+          ]
+        },
+        "definition": { "type": "string" },
+        "value": {},
+        "scale_or_unit": { "type": "string" },
+        "allowed_range": {},
+        "default_value": {},
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "evidence": { "type": "array", "items": { "type": "string" } },
+        "source": { "type": "string" },
+        "override_rule": { "type": "string" },
+        "compiler_mappings": { "type": "object", "additionalProperties": true },
+        "qa_rule": { "type": "string" }
+      }
+    },
+    "relationship": {
+      "type": "object",
+      "required": ["source_entity_id", "target_entity_id", "relationship_type", "strength", "confidence"],
+      "properties": {
+        "source_entity_id": { "type": "string" },
+        "target_entity_id": { "type": "string" },
+        "relationship_type": {
+          "type": "string",
+          "enum": [
+            "is_a",
+            "part_of",
+            "made_of",
+            "uses_material",
+            "has_surface",
+            "has_depth",
+            "arranged_as",
+            "derived_from",
+            "inspired_by",
+            "compiled_to",
+            "compatible_with",
+            "conflicts_with",
+            "avoids",
+            "requires",
+            "overrides",
+            "mutates_from",
+            "alternative_to",
+            "rejected_because",
+            "approved_for",
+            "belongs_to_cluster",
+            "implements",
+            "validated_by"
+          ]
+        },
+        "direction": { "type": "string", "enum": ["directed", "bidirectional"] },
+        "strength": { "type": "number", "minimum": 0, "maximum": 1 },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "evidence": { "type": "array", "items": { "type": "string" } },
+        "constraint_effect": { "type": "string" },
+        "compiler_effect": { "type": "string" },
+        "qa_effect": { "type": "string" }
+      }
+    },
+    "constraints": {
+      "type": "object",
+      "required": ["preserve", "avoid"],
+      "properties": {
+        "preserve": { "type": "array", "items": { "type": "string" } },
+        "avoid": { "type": "array", "items": { "type": "string" } },
+        "hard_constraints": { "type": "array", "items": { "type": "string" } },
+        "soft_constraints": { "type": "array", "items": { "type": "string" } },
+        "exception_rules": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "transformation": {
+      "type": "object",
+      "required": ["operation_type", "input_entity_ids", "output_entity_ids", "reason"],
+      "properties": {
+        "operation_type": {
+          "type": "string",
+          "enum": [
+            "ingest",
+            "normalize",
+            "observe",
+            "classify",
+            "parameterize",
+            "constrain",
+            "compile_prompt",
+            "compile_code",
+            "validate",
+            "mutate",
+            "cluster",
+            "compare",
+            "approve",
+            "reject",
+            "publish"
+          ]
+        },
+        "input_entity_ids": { "type": "array", "items": { "type": "string" } },
+        "output_entity_ids": { "type": "array", "items": { "type": "string" } },
+        "parameters_changed": { "type": "array", "items": { "type": "string" } },
+        "reason": { "type": "string" },
+        "constraints_applied": { "type": "array", "items": { "type": "string" } },
+        "qa_score_before": { "type": "number", "minimum": 0, "maximum": 1 },
+        "qa_score_after": { "type": "number", "minimum": 0, "maximum": 1 },
+        "alternatives_considered": { "type": "array", "items": { "type": "string" } },
+        "failure_risks": { "type": "array", "items": { "type": "string" } },
+        "reviewer_status": { "type": "string" }
+      }
+    },
+    "qa": {
+      "type": "object",
+      "properties": {
+        "identity_fit": { "type": "number", "minimum": 0, "maximum": 1 },
+        "material_plausibility": { "type": "number", "minimum": 0, "maximum": 1 },
+        "depth_plausibility": { "type": "number", "minimum": 0, "maximum": 1 },
+        "surface_coherence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "craft_plausibility": { "type": "number", "minimum": 0, "maximum": 1 },
+        "cultural_confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "prompt_clarity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "code_feasibility": { "type": "number", "minimum": 0, "maximum": 1 },
+        "complexity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "novelty": { "type": "number", "minimum": 0, "maximum": 1 },
+        "status": { "type": "string" },
+        "notes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "required": ["decision_id", "chosen_path", "why_chosen"],
+      "properties": {
+        "decision_id": { "type": "string" },
+        "context": { "type": "string" },
+        "chosen_path": { "type": "string" },
+        "why_chosen": { "type": "string" },
+        "alternative_1": { "type": "string" },
+        "why_not_alternative_1_now": { "type": "string" },
+        "alternative_2": { "type": "string" },
+        "why_not_alternative_2_now": { "type": "string" },
+        "risk": { "type": "string" },
+        "revisit_condition": { "type": "string" },
+        "future_use": { "type": "string" }
+      }
+    }
+  }
+}
