@@ -1,0 +1,69 @@
+{
+  "run": {
+    "id": "run_fixed-run",
+    "version": "seed-loom.analyzer-core.v0.1",
+    "createdAt": "2026-07-19T12:00:00.000Z",
+    "engine": "fixture",
+    "parentRunId": null
+  },
+  "source": {
+    "id": "src_fixed-source",
+    "kind": "image",
+    "sha256": "039058c6f2c0cb492c533b0a4d14ef77cc0f78abccced5287d84a1a2011cfb81",
+    "uri": null,
+    "regions": []
+  },
+  "evidence": [
+    {
+      "id": "ev_1",
+      "predicate": "dominant-color",
+      "value": "#E9DDC7",
+      "confidence": 0.95,
+      "regionIds": [],
+      "method": "fixture"
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "int_1",
+      "claim": "woven linen surface",
+      "confidence": 0.9,
+      "evidenceIds": ["ev_1"],
+      "alternatives": ["warm paper surface"],
+      "disambiguationQuestion": "Is the visible grain fibrous or pulped?"
+    }
+  ],
+  "tokens": [
+    {
+      "path": "color.surface.canvas",
+      "value": "#E9DDC7",
+      "class": "primitive",
+      "evidenceIds": ["ev_1"],
+      "interpretationIds": ["int_1"],
+      "confidence": 0.95
+    }
+  ],
+  "translations": [
+    {
+      "target": "css",
+      "artifact": "--color-surface-canvas: #E9DDC7;",
+      "sourceTokenPaths": ["color.surface.canvas"]
+    }
+  ],
+  "verification": {
+    "traceabilityCoverage": 1,
+    "unsupportedClaims": 0,
+    "checks": [
+      {
+        "id": "reference-integrity",
+        "status": "pass",
+        "message": "All evidence, interpretation, and token references resolve."
+      },
+      {
+        "id": "derived-claim-support",
+        "status": "pass",
+        "message": "Every interpretation, token, and translation cites its supporting source."
+      }
+    ]
+  }
+}
