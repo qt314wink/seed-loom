@@ -1,6 +1,6 @@
 # Analyzer Core Foundation
 
-This package is the first executable Seed-Loom signal-to-system vertical slice.
+This package is the first executable Seed-Loom signal-to-system vertical slice. It remains package-local so the existing root Vite application keeps its current installation and deployment behavior.
 
 ## Contract
 
@@ -19,9 +19,11 @@ image -> source hash -> provider -> normalized JSON -> Zod validation
 ## Local commands
 
 ```bash
-pnpm install
-pnpm --filter @seed-loom/analyzer-core test
-pnpm --filter @seed-loom/analyzer-core build
+cd packages/analyzer-core
+npm install
+npm run typecheck
+npm test
+npm run build
 ```
 
 ## Live provider examples
