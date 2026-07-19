@@ -1,6 +1,7 @@
 export * from "./AnalyzerService.js";
 export * from "./AnalyzerValidator.js";
 export * from "./contracts.js";
+export * from "./execution/createExecutionReceipt.js";
 export * from "./ledger/InMemoryRunLedger.js";
 export * from "./normalization/parseStructuredOutput.js";
 export * from "./providers/FixtureVisionEngine.js";
