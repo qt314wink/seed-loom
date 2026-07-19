@@ -8,12 +8,24 @@ import {
   AnalyzerService,
   StructuredOutputError,
   TraceabilityError,
+  createExecutionReceipt,
   createVisionEngine,
   parseStructuredOutput,
   verifyTraceability,
 } from "../src/index.js";
 
-const fixtureUrl = new URL("./fixtures/valid-provider-output.json", import.meta.url);
+const providerFixtureUrl = new URL(
+  "./fixtures/valid-provider-output.json",
+  import.meta.url,
+);
+const expectedResultUrl = new URL(
+  "./fixtures/expected-analyzer-result.json",
+  import.meta.url,
+);
+const expectedReceiptUrl = new URL(
+  "./fixtures/expected-execution-receipt.json",
+  import.meta.url,
+);
 const schemaUrl = new URL("../../schemas/analyzer-result.schema.json", import.meta.url);
 
 async function loadJson(url: URL): Promise<unknown> {
@@ -21,8 +33,10 @@ async function loadJson(url: URL): Promise<unknown> {
 }
 
 describe("AnalyzerService", () => {
-  it("produces a deterministic, schema-valid fixture result", async () => {
-    const fixture = await loadJson(fixtureUrl);
+  it("produces a deterministic, schema-valid result and execution receipt", async () => {
+    const fixture = await loadJson(providerFixtureUrl);
+    const expectedResult = await loadJson(expectedResultUrl);
+    const expectedReceipt = await loadJson(expectedReceiptUrl);
     const ids = ["fixed-run", "fixed-source"];
     const service = new AnalyzerService({
       now: () => new Date("2026-07-19T12:00:00.000Z"),
@@ -34,6 +48,7 @@ describe("AnalyzerService", () => {
       { engine: "fixture", fixtureOutput: fixture },
     );
 
+    expect(result).toEqual(expectedResult);
     expect(result.run.id).toBe("run_fixed-run");
     expect(result.source.id).toBe("src_fixed-source");
     expect(result.verification.traceabilityCoverage).toBe(1);
@@ -45,10 +60,13 @@ describe("AnalyzerService", () => {
     addFormats(ajv);
     const validate = ajv.compile(jsonSchema as object);
     expect(validate(result), JSON.stringify(validate.errors)).toBe(true);
-    expect(service.ledger.list(result.run.id).map((event) => event.type)).toEqual([
+
+    const events = service.ledger.list(result.run.id);
+    expect(events.map((event) => event.type)).toEqual([
       "run.started",
       "run.completed",
     ]);
+    expect(createExecutionReceipt(result, events)).toEqual(expectedReceipt);
   });
 });
 
@@ -82,7 +100,7 @@ describe("structured output parsing", () => {
 
 describe("traceability", () => {
   it("detects unresolved evidence references locally", async () => {
-    const fixture = (await loadJson(fixtureUrl)) as Record<string, unknown>;
+    const fixture = (await loadJson(providerFixtureUrl)) as Record<string, unknown>;
     const broken = structuredClone(fixture) as {
       tokens: Array<{ evidenceIds: string[] }>;
       evidence: unknown[];
