@@ -18,15 +18,15 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "openai": "^6.48.0",
-    "zod": "^4.4.3"
+    "openai": "6.48.0",
+    "zod": "4.4.3"
   },
   "devDependencies": {
-    "@types/node": "^26.1.1",
-    "ajv": "^8.20.0",
-    "ajv-formats": "^3.0.1",
-    "typescript": "^7.0.2",
-    "vitest": "^4.1.10"
+    "@types/node": "26.1.1",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "typescript": "7.0.2",
+    "vitest": "4.1.10"
   },
   "engines": {
     "node": ">=22"
