@@ -1,6 +1,9 @@
 import './intake.css';
 
-type JsonValue = string | number | boolean | null;
+type JsonPrimitive = string | number | boolean | null;
+type JsonValue = JsonPrimitive | JsonValue[] | { [key: string]: JsonValue };
+
+type EvidenceMethod = 'browser-file-api' | 'human-observation';
 
 type EvidenceClaim = {
   id: string;
@@ -8,15 +11,32 @@ type EvidenceClaim = {
   value: JsonValue;
   confidence: number;
   regionIds: string[];
-  method: 'browser-file-api' | 'human-observation';
+  method: EvidenceMethod;
+};
+
+type Transformation = {
+  operation: string;
+  sourcePath: string | string[];
 };
 
 type AnalyzerToken = {
+  id: string;
   path: string;
   value: JsonValue;
   class: 'primitive' | 'semantic';
   evidenceIds: string[];
   confidence: number;
+  transformation?: Transformation;
+};
+
+type Interpretation = {
+  id: string;
+  predicate: string;
+  claim: string;
+  qualification: string;
+  evidenceIds: string[];
+  confidence: number;
+  method: 'human-inference';
 };
 
 type SourceRecord = {
@@ -32,19 +52,39 @@ type SourceRecord = {
   regions: [];
 };
 
+type ExecutionRecord = {
+  application: 'Seed-Loom';
+  applicationUrl: string;
+  mode: 'browser-local';
+  actor: 'human-observer';
+  networkTransfer: false;
+};
+
+type CaptureContext = {
+  tabId?: number;
+  relatedTabId?: number;
+  duplicatePresence?: boolean;
+};
+
 type BrowserAnalyzerRun = {
   run: {
     id: string;
-    version: 'seed-loom.browser-intake.v0.1';
+    version: 'seed-loom.browser-intake.v0.2';
     createdAt: string;
-    engine: 'human-local';
+    engine: 'human-observation';
     parentRunId: null;
   };
   source: SourceRecord;
+  execution: ExecutionRecord;
+  captureContext?: CaptureContext;
   evidence: EvidenceClaim[];
-  interpretations: [];
+  interpretations: Interpretation[];
   tokens: AnalyzerToken[];
-  translations: [];
+  translations: Array<{
+    target: 'json';
+    artifact: { format: 'seed-loom-evidence-bundle' };
+    sourceTokenPaths: string[];
+  }>;
   verification: {
     traceabilityCoverage: number;
     unsupportedClaims: number;
@@ -57,20 +97,25 @@ type BrowserAnalyzerRun = {
 };
 
 type RunReceipt = {
-  schemaVersion: 'seed-loom.provenance-receipt.v0.1';
+  schemaVersion: 'seed-loom.provenance-receipt.v0.2';
   runId: string;
   generatedAt: string;
-  sourceSha256: string;
+  source: Pick<SourceRecord, 'id' | 'kind' | 'name' | 'mediaType' | 'sha256'>;
+  execution: ExecutionRecord;
   evidenceCount: number;
   tokenCount: number;
+  derivedTokenCount: number;
   traceabilityCoverage: number;
   unsupportedClaims: number;
-  execution: {
-    environment: 'browser';
-    engine: 'human-local';
-    networkTransfer: false;
-  };
-  interpretation: string;
+  checks: BrowserAnalyzerRun['verification']['checks'];
+  statement: string;
+};
+
+type ObservationDraft = {
+  uiId: string;
+  predicate: string;
+  value: string;
+  confidence: number;
 };
 
 const MAX_FILE_BYTES = 25 * 1024 * 1024;
@@ -198,12 +243,12 @@ const tokenCount = requireElement<HTMLElement>('[data-token-count]');
 const traceability = requireElement<HTMLElement>('[data-traceability]');
 const tokenPreview = requireElement<HTMLElement>('[data-token-preview]');
 
-let runId = createId('run');
 let createdAt = new Date().toISOString();
 let source: SourceRecord | null = null;
 let metadataEvidence: EvidenceClaim[] = [];
-let observations: EvidenceClaim[] = [];
+let observations: ObservationDraft[] = [];
 let previewUrl: string | null = null;
+let nextDraftIndex = 1;
 
 startButton.addEventListener('click', () => {
   dialog.showModal();
@@ -257,11 +302,11 @@ fileInput.addEventListener('change', async () => {
       readImageDimensions(file),
     ]);
 
-    runId = createId('run');
     createdAt = new Date().toISOString();
     observations = [];
+    nextDraftIndex = 1;
     source = {
-      id: createId('src'),
+      id: `src_${sha256.slice(0, 16)}`,
       kind: 'image',
       name: file.name,
       mediaType: file.type || 'application/octet-stream',
@@ -296,23 +341,24 @@ fileInput.addEventListener('change', async () => {
 
 addObservationButton.addEventListener('click', () => {
   observations.push({
-    id: createId('ev'),
+    uiId: `draft_${nextDraftIndex}`,
     predicate: '',
     value: '',
     confidence: 1,
-    regionIds: [],
-    method: 'human-observation',
   });
+  nextDraftIndex += 1;
   renderObservations();
   renderOutput();
-  observationList.querySelector<HTMLInputElement>('[data-observation-row]:last-child [data-predicate]')?.focus();
+  observationList
+    .querySelector<HTMLInputElement>('[data-observation-row]:last-child [data-predicate]')
+    ?.focus();
 });
 
 observationList.addEventListener('input', (event) => {
   const input = event.target as HTMLInputElement;
   const row = input.closest<HTMLElement>('[data-observation-row]');
-  const id = row?.dataset.observationId;
-  const observation = observations.find((candidate) => candidate.id === id);
+  const uiId = row?.dataset.observationId;
+  const observation = observations.find((candidate) => candidate.uiId === uiId);
 
   if (!observation) {
     return;
@@ -333,15 +379,17 @@ observationList.addEventListener('input', (event) => {
 });
 
 observationList.addEventListener('click', (event) => {
-  const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-remove-observation]');
+  const button = (event.target as HTMLElement).closest<HTMLButtonElement>(
+    '[data-remove-observation]',
+  );
   const row = button?.closest<HTMLElement>('[data-observation-row]');
-  const id = row?.dataset.observationId;
+  const uiId = row?.dataset.observationId;
 
-  if (!id) {
+  if (!uiId) {
     return;
   }
 
-  observations = observations.filter((candidate) => candidate.id !== id);
+  observations = observations.filter((candidate) => candidate.uiId !== uiId);
   renderObservations();
   renderOutput();
 });
@@ -351,21 +399,17 @@ dialog.querySelector('[data-reset-run]')?.addEventListener('click', resetRun);
 exportRunButton.addEventListener('click', () => {
   const run = buildRun();
 
-  if (!run) {
-    return;
+  if (run) {
+    downloadJson(`seed-loom-${run.run.id}.json`, run);
   }
-
-  downloadJson(`seed-loom-${run.run.id}.json`, run);
 });
 
 exportReceiptButton.addEventListener('click', () => {
   const run = buildRun();
 
-  if (!run) {
-    return;
+  if (run) {
+    downloadJson(`seed-loom-${run.run.id}-receipt.json`, createReceipt(run));
   }
-
-  downloadJson(`seed-loom-${run.run.id}-receipt.json`, createReceipt(run));
 });
 
 function renderAll(): void {
@@ -394,7 +438,7 @@ function renderObservations(): void {
     const row = document.createElement('article');
     row.className = 'run-observation-row';
     row.dataset.observationRow = '';
-    row.dataset.observationId = observation.id;
+    row.dataset.observationId = observation.uiId;
 
     const predicateLabel = document.createElement('label');
     predicateLabel.textContent = 'Predicate';
@@ -410,7 +454,7 @@ function renderObservations(): void {
     const valueInput = document.createElement('input');
     valueInput.type = 'text';
     valueInput.placeholder = 'woven linen';
-    valueInput.value = String(observation.value);
+    valueInput.value = observation.value;
     valueInput.dataset.value = '';
     valueLabel.append(valueInput);
 
@@ -434,7 +478,7 @@ function renderObservations(): void {
     removeButton.className = 'run-remove-button';
     removeButton.dataset.removeObservation = '';
     removeButton.textContent = 'Remove';
-    removeButton.setAttribute('aria-label', `Remove observation ${observation.id}`);
+    removeButton.setAttribute('aria-label', `Remove observation ${observation.uiId}`);
 
     row.append(predicateLabel, valueLabel, confidenceLabel, removeButton);
     observationList.append(row);
@@ -467,46 +511,78 @@ function buildRun(): BrowserAnalyzerRun | null {
     return null;
   }
 
-  const completeObservations = observations.filter(
-    (claim) => claim.predicate.trim() !== '' && String(claim.value).trim() !== '',
-  );
-  const evidence = [...metadataEvidence, ...completeObservations];
-  const tokens = compileTokens(evidence);
-  const supportedTokens = tokens.filter((token) => token.evidenceIds.length > 0).length;
+  const humanEvidence = createHumanEvidence(observations);
+  const evidence = [...metadataEvidence, ...humanEvidence];
+  const observedTokens = compileObservedTokens(evidence);
+  const derivedTokens = compileDerivedTokens(humanEvidence, observedTokens);
+  const tokens = [...observedTokens, ...derivedTokens];
+  const evidenceIdSet = new Set(evidence.map((claim) => claim.id));
+  const supportedTokens = tokens.filter(
+    (token) =>
+      token.evidenceIds.length > 0 &&
+      token.evidenceIds.every((evidenceId) => evidenceIdSet.has(evidenceId)),
+  ).length;
   const traceabilityCoverage = tokens.length === 0 ? 1 : supportedTokens / tokens.length;
   const unsupportedClaims = tokens.length - supportedTokens;
+  const sourcePaths = new Set(observedTokens.map((token) => token.path));
+  const transformationsValid = derivedTokens.every((token) => {
+    const paths = normalizeSourcePaths(token.transformation?.sourcePath);
+    return paths.length > 0 && paths.every((path) => sourcePaths.has(path));
+  });
+  const runId = createRunId(source.sha256, createdAt);
+  const execution: ExecutionRecord = {
+    application: 'Seed-Loom',
+    applicationUrl: window.location.origin,
+    mode: 'browser-local',
+    actor: 'human-observer',
+    networkTransfer: false,
+  };
 
   return {
     run: {
       id: runId,
-      version: 'seed-loom.browser-intake.v0.1',
+      version: 'seed-loom.browser-intake.v0.2',
       createdAt,
-      engine: 'human-local',
+      engine: 'human-observation',
       parentRunId: null,
     },
     source,
+    execution,
     evidence,
     interpretations: [],
     tokens,
-    translations: [],
+    translations: [
+      {
+        target: 'json',
+        artifact: { format: 'seed-loom-evidence-bundle' },
+        sourceTokenPaths: tokens.map((token) => token.path),
+      },
+    ],
     verification: {
       traceabilityCoverage,
       unsupportedClaims,
       checks: [
         {
-          id: 'source.sha256',
+          id: 'source-sha256',
           status: source.sha256.length === 64 ? 'pass' : 'warning',
-          message: 'The source is identified by a browser-generated SHA-256 digest.',
+          message: 'The image source has a browser-generated SHA-256 identity.',
         },
         {
-          id: 'evidence.separation',
-          status: 'pass',
-          message: 'Browser metadata and human observations retain distinct methods.',
-        },
-        {
-          id: 'tokens.traceable',
+          id: 'evidence-links',
           status: unsupportedClaims === 0 ? 'pass' : 'warning',
-          message: `${supportedTokens}/${tokens.length} tokens link to evidence IDs.`,
+          message: `${supportedTokens}/${tokens.length} generated tokens reference valid evidence IDs.`,
+        },
+        {
+          id: 'derived-transformations',
+          status: transformationsValid ? 'pass' : 'warning',
+          message: transformationsValid
+            ? 'Every derived token records an operation and valid observed source path.'
+            : 'One or more derived tokens have an invalid transformation source path.',
+        },
+        {
+          id: 'evidence-lanes',
+          status: 'pass',
+          message: 'File metadata and human observations retain distinct evidence methods.',
         },
       ],
     },
@@ -514,40 +590,59 @@ function buildRun(): BrowserAnalyzerRun | null {
 }
 
 function createMetadataEvidence(record: SourceRecord): EvidenceClaim[] {
-  const ratio = Number((record.width / record.height).toFixed(4));
-
-  return [
-    evidence('source.mediaType', record.mediaType),
-    evidence('source.byteLength', record.byteLength),
-    evidence('source.pixelWidth', record.width),
-    evidence('source.pixelHeight', record.height),
-    evidence('source.aspectRatio', ratio),
+  const values: Array<[string, JsonValue]> = [
+    ['source.mediaType', record.mediaType],
+    ['source.byteLength', record.byteLength],
+    ['source.pixelWidth', record.width],
+    ['source.pixelHeight', record.height],
+    ['source.aspectRatio', Number((record.width / record.height).toFixed(4))],
   ];
-}
 
-function evidence(predicate: string, value: JsonValue): EvidenceClaim {
-  return {
-    id: createId('ev'),
+  return values.map(([predicate, value], index) => ({
+    id: stableEvidenceId(predicate, index + 1),
     predicate,
     value,
     confidence: 1,
     regionIds: [],
     method: 'browser-file-api',
-  };
+  }));
 }
 
-function compileTokens(evidenceClaims: EvidenceClaim[]): AnalyzerToken[] {
-  const seen = new Map<string, number>();
+function createHumanEvidence(drafts: ObservationDraft[]): EvidenceClaim[] {
+  const complete = drafts.filter(
+    (draft) => draft.predicate.trim() !== '' && draft.value.trim() !== '',
+  );
+  const occurrences = new Map<string, number>();
+
+  return complete.map((draft) => {
+    const predicate = normalizePredicate(draft.predicate);
+    const occurrence = (occurrences.get(predicate) ?? 0) + 1;
+    occurrences.set(predicate, occurrence);
+
+    return {
+      id: stableEvidenceId(predicate, occurrence),
+      predicate,
+      value: draft.value.trim(),
+      confidence: draft.confidence,
+      regionIds: [],
+      method: 'human-observation',
+    };
+  });
+}
+
+function compileObservedTokens(evidenceClaims: EvidenceClaim[]): AnalyzerToken[] {
+  const occurrences = new Map<string, number>();
 
   return evidenceClaims.map((claim) => {
     const basePath = claim.predicate.startsWith('source.')
       ? claim.predicate
-      : `observed.${slugify(claim.predicate)}`;
-    const occurrence = seen.get(basePath) ?? 0;
-    seen.set(basePath, occurrence + 1);
-    const path = occurrence === 0 ? basePath : `${basePath}.${occurrence + 1}`;
+      : `observed.${claim.predicate}`;
+    const occurrence = (occurrences.get(basePath) ?? 0) + 1;
+    occurrences.set(basePath, occurrence);
+    const path = occurrence === 1 ? basePath : `${basePath}.${occurrence}`;
 
     return {
+      id: stableTokenId(path),
       path,
       value: claim.value,
       class: claim.method === 'browser-file-api' ? 'primitive' : 'semantic',
@@ -557,24 +652,239 @@ function compileTokens(evidenceClaims: EvidenceClaim[]): AnalyzerToken[] {
   });
 }
 
+function compileDerivedTokens(
+  evidenceClaims: EvidenceClaim[],
+  observedTokens: AnalyzerToken[],
+): AnalyzerToken[] {
+  const derived: AnalyzerToken[] = [];
+  const claimsByPredicate = new Map(evidenceClaims.map((claim) => [claim.predicate, claim]));
+  const paths = new Set(observedTokens.map((token) => token.path));
+  const accent = claimsByPredicate.get('color.accent');
+
+  if (accent && typeof accent.value === 'string') {
+    const colors = accent.value
+      .split(';')
+      .map((part) => part.trim().replace(/\s+highlights?$/i, ''))
+      .filter(Boolean);
+
+    if (colors.length > 1) {
+      derived.push(
+        derivedToken(
+          'derived.color.accent',
+          colors,
+          [accent.id],
+          accent.confidence,
+          'split-semicolon-list',
+          'observed.color.accent',
+        ),
+      );
+    }
+  }
+
+  const grid = claimsByPredicate.get('geometry.grid');
+
+  if (grid && typeof grid.value === 'string') {
+    const dimensions = parseGridDimensions(grid.value);
+
+    if (dimensions) {
+      derived.push(
+        derivedToken(
+          'derived.geometry.grid.columns',
+          dimensions.columns,
+          [grid.id],
+          grid.confidence,
+          'parse-grid-dimensions',
+          'observed.geometry.grid',
+        ),
+        derivedToken(
+          'derived.geometry.grid.rows',
+          dimensions.rows,
+          [grid.id],
+          grid.confidence,
+          'parse-grid-dimensions',
+          'observed.geometry.grid',
+        ),
+      );
+    }
+  }
+
+  const title = claimsByPredicate.get('typography.title.text');
+  const subtitle = claimsByPredicate.get('typography.subtitle.text');
+
+  if (title && subtitle) {
+    derived.push(
+      derivedToken(
+        'derived.typography.roles',
+        {
+          title: String(title.value),
+          subtitle: String(subtitle.value),
+        },
+        [title.id, subtitle.id],
+        Math.min(title.confidence, subtitle.confidence),
+        'map-explicit-typography-roles',
+        ['observed.typography.title.text', 'observed.typography.subtitle.text'],
+      ),
+    );
+  }
+
+  const ctaLabel = claimsByPredicate.get('interactive.cta.label');
+  const ctaPosition = claimsByPredicate.get('interactive.cta.position');
+
+  if (ctaLabel && ctaPosition) {
+    derived.push(
+      derivedToken(
+        'derived.interactive.cta.role',
+        'call-to-action control',
+        [ctaLabel.id, ctaPosition.id],
+        Math.min(ctaLabel.confidence, ctaPosition.confidence),
+        'classify-cta-role',
+        ['observed.interactive.cta.label', 'observed.interactive.cta.position'],
+      ),
+    );
+  }
+
+  return derived.filter((token) =>
+    normalizeSourcePaths(token.transformation?.sourcePath).every((path) => paths.has(path)),
+  );
+}
+
+function derivedToken(
+  path: string,
+  value: JsonValue,
+  evidenceIds: string[],
+  confidence: number,
+  operation: string,
+  sourcePath: string | string[],
+): AnalyzerToken {
+  return {
+    id: stableTokenId(path),
+    path,
+    value,
+    class: 'semantic',
+    evidenceIds,
+    confidence,
+    transformation: { operation, sourcePath },
+  };
+}
+
 function createReceipt(run: BrowserAnalyzerRun): RunReceipt {
   return {
-    schemaVersion: 'seed-loom.provenance-receipt.v0.1',
+    schemaVersion: 'seed-loom.provenance-receipt.v0.2',
     runId: run.run.id,
     generatedAt: new Date().toISOString(),
-    sourceSha256: run.source.sha256,
+    source: {
+      id: run.source.id,
+      kind: run.source.kind,
+      name: run.source.name,
+      mediaType: run.source.mediaType,
+      sha256: run.source.sha256,
+    },
+    execution: run.execution,
     evidenceCount: run.evidence.length,
     tokenCount: run.tokens.length,
+    derivedTokenCount: run.tokens.filter((token) => token.path.startsWith('derived.')).length,
     traceabilityCoverage: run.verification.traceabilityCoverage,
     unsupportedClaims: run.verification.unsupportedClaims,
-    execution: {
-      environment: 'browser',
-      engine: 'human-local',
-      networkTransfer: false,
-    },
-    interpretation:
-      'This receipt proves the exported run was compiled locally from source metadata and explicit human observations. It does not claim automated visual understanding.',
+    checks: run.verification.checks,
+    statement:
+      'This receipt records a browser-local compilation from deterministic file metadata and explicit human observations. It does not claim automated visual understanding.',
   };
+}
+
+function parseGridDimensions(value: string): { columns: number; rows: number } | null {
+  const normalized = value.toLowerCase();
+  const match = normalized.match(
+    /([a-z0-9-]+)\s+columns?\s+(?:by|x|×)\s+([a-z0-9-]+)\s+rows?/,
+  );
+
+  if (!match) {
+    return null;
+  }
+
+  const columnText = match[1];
+  const rowText = match[2];
+
+  if (!columnText || !rowText) {
+    return null;
+  }
+
+  const columns = parseCount(columnText);
+  const rows = parseCount(rowText);
+
+  return columns === null || rows === null ? null : { columns, rows };
+}
+
+function parseCount(value: string): number | null {
+  const numeric = Number(value);
+
+  if (Number.isInteger(numeric) && numeric > 0) {
+    return numeric;
+  }
+
+  const words: Record<string, number> = {
+    one: 1,
+    two: 2,
+    three: 3,
+    four: 4,
+    five: 5,
+    six: 6,
+    seven: 7,
+    eight: 8,
+    nine: 9,
+    ten: 10,
+    eleven: 11,
+    twelve: 12,
+    thirteen: 13,
+    fourteen: 14,
+    fifteen: 15,
+    sixteen: 16,
+    seventeen: 17,
+    eighteen: 18,
+    nineteen: 19,
+    twenty: 20,
+  };
+
+  return words[value] ?? null;
+}
+
+function normalizePredicate(value: string): string {
+  const normalized = value
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '.')
+    .replace(/^\.+|\.+$/g, '');
+
+  return normalized || 'claim';
+}
+
+function stableEvidenceId(predicate: string, occurrence: number): string {
+  const suffix = occurrence > 1 ? `_${occurrence}` : '';
+  return `ev_${idSegment(predicate)}${suffix}`;
+}
+
+function stableTokenId(path: string): string {
+  return `tok_${idSegment(path)}`;
+}
+
+function createRunId(sha256: string, timestamp: string): string {
+  const compactTime = timestamp.replace(/\D/g, '').slice(0, 14);
+  return `run_${sha256.slice(0, 12)}_${compactTime}`;
+}
+
+function idSegment(value: string): string {
+  return value
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '') || 'claim';
+}
+
+function normalizeSourcePaths(value: string | string[] | undefined): string[] {
+  if (!value) {
+    return [];
+  }
+
+  return Array.isArray(value) ? value : [value];
 }
 
 async function digestFile(file: File): Promise<string> {
@@ -602,7 +912,7 @@ function resetRun(): void {
   source = null;
   metadataEvidence = [];
   observations = [];
-  runId = createId('run');
+  nextDraftIndex = 1;
   createdAt = new Date().toISOString();
   fileInput.value = '';
   addObservationButton.disabled = true;
@@ -640,20 +950,6 @@ function downloadJson(filename: string, value: unknown): void {
 function setStatus(message: string, error = false): void {
   status.textContent = message;
   status.dataset.error = String(error);
-}
-
-function slugify(value: string): string {
-  const slug = value
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '.')
-    .replace(/^\.+|\.+$/g, '');
-
-  return slug || 'claim';
-}
-
-function createId(prefix: string): string {
-  return `${prefix}_${crypto.randomUUID()}`;
 }
 
 function requireElement<T extends Element>(selector: string): T {
