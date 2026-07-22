@@ -1,0 +1,9 @@
+{
+  "name": "@seed-loom/schemas",
+  "version": "0.1.0",
+  "private": true,
+  "files": ["*.json"],
+  "exports": {
+    "./analyzer-result.schema.json": "./analyzer-result.schema.json"
+  }
+}

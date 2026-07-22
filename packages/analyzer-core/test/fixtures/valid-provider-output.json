@@ -1,0 +1,39 @@
+{
+  "evidence": [
+    {
+      "id": "ev_1",
+      "predicate": "dominant-color",
+      "value": "#E9DDC7",
+      "confidence": 0.95,
+      "regionIds": [],
+      "method": "fixture"
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "int_1",
+      "claim": "woven linen surface",
+      "confidence": 0.9,
+      "evidenceIds": ["ev_1"],
+      "alternatives": ["warm paper surface"],
+      "disambiguationQuestion": "Is the visible grain fibrous or pulped?"
+    }
+  ],
+  "tokens": [
+    {
+      "path": "color.surface.canvas",
+      "value": "#E9DDC7",
+      "class": "primitive",
+      "evidenceIds": ["ev_1"],
+      "interpretationIds": ["int_1"],
+      "confidence": 0.95
+    }
+  ],
+  "translations": [
+    {
+      "target": "css",
+      "artifact": "--color-surface-canvas: #E9DDC7;",
+      "sourceTokenPaths": ["color.surface.canvas"]
+    }
+  ]
+}

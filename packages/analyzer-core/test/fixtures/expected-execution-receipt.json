@@ -1,0 +1,25 @@
+{
+  "receiptVersion": "seed-loom.analyzer-execution-receipt.v0.1",
+  "status": "verified",
+  "runId": "run_fixed-run",
+  "analyzerVersion": "seed-loom.analyzer-core.v0.1",
+  "createdAt": "2026-07-19T12:00:00.000Z",
+  "engine": "fixture",
+  "sourceSha256": "039058c6f2c0cb492c533b0a4d14ef77cc0f78abccced5287d84a1a2011cfb81",
+  "counts": {
+    "evidence": 1,
+    "interpretations": 1,
+    "tokens": 1,
+    "translations": 1
+  },
+  "verification": {
+    "traceabilityCoverage": 1,
+    "unsupportedClaims": 0
+  },
+  "ledger": {
+    "eventCount": 2,
+    "eventTypes": ["run.started", "run.completed"],
+    "appendOnly": true,
+    "chainComplete": true
+  }
+}
