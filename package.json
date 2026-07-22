@@ -20,5 +20,8 @@
   },
   "dependencies": {
     "@melodicbloom/svg-filter-atlas": "file:packages/svg-filter-atlas"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true
   }
 }
