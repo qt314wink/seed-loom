@@ -12,7 +12,7 @@ jobs:
       package-manager: npm
       profile-path: .melodicbloom/verification-profile.json
       typecheck-command: npx tsc --noEmit
-      test-command: npm run test:visual
+      test-command: npx playwright install --with-deps chromium && npm run test:visual
       build-command: npm run build
       specialized-command: test -d schemas && find schemas -type f -name '*.json' -print0 | xargs -0 -n1 node -e "JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'))"
       artifact-path: dist
