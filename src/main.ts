@@ -117,8 +117,17 @@ app.innerHTML = `
   <footer><a class="brand" href="#top">Seed-<em>Loom</em></a><p>Every transformation leaves a thread.</p></footer>
 `;
 
-const panel = document.querySelector<HTMLElement>('#stage-panel');
-if (!panel) throw new Error('Analyzer stage panel was not found.');
+function requireElement<T extends Element>(selector: string): T {
+  const element = document.querySelector<T>(selector);
+
+  if (!element) {
+    throw new Error(`Required element was not found: ${selector}`);
+  }
+
+  return element;
+}
+
+const panel = requireElement<HTMLElement>('#stage-panel');
 
 function renderStage(stageId: StageId, focus = false) {
   const stage = stages.find((candidate) => candidate.id === stageId);
