@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { compileDefinitions, staticFilterId } from "../dist/compiler.js";
 import { recipes } from "../dist/catalog.js";
+import { resolveGeneratedAt } from "./reproducible-time.mjs";
 
 const output = new URL("../generated/", import.meta.url);
 await mkdir(output, { recursive: true });
@@ -15,7 +16,7 @@ await writeFile(new URL("definitions.svg", output), definitions + "\n");
 const registry = {
   schema: "melodicbloom.svg-filter-registry/0.1",
   version: "0.1.0",
-  generatedAt: new Date().toISOString(),
+  generatedAt: resolveGeneratedAt(process.env.SOURCE_DATE_EPOCH),
   recipeCount: recipes.length,
   presetCount: recipes.reduce((sum, recipe) => sum + Object.keys(recipe.presets).length, 0),
   recipes: recipes.map((recipe) => ({
