@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MelodicBloom SVG Filter Registry",
+  "type": "object",
+  "required": [
+    "schema",
+    "version",
+    "generatedAt",
+    "recipes"
+  ],
+  "properties": {
+    "schema": {
+      "const": "melodicbloom.svg-filter-registry/0.1"
+    },
+    "version": {
+      "type": "string"
+    },
+    "generatedAt": {
+      "type": "string"
+    },
+    "recipes": {
+      "type": "array"
+    }
+  }
+}

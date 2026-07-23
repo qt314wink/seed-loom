@@ -5,15 +5,25 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build": "npm run typecheck && vite build",
     "preview": "vite preview --host 0.0.0.0",
     "test:visual": "playwright test",
-    "test:visual:update": "playwright test --update-snapshots"
+    "test:visual:update": "playwright test --update-snapshots",
+    "filters:check": "npm --prefix packages/svg-filter-atlas run check",
+    "check": "npm run filters:check && npm run build",
+    "filters:build": "npm --prefix packages/svg-filter-atlas run build",
+    "typecheck": "npm run filters:build && tsc --noEmit"
   },
   "devDependencies": {
     "@playwright/test": "^1.54.1",
     "@types/node": "^24.0.0",
     "typescript": "^5.8.3",
     "vite": "^7.0.4"
+  },
+  "dependencies": {
+    "@melodicbloom/svg-filter-atlas": "file:packages/svg-filter-atlas"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true
   }
 }
