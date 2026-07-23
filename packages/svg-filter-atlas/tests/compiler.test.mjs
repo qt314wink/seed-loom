@@ -10,6 +10,10 @@ import {
   resolveParameters,
   validateRecipe,
 } from "../dist/index.js";
+import {
+  DEFAULT_GENERATED_AT,
+  resolveGeneratedAt,
+} from "../scripts/reproducible-time.mjs";
 
 test("catalog contains the eight signature recipes", () => {
   assert.equal(recipes.length, 8);
@@ -47,9 +51,20 @@ test("runtime filter URLs use stable static IDs", () => {
   assert.equal(filterUrl("marble-vein", "calacatta-bold"), 'url("#mb--marble-vein--calacatta-bold")');
 });
 
+test("registry timestamps are reproducible", () => {
+  assert.equal(resolveGeneratedAt(), DEFAULT_GENERATED_AT);
+  assert.equal(resolveGeneratedAt("0"), "1970-01-01T00:00:00.000Z");
+  assert.equal(resolveGeneratedAt("1784678400"), "2026-07-22T00:00:00.000Z");
+  assert.throws(
+    () => resolveGeneratedAt("not-a-number"),
+    /SOURCE_DATE_EPOCH must be a non-negative integer/,
+  );
+});
+
 test("generated registry and definition bundle are consistent", async () => {
   const registry = JSON.parse(await readFile(new URL("../generated/registry.json", import.meta.url), "utf8"));
   const definitions = await readFile(new URL("../generated/definitions.svg", import.meta.url), "utf8");
+  assert.equal(registry.generatedAt, DEFAULT_GENERATED_AT);
   assert.equal(registry.recipeCount, 8);
   assert.equal(registry.presetCount, 24);
   assert.match(definitions, /mb--guanine-crystal--excited-spectrum/);
