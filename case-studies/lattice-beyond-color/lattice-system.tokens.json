@@ -1,0 +1,235 @@
+{
+  "schemaVersion": "1.0.0",
+  "system": "lattice-beyond-color",
+  "principle": "Functional state generates visual and interactive state.",
+  "global": {
+    "choiceHierarchy": [
+      "failure mode",
+      "physical mechanism",
+      "data mapping",
+      "interaction behavior",
+      "appearance",
+      "narrative"
+    ],
+    "heuristics": {
+      "functionalFidelity": "No visual analogy without a mapped system function.",
+      "dualEncoding": "Never encode critical state by color alone.",
+      "deterministicCore": "Provenance, policy, and replay are deterministic.",
+      "probabilisticEdge": "Forecasts and inferences carry confidence, expiry, and reversible status.",
+      "boundedDivergence": "Production divergence budget ≤ 35% unless evidence justifies more.",
+      "seededVariation": "Generative geometry must accept a seed and serialize parameters."
+    },
+    "axes": {
+      "determinismVsProbability": "Rules and evidence vs uncertainty and forecasting.",
+      "imaginationVsInnovation": "Novel metaphor vs validated utility.",
+      "relevanceVsDivergence": "Problem fit vs exploration distance.",
+      "valueVsConstraint": "Desired outcome vs non-negotiable guardrails.",
+      "samenessVsDiversity": "Cross-system consistency vs concept-specific distinction."
+    }
+  },
+  "concepts": [
+    {
+      "id": "helioveil",
+      "name": "HELIOVEIL",
+      "subtitle": "Adaptive climate skin + building-energy interface",
+      "bio": "Tunable photonic lattices + stomatal aperture control",
+      "lattice": "Triangular photonic cells grouped into nested hexagonal climate zones.",
+      "mechanism": "Cell spacing and aperture respond to solar load, surface temperature, occupancy, and predicted heat gain. Optical state doubles as a data display and a façade-control command.",
+      "formula": [
+        "λ_peak = 2 n_eff d cos(θ)",
+        "P_rad = εσA(T_s⁴ − T_sky⁴)",
+        "a_open = sigmoid(k_TΔT + k_S S + k_O O − b)"
+      ],
+      "tokens": {
+        "structure.lattice": "triangular",
+        "structure.cellSizePx": "18–42",
+        "structure.zoneDepth": "3",
+        "structure.anisotropy": "0.15–0.55",
+        "optical.nEffective": "1.35–1.75",
+        "optical.spacingNm": "160–360",
+        "optical.incidenceDeg": "0–28",
+        "optical.sheen": "0.25–0.70",
+        "light.keyElevationDeg": "32",
+        "shadow.penumbraPx": "18–44",
+        "motion.responseMs": "600–2400",
+        "motion.hysteresis": "0.08–0.18",
+        "behavior.mode": "predictive + sensor-reactive",
+        "accessibility.secondaryEncoding": "aperture + stroke density",
+        "compute.core": "deterministic 80 / probabilistic 20"
+      },
+      "web": "A live building section occupies the hero. Facade cells physically open, close, and change spectral emphasis as the user scrubs time or adjusts comfort targets. Energy, glare, and heat are shown as one coupled field, not separate cards.",
+      "code": "A deterministic physics layer calculates aperture, lattice spacing, and spectral state from sensor inputs. A probabilistic forecast layer supplies confidence-bounded future loads. SVG/WebGL receives only serialized state.",
+      "selling": "Turns climate control from an invisible mechanical system into a legible, controllable material intelligence layer.",
+      "scores": {
+        "determinism": 80,
+        "innovation": 76,
+        "relevance": 90,
+        "divergence": 58
+      },
+      "prompt": "Create a production-quality 1440 × 1024 desktop web-app key visual for HELIOVEIL, an adaptive building-climate system. No people, no fashion, no generic SaaS dashboard. Show one architectural section as the dominant object: a responsive facade made from triangular photonic cells grouped into nested hexagonal climate zones. Cell spacing, aperture, spectral reflectance, and shadow depth visibly encode solar load, surface temperature, predicted heat gain, and occupancy. The surface should shift from cool mineral blue-green to warm amber only where data requires it; color must be reinforced by aperture, line density, and geometry. Use restrained iridescence, translucent ceramic-glass, precise shadow penumbrae, dark graphite structure, ivory technical annotations, and one clear primary control: “Set comfort target.” Include a compact explainability strip showing sensor → formula → façade state. Premium architectural visualization, physically plausible light, no decorative holographic noise."
+    },
+    {
+      "id": "echovault",
+      "name": "ECHOVAULT",
+      "subtitle": "Phononic privacy, clarity, and spatial-audio control",
+      "bio": "Phononic band gaps + cochlear frequency separation",
+      "lattice": "Graded resonator lattice with frequency-dependent channel width.",
+      "mechanism": "The lattice changes pitch and local resonator mass to attenuate, pass, or focus frequency bands. The interface behaves like a visible acoustic material rather than a conventional equalizer.",
+      "formula": [
+        "f_gap ≈ c / (2a)",
+        "T(f,L) = exp(−α(f)L)",
+        "x(f) = x_min + (x_max−x_min)·norm(log f)"
+      ],
+      "tokens": {
+        "structure.lattice": "graded resonator",
+        "structure.pitchMm": "8–85",
+        "structure.massRatio": "0.4–3.2",
+        "structure.channelCount": "24–64",
+        "optical.surface": "smoked glass + anodized ceramic",
+        "optical.sheen": "0.10–0.35",
+        "light.waveHighlight": "0.20–0.55",
+        "shadow.depthPx": "8–28",
+        "motion.waveSpeed": "0.4–1.6",
+        "motion.decay": "0.68–0.92",
+        "motion.responseMs": "80–420",
+        "behavior.mode": "frequency-selective filtering",
+        "accessibility.secondaryEncoding": "wave thickness + vibration rate",
+        "compute.core": "deterministic 70 / probabilistic 30"
+      },
+      "web": "The central viewport is a room-scale acoustic field. Users drag a privacy boundary or clarity focus, and the resonator lattice regrades in place. Voice bands pass as coherent ribbons; HVAC rumble and street noise collapse into damped cells.",
+      "code": "FFT data feeds a deterministic band classifier and a transfer-function simulator. A probabilistic source-separation model proposes likely sources, but every mute/pass action remains user-verifiable and reversible.",
+      "selling": "Makes invisible acoustic control tangible enough for architects, studios, workplaces, and privacy-sensitive rooms to trust.",
+      "scores": {
+        "determinism": 70,
+        "innovation": 82,
+        "relevance": 80,
+        "divergence": 72
+      },
+      "prompt": "Create a production-quality 1440 × 1024 desktop web-app key visual for ECHOVAULT, a spatial acoustic-control product. No people and no standard audio-mixer interface. The dominant object is a room-scale cutaway filled with a graded phononic resonator lattice. Show voice frequencies moving through aligned channels as coherent thin ribbons while low-frequency mechanical noise is trapped and damped inside denser cells. One draggable privacy boundary and one “clarity focus” control are visible. Materials: smoked glass, matte graphite, anodized ceramic resonators, sparse metallic edges. Use wave thickness, vibration rate, and channel openness as non-color encodings. Deep but controlled shadows; subtle directional sheen; high contrast technical labels; a small causal trace reads microphone field → FFT bands → transfer function → lattice state. Precise, calm, architectural, not cyberpunk."
+    },
+    {
+      "id": "faultgarden",
+      "name": "FAULT GARDEN",
+      "subtitle": "Evidence graph where defects reveal uncertainty and discovery",
+      "bio": "Crystal vacancies, dopants, grain boundaries, and defect tolerance",
+      "lattice": "Perovskite-like cubic evidence lattice with semantically typed defects.",
+      "mechanism": "Regular cells represent supported claims; vacancies mark missing evidence; dislocations mark contradiction; dopants mark imported external evidence; grain boundaries mark incompatible vocabularies or models.",
+      "formula": [
+        "P(h|e) = P(e|h)P(h) / P(e)",
+        "defect_salience = impact × evidence_gap × novelty",
+        "confidence_out = 1 − ∏(1 − w_i·c_i)"
+      ],
+      "tokens": {
+        "structure.lattice": "cubic / perovskite-like",
+        "structure.cellSizePx": "28–64",
+        "structure.defectRate": "0.02–0.18",
+        "structure.grainScale": "4–12 cells",
+        "semantic.vacancy": "missing evidence",
+        "semantic.dislocation": "contradiction",
+        "semantic.dopant": "external source",
+        "semantic.boundary": "model conflict",
+        "optical.consensusSheen": "0.08–0.22",
+        "optical.uncertaintyRoughness": "0.35–0.75",
+        "shadow.layerDepthPx": "12–36",
+        "motion.inferencePulseMs": "900–2200",
+        "motion.provenanceTraceMs": "300–900",
+        "behavior.mode": "explainable probabilistic inference",
+        "accessibility.secondaryEncoding": "shape break + labels + texture",
+        "compute.core": "deterministic provenance 40 / probabilistic inference 60"
+      },
+      "web": "A single evidence lattice fills the canvas. Selecting a claim reveals its local defect field and an ordered provenance path. Users can toggle “observed,” “inferred,” and “contested” without losing the topology.",
+      "code": "The graph store and provenance ledger are deterministic and append-only. Bayesian or embedding-based inference proposes edges with confidence and expiry. Suggestions never become lattice bonds until accepted or governed by policy.",
+      "selling": "Differentiates by showing not just what the system knows, but where its knowledge is strained, missing, imported, or internally inconsistent.",
+      "scores": {
+        "determinism": 40,
+        "innovation": 88,
+        "relevance": 92,
+        "divergence": 84
+      },
+      "prompt": "Create a production-quality 1440 × 1024 desktop knowledge-work interface called FAULT GARDEN. No generic node-link graph, no floating glass cards, no people. The main canvas is a perovskite-like cubic evidence lattice rendered as an intelligible mineral-information structure. Regular cells are supported claims; visible vacancies represent missing evidence; dislocations represent contradictions; differently shaped dopant cells represent external sources; grain boundaries mark incompatible models. A selected claim exposes a clean provenance path and three legible states: observed, inferred, contested. Use graphite, bone, muted mineral violet, oxidized green, and restrained metallic highlights. Uncertainty appears as roughness and geometric discontinuity, not merely red color. Deep spatial layering, precise shadows, readable labels, and one primary action: “Inspect reasoning.” The aesthetic is scholarly, tactile, and rigorous—an evidence instrument, not fantasy crystal art."
+    },
+    {
+      "id": "capillarycommons",
+      "name": "CAPILLARY COMMONS",
+      "subtitle": "Resilient routing for water, energy, logistics, and mutual aid",
+      "bio": "Reticulate leaf venation + Voronoi partitioning + porous transport",
+      "lattice": "Hierarchical loopy network around demand pores with tunable redundancy.",
+      "mechanism": "Primary routes carry volume; secondary loops absorb failures; local Voronoi territories allocate responsibility; porosity and tortuosity determine diffusion and delivery speed.",
+      "formula": [
+        "Q = ΔP / R",
+        "D_eff = D·ε/τ",
+        "J = −D_eff∇C",
+        "resilience = served_after_failure / served_before_failure"
+      ],
+      "tokens": {
+        "structure.network": "reticulate Voronoi",
+        "structure.hierarchyLevels": "4",
+        "structure.loopRatio": "0.15–0.65",
+        "structure.poreCount": "18–120",
+        "transport.porosity": "0.25–0.72",
+        "transport.tortuosity": "1.1–3.8",
+        "transport.capacityScale": "1–100",
+        "transport.failureBudget": "1–8 edges",
+        "optical.flowSheen": "0.08–0.30",
+        "light.routeElevation": "2–14",
+        "shadow.capacityDepthPx": "4–22",
+        "motion.flowSpeed": "0.3–1.4",
+        "motion.rerouteMs": "240–1200",
+        "behavior.mode": "cost-resilience optimization",
+        "accessibility.secondaryEncoding": "route width + dash + node shape",
+        "compute.core": "deterministic 75 / probabilistic 25"
+      },
+      "web": "The hero is an abstract service territory—not a literal geographic map—whose routes continuously reconfigure under demand and failure tests. The user can remove an edge and watch loops preserve service while cost and equity update.",
+      "code": "A deterministic network-flow solver computes capacity and rerouting. A probabilistic demand model generates scenarios with explicit confidence intervals. Optimization objectives are inspectable weights rather than hidden magic.",
+      "selling": "Lets planners prove the value of redundancy and equity before infrastructure fails, using a system people can interrogate rather than a black-box forecast.",
+      "scores": {
+        "determinism": 75,
+        "innovation": 74,
+        "relevance": 95,
+        "divergence": 64
+      },
+      "prompt": "Create a production-quality 1440 × 1024 desktop planning interface for CAPILLARY COMMONS. Do not use a real geographic map and do not use generic dashboard cards. The dominant visual is an abstract service territory organized as a reticulate leaf-venation and Voronoi network around demand pores. Primary routes are broad and structural; secondary loops provide redundancy; local cells visibly own nearby demand. Show one simulated edge failure and the network rerouting around it while preserving service. Encode capacity with route width, uncertainty with dashed texture, and equity with node shape plus labels—not color alone. Material language: pale mineral paper, dark vascular lines, translucent porous membranes, restrained wet sheen, low relief, precise soft shadows. One primary action: “Stress-test network.” Include a small equation trace from demand + capacity + failure → optimized loops → service retained."
+    },
+    {
+      "id": "nacresentinel",
+      "name": "NACRE SENTINEL",
+      "subtitle": "Layered cyber resilience that deflects and absorbs attacks",
+      "bio": "Nacre brick-and-mortar hierarchy, crack deflection, bridging, and sacrificial interfaces",
+      "lattice": "Staggered lamellar defense stack with soft interlayers and bridge links.",
+      "mechanism": "Threat propagation is forced across offset layers; sacrificial interfaces isolate damage; bridges preserve critical service; repaired layers re-enter only after verification.",
+      "formula": [
+        "risk_{t+1} = clip(A·risk_t − heal_t, 0, 1)",
+        "E_absorb ∝ Σ(path_length × interface_friction)",
+        "containment = 1 − compromised_critical / total_critical"
+      ],
+      "tokens": {
+        "structure.lattice": "staggered lamellar",
+        "structure.layers": "5–11",
+        "structure.offsetRatio": "0.35–0.65",
+        "structure.bridgeDensity": "0.08–0.30",
+        "security.interfaceType": "sacrificial / trusted / recovery",
+        "security.quarantineThreshold": "0.62–0.88",
+        "security.reentryChecks": "3–7",
+        "optical.surface": "translucent mineral armor",
+        "optical.damageRoughness": "0.25–0.85",
+        "light.edgeSpecular": "0.15–0.45",
+        "shadow.layerDepthPx": "8–32",
+        "motion.propagationMs": "120–640",
+        "motion.healMs": "1200–4800",
+        "behavior.mode": "contain, deflect, bridge, verify",
+        "accessibility.secondaryEncoding": "fracture path + layer label + hatch",
+        "compute.core": "deterministic 90 / probabilistic 10"
+      },
+      "web": "A layered system section replaces the alert table. An attack enters from one side, bends across staggered layers, loses energy, and is quarantined. The user can inspect every containment decision and replay it deterministically.",
+      "code": "An append-only event ledger drives a deterministic state machine. Threat scoring may be probabilistic, but isolation, bridge activation, recovery gates, and audit replay use explicit rules and immutable evidence IDs.",
+      "selling": "Explains resilience as architecture and controlled failure—not as an endless stream of alarms—making security posture defensible to technical and executive audiences.",
+      "scores": {
+        "determinism": 90,
+        "innovation": 70,
+        "relevance": 96,
+        "divergence": 52
+      },
+      "prompt": "Create a production-quality 1440 × 1024 desktop cyber-resilience interface called NACRE SENTINEL. Avoid hacker clichés, neon cyberpunk, shield icons, and generic alert tables. The dominant object is a sectional defense architecture built from staggered translucent mineral platelets separated by soft dark interfaces and sparse bridge links. Show one attack path entering the structure, deflecting across offset layers, losing intensity, triggering a sacrificial quarantine zone, and preserving a bridged critical service. Encode damage with roughness, fracture path, hatch, and layer labels rather than red alone. Use bone, graphite, smoky pearl, muted cobalt, and restrained brass. Deep but plausible layer shadows, controlled edge sheen, precise labels, one primary action: “Replay containment.” Include an immutable evidence trail and explicit recovery gates. Calm, forensic, architectural, and trustworthy."
+    }
+  ]
+}
