@@ -1,0 +1,32 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "version": "0.2.0",
+  "color": {
+    "linen": {"$value": "#f5f0e8", "$type": "color"},
+    "surface": {"$value": "#faf7f2", "$type": "color"},
+    "ink": {"$value": "#2c2c2c", "$type": "color"},
+    "indigo": {"$value": "#2c3e7e", "$type": "color"},
+    "focus": {"$value": "#0b62ce", "$type": "color"}
+  },
+  "force": {
+    "threadButton": {
+      "tension": {"$value": 0.42, "$type": "number"},
+      "compression": {"$value": 0.26, "$type": "number"},
+      "elasticity": {"$value": 0.36, "$type": "number"},
+      "recovery": {"$value": 0.66, "$type": "number"}
+    }
+  },
+  "motion": {
+    "threadButton": {
+      "durationMs": {"$value": 180, "$type": "duration"},
+      "easing": {"$value": [0.2, 0.8, 0.2, 1], "$type": "cubicBezier"},
+      "pressScale": {"$value": 0.97, "$type": "number"}
+    }
+  },
+  "shape": {
+    "threadButton": {
+      "radiusPx": {"$value": 12, "$type": "dimension"},
+      "borderPx": {"$value": 2, "$type": "dimension"}
+    }
+  }
+}
