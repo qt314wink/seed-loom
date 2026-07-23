@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
-const onePixelPng = Buffer.from(
-  'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAusB9Wl2nL8AAAAASUVORK5CYII=',
+const twoPixelPng = Buffer.from(
+  'iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFUlEQVR4nGP8z/D/PwMDAwMTAxQAAC4IAwGyw9v6AAAAAElFTkSuQmCC',
   'base64',
 );
 
@@ -18,7 +18,7 @@ test('local intake emits a canonical evidence-linked bundle', async ({ page }) =
   await dialog.locator('input[type="file"]').setInputFiles({
     name: 'fixture.png',
     mimeType: 'image/png',
-    buffer: onePixelPng,
+    buffer: twoPixelPng,
   });
 
   await expect(dialog.getByRole('status')).toContainText(
@@ -164,7 +164,7 @@ test('receipt separates source identity from execution metadata', async ({ page 
   await dialog.locator('input[type="file"]').setInputFiles({
     name: 'fixture.png',
     mimeType: 'image/png',
-    buffer: onePixelPng,
+    buffer: twoPixelPng,
   });
   await expect(dialog.getByRole('status')).toContainText('Source identity established');
 
