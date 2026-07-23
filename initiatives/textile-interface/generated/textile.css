@@ -1,0 +1,17 @@
+/* GENERATED. DO NOT EDIT. */
+:root {
+  --til-color-linen: #f5f0e8;
+  --til-color-surface: #faf7f2;
+  --til-color-ink: #2c2c2c;
+  --til-color-indigo: #2c3e7e;
+  --til-color-focus: #0b62ce;
+  --til-thread-button-tension: 0.42;
+  --til-thread-button-compression: 0.26;
+  --til-thread-button-elasticity: 0.36;
+  --til-thread-button-recovery: 0.66;
+  --til-thread-button-duration: 180ms;
+  --til-thread-button-easing: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --til-thread-button-press-scale: 0.97;
+  --til-thread-button-radius: 12px;
+  --til-thread-button-border: 2px;
+}
