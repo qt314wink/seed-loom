@@ -1,17 +1,76 @@
 {
   "schema_version": 1,
   "repository": "qt314wink/seed-loom",
-  "classification": { "archetype": "compiler-system", "maturity": "candidate", "criticality": "high" },
-  "runtime": { "node": "20", "package_manager": "npm", "lockfile": "package-lock.json" },
-  "commands": { "lint": null, "typecheck": "npx tsc --noEmit", "test": "npm run test:visual", "build": "npm run build", "specialized": "test -d schemas && find schemas -type f -name '*.json' -print0 | xargs -0 -n1 node -e \"JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'))\"" },
-  "surfaces": {
-    "static": ["typescript", "vite-build", "json-parseability", "frozen-dependencies"],
-    "behavioral": ["five-analyzer-ribs", "material-atlas-navigation", "callable-design-object-contract"],
-    "visual": ["playwright-baselines", "material-atlas-textures", "style-drift-detection"],
-    "accessibility": ["keyboard-analysis-flow", "reduced-motion", "semantic-output-legibility"],
-    "performance": ["visual-build-budget", "analysis-response-budget"],
-    "deployment": ["canonical-vercel-project", "production-status-disambiguation"]
+  "classification": {
+    "archetype": "compiler-system",
+    "maturity": "candidate",
+    "criticality": "high"
   },
-  "promotion": { "mode": "observe", "required_gates": ["lockfile", "typecheck", "schema-parse", "build", "visual-regression", "provenance-evidence", "canonical-deployment-status"], "human_approval": true },
-  "evidence": { "retention_days": 30, "artifact_paths": ["dist"], "known_omissions": ["no lint script", "deployment status conflict requires external Vercel cleanup", "schema semantic validation is not yet equivalent to JSON parseability"] }
+  "runtime": {
+    "node": "20",
+    "package_manager": "npm",
+    "lockfile": "package-lock.json"
+  },
+  "commands": {
+    "lint": null,
+    "typecheck": "npm run typecheck",
+    "test": "npm run test:visual",
+    "build": "npm run build",
+    "specialized": "test -d schemas && find schemas -type f -name '*.json' -print0 | xargs -0 -n1 node -e \"JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'))\""
+  },
+  "surfaces": {
+    "static": [
+      "typescript",
+      "vite-build",
+      "json-parseability",
+      "frozen-dependencies"
+    ],
+    "behavioral": [
+      "five-analyzer-ribs",
+      "material-atlas-navigation",
+      "callable-design-object-contract"
+    ],
+    "visual": [
+      "playwright-baselines",
+      "material-atlas-textures",
+      "style-drift-detection"
+    ],
+    "accessibility": [
+      "keyboard-analysis-flow",
+      "reduced-motion",
+      "semantic-output-legibility"
+    ],
+    "performance": [
+      "visual-build-budget",
+      "analysis-response-budget"
+    ],
+    "deployment": [
+      "canonical-vercel-project",
+      "production-status-disambiguation"
+    ]
+  },
+  "promotion": {
+    "mode": "observe",
+    "required_gates": [
+      "lockfile",
+      "typecheck",
+      "schema-parse",
+      "build",
+      "visual-regression",
+      "provenance-evidence",
+      "canonical-deployment-status"
+    ],
+    "human_approval": true
+  },
+  "evidence": {
+    "retention_days": 30,
+    "artifact_paths": [
+      "dist"
+    ],
+    "known_omissions": [
+      "no lint script",
+      "deployment status conflict requires external Vercel cleanup",
+      "schema semantic validation is not yet equivalent to JSON parseability"
+    ]
+  }
 }

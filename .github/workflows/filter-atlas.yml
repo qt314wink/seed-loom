@@ -1,0 +1,47 @@
+name: Filter Atlas
+
+on:
+  pull_request:
+    paths:
+      - 'packages/svg-filter-atlas/**'
+      - 'src/filter-atlas.ts'
+      - 'src/main.ts'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/filter-atlas.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'packages/svg-filter-atlas/**'
+      - 'src/filter-atlas.ts'
+      - 'src/main.ts'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/filter-atlas.yml'
+
+jobs:
+  validate-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install Seed-Loom dependencies
+        run: npm ci
+
+      - name: Install atlas development dependencies
+        run: npm install --prefix packages/svg-filter-atlas --no-audit --no-fund
+
+      - name: Validate and compile atlas
+        run: npm run filters:check
+
+      - name: Build Seed-Loom
+        run: npm run build

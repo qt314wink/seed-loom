@@ -1,0 +1,67 @@
+{
+  "event_id": "evt_provenance_nacre_gate_profile_v1",
+  "schema_version": "v1",
+  "event_type": "provenance.attested",
+  "occurred_at": "2026-07-17T14:44:00Z",
+  "asset": {
+    "provider": "github",
+    "owner": "MelodicBloom",
+    "repo": "nacre-orchid-atelier",
+    "commit_sha": "8995c9de18539106eead3e7566658e1aef9e4c31",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "human",
+    "id": "qt314wink"
+  },
+  "confidence": "verified",
+  "claims": {
+    "profile_id": "nacre-gate",
+    "profile_version": "1.0.0",
+    "inquiry_session": "inquiry-001",
+    "schema_name": "DeterministicInquiryEngine",
+    "profile_path": "packages/tokens/fixtures/example-profile.json",
+    "semantic_axes_count": 6,
+    "axis_reasoning": [
+      {
+        "axis_id": "revealed_concealed",
+        "position": 0.68,
+        "confidence": 0.83,
+        "reasoning": "Set toward concealed because the core metaphor is a threshold that opens by recognition, not force. Value is not immediately exposed — the interface guards it until the viewer demonstrates proximity and attention. 0.68 rather than a higher value because some surface quality is always visible: the nacre shimmer is present at idle, signalling that something is there. Full concealment would be dishonest to the material."
+      },
+      {
+        "axis_id": "organic_engineered",
+        "position": 0.42,
+        "confidence": 0.76,
+        "reasoning": "Positioned near centre with a slight organic lean because nacre is a biological material — formed by a living organism, irregular at the micro scale — but the interface system imposing it is rule-based and structured. The tension is load-bearing: if it tips fully organic it loses precision; fully engineered it loses the warmth that makes the threshold feel welcoming rather than gatekeeping. 0.42 holds that tension deliberately."
+      },
+      {
+        "axis_id": "intimate_monumental",
+        "position": 0.35,
+        "confidence": 0.80,
+        "reasoning": "Clearly intimate. The interaction model is proximity-based — the surface responds to where the cursor is, at a personal scale. A monumental surface demands attention; this one invites approach. The archetype is a Japanese shoji screen or a Celtic thin place: you notice it when you are close, not from across the room. 0.35 rather than lower because the bilateral symmetry and the central focal panel give it structural dignity — it is not merely small."
+      },
+      {
+        "axis_id": "protective_exposing",
+        "position": 0.28,
+        "confidence": 0.71,
+        "reasoning": "Strongly protective. The thesis is that value is revealed through trust, not taken by force. The interface shields content until proximity and dwell time are established. Lower confidence (0.71) because this axis sits in tension with the discovery experience — if protection is too strong, the threshold becomes a barrier, which is the primary listed failure mode. 0.28 was chosen over 0.20 to preserve some legibility: the surface signals that it can be opened, it does not hide this fact."
+      },
+      {
+        "axis_id": "tactile_spectral",
+        "position": 0.60,
+        "confidence": 0.72,
+        "reasoning": "Slightly spectral because the primary rendering mechanism is light — iridescent GLSL shaders, shimmer, colour that shifts with viewing angle. But nacre as a material is physically tactile — abalone shell, sea glass, tide-polished stone. The position 0.60 encodes a genuine ambiguity in the source material: nacre occupies both registers simultaneously. Lower confidence reflects that this axis is the hardest to render faithfully — it risks becoming merely decorative if the spectral quality dominates."
+      },
+      {
+        "axis_id": "stable_volatile",
+        "position": 0.38,
+        "confidence": 0.78,
+        "reasoning": "Slightly stable. The stress state is defined as absorption and redistribution rather than breakage — under rapid input, the shimmer intensifies but the structure holds. Returns to equilibrium over 800ms. 0.38 rather than lower because volatility is part of the responsiveness contract: a surface that never changes under stress would feel dead. The position encodes resilience, not rigidity."
+      }
+    ],
+    "negative_definition_rationale": "The negative definition was set before the positive — the inquiry protocol establishes what the material rejects first, because anti-examples reveal constraints that positive descriptions obscure. 'Not a blunt dashboard' rules out information density as a primary value. 'Not a maximalist ornament dump' rules out decoration as a goal. 'Not a glass wall with no filter' rules out full transparency as an aspiration. These three rejections together constrain the design space to a narrow band: something that is present, intentional, and selective — which is the definition of a threshold.",
+    "generation_method": "human_inquiry",
+    "tooling": "DeterministicInquiryEngine v1.0.0 — no model, no API, no training data. Semantic positions derived through structured Socratic questioning against a fixed axis schema."
+  }
+}

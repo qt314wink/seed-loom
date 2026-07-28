@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.dev/schemas/analyzer-result.schema.json",
+  "title": "Seed Loom Analyzer Result",
+  "type": "object",
+  "required": [
+    "run",
+    "source",
+    "evidence",
+    "interpretations",
+    "tokens",
+    "translations",
+    "verification"
+  ],
+  "properties": {
+    "run": {
+      "type": "object",
+      "required": [
+        "id",
+        "version",
+        "createdAt",
+        "engine"
+      ],
+      "properties": {
+        "id": { "type": "string" },
+        "version": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "engine": { "type": "string" },
+        "parentRunId": { "type": ["string", "null"] }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["id", "kind", "sha256"],
+      "properties": {
+        "id": { "type": "string" },
+        "kind": {
+          "enum": ["image", "deck", "document", "url", "repository", "mixed"]
+        },
+        "sha256": { "type": "string" },
+        "uri": { "type": ["string", "null"] },
+        "regions": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/region" }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/evidenceClaim" }
+    },
+    "interpretations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/interpretation" }
+    },
+    "tokens": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/token" }
+    },
+    "translations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/translation" }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["traceabilityCoverage", "unsupportedClaims", "checks"],
+      "properties": {
+        "traceabilityCoverage": { "type": "number", "minimum": 0, "maximum": 1 },
+        "unsupportedClaims": { "type": "integer", "minimum": 0 },
+        "checks": { "type": "array", "items": { "type": "object" } }
+      }
+    }
+  },
+  "$defs": {
+    "region": {
+      "type": "object",
+      "required": ["id", "bounds"],
+      "properties": {
+        "id": { "type": "string" },
+        "bounds": {
+          "type": "object",
+          "required": ["x", "y", "width", "height"],
+          "properties": {
+            "x": { "type": "number", "minimum": 0, "maximum": 1 },
+            "y": { "type": "number", "minimum": 0, "maximum": 1 },
+            "width": { "type": "number", "minimum": 0, "maximum": 1 },
+            "height": { "type": "number", "minimum": 0, "maximum": 1 }
+          }
+        }
+      }
+    },
+    "evidenceClaim": {
+      "type": "object",
+      "required": ["id", "predicate", "value", "confidence", "regionIds"],
+      "properties": {
+        "id": { "type": "string" },
+        "predicate": { "type": "string" },
+        "value": {},
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "regionIds": { "type": "array", "items": { "type": "string" } },
+        "method": { "type": "string" }
+      }
+    },
+    "interpretation": {
+      "type": "object",
+      "required": ["id", "claim", "confidence", "evidenceIds", "alternatives"],
+      "properties": {
+        "id": { "type": "string" },
+        "claim": { "type": "string" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "evidenceIds": { "type": "array", "items": { "type": "string" } },
+        "alternatives": { "type": "array", "items": { "type": "string" } },
+        "disambiguationQuestion": { "type": ["string", "null"] }
+      }
+    },
+    "token": {
+      "type": "object",
+      "required": ["path", "value", "class", "evidenceIds"],
+      "properties": {
+        "path": { "type": "string" },
+        "value": {},
+        "class": {
+          "enum": ["primitive", "semantic", "component", "motion", "shader", "symbol", "constraint"]
+        },
+        "evidenceIds": { "type": "array", "items": { "type": "string" } },
+        "interpretationIds": { "type": "array", "items": { "type": "string" } },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "translation": {
+      "type": "object",
+      "required": ["target", "artifact", "sourceTokenPaths"],
+      "properties": {
+        "target": {
+          "enum": ["css", "tailwind", "figma", "react", "motion", "glsl", "svg", "prompt", "json"]
+        },
+        "artifact": {},
+        "sourceTokenPaths": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

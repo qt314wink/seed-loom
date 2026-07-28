@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_f354b20a92885cf2",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-20T08:40:46.598632Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "mcp-git-ingest",
+    "commit_sha": "2025-01-26T10:32:13Z",
+    "ref": "master"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1305880364,
+    "github_node_id": "R_kgDOTdYnLA",
+    "language": null,
+    "archived": false,
+    "private": false,
+    "fork": true,
+    "description": "A Model Context Protocol (MCP) server that helps read GitHub repository structure and important files.",
+    "pushed_at": "2025-01-26T10:32:13Z",
+    "created_at": "2026-07-19T16:57:39Z",
+    "open_issues_count": 0
+  }
+}

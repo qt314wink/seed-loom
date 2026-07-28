@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_d5a9d52533a330c9",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-20T08:40:46.599325Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "mcp-shrimp-task-manager",
+    "commit_sha": "2025-08-21T08:55:59Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1305879834,
+    "github_node_id": "R_kgDOTdYlGg",
+    "language": null,
+    "archived": false,
+    "private": false,
+    "fork": true,
+    "description": "Shrimp Task Manager is a task tool built for AI Agents, emphasizing chain-of-thought, reflection, and style consistency. It converts natural language into structured dev tasks with dependency tracking and iterative refinement, enabling agent-like developer behavior in reasoning AI systems.",
+    "pushed_at": "2025-08-21T08:55:59Z",
+    "created_at": "2026-07-19T16:57:06Z",
+    "open_issues_count": 0
+  }
+}

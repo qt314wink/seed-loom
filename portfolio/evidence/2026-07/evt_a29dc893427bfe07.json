@@ -1,0 +1,31 @@
+{
+  "event_id": "evt_a29dc893427bfe07",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-20T08:40:47.270364Z",
+  "asset": {
+    "provider": "github",
+    "owner": "MelodicBloom",
+    "repo": "nacre-orchid-atelier",
+    "commit_sha": "2026-07-19T09:18:14Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1297047112,
+    "github_node_id": "R_kgDOTU9eSA",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": "Living material design system \u2014 tokens, GLSL shaders, React MaterialSurface, and Next.js docs atlas. Powered by the Nacre Inquiry Engine.",
+    "pushed_at": "2026-07-19T09:18:14Z",
+    "created_at": "2026-07-11T02:00:40Z",
+    "open_issues_count": 0,
+    "drift_detected": true
+  }
+}

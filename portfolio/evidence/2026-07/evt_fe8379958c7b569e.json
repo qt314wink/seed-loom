@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_fe8379958c7b569e",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-07-20T08:40:46.598300Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "github-mcp-server",
+    "commit_sha": "2026-07-19T12:43:10Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1305880668,
+    "github_node_id": "R_kgDOTdYoXA",
+    "language": null,
+    "archived": false,
+    "private": false,
+    "fork": true,
+    "description": "GitHub's official MCP Server",
+    "pushed_at": "2026-07-19T12:43:10Z",
+    "created_at": "2026-07-19T16:57:57Z",
+    "open_issues_count": 0
+  }
+}
