@@ -1,0 +1,15 @@
+[
+  {"ackId":"ack:2026-07-30:collect","runId":"run:nightly:reconstructed:2026-07-30","stage":"collect","status":"passed"},
+  {"ackId":"ack:2026-07-30:vet","runId":"run:nightly:reconstructed:2026-07-30","stage":"vet","status":"passed"},
+  {"ackId":"ack:2026-07-30:normalize","runId":"run:nightly:reconstructed:2026-07-30","stage":"normalize","status":"passed"},
+  {"ackId":"ack:2026-07-30:observe","runId":"run:nightly:reconstructed:2026-07-30","stage":"observe","status":"passed"},
+  {"ackId":"ack:2026-07-30:inquire","runId":"run:nightly:reconstructed:2026-07-30","stage":"inquire","status":"deferred"},
+  {"ackId":"ack:2026-07-30:interpret","runId":"run:nightly:reconstructed:2026-07-30","stage":"interpret","status":"deferred"},
+  {"ackId":"ack:2026-07-30:relate","runId":"run:nightly:reconstructed:2026-07-30","stage":"relate","status":"deferred"},
+  {"ackId":"ack:2026-07-30:pattern","runId":"run:nightly:reconstructed:2026-07-30","stage":"pattern","status":"deferred"},
+  {"ackId":"ack:2026-07-30:opportunity","runId":"run:nightly:reconstructed:2026-07-30","stage":"opportunity","status":"deferred"},
+  {"ackId":"ack:2026-07-30:strategy","runId":"run:nightly:reconstructed:2026-07-30","stage":"strategy","status":"deferred"},
+  {"ackId":"ack:2026-07-30:experiment","runId":"run:nightly:reconstructed:2026-07-30","stage":"experiment","status":"deferred"},
+  {"ackId":"ack:2026-07-30:genesis","runId":"run:nightly:reconstructed:2026-07-30","stage":"genesis","status":"deferred"},
+  {"ackId":"ack:2026-07-30:publish","runId":"run:nightly:reconstructed:2026-07-30","stage":"publish","status":"passed"}
+]

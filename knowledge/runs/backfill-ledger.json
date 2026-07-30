@@ -1,0 +1,10 @@
+{
+  "ledgerId":"backfill:nightly-intelligence:v1",
+  "generatedAt":"2026-07-30T16:31:00Z",
+  "policy":"Never represent reconstructed research as the originally delivered automation output.",
+  "cycles":[
+    {"scheduledFor":"2026-07-28T19:00:00-04:00","status":"unavailable","reason":"Automation delivery content was not exposed by the task record or recoverable personal context.","requiredAction":"Preserve absence as a provenance failure; do not fabricate."},
+    {"scheduledFor":"2026-07-29T19:00:00-04:00","status":"unavailable","reason":"The automation reports a last run but its delivered stories and source payload were not recoverable.","requiredAction":"Preserve absence as a provenance failure; do not fabricate."},
+    {"scheduledFor":"2026-07-30T19:00:00-04:00","status":"reconstructed","reason":"Current source-backed cycle created before scheduled delivery to establish an up-to-date graph baseline.","runRef":"run:nightly:reconstructed:2026-07-30"}
+  ]
+}
