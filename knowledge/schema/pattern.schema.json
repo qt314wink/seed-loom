@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.local/schema/pattern.schema.json",
+  "title": "Pattern",
+  "type": "object",
+  "required": ["id", "type", "name", "mechanism", "observationRefs", "confidence", "status"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^pattern:[a-z0-9][a-z0-9._:-]+$"},
+    "type": {"const": "Pattern"},
+    "name": {"type": "string"},
+    "mechanism": {"type": "string", "minLength": 20},
+    "observationRefs": {"type": "array", "minItems": 2, "items": {"type": "string"}},
+    "actorClasses": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "status": {"enum": ["candidate", "strengthening", "stable", "weakening", "contradicted", "superseded", "rejected"]},
+    "falsifiers": {"type": "array", "items": {"type": "string"}},
+    "transferBoundaries": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

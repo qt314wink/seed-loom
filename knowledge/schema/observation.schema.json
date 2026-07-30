@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.local/schema/observation.schema.json",
+  "title": "Observation",
+  "type": "object",
+  "required": ["id", "type", "capturedAt", "claim", "verifiedFacts", "inference", "significance", "confidence", "evidenceMaturity", "sourceRefs", "approvalState"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^obs:[a-z0-9][a-z0-9._:-]+$"},
+    "type": {"const": "Observation"},
+    "capturedAt": {"type": "string", "format": "date-time"},
+    "claim": {"type": "string", "minLength": 20},
+    "verifiedFacts": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "inference": {"type": "array", "items": {"type": "string"}},
+    "significance": {"type": "string", "minLength": 10},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "evidenceMaturity": {"enum": ["captured", "candidate", "source-backed", "reviewed", "accepted", "implemented", "measured", "superseded", "rejected"]},
+    "sourceRefs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "actorRefs": {"type": "array", "items": {"type": "string"}},
+    "affectedRepositories": {"type": "array", "items": {"type": "string"}},
+    "assumptions": {"type": "array", "items": {"type": "string"}},
+    "knownLimitations": {"type": "array", "items": {"type": "string"}},
+    "counterevidenceRefs": {"type": "array", "items": {"type": "string"}},
+    "approvalState": {"enum": ["not-required", "pending", "approved", "rejected"]}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.local/schema/opportunity.schema.json",
+  "title": "Opportunity",
+  "type": "object",
+  "required": ["id", "type", "problem", "beneficiary", "evidenceDimensions", "actorClassSupport", "confidence", "disposition"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^opp:[a-z0-9][a-z0-9._:-]+$"},
+    "type": {"const": "Opportunity"},
+    "problem": {"type": "string", "minLength": 20},
+    "beneficiary": {"type": "string", "minLength": 3},
+    "evidenceDimensions": {"type": "object", "required": ["market", "policy", "research", "innovation", "economic", "traction"], "properties": {"market": {"type": "array", "items": {"type": "string"}}, "policy": {"type": "array", "items": {"type": "string"}}, "research": {"type": "array", "items": {"type": "string"}}, "innovation": {"type": "array", "items": {"type": "string"}}, "economic": {"type": "array", "items": {"type": "string"}}, "traction": {"type": "array", "items": {"type": "string"}}}, "additionalProperties": false},
+    "actorClassSupport": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string"}},
+    "mostDangerousAssumption": {"type": "string"},
+    "falsifier": {"type": "string"},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "disposition": {"enum": ["reject", "watch", "experiment", "existing-repo", "cross-repo", "genesis-candidate"]}
+  },
+  "additionalProperties": false
+}

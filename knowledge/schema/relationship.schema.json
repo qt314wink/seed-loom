@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.local/schema/relationship.schema.json",
+  "title": "Relationship",
+  "type": "object",
+  "required": ["id", "type", "from", "predicate", "to", "confidence", "evidenceRefs"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^rel:[a-z0-9][a-z0-9._:-]+$"},
+    "type": {"const": "Relationship"},
+    "from": {"type": "string"},
+    "predicate": {"enum": ["SUPPORTED_BY", "DERIVED_FROM", "APPLIES_TO", "CONTRADICTS", "REFINES", "SUPERSEDES", "MAY_ENABLE", "MAY_THREATEN", "TESTED_BY", "IMPLEMENTED_IN", "OWNED_BY", "REQUIRES_APPROVAL", "PROVIDES_TO", "SUPPLIES", "BUILDS", "BUYS", "PARTICIPATES_IN", "COVERS", "FUNDS", "ANALYZES", "REGULATES", "RESEARCHES"]},
+    "to": {"type": "string"},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "evidenceRefs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "validFrom": {"type": ["string", "null"], "format": "date-time"},
+    "validTo": {"type": ["string", "null"], "format": "date-time"}
+  },
+  "additionalProperties": false
+}

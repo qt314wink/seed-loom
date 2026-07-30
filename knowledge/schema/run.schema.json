@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.local/schema/run.schema.json",
+  "title": "Research Run",
+  "type": "object",
+  "required": ["runId", "type", "retrievalWindow", "newObservations", "updatedObservations", "candidatePatterns", "newRelationships", "contradictions", "opportunities", "repositoryActions", "noChangeReceipts", "collectionFailures"],
+  "properties": {
+    "runId": {"type": "string", "pattern": "^run:[a-z0-9][a-z0-9._:-]+$"},
+    "type": {"const": "ResearchRun"},
+    "retrievalWindow": {"type": "object", "required": ["from", "to"], "properties": {"from": {"type": "string", "format": "date-time"}, "to": {"type": "string", "format": "date-time"}}, "additionalProperties": false},
+    "newObservations": {"type": "array", "items": {"type": "string"}},
+    "updatedObservations": {"type": "array", "items": {"type": "string"}},
+    "candidatePatterns": {"type": "array", "items": {"type": "string"}},
+    "newRelationships": {"type": "array", "items": {"type": "string"}},
+    "contradictions": {"type": "array", "items": {"type": "string"}},
+    "opportunities": {"type": "array", "items": {"type": "string"}},
+    "proposedExperiments": {"type": "array", "items": {"type": "string"}},
+    "repositoryActions": {"type": "array", "items": {"type": "object"}},
+    "noChangeReceipts": {"type": "array", "items": {"type": "string"}},
+    "collectionFailures": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.local/schema/genesis-dossier.schema.json",
+  "title": "Repository Genesis Dossier",
+  "type": "object",
+  "required": ["id", "type", "opportunityRef", "thesis", "whyNewRepository", "analogues", "fatalGates", "score", "approvalState"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^genesis:[a-z0-9][a-z0-9._:-]+$"},
+    "type": {"const": "RepositoryGenesisDossier"},
+    "opportunityRef": {"type": "string"},
+    "thesis": {"type": "string", "minLength": 40},
+    "whyNewRepository": {"type": "object", "required": ["notFeature", "notPackage", "notService", "notResearchNote", "notExistingRepoInitiative"], "properties": {"notFeature": {"type": "string"}, "notPackage": {"type": "string"}, "notService": {"type": "string"}, "notResearchNote": {"type": "string"}, "notExistingRepoInitiative": {"type": "string"}}, "additionalProperties": false},
+    "analogues": {"type": "object", "required": ["direct", "adjacent", "failedOrConstrained"], "properties": {"direct": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "adjacent": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "failedOrConstrained": {"type": "array", "minItems": 1, "items": {"type": "string"}}}, "additionalProperties": false},
+    "fatalGates": {"type": "object", "additionalProperties": {"type": "boolean"}},
+    "score": {"type": "number", "minimum": 0, "maximum": 1},
+    "smallestProof": {"type": "string"},
+    "killCriteria": {"type": "array", "items": {"type": "string"}},
+    "approvalState": {"enum": ["pending", "approved-for-experiment", "approved-for-repo", "rejected", "deferred"]}
+  },
+  "additionalProperties": false
+}
