@@ -1,0 +1,106 @@
+{
+  "control": "WS5",
+  "digest": "3212fe4478c3d1789b56f4572e3c437d9f7d79e65edd4f0287d3957fc0ba4ba8",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/sensitive-data/positive/pos-copyright-excerpt-120-words.json",
+      "sha256": "11f09bc8c00c72ccf9d7691ba1ccf7b5736d29a7d047da0b643faf25abc067ff"
+    },
+    {
+      "path": "knowledge/fixtures/sensitive-data/positive/pos-health-full-metadata.json",
+      "sha256": "d843e7d5b9eb8cd5c56ba2b7b2f836b3ed1285a16abbd0b07e34ac0fc09b1e71"
+    },
+    {
+      "path": "knowledge/fixtures/sensitive-data/positive/pos-internal-no-purpose.json",
+      "sha256": "d6d56d0849cdda17b2880a748cac012f35a950a812501cdcb5024d85b8ff34c4"
+    },
+    {
+      "path": "knowledge/fixtures/sensitive-data/positive/pos-licensed-with-retention.json",
+      "sha256": "ce58dc8c33a95b836398e95f9f7ebf633ee2f70e67e0e7aa450ff7d660317e1f"
+    },
+    {
+      "path": "knowledge/fixtures/sensitive-data/positive/pos-personal-full-metadata.json",
+      "sha256": "15813012e2a7b19d418c851b0448e6613b8718bf8b919a167b7adf6d6ee49e17"
+    },
+    {
+      "path": "knowledge/fixtures/sensitive-data/positive/pos-public-record.json",
+      "sha256": "03dddc5cf1e7ac8ec15aa8fecaaac5e738015d044ce5286d26821ca7bc5f332a"
+    },
+    {
+      "path": "knowledge/fixtures/sensitive-data/positive/pos-undeclared-no-signals.json",
+      "sha256": "4c91167d5a01ea8f2ba21f7501e5510c42dc670639de68998ecc0e5242555f7b"
+    }
+  ],
+  "receiptId": "receipt:sensitive-data:20260731T000000Z",
+  "results": {
+    "counts": {
+      "minimize-candidate": 0,
+      "pass": 7,
+      "quarantine": 0,
+      "reject": 0
+    },
+    "minimizeCandidateFiles": [],
+    "quarantineFiles": [],
+    "recordsScanned": 7,
+    "verdicts": [
+      {
+        "action": "pass",
+        "declaredClass": "copyrighted-excerpt",
+        "detectedClass": "copyrighted-excerpt",
+        "recordRef": "obs:pos-copyright-120",
+        "redactions": [],
+        "rulesFired": []
+      },
+      {
+        "action": "pass",
+        "declaredClass": "health",
+        "detectedClass": "health",
+        "recordRef": "obs:pos-health-1",
+        "redactions": [],
+        "rulesFired": []
+      },
+      {
+        "action": "pass",
+        "declaredClass": "internal",
+        "detectedClass": "internal",
+        "recordRef": "obs:pos-internal-1",
+        "redactions": [],
+        "rulesFired": []
+      },
+      {
+        "action": "pass",
+        "declaredClass": "licensed",
+        "detectedClass": "licensed",
+        "recordRef": "obs:pos-licensed-1",
+        "redactions": [],
+        "rulesFired": []
+      },
+      {
+        "action": "pass",
+        "declaredClass": "personal",
+        "detectedClass": "personal",
+        "recordRef": "obs:pos-personal-1",
+        "redactions": [],
+        "rulesFired": []
+      },
+      {
+        "action": "pass",
+        "declaredClass": "public",
+        "detectedClass": "public",
+        "recordRef": "obs:pos-public-1",
+        "redactions": [],
+        "rulesFired": []
+      },
+      {
+        "action": "pass",
+        "declaredClass": null,
+        "detectedClass": "unclassified",
+        "recordRef": "obs:pos-undeclared-1",
+        "redactions": [],
+        "rulesFired": []
+      }
+    ]
+  },
+  "violations": []
+}

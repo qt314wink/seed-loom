@@ -1,0 +1,42 @@
+{
+  "control": "WS5",
+  "digest": "c086f0bb8ce80591279ab5ee09039ec814694cc222ac8b87bed7ad117bc4a67e",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/sensitive-data/negative/neg-copyright-full-article-400-words.json",
+      "sha256": "7ebe7f2386e45e9ce841aa2b28037c970b96303b121c59c925628bbd9baf4086"
+    }
+  ],
+  "receiptId": "receipt:sensitive-data:fixture:neg-copyright-full-article-400-words",
+  "results": {
+    "counts": {
+      "minimize-candidate": 0,
+      "pass": 0,
+      "quarantine": 0,
+      "reject": 1
+    },
+    "minimizeCandidateFiles": [],
+    "quarantineFiles": [],
+    "recordsScanned": 1,
+    "verdicts": [
+      {
+        "action": "reject",
+        "declaredClass": "copyrighted-excerpt",
+        "detectedClass": "copyrighted-excerpt",
+        "recordRef": "obs:neg-copyright-full",
+        "redactions": [],
+        "rulesFired": [
+          "FULL_ARTICLE_INGESTION"
+        ]
+      }
+    ]
+  },
+  "violations": [
+    {
+      "detail": "rejected; rules fired: FULL_ARTICLE_INGESTION",
+      "record": "obs:neg-copyright-full",
+      "rule": "FULL_ARTICLE_INGESTION"
+    }
+  ]
+}

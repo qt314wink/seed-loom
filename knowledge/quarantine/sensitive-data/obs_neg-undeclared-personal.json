@@ -1,0 +1,20 @@
+{
+  "control": "WS5",
+  "detectedClass": "personal",
+  "quarantineId": "quarantine:sensitive-data:84d534fd8f21",
+  "record": {
+    "claim": "Follow up with the workshop participant about the survey.",
+    "contact": "Reach Priya at priya.sharma@example.org before Friday",
+    "dob": "1990-04-17",
+    "recordRef": "obs:neg-undeclared-personal",
+    "type": "Observation"
+  },
+  "recordRef": "obs:neg-undeclared-personal",
+  "recordedAt": "2026-07-31T00:00:00Z",
+  "redactionNote": "Record quarantined by WS5 sensitive-data scan. The scan receipt carries no raw sensitive values (secrets appear only as redacted fingerprints; personal-data signals as signal kinds only). This holding copy is retained for human review and classification; it is NOT canonical knowledge.",
+  "rulesFired": [
+    "UNDECLARED_PERSONAL_DATA",
+    "personal-signal:dob",
+    "personal-signal:email"
+  ]
+}

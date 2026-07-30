@@ -1,0 +1,30 @@
+{
+  "fixtureId": "pos-licensed-with-retention",
+  "description": "Licensed dataset record with license, permittedUse, and retention declared (licensed is in requireRetentionFor). Acceptance: passes cleanly.",
+  "expectation": "pass",
+  "expectedRule": "none",
+  "records": [
+    {
+      "recordRef": "obs:pos-licensed-1",
+      "type": "Observation",
+      "dataClassification": {
+        "class": "licensed",
+        "declaredBy": "procurement",
+        "declaredAt": "2026-07-15T00:00:00Z",
+        "license": "CC-BY-4.0",
+        "permittedUse": "analysis-and-redistribution-with-attribution",
+        "retention": "delete-after:2028-06-30"
+      },
+      "claim": "Licensed statistics bundle shows freight volumes up 3%."
+    }
+  ],
+  "expected": {
+    "verdicts": [
+      {
+        "recordRef": "obs:pos-licensed-1",
+        "action": "pass",
+        "rule": null
+      }
+    ]
+  }
+}

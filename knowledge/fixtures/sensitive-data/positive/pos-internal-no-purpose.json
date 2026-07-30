@@ -1,0 +1,27 @@
+{
+  "fixtureId": "pos-internal-no-purpose",
+  "description": "ADVERSARIAL BOUNDARY: internal record with no purpose/minimization/retention metadata. internal is NOT in governance requirePurposeFor/requireRetentionFor, so the scanner must pass it cleanly (no GOVERNED_METADATA_MISSING).",
+  "expectation": "pass",
+  "expectedRule": "none",
+  "records": [
+    {
+      "recordRef": "obs:pos-internal-1",
+      "type": "Observation",
+      "dataClassification": {
+        "class": "internal",
+        "declaredBy": "ops-agent",
+        "declaredAt": "2026-07-19T08:00:00Z"
+      },
+      "claim": "Internal retro notes: pipeline stage timings improved after caching."
+    }
+  ],
+  "expected": {
+    "verdicts": [
+      {
+        "recordRef": "obs:pos-internal-1",
+        "action": "pass",
+        "rule": null
+      }
+    ]
+  }
+}

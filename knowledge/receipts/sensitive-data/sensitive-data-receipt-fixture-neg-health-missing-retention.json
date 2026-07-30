@@ -1,0 +1,42 @@
+{
+  "control": "WS5",
+  "digest": "3602ffa52a782c86510745a8195113c6d985f28dfe9072ce3e0f5995a48f80d0",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/sensitive-data/negative/neg-health-missing-retention.json",
+      "sha256": "a2be39bd39c6de979c9e1699407b8b41e7db9635420f04e7338c6a87b94451f2"
+    }
+  ],
+  "receiptId": "receipt:sensitive-data:fixture:neg-health-missing-retention",
+  "results": {
+    "counts": {
+      "minimize-candidate": 0,
+      "pass": 0,
+      "quarantine": 0,
+      "reject": 1
+    },
+    "minimizeCandidateFiles": [],
+    "quarantineFiles": [],
+    "recordsScanned": 1,
+    "verdicts": [
+      {
+        "action": "reject",
+        "declaredClass": "health",
+        "detectedClass": "health",
+        "recordRef": "obs:neg-health-noret",
+        "redactions": [],
+        "rulesFired": [
+          "STRICT_METADATA_MISSING"
+        ]
+      }
+    ]
+  },
+  "violations": [
+    {
+      "detail": "rejected; rules fired: STRICT_METADATA_MISSING",
+      "record": "obs:neg-health-noret",
+      "rule": "STRICT_METADATA_MISSING"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "control": "WS5",
+  "digest": "acae29edbda4c5d333fbee8babcfa3815fc7126705ed538bd879b0e1b8bd63f4",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/sensitive-data/negative/neg-copyright-excerpt-121-words.json",
+      "sha256": "af72e293276929b4bb277508a05277ba95a40f01963600b5b56e291a661a87f8"
+    }
+  ],
+  "receiptId": "receipt:sensitive-data:fixture:neg-copyright-excerpt-121-words",
+  "results": {
+    "counts": {
+      "minimize-candidate": 1,
+      "pass": 0,
+      "quarantine": 0,
+      "reject": 0
+    },
+    "minimizeCandidateFiles": [
+      "knowledge/quarantine/sensitive-data/minimize-candidates/obs_neg-copyright-121.json"
+    ],
+    "quarantineFiles": [],
+    "recordsScanned": 1,
+    "verdicts": [
+      {
+        "action": "minimize-candidate",
+        "declaredClass": "copyrighted-excerpt",
+        "detectedClass": "copyrighted-excerpt",
+        "recordRef": "obs:neg-copyright-121",
+        "redactions": [],
+        "rulesFired": [
+          "EXCERPT_TOO_LONG"
+        ]
+      }
+    ]
+  },
+  "violations": []
+}

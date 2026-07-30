@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom/schemas/data-classification.schema.json",
+  "title": "DataClassification",
+  "description": "WS5 sensitive-data and rights classification metadata. The root schema describes the dataClassification block attached to a knowledge record. $defs.ScanReceipt describes the WS5 scan receipt emitted by scripts/knowledge/scan-sensitive-data.mjs. Classification governance (class list, required metadata, copyright limits) is enforced at scan time from knowledge/config/governance.json sensitiveData; this schema encodes the strictest invariants so records can also be validated standalone.",
+  "type": "object",
+  "required": ["class"],
+  "properties": {
+    "class": {
+      "type": "string",
+      "enum": [
+        "public",
+        "internal",
+        "confidential",
+        "restricted",
+        "personal",
+        "sensitive-personal",
+        "health",
+        "financial",
+        "application",
+        "licensed",
+        "copyrighted-excerpt",
+        "private-repository",
+        "secret",
+        "prohibited"
+      ]
+    },
+    "declaredBy": {"type": "string", "minLength": 1},
+    "declaredAt": {"type": "string", "format": "date-time"},
+    "purpose": {"type": "string", "minLength": 1},
+    "minimization": {"type": "string", "minLength": 1},
+    "accessBoundary": {"type": "string", "minLength": 1},
+    "retention": {"type": "string", "minLength": 1},
+    "approval": {
+      "type": "object",
+      "required": ["approvedBy", "approvedAt"],
+      "properties": {
+        "approvedBy": {"type": "string", "minLength": 1},
+        "approvedAt": {"type": "string", "format": "date-time"},
+        "reference": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "license": {"type": "string", "minLength": 1},
+    "permittedUse": {"type": "string", "minLength": 1},
+    "excerptWordCount": {"type": "integer", "minimum": 0},
+    "deletionRequirement": {"type": "string", "minLength": 1},
+    "contentHash": {"type": "string", "pattern": "^(sha256:)?[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {"properties": {"class": {"enum": ["health", "financial", "application", "private-repository"]}}},
+      "then": {"required": ["purpose", "minimization", "accessBoundary", "retention", "approval"]}
+    },
+    {
+      "if": {"properties": {"class": {"const": "copyrighted-excerpt"}}},
+      "then": {"required": ["license", "permittedUse", "excerptWordCount", "deletionRequirement"]}
+    },
+    {
+      "if": {"properties": {"class": {"enum": ["personal", "sensitive-personal", "confidential", "restricted"]}}},
+      "then": {"required": ["purpose", "retention"]}
+    },
+    {
+      "if": {"properties": {"class": {"const": "licensed"}}},
+      "then": {"required": ["license", "permittedUse", "retention"]}
+    }
+  ],
+  "$defs": {
+    "Verdict": {
+      "type": "object",
+      "required": ["recordRef", "detectedClass", "declaredClass", "action", "rulesFired", "redactions"],
+      "properties": {
+        "recordRef": {"type": "string", "minLength": 1},
+        "detectedClass": {
+          "type": "string",
+          "enum": [
+            "public", "internal", "confidential", "restricted", "personal",
+            "sensitive-personal", "health", "financial", "application", "licensed",
+            "copyrighted-excerpt", "private-repository", "secret", "prohibited",
+            "unclassified"
+          ]
+        },
+        "declaredClass": {
+          "type": ["string", "null"],
+          "enum": [
+            "public", "internal", "confidential", "restricted", "personal",
+            "sensitive-personal", "health", "financial", "application", "licensed",
+            "copyrighted-excerpt", "private-repository", "secret", "prohibited",
+            null
+          ]
+        },
+        "action": {"enum": ["pass", "quarantine", "reject", "minimize-candidate"]},
+        "rulesFired": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "redactions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["rule", "field", "prefix", "length", "sha256"],
+            "properties": {
+              "rule": {"type": "string", "minLength": 1},
+              "field": {"type": "string"},
+              "prefix": {"type": "string", "maxLength": 4},
+              "length": {"type": "integer", "minimum": 1},
+              "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "ScanReceipt": {
+      "type": "object",
+      "required": ["receiptId", "control", "generatedAt", "inputs", "results", "violations", "digest"],
+      "properties": {
+        "receiptId": {"type": "string", "minLength": 1},
+        "control": {"const": "WS5"},
+        "generatedAt": {"type": "string", "format": "date-time"},
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["path", "sha256"],
+            "properties": {
+              "path": {"type": "string", "minLength": 1},
+              "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+            },
+            "additionalProperties": false
+          }
+        },
+        "results": {
+          "type": "object",
+          "required": ["recordsScanned", "counts", "verdicts", "quarantineFiles", "minimizeCandidateFiles"],
+          "properties": {
+            "recordsScanned": {"type": "integer", "minimum": 0},
+            "counts": {
+              "type": "object",
+              "required": ["pass", "quarantine", "reject", "minimize-candidate"],
+              "properties": {
+                "pass": {"type": "integer", "minimum": 0},
+                "quarantine": {"type": "integer", "minimum": 0},
+                "reject": {"type": "integer", "minimum": 0},
+                "minimize-candidate": {"type": "integer", "minimum": 0}
+              },
+              "additionalProperties": false
+            },
+            "verdicts": {"type": "array", "items": {"$ref": "#/$defs/Verdict"}},
+            "quarantineFiles": {"type": "array", "items": {"type": "string"}},
+            "minimizeCandidateFiles": {"type": "array", "items": {"type": "string"}}
+          },
+          "additionalProperties": false
+        },
+        "violations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["rule", "record", "detail"],
+            "properties": {
+              "rule": {"type": "string", "minLength": 1},
+              "record": {"type": "string", "minLength": 1},
+              "detail": {"type": "string"}
+            },
+            "additionalProperties": false
+          }
+        },
+        "digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      },
+      "additionalProperties": false
+    }
+  }
+}

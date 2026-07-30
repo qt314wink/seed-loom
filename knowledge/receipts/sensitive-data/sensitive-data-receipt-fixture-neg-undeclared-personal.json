@@ -1,0 +1,40 @@
+{
+  "control": "WS5",
+  "digest": "b57ffe11d0545f6bf6c780465d9624fa92d9dc2b9763a92ef0c593f79b11eaca",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/sensitive-data/negative/neg-undeclared-personal.json",
+      "sha256": "57162ef2426bcd1a8df3a8faa06e3a4fc695090adcac183dcf0d3e57a13280e1"
+    }
+  ],
+  "receiptId": "receipt:sensitive-data:fixture:neg-undeclared-personal",
+  "results": {
+    "counts": {
+      "minimize-candidate": 0,
+      "pass": 0,
+      "quarantine": 1,
+      "reject": 0
+    },
+    "minimizeCandidateFiles": [],
+    "quarantineFiles": [
+      "knowledge/quarantine/sensitive-data/obs_neg-undeclared-personal.json"
+    ],
+    "recordsScanned": 1,
+    "verdicts": [
+      {
+        "action": "quarantine",
+        "declaredClass": null,
+        "detectedClass": "personal",
+        "recordRef": "obs:neg-undeclared-personal",
+        "redactions": [],
+        "rulesFired": [
+          "UNDECLARED_PERSONAL_DATA",
+          "personal-signal:dob",
+          "personal-signal:email"
+        ]
+      }
+    ]
+  },
+  "violations": []
+}

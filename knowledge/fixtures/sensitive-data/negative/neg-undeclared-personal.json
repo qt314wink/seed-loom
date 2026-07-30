@@ -1,0 +1,24 @@
+{
+  "fixtureId": "neg-undeclared-personal",
+  "description": "Record with NO dataClassification containing personal-data signals (an email address and a dob field). Acceptance: QUARANTINE (defaultUnknownPersonalAction from governance) with UNDECLARED_PERSONAL_DATA; not rejected, not passed; a quarantine copy with a redaction note is written; the receipt names signal kinds only, never values.",
+  "expectation": "quarantine",
+  "expectedRule": "UNDECLARED_PERSONAL_DATA",
+  "records": [
+    {
+      "recordRef": "obs:neg-undeclared-personal",
+      "type": "Observation",
+      "claim": "Follow up with the workshop participant about the survey.",
+      "contact": "Reach Priya at priya.sharma@example.org before Friday",
+      "dob": "1990-04-17"
+    }
+  ],
+  "expected": {
+    "verdicts": [
+      {
+        "recordRef": "obs:neg-undeclared-personal",
+        "action": "quarantine",
+        "rule": "UNDECLARED_PERSONAL_DATA"
+      }
+    ]
+  }
+}
