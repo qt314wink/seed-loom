@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.local/schema/strategy.schema.json",
+  "title": "Strategy",
+  "type": "object",
+  "required": ["id", "type", "opportunityRefs", "perspective", "benefit", "costOfWaiting", "recommendedShape", "confidence", "approvalState"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^strategy:[a-z0-9][a-z0-9._:-]+$"},
+    "type": {"const": "Strategy"},
+    "opportunityRefs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "perspective": {"type": "string", "minLength": 20},
+    "benefit": {"type": "string", "minLength": 10},
+    "costOfWaiting": {"type": "string", "minLength": 10},
+    "recommendedShape": {"enum": ["ignore", "research-note", "portfolio-story", "service", "package", "existing-repo", "cross-repo", "bounded-experiment", "genesis-dossier"]},
+    "tradeoffs": {"type": "array", "items": {"type": "string"}},
+    "repositoryRefs": {"type": "array", "items": {"type": "string"}},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "approvalState": {"enum": ["pending", "approved", "rejected", "not-required"]}
+  },
+  "additionalProperties": false
+}
