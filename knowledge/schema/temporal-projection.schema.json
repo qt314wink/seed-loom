@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom/schemas/temporal-projection.schema.json",
+  "title": "TemporalDecayProjection",
+  "description": "Time-indexed confidence projection emitted by scripts/knowledge/apply-temporal-decay.mjs (WS2). Projections are disposable and derived; source records are never mutated. Semantics: baseConfidence is copied verbatim; effectiveConfidence = round6(base * 0.5^(daysSinceAnchor/halfLifeDays)) floored at 0; an explicit superseded/closed override forces effectiveConfidence 0, expired true, reviewRequired false, and decayReason '<type>-override'.",
+  "type": "object",
+  "required": ["projectionId", "control", "evaluatedAt", "entries"],
+  "properties": {
+    "projectionId": {"type": "string", "pattern": "^projection:temporal-decay:.+$"},
+    "control": {"const": "WS2"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "evaluatedAt": {"type": "string", "format": "date-time"},
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["recordRef", "evidenceClass", "baseConfidence", "effectiveConfidence", "evaluatedAt", "validFrom", "validUntil", "reviewBy", "daysSinceAnchor", "decayPolicy", "decayReason", "expired", "reviewRequired", "reviewReasons", "override", "warnings"],
+        "properties": {
+          "recordRef": {"type": "string", "minLength": 1},
+          "evidenceClass": {"type": ["string", "null"]},
+          "baseConfidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "effectiveConfidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "evaluatedAt": {"type": "string", "format": "date-time"},
+          "validFrom": {"type": "string", "format": "date-time"},
+          "validUntil": {"type": ["string", "null"], "format": "date-time"},
+          "reviewBy": {"type": ["string", "null"], "format": "date-time"},
+          "daysSinceAnchor": {"type": "number", "minimum": 0},
+          "decayPolicy": {"type": "string", "minLength": 1},
+          "decayReason": {"enum": ["half-life-decay", "superseded-override", "closed-override"]},
+          "expired": {"type": "boolean"},
+          "reviewRequired": {"type": "boolean"},
+          "reviewReasons": {"type": "array", "items": {"enum": ["review-by-elapsed", "terms-changed"]}, "uniqueItems": true},
+          "override": {
+            "type": ["object", "null"],
+            "required": ["type", "reference"],
+            "properties": {
+              "type": {"enum": ["superseded", "closed"]},
+              "reference": {"type": "string", "minLength": 1}
+            },
+            "additionalProperties": false
+          },
+          "warnings": {"type": "array", "items": {"type": "string"}},
+          "sourceFile": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

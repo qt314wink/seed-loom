@@ -1,0 +1,21 @@
+{
+  "fixtureId": "temporal:pos:missing-class-default-warn",
+  "description": "ADVERSARIAL (non-failing): record with no evidenceClass/domain must NOT crash the control; it falls back to the 'default' decay policy and emits WARN MISSING_EVIDENCE_CLASS.",
+  "expectation": "pass",
+  "adversarial": true,
+  "expectedWarnings": ["MISSING_EVIDENCE_CLASS"],
+  "assert": {
+    "decayPolicy": {"eq": "default"},
+    "evidenceClass": {"eq": null},
+    "decayReason": {"eq": "half-life-decay"},
+    "effectiveConfidence": {"eq": 0.445449},
+    "warnings": {"eq": ["MISSING_EVIDENCE_CLASS"]}
+  },
+  "record": {
+    "id": "obs:fixture:missing-class",
+    "type": "Observation",
+    "capturedAt": "2026-07-01T00:00:00Z",
+    "confidence": 0.5,
+    "claim": "Fixture: a record whose evidence class field is absent entirely."
+  }
+}

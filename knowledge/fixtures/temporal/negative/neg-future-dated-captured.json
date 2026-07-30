@@ -1,0 +1,14 @@
+{
+  "fixtureId": "temporal:neg:future-dated-captured",
+  "description": "Record whose capturedAt is AFTER evaluatedAt must fail validation with named rule FUTURE_DATED_RECORD and be excluded from projection entries.",
+  "expectation": "fail",
+  "expectedRule": "FUTURE_DATED_RECORD",
+  "record": {
+    "id": "obs:fixture:future-captured",
+    "type": "Observation",
+    "capturedAt": "2026-08-15T00:00:00Z",
+    "confidence": 0.7,
+    "evidenceClass": "pricing",
+    "claim": "Fixture: a record claiming to be captured two weeks in the future."
+  }
+}

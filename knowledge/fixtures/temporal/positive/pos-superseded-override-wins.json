@@ -1,0 +1,24 @@
+{
+  "fixtureId": "temporal:pos:superseded-override-wins",
+  "description": "ADVERSARIAL (non-failing): record carrying supersededBy must NOT be reported as merely decayed. Although 211 days elapsed (would-be half-life confidence 0.069898) and reviewBy elapsed, the supersession override wins: effectiveConfidence 0, decayReason 'superseded-override', reviewRequired=false, expired=true, override.reference recorded. baseConfidence at source is untouched.",
+  "expectation": "pass",
+  "adversarial": true,
+  "assert": {
+    "decayPolicy": {"eq": "law-or-policy"},
+    "decayReason": {"eq": "superseded-override"},
+    "baseConfidence": {"eq": 0.8},
+    "effectiveConfidence": {"eq": 0},
+    "expired": {"eq": true},
+    "reviewRequired": {"eq": false},
+    "override": {"eq": {"type": "superseded", "reference": "obs:2026-07-15:successor-policy"}}
+  },
+  "record": {
+    "id": "obs:fixture:superseded-policy",
+    "type": "Observation",
+    "capturedAt": "2026-01-01T00:00:00Z",
+    "confidence": 0.8,
+    "evidenceClass": "law-or-policy",
+    "supersededBy": "obs:2026-07-15:successor-policy",
+    "claim": "Fixture: a regulatory guidance note replaced by a successor policy published in July 2026."
+  }
+}

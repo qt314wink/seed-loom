@@ -1,0 +1,199 @@
+{
+  "control": "WS2",
+  "entries": [
+    {
+      "baseConfidence": 0.7,
+      "daysSinceAnchor": 30,
+      "decayPolicy": "opportunity",
+      "decayReason": "closed-override",
+      "effectiveConfidence": 0,
+      "evaluatedAt": "2026-07-31T00:00:00.000Z",
+      "evidenceClass": "opportunity",
+      "expired": true,
+      "override": {
+        "reference": "run:window-closed:2026-07-20",
+        "type": "closed"
+      },
+      "recordRef": "obs:fixture:closed-window",
+      "reviewBy": "2026-07-15T00:00:00.000Z",
+      "reviewReasons": [
+        "review-by-elapsed"
+      ],
+      "reviewRequired": false,
+      "sourceFile": "knowledge/fixtures/temporal/positive/pos-closed-application-window.json",
+      "validFrom": "2026-07-01T00:00:00.000Z",
+      "validUntil": null,
+      "warnings": []
+    },
+    {
+      "baseConfidence": 0.9,
+      "daysSinceAnchor": 60,
+      "decayPolicy": "funding",
+      "decayReason": "half-life-decay",
+      "effectiveConfidence": 0.225,
+      "evaluatedAt": "2026-07-31T00:00:00.000Z",
+      "evidenceClass": "funding",
+      "expired": true,
+      "override": null,
+      "recordRef": "obs:fixture:expired-grant",
+      "reviewBy": "2026-06-15T00:00:00.000Z",
+      "reviewReasons": [
+        "review-by-elapsed"
+      ],
+      "reviewRequired": true,
+      "sourceFile": "knowledge/fixtures/temporal/positive/pos-expired-grant.json",
+      "validFrom": "2026-06-01T00:00:00.000Z",
+      "validUntil": "2026-07-15T00:00:00.000Z",
+      "warnings": []
+    },
+    {
+      "baseConfidence": 0.6,
+      "daysSinceAnchor": 0,
+      "decayPolicy": "model-capability",
+      "decayReason": "half-life-decay",
+      "effectiveConfidence": 0.6,
+      "evaluatedAt": "2026-07-31T00:00:00.000Z",
+      "evidenceClass": "model-capability",
+      "expired": false,
+      "override": null,
+      "recordRef": "obs:fixture:fresh-record",
+      "reviewBy": "2026-08-14T00:00:00.000Z",
+      "reviewReasons": [],
+      "reviewRequired": false,
+      "sourceFile": "knowledge/fixtures/temporal/positive/pos-fresh-record.json",
+      "validFrom": "2026-07-31T00:00:00.000Z",
+      "validUntil": null,
+      "warnings": []
+    },
+    {
+      "baseConfidence": 0.95,
+      "daysSinceAnchor": 365,
+      "decayPolicy": "historical",
+      "decayReason": "half-life-decay",
+      "effectiveConfidence": 0.886381,
+      "evaluatedAt": "2026-07-31T00:00:00.000Z",
+      "evidenceClass": "historical",
+      "expired": false,
+      "override": null,
+      "recordRef": "obs:fixture:historical-slow-decay",
+      "reviewBy": "2027-07-31T00:00:00.000Z",
+      "reviewReasons": [],
+      "reviewRequired": false,
+      "sourceFile": "knowledge/fixtures/temporal/positive/pos-historical-barely-decays.json",
+      "validFrom": "2025-07-31T00:00:00.000Z",
+      "validUntil": null,
+      "warnings": []
+    },
+    {
+      "baseConfidence": 0.5,
+      "daysSinceAnchor": 30,
+      "decayPolicy": "default",
+      "decayReason": "half-life-decay",
+      "effectiveConfidence": 0.445449,
+      "evaluatedAt": "2026-07-31T00:00:00.000Z",
+      "evidenceClass": null,
+      "expired": false,
+      "override": null,
+      "recordRef": "obs:fixture:missing-class",
+      "reviewBy": "2026-09-29T00:00:00.000Z",
+      "reviewReasons": [],
+      "reviewRequired": false,
+      "sourceFile": "knowledge/fixtures/temporal/positive/pos-missing-class-default-warn.json",
+      "validFrom": "2026-07-01T00:00:00.000Z",
+      "validUntil": null,
+      "warnings": [
+        "MISSING_EVIDENCE_CLASS"
+      ]
+    },
+    {
+      "baseConfidence": 0.8,
+      "daysSinceAnchor": 14,
+      "decayPolicy": "pricing",
+      "decayReason": "half-life-decay",
+      "effectiveConfidence": 0.4,
+      "evaluatedAt": "2026-07-31T00:00:00.000Z",
+      "evidenceClass": "pricing",
+      "expired": false,
+      "override": null,
+      "recordRef": "obs:fixture:pricing-half-life",
+      "reviewBy": "2026-07-24T00:00:00.000Z",
+      "reviewReasons": [
+        "review-by-elapsed"
+      ],
+      "reviewRequired": true,
+      "sourceFile": "knowledge/fixtures/temporal/positive/pos-pricing-half-life.json",
+      "validFrom": "2026-07-17T00:00:00.000Z",
+      "validUntil": null,
+      "warnings": []
+    },
+    {
+      "baseConfidence": 0.8,
+      "daysSinceAnchor": 211,
+      "decayPolicy": "law-or-policy",
+      "decayReason": "superseded-override",
+      "effectiveConfidence": 0,
+      "evaluatedAt": "2026-07-31T00:00:00.000Z",
+      "evidenceClass": "law-or-policy",
+      "expired": true,
+      "override": {
+        "reference": "obs:2026-07-15:successor-policy",
+        "type": "superseded"
+      },
+      "recordRef": "obs:fixture:superseded-policy",
+      "reviewBy": "2026-01-31T00:00:00.000Z",
+      "reviewReasons": [
+        "review-by-elapsed"
+      ],
+      "reviewRequired": false,
+      "sourceFile": "knowledge/fixtures/temporal/positive/pos-superseded-override-wins.json",
+      "validFrom": "2026-01-01T00:00:00.000Z",
+      "validUntil": null,
+      "warnings": []
+    },
+    {
+      "baseConfidence": 0.85,
+      "daysSinceAnchor": 3,
+      "decayPolicy": "provider-terms",
+      "decayReason": "half-life-decay",
+      "effectiveConfidence": 0.769865,
+      "evaluatedAt": "2026-07-31T00:00:00.000Z",
+      "evidenceClass": "provider-terms",
+      "expired": false,
+      "override": null,
+      "recordRef": "obs:fixture:terms-changed",
+      "reviewBy": "2026-08-04T00:00:00.000Z",
+      "reviewReasons": [
+        "terms-changed"
+      ],
+      "reviewRequired": true,
+      "sourceFile": "knowledge/fixtures/temporal/positive/pos-terms-changed-review.json",
+      "validFrom": "2026-07-28T00:00:00.000Z",
+      "validUntil": null,
+      "warnings": []
+    },
+    {
+      "baseConfidence": 0.9,
+      "daysSinceAnchor": 15,
+      "decayPolicy": "default",
+      "decayReason": "half-life-decay",
+      "effectiveConfidence": 0.849487,
+      "evaluatedAt": "2026-07-31T00:00:00.000Z",
+      "evidenceClass": "astrology",
+      "expired": false,
+      "override": null,
+      "recordRef": "obs:fixture:unknown-class",
+      "reviewBy": "2026-10-14T00:00:00.000Z",
+      "reviewReasons": [],
+      "reviewRequired": false,
+      "sourceFile": "knowledge/fixtures/temporal/positive/pos-unknown-class-default-warn.json",
+      "validFrom": "2026-07-16T00:00:00.000Z",
+      "validUntil": null,
+      "warnings": [
+        "UNKNOWN_EVIDENCE_CLASS"
+      ]
+    }
+  ],
+  "evaluatedAt": "2026-07-31T00:00:00.000Z",
+  "generatedAt": "2026-07-31T00:00:00.000Z",
+  "projectionId": "projection:temporal-decay:20260731T000000Z"
+}

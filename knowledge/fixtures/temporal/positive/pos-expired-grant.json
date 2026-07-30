@@ -1,0 +1,22 @@
+{
+  "fixtureId": "temporal:pos:expired-grant",
+  "description": "Funding/grant record whose validUntil (2026-07-15) is before evaluatedAt: expired=true must be visibly flagged in the projection while half-life math still applies (60d at 30d half-life -> 0.225).",
+  "expectation": "pass",
+  "assert": {
+    "decayPolicy": {"eq": "funding"},
+    "decayReason": {"eq": "half-life-decay"},
+    "effectiveConfidence": {"eq": 0.225},
+    "expired": {"eq": true},
+    "validUntil": {"eq": "2026-07-15T00:00:00.000Z"},
+    "override": {"eq": null}
+  },
+  "record": {
+    "id": "obs:fixture:expired-grant",
+    "type": "Observation",
+    "capturedAt": "2026-06-01T00:00:00Z",
+    "confidence": 0.9,
+    "evidenceClass": "funding",
+    "validUntil": "2026-07-15T00:00:00Z",
+    "claim": "Fixture: a grant programme whose application validity ended before the evaluation instant."
+  }
+}

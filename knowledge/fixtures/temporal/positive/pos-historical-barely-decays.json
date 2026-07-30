@@ -1,0 +1,22 @@
+{
+  "fixtureId": "temporal:pos:historical-barely-decays",
+  "description": "ADVERSARIAL (non-failing): historical-class record a full year old must barely decay because historical halfLifeDays is 3650. Asserts effectiveConfidence stays within ~7% of base (0.95 * 0.5^(365/3650) = 0.886381).",
+  "expectation": "pass",
+  "adversarial": true,
+  "assert": {
+    "decayPolicy": {"eq": "historical"},
+    "decayReason": {"eq": "half-life-decay"},
+    "effectiveConfidence": {"eq": 0.886381},
+    "daysSinceAnchor": {"eq": 365},
+    "expired": {"eq": false},
+    "reviewRequired": {"eq": false}
+  },
+  "record": {
+    "id": "obs:fixture:historical-slow-decay",
+    "type": "Observation",
+    "capturedAt": "2025-07-31T00:00:00Z",
+    "confidence": 0.95,
+    "evidenceClass": "historical",
+    "claim": "Fixture: a settled historical fact (founding date of a standards body) recorded one year ago."
+  }
+}

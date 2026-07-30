@@ -1,0 +1,285 @@
+{
+  "control": "WS2",
+  "digest": "9ef7aa0df960504390c3aacdfccb7c410c72e6f2da841664db0ca2b47cfde7ec",
+  "evaluatedAt": "2026-07-31T00:00:00.000Z",
+  "generatedAt": "2026-07-31T00:00:00.000Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/temporal/negative/neg-future-dated-captured.json",
+      "sha256": "6f6e51c88a6af8abdc398c65c59b7c58f5f75a7ec75bc97f897bda5cbe7ec248"
+    },
+    {
+      "path": "knowledge/fixtures/temporal/negative/neg-future-dated-validfrom.json",
+      "sha256": "575208fb94123dc69315a12f38e4d50454a6b44d6ea4284b973221b43ebcfcc5"
+    },
+    {
+      "path": "knowledge/fixtures/temporal/negative/neg-missing-confidence.json",
+      "sha256": "9d1ff875314ea8d0058b06625eb655fb6cd447ca10315242bad539a4a9a39a62"
+    },
+    {
+      "path": "knowledge/fixtures/temporal/positive/pos-closed-application-window.json",
+      "sha256": "344528f1105cb4185eff7e68f8ce5a86b43013017270a821bd383e766348f5f4"
+    },
+    {
+      "path": "knowledge/fixtures/temporal/positive/pos-expired-grant.json",
+      "sha256": "808da3f2f35f6028116b038ef2fdfef7d334d81f9881683538636db2391b7a69"
+    },
+    {
+      "path": "knowledge/fixtures/temporal/positive/pos-fresh-record.json",
+      "sha256": "2bc4b4236c16feb1466dc2227654f745416f8c593aaa5ed991fcd026248d168c"
+    },
+    {
+      "path": "knowledge/fixtures/temporal/positive/pos-historical-barely-decays.json",
+      "sha256": "0b0bee789073bdc21258014291bc50e3a14ed7b734bc1bca059a431bf720be3f"
+    },
+    {
+      "path": "knowledge/fixtures/temporal/positive/pos-missing-class-default-warn.json",
+      "sha256": "cf0bd173f64366f180ba4ff73282ef368374156c47d8ec2fc8bc3c23cac091a0"
+    },
+    {
+      "path": "knowledge/fixtures/temporal/positive/pos-pricing-half-life.json",
+      "sha256": "b039112b1055f5e035f051222e14b670cb84b055712165ea8b714eda0d90cd47"
+    },
+    {
+      "path": "knowledge/fixtures/temporal/positive/pos-superseded-override-wins.json",
+      "sha256": "77858adfaeafa59128d4c0a8414e0de1f47d5f95747500cc66f94c12ae3f79e0"
+    },
+    {
+      "path": "knowledge/fixtures/temporal/positive/pos-terms-changed-review.json",
+      "sha256": "b511ec8ec42e26c287af3acb37065c94218dcd5c22923711597af564190f9e8a"
+    },
+    {
+      "path": "knowledge/fixtures/temporal/positive/pos-unknown-class-default-warn.json",
+      "sha256": "a2bcb2c6c4347e50854626eaabdf2ea5fdc8012c3701db728329c50c42aa153c"
+    }
+  ],
+  "receiptId": "receipt:temporal-decay:20260731T000000Z",
+  "results": {
+    "entryCount": 9,
+    "expiredCount": 3,
+    "overrideCount": 2,
+    "projectionEntries": [
+      {
+        "baseConfidence": 0.7,
+        "daysSinceAnchor": 30,
+        "decayPolicy": "opportunity",
+        "decayReason": "closed-override",
+        "effectiveConfidence": 0,
+        "evaluatedAt": "2026-07-31T00:00:00.000Z",
+        "evidenceClass": "opportunity",
+        "expired": true,
+        "override": {
+          "reference": "run:window-closed:2026-07-20",
+          "type": "closed"
+        },
+        "recordRef": "obs:fixture:closed-window",
+        "reviewBy": "2026-07-15T00:00:00.000Z",
+        "reviewReasons": [
+          "review-by-elapsed"
+        ],
+        "reviewRequired": false,
+        "sourceFile": "knowledge/fixtures/temporal/positive/pos-closed-application-window.json",
+        "validFrom": "2026-07-01T00:00:00.000Z",
+        "validUntil": null,
+        "warnings": []
+      },
+      {
+        "baseConfidence": 0.9,
+        "daysSinceAnchor": 60,
+        "decayPolicy": "funding",
+        "decayReason": "half-life-decay",
+        "effectiveConfidence": 0.225,
+        "evaluatedAt": "2026-07-31T00:00:00.000Z",
+        "evidenceClass": "funding",
+        "expired": true,
+        "override": null,
+        "recordRef": "obs:fixture:expired-grant",
+        "reviewBy": "2026-06-15T00:00:00.000Z",
+        "reviewReasons": [
+          "review-by-elapsed"
+        ],
+        "reviewRequired": true,
+        "sourceFile": "knowledge/fixtures/temporal/positive/pos-expired-grant.json",
+        "validFrom": "2026-06-01T00:00:00.000Z",
+        "validUntil": "2026-07-15T00:00:00.000Z",
+        "warnings": []
+      },
+      {
+        "baseConfidence": 0.6,
+        "daysSinceAnchor": 0,
+        "decayPolicy": "model-capability",
+        "decayReason": "half-life-decay",
+        "effectiveConfidence": 0.6,
+        "evaluatedAt": "2026-07-31T00:00:00.000Z",
+        "evidenceClass": "model-capability",
+        "expired": false,
+        "override": null,
+        "recordRef": "obs:fixture:fresh-record",
+        "reviewBy": "2026-08-14T00:00:00.000Z",
+        "reviewReasons": [],
+        "reviewRequired": false,
+        "sourceFile": "knowledge/fixtures/temporal/positive/pos-fresh-record.json",
+        "validFrom": "2026-07-31T00:00:00.000Z",
+        "validUntil": null,
+        "warnings": []
+      },
+      {
+        "baseConfidence": 0.95,
+        "daysSinceAnchor": 365,
+        "decayPolicy": "historical",
+        "decayReason": "half-life-decay",
+        "effectiveConfidence": 0.886381,
+        "evaluatedAt": "2026-07-31T00:00:00.000Z",
+        "evidenceClass": "historical",
+        "expired": false,
+        "override": null,
+        "recordRef": "obs:fixture:historical-slow-decay",
+        "reviewBy": "2027-07-31T00:00:00.000Z",
+        "reviewReasons": [],
+        "reviewRequired": false,
+        "sourceFile": "knowledge/fixtures/temporal/positive/pos-historical-barely-decays.json",
+        "validFrom": "2025-07-31T00:00:00.000Z",
+        "validUntil": null,
+        "warnings": []
+      },
+      {
+        "baseConfidence": 0.5,
+        "daysSinceAnchor": 30,
+        "decayPolicy": "default",
+        "decayReason": "half-life-decay",
+        "effectiveConfidence": 0.445449,
+        "evaluatedAt": "2026-07-31T00:00:00.000Z",
+        "evidenceClass": null,
+        "expired": false,
+        "override": null,
+        "recordRef": "obs:fixture:missing-class",
+        "reviewBy": "2026-09-29T00:00:00.000Z",
+        "reviewReasons": [],
+        "reviewRequired": false,
+        "sourceFile": "knowledge/fixtures/temporal/positive/pos-missing-class-default-warn.json",
+        "validFrom": "2026-07-01T00:00:00.000Z",
+        "validUntil": null,
+        "warnings": [
+          "MISSING_EVIDENCE_CLASS"
+        ]
+      },
+      {
+        "baseConfidence": 0.8,
+        "daysSinceAnchor": 14,
+        "decayPolicy": "pricing",
+        "decayReason": "half-life-decay",
+        "effectiveConfidence": 0.4,
+        "evaluatedAt": "2026-07-31T00:00:00.000Z",
+        "evidenceClass": "pricing",
+        "expired": false,
+        "override": null,
+        "recordRef": "obs:fixture:pricing-half-life",
+        "reviewBy": "2026-07-24T00:00:00.000Z",
+        "reviewReasons": [
+          "review-by-elapsed"
+        ],
+        "reviewRequired": true,
+        "sourceFile": "knowledge/fixtures/temporal/positive/pos-pricing-half-life.json",
+        "validFrom": "2026-07-17T00:00:00.000Z",
+        "validUntil": null,
+        "warnings": []
+      },
+      {
+        "baseConfidence": 0.8,
+        "daysSinceAnchor": 211,
+        "decayPolicy": "law-or-policy",
+        "decayReason": "superseded-override",
+        "effectiveConfidence": 0,
+        "evaluatedAt": "2026-07-31T00:00:00.000Z",
+        "evidenceClass": "law-or-policy",
+        "expired": true,
+        "override": {
+          "reference": "obs:2026-07-15:successor-policy",
+          "type": "superseded"
+        },
+        "recordRef": "obs:fixture:superseded-policy",
+        "reviewBy": "2026-01-31T00:00:00.000Z",
+        "reviewReasons": [
+          "review-by-elapsed"
+        ],
+        "reviewRequired": false,
+        "sourceFile": "knowledge/fixtures/temporal/positive/pos-superseded-override-wins.json",
+        "validFrom": "2026-01-01T00:00:00.000Z",
+        "validUntil": null,
+        "warnings": []
+      },
+      {
+        "baseConfidence": 0.85,
+        "daysSinceAnchor": 3,
+        "decayPolicy": "provider-terms",
+        "decayReason": "half-life-decay",
+        "effectiveConfidence": 0.769865,
+        "evaluatedAt": "2026-07-31T00:00:00.000Z",
+        "evidenceClass": "provider-terms",
+        "expired": false,
+        "override": null,
+        "recordRef": "obs:fixture:terms-changed",
+        "reviewBy": "2026-08-04T00:00:00.000Z",
+        "reviewReasons": [
+          "terms-changed"
+        ],
+        "reviewRequired": true,
+        "sourceFile": "knowledge/fixtures/temporal/positive/pos-terms-changed-review.json",
+        "validFrom": "2026-07-28T00:00:00.000Z",
+        "validUntil": null,
+        "warnings": []
+      },
+      {
+        "baseConfidence": 0.9,
+        "daysSinceAnchor": 15,
+        "decayPolicy": "default",
+        "decayReason": "half-life-decay",
+        "effectiveConfidence": 0.849487,
+        "evaluatedAt": "2026-07-31T00:00:00.000Z",
+        "evidenceClass": "astrology",
+        "expired": false,
+        "override": null,
+        "recordRef": "obs:fixture:unknown-class",
+        "reviewBy": "2026-10-14T00:00:00.000Z",
+        "reviewReasons": [],
+        "reviewRequired": false,
+        "sourceFile": "knowledge/fixtures/temporal/positive/pos-unknown-class-default-warn.json",
+        "validFrom": "2026-07-16T00:00:00.000Z",
+        "validUntil": null,
+        "warnings": [
+          "UNKNOWN_EVIDENCE_CLASS"
+        ]
+      }
+    ],
+    "reviewRequiredCount": 3,
+    "warnings": [
+      {
+        "detail": "no evidenceClass/domain field; falling back to default policy",
+        "record": "obs:fixture:missing-class",
+        "rule": "MISSING_EVIDENCE_CLASS"
+      },
+      {
+        "detail": "evidence class 'astrology' has no decayPolicy; falling back to default policy",
+        "record": "obs:fixture:unknown-class",
+        "rule": "UNKNOWN_EVIDENCE_CLASS"
+      }
+    ]
+  },
+  "violations": [
+    {
+      "detail": "capturedAt/validFrom is after evaluatedAt; future-dated records are rejected",
+      "record": "obs:fixture:future-captured",
+      "rule": "FUTURE_DATED_RECORD"
+    },
+    {
+      "detail": "capturedAt/validFrom is after evaluatedAt; future-dated records are rejected",
+      "record": "obs:fixture:future-validfrom",
+      "rule": "FUTURE_DATED_RECORD"
+    },
+    {
+      "detail": "record has no numeric confidence in [0,1]; excluded from projection",
+      "record": "obs:fixture:no-confidence",
+      "rule": "MISSING_CONFIDENCE"
+    }
+  ]
+}

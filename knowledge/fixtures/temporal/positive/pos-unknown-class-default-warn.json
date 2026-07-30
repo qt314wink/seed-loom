@@ -1,0 +1,22 @@
+{
+  "fixtureId": "temporal:pos:unknown-class-default-warn",
+  "description": "ADVERSARIAL (non-failing): record with an evidence class that has no decayPolicy entry must NOT crash; it falls back to the 'default' policy and emits WARN UNKNOWN_EVIDENCE_CLASS.",
+  "expectation": "pass",
+  "adversarial": true,
+  "expectedWarnings": ["UNKNOWN_EVIDENCE_CLASS"],
+  "assert": {
+    "decayPolicy": {"eq": "default"},
+    "evidenceClass": {"eq": "astrology"},
+    "decayReason": {"eq": "half-life-decay"},
+    "effectiveConfidence": {"eq": 0.849487},
+    "warnings": {"eq": ["UNKNOWN_EVIDENCE_CLASS"]}
+  },
+  "record": {
+    "id": "obs:fixture:unknown-class",
+    "type": "Observation",
+    "capturedAt": "2026-07-16T00:00:00Z",
+    "confidence": 0.9,
+    "evidenceClass": "astrology",
+    "claim": "Fixture: a record tagged with an evidence class absent from governance decayPolicies."
+  }
+}

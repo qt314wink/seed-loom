@@ -1,0 +1,23 @@
+{
+  "fixtureId": "temporal:pos:closed-application-window",
+  "description": "Opportunity record whose application window closed (closedAt <= evaluatedAt): closed override wins over half-life math -> effectiveConfidence 0, expired=true, reviewRequired=false, decayReason 'closed-override'.",
+  "expectation": "pass",
+  "assert": {
+    "decayPolicy": {"eq": "opportunity"},
+    "decayReason": {"eq": "closed-override"},
+    "effectiveConfidence": {"eq": 0},
+    "expired": {"eq": true},
+    "reviewRequired": {"eq": false},
+    "override": {"eq": {"type": "closed", "reference": "run:window-closed:2026-07-20"}}
+  },
+  "record": {
+    "id": "obs:fixture:closed-window",
+    "type": "Observation",
+    "capturedAt": "2026-07-01T00:00:00Z",
+    "confidence": 0.7,
+    "evidenceClass": "opportunity",
+    "closedAt": "2026-07-20T00:00:00Z",
+    "closureRef": "run:window-closed:2026-07-20",
+    "claim": "Fixture: a procurement pilot window that was open at capture time but closed before evaluation."
+  }
+}
