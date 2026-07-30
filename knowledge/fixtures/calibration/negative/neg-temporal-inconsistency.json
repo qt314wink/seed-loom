@@ -1,0 +1,20 @@
+{
+  "fixtureId": "calibration:neg:temporal-inconsistency",
+  "description": "Event whose evaluationDate (2026-05-01) is BEFORE its predictionDate (2026-06-01): the outcome was 'evaluated' before the prediction existed. Must be REJECTED with named rule TEMPORAL_INCONSISTENCY.",
+  "expectation": "fail",
+  "expectedRule": "TEMPORAL_INCONSISTENCY",
+  "events": [
+    {
+      "predictionId": "pred:fixture:time-01",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Grant call opens",
+      "evaluationDate": "2026-05-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [{"ref": "src:fixture:time-evidence", "observedAt": "2026-06-20T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    }
+  ]
+}

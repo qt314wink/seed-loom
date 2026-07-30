@@ -1,0 +1,555 @@
+{
+  "fixtureId": "calibration:pos:sufficient-sample-threshold-candidate",
+  "description": "30 resolved clean events (n >= MIN_SAMPLE 30), all p=0.7 o=1: Brier 0.09, band 0.7-0.8 count 30 mean 0.7 observed 1.0, calibrationDelta -0.3 (underconfidence). Sample IS adequate so thresholdChangeEligible=true and |delta| 0.3 >= 0.05 triggers the advisory 'threshold-review-candidate' (no values proposed; governance amendment still required).",
+  "expectation": "pass",
+  "assert": {
+    "overall.sampleSize": {
+      "eq": 30
+    },
+    "overall.brierScore": {
+      "eq": 0.09
+    },
+    "overall.meanPredicted": {
+      "eq": 0.7
+    },
+    "overall.observedFrequency": {
+      "eq": 1
+    },
+    "overall.calibrationDelta": {
+      "eq": -0.3
+    },
+    "overall.underconfidenceDelta": {
+      "eq": 0.3
+    },
+    "overall.overconfidenceDelta": {
+      "eq": 0
+    },
+    "domains.funding.sampleSize": {
+      "eq": 30
+    },
+    "domains.funding.brierScore": {
+      "eq": 0.09
+    },
+    "thresholdReviewCandidate.advisory": {
+      "eq": "threshold-review-candidate"
+    },
+    "thresholdReviewCandidate.absCalibrationDelta": {
+      "eq": 0.3
+    },
+    "thresholdChangeEligible": {
+      "eq": true
+    }
+  },
+  "events": [
+    {
+      "predictionId": "pred:fixture:suff-01",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 1 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-01",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-02",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 2 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-02",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-03",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 3 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-03",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-04",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 4 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-04",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-05",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 5 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-05",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-06",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 6 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-06",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-07",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 7 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-07",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-08",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 8 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-08",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-09",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 9 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-09",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-10",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 10 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-10",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-11",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 11 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-11",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-12",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 12 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-12",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-13",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 13 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-13",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-14",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 14 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-14",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-15",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 15 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-15",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-16",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 16 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-16",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-17",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 17 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-17",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-18",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 18 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-18",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-19",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 19 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-19",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-20",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 20 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-20",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-21",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 21 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-21",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-22",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 22 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-22",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-23",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 23 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-23",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-24",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 24 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-24",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-25",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 25 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-25",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-26",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 26 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-26",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-27",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 27 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-27",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-28",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 28 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-28",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-29",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 29 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-29",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:suff-30",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Funding event 30 occurs within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [
+        {
+          "ref": "src:fixture:suff-30",
+          "observedAt": "2026-06-20T00:00:00Z"
+        }
+      ],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    }
+  ]
+}
