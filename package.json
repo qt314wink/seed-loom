@@ -19,8 +19,13 @@
     "knowledge:validate": "node scripts/knowledge/validate.mjs",
     "knowledge:run": "node scripts/knowledge/run-all.mjs",
     "knowledge:verify": "npm run knowledge:doctor && npm run knowledge:test && npm run knowledge:run",
+    "knowledge:verify:observed": "node scripts/knowledge/run-observed.mjs",
     "knowledge:weekly": "node scripts/knowledge/weekly-review.mjs",
-    "knowledge:ingest": "node scripts/knowledge/ingest-nightly-run.mjs"
+    "knowledge:ingest": "node scripts/knowledge/ingest-nightly-run.mjs",
+    "knowledge:graph:build": "node scripts/knowledge/build-workbench.mjs",
+    "knowledge:graph": "node scripts/knowledge/serve-workbench.mjs",
+    "observability:up": "docker compose -f observability/docker-compose.yml up -d",
+    "observability:down": "docker compose -f observability/docker-compose.yml down"
   },
   "devDependencies": {
     "@playwright/test": "^1.54.1",
