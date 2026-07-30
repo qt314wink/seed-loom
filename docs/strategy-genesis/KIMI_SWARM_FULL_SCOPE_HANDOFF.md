@@ -1,5 +1,16 @@
 # Kimi Agent Swarm — Full-Scope Control-Layer Handoff
 
+## Execution targets
+
+- Repository: https://github.com/qt314wink/seed-loom
+- Branch: `feat/strategy-genesis-engine-v0`
+- Draft pull request: https://github.com/qt314wink/seed-loom/pull/23
+- Swarm execution issue: https://github.com/qt314wink/seed-loom/issues/24
+- Description, controls, and operation manual: `docs/strategy-genesis/README.md`
+- Machine-readable workplan: `docs/strategy-genesis/kimi-swarm-workplan.json`
+
+Use issue #24 as the execution ledger and PR #23 as the review boundary. Keep PR #23 in draft until all merge gates pass.
+
 ## Mission
 
 Complete and prove the missing control layers around Seed Loom's repository-native knowledge graph without replacing Git-versioned JSON as the source of truth. Deliver deterministic, local-first, low-cost controls with explicit receipts, negative fixtures, CI gates, and human approval boundaries.
