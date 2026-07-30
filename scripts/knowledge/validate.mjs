@@ -7,21 +7,26 @@ import addFormats from 'ajv-formats';
 
 const root = process.cwd();
 const schemaDir = path.join(root, 'knowledge', 'schema');
-const dataDirs = ['entities','observations','patterns','relationships','opportunities','experiments','runs'];
+const dataDirs = ['sources','entities','observations','patterns','relationships','opportunities','strategies','experiments','runs'];
 const schemaByType = {
+  Source: 'source.schema.json',
   Observation: 'observation.schema.json',
   Actor: 'actor.schema.json',
   Relationship: 'relationship.schema.json',
   Pattern: 'pattern.schema.json',
   Opportunity: 'opportunity.schema.json',
+  Strategy: 'strategy.schema.json',
+  Experiment: 'experiment.schema.json',
   RepositoryGenesisDossier: 'genesis-dossier.schema.json',
   ResearchRun: 'run.schema.json'
 };
 
 const ajv = new Ajv2020({ allErrors: true, strict: true });
 addFormats(ajv);
+const schemas = new Map();
 for (const name of Object.values(schemaByType)) {
   const schema = JSON.parse(fs.readFileSync(path.join(schemaDir, name), 'utf8'));
+  schemas.set(name, schema);
   ajv.addSchema(schema, schema.$id);
 }
 
@@ -38,8 +43,7 @@ for (const dir of dataDirs) {
       failures += 1;
       continue;
     }
-    const schema = JSON.parse(fs.readFileSync(path.join(schemaDir, schemaName), 'utf8'));
-    const validate = ajv.getSchema(schema.$id);
+    const validate = ajv.getSchema(schemas.get(schemaName).$id);
     if (!validate(record)) {
       console.error(`INVALID ${path.relative(root, full)}`);
       console.error(JSON.stringify(validate.errors, null, 2));

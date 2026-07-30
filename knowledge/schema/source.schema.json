@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.local/schema/source.schema.json",
+  "title": "Source",
+  "type": "object",
+  "required": ["id", "type", "url", "publisher", "retrievedAt", "sourceClass", "independenceKey"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^source:[a-z0-9][a-z0-9._:-]+$"},
+    "type": {"const": "Source"},
+    "url": {"type": "string", "format": "uri"},
+    "publisher": {"type": "string", "minLength": 1},
+    "publishedAt": {"type": ["string", "null"], "format": "date-time"},
+    "retrievedAt": {"type": "string", "format": "date-time"},
+    "sourceClass": {"enum": ["primary", "official", "research", "regulatory", "financial", "trade", "press", "community", "repository", "secondary"]},
+    "independenceKey": {"type": "string", "minLength": 1},
+    "contentHash": {"type": ["string", "null"]},
+    "notes": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}

@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const root = process.cwd();
-const dirs = ['entities','observations','patterns','relationships','opportunities','experiments','runs'];
+const dirs = ['sources','entities','observations','patterns','relationships','opportunities','strategies','experiments','runs'];
 const records = [];
 for (const dir of dirs) {
   const absolute = path.join(root, 'knowledge', dir);

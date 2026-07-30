@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 
 const root = process.cwd();
 const knowledge = path.join(root, 'knowledge');
-const recordDirs = ['entities','observations','patterns','relationships','opportunities','experiments','runs'];
+const recordDirs = ['sources','entities','observations','patterns','relationships','opportunities','strategies','experiments','runs'];
 const records = [];
 for (const dir of recordDirs) {
   const absolute = path.join(knowledge, dir);
