@@ -1,0 +1,28 @@
+{
+  "control": "WS1",
+  "digest": "ed7efde3567a3724e06dca781e79e9be33668c060b799a4ea478664cce3fed48",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/source-independence/negative/neg-tracking-param-urls.json",
+      "sha256": "c39b684472140bf80db17067af0e32e4ee7ec03ce4b88e56a0a920f72354d3b4"
+    }
+  ],
+  "receiptId": "receipt:source-independence:fixture:neg-tracking-param-urls",
+  "results": {
+    "clusterCount": 1,
+    "expectation": "pass",
+    "expectedRule": "canonical-url-duplicate",
+    "fixtureId": "neg-tracking-param-urls",
+    "independentStreamCount": 1,
+    "polarity": "negative",
+    "relationships": [
+      "exact-duplicate"
+    ],
+    "reportDigest": "08cfe1fea1bd3850f9b8ce519258bba9e3dbb697b4753b1df91de7b77383d21b",
+    "reportId": "independence-report:8fa68f6948b1",
+    "reviewQueue": [],
+    "warnings": []
+  },
+  "violations": []
+}

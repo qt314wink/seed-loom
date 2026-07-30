@@ -1,0 +1,109 @@
+{
+  "clusters": [],
+  "config": {
+    "minimumIndependentStreamsForPattern": 2
+  },
+  "control": "WS1",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "independentStreamCount": 7,
+  "input": {
+    "mode": "canonical",
+    "observations": [
+      {
+        "id": "obs:2026-07-30:ai-export-consortia",
+        "path": "knowledge/observations/obs-2026-07-30-ai-export-consortia.json",
+        "sha256": "e36b4f211aa117f5c91f40f7717248e9ddbcc1296de5bae9d02d4285deb1bbc8"
+      },
+      {
+        "id": "obs:2026-07-30:eu-ai-gigafactories",
+        "path": "knowledge/observations/obs-2026-07-30-eu-ai-gigafactories.json",
+        "sha256": "9233080fd2befbd4d9eb98557f2923feba9fbfbfafe59cef6c25687cff5b429e"
+      },
+      {
+        "id": "obs:2026-07-30:ftc-ai-accuracy",
+        "path": "knowledge/observations/obs-2026-07-30-ftc-ai-accuracy.json",
+        "sha256": "fdaa6ef1181899cf6cad34a3452d2a4ae7175ae5927ecb982eb4fedcee4319e3"
+      },
+      {
+        "id": "obs:2026-07-30:genesis-mission",
+        "path": "knowledge/observations/obs-2026-07-30-genesis-mission.json",
+        "sha256": "66fc8b8e1d8074fed8468a4a1c1c126ccb4008800b219bb0a090edb43d26c1f2"
+      },
+      {
+        "id": "obs:2026-07-30:openai-presence",
+        "path": "knowledge/observations/obs-2026-07-30-openai-presence.json",
+        "sha256": "621b56a844c03124652b096cccf972f430b43ff0fc1a2f924111b6146a858e73"
+      },
+      {
+        "id": "obs:example-adoption",
+        "path": "knowledge/observations/obs-example-adoption.json",
+        "sha256": "4eeac1672f22147a64a49571a8ec0eb39a96ebac1c79728d09d3623bce43f452"
+      }
+    ],
+    "sources": [
+      {
+        "id": "source:commerce:2026-07-06:ai-export-program",
+        "path": "knowledge/sources/source-reconstructed-cycle-2026-07-30.json#source:commerce:2026-07-06:ai-export-program",
+        "sha256": "bf97596a9e1c40dba01ea8dc2a6540df066004cb3f9a388876bde9b1b0247730"
+      },
+      {
+        "id": "source:example-primary",
+        "path": "knowledge/sources/source-example-primary.json",
+        "sha256": "74f31de3e525f0b0dac940d346eba7aa4f1bb4a089fb362f8c33b2e717d7d7bc"
+      },
+      {
+        "id": "source:ftc:2026-07:ai-accuracy-policy",
+        "path": "knowledge/sources/source-reconstructed-cycle-2026-07-30.json#source:ftc:2026-07:ai-accuracy-policy",
+        "sha256": "bf97596a9e1c40dba01ea8dc2a6540df066004cb3f9a388876bde9b1b0247730"
+      },
+      {
+        "id": "source:nature:2026-07-24:genesis-mission-analysis",
+        "path": "knowledge/sources/source-reconstructed-cycle-2026-07-30.json#source:nature:2026-07-24:genesis-mission-analysis",
+        "sha256": "bf97596a9e1c40dba01ea8dc2a6540df066004cb3f9a388876bde9b1b0247730"
+      },
+      {
+        "id": "source:openai:2026-07-22:presence",
+        "path": "knowledge/sources/source-reconstructed-cycle-2026-07-30.json#source:openai:2026-07-22:presence",
+        "sha256": "bf97596a9e1c40dba01ea8dc2a6540df066004cb3f9a388876bde9b1b0247730"
+      },
+      {
+        "id": "source:reuters:2026-07-30:eu-ai-gigafactories",
+        "path": "knowledge/sources/source-reconstructed-cycle-2026-07-30.json#source:reuters:2026-07-30:eu-ai-gigafactories",
+        "sha256": "bf97596a9e1c40dba01ea8dc2a6540df066004cb3f9a388876bde9b1b0247730"
+      },
+      {
+        "id": "source:whitehouse:2026-07-22:genesis-mission",
+        "path": "knowledge/sources/source-reconstructed-cycle-2026-07-30.json#source:whitehouse:2026-07-22:genesis-mission",
+        "sha256": "bf97596a9e1c40dba01ea8dc2a6540df066004cb3f9a388876bde9b1b0247730"
+      }
+    ]
+  },
+  "observationsAnalyzed": 6,
+  "reportId": "independence-report:4f80935ed5ad",
+  "reviewQueue": [],
+  "sourcesAnalyzed": 7,
+  "type": "IndependenceReport",
+  "unclusteredSources": [
+    "source:commerce:2026-07-06:ai-export-program",
+    "source:example-primary",
+    "source:ftc:2026-07:ai-accuracy-policy",
+    "source:nature:2026-07-24:genesis-mission-analysis",
+    "source:openai:2026-07-22:presence",
+    "source:reuters:2026-07-30:eu-ai-gigafactories",
+    "source:whitehouse:2026-07-22:genesis-mission"
+  ],
+  "warnings": [
+    {
+      "detail": "Expanded source bundle source-reconstructed-cycle-2026-07-30.json into 6 source records for analysis.",
+      "members": [
+        "source:commerce:2026-07-06:ai-export-program",
+        "source:ftc:2026-07:ai-accuracy-policy",
+        "source:nature:2026-07-24:genesis-mission-analysis",
+        "source:openai:2026-07-22:presence",
+        "source:reuters:2026-07-30:eu-ai-gigafactories",
+        "source:whitehouse:2026-07-22:genesis-mission"
+      ],
+      "rule": "bundle-expanded"
+    }
+  ]
+}

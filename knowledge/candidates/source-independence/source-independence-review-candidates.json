@@ -1,0 +1,48 @@
+{
+  "candidates": [
+    {
+      "candidateId": "review-candidate:cluster:255475ce7cd0",
+      "clusterId": "cluster:255475ce7cd0",
+      "confidence": 0.6,
+      "control": "WS1",
+      "evidence": [
+        {
+          "confidence": 0.6,
+          "detail": "Title token Jaccard 0.60 in ambiguous band [0.55, 0.9) for source:fix-amb-a and source:fix-amb-b.",
+          "signal": "title-similarity-band"
+        }
+      ],
+      "fixtureId": "pos-ambiguous-similarity",
+      "members": [
+        "source:fix-amb-a",
+        "source:fix-amb-b"
+      ],
+      "relationship": "ambiguous-similarity",
+      "status": "pending-human-review"
+    },
+    {
+      "candidateId": "review-candidate:cluster:93598c806ccf",
+      "clusterId": "cluster:93598c806ccf",
+      "confidence": 0.85,
+      "control": "WS1",
+      "evidence": [
+        {
+          "confidence": 0.85,
+          "detail": "Citation cycle across 2 sources: source:fix-cyc-a -> source:fix-cyc-b; source:fix-cyc-b -> source:fix-cyc-a.",
+          "signal": "mutual-citation"
+        }
+      ],
+      "fixtureId": "pos-citation-cycle",
+      "members": [
+        "source:fix-cyc-a",
+        "source:fix-cyc-b"
+      ],
+      "relationship": "citation-cycle",
+      "status": "pending-human-review"
+    }
+  ],
+  "control": "WS1",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "note": "Heuristic review queue only. Ambiguous similarity, analyst echoes, and citation cycles are NEVER auto-merged and never mutate canonical records.",
+  "type": "IndependenceReviewCandidates"
+}

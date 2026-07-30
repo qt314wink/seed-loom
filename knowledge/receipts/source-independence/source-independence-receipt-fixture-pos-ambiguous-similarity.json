@@ -1,0 +1,30 @@
+{
+  "control": "WS1",
+  "digest": "a77ad31cc2591cb331b031f3edb61c19573e5300283f166f8e87057a47ae14b1",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/source-independence/positive/pos-ambiguous-similarity.json",
+      "sha256": "608663ea55dd5c1a4622a86850afe0eb56d7d7212ea9bff8224ca348968924c3"
+    }
+  ],
+  "receiptId": "receipt:source-independence:fixture:pos-ambiguous-similarity",
+  "results": {
+    "clusterCount": 1,
+    "expectation": "review",
+    "expectedRule": "ambiguous-similarity",
+    "fixtureId": "pos-ambiguous-similarity",
+    "independentStreamCount": 2,
+    "polarity": "positive",
+    "relationships": [
+      "ambiguous-similarity"
+    ],
+    "reportDigest": "3f6c5ee57ba3e1de56d05b9b549a84be5a97656541755319666f18e5287ec170",
+    "reportId": "independence-report:b80c2fe8c534",
+    "reviewQueue": [
+      "cluster:255475ce7cd0"
+    ],
+    "warnings": []
+  },
+  "violations": []
+}

@@ -1,0 +1,26 @@
+{
+  "control": "WS1",
+  "digest": "2adb9c55df052d7aa8325e419bd30d87867a921e77dec41337e44ff9435e0204",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/source-independence/negative/neg-independent-reports-same-event.json",
+      "sha256": "2b3dcc1556e5aa4abf61cccd26f8bf615ef0a108347d6149ad0e37f85fbd5d38"
+    }
+  ],
+  "receiptId": "receipt:source-independence:fixture:neg-independent-reports-same-event",
+  "results": {
+    "clusterCount": 0,
+    "expectation": "fail",
+    "expectedRule": "no-forced-merge-independent-reports",
+    "fixtureId": "neg-independent-reports-same-event",
+    "independentStreamCount": 2,
+    "polarity": "negative",
+    "relationships": [],
+    "reportDigest": "39752164b5b506e1060e6c5a7bd959ae78304cc4945bce3207fc1d93c0d596aa",
+    "reportId": "independence-report:931e05b6dbef",
+    "reviewQueue": [],
+    "warnings": []
+  },
+  "violations": []
+}

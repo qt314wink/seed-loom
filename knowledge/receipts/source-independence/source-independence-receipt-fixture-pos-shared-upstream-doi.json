@@ -1,0 +1,28 @@
+{
+  "control": "WS1",
+  "digest": "c7d2981780e0e48908b5005ce04ac7ad053173b9a3d9bc9d6791880b8e2d4501",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/source-independence/positive/pos-shared-upstream-doi.json",
+      "sha256": "eabf92457786dc7bee825ef268bb8bdb911cfb0530b57fc6c457b40fed6dcabe"
+    }
+  ],
+  "receiptId": "receipt:source-independence:fixture:pos-shared-upstream-doi",
+  "results": {
+    "clusterCount": 1,
+    "expectation": "pass",
+    "expectedRule": "shared-upstream",
+    "fixtureId": "pos-shared-upstream-doi",
+    "independentStreamCount": 1,
+    "polarity": "positive",
+    "relationships": [
+      "shared-upstream"
+    ],
+    "reportDigest": "5398e86d3169a45c4f6c68ae62860e2f518e23e0f9e60c36f8628cf156d4eb34",
+    "reportId": "independence-report:235cc6107dc3",
+    "reviewQueue": [],
+    "warnings": []
+  },
+  "violations": []
+}
