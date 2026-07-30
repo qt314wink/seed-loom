@@ -1,0 +1,27 @@
+{
+  "fixtureId": "pos-paraphrase-same-event",
+  "description": "Two claims paraphrase the same funding event: 'raised 40 million USD ... on July 15, 2026' vs 'secured 40 million USD ... on 2026-07-15' with boilerplate ('According to reports') on the second. Acceptance test: paraphrases of the same event MUST surface as a duplicate-candidate (candidate only, never a merge) with combined similarity >= the 0.72 threshold and manualReviewRequired=true.",
+  "expectation": "review",
+  "expectedRule": "duplicate-candidate",
+  "claims": [
+    {
+      "id": "claim:acme-raise-a",
+      "claim": "Acme Robotics raised 40 million USD in Series B funding on July 15, 2026."
+    },
+    {
+      "id": "claim:acme-raise-b",
+      "claim": "According to reports, Acme Robotics secured 40 million USD in Series B funding on 2026-07-15."
+    }
+  ],
+  "expected": {
+    "candidates": [
+      {
+        "relation": "duplicate-candidate",
+        "members": ["claim:acme-raise-a", "claim:acme-raise-b"],
+        "minCombined": 0.72,
+        "sharedFingerprint": false
+      }
+    ],
+    "manualReviewRequiredFor": [["claim:acme-raise-a", "claim:acme-raise-b"]]
+  }
+}

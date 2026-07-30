@@ -1,0 +1,51 @@
+{
+  "fixtureId": "neg-changed-date-jurisdiction-status",
+  "description": "ADVERSARIAL: four claims circle the same directive. Base/paraphrase agree on jurisdiction (European Union, via the approved 'eu' alias), date, and policy status (adopted) and form a legitimate duplicate-candidate. A third claim changes date AND jurisdiction AND policy status (California, proposed, different date); a fourth changes only the policy status (proposed vs adopted). Both variants MUST measurably lower similarity (score deltas asserted) and MUST NOT be duplicate-candidates with the base claim.",
+  "expectation": "fail",
+  "expectedRule": "time-jurisdiction-mismatch-distinct",
+  "claims": [
+    {
+      "id": "claim:directive-base",
+      "claim": "The European Union adopted the AI liability directive on March 3, 2026."
+    },
+    {
+      "id": "claim:directive-para",
+      "claim": "According to reports, the EU adopted the AI liability directive on 2026-03-03."
+    },
+    {
+      "id": "claim:directive-variant-all",
+      "claim": "California proposed the AI liability directive on June 20, 2026."
+    },
+    {
+      "id": "claim:directive-variant-status",
+      "claim": "The European Union proposed the AI liability directive on March 3, 2026."
+    }
+  ],
+  "expected": {
+    "candidates": [
+      {
+        "relation": "duplicate-candidate",
+        "members": ["claim:directive-base", "claim:directive-para"],
+        "sharedFingerprint": true
+      }
+    ],
+    "absentCandidates": [
+      {"relation": "duplicate-candidate", "members": ["claim:directive-base", "claim:directive-variant-all"]},
+      {"relation": "duplicate-candidate", "members": ["claim:directive-base", "claim:directive-variant-status"]},
+      {"relation": "duplicate-candidate", "members": ["claim:directive-para", "claim:directive-variant-all"]},
+      {"relation": "duplicate-candidate", "members": ["claim:directive-para", "claim:directive-variant-status"]}
+    ],
+    "scoreDeltas": [
+      {
+        "higher": ["claim:directive-base", "claim:directive-para"],
+        "lower": ["claim:directive-base", "claim:directive-variant-all"],
+        "minDelta": 0.5
+      },
+      {
+        "higher": ["claim:directive-base", "claim:directive-para"],
+        "lower": ["claim:directive-base", "claim:directive-variant-status"],
+        "minDelta": 0.1
+      }
+    ]
+  }
+}

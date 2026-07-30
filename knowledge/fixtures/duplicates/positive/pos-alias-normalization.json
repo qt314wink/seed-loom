@@ -1,0 +1,31 @@
+{
+  "fixtureId": "pos-alias-normalization",
+  "description": "One claim uses the acronym 'EU' and its twin spells out 'European Union'. 'eu -> european union' is a human-approved alias in the VERSIONED knowledge/config/claim-aliases.json, so both normalize identically. Acceptance test: aliases from the versioned config are applied, producing a shared claimFingerprint and a duplicate-candidate.",
+  "expectation": "review",
+  "expectedRule": "duplicate-candidate",
+  "claims": [
+    {
+      "id": "claim:eu-rules-a",
+      "claim": "The EU imposed new content rules on large platforms in 2026."
+    },
+    {
+      "id": "claim:eu-rules-b",
+      "claim": "The European Union imposed new content rules on large platforms in 2026."
+    }
+  ],
+  "expected": {
+    "candidates": [
+      {
+        "relation": "duplicate-candidate",
+        "members": ["claim:eu-rules-a", "claim:eu-rules-b"],
+        "minCombined": 0.99,
+        "sharedFingerprint": true
+      }
+    ],
+    "normalizedContains": [
+      {"id": "claim:eu-rules-a", "needle": "european union"},
+      {"id": "claim:eu-rules-b", "needle": "european union"}
+    ],
+    "fingerprintEqual": [["claim:eu-rules-a", "claim:eu-rules-b"]]
+  }
+}

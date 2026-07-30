@@ -1,0 +1,31 @@
+{
+  "fixtureId": "neg-negation-guard-never-merge",
+  "description": "ADVERSARIAL: claims differing ONLY by negation ('approved' vs 'never approved'). Their combined similarity (~0.83) EXCEEDS the 0.72 duplicate threshold, baiting a score-only merger. The negation guard MUST block any duplicate-candidate for the pair and emit relation 'negation-contrast' instead. If a duplicate-candidate is emitted for this pair, this fixture fails.",
+  "expectation": "fail",
+  "expectedRule": "negation-guard",
+  "claims": [
+    {
+      "id": "claim:ftc-approve",
+      "claim": "The FTC approved the merger between Acme Robotics and BuildCorp in 2026."
+    },
+    {
+      "id": "claim:ftc-never-approve",
+      "claim": "The FTC never approved the merger between Acme Robotics and BuildCorp in 2026."
+    }
+  ],
+  "expected": {
+    "candidates": [
+      {
+        "relation": "negation-contrast",
+        "members": ["claim:ftc-approve", "claim:ftc-never-approve"]
+      }
+    ],
+    "absentCandidates": [
+      {"relation": "duplicate-candidate", "members": ["claim:ftc-approve", "claim:ftc-never-approve"]}
+    ],
+    "negatedFlags": [
+      {"id": "claim:ftc-approve", "negated": false},
+      {"id": "claim:ftc-never-approve", "negated": true}
+    ]
+  }
+}

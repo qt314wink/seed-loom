@@ -1,0 +1,27 @@
+{
+  "fixtureId": "pos-identical-normalized-tuple",
+  "description": "Two independently captured records carry byte-identical claim text. Acceptance test: identical normalized claim tuples produce the same SHA-256 claimFingerprint and a duplicate-candidate with combined similarity 1.0 — still only a CANDIDATE (status proposed, manualReviewRequired=true), never an automatic merge.",
+  "expectation": "review",
+  "expectedRule": "duplicate-candidate",
+  "claims": [
+    {
+      "id": "claim:workflow-adopt-a",
+      "claim": "Acme Robotics adopted a provenance-first workflow for its public pilot."
+    },
+    {
+      "id": "claim:workflow-adopt-b",
+      "claim": "Acme Robotics adopted a provenance-first workflow for its public pilot."
+    }
+  ],
+  "expected": {
+    "candidates": [
+      {
+        "relation": "duplicate-candidate",
+        "members": ["claim:workflow-adopt-a", "claim:workflow-adopt-b"],
+        "minCombined": 0.99,
+        "sharedFingerprint": true
+      }
+    ],
+    "fingerprintEqual": [["claim:workflow-adopt-a", "claim:workflow-adopt-b"]]
+  }
+}

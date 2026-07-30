@@ -1,0 +1,28 @@
+{
+  "fixtureId": "neg-unknown-alias-not-applied",
+  "description": "ADVERSARIAL: 'AXD' is used by one record as shorthand for 'Axiom Dynamics', but 'axd' is NOT a human-approved alias in knowledge/config/claim-aliases.json. The control MUST NOT invent or apply the alias: the 'axd' token survives normalization untouched, the fingerprints differ, and no duplicate-candidate is emitted. If 'axd' is expanded or a duplicate-candidate appears, this fixture fails.",
+  "expectation": "fail",
+  "expectedRule": "unknown-alias-not-applied",
+  "claims": [
+    {
+      "id": "claim:axd-acquire",
+      "claim": "AXD acquired DataForge Systems."
+    },
+    {
+      "id": "claim:axiom-acquire",
+      "claim": "Axiom Dynamics acquired DataForge Systems."
+    }
+  ],
+  "expected": {
+    "absentCandidates": [
+      {"relation": "duplicate-candidate", "members": ["claim:axd-acquire", "claim:axiom-acquire"]}
+    ],
+    "normalizedContains": [
+      {"id": "claim:axd-acquire", "needle": "axd"}
+    ],
+    "normalizedNotContains": [
+      {"id": "claim:axd-acquire", "needle": "axiom dynamics"}
+    ],
+    "fingerprintDifferent": [["claim:axd-acquire", "claim:axiom-acquire"]]
+  }
+}
