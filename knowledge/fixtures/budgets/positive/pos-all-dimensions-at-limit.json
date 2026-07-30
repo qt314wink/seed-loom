@@ -1,0 +1,26 @@
+{
+  "fixtureId": "budgets:pos:all-dimensions-at-limit",
+  "description": "Boundary: every daily research-collection dimension exactly at its daily ceiling (sources 25, networkCalls 40, runtime 900s, ingestedNodes 150, retainedArtifactBytes 50 MiB, telemetry 10 MiB) is allowed with remaining 0; ceilings are inclusive.",
+  "expectation": "pass",
+  "assert": {
+    "decisions.sources.verdict": {"eq": "allow"},
+    "decisions.sources.remaining": {"eq": 0},
+    "decisions.networkCalls.verdict": {"eq": "allow"},
+    "decisions.networkCalls.remaining": {"eq": 0},
+    "decisions.runtimeSeconds.verdict": {"eq": "allow"},
+    "decisions.runtimeSeconds.remaining": {"eq": 0},
+    "decisions.ingestedNodes.verdict": {"eq": "allow"},
+    "decisions.retainedArtifactBytes.verdict": {"eq": "allow"},
+    "decisions.retainedArtifactBytes.remaining": {"eq": 0},
+    "decisions.telemetryBytes.verdict": {"eq": "allow"}
+  },
+  "declaration": {
+    "runLabel": "run:fixture:all-at-limit",
+    "sourcesRequested": 25,
+    "networkCallsRequested": 40,
+    "runtimeSeconds": 900,
+    "ingestedNodes": 150,
+    "retainedArtifactBytes": 52428800,
+    "telemetryBytes": 10485760
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "control": "WS7",
+  "digest": "d5f7793dc38d4670a5642f156cfcdc13d9881cbf78f969b29f27021cda91925e",
+  "generatedAt": "2026-07-31T00:00:00.000Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/budgets/positive/pos-within-budget.json",
+      "sha256": "7e8e795e2a4bddeaf2e2d1e716b1cb12e7f489aa9d1720ef70878c8915b94d26"
+    }
+  ],
+  "receiptId": "receipt:budgets:20260731T000000Z",
+  "results": {
+    "consumedBudget": {
+      "concurrentExperiments": 2,
+      "ingestedNodes": 100,
+      "networkCalls": 12,
+      "retainedArtifactBytes": 1048576,
+      "runtimeSeconds": 300,
+      "sources": 10,
+      "telemetryBytes": 1048576,
+      "weeklyExperimentCost": 40
+    },
+    "decisions": [
+      {
+        "consumed": 10,
+        "dimension": "sources",
+        "limit": 25,
+        "priorConsumed": 0,
+        "remaining": 15,
+        "requested": 10,
+        "rule": null,
+        "verdict": "allow",
+        "window": "daily"
+      },
+      {
+        "consumed": 12,
+        "dimension": "networkCalls",
+        "limit": 40,
+        "priorConsumed": 0,
+        "remaining": 28,
+        "requested": 12,
+        "rule": null,
+        "verdict": "allow",
+        "window": "daily"
+      },
+      {
+        "consumed": 300,
+        "dimension": "runtimeSeconds",
+        "limit": 900,
+        "priorConsumed": 0,
+        "remaining": 600,
+        "requested": 300,
+        "rule": null,
+        "verdict": "allow",
+        "window": "daily"
+      },
+      {
+        "consumed": 100,
+        "dimension": "ingestedNodes",
+        "limit": 150,
+        "priorConsumed": 0,
+        "remaining": 50,
+        "requested": 100,
+        "rule": null,
+        "verdict": "allow",
+        "window": "daily"
+      },
+      {
+        "consumed": 1048576,
+        "dimension": "retainedArtifactBytes",
+        "limit": 52428800,
+        "priorConsumed": 0,
+        "remaining": 51380224,
+        "requested": 1048576,
+        "rule": null,
+        "verdict": "allow",
+        "window": "daily"
+      },
+      {
+        "consumed": 1048576,
+        "dimension": "telemetryBytes",
+        "limit": 10485760,
+        "priorConsumed": 0,
+        "remaining": 9437184,
+        "requested": 1048576,
+        "rule": null,
+        "verdict": "allow",
+        "window": "daily"
+      },
+      {
+        "consumed": 40,
+        "dimension": "weeklyExperimentCost",
+        "limit": 50,
+        "priorConsumed": 0,
+        "remaining": 10,
+        "requested": 40,
+        "rule": null,
+        "verdict": "allow",
+        "window": "weekly"
+      },
+      {
+        "consumed": 2,
+        "dimension": "concurrentExperiments",
+        "limit": 2,
+        "priorConsumed": 0,
+        "remaining": 0,
+        "requested": 2,
+        "rule": null,
+        "verdict": "allow",
+        "window": "weekly"
+      }
+    ],
+    "denialCount": 0,
+    "exhaustion": [],
+    "exhaustionCount": 0,
+    "remainingBudget": {
+      "concurrentExperiments": 0,
+      "ingestedNodes": 50,
+      "networkCalls": 28,
+      "retainedArtifactBytes": 51380224,
+      "runtimeSeconds": 600,
+      "sources": 15,
+      "telemetryBytes": 9437184,
+      "weeklyExperimentCost": 10
+    },
+    "runLabel": "run:fixture:within-budget"
+  },
+  "violations": []
+}

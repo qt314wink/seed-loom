@@ -1,0 +1,16 @@
+{
+  "fixtureId": "budgets:neg:telemetry-one-byte-over",
+  "description": "Boundary adversary: telemetryBytes 10485761 = daily ceiling + 1 must fail; exactly-at-limit passes (see budgets:pos:telemetry-exactly-at-limit). Partial completion grants exactly 10485760 bytes, 1 byte dropped, no silent excess.",
+  "expectation": "fail",
+  "expectedRule": "DAILY_TELEMETRY_CEILING",
+  "assert": {
+    "decisions.telemetryBytes.verdict": {"eq": "partial"},
+    "decisions.telemetryBytes.consumed": {"eq": 10485760},
+    "decisions.telemetryBytes.remaining": {"eq": 0},
+    "exhaustion.telemetryBytes.dropped": {"eq": 1}
+  },
+  "declaration": {
+    "runLabel": "run:fixture:telemetry-one-over",
+    "telemetryBytes": 10485761
+  }
+}

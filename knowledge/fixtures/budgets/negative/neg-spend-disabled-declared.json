@@ -1,0 +1,18 @@
+{
+  "fixtureId": "budgets:neg:spend-disabled-declared",
+  "description": "Declared spend while governance automation.maySpendMoney=false: a spend authorization WITH a declared, classifiable cost (5 USD) is still denied with named rule SPEND_DISABLED. UNKNOWN_SPEND must NOT fire (the cost is known), proving the two rules are independent.",
+  "expectation": "fail",
+  "expectedRule": "SPEND_DISABLED",
+  "forbidRules": ["UNKNOWN_SPEND"],
+  "assert": {
+    "decisions.spendAuthorization:spend:vendor-credits.verdict": {"eq": "deny"},
+    "decisions.spendAuthorization:spend:vendor-credits.rule": {"eq": "SPEND_DISABLED"},
+    "decisions.spendAuthorization:spend:vendor-credits.consumed": {"eq": 0}
+  },
+  "declaration": {
+    "runLabel": "run:fixture:spend-disabled",
+    "spendAuthorizations": [
+      {"id": "spend:vendor-credits", "costUsd": 5, "purpose": "fixture: declared vendor API credits"}
+    ]
+  }
+}

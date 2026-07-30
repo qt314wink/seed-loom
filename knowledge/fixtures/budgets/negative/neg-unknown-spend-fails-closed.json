@@ -1,0 +1,17 @@
+{
+  "fixtureId": "budgets:neg:unknown-spend-fails-closed",
+  "description": "Unknown spend fails closed: a spend authorization with NO declared, classifiable costUsd is denied with named rule UNKNOWN_SPEND. Under default governance (automation.maySpendMoney=false) the SPEND_DISABLED gate ALSO fires; both rules must be distinguishable as separate decisions in the receipt.",
+  "expectation": "fail",
+  "expectedRule": "UNKNOWN_SPEND",
+  "expectRules": ["UNKNOWN_SPEND", "SPEND_DISABLED"],
+  "assert": {
+    "decisions.spendAuthorization:spend:mystery.verdict": {"eq": "deny"},
+    "decisions.spendAuthorization:spend:mystery.consumed": {"eq": 0}
+  },
+  "declaration": {
+    "runLabel": "run:fixture:unknown-spend",
+    "spendAuthorizations": [
+      {"id": "spend:mystery", "purpose": "fixture: unspecified vendor charge"}
+    ]
+  }
+}

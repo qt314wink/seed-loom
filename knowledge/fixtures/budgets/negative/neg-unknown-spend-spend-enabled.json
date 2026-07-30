@@ -1,0 +1,18 @@
+{
+  "fixtureId": "budgets:neg:unknown-spend-spend-enabled",
+  "description": "Distinguishability control: with automation.maySpendMoney=true (override), a spend authorization lacking a classifiable costUsd is denied with UNKNOWN_SPEND only; SPEND_DISABLED must NOT fire. Proves unknown-spend denial is a fail-closed cost rule, not a side effect of the spend gate.",
+  "expectation": "fail",
+  "expectedRule": "UNKNOWN_SPEND",
+  "forbidRules": ["SPEND_DISABLED"],
+  "configOverride": {"automation": {"maySpendMoney": true}},
+  "assert": {
+    "decisions.spendAuthorization:spend:mystery.verdict": {"eq": "deny"},
+    "decisions.spendAuthorization:spend:mystery.rule": {"eq": "UNKNOWN_SPEND"}
+  },
+  "declaration": {
+    "runLabel": "run:fixture:unknown-spend-enabled",
+    "spendAuthorizations": [
+      {"id": "spend:mystery", "purpose": "fixture: unspecified vendor charge"}
+    ]
+  }
+}

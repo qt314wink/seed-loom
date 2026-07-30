@@ -1,0 +1,20 @@
+{
+  "fixtureId": "budgets:neg:over-budget-sources-partial",
+  "description": "Over-budget run: sourcesRequested 40 > daily ceiling 25. Research collection may COMPLETE PARTIALLY up to the ceiling: verdict partial, consumed exactly 25, 15 dropped, BUDGET-EXHAUSTION entry emitted, named rule DAILY_SOURCE_CEILING. The ceiling is never silently exceeded.",
+  "expectation": "fail",
+  "expectedRule": "DAILY_SOURCE_CEILING",
+  "assert": {
+    "decisions.sources.verdict": {"eq": "partial"},
+    "decisions.sources.requested": {"eq": 40},
+    "decisions.sources.consumed": {"eq": 25},
+    "decisions.sources.remaining": {"eq": 0},
+    "decisions.sources.rule": {"eq": "DAILY_SOURCE_CEILING"},
+    "exhaustion.sources.granted": {"eq": 25},
+    "exhaustion.sources.dropped": {"eq": 15}
+  },
+  "declaration": {
+    "runLabel": "run:fixture:over-budget-sources",
+    "sourcesRequested": 40,
+    "networkCallsRequested": 10
+  }
+}

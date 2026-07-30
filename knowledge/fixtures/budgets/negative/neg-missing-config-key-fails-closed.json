@@ -1,0 +1,13 @@
+{
+  "fixtureId": "budgets:neg:missing-config-key-fails-closed",
+  "description": "Fail-closed config adversary: governance config with budgets.weekly.maxExperimentBudgetUsd removed. The control must refuse evaluation, exit 1, and name rule MISSING_BUDGET_CONFIG rather than guessing a default ceiling.",
+  "expectation": "fail",
+  "expectedRule": "MISSING_BUDGET_CONFIG",
+  "configRemove": ["budgets.weekly.maxExperimentBudgetUsd"],
+  "declaration": {
+    "runLabel": "run:fixture:missing-config",
+    "experiments": [
+      {"id": "exp:a", "costUsd": 10, "concurrent": false}
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "fixtureId": "budgets:neg:negative-requested-malformed",
+  "description": "Malformed input adversary: networkCallsRequested -5. Negative requested values are rejected with MALFORMED_DECLARATION; the declaration is refused wholesale so a negative value can never be used to 'refund' or offset a ceiling.",
+  "expectation": "fail",
+  "expectedRule": "MALFORMED_DECLARATION",
+  "declaration": {
+    "runLabel": "run:fixture:negative-requested",
+    "networkCallsRequested": -5
+  }
+}

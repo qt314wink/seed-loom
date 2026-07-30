@@ -1,0 +1,14 @@
+{
+  "fixtureId": "budgets:pos:telemetry-exactly-at-limit",
+  "description": "Boundary: telemetryBytes exactly equal to the daily ceiling (10485760 bytes = 10 MiB) must PASS with remaining 0; only +1 over may fail (see budgets:neg:telemetry-one-byte-over).",
+  "expectation": "pass",
+  "assert": {
+    "decisions.telemetryBytes.verdict": {"eq": "allow"},
+    "decisions.telemetryBytes.consumed": {"eq": 10485760},
+    "decisions.telemetryBytes.remaining": {"eq": 0}
+  },
+  "declaration": {
+    "runLabel": "run:fixture:telemetry-at-limit",
+    "telemetryBytes": 10485760
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "fixtureId": "budgets:neg:third-concurrent-experiment-denied",
+  "description": "Concurrent-experiment ceiling: 3 concurrent experiments against maxConcurrentExperiments=2. The first two (declaration order) are granted; the third is DENIED with named rule CONCURRENT_EXPERIMENT_CEILING and listed in the exhaustion entry. Weekly cost (15 USD) is within budget, isolating the concurrency rule.",
+  "expectation": "fail",
+  "expectedRule": "CONCURRENT_EXPERIMENT_CEILING",
+  "assert": {
+    "decisions.concurrentExperiments.verdict": {"eq": "partial"},
+    "decisions.concurrentExperiments.requested": {"eq": 3},
+    "decisions.concurrentExperiments.consumed": {"eq": 2},
+    "decisions.concurrentExperiments.remaining": {"eq": 0},
+    "exhaustion.concurrentExperiments.deniedExperiments": {"eq": ["exp:c"]},
+    "decisions.weeklyExperimentCost.verdict": {"eq": "allow"}
+  },
+  "declaration": {
+    "runLabel": "run:fixture:three-concurrent",
+    "experiments": [
+      {"id": "exp:a", "costUsd": 5, "concurrent": true},
+      {"id": "exp:b", "costUsd": 5, "concurrent": true},
+      {"id": "exp:c", "costUsd": 5, "concurrent": true}
+    ]
+  }
+}
