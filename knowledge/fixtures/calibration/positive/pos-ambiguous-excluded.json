@@ -1,0 +1,52 @@
+{
+  "fixtureId": "calibration:pos:ambiguous-excluded",
+  "description": "resolutionQuality 'ambiguous' and 'contested' events are EXCLUDED from scoring per the documented exclude-policy (never down-weighted): only the single 'clean' event is scored (sampleSize 1), both non-clean events surface AMBIGUOUS_RESOLUTION warnings and are listed in excludedNonClean.",
+  "expectation": "pass",
+  "expectedWarnings": ["AMBIGUOUS_RESOLUTION", "INSUFFICIENT_SAMPLE"],
+  "assert": {
+    "overall.sampleSize": {"eq": 1},
+    "overall.brierScore": {"eq": 0.01},
+    "excludedNonClean.count": {"eq": 2},
+    "scoredEventCount": {"eq": 1}
+  },
+  "events": [
+    {
+      "predictionId": "pred:fixture:amb-clean-01",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.9,
+      "predictedOutcome": "Regulator publishes guidance",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [{"ref": "src:fixture:amb-c1", "observedAt": "2026-06-20T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "law-or-policy",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:amb-ambiguous-01",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.6,
+      "predictedOutcome": "Treaty clause applies to AI exports",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [{"ref": "src:fixture:amb-a1", "observedAt": "2026-06-22T00:00:00Z"}],
+      "resolutionQuality": "ambiguous",
+      "domain": "law-or-policy",
+      "notes": "Legal experts disagree whether the clause applies; outcome interpretation is ambiguous.",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:amb-contested-01",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Court rules against provider",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 0,
+      "outcomeEvidence": [{"ref": "src:fixture:amb-k1", "observedAt": "2026-06-25T00:00:00Z"}],
+      "resolutionQuality": "contested",
+      "domain": "law-or-policy",
+      "notes": "Ruling under appeal; outcome contested.",
+      "status": "resolved"
+    }
+  ]
+}

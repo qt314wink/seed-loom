@@ -1,0 +1,66 @@
+{
+  "fixtureId": "calibration:pos:domain-separation",
+  "description": "Two domains scored separately: 'pricing' is well-calibrated (Brier 0.025) while 'model-capability' is not (Brier 0.25). Per-domain scores must remain separate; the overall aggregate (Brier 0.1375) is reported explicitly alongside, never pooled silently.",
+  "expectation": "pass",
+  "expectedWarnings": ["INSUFFICIENT_SAMPLE"],
+  "assert": {
+    "overall.sampleSize": {"eq": 4},
+    "overall.brierScore": {"eq": 0.1375},
+    "domains.pricing.sampleSize": {"eq": 2},
+    "domains.pricing.brierScore": {"eq": 0.025},
+    "domains.pricing.observedFrequency": {"eq": 1},
+    "domains.model-capability.sampleSize": {"eq": 2},
+    "domains.model-capability.brierScore": {"eq": 0.25},
+    "domains.model-capability.observedFrequency": {"eq": 0.5}
+  },
+  "events": [
+    {
+      "predictionId": "pred:fixture:dom-pricing-01",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.9,
+      "predictedOutcome": "Vendor price rises",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [{"ref": "src:fixture:dom-p1", "observedAt": "2026-06-15T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "pricing",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:dom-pricing-02",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.8,
+      "predictedOutcome": "Discount program ends",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [{"ref": "src:fixture:dom-p2", "observedAt": "2026-06-18T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "pricing",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:dom-model-01",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.5,
+      "predictedOutcome": "Frontier model gains video input",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 0,
+      "outcomeEvidence": [{"ref": "src:fixture:dom-m1", "observedAt": "2026-06-28T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "model-capability",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:dom-model-02",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.5,
+      "predictedOutcome": "Open model matches frontier benchmark",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [{"ref": "src:fixture:dom-m2", "observedAt": "2026-06-29T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "model-capability",
+      "status": "resolved"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom/schemas/calibration-event.schema.json",
+  "title": "CalibrationEvent",
+  "description": "A single prediction/outcome pair scored by scripts/knowledge/calibrate-confidence.mjs (WS6). Semantics (binding): scoring is BINARY-ONLY — observedOutcome must be 0 or 1 and originalConfidence is the predicted probability that the predicted outcome occurs; multi-outcome events are rejected by the control with named rule NON_BINARY_OUTCOME. Cross-field rules are enforced by the control script, not this schema: (1) TEMPORAL_INCONSISTENCY when evaluationDate < predictionDate; (2) OUTCOME_LEAKAGE when any outcomeEvidence[].observedAt predates predictionDate; (3) UNRESOLVED_OUTCOME_FIELD when status is 'unresolved' but observedOutcome or non-empty outcomeEvidence is present; (4) AMBIGUOUS_RESOLUTION — resolutionQuality 'ambiguous' or 'contested' events are EXCLUDED from scoring (documented policy: exclude, never down-weight) but reported; (5) unresolved events are excluded from scoring and reported. The control NEVER writes to knowledge/config/governance.json; threshold changes require a reviewed governance amendment.",
+  "type": "object",
+  "required": ["predictionId", "predictionDate", "originalConfidence", "predictedOutcome", "evaluationDate", "resolutionQuality", "domain", "status"],
+  "properties": {
+    "predictionId": {"type": "string", "minLength": 1},
+    "predictionDate": {"type": "string", "format": "date-time"},
+    "originalConfidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "predictedOutcome": {"type": "string", "minLength": 1, "description": "Human-readable statement of the predicted binary outcome; originalConfidence is the probability that this outcome occurs."},
+    "evaluationDate": {"type": "string", "format": "date-time"},
+    "observedOutcome": {"type": "integer", "minimum": 0, "description": "1 = predicted outcome occurred, 0 = it did not. Present only on resolved events. The schema permits any non-negative integer so that multi-outcome attempts reach the control, which RESTRICTS scoring to binary and rejects o not in {0,1} with named rule NON_BINARY_OUTCOME; its presence on an unresolved event is rejected with UNRESOLVED_OUTCOME_FIELD."},
+    "outcomeEvidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ref", "observedAt"],
+        "properties": {
+          "ref": {"type": "string", "minLength": 1},
+          "observedAt": {"type": "string", "format": "date-time"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "resolutionQuality": {"enum": ["clean", "ambiguous", "contested"]},
+    "domain": {"type": "string", "minLength": 1},
+    "notes": {"type": "string"},
+    "status": {"enum": ["resolved", "unresolved"]}
+  },
+  "additionalProperties": false
+}
