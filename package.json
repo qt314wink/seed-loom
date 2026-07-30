@@ -12,11 +12,21 @@
     "filters:check": "npm --prefix packages/svg-filter-atlas run check",
     "check": "npm run filters:check && npm run build",
     "filters:build": "npm --prefix packages/svg-filter-atlas run build",
-    "typecheck": "npm run filters:build && tsc --noEmit"
+    "typecheck": "npm run filters:build && tsc --noEmit",
+    "knowledge:setup": "node scripts/knowledge/setup.mjs",
+    "knowledge:doctor": "node scripts/knowledge/doctor.mjs",
+    "knowledge:test": "node scripts/knowledge/test-pipeline.mjs",
+    "knowledge:validate": "node scripts/knowledge/validate.mjs",
+    "knowledge:run": "node scripts/knowledge/run-all.mjs",
+    "knowledge:verify": "npm run knowledge:doctor && npm run knowledge:test && npm run knowledge:run",
+    "knowledge:weekly": "node scripts/knowledge/weekly-review.mjs",
+    "knowledge:ingest": "node scripts/knowledge/ingest-nightly-run.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.54.1",
     "@types/node": "^24.0.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
     "typescript": "^5.8.3",
     "vite": "^7.0.4"
   },
