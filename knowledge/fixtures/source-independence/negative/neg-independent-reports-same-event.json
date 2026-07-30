@@ -1,0 +1,42 @@
+{
+  "fixtureId": "neg-independent-reports-same-event",
+  "description": "ADVERSARIAL: two genuinely independent newsrooms report the same flood event at a semiconductor fab with different angles, vocabulary, publishers, independence keys, and no shared upstream or citations. Token overlap is below the ambiguous band. The control must NOT force them into one stream: any cluster containing both sources fails this fixture. expectation=fail means 'the control fails if it produces the forbidden merge'.",
+  "expectation": "fail",
+  "expectedRule": "no-forced-merge-independent-reports",
+  "sources": [
+    {
+      "id": "source:fix-ind2-wire",
+      "type": "Source",
+      "url": "https://globalwire.example.com/world/hsinchu-fab-flooding",
+      "publisher": "Global Wire Service",
+      "publishedAt": "2026-07-27T06:00:00Z",
+      "retrievedAt": "2026-07-27T07:00:00Z",
+      "sourceClass": "press",
+      "independenceKey": "global-wire-hsinchu-flood",
+      "title": "Flooding halts output at Hsinchu semiconductor fab",
+      "lead": "Torrential rain flooded cleanroom levels at a Hsinchu semiconductor plant early Monday, halting output while crews pumped out water."
+    },
+    {
+      "id": "source:fix-ind2-local",
+      "type": "Source",
+      "url": "https://islandgazette.example.tw/local/fab-shutdown-rainfall",
+      "publisher": "Island Gazette",
+      "publishedAt": "2026-07-27T11:00:00Z",
+      "retrievedAt": "2026-07-27T12:00:00Z",
+      "sourceClass": "press",
+      "independenceKey": "island-gazette-fab-shutdown",
+      "title": "Fab shutdown after record rainfall disrupts chip supply schedules",
+      "lead": "Record rainfall forced a week-long shutdown at the industrial park, and procurement teams are already renegotiating delivery schedules with automotive customers."
+    }
+  ],
+  "observations": [],
+  "expected": {
+    "totalClusters": 0,
+    "independentStreams": 2,
+    "clusters": [],
+    "absentRelationships": ["exact-duplicate", "syndication", "shared-upstream", "citation-cycle", "analyst-echo", "ambiguous-similarity"],
+    "noClusterContaining": [
+      ["source:fix-ind2-wire", "source:fix-ind2-local"]
+    ]
+  }
+}

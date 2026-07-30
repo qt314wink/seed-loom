@@ -1,0 +1,56 @@
+{
+  "fixtureId": "pos-shared-upstream-doi",
+  "description": "Three outlets (journal press office, university newsroom, trade magazine) all covering the same peer-reviewed study, each declaring the same upstream DOI. Acceptance test: a shared upstream DOI/policy document forms ONE lineage family (one stream), with the upstream identifier as origin candidate.",
+  "expectation": "pass",
+  "expectedRule": "shared-upstream",
+  "sources": [
+    {
+      "id": "source:fix-up-journal",
+      "type": "Source",
+      "url": "https://journal-press.example.org/2026/perovskite-stability",
+      "publisher": "Journal Press Office",
+      "publishedAt": "2026-07-10T08:00:00Z",
+      "retrievedAt": "2026-07-10T09:00:00Z",
+      "sourceClass": "research",
+      "independenceKey": "journal-press-perovskite-2026",
+      "title": "Study reports thousand-hour perovskite cell stability milestone",
+      "lead": "A new study reports a perovskite solar cell that retained 94 percent efficiency after one thousand hours of damp-heat testing.",
+      "doi": "10.1038/s41586-026-00001-x"
+    },
+    {
+      "id": "source:fix-up-university",
+      "type": "Source",
+      "url": "https://uninews.example.edu/2026/07/perovskite-milestone",
+      "publisher": "University Newsroom",
+      "publishedAt": "2026-07-10T12:00:00Z",
+      "retrievedAt": "2026-07-10T13:00:00Z",
+      "sourceClass": "press",
+      "independenceKey": "university-news-perovskite",
+      "title": "Campus team hits durability record for next-generation solar cells",
+      "lead": "University researchers announced a durability record for next-generation solar cells following extended environmental chamber testing.",
+      "doi": "10.1038/S41586-026-00001-X"
+    },
+    {
+      "id": "source:fix-up-trade",
+      "type": "Source",
+      "url": "https://pv-trade.example.com/news/perovskite-commercialization",
+      "publisher": "PV Trade Magazine",
+      "publishedAt": "2026-07-11T07:30:00Z",
+      "retrievedAt": "2026-07-11T08:00:00Z",
+      "sourceClass": "trade",
+      "independenceKey": "pv-trade-perovskite-commercialization",
+      "title": "Commercialization prospects brighten after stability breakthrough",
+      "lead": "Industry executives said commercialization prospects for tandem modules improved after laboratories demonstrated longer operational lifetimes.",
+      "upstream": {"doi": "10.1038/s41586-026-00001-x", "report": null}
+    }
+  ],
+  "observations": [],
+  "expected": {
+    "totalClusters": 1,
+    "independentStreams": 1,
+    "clusters": [
+      {"relationship": "shared-upstream", "memberCount": 3, "manualReviewRequired": false}
+    ],
+    "originCandidatesInclude": ["doi:10.1038/s41586-026-00001-x"]
+  }
+}

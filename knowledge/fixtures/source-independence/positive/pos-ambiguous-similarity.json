@@ -1,0 +1,38 @@
+{
+  "fixtureId": "pos-ambiguous-similarity",
+  "description": "Two outlets with paraphrased headlines about the same central bank event. Title token Jaccard lands in the ambiguous band [0.55, 0.90) and no strong signal exists. Acceptance test: ambiguous similarity is flagged manualReviewRequired=true and is NEVER auto-merged; both sources keep their own streams.",
+  "expectation": "review",
+  "expectedRule": "ambiguous-similarity",
+  "sources": [
+    {
+      "id": "source:fix-amb-a",
+      "type": "Source",
+      "url": "https://financetribune.example.com/policy/central-bank-pilot",
+      "publisher": "Finance Tribune",
+      "publishedAt": "2026-07-25T09:00:00Z",
+      "retrievedAt": "2026-07-25T10:00:00Z",
+      "sourceClass": "press",
+      "independenceKey": "finance-tribune-cbdc-pilot",
+      "title": "Central bank pilots digital currency settlement for trade"
+    },
+    {
+      "id": "source:fix-amb-b",
+      "type": "Source",
+      "url": "https://marketsdaily.example.net/banking/cbdc-cross-border",
+      "publisher": "Markets Daily",
+      "publishedAt": "2026-07-25T15:00:00Z",
+      "retrievedAt": "2026-07-25T16:00:00Z",
+      "sourceClass": "press",
+      "independenceKey": "markets-daily-cbdc-crossborder",
+      "title": "Central bank tests digital currency settlement for cross border trade"
+    }
+  ],
+  "observations": [],
+  "expected": {
+    "totalClusters": 1,
+    "independentStreams": 2,
+    "clusters": [
+      {"relationship": "ambiguous-similarity", "memberCount": 2, "manualReviewRequired": true}
+    ]
+  }
+}
