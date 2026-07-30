@@ -1,0 +1,42 @@
+{
+  "planId": "seed-loom:kimi-swarm:control-layers:v1",
+  "branch": "feat/strategy-genesis-engine-v0",
+  "base": "main",
+  "mode": "implementation-and-proof",
+  "constraints": [
+    "canonical knowledge remains Git-versioned JSON",
+    "no paid infrastructure required",
+    "no autonomous acceptance or repository creation",
+    "all heuristics emit candidates or quarantine outputs only",
+    "all canonical changes require receipts and review"
+  ],
+  "workstreams": [
+    {"id":"WS1","name":"source-independence","leadRole":"Source Lineage Lead","outputs":["scripts/knowledge/analyze-source-independence.mjs","knowledge/schema/independence-report.schema.json","knowledge/fixtures/source-independence/**"],"dependsOn":[],"gate":"independent verifier approves positive and cycle fixtures"},
+    {"id":"WS2","name":"temporal-decay","leadRole":"Temporal Lead","outputs":["scripts/knowledge/apply-temporal-decay.mjs","knowledge/schema/temporal-projection.schema.json","knowledge/fixtures/temporal/**"],"dependsOn":[],"gate":"base confidence remains immutable"},
+    {"id":"WS3","name":"claim-identity","leadRole":"Claim Identity Lead","outputs":["scripts/knowledge/detect-semantic-duplicates.mjs","knowledge/schema/duplicate-candidate.schema.json","knowledge/fixtures/duplicates/**"],"dependsOn":[],"gate":"no automatic canonical merges"},
+    {"id":"WS4","name":"corrections","leadRole":"Correction Lead","outputs":["scripts/knowledge/validate-corrections.mjs","scripts/knowledge/propagate-invalidation.mjs","knowledge/schema/correction-event.schema.json","knowledge/fixtures/corrections/**"],"dependsOn":["WS1","WS3"],"gate":"original records remain addressable"},
+    {"id":"WS5","name":"sensitive-data","leadRole":"Data Steward","outputs":["protocols/sensitive-data-and-rights.md","scripts/knowledge/scan-sensitive-data.mjs","knowledge/schema/data-classification.schema.json","knowledge/fixtures/sensitive-data/**"],"dependsOn":[],"gate":"secrets reject; sensitive unknowns quarantine"},
+    {"id":"WS6","name":"calibration","leadRole":"Calibration Lead","outputs":["scripts/knowledge/calibrate-confidence.mjs","knowledge/schema/calibration-event.schema.json","knowledge/fixtures/calibration/**"],"dependsOn":["WS2"],"gate":"small samples cannot alter thresholds"},
+    {"id":"WS7","name":"budgets","leadRole":"Budget Governor","outputs":["scripts/knowledge/enforce-budgets.mjs","knowledge/schema/budget-receipt.schema.json","knowledge/fixtures/budgets/**"],"dependsOn":[],"gate":"unknown spend fails closed"},
+    {"id":"WS8","name":"notebook-boundary","leadRole":"Notebook Boundary Lead","outputs":["scripts/knowledge/export-notebook-candidates.mjs","knowledge/schema/notebook-export.schema.json","knowledge/fixtures/notebooks/**"],"dependsOn":["WS3","WS5"],"gate":"exports write only to quarantine"},
+    {"id":"WS9","name":"integration","leadRole":"Integration Lead","outputs":["package scripts","CI gates","Graph Workbench views","stage receipts","operator docs"],"dependsOn":["WS1","WS2","WS3","WS4","WS5","WS6","WS7","WS8"],"gate":"two clean deterministic runs"},
+    {"id":"WS10","name":"adversarial-verification","leadRole":"Adversarial Verifier","outputs":["negative fixture matrix","bypass report","determinism receipt","merge recommendation"],"dependsOn":["WS9"],"gate":"all expected failures fail for the intended reason"}
+  ],
+  "requiredCommands": [
+    "npm run knowledge:setup",
+    "npm run knowledge:controls",
+    "npm run knowledge:verify",
+    "npm run knowledge:verify",
+    "npm run knowledge:graph:build"
+  ],
+  "definitionOfDone": {
+    "controlsImplemented": 8,
+    "positiveAndNegativeFixtures": true,
+    "offlineFixtureTests": true,
+    "deterministicRerun": true,
+    "workbenchVisibility": true,
+    "canonicalMutationByHeuristic": false,
+    "humanApprovalBoundariesProven": true,
+    "realNightlyCycleDemonstrated": true
+  }
+}
