@@ -1,0 +1,9 @@
+{
+  "id": "actor:example-builder",
+  "type": "Actor",
+  "name": "Example Builder",
+  "actorClass": "builder",
+  "jurisdiction": null,
+  "domains": ["creative-technology"],
+  "sourceRefs": ["source:example-primary"]
+}
