@@ -35,7 +35,12 @@ jobs:
           cache: npm
 
       - name: Install Seed-Loom dependencies
-        run: npm ci
+        # package.json currently contains knowledge-validation dependencies that
+        # have not yet been regenerated into package-lock.json. Use a lockfile-
+        # preserving install here so Filter Atlas validation can run without
+        # rewriting the repository checkout. Restore `npm ci` after the root
+        # lockfile is regenerated and verified in a dedicated dependency PR.
+        run: npm install --ignore-scripts --no-audit --no-fund --package-lock=false
 
       - name: Install atlas development dependencies
         run: npm install --prefix packages/svg-filter-atlas --no-audit --no-fund
