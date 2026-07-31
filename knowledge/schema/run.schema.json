@@ -2,12 +2,37 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://seed-loom.local/schema/run.schema.json",
   "title": "Research Run",
+  "description": "Canonical durable research-run record. Bundle adapters may accept legacy aliases, but persisted records must conform to this schema.",
   "type": "object",
-  "required": ["runId", "type", "retrievalWindow", "newObservations", "updatedObservations", "candidatePatterns", "newRelationships", "contradictions", "opportunities", "repositoryActions", "noChangeReceipts", "collectionFailures"],
+  "required": [
+    "runId",
+    "type",
+    "ingestionMode",
+    "retrievalWindow",
+    "newObservations",
+    "updatedObservations",
+    "candidatePatterns",
+    "newRelationships",
+    "contradictions",
+    "opportunities",
+    "repositoryActions",
+    "noChangeReceipts",
+    "collectionFailures"
+  ],
   "properties": {
+    "schemaVersion": {"type": "string", "const": "1.1.0"},
     "runId": {"type": "string", "pattern": "^run:[a-z0-9][a-z0-9._:-]+$"},
     "type": {"const": "ResearchRun"},
-    "retrievalWindow": {"type": "object", "required": ["from", "to"], "properties": {"from": {"type": "string", "format": "date-time"}, "to": {"type": "string", "format": "date-time"}}, "additionalProperties": false},
+    "ingestionMode": {"enum": ["delivered", "reconstructed", "unavailable", "synthetic"]},
+    "retrievalWindow": {
+      "type": "object",
+      "required": ["from", "to"],
+      "properties": {
+        "from": {"type": "string", "format": "date-time"},
+        "to": {"type": "string", "format": "date-time"}
+      },
+      "additionalProperties": false
+    },
     "newObservations": {"type": "array", "items": {"type": "string"}},
     "updatedObservations": {"type": "array", "items": {"type": "string"}},
     "candidatePatterns": {"type": "array", "items": {"type": "string"}},
@@ -15,7 +40,18 @@
     "contradictions": {"type": "array", "items": {"type": "string"}},
     "opportunities": {"type": "array", "items": {"type": "string"}},
     "proposedExperiments": {"type": "array", "items": {"type": "string"}},
-    "repositoryActions": {"type": "array", "items": {"type": "object"}},
+    "repositoryActions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "status": {"enum": ["proposed", "deferred", "rejected"]},
+          "executed": {"const": false}
+        },
+        "required": ["status", "executed"],
+        "additionalProperties": true
+      }
+    },
     "noChangeReceipts": {"type": "array", "items": {"type": "string"}},
     "collectionFailures": {"type": "array", "items": {"type": "string"}}
   },
