@@ -119,7 +119,7 @@ const receipt = JSON.parse(result.stdout);
 assert.equal(receipt.status, 'validated');
 assert.equal(receipt.dryRun, true);
 assert.equal(receipt.schemaVersion, '1.1.0');
-assert.equal(receipt.plannedFiles.length, 24);
+assert.equal(receipt.plannedFiles.length, 29);
 
 fs.rmSync(tempDir, { recursive: true, force: true });
 console.log('PASS Phase A contract compatibility');
