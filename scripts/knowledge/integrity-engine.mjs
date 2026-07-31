@@ -113,7 +113,8 @@ const records = inventory();
 const stages = [
   run('schema',['scripts/knowledge/validate.mjs']),
   run('contract',['scripts/knowledge/test-contract-phase-a.mjs']),
-  run('source-independence',['scripts/knowledge/test-source-independence.mjs','--now',now])
+  run('source-independence',['scripts/knowledge/test-source-independence.mjs','--now',now]),
+  run('claim-identity',['scripts/knowledge/test-semantic-duplicates.mjs'])
 ];
 const provenanceFailures = provenanceChecks(records);
 const governanceFailures = governanceChecks();
@@ -121,7 +122,7 @@ const status = stages.every((stage) => stage.exitCode === 0) && provenanceFailur
 const core = {
   receiptId: `integrity:${now.replace(/[^0-9]/g,'').slice(0,14)}`,
   type: 'KnowledgeIntegrityReceipt',
-  engineVersion: '0.3.0',
+  engineVersion: '0.4.0',
   generatedAt: now,
   status,
   recordCount: records.length,
@@ -142,6 +143,16 @@ const core = {
     reviewQueueLocation: 'knowledge/candidates/source-independence/',
     baseConfidenceMutationAllowed: false,
     automaticMergeAllowed: false
+  },
+  claimIdentity: {
+    status: stages.find((stage) => stage.name === 'claim-identity')?.exitCode === 0 ? 'passed' : 'failed',
+    reportLocation: 'knowledge/candidates/claim-identity/',
+    receiptLocation: 'knowledge/receipts/claim-identity/',
+    fingerprintMethod: 'deterministic-normalized-claim-tuple-sha256',
+    automaticMergeAllowed: false,
+    canonicalObservationMutationAllowed: false,
+    confidenceMutationAllowed: false,
+    negationMayCollapseIntoAffirmation: false
   },
   provenanceFailures,
   governanceFailures,
