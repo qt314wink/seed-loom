@@ -1,0 +1,23 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://seed-loom/schemas/notebook-export.schema.json",
+  "title":"NotebookExportManifest",
+  "type":"object",
+  "required":["exportId","type","notebookPath","notebookHash","environment","authorAgent","generatedAt","sourceReferences","candidateRecords","transformations","assumptions","knownLimitations"],
+  "properties":{
+    "exportId":{"type":"string","pattern":"^[a-zA-Z0-9:_-]+$"},
+    "type":{"const":"NotebookExportManifest"},
+    "notebookPath":{"type":"string","pattern":"\\.ipynb$"},
+    "notebookHash":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "environment":{"type":"object","required":["runtime","packages"],"properties":{"runtime":{"type":"string"},"packages":{"type":"object","additionalProperties":{"type":"string"}}},"additionalProperties":false},
+    "authorAgent":{"type":"string","minLength":1},
+    "generatedAt":{"type":"string","format":"date-time"},
+    "sourceReferences":{"type":"array","items":{"type":"string"}},
+    "candidateRecords":{"type":"array","items":{"type":"object","required":["id","type","status","claim"],"properties":{"id":{"type":"string"},"type":{"type":"string"},"status":{"enum":["candidate","quarantine"]},"claim":{"type":"string"},"dataClassification":{"type":"string"},"purpose":{"type":"string"},"retention":{"type":"string"}},"additionalProperties":true}},
+    "transformations":{"type":"array","items":{"type":"string"}},
+    "assumptions":{"type":"array","items":{"type":"string"}},
+    "knownLimitations":{"type":"array","items":{"type":"string"}},
+    "requestedDestination":{"type":"string"}
+  },
+  "additionalProperties":false
+}
