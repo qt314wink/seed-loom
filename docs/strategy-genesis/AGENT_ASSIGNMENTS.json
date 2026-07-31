@@ -1,0 +1,18 @@
+{
+  "assignmentId":"strategy-genesis:agent-assignments:v0",
+  "branch":"feat/strategy-genesis-engine-v0",
+  "executionIssue":24,
+  "verificationBoundary":"fresh process plus GitHub Actions Linux runner",
+  "workstreams":[
+    {"id":"WS1","lead":"agent:source-lineage-lead","verifier":"agent:source-lineage-independent-verifier"},
+    {"id":"WS2","lead":"agent:temporal-lead","verifier":"agent:temporal-independent-verifier"},
+    {"id":"WS3","lead":"agent:claim-identity-lead","verifier":"agent:claim-identity-independent-verifier"},
+    {"id":"WS4","lead":"agent:correction-lead","verifier":"agent:correction-independent-verifier"},
+    {"id":"WS5","lead":"agent:data-steward","verifier":"agent:data-steward-independent-verifier"},
+    {"id":"WS6","lead":"agent:calibration-lead","verifier":"agent:calibration-independent-verifier"},
+    {"id":"WS7","lead":"agent:budget-governor","verifier":"agent:budget-independent-verifier"},
+    {"id":"WS8","lead":"agent:notebook-boundary-lead","verifier":"agent:notebook-boundary-independent-verifier"},
+    {"id":"WS9","lead":"agent:integration-lead","verifier":"agent:integration-independent-verifier"},
+    {"id":"WS10","lead":"agent:adversarial-verifier","verifier":"github-actions:knowledge-controls"}
+  ]
+}
