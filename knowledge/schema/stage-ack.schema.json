@@ -3,19 +3,50 @@
   "$id": "https://seed-loom.local/schema/stage-ack.schema.json",
   "title": "Pipeline Stage Acknowledgement",
   "type": "object",
-  "required": ["ackId","runId","stage","status","startedAt","completedAt","inputs","outputs","checks","governance","provenance"],
+  "required": ["ackId", "runId", "stage", "status", "startedAt", "completedAt", "inputs", "outputs", "checks", "governance", "provenance"],
   "properties": {
-    "ackId": {"type":"string","pattern":"^ack:[a-z0-9][a-z0-9._:-]+$"},
-    "runId": {"type":"string","pattern":"^run:[a-z0-9][a-z0-9._:-]+$"},
-    "stage": {"enum":["collect","vet","normalize","observe","inquire","interpret","relate","pattern","opportunity","strategy","experiment","genesis","publish"]},
-    "status": {"enum":["passed","failed","deferred","no-change"]},
-    "startedAt": {"type":"string","format":"date-time"},
-    "completedAt": {"type":"string","format":"date-time"},
-    "inputs": {"type":"array","items":{"type":"string"}},
-    "outputs": {"type":"array","items":{"type":"string"}},
-    "checks": {"type":"array","items":{"type":"object","required":["name","result"],"properties":{"name":{"type":"string"},"result":{"enum":["pass","fail","not-applicable"]},"detail":{"type":"string"}},"additionalProperties":false}},
-    "governance": {"type":"object","required":["allowedTransition","approvalRequired","boundaryNotes"],"properties":{"allowedTransition":{"type":"boolean"},"approvalRequired":{"type":"boolean"},"boundaryNotes":{"type":"array","items":{"type":"string"}}},"additionalProperties":false},
-    "provenance": {"type":"object","required":["producer","method","inputHashes"],"properties":{"producer":{"type":"string"},"method":{"type":"string"},"inputHashes":{"type":"array","items":{"type":"string"}}},"additionalProperties":false}
+    "schemaVersion": {"type": "string", "const": "1.1.0"},
+    "ackId": {"type": "string", "pattern": "^ack:[a-z0-9][a-z0-9._:-]+$"},
+    "runId": {"type": "string", "pattern": "^run:[a-z0-9][a-z0-9._:-]+$"},
+    "stage": {"enum": ["collect", "vet", "normalize", "observe", "inquire", "interpret", "relate", "pattern", "opportunity", "strategy", "experiment", "genesis", "publish"]},
+    "status": {"enum": ["passed", "failed", "deferred", "no-change"]},
+    "startedAt": {"type": "string", "format": "date-time"},
+    "completedAt": {"type": "string", "format": "date-time"},
+    "inputs": {"type": "array", "items": {"type": "string"}},
+    "outputs": {"type": "array", "items": {"type": "string"}},
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "result"],
+        "properties": {
+          "name": {"type": "string"},
+          "result": {"enum": ["pass", "fail", "not-applicable"]},
+          "detail": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "governance": {
+      "type": "object",
+      "required": ["allowedTransition", "approvalRequired", "boundaryNotes"],
+      "properties": {
+        "allowedTransition": {"type": "boolean"},
+        "approvalRequired": {"type": "boolean"},
+        "boundaryNotes": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["producer", "method", "inputHashes"],
+      "properties": {
+        "producer": {"type": "string"},
+        "method": {"type": "string"},
+        "inputHashes": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    }
   },
   "additionalProperties": false
 }
