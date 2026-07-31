@@ -2,9 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://seed-loom.local/schema/observation.schema.json",
   "title": "Observation",
+  "description": "Canonical observation record. Daily intake may create only candidate approval state; accepted knowledge requires a separate governed transition.",
   "type": "object",
   "required": ["id", "type", "capturedAt", "claim", "verifiedFacts", "inference", "significance", "confidence", "evidenceMaturity", "sourceRefs", "approvalState"],
   "properties": {
+    "schemaVersion": {"type": "string", "const": "1.1.0"},
     "id": {"type": "string", "pattern": "^obs:[a-z0-9][a-z0-9._:-]+$"},
     "type": {"const": "Observation"},
     "capturedAt": {"type": "string", "format": "date-time"},
@@ -20,7 +22,7 @@
     "assumptions": {"type": "array", "items": {"type": "string"}},
     "knownLimitations": {"type": "array", "items": {"type": "string"}},
     "counterevidenceRefs": {"type": "array", "items": {"type": "string"}},
-    "approvalState": {"enum": ["not-required", "pending", "approved", "rejected"]}
+    "approvalState": {"enum": ["candidate", "pending", "approved", "rejected", "not-required"]}
   },
   "additionalProperties": false
 }
