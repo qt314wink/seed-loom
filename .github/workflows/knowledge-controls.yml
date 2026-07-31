@@ -1,0 +1,60 @@
+name: Knowledge Controls
+on:
+  pull_request:
+    paths:
+      - 'knowledge/**'
+      - 'protocols/**'
+      - 'scripts/knowledge/**'
+      - 'docs/strategy-genesis/**'
+      - 'tools/graph-workbench/**'
+      - 'package.json'
+      - '.github/workflows/knowledge-controls.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: knowledge-controls-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies without paid services or external model calls
+        run: npm install --ignore-scripts --no-audit --no-fund
+      - name: Required command 1 — setup
+        run: npm run knowledge:setup
+      - name: Required command 2 — all control layers
+        run: npm run knowledge:controls
+      - name: Snapshot deterministic control artifacts
+        run: |
+          find knowledge/receipts knowledge/projections knowledge/candidates knowledge/quarantine -type f -name '*.json' -print0 2>/dev/null | sort -z | xargs -0 sha256sum > /tmp/control-artifacts-before.sha256
+      - name: Required command 3 — verification run one
+        run: npm run knowledge:verify
+      - name: Required command 4 — verification run two
+        run: npm run knowledge:verify
+      - name: Required command 5 — Graph Workbench projection
+        run: npm run knowledge:graph:build
+      - name: Prove deterministic control artifacts
+        run: |
+          find knowledge/receipts knowledge/projections knowledge/candidates knowledge/quarantine -type f -name '*.json' -print0 2>/dev/null | sort -z | xargs -0 sha256sum > /tmp/control-artifacts-after.sha256
+          diff -u /tmp/control-artifacts-before.sha256 /tmp/control-artifacts-after.sha256
+          test -s knowledge/receipts/adversarial/completion-report.json
+          test -s tools/graph-workbench/data.json
+      - name: Upload machine-readable proof
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: strategy-genesis-control-proof
+          path: |
+            knowledge/receipts/**
+            knowledge/projections/**
+            knowledge/candidates/**
+            tools/graph-workbench/data.json
+          if-no-files-found: error
+          retention-days: 7
