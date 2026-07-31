@@ -106,6 +106,7 @@ function governanceChecks() {
   if (governance.automation?.dailyGenesisState !== 'deferred') failures.push({code:'DAILY_GENESIS_NOT_DEFERRED'});
   if (governance.automation?.maySpendMoney !== false) failures.push({code:'AUTOMATION_SPEND_NOT_DENIED'});
   if (governance.notebooks?.canonicalWriteAllowed !== false) failures.push({code:'NOTEBOOK_CANONICAL_WRITE_NOT_DENIED'});
+  if (governance.confidence?.neverMutateBaseConfidence !== true) failures.push({code:'BASE_CONFIDENCE_MUTATION_NOT_DENIED'});
   return failures;
 }
 
@@ -114,7 +115,8 @@ const stages = [
   run('schema',['scripts/knowledge/validate.mjs']),
   run('contract',['scripts/knowledge/test-contract-phase-a.mjs']),
   run('source-independence',['scripts/knowledge/test-source-independence.mjs','--now',now]),
-  run('claim-identity',['scripts/knowledge/test-semantic-duplicates.mjs'])
+  run('claim-identity',['scripts/knowledge/test-semantic-duplicates.mjs']),
+  run('temporal-validity',['scripts/knowledge/test-temporal-decay.mjs'])
 ];
 const provenanceFailures = provenanceChecks(records);
 const governanceFailures = governanceChecks();
@@ -122,7 +124,7 @@ const status = stages.every((stage) => stage.exitCode === 0) && provenanceFailur
 const core = {
   receiptId: `integrity:${now.replace(/[^0-9]/g,'').slice(0,14)}`,
   type: 'KnowledgeIntegrityReceipt',
-  engineVersion: '0.4.0',
+  engineVersion: '0.5.0',
   generatedAt: now,
   status,
   recordCount: records.length,
@@ -153,6 +155,17 @@ const core = {
     canonicalObservationMutationAllowed: false,
     confidenceMutationAllowed: false,
     negationMayCollapseIntoAffirmation: false
+  },
+  temporalValidity: {
+    status: stages.find((stage) => stage.name === 'temporal-validity')?.exitCode === 0 ? 'passed' : 'failed',
+    projectionLocation: 'knowledge/projections/temporal-decay/',
+    receiptLocation: 'knowledge/receipts/temporal-decay/',
+    projectionMethod: 'time-indexed-half-life-with-explicit-validity-and-state-overrides',
+    baseConfidenceMutationAllowed: false,
+    canonicalRecordMutationAllowed: false,
+    futureDatedRecordsAllowed: false,
+    explicitClosureOverridesDecay: true,
+    explicitSupersessionOverridesDecay: true
   },
   provenanceFailures,
   governanceFailures,
