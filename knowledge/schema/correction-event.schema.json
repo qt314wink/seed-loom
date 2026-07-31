@@ -1,0 +1,28 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://seed-loom/schemas/correction-event.schema.json",
+  "title":"CorrectionEvent",
+  "type":"object",
+  "required":["id","type","eventType","targetRef","issuer","reason","sourceRefs","discoveredAt","effectiveAt","affectedClaims","severity","replacementRefs","governanceState"],
+  "properties":{
+    "id":{"type":"string","pattern":"^correction:"},
+    "type":{"const":"CorrectionEvent"},
+    "eventType":{"enum":["CORRECTS","RETRACTS","INVALIDATES","SUPERSEDES","RESTORES","DELETES_AT_SOURCE","REVISES_SCOPE"]},
+    "targetRef":{"type":"string","minLength":1},
+    "issuer":{"type":"string","minLength":1},
+    "reason":{"type":"string","minLength":1},
+    "sourceRefs":{"type":"array","items":{"type":"string"}},
+    "discoveredAt":{"type":"string","format":"date-time"},
+    "effectiveAt":{"type":"string","format":"date-time"},
+    "affectedClaims":{"type":"array","items":{"type":"string"}},
+    "severity":{"enum":["low","medium","high","critical"]},
+    "replacementRefs":{"type":"array","items":{"type":"string"}},
+    "governanceState":{"enum":["candidate","review-required","approved-event","rejected"]},
+    "oldValue":{},"newValue":{},
+    "capturedHash":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "unavailableSourceReceipt":{"type":"string"},
+    "validFrom":{"type":"string","format":"date-time"},
+    "validUntil":{"type":"string","format":"date-time"}
+  },
+  "additionalProperties":false
+}
