@@ -100,12 +100,19 @@ async function main() {
   if (integrationRun.output) console.log(integrationRun.output);
   const integrationPipelinePassed = integrationRun.exitCode === 0;
   const integrationDigest = digest({ exitCode: integrationRun.exitCode, output: integrationRun.lines });
+
+  const integrityRun = execute('scripts/knowledge/test-integrity-engine.mjs');
+  if (integrityRun.output) console.log(integrityRun.output);
+  const integrityReceiptDigest = integrityRun.output.match(/PASS Phase B integrity engine ([0-9a-f]{64})/)?.[1] || null;
+  const integrityPassed = integrityRun.exitCode === 0 && Boolean(integrityReceiptDigest);
+
   const canonicalAfter = await treeDigest(canonicalDirs);
   const canonicalUnchanged = canonicalBefore.digest === canonicalAfter.digest;
   const governance = JSON.parse(fs.readFileSync('knowledge/config/governance.json','utf8'));
   const boundaryChecks = [
     {id:'integration-schema-compatibility',pass:integrationValidationPassed,detail:`validate exit=${validationRun.exitCode}`},
     {id:'integration-full-pipeline',pass:integrationPipelinePassed,detail:`run-all exit=${integrationRun.exitCode}; digest=${integrationDigest}`},
+    {id:'aggregate-integrity-deterministic',pass:integrityPassed,detail:`integrity exit=${integrityRun.exitCode}; receiptDigest=${integrityReceiptDigest}`},
     {id:'canonical-json-unchanged',pass:canonicalUnchanged,detail:`before=${canonicalBefore.digest} after=${canonicalAfter.digest}`},
     {id:'daily-automation-cannot-accept',pass:governance.automation?.mayAcceptKnowledge===false,detail:String(governance.automation?.mayAcceptKnowledge)},
     {id:'daily-automation-genesis-deferred',pass:governance.automation?.dailyGenesisState==='deferred',detail:String(governance.automation?.dailyGenesisState)},
@@ -118,6 +125,7 @@ async function main() {
     'scripts/knowledge/validate-corrections.mjs','scripts/knowledge/propagate-invalidation.mjs','scripts/knowledge/test-corrections.mjs',
     'scripts/knowledge/export-notebook-candidates.mjs','scripts/knowledge/test-notebook-export.mjs',
     'scripts/knowledge/run-controls.mjs','scripts/knowledge/validate.mjs','scripts/knowledge/build-index.mjs','scripts/knowledge/build-workbench.mjs',
+    'scripts/knowledge/integrity-engine.mjs','scripts/knowledge/test-integrity-engine.mjs',
     'tools/graph-workbench/index.html','knowledge/schema/correction-event.schema.json','knowledge/schema/notebook-export.schema.json',
     'knowledge/fixtures/corrections/**','knowledge/fixtures/notebooks/**','docs/strategy-genesis/OPERATOR_CONTROLS.md',
     'docs/strategy-genesis/ADVERSARIAL_REPORT.md','docs/strategy-genesis/AGENT_ASSIGNMENTS.json',
@@ -137,15 +145,18 @@ async function main() {
       {
         id:'WS9',name:'integration',leadAgent:'agent:integration-lead',verifierAgent:'agent:integration-independent-verifier',
         status: controlsPassed ? 'complete' : 'failed',
-        tests:[{command:'node scripts/knowledge/run-all.mjs',exitCode:integrationRun.exitCode,digest:integrationDigest}],
-        outputs:['package scripts','CI gates','Graph Workbench control views','stage receipts','operator docs','disposable canonical index'],
+        tests:[
+          {command:'node scripts/knowledge/run-all.mjs',exitCode:integrationRun.exitCode,digest:integrationDigest},
+          {command:'node scripts/knowledge/test-integrity-engine.mjs',exitCode:integrityRun.exitCode,digest:integrityReceiptDigest}
+        ],
+        outputs:['package scripts','CI gates','Graph Workbench control views','stage receipts','operator docs','disposable canonical index','aggregate integrity receipt'],
         knownLimitations:['Graph Workbench and indexes remain disposable projections; no graph database is authoritative.'],
         verifierApproval: null
       },
       {
         id:'WS10',name:'adversarial-verification',leadAgent:'agent:adversarial-verifier',verifierAgent:'github-actions:knowledge-controls',
         status: controlsPassed ? 'complete' : 'failed',tests:boundaryChecks,
-        outputs:['knowledge/receipts/adversarial/completion-report.json','docs/strategy-genesis/ADVERSARIAL_REPORT.md'],
+        outputs:['knowledge/receipts/adversarial/completion-report.json','knowledge/receipts/integrity/latest.json','docs/strategy-genesis/ADVERSARIAL_REPORT.md'],
         knownLimitations:['Programmatic verifier approval is independent by process and CI runtime, not a human semantic review.'],
         verifierApproval: null
       }
@@ -154,7 +165,7 @@ async function main() {
     canonicalDigestBefore: canonicalBefore.digest,
     canonicalDigestAfter: canonicalAfter.digest,
     changedPaths,
-    receipts: approvals.map((approval) => `knowledge/receipts/verifiers/${approval.workstream.toLowerCase()}-verifier-approval.json`),
+    receipts: [...approvals.map((approval) => `knowledge/receipts/verifiers/${approval.workstream.toLowerCase()}-verifier-approval.json`),'knowledge/receipts/integrity/latest.json'],
     knownLimitations: [
       'Heuristic duplicate detection is deterministic lexical analysis without embeddings and intentionally favors review queues over recall.',
       'The control proof is offline and fixture-backed; external source availability is not re-fetched.'
@@ -170,7 +181,7 @@ async function main() {
   fs.writeFileSync('knowledge/receipts/adversarial/completion-report.json', canonicalStringify(report) + '\n');
   console.log(`DIGEST controls ${suiteDigest}`);
   if (!controlsPassed) process.exit(1);
-  console.log('PASS WS1-WS10 control and integration gates complete; PR remains draft and requires human review');
+  console.log('PASS WS1-WS10 control, integration, and aggregate integrity gates complete; PR remains draft and requires human review');
 }
 
 main().catch((error) => {
