@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://seed-loom.local/schema/source.schema.json",
   "title": "Source",
-  "description": "Canonical source record. Legacy sourceId aliases are accepted only by the ingestion adapter and are never persisted.",
+  "description": "Canonical source record. Legacy sourceId aliases are accepted only by the ingestion adapter and are never persisted. Lineage fields are optional, explicit, and reviewable; absence must not be inferred as independence.",
   "type": "object",
   "required": ["id", "type", "url", "publisher", "retrievedAt", "sourceClass", "independenceKey"],
   "properties": {
@@ -16,6 +16,26 @@
     "sourceClass": {"enum": ["primary", "official", "research", "regulatory", "financial", "trade", "press", "community", "repository", "secondary"]},
     "independenceKey": {"type": "string", "minLength": 1},
     "contentHash": {"type": ["string", "null"]},
+    "title": {"type": ["string", "null"]},
+    "lead": {"type": ["string", "null"]},
+    "analystNote": {"type": ["string", "null"]},
+    "syndicatedFrom": {"type": ["string", "null"]},
+    "doi": {"type": ["string", "null"]},
+    "upstreamReport": {"type": ["string", "null"]},
+    "policyDocument": {"type": ["string", "null"]},
+    "upstream": {
+      "type": "object",
+      "properties": {
+        "doi": {"type": ["string", "null"]},
+        "report": {"type": ["string", "null"]},
+        "policyDocument": {"type": ["string", "null"]},
+        "announcement": {"type": ["string", "null"]},
+        "study": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "cites": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "citedBy": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
     "notes": {"type": ["string", "null"]}
   },
   "additionalProperties": false
