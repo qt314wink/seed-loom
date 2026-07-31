@@ -2,9 +2,11 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://seed-loom.local/schema/source.schema.json",
   "title": "Source",
+  "description": "Canonical source record. Legacy sourceId aliases are accepted only by the ingestion adapter and are never persisted.",
   "type": "object",
   "required": ["id", "type", "url", "publisher", "retrievedAt", "sourceClass", "independenceKey"],
   "properties": {
+    "schemaVersion": {"type": "string", "const": "1.1.0"},
     "id": {"type": "string", "pattern": "^source:[a-z0-9][a-z0-9._:-]+$"},
     "type": {"const": "Source"},
     "url": {"type": "string", "format": "uri"},
