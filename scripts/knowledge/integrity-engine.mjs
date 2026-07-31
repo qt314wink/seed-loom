@@ -37,14 +37,18 @@ function expand(value) {
 }
 function run(name, args) {
   const result = spawnSync(process.execPath, args, { cwd: root, encoding: 'utf8', env: { ...process.env, KNOWLEDGE_NOW: now } });
+  const stdout = (result.stdout || '').trim();
+  const stderr = (result.stderr || '').trim();
+  const digestMatch = stdout.match(/DIGEST\s+[^\s]+\s+([0-9a-f]{64})/);
   return {
     name,
     command: [process.execPath, ...args].join(' '),
     startedAt: now,
     completedAt: now,
     exitCode: result.status ?? 2,
-    stdout: (result.stdout || '').trim(),
-    stderr: (result.stderr || '').trim()
+    stdout,
+    stderr,
+    outputDigest: digestMatch?.[1] ?? null
   };
 }
 function inventory() {
@@ -54,10 +58,11 @@ function inventory() {
       const relative = path.relative(root, file).replaceAll('\\','/');
       try {
         const value = readJson(file);
-        for (const [index, record] of expand(value).entries()) {
+        const expanded = expand(value);
+        for (const [index, record] of expanded.entries()) {
           const id = idOf(record, relative, index);
           records.push({
-            path: expand(value).length > 1 ? `${relative}#${id}` : relative,
+            path: expanded.length > 1 ? `${relative}#${id}` : relative,
             containerPath: relative,
             type: record.type || 'AuxiliaryRecord',
             id,
@@ -107,7 +112,8 @@ function governanceChecks() {
 const records = inventory();
 const stages = [
   run('schema',['scripts/knowledge/validate.mjs']),
-  run('contract',['scripts/knowledge/test-contract-phase-a.mjs'])
+  run('contract',['scripts/knowledge/test-contract-phase-a.mjs']),
+  run('source-independence',['scripts/knowledge/test-source-independence.mjs','--now',now])
 ];
 const provenanceFailures = provenanceChecks(records);
 const governanceFailures = governanceChecks();
@@ -115,12 +121,28 @@ const status = stages.every((stage) => stage.exitCode === 0) && provenanceFailur
 const core = {
   receiptId: `integrity:${now.replace(/[^0-9]/g,'').slice(0,14)}`,
   type: 'KnowledgeIntegrityReceipt',
-  engineVersion: '0.2.0',
+  engineVersion: '0.3.0',
   generatedAt: now,
   status,
   recordCount: records.length,
   inventoryDigest: digest(records),
-  stages: stages.map((stage) => ({name:stage.name,command:stage.command,exitCode:stage.exitCode,startedAt:stage.startedAt,completedAt:stage.completedAt,stdoutDigest:digest(stage.stdout),stderrDigest:digest(stage.stderr)})),
+  stages: stages.map((stage) => ({
+    name:stage.name,
+    command:stage.command,
+    exitCode:stage.exitCode,
+    startedAt:stage.startedAt,
+    completedAt:stage.completedAt,
+    outputDigest:stage.outputDigest,
+    stdoutDigest:digest(stage.stdout),
+    stderrDigest:digest(stage.stderr)
+  })),
+  sourceIndependence: {
+    status: stages.find((stage) => stage.name === 'source-independence')?.exitCode === 0 ? 'passed' : 'failed',
+    reportLocation: 'knowledge/receipts/source-independence/',
+    reviewQueueLocation: 'knowledge/candidates/source-independence/',
+    baseConfidenceMutationAllowed: false,
+    automaticMergeAllowed: false
+  },
   provenanceFailures,
   governanceFailures,
   boundaries:{canonicalMutationAllowed:false,knowledgeAcceptanceAllowed:false,repositoryGenesisAllowed:false,externalSpendAllowed:false}
