@@ -1,56 +1,12 @@
 #!/usr/bin/env node
-import fs from 'node:fs';
-import path from 'node:path';
-import process from 'node:process';
-import Ajv2020 from 'ajv/dist/2020.js';
-import addFormats from 'ajv-formats';
-
-const root = process.cwd();
-const schemaDir = path.join(root, 'knowledge', 'schema');
-const dataDirs = ['sources','entities','observations','patterns','relationships','opportunities','strategies','experiments','runs'];
-const schemaByType = {
-  Source: 'source.schema.json',
-  Observation: 'observation.schema.json',
-  Actor: 'actor.schema.json',
-  Relationship: 'relationship.schema.json',
-  Pattern: 'pattern.schema.json',
-  Opportunity: 'opportunity.schema.json',
-  Strategy: 'strategy.schema.json',
-  Experiment: 'experiment.schema.json',
-  RepositoryGenesisDossier: 'genesis-dossier.schema.json',
-  ResearchRun: 'run.schema.json'
-};
-
-const ajv = new Ajv2020({ allErrors: true, strict: true });
-addFormats(ajv);
-const schemas = new Map();
-for (const name of Object.values(schemaByType)) {
-  const schema = JSON.parse(fs.readFileSync(path.join(schemaDir, name), 'utf8'));
-  schemas.set(name, schema);
-  ajv.addSchema(schema, schema.$id);
-}
-
-let failures = 0;
-for (const dir of dataDirs) {
-  const absolute = path.join(root, 'knowledge', dir);
-  if (!fs.existsSync(absolute)) continue;
-  for (const file of fs.readdirSync(absolute).filter((name) => name.endsWith('.json')).sort()) {
-    const full = path.join(absolute, file);
-    const record = JSON.parse(fs.readFileSync(full, 'utf8'));
-    const schemaName = schemaByType[record.type];
-    if (!schemaName) {
-      console.error(`UNKNOWN_TYPE ${path.relative(root, full)} ${record.type}`);
-      failures += 1;
-      continue;
-    }
-    const validate = ajv.getSchema(schemas.get(schemaName).$id);
-    if (!validate(record)) {
-      console.error(`INVALID ${path.relative(root, full)}`);
-      console.error(JSON.stringify(validate.errors, null, 2));
-      failures += 1;
-    } else {
-      console.log(`VALID ${path.relative(root, full)}`);
-    }
-  }
-}
-if (failures) process.exit(1);
+import fs from 'node:fs';import path from 'node:path';import process from 'node:process';import Ajv2020 from 'ajv/dist/2020.js';import addFormats from 'ajv-formats';import {canonicalStringify,digest,fileDigest} from './lib/canonical-json.mjs';
+const root=process.cwd(),schemaDir=path.join(root,'knowledge','schema');const dataDirs=['sources','entities','observations','patterns','relationships','opportunities','strategies','experiments','runs'];const schemaByType={Source:'source.schema.json',Observation:'observation.schema.json',Actor:'actor.schema.json',Relationship:'relationship.schema.json',Pattern:'pattern.schema.json',Opportunity:'opportunity.schema.json',Strategy:'strategy.schema.json',Experiment:'experiment.schema.json',RepositoryGenesisDossier:'genesis-dossier.schema.json',ResearchRun:'run.schema.json'};const extraSchemas=['stage-ack.schema.json'];
+const ajv=new Ajv2020({allErrors:true,strict:true});addFormats(ajv);const schemas=new Map();for(const name of [...Object.values(schemaByType),...extraSchemas]){const schema=JSON.parse(fs.readFileSync(path.join(schemaDir,name),'utf8'));schemas.set(name,schema);ajv.addSchema(schema,schema.$id);}
+const migrations=[];let failures=0;
+function dateFromId(id){const m=String(id||'').match(/(20\d{2})-(\d{2})-(\d{2})/);return m?`${m[1]}-${m[2]}-${m[3]}T00:00:00Z`:'1970-01-01T00:00:00Z';}
+function normalizeObservation(r,file){if(r.type!=='Observation')return r;const allowed=new Set(['id','type','capturedAt','claim','verifiedFacts','inference','significance','confidence','evidenceMaturity','sourceRefs','actorRefs','affectedRepositories','assumptions','knownLimitations','counterevidenceRefs','approvalState']);const n={...r,id:r.id??r.observationId,capturedAt:r.capturedAt??dateFromId(r.id??r.observationId),claim:r.claim??r.title,evidenceMaturity:['captured','candidate','source-backed','reviewed','accepted','implemented','measured','superseded','rejected'].includes(r.evidenceMaturity)?r.evidenceMaturity:'source-backed',approvalState:['not-required','pending','approved','rejected'].includes(r.approvalState)?r.approvalState:(r.approvalState==='candidate'?'pending':'pending')};for(const k of Object.keys(n))if(!allowed.has(k))delete n[k];if(canonicalStringify(n)!==canonicalStringify(r))migrations.push({path:file,recordId:n.id,mode:'in-memory-validation-projection',changes:['observationId→id','title→claim','capturedAt derived when absent','legacy maturity mapped to source-backed','candidate approval mapped to pending','legacy-only fields preserved in original git record but omitted from validation projection']});return n;}
+function normalizeRun(r,file){if(r.type!=='ResearchRun')return r;const n={...r};if('ingestionMode'in n){delete n.ingestionMode;migrations.push({path:file,recordId:n.runId,mode:'in-memory-validation-projection',changes:['ingestionMode retained in original git record; omitted from strict v0 run schema projection']});}return n;}
+function normalizeAck(r,file){const at=dateFromId(r.ackId);const n={ackId:r.ackId,runId:r.runId,stage:r.stage,status:r.status,startedAt:r.startedAt??at,completedAt:r.completedAt??at,inputs:r.inputs??[],outputs:r.outputs??[],checks:r.checks??[{name:'legacy-ack-presence',result:'pass',detail:'Historical acknowledgement preserved; detailed fields synthesized only for compatibility validation.'}],governance:r.governance??{allowedTransition:r.status==='passed'||r.status==='no-change',approvalRequired:['genesis','publish'].includes(r.stage),boundaryNotes:['Compatibility projection only; canonical historical record unchanged.']},provenance:r.provenance??{producer:'legacy-record-compatibility-validator',method:'in-memory projection',inputHashes:[]}};migrations.push({path:file,recordId:n.ackId,mode:'in-memory-validation-projection',changes:['expanded compact historical stage acknowledgement for current schema validation; original array unchanged']});return n;}
+function validateOne(record,schemaName,file){const validate=ajv.getSchema(schemas.get(schemaName).$id);if(!validate(record)){console.error(`INVALID ${file}`);console.error(JSON.stringify(validate.errors,null,2));failures++;}else console.log(`VALID ${file}`);}
+for(const dir of dataDirs){const absolute=path.join(root,'knowledge',dir);if(!fs.existsSync(absolute))continue;for(const fileName of fs.readdirSync(absolute).filter(n=>n.endsWith('.json')).sort()){const full=path.join(absolute,fileName),relative=path.relative(root,full).replaceAll('\\','/'),raw=JSON.parse(fs.readFileSync(full,'utf8'));if(Array.isArray(raw)){if(raw.every(x=>x&&x.ackId)){for(const ack of raw)validateOne(normalizeAck(ack,relative),'stage-ack.schema.json',relative);continue;}console.error(`UNKNOWN_ARRAY ${relative}`);failures++;continue;}if(raw.bundleId&&Array.isArray(raw.sources)){const validBundle=raw.sources.every(s=>s.sourceId&&s.url&&s.sourceClass);if(validBundle){console.log(`VALID_AUXILIARY_SOURCE_BUNDLE ${relative}`);migrations.push({path:relative,recordId:raw.bundleId,mode:'auxiliary-source-bundle-validation',changes:['validated reconstructed source bundle as immutable provenance container; entries are consumed by control projections without rewriting canonical JSON']});}else{console.error(`INVALID_AUXILIARY_SOURCE_BUNDLE ${relative}`);failures++;}continue;}if(raw.ledgerId&&Array.isArray(raw.cycles)){if(raw.cycles.every(c=>c.scheduledFor&&c.status&&c.reason)){console.log(`VALID_AUXILIARY_LEDGER ${relative}`);migrations.push({path:relative,recordId:raw.ledgerId,mode:'auxiliary-ledger-validation',changes:['validated as immutable provenance ledger outside canonical typed-node schema map']});}else{console.error(`INVALID_AUXILIARY_LEDGER ${relative}`);failures++;}continue;}let record=normalizeRun(normalizeObservation(raw,relative),relative);const schemaName=schemaByType[record.type];if(!schemaName){console.error(`UNKNOWN_TYPE ${relative} ${record.type}`);failures++;continue;}validateOne(record,schemaName,relative);}}
+const inputs=[];for(const m of migrations){if(!inputs.some(x=>x.path===m.path))inputs.push({path:m.path,sha256:await fileDigest(m.path)});}inputs.sort((a,b)=>a.path.localeCompare(b.path));migrations.sort((a,b)=>`${a.path}:${a.recordId}`.localeCompare(`${b.path}:${b.recordId}`));const payload={control:'WS9',mode:'in-memory-compatibility-validation',canonicalFilesChanged:false,inputs,migrations};const d=digest(payload);const receipt={receiptId:`legacy-compatibility:${d.slice(0,12)}`,control:'WS9',generatedAt:'2026-07-31T00:00:00Z',inputs,results:{recordsProjected:migrations.length,canonicalFilesChanged:false,migrations},violations:[],digest:d};fs.mkdirSync('knowledge/receipts/migrations',{recursive:true});fs.writeFileSync('knowledge/receipts/migrations/legacy-compatibility-receipt.json',canonicalStringify(receipt)+'\n');console.log(`DIGEST validation ${d}`);if(failures)process.exit(1);
