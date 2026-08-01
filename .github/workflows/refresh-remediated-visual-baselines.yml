@@ -1,5 +1,6 @@
 name: Refresh remediated visual baselines
 
+# One-shot branch utility. Remove after the reviewed baselines are committed.
 on:
   push:
     branches:
