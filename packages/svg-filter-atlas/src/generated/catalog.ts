@@ -1295,7 +1295,7 @@ export const recipeCatalog = [
         },
         "min": 0,
         "max": 360,
-        "step": 15,
+        "step": 5,
         "unit": "deg"
       }
     ],
