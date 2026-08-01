@@ -8,6 +8,8 @@ on:
 
 permissions:
   contents: write
+  issues: write
+  pull-requests: write
 
 jobs:
   refresh:
@@ -15,6 +17,16 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
+      - name: Report baseline refresh run
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: 25,
+              body: `Visual baseline refresh run ${context.runId} started for ${context.sha}.`
+            })
       - uses: actions/checkout@v4
         with:
           ref: feat/filter-atelier-authoring-v0.2
