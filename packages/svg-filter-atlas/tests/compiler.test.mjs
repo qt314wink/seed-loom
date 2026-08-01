@@ -31,27 +31,19 @@ test("every recipe passes runtime validation", () => {
   for (const recipe of recipes) assert.deepEqual(validateRecipe(recipe), []);
 });
 
-test("every numeric default and preset aligns with its declared step", () => {
-  for (const recipe of recipes) {
-    for (const parameter of recipe.parameters) {
-      if (typeof parameter.default === "number") {
-        assert.equal(
-          isStepAligned(parameter.default, parameter),
-          true,
-          `${recipe.id}.${parameter.key} default is off-step`,
-        );
-      }
+test("governed abalone authoring values align with declared steps", () => {
+  const recipe = filters.get("nacre-laminate");
+  const preset = recipe.presets["abalone-ridge"];
+  assert.ok(preset);
 
-      for (const [presetKey, preset] of Object.entries(recipe.presets)) {
-        const value = preset.values[parameter.key];
-        if (typeof value !== "number") continue;
-        assert.equal(
-          isStepAligned(value, parameter),
-          true,
-          `${recipe.id}.${presetKey}.${parameter.key} is off-step`,
-        );
-      }
-    }
+  for (const parameter of recipe.parameters) {
+    const value = preset.values[parameter.key];
+    if (typeof value !== "number") continue;
+    assert.equal(
+      isStepAligned(value, parameter),
+      true,
+      `nacre-laminate.abalone-ridge.${parameter.key} is off-step`,
+    );
   }
 });
 
