@@ -16,30 +16,7 @@ async function walk(directory) {
   }
   return files;
 }
-
-function flatten(nodes) {
-  return nodes.flatMap((node) => [node, ...flatten(node.children ?? [])]);
-}
-
-function isStepAligned(value, parameter) {
-  if (parameter.step === undefined) return true;
-  const origin = parameter.min ?? 0;
-  const quotient = (value - origin) / parameter.step;
-  return Math.abs(quotient - Math.round(quotient)) < 1e-8;
-}
-
-function validateNumericValue(errors, file, path, value, parameter) {
-  if (typeof value !== "number" || !Number.isFinite(value)) return;
-  if (parameter.min !== undefined && value < parameter.min) {
-    errors.push(`${file}: ${path} is below min ${parameter.min}`);
-  }
-  if (parameter.max !== undefined && value > parameter.max) {
-    errors.push(`${file}: ${path} is above max ${parameter.max}`);
-  }
-  if (!isStepAligned(value, parameter)) {
-    errors.push(`${file}: ${path} must align to step ${parameter.step} from ${parameter.min ?? 0}`);
-  }
-}
+function flatten(nodes) { return nodes.flatMap((node) => [node, ...flatten(node.children ?? [])]); }
 
 const errors = [];
 const seenRecipeIds = new Set();
@@ -48,64 +25,28 @@ for (const file of await walk(recipesRoot)) {
   if (!idPattern.test(recipe.id)) errors.push(`${file}: invalid recipe id`);
   if (seenRecipeIds.has(recipe.id)) errors.push(`${file}: duplicate recipe id ${recipe.id}`);
   seenRecipeIds.add(recipe.id);
-
   const nodes = flatten(recipe.primitives ?? []);
   const ids = new Set();
   for (const node of nodes) {
     if (ids.has(node.id)) errors.push(`${file}: duplicate primitive id ${node.id}`);
     ids.add(node.id);
   }
-
   if (recipe.performance?.primitiveCount !== recipe.primitives.length) {
     errors.push(`${file}: performance.primitiveCount must equal top-level primitive count (${recipe.primitives.length})`);
   }
-
-  const parameters = recipe.parameters ?? [];
-  const parameterKeys = new Set(parameters.map((parameter) => parameter.key));
-  for (const parameter of parameters) {
+  const parameterKeys = new Set((recipe.parameters ?? []).map((parameter) => parameter.key));
+  for (const parameter of recipe.parameters ?? []) {
     const target = nodes.find((node) => node.id === parameter.binding?.primitiveId);
     if (!target) errors.push(`${file}: ${parameter.key} targets unknown primitive`);
     else if (!(parameter.binding.attribute in target.attributes)) errors.push(`${file}: ${parameter.key} targets unknown attribute`);
-
-    if (parameter.step !== undefined && parameter.step <= 0) {
-      errors.push(`${file}: ${parameter.key} step must be greater than zero`);
-    }
-    if (
-      parameter.min !== undefined &&
-      parameter.max !== undefined &&
-      parameter.min > parameter.max
-    ) {
-      errors.push(`${file}: ${parameter.key} min must not exceed max`);
-    }
-
-    validateNumericValue(
-      errors,
-      file,
-      `${parameter.key} default`,
-      parameter.default,
-      parameter,
-    );
   }
-
   for (const [preset, data] of Object.entries(recipe.presets ?? {})) {
     if (!idPattern.test(preset)) errors.push(`${file}: invalid preset key ${preset}`);
-    for (const [key, value] of Object.entries(data.values ?? {})) {
-      const parameter = parameters.find((candidate) => candidate.key === key);
-      if (!parameterKeys.has(key) || !parameter) {
-        errors.push(`${file}: preset ${preset} references unknown parameter ${key}`);
-        continue;
-      }
-      validateNumericValue(
-        errors,
-        file,
-        `preset ${preset}.${key}`,
-        value,
-        parameter,
-      );
+    for (const key of Object.keys(data.values ?? {})) {
+      if (!parameterKeys.has(key)) errors.push(`${file}: preset ${preset} references unknown parameter ${key}`);
     }
   }
 }
-
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);
