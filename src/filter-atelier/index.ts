@@ -381,12 +381,6 @@ export function mountFilterAtelier(): void {
     button.addEventListener('click', closeAtelier);
   }
 
-  const startRun = document.querySelector<HTMLButtonElement>('.small-action');
-  startRun?.setAttribute('aria-controls', 'filter-atelier');
-  startRun?.addEventListener('click', () => {
-    window.location.hash = 'atelier';
-  });
-
   document.body.append(section);
   syncVisibility();
   window.addEventListener('hashchange', syncVisibility);
