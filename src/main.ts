@@ -1,5 +1,6 @@
 import './styles.css';
 import { installSeedLoomFilterAtlas } from './filter-atlas';
+import { mountFilterAtelier } from './filter-atelier';
 
 type StageId =
   | 'evidence'
@@ -726,3 +727,4 @@ document
 renderStage(active);
 
 installSeedLoomFilterAtlas();
+mountFilterAtelier();

@@ -1,0 +1,195 @@
+.filter-atelier {
+  margin: clamp(3rem, 8vw, 7rem) auto;
+  width: min(1180px, calc(100% - 2rem));
+  border: 1px solid color-mix(in srgb, currentColor 24%, transparent);
+  border-radius: 1.5rem;
+  overflow: clip;
+  background:
+    linear-gradient(135deg, rgb(255 255 255 / 0.84), rgb(236 239 225 / 0.9)),
+    repeating-linear-gradient(90deg, transparent 0 16px, rgb(30 39 27 / 0.025) 16px 17px);
+  box-shadow: 0 1.5rem 4rem rgb(30 39 27 / 0.12);
+}
+
+.filter-atelier[hidden] {
+  display: none;
+}
+
+.filter-atelier__header,
+.filter-atelier__body {
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.filter-atelier__header {
+  display: grid;
+  gap: 0.7rem;
+  border-bottom: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+}
+
+.filter-atelier__header h2,
+.filter-atelier__header p {
+  margin: 0;
+}
+
+.filter-atelier__kicker {
+  font: 700 0.75rem/1.2 ui-monospace, monospace;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.filter-atelier__body {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.filter-atelier__grid {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.95fr) minmax(20rem, 1.25fr);
+  gap: 1.5rem;
+}
+
+.filter-atelier__panel {
+  padding: 1.25rem;
+  border: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+  border-radius: 1rem;
+  background: rgb(255 255 255 / 0.58);
+}
+
+.filter-atelier__metadata {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+}
+
+.filter-atelier__metadata div {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: 1rem;
+}
+
+.filter-atelier__metadata dt {
+  font-weight: 700;
+}
+
+.filter-atelier__metadata dd {
+  margin: 0;
+  font-family: ui-monospace, monospace;
+  overflow-wrap: anywhere;
+}
+
+.filter-atelier__controls {
+  display: grid;
+  gap: 1rem;
+}
+
+.filter-atelier__control {
+  display: grid;
+  gap: 0.45rem;
+  padding: 0.9rem;
+  border-radius: 0.85rem;
+  background: rgb(255 255 255 / 0.72);
+}
+
+.filter-atelier__control-head,
+.filter-atelier__control-meta,
+.filter-atelier__actions,
+.filter-atelier__status-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.filter-atelier__control input {
+  width: 100%;
+}
+
+.filter-atelier__control output,
+.filter-atelier__control-meta {
+  font-family: ui-monospace, monospace;
+  font-size: 0.78rem;
+}
+
+.filter-atelier__preview {
+  min-height: 19rem;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background:
+    radial-gradient(circle at 25% 20%, #f4ffe8 0 18%, transparent 42%),
+    radial-gradient(circle at 75% 65%, #c8d9ff 0 12%, transparent 38%),
+    linear-gradient(145deg, #e5dbff, #f9f0cf 46%, #b4e7dc);
+}
+
+.filter-atelier__preview-surface {
+  width: min(72%, 25rem);
+  aspect-ratio: 1.35;
+  border-radius: 48% 52% 45% 55% / 56% 44% 58% 42%;
+  background:
+    linear-gradient(112deg, #c0d7ff, #f4e5b0 32%, #d8a8d3 63%, #b8eee0);
+  box-shadow:
+    inset 0 0 2.5rem rgb(255 255 255 / 0.65),
+    0 1.2rem 2.2rem rgb(42 49 39 / 0.2);
+}
+
+.filter-atelier__status {
+  display: grid;
+  gap: 0.65rem;
+  min-height: 4rem;
+}
+
+.filter-atelier__issues {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.filter-atelier__actions {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.filter-atelier__actions button,
+.filter-atelier__actions a {
+  min-height: 2.7rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.filter-atelier__actions button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.filter-atelier__candidate {
+  max-height: 18rem;
+  overflow: auto;
+  margin: 0;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  background: #182019;
+  color: #e9f2e7;
+  font: 0.75rem/1.55 ui-monospace, monospace;
+  white-space: pre-wrap;
+}
+
+.filter-atelier[data-dirty='true'] {
+  outline: 3px solid color-mix(in srgb, #b87424 55%, transparent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  .filter-atelier__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-atelier__metadata div {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+}
