@@ -1,0 +1,39 @@
+name: Refresh remediated visual baselines
+
+on:
+  push:
+    branches:
+      - feat/filter-atelier-authoring-v0.2
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    if: github.event.head_commit.message == 'chore: refresh remediated visual baselines'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feat/filter-atelier-authoring-v0.2
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npx playwright install --with-deps chromium
+      - run: npm run build
+      - run: npm run test:visual:update
+      - name: Commit reviewed Linux baselines
+        run: |
+          set -euo pipefail
+          git add tests/visual.spec.ts-snapshots
+          if git diff --cached --quiet; then
+            echo 'Visual baselines already match.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'test: update remediated visual baselines'
+          git push origin HEAD:feat/filter-atelier-authoring-v0.2
