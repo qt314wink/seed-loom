@@ -1,0 +1,40 @@
+{
+  "fixtureId": "budgets:neg:split-declaration-spend-dodge",
+  "description": "Adversarial: usage split across two declarations to dodge the monthly external-spend ceiling. A prior WS7 receipt (supplied via --prior-spend) already consumed 15 USD of externalServiceSpend this month; this declaration requests another 15 USD (each alone <= 25). Accumulated 30 USD > 25 monthly ceiling -> DENIED with MONTHLY_EXTERNAL_SPEND_CEILING, money never partially spent. maySpendMoney override isolates the ceiling rule from SPEND_DISABLED.",
+  "expectation": "fail",
+  "expectedRule": "MONTHLY_EXTERNAL_SPEND_CEILING",
+  "forbidRules": ["SPEND_DISABLED"],
+  "configOverride": {"automation": {"maySpendMoney": true}},
+  "priorSpend": [
+    {
+      "receiptId": "receipt:budgets:20260715T000000Z",
+      "control": "WS7",
+      "generatedAt": "2026-07-15T00:00:00.000Z",
+      "inputs": [],
+      "results": {
+        "runLabel": "run:fixture:prior-month-spend",
+        "decisions": [
+          {"dimension": "externalServiceSpend", "window": "monthly", "limit": 25, "requested": 15, "priorConsumed": 0, "consumed": 15, "remaining": 10, "verdict": "allow", "rule": null}
+        ],
+        "exhaustion": [],
+        "consumedBudget": {"externalServiceSpend": 15},
+        "remainingBudget": {"externalServiceSpend": 10},
+        "exhaustionCount": 0,
+        "denialCount": 0
+      },
+      "violations": [],
+      "digest": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "assert": {
+    "decisions.externalServiceSpend.verdict": {"eq": "deny"},
+    "decisions.externalServiceSpend.priorConsumed": {"eq": 15},
+    "decisions.externalServiceSpend.requested": {"eq": 15},
+    "decisions.externalServiceSpend.consumed": {"eq": 0},
+    "decisions.externalServiceSpend.rule": {"eq": "MONTHLY_EXTERNAL_SPEND_CEILING"}
+  },
+  "declaration": {
+    "runLabel": "run:fixture:split-dodge-second-half",
+    "externalServiceSpendUsd": 15
+  }
+}

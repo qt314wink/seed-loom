@@ -1,0 +1,52 @@
+{
+  "fixtureId": "neg-tracking-param-urls",
+  "description": "ADVERSARIAL: three records of the SAME article whose raw URLs differ only by tracking parameters, www prefix, scheme, and trailing slash — with deliberately DISTINCT independenceKeys and different headlines to bait a naive key- or title-based splitter. Deterministic canonicalization (strip utm_*/fbclid-style params, www, trailing slash, scheme) MUST cluster them as one exact-duplicate stream. If the analyzer reports 3 streams or no cluster, this fixture fails.",
+  "expectation": "pass",
+  "expectedRule": "canonical-url-duplicate",
+  "sources": [
+    {
+      "id": "source:fix-url-a",
+      "type": "Source",
+      "url": "https://www.tradejournal.example.com/news/grid-pilot-2026?utm_source=rss&utm_medium=email&id=42",
+      "publisher": "Trade Journal",
+      "publishedAt": "2026-07-26T08:00:00Z",
+      "retrievedAt": "2026-07-26T09:00:00Z",
+      "sourceClass": "trade",
+      "independenceKey": "ingest-pipeline-alpha",
+      "title": "Grid pilot clears regulator review",
+      "lead": "Regulators cleared a contested transmission pilot after a twelve month review."
+    },
+    {
+      "id": "source:fix-url-b",
+      "type": "Source",
+      "url": "https://tradejournal.example.com/news/grid-pilot-2026/?id=42&utm_campaign=topstories&fbclid=IwAR0abc",
+      "publisher": "Trade Journal",
+      "publishedAt": "2026-07-26T08:00:00Z",
+      "retrievedAt": "2026-07-26T10:30:00Z",
+      "sourceClass": "trade",
+      "independenceKey": "ingest-pipeline-beta",
+      "title": "Different headline wording on the same page",
+      "lead": "An unrelated summary sentence that shares almost no tokens with the other records at all."
+    },
+    {
+      "id": "source:fix-url-c",
+      "type": "Source",
+      "url": "http://tradejournal.example.com/news/grid-pilot-2026?id=42#comments",
+      "publisher": "Trade Journal",
+      "publishedAt": "2026-07-26T08:00:00Z",
+      "retrievedAt": "2026-07-26T12:00:00Z",
+      "sourceClass": "trade",
+      "independenceKey": "ingest-pipeline-gamma",
+      "title": "Third distinct headline for same URL",
+      "lead": "Yet another wording of the summary paragraph used by a different crawler."
+    }
+  ],
+  "observations": [],
+  "expected": {
+    "totalClusters": 1,
+    "independentStreams": 1,
+    "clusters": [
+      {"relationship": "exact-duplicate", "memberCount": 3, "manualReviewRequired": false}
+    ]
+  }
+}

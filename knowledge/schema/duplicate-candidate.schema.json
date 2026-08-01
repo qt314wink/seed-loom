@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom/schemas/duplicate-candidate.schema.json",
+  "title": "DuplicateCandidateReport",
+  "description": "WS3 claim-identity semantic duplicate analysis report. Emits duplicate CANDIDATES only (never merges), a negation-contrast relation for negated-vs-affirmative twins (negated claims NEVER cluster with affirmative counterparts), and a near-miss 'distinct' audit trail. Heuristic output only: never mutates canonical records. manualReviewRequired is always true for candidate relations (duplicate-candidate, negation-contrast).",
+  "type": "object",
+  "required": [
+    "reportId",
+    "type",
+    "control",
+    "generatedAt",
+    "config",
+    "input",
+    "claimsAnalyzed",
+    "claims",
+    "candidates",
+    "reviewQueue",
+    "warnings"
+  ],
+  "properties": {
+    "reportId": {"type": "string", "pattern": "^duplicate-candidate-report:[0-9a-f]{12}$"},
+    "type": {"const": "DuplicateCandidateReport"},
+    "control": {"const": "WS3"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "config": {
+      "type": "object",
+      "required": [
+        "aliasConfigVersion",
+        "jaccardWeight",
+        "ngramWeight",
+        "duplicateCandidateThreshold",
+        "negationContrastThreshold",
+        "nearMissThreshold",
+        "timeMismatchPenalty",
+        "jurisdictionMismatchPenalty",
+        "numericMismatchPenalty"
+      ],
+      "properties": {
+        "aliasConfigVersion": {"type": "string", "minLength": 1},
+        "jaccardWeight": {"type": "number", "minimum": 0, "maximum": 1},
+        "ngramWeight": {"type": "number", "minimum": 0, "maximum": 1},
+        "duplicateCandidateThreshold": {"type": "number", "minimum": 0, "maximum": 1},
+        "negationContrastThreshold": {"type": "number", "minimum": 0, "maximum": 1},
+        "nearMissThreshold": {"type": "number", "minimum": 0, "maximum": 1},
+        "timeMismatchPenalty": {"type": "number", "minimum": 0, "maximum": 1},
+        "jurisdictionMismatchPenalty": {"type": "number", "minimum": 0, "maximum": 1},
+        "numericMismatchPenalty": {"type": "number", "minimum": 0, "maximum": 1}
+      },
+      "additionalProperties": false
+    },
+    "input": {
+      "type": "object",
+      "required": ["mode", "claims"],
+      "properties": {
+        "mode": {"enum": ["canonical", "input-dir", "fixture"]},
+        "claims": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "path", "sha256"],
+            "properties": {
+              "id": {"type": "string"},
+              "path": {"type": "string"},
+              "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "claimsAnalyzed": {"type": "integer", "minimum": 0},
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "fingerprint", "normalized", "tuple"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "normalized": {"type": "string"},
+          "tuple": {
+            "type": "object",
+            "required": ["subject", "action", "object", "time", "jurisdiction", "negated"],
+            "properties": {
+              "subject": {"type": "string"},
+              "action": {"type": "string"},
+              "object": {"type": "string"},
+              "time": {"type": "array", "items": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"}},
+              "jurisdiction": {"type": "array", "items": {"type": "string"}},
+              "negated": {"type": "boolean"}
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "candidateId",
+          "memberRefs",
+          "similarity",
+          "sharedFingerprint",
+          "relation",
+          "rationale",
+          "manualReviewRequired",
+          "status"
+        ],
+        "properties": {
+          "candidateId": {"type": "string", "pattern": "^dup-candidate:[0-9a-f]{12}$"},
+          "memberRefs": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {"type": "string", "minLength": 1}
+          },
+          "similarity": {
+            "type": "object",
+            "required": ["tokenJaccard", "ngramCosine", "combined"],
+            "properties": {
+              "tokenJaccard": {"type": "number", "minimum": 0, "maximum": 1},
+              "ngramCosine": {"type": "number", "minimum": 0, "maximum": 1},
+              "combined": {"type": "number", "minimum": 0, "maximum": 1}
+            },
+            "additionalProperties": false
+          },
+          "sharedFingerprint": {"type": "boolean"},
+          "relation": {"enum": ["duplicate-candidate", "negation-contrast", "distinct"]},
+          "rationale": {"type": "string", "minLength": 1},
+          "manualReviewRequired": {
+            "type": "boolean",
+            "description": "Always true for candidate relations (duplicate-candidate, negation-contrast); false only for near-miss 'distinct' audit records."
+          },
+          "status": {"const": "proposed"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "reviewQueue": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^dup-candidate:[0-9a-f]{12}$"}
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["rule", "detail"],
+        "properties": {
+          "rule": {"type": "string", "minLength": 1},
+          "detail": {"type": "string", "minLength": 1},
+          "members": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

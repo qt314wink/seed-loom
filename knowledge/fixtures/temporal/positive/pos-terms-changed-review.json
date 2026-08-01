@@ -1,0 +1,22 @@
+{
+  "fixtureId": "temporal:pos:terms-changed-review",
+  "description": "Provider-terms record only 3 days old (half-life 21d, reviewBy anchor+7d not yet elapsed) but the provider changed terms (termsChangedAt <= evaluatedAt): reviewRequired=true via the terms-changed signal BEFORE ordinary half-life/review elapsed.",
+  "expectation": "review",
+  "assert": {
+    "decayPolicy": {"eq": "provider-terms"},
+    "decayReason": {"eq": "half-life-decay"},
+    "effectiveConfidence": {"eq": 0.769865},
+    "expired": {"eq": false},
+    "reviewRequired": {"eq": true},
+    "reviewReasons": {"eq": ["terms-changed"]}
+  },
+  "record": {
+    "id": "obs:fixture:terms-changed",
+    "type": "Observation",
+    "capturedAt": "2026-07-28T00:00:00Z",
+    "confidence": 0.85,
+    "evidenceClass": "provider-terms",
+    "termsChangedAt": "2026-07-30T00:00:00Z",
+    "claim": "Fixture: provider terms of service changed two days after the record was captured."
+  }
+}

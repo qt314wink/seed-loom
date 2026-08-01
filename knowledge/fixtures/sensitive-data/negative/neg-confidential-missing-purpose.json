@@ -1,0 +1,28 @@
+{
+  "fixtureId": "neg-confidential-missing-purpose",
+  "description": "Confidential record missing purpose (and minimization/accessBoundary/approval). Acceptance: governed tier => QUARANTINE with GOVERNED_METADATA_MISSING; governed classes degrade to quarantine rather than reject (only the strictest four reject).",
+  "expectation": "quarantine",
+  "expectedRule": "GOVERNED_METADATA_MISSING",
+  "records": [
+    {
+      "recordRef": "obs:neg-confidential-1",
+      "type": "Observation",
+      "dataClassification": {
+        "class": "confidential",
+        "declaredBy": "partner-liaison",
+        "declaredAt": "2026-07-20T00:00:00Z",
+        "retention": "delete-after:2027-01-01"
+      },
+      "claim": "Partner shared draft pricing under NDA."
+    }
+  ],
+  "expected": {
+    "verdicts": [
+      {
+        "recordRef": "obs:neg-confidential-1",
+        "action": "quarantine",
+        "rule": "GOVERNED_METADATA_MISSING"
+      }
+    ]
+  }
+}

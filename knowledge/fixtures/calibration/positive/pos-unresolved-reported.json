@@ -1,0 +1,54 @@
+{
+  "fixtureId": "calibration:pos:unresolved-reported",
+  "description": "Two resolved clean events plus one unresolved prediction. The unresolved prediction is EXCLUDED from scoring (sampleSize stays 2, Brier computed only over resolved events) but REPORTED in results.unresolved with its predictionId.",
+  "expectation": "pass",
+  "expectedWarnings": ["INSUFFICIENT_SAMPLE"],
+  "assert": {
+    "overall.sampleSize": {"eq": 2},
+    "overall.brierScore": {"eq": 0.2},
+    "overall.meanPredicted": {"eq": 0.7},
+    "overall.observedFrequency": {"eq": 0.5},
+    "overall.calibrationDelta": {"eq": 0.2},
+    "overall.overconfidenceDelta": {"eq": 0.2},
+    "overall.underconfidenceDelta": {"eq": 0},
+    "unresolved.count": {"eq": 1},
+    "scoredEventCount": {"eq": 2}
+  },
+  "events": [
+    {
+      "predictionId": "pred:fixture:unres-resolved-01",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.8,
+      "predictedOutcome": "Seed round closes within 45 days",
+      "evaluationDate": "2026-07-16T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [{"ref": "src:fixture:round-closed-01", "observedAt": "2026-07-10T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:unres-resolved-02",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.6,
+      "predictedOutcome": "Grant awarded within 45 days",
+      "evaluationDate": "2026-07-16T00:00:00Z",
+      "observedOutcome": 0,
+      "outcomeEvidence": [{"ref": "src:fixture:grant-denied-01", "observedAt": "2026-07-12T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:unres-open-01",
+      "predictionDate": "2026-07-01T00:00:00Z",
+      "originalConfidence": 0.65,
+      "predictedOutcome": "Series A term sheet within 90 days",
+      "evaluationDate": "2026-07-31T00:00:00Z",
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "notes": "Window still open at evaluation time; must be excluded from scoring but reported.",
+      "status": "unresolved"
+    }
+  ]
+}

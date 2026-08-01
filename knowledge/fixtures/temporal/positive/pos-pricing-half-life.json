@@ -1,0 +1,23 @@
+{
+  "fixtureId": "temporal:pos:pricing-half-life",
+  "description": "Pricing record exactly one half-life (14d) old at evaluation: effectiveConfidence halves; reviewBy (anchor+7d) has elapsed so review is also required.",
+  "expectation": "pass",
+  "assert": {
+    "decayPolicy": {"eq": "pricing"},
+    "decayReason": {"eq": "half-life-decay"},
+    "effectiveConfidence": {"eq": 0.4},
+    "daysSinceAnchor": {"eq": 14},
+    "expired": {"eq": false},
+    "reviewRequired": {"eq": true},
+    "reviewReasons": {"eq": ["review-by-elapsed"]},
+    "override": {"eq": null}
+  },
+  "record": {
+    "id": "obs:fixture:pricing-half-life",
+    "type": "Observation",
+    "capturedAt": "2026-07-17T00:00:00Z",
+    "confidence": 0.8,
+    "evidenceClass": "pricing",
+    "claim": "Fixture: a vendor price point captured exactly one pricing half-life before evaluation."
+  }
+}

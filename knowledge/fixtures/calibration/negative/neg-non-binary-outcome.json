@@ -1,0 +1,20 @@
+{
+  "fixtureId": "calibration:neg:non-binary-outcome",
+  "description": "Scoring is restricted to BINARY outcomes with named rule: observedOutcome 2 (a multi-outcome attempt) must be REJECTED with NON_BINARY_OUTCOME. The schema deliberately permits any non-negative integer so the control's named rule fires.",
+  "expectation": "fail",
+  "expectedRule": "NON_BINARY_OUTCOME",
+  "events": [
+    {
+      "predictionId": "pred:fixture:multi-01",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.6,
+      "predictedOutcome": "Outcome category 2 of 3 materializes",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 2,
+      "outcomeEvidence": [{"ref": "src:fixture:multi-evidence", "observedAt": "2026-06-20T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "procurement",
+      "status": "resolved"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "fixtureId": "pos-negation-contrast",
+  "description": "Affirmative claim ('The FTC approved the merger ...') and its negated twin ('The FTC did not approve the merger ...') share most tokens. Acceptance test: a negated claim NEVER merges or clusters with its affirmative counterpart regardless of score; the pair MUST be emitted as relation 'negation-contrast' (manualReviewRequired=true) and MUST NOT appear as a duplicate-candidate.",
+  "expectation": "review",
+  "expectedRule": "negation-contrast",
+  "claims": [
+    {
+      "id": "claim:ftc-merger-affirm",
+      "claim": "The FTC approved the merger between Acme Robotics and BuildCorp in 2026."
+    },
+    {
+      "id": "claim:ftc-merger-negated",
+      "claim": "The FTC did not approve the merger between Acme Robotics and BuildCorp in 2026."
+    }
+  ],
+  "expected": {
+    "candidates": [
+      {
+        "relation": "negation-contrast",
+        "members": ["claim:ftc-merger-affirm", "claim:ftc-merger-negated"]
+      }
+    ],
+    "absentCandidates": [
+      {"relation": "duplicate-candidate", "members": ["claim:ftc-merger-affirm", "claim:ftc-merger-negated"]}
+    ],
+    "fingerprintDifferent": [["claim:ftc-merger-affirm", "claim:ftc-merger-negated"]],
+    "negatedFlags": [
+      {"id": "claim:ftc-merger-affirm", "negated": false},
+      {"id": "claim:ftc-merger-negated", "negated": true}
+    ]
+  }
+}

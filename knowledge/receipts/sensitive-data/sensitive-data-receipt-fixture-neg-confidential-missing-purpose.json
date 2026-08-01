@@ -1,0 +1,38 @@
+{
+  "control": "WS5",
+  "digest": "bdeaf769b6618a8cb4646b0a8b3eaeb9579906210d62dc83b054e4810df0b2c9",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/sensitive-data/negative/neg-confidential-missing-purpose.json",
+      "sha256": "525004d53d3fcb459c74b8ead7e56a6c09eb57f0f2f2aaabdd150352f2f6e2cf"
+    }
+  ],
+  "receiptId": "receipt:sensitive-data:fixture:neg-confidential-missing-purpose",
+  "results": {
+    "counts": {
+      "minimize-candidate": 0,
+      "pass": 0,
+      "quarantine": 1,
+      "reject": 0
+    },
+    "minimizeCandidateFiles": [],
+    "quarantineFiles": [
+      "knowledge/quarantine/sensitive-data/obs_neg-confidential-1.json"
+    ],
+    "recordsScanned": 1,
+    "verdicts": [
+      {
+        "action": "quarantine",
+        "declaredClass": "confidential",
+        "detectedClass": "confidential",
+        "recordRef": "obs:neg-confidential-1",
+        "redactions": [],
+        "rulesFired": [
+          "GOVERNED_METADATA_MISSING"
+        ]
+      }
+    ]
+  },
+  "violations": []
+}

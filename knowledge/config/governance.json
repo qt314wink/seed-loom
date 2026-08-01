@@ -1,0 +1,65 @@
+{
+  "version": "1.0.0-candidate",
+  "status": "candidate",
+  "sourceOfTruth": "git-versioned-json",
+  "budgets": {
+    "daily": {
+      "maxSources": 25,
+      "maxNetworkCalls": 40,
+      "maxRuntimeSeconds": 900,
+      "maxIngestedNodes": 150,
+      "maxRetainedArtifactBytes": 52428800,
+      "maxTelemetryBytes": 10485760
+    },
+    "weekly": {
+      "maxExperimentBudgetUsd": 50,
+      "maxConcurrentExperiments": 2,
+      "maxStrategies": 3,
+      "maxExperimentsProposed": 2,
+      "maxGenesisCandidates": 1
+    },
+    "monthly": {
+      "maxExternalServiceSpendUsd": 25
+    }
+  },
+  "confidence": {
+    "experimentThreshold": 0.68,
+    "genesisThreshold": 0.82,
+    "minimumIndependentStreamsForPattern": 2,
+    "minimumActorClassesForOpportunity": 2,
+    "neverMutateBaseConfidence": true
+  },
+  "decayPolicies": {
+    "pricing": {"halfLifeDays": 14, "reviewAfterDays": 7},
+    "funding": {"halfLifeDays": 30, "reviewAfterDays": 14},
+    "law-or-policy": {"halfLifeDays": 60, "reviewAfterDays": 30},
+    "provider-terms": {"halfLifeDays": 21, "reviewAfterDays": 7},
+    "model-capability": {"halfLifeDays": 30, "reviewAfterDays": 14},
+    "procurement": {"halfLifeDays": 45, "reviewAfterDays": 21},
+    "opportunity": {"halfLifeDays": 45, "reviewAfterDays": 14},
+    "peer-reviewed-research": {"halfLifeDays": 730, "reviewAfterDays": 365},
+    "historical": {"halfLifeDays": 3650, "reviewAfterDays": 730},
+    "default": {"halfLifeDays": 180, "reviewAfterDays": 90}
+  },
+  "sensitiveData": {
+    "defaultUnknownPersonalAction": "quarantine",
+    "secretsAction": "reject",
+    "prohibitedAction": "reject",
+    "maximumCopyrightExcerptWords": 120,
+    "requirePurposeFor": ["personal", "sensitive-personal", "health", "financial", "application", "private-repository", "confidential", "restricted"],
+    "requireRetentionFor": ["personal", "sensitive-personal", "health", "financial", "application", "private-repository", "confidential", "restricted", "licensed"]
+  },
+  "notebooks": {
+    "exportDestination": "knowledge/quarantine/notebook-exports",
+    "canonicalWriteAllowed": false,
+    "humanApprovalRequired": true
+  },
+  "automation": {
+    "mayAcceptKnowledge": false,
+    "mayCreateProductionRepository": false,
+    "maySpendMoney": false,
+    "mayContactExternalParties": false,
+    "maySubmitApplications": false,
+    "dailyGenesisState": "deferred"
+  }
+}

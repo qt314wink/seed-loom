@@ -1,0 +1,42 @@
+{
+  "fixtureId": "neg-self-citation",
+  "description": "ADVERSARIAL: source A cites only itself, and source B cites A one-directionally. A self-citation must NOT be reported as a 2-node cycle, and a one-directional citation is not a cycle either. Expect zero citation-cycle clusters, an explicit self-citation-ignored warning, and 2 streams preserved. expectation=fail means 'the control fails if it reports the forbidden cycle'.",
+  "expectation": "fail",
+  "expectedRule": "no-self-cycle",
+  "sources": [
+    {
+      "id": "source:fix-self-a",
+      "type": "Source",
+      "url": "https://thinktank.example.org/papers/mineral-security-2026",
+      "publisher": "Example Think Tank",
+      "publishedAt": "2026-07-05T09:00:00Z",
+      "retrievedAt": "2026-07-05T10:00:00Z",
+      "sourceClass": "research",
+      "independenceKey": "thinktank-mineral-security",
+      "title": "Mineral security outlook cites its own prior edition",
+      "lead": "This outlook updates the authors' earlier mineral security assessment with new customs data.",
+      "cites": ["source:fix-self-a", "https://thinktank.example.org/papers/mineral-security-2026"]
+    },
+    {
+      "id": "source:fix-self-b",
+      "type": "Source",
+      "url": "https://commoditydesk.example.com/briefs/lithium-contracting",
+      "publisher": "Commodity Desk",
+      "publishedAt": "2026-07-06T09:00:00Z",
+      "retrievedAt": "2026-07-06T10:00:00Z",
+      "sourceClass": "trade",
+      "independenceKey": "commodity-desk-lithium",
+      "title": "Lithium contracting brief references the outlook once",
+      "lead": "Contracting volumes for lithium hydroxide softened in June, according to broker tallies.",
+      "cites": ["source:fix-self-a"]
+    }
+  ],
+  "observations": [],
+  "expected": {
+    "totalClusters": 0,
+    "independentStreams": 2,
+    "clusters": [],
+    "absentRelationships": ["citation-cycle"],
+    "warningsContaining": ["self-citation-ignored"]
+  }
+}

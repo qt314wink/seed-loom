@@ -1,0 +1,34 @@
+{
+  "control": "WS5",
+  "digest": "68ee7712f39c82ffa16ff2adb006023cb52bd74cd449d03076021ba0b1c77307",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/sensitive-data/positive/pos-copyright-excerpt-120-words.json",
+      "sha256": "11f09bc8c00c72ccf9d7691ba1ccf7b5736d29a7d047da0b643faf25abc067ff"
+    }
+  ],
+  "receiptId": "receipt:sensitive-data:fixture:pos-copyright-excerpt-120-words",
+  "results": {
+    "counts": {
+      "minimize-candidate": 0,
+      "pass": 1,
+      "quarantine": 0,
+      "reject": 0
+    },
+    "minimizeCandidateFiles": [],
+    "quarantineFiles": [],
+    "recordsScanned": 1,
+    "verdicts": [
+      {
+        "action": "pass",
+        "declaredClass": "copyrighted-excerpt",
+        "detectedClass": "copyrighted-excerpt",
+        "recordRef": "obs:pos-copyright-120",
+        "redactions": [],
+        "rulesFired": []
+      }
+    ]
+  },
+  "violations": []
+}

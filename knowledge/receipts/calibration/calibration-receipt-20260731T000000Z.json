@@ -1,0 +1,741 @@
+{
+  "control": "WS6",
+  "digest": "c0825693585293be40257cd8e7d543ae08bfa5a63db8a97f780303e358a651b3",
+  "evaluatedAt": "2026-07-31T00:00:00.000Z",
+  "generatedAt": "2026-07-31T00:00:00.000Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/calibration/negative/neg-non-binary-outcome.json",
+      "sha256": "03d130294866711ca37286b5c97fb5372f2c83d97fec7f5859d4e377e0b898eb"
+    },
+    {
+      "path": "knowledge/fixtures/calibration/negative/neg-outcome-leakage.json",
+      "sha256": "470c2dee0cbbe567dd05b7460f2e76f0d17d929ddcfd043b5420b348b1255281"
+    },
+    {
+      "path": "knowledge/fixtures/calibration/negative/neg-small-sample-perfect.json",
+      "sha256": "45de792ed1405fc208f868bf30af260beb6a1de00fa1d171ef4382e5a2cd5220"
+    },
+    {
+      "path": "knowledge/fixtures/calibration/negative/neg-temporal-inconsistency.json",
+      "sha256": "2fae77cd1fa7f4efa5d5820624333077fef6c7d989ae950e2ee24342066bd7ad"
+    },
+    {
+      "path": "knowledge/fixtures/calibration/negative/neg-unresolved-with-outcome.json",
+      "sha256": "4e9c9fd1c31a02470f3dbb620287d6fe1f3557c691342c9fd4c134a8c3789a0b"
+    },
+    {
+      "path": "knowledge/fixtures/calibration/positive/pos-ambiguous-excluded.json",
+      "sha256": "eddcf989177a06a36974e39919adb547cfbc18fc56dbff01f9a721a5d5fbba81"
+    },
+    {
+      "path": "knowledge/fixtures/calibration/positive/pos-binary-brier-hand-computed.json",
+      "sha256": "82b4f5a9e700ac726e03556d86da29b184c45e9c57ed13592977adf10017de57"
+    },
+    {
+      "path": "knowledge/fixtures/calibration/positive/pos-domain-separation.json",
+      "sha256": "8549fbc7087b1095f1a8acf68b7a25a179ffa3a0fc1f876e25a4922d77ea2310"
+    },
+    {
+      "path": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json",
+      "sha256": "4387b4e8263e64f375f441a5ef8bad688751a3716c6ebc6cacf370b99129c3c6"
+    },
+    {
+      "path": "knowledge/fixtures/calibration/positive/pos-unresolved-reported.json",
+      "sha256": "dbb29017fb62c7081d8e5390496eba149449f606ca388d37385a3b32c9432992"
+    }
+  ],
+  "receiptId": "receipt:calibration:20260731T000000Z",
+  "results": {
+    "domains": {
+      "funding": {
+        "bands": [
+          {
+            "band": "0.6-0.7",
+            "calibrationDelta": 0.6,
+            "count": 1,
+            "meanPredicted": 0.6,
+            "observedFrequency": 0
+          },
+          {
+            "band": "0.7-0.8",
+            "calibrationDelta": -0.3,
+            "count": 30,
+            "meanPredicted": 0.7,
+            "observedFrequency": 1
+          },
+          {
+            "band": "0.8-0.9",
+            "calibrationDelta": -0.2,
+            "count": 1,
+            "meanPredicted": 0.8,
+            "observedFrequency": 1
+          }
+        ],
+        "brierScore": 0.096875,
+        "calibrationDelta": -0.26875,
+        "insufficientSample": false,
+        "meanPredicted": 0.7,
+        "observedFrequency": 0.96875,
+        "overconfidenceDelta": 0,
+        "sampleSize": 32,
+        "underconfidenceDelta": 0.26875
+      },
+      "law-or-policy": {
+        "bands": [
+          {
+            "band": "0.9-1.0",
+            "calibrationDelta": -0.1,
+            "count": 1,
+            "meanPredicted": 0.9,
+            "observedFrequency": 1
+          }
+        ],
+        "brierScore": 0.01,
+        "calibrationDelta": -0.1,
+        "insufficientSample": true,
+        "meanPredicted": 0.9,
+        "observedFrequency": 1,
+        "overconfidenceDelta": 0,
+        "sampleSize": 1,
+        "underconfidenceDelta": 0.1
+      },
+      "model-capability": {
+        "bands": [
+          {
+            "band": "0.5-0.6",
+            "calibrationDelta": 0,
+            "count": 2,
+            "meanPredicted": 0.5,
+            "observedFrequency": 0.5
+          }
+        ],
+        "brierScore": 0.25,
+        "calibrationDelta": 0,
+        "insufficientSample": true,
+        "meanPredicted": 0.5,
+        "observedFrequency": 0.5,
+        "overconfidenceDelta": 0,
+        "sampleSize": 2,
+        "underconfidenceDelta": 0
+      },
+      "pricing": {
+        "bands": [
+          {
+            "band": "0.6-0.7",
+            "calibrationDelta": -0.4,
+            "count": 1,
+            "meanPredicted": 0.6,
+            "observedFrequency": 1
+          },
+          {
+            "band": "0.7-0.8",
+            "calibrationDelta": 0.7,
+            "count": 1,
+            "meanPredicted": 0.7,
+            "observedFrequency": 0
+          },
+          {
+            "band": "0.8-0.9",
+            "calibrationDelta": -0.2,
+            "count": 2,
+            "meanPredicted": 0.8,
+            "observedFrequency": 1
+          },
+          {
+            "band": "0.9-1.0",
+            "calibrationDelta": -0.028571,
+            "count": 7,
+            "meanPredicted": 0.971429,
+            "observedFrequency": 1
+          }
+        ],
+        "brierScore": 0.068182,
+        "calibrationDelta": -0.027273,
+        "insufficientSample": true,
+        "meanPredicted": 0.881818,
+        "observedFrequency": 0.909091,
+        "overconfidenceDelta": 0,
+        "sampleSize": 11,
+        "underconfidenceDelta": 0.027273
+      }
+    },
+    "evaluatedAt": "2026-07-31T00:00:00.000Z",
+    "excludedNonClean": {
+      "count": 2,
+      "predictions": [
+        {
+          "domain": "law-or-policy",
+          "predictionId": "pred:fixture:amb-ambiguous-01",
+          "resolutionQuality": "ambiguous"
+        },
+        {
+          "domain": "law-or-policy",
+          "predictionId": "pred:fixture:amb-contested-01",
+          "resolutionQuality": "contested"
+        }
+      ]
+    },
+    "governance": {
+      "experimentThreshold": 0.68,
+      "genesisThreshold": 0.82,
+      "neverMutateBaseConfidence": true,
+      "note": "read-only echo; this script never writes knowledge/config/governance.json"
+    },
+    "overall": {
+      "bands": [
+        {
+          "band": "0.5-0.6",
+          "calibrationDelta": 0,
+          "count": 2,
+          "meanPredicted": 0.5,
+          "observedFrequency": 0.5
+        },
+        {
+          "band": "0.6-0.7",
+          "calibrationDelta": 0.1,
+          "count": 2,
+          "meanPredicted": 0.6,
+          "observedFrequency": 0.5
+        },
+        {
+          "band": "0.7-0.8",
+          "calibrationDelta": -0.267742,
+          "count": 31,
+          "meanPredicted": 0.7,
+          "observedFrequency": 0.967742
+        },
+        {
+          "band": "0.8-0.9",
+          "calibrationDelta": -0.2,
+          "count": 3,
+          "meanPredicted": 0.8,
+          "observedFrequency": 1
+        },
+        {
+          "band": "0.9-1.0",
+          "calibrationDelta": -0.0375,
+          "count": 8,
+          "meanPredicted": 0.9625,
+          "observedFrequency": 1
+        }
+      ],
+      "brierScore": 0.094783,
+      "calibrationDelta": -0.195653,
+      "insufficientSample": false,
+      "meanPredicted": 0.73913,
+      "observedFrequency": 0.934783,
+      "overconfidenceDelta": 0,
+      "sampleSize": 46,
+      "underconfidenceDelta": 0.195653
+    },
+    "policy": {
+      "bands": [
+        "0.0-0.5",
+        "0.5-0.6",
+        "0.6-0.7",
+        "0.7-0.8",
+        "0.8-0.9",
+        "0.9-1.0"
+      ],
+      "minSample": 30,
+      "miscalibrationDeltaTrigger": 0.05,
+      "nonCleanResolutionPolicy": "exclude (ambiguous/contested never scored, never down-weighted)",
+      "outcomeModel": "binary-only",
+      "scoringRule": "brier=(p-o)^2 with o in {0,1}; multi-outcome events rejected (NON_BINARY_OUTCOME)"
+    },
+    "scoredEventCount": 46,
+    "scoredEvents": [
+      {
+        "band": "0.9-1.0",
+        "brier": 0.01,
+        "domain": "law-or-policy",
+        "o": 1,
+        "p": 0.9,
+        "predictionId": "pred:fixture:amb-clean-01",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-ambiguous-excluded.json"
+      },
+      {
+        "band": "0.9-1.0",
+        "brier": 0.01,
+        "domain": "pricing",
+        "o": 1,
+        "p": 0.9,
+        "predictionId": "pred:fixture:brier-01",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-binary-brier-hand-computed.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.49,
+        "domain": "pricing",
+        "o": 0,
+        "p": 0.7,
+        "predictionId": "pred:fixture:brier-02",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-binary-brier-hand-computed.json"
+      },
+      {
+        "band": "0.6-0.7",
+        "brier": 0.16,
+        "domain": "pricing",
+        "o": 1,
+        "p": 0.6,
+        "predictionId": "pred:fixture:brier-03",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-binary-brier-hand-computed.json"
+      },
+      {
+        "band": "0.8-0.9",
+        "brier": 0.04,
+        "domain": "pricing",
+        "o": 1,
+        "p": 0.8,
+        "predictionId": "pred:fixture:brier-04",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-binary-brier-hand-computed.json"
+      },
+      {
+        "band": "0.5-0.6",
+        "brier": 0.25,
+        "domain": "model-capability",
+        "o": 0,
+        "p": 0.5,
+        "predictionId": "pred:fixture:dom-model-01",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-domain-separation.json"
+      },
+      {
+        "band": "0.5-0.6",
+        "brier": 0.25,
+        "domain": "model-capability",
+        "o": 1,
+        "p": 0.5,
+        "predictionId": "pred:fixture:dom-model-02",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-domain-separation.json"
+      },
+      {
+        "band": "0.9-1.0",
+        "brier": 0.01,
+        "domain": "pricing",
+        "o": 1,
+        "p": 0.9,
+        "predictionId": "pred:fixture:dom-pricing-01",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-domain-separation.json"
+      },
+      {
+        "band": "0.8-0.9",
+        "brier": 0.04,
+        "domain": "pricing",
+        "o": 1,
+        "p": 0.8,
+        "predictionId": "pred:fixture:dom-pricing-02",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-domain-separation.json"
+      },
+      {
+        "band": "0.9-1.0",
+        "brier": 0,
+        "domain": "pricing",
+        "o": 1,
+        "p": 1,
+        "predictionId": "pred:fixture:perfect-01",
+        "sourceFile": "knowledge/fixtures/calibration/negative/neg-small-sample-perfect.json"
+      },
+      {
+        "band": "0.9-1.0",
+        "brier": 0,
+        "domain": "pricing",
+        "o": 1,
+        "p": 1,
+        "predictionId": "pred:fixture:perfect-02",
+        "sourceFile": "knowledge/fixtures/calibration/negative/neg-small-sample-perfect.json"
+      },
+      {
+        "band": "0.9-1.0",
+        "brier": 0,
+        "domain": "pricing",
+        "o": 1,
+        "p": 1,
+        "predictionId": "pred:fixture:perfect-03",
+        "sourceFile": "knowledge/fixtures/calibration/negative/neg-small-sample-perfect.json"
+      },
+      {
+        "band": "0.9-1.0",
+        "brier": 0,
+        "domain": "pricing",
+        "o": 1,
+        "p": 1,
+        "predictionId": "pred:fixture:perfect-04",
+        "sourceFile": "knowledge/fixtures/calibration/negative/neg-small-sample-perfect.json"
+      },
+      {
+        "band": "0.9-1.0",
+        "brier": 0,
+        "domain": "pricing",
+        "o": 1,
+        "p": 1,
+        "predictionId": "pred:fixture:perfect-05",
+        "sourceFile": "knowledge/fixtures/calibration/negative/neg-small-sample-perfect.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-01",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-02",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-03",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-04",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-05",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-06",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-07",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-08",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-09",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-10",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-11",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-12",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-13",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-14",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-15",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-16",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-17",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-18",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-19",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-20",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-21",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-22",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-23",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-24",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-25",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-26",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-27",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-28",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-29",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.7-0.8",
+        "brier": 0.09,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.7,
+        "predictionId": "pred:fixture:suff-30",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-sufficient-sample-threshold-candidate.json"
+      },
+      {
+        "band": "0.8-0.9",
+        "brier": 0.04,
+        "domain": "funding",
+        "o": 1,
+        "p": 0.8,
+        "predictionId": "pred:fixture:unres-resolved-01",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-unresolved-reported.json"
+      },
+      {
+        "band": "0.6-0.7",
+        "brier": 0.36,
+        "domain": "funding",
+        "o": 0,
+        "p": 0.6,
+        "predictionId": "pred:fixture:unres-resolved-02",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-unresolved-reported.json"
+      }
+    ],
+    "thresholdChangeEligible": true,
+    "thresholdChangeIneligibleReason": null,
+    "thresholdReviewCandidate": {
+      "absCalibrationDelta": 0.195653,
+      "advisory": "threshold-review-candidate",
+      "basis": {
+        "calibrationDelta": -0.195653,
+        "miscalibrationDeltaTrigger": 0.05,
+        "sampleSize": 46
+      },
+      "note": "advisory only — this script proposes NO threshold values; threshold changes require a reviewed governance amendment and historical governance values are never rewritten"
+    },
+    "unresolved": {
+      "count": 1,
+      "predictions": [
+        {
+          "domain": "funding",
+          "predictionId": "pred:fixture:unres-open-01"
+        }
+      ]
+    },
+    "warnings": [
+      {
+        "detail": "domain 'law-or-policy' has n=1 scored events (< MIN_SAMPLE 30); per-domain calibration cannot justify threshold changes",
+        "record": "domain:law-or-policy",
+        "rule": "INSUFFICIENT_SAMPLE"
+      },
+      {
+        "detail": "domain 'model-capability' has n=2 scored events (< MIN_SAMPLE 30); per-domain calibration cannot justify threshold changes",
+        "record": "domain:model-capability",
+        "rule": "INSUFFICIENT_SAMPLE"
+      },
+      {
+        "detail": "domain 'pricing' has n=11 scored events (< MIN_SAMPLE 30); per-domain calibration cannot justify threshold changes",
+        "record": "domain:pricing",
+        "rule": "INSUFFICIENT_SAMPLE"
+      },
+      {
+        "detail": "resolutionQuality 'ambiguous' is not 'clean'; excluded from scoring per documented exclude-policy (never down-weighted)",
+        "record": "pred:fixture:amb-ambiguous-01",
+        "rule": "AMBIGUOUS_RESOLUTION",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-ambiguous-excluded.json"
+      },
+      {
+        "detail": "resolutionQuality 'contested' is not 'clean'; excluded from scoring per documented exclude-policy (never down-weighted)",
+        "record": "pred:fixture:amb-contested-01",
+        "rule": "AMBIGUOUS_RESOLUTION",
+        "sourceFile": "knowledge/fixtures/calibration/positive/pos-ambiguous-excluded.json"
+      }
+    ]
+  },
+  "violations": [
+    {
+      "detail": "outcomeEvidence 'src:fixture:leaked-evidence' observedAt 2026-05-15T00:00:00Z predates predictionDate 2026-06-01T00:00:00Z; retroactive outcome leakage rejected",
+      "record": "pred:fixture:leak-01",
+      "rule": "OUTCOME_LEAKAGE",
+      "sourceFile": "knowledge/fixtures/calibration/negative/neg-outcome-leakage.json"
+    },
+    {
+      "detail": "scoring is binary-only; observedOutcome must be 0 or 1, got 2",
+      "record": "pred:fixture:multi-01",
+      "rule": "NON_BINARY_OUTCOME",
+      "sourceFile": "knowledge/fixtures/calibration/negative/neg-non-binary-outcome.json"
+    },
+    {
+      "detail": "unresolved event carries observedOutcome/outcomeEvidence; an unresolved prediction must not smuggle in an outcome",
+      "record": "pred:fixture:sneak-01",
+      "rule": "UNRESOLVED_OUTCOME_FIELD",
+      "sourceFile": "knowledge/fixtures/calibration/negative/neg-unresolved-with-outcome.json"
+    },
+    {
+      "detail": "evaluationDate 2026-05-01T00:00:00Z is before predictionDate 2026-06-01T00:00:00Z",
+      "record": "pred:fixture:time-01",
+      "rule": "TEMPORAL_INCONSISTENCY",
+      "sourceFile": "knowledge/fixtures/calibration/negative/neg-temporal-inconsistency.json"
+    }
+  ]
+}

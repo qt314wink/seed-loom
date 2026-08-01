@@ -1,0 +1,30 @@
+{
+  "fixtureId": "pos-public-record",
+  "description": "A press-release observation explicitly classified public. Acceptance: passes cleanly with no rules fired and no metadata requirements.",
+  "expectation": "pass",
+  "expectedRule": "none",
+  "records": [
+    {
+      "recordRef": "obs:pos-public-1",
+      "type": "Observation",
+      "dataClassification": {
+        "class": "public",
+        "declaredBy": "intake-agent",
+        "declaredAt": "2026-07-20T10:00:00Z"
+      },
+      "claim": "Vendor published a press release about a pilot program.",
+      "sourceRefs": [
+        "source:press-1"
+      ]
+    }
+  ],
+  "expected": {
+    "verdicts": [
+      {
+        "recordRef": "obs:pos-public-1",
+        "action": "pass",
+        "rule": null
+      }
+    ]
+  }
+}

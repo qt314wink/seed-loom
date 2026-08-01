@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom/schemas/budget-receipt.schema.json",
+  "title": "BudgetReceipt",
+  "description": "Budget-governor receipt emitted by scripts/knowledge/enforce-budgets.mjs (WS7). One receipt per evaluated pipeline-run usage declaration. Every ceiling decision records limit, requested, priorConsumed, consumed and remaining; verdict is allow|deny|partial. Research-collection dimensions may complete partially up to a daily ceiling (BUDGET-EXHAUSTION entries in results.exhaustion); money dimensions (weekly experiment cost, monthly external spend, spend authorizations) fail closed and are never partially spent. Unknown spend is denied with rule UNKNOWN_SPEND; when governance automation.maySpendMoney is false all spend-authorizing transitions are denied with rule SPEND_DISABLED. digest = SHA-256 of canonical JSON of {results, violations} (generatedAt excluded per CONTROLS_SPEC §3).",
+  "type": "object",
+  "required": ["receiptId", "control", "generatedAt", "inputs", "results", "violations", "digest"],
+  "properties": {
+    "receiptId": {"type": "string", "pattern": "^receipt:budgets:.+$"},
+    "control": {"const": "WS7"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "sha256"],
+        "properties": {
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "results": {
+      "type": "object",
+      "required": ["runLabel", "decisions", "exhaustion", "consumedBudget", "remainingBudget", "exhaustionCount", "denialCount"],
+      "properties": {
+        "runLabel": {"type": "string", "minLength": 1},
+        "decisions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["dimension", "window", "limit", "requested", "priorConsumed", "consumed", "remaining", "verdict", "rule"],
+            "properties": {
+              "dimension": {"type": "string", "minLength": 1},
+              "window": {"enum": ["daily", "weekly", "monthly"]},
+              "limit": {"type": ["number", "null"], "minimum": 0},
+              "requested": {"type": ["number", "null"], "minimum": 0},
+              "priorConsumed": {"type": "number", "minimum": 0},
+              "consumed": {"type": "number", "minimum": 0},
+              "remaining": {"type": ["number", "null"], "minimum": 0},
+              "verdict": {"enum": ["allow", "deny", "partial"]},
+              "rule": {"type": ["string", "null"], "minLength": 1}
+            },
+            "additionalProperties": false
+          }
+        },
+        "exhaustion": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["dimension", "window", "limit", "requested", "granted", "dropped", "rule"],
+            "properties": {
+              "dimension": {"type": "string", "minLength": 1},
+              "window": {"enum": ["daily", "weekly", "monthly"]},
+              "limit": {"type": "number", "minimum": 0},
+              "requested": {"type": "number", "minimum": 0},
+              "granted": {"type": "number", "minimum": 0},
+              "dropped": {"type": "number", "minimum": 0},
+              "rule": {"type": "string", "minLength": 1},
+              "deniedExperiments": {"type": "array", "items": {"type": "string", "minLength": 1}}
+            },
+            "additionalProperties": false
+          }
+        },
+        "consumedBudget": {"type": "object", "additionalProperties": {"type": "number", "minimum": 0}},
+        "remainingBudget": {"type": "object", "additionalProperties": {"type": "number", "minimum": 0}},
+        "exhaustionCount": {"type": "integer", "minimum": 0},
+        "denialCount": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "violations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["rule", "record", "detail"],
+        "properties": {
+          "rule": {"type": "string", "minLength": 1},
+          "record": {"type": "string", "minLength": 1},
+          "detail": {"type": "string", "minLength": 1}
+        },
+        "additionalProperties": false
+      }
+    },
+    "digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "additionalProperties": false
+}

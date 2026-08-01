@@ -1,0 +1,21 @@
+{
+  "fixtureId": "budgets:pos:declared-spend-allowed",
+  "description": "Declared, classifiable spend while a config override enables automation.maySpendMoney=true: a 10 USD externalServiceSpendUsd plus a 5 USD spend authorization (total 15 USD <= 25 monthly ceiling) is allowed; the authorization cost accumulates into the monthly externalServiceSpend dimension. Proves the spend path is only gated, not hard-wired off.",
+  "expectation": "pass",
+  "configOverride": {"automation": {"maySpendMoney": true}},
+  "assert": {
+    "decisions.spendAuthorization:spend:vendor-credits.verdict": {"eq": "allow"},
+    "decisions.spendAuthorization:spend:vendor-credits.consumed": {"eq": 5},
+    "decisions.externalServiceSpend.verdict": {"eq": "allow"},
+    "decisions.externalServiceSpend.requested": {"eq": 15},
+    "decisions.externalServiceSpend.consumed": {"eq": 15},
+    "decisions.externalServiceSpend.remaining": {"eq": 10}
+  },
+  "declaration": {
+    "runLabel": "run:fixture:declared-spend-allowed",
+    "externalServiceSpendUsd": 10,
+    "spendAuthorizations": [
+      {"id": "spend:vendor-credits", "costUsd": 5, "purpose": "fixture: declared vendor API credits"}
+    ]
+  }
+}

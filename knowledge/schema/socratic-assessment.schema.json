@@ -1,0 +1,20 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://seed-loom.local/schema/socratic-assessment.schema.json",
+  "title":"Socratic Descent Assessment",
+  "type":"object",
+  "required":["assessmentId","observationId","questions","answers","dangerousAssumption","falsifier","missingEvidence","alternativeExplanation","disposition","confidence"],
+  "properties":{
+    "assessmentId":{"type":"string","pattern":"^socratic:[a-z0-9][a-z0-9._:-]+$"},
+    "observationId":{"type":"string"},
+    "questions":{"type":"array","minItems":8,"items":{"type":"string"}},
+    "answers":{"type":"array","minItems":8,"items":{"type":"object","required":["question","answer","evidenceRefs","answerType"],"properties":{"question":{"type":"string"},"answer":{"type":"string"},"evidenceRefs":{"type":"array","items":{"type":"string"}},"answerType":{"enum":["verified","inferred","unknown"]}},"additionalProperties":false}},
+    "dangerousAssumption":{"type":"string","minLength":1},
+    "falsifier":{"type":"string","minLength":1},
+    "missingEvidence":{"type":"array","items":{"type":"string"}},
+    "alternativeExplanation":{"type":"string","minLength":1},
+    "disposition":{"enum":["reject","watch","experiment","strategy-candidate","genesis-candidate"]},
+    "confidence":{"type":"number","minimum":0,"maximum":1}
+  },
+  "additionalProperties":false
+}

@@ -1,0 +1,21 @@
+{
+  "fixtureId": "temporal:pos:fresh-record",
+  "description": "Record captured at exactly the evaluation instant: zero days elapsed -> effectiveConfidence equals baseConfidence, not expired, no review required.",
+  "expectation": "pass",
+  "assert": {
+    "decayPolicy": {"eq": "model-capability"},
+    "decayReason": {"eq": "half-life-decay"},
+    "effectiveConfidence": {"eq": 0.6},
+    "daysSinceAnchor": {"eq": 0},
+    "expired": {"eq": false},
+    "reviewRequired": {"eq": false}
+  },
+  "record": {
+    "id": "obs:fixture:fresh-record",
+    "type": "Observation",
+    "capturedAt": "2026-07-31T00:00:00Z",
+    "confidence": 0.6,
+    "evidenceClass": "model-capability",
+    "claim": "Fixture: a model capability observation captured at the evaluation instant."
+  }
+}

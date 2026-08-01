@@ -1,0 +1,34 @@
+{
+  "control": "WS5",
+  "digest": "a39ca05b14444210331dc6b6e61a03e9f03c4ba378400f3f3cef8f8131a4e0a2",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/sensitive-data/positive/pos-undeclared-no-signals.json",
+      "sha256": "4c91167d5a01ea8f2ba21f7501e5510c42dc670639de68998ecc0e5242555f7b"
+    }
+  ],
+  "receiptId": "receipt:sensitive-data:fixture:pos-undeclared-no-signals",
+  "results": {
+    "counts": {
+      "minimize-candidate": 0,
+      "pass": 1,
+      "quarantine": 0,
+      "reject": 0
+    },
+    "minimizeCandidateFiles": [],
+    "quarantineFiles": [],
+    "recordsScanned": 1,
+    "verdicts": [
+      {
+        "action": "pass",
+        "declaredClass": null,
+        "detectedClass": "unclassified",
+        "recordRef": "obs:pos-undeclared-1",
+        "redactions": [],
+        "rulesFired": []
+      }
+    ]
+  },
+  "violations": []
+}

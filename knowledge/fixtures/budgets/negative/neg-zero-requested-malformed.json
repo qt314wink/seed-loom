@@ -1,0 +1,11 @@
+{
+  "fixtureId": "budgets:neg:zero-requested-malformed",
+  "description": "Malformed input adversary: sourcesRequested 0. Zero is not a valid request (a run requesting nothing must simply omit the field); the whole declaration is rejected with MALFORMED_DECLARATION and no budget is consumed (fail closed, no decisions evaluated).",
+  "expectation": "fail",
+  "expectedRule": "MALFORMED_DECLARATION",
+  "declaration": {
+    "runLabel": "run:fixture:zero-requested",
+    "sourcesRequested": 0,
+    "networkCallsRequested": 10
+  }
+}

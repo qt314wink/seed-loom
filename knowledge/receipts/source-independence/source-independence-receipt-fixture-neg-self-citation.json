@@ -1,0 +1,28 @@
+{
+  "control": "WS1",
+  "digest": "f64f11ed31227d2f5629d15358a627a52e498cfb27f8475a2160361d044675e9",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/source-independence/negative/neg-self-citation.json",
+      "sha256": "80cb3fe0a2a3727e90b3eb322dd7e617efe80952c04af6a7734eb67426d8780e"
+    }
+  ],
+  "receiptId": "receipt:source-independence:fixture:neg-self-citation",
+  "results": {
+    "clusterCount": 0,
+    "expectation": "fail",
+    "expectedRule": "no-self-cycle",
+    "fixtureId": "neg-self-citation",
+    "independentStreamCount": 2,
+    "polarity": "negative",
+    "relationships": [],
+    "reportDigest": "a5270fe2cde9057f769369372bc2dfba97bf9c0cc933490ac4aaee655f87114f",
+    "reportId": "independence-report:0fa84dcc85de",
+    "reviewQueue": [],
+    "warnings": [
+      "self-citation-ignored"
+    ]
+  },
+  "violations": []
+}

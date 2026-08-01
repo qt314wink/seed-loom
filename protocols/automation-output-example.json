@@ -1,0 +1,15 @@
+{
+  "runId": "run:YYYY-MM-DD-nightly",
+  "type": "ResearchRun",
+  "retrievalWindow": {"from": "ISO-8601", "to": "ISO-8601"},
+  "newObservations": [],
+  "updatedObservations": [],
+  "candidatePatterns": [],
+  "newRelationships": [],
+  "contradictions": [],
+  "opportunities": [],
+  "proposedExperiments": [],
+  "repositoryActions": [],
+  "noChangeReceipts": [],
+  "collectionFailures": []
+}

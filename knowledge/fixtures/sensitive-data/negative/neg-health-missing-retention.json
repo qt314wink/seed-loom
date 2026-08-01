@@ -1,0 +1,35 @@
+{
+  "fixtureId": "neg-health-missing-retention",
+  "description": "Health record with purpose, minimization, accessBoundary and approval but NO retention. Acceptance: strictest tier => REJECT with STRICT_METADATA_MISSING (missing retention). Health/financial/application/private-repository never degrade to quarantine.",
+  "expectation": "reject",
+  "expectedRule": "STRICT_METADATA_MISSING",
+  "records": [
+    {
+      "recordRef": "obs:neg-health-noret",
+      "type": "Observation",
+      "dataClassification": {
+        "class": "health",
+        "declaredBy": "clinical-liaison",
+        "declaredAt": "2026-07-18T09:00:00Z",
+        "purpose": "Model-training cohort study approved under ethics review",
+        "minimization": "Only diagnosis code and age band retained; names and addresses stripped at intake",
+        "accessBoundary": "Restricted to the two named analysts on the research project",
+        "approval": {
+          "approvedBy": "data-protection-officer",
+          "approvedAt": "2026-07-01T00:00:00Z",
+          "reference": "DPO-2026-041"
+        }
+      },
+      "claim": "Cohort B outcome data pending retention decision."
+    }
+  ],
+  "expected": {
+    "verdicts": [
+      {
+        "recordRef": "obs:neg-health-noret",
+        "action": "reject",
+        "rule": "STRICT_METADATA_MISSING"
+      }
+    ]
+  }
+}

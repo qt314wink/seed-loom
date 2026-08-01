@@ -1,0 +1,75 @@
+{
+  "fixtureId": "calibration:neg:small-sample-perfect",
+  "description": "Adversarial: n=5 events with PERFECT calibration (p=1.0, o=1, Brier 0). Even perfect scores on a tiny sample CANNOT justify threshold changes: INSUFFICIENT_SAMPLE warning must fire, thresholdChangeEligible=false, and NO threshold-review-candidate may be emitted.",
+  "expectation": "pass",
+  "expectedWarnings": ["INSUFFICIENT_SAMPLE"],
+  "assert": {
+    "overall.sampleSize": {"eq": 5},
+    "overall.brierScore": {"eq": 0},
+    "overall.observedFrequency": {"eq": 1},
+    "thresholdChangeEligible": {"eq": false},
+    "thresholdReviewCandidate": {"eq": null}
+  },
+  "events": [
+    {
+      "predictionId": "pred:fixture:perfect-01",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 1.0,
+      "predictedOutcome": "Event 1 occurs",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [{"ref": "src:fixture:perfect-01", "observedAt": "2026-06-10T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "pricing",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:perfect-02",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 1.0,
+      "predictedOutcome": "Event 2 occurs",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [{"ref": "src:fixture:perfect-02", "observedAt": "2026-06-11T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "pricing",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:perfect-03",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 1.0,
+      "predictedOutcome": "Event 3 occurs",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [{"ref": "src:fixture:perfect-03", "observedAt": "2026-06-12T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "pricing",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:perfect-04",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 1.0,
+      "predictedOutcome": "Event 4 occurs",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [{"ref": "src:fixture:perfect-04", "observedAt": "2026-06-13T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "pricing",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:perfect-05",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 1.0,
+      "predictedOutcome": "Event 5 occurs",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [{"ref": "src:fixture:perfect-05", "observedAt": "2026-06-14T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "pricing",
+      "status": "resolved"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "fixtureId": "calibration:neg:outcome-leakage",
+  "description": "Resolved event whose outcomeEvidence observedAt (2026-05-15) PREDATES the predictionDate (2026-06-01): retroactive outcome leakage. Must be REJECTED with named rule OUTCOME_LEAKAGE and excluded from scoring.",
+  "expectation": "fail",
+  "expectedRule": "OUTCOME_LEAKAGE",
+  "events": [
+    {
+      "predictionId": "pred:fixture:leak-01",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.8,
+      "predictedOutcome": "Vendor price rises within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [{"ref": "src:fixture:leaked-evidence", "observedAt": "2026-05-15T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "pricing",
+      "notes": "Evidence timestamp predates the prediction: the 'prediction' was made after the outcome was knowable.",
+      "status": "resolved"
+    }
+  ]
+}

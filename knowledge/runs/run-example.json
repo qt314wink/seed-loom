@@ -1,0 +1,15 @@
+{
+  "runId": "run:example-2026-07-30",
+  "type": "ResearchRun",
+  "retrievalWindow": {"from": "2026-07-29T16:00:00Z", "to": "2026-07-30T16:00:00Z"},
+  "newObservations": ["obs:example-adoption"],
+  "updatedObservations": [],
+  "candidatePatterns": [],
+  "newRelationships": ["rel:example-builder-observation"],
+  "contradictions": [],
+  "opportunities": [],
+  "proposedExperiments": [],
+  "repositoryActions": [],
+  "noChangeReceipts": [],
+  "collectionFailures": []
+}

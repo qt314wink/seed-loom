@@ -1,0 +1,25 @@
+{
+  "fixtureId": "pos-undeclared-no-signals",
+  "description": "Record with no dataClassification and no personal-data signals (no emails, SSNs, DOB, name+identifier). Acceptance: passes as detectedClass unclassified; quarantine applies only when personal signals fire.",
+  "expectation": "pass",
+  "expectedRule": "none",
+  "records": [
+    {
+      "recordRef": "obs:pos-undeclared-1",
+      "type": "Observation",
+      "claim": "Port throughput rose 4% year over year according to the monthly bulletin.",
+      "metrics": {
+        "throughputDeltaPct": 4
+      }
+    }
+  ],
+  "expected": {
+    "verdicts": [
+      {
+        "recordRef": "obs:pos-undeclared-1",
+        "action": "pass",
+        "rule": null
+      }
+    ]
+  }
+}

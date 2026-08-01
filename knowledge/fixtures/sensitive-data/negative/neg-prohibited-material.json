@@ -1,0 +1,27 @@
+{
+  "fixtureId": "neg-prohibited-material",
+  "description": "Record explicitly classified prohibited. Acceptance: REJECT with PROHIBITED_CLASS regardless of any other metadata.",
+  "expectation": "reject",
+  "expectedRule": "PROHIBITED_CLASS",
+  "records": [
+    {
+      "recordRef": "obs:neg-prohibited-1",
+      "type": "Observation",
+      "dataClassification": {
+        "class": "prohibited",
+        "declaredBy": "triage",
+        "declaredAt": "2026-07-22T00:00:00Z"
+      },
+      "claim": "Material flagged as prohibited by intake policy."
+    }
+  ],
+  "expected": {
+    "verdicts": [
+      {
+        "recordRef": "obs:neg-prohibited-1",
+        "action": "reject",
+        "rule": "PROHIBITED_CLASS"
+      }
+    ]
+  }
+}

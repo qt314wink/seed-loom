@@ -1,0 +1,27 @@
+{
+  "fixtureId": "pos-date-boilerplate-paraphrase",
+  "description": "Same pilot-launch event written with two date formats ('July 15, 2026' vs ISO '2026-07-15') and with a boilerplate lead-in ('It was reported that') on one side. Acceptance test: dates normalize to ISO and boilerplate is stripped, so the normalized claim tuples are identical (sharedFingerprint=true) and the pair is a duplicate-candidate at combined similarity 1.0.",
+  "expectation": "review",
+  "expectedRule": "duplicate-candidate",
+  "claims": [
+    {
+      "id": "claim:pilot-launch-a",
+      "claim": "Acme Robotics launched its public provenance pilot on July 15, 2026."
+    },
+    {
+      "id": "claim:pilot-launch-b",
+      "claim": "It was reported that Acme Robotics launched its public provenance pilot on 2026-07-15."
+    }
+  ],
+  "expected": {
+    "candidates": [
+      {
+        "relation": "duplicate-candidate",
+        "members": ["claim:pilot-launch-a", "claim:pilot-launch-b"],
+        "minCombined": 0.99,
+        "sharedFingerprint": true
+      }
+    ],
+    "fingerprintEqual": [["claim:pilot-launch-a", "claim:pilot-launch-b"]]
+  }
+}

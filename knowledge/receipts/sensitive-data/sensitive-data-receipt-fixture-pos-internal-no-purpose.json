@@ -1,0 +1,34 @@
+{
+  "control": "WS5",
+  "digest": "e45d6eb6792c277e160fcd4408156cf8cccb68adcee4a39e18a90aadf62cb0fb",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/sensitive-data/positive/pos-internal-no-purpose.json",
+      "sha256": "d6d56d0849cdda17b2880a748cac012f35a950a812501cdcb5024d85b8ff34c4"
+    }
+  ],
+  "receiptId": "receipt:sensitive-data:fixture:pos-internal-no-purpose",
+  "results": {
+    "counts": {
+      "minimize-candidate": 0,
+      "pass": 1,
+      "quarantine": 0,
+      "reject": 0
+    },
+    "minimizeCandidateFiles": [],
+    "quarantineFiles": [],
+    "recordsScanned": 1,
+    "verdicts": [
+      {
+        "action": "pass",
+        "declaredClass": "internal",
+        "detectedClass": "internal",
+        "recordRef": "obs:pos-internal-1",
+        "redactions": [],
+        "rulesFired": []
+      }
+    ]
+  },
+  "violations": []
+}

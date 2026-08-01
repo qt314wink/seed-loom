@@ -1,0 +1,42 @@
+{
+  "control": "WS5",
+  "digest": "c29f936611630541c5797d9860df07a664b587e3b76d39d5fa1485ae7dc2b082",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/sensitive-data/negative/neg-prohibited-material.json",
+      "sha256": "52b3f0474b24a0d8c622b58292eccf3f0c413e49aa409f00a3cd9b37f93a9665"
+    }
+  ],
+  "receiptId": "receipt:sensitive-data:fixture:neg-prohibited-material",
+  "results": {
+    "counts": {
+      "minimize-candidate": 0,
+      "pass": 0,
+      "quarantine": 0,
+      "reject": 1
+    },
+    "minimizeCandidateFiles": [],
+    "quarantineFiles": [],
+    "recordsScanned": 1,
+    "verdicts": [
+      {
+        "action": "reject",
+        "declaredClass": "prohibited",
+        "detectedClass": "prohibited",
+        "recordRef": "obs:neg-prohibited-1",
+        "redactions": [],
+        "rulesFired": [
+          "PROHIBITED_CLASS"
+        ]
+      }
+    ]
+  },
+  "violations": [
+    {
+      "detail": "rejected; rules fired: PROHIBITED_CLASS",
+      "record": "obs:neg-prohibited-1",
+      "rule": "PROHIBITED_CLASS"
+    }
+  ]
+}

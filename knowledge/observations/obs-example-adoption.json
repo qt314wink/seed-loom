@@ -1,0 +1,18 @@
+{
+  "id": "obs:example-adoption",
+  "type": "Observation",
+  "capturedAt": "2026-07-30T16:00:00Z",
+  "claim": "An example builder adopted a provenance-first workflow for a bounded public pilot.",
+  "verifiedFacts": ["A public pilot and implementation artifact were published."],
+  "inference": ["The workflow may indicate rising demand for auditable creative-technology systems."],
+  "significance": "This fixture demonstrates the separation of verified fact from strategic inference.",
+  "confidence": 0.6,
+  "evidenceMaturity": "candidate",
+  "sourceRefs": ["source:example-primary"],
+  "actorRefs": ["actor:example-builder"],
+  "affectedRepositories": ["qt314wink/seed-loom"],
+  "assumptions": ["The public artifact reflects operational rather than promotional behavior."],
+  "knownLimitations": ["The fixture is synthetic and must not be used as real evidence."],
+  "counterevidenceRefs": [],
+  "approvalState": "not-required"
+}

@@ -1,0 +1,13 @@
+{
+  "fixtureId": "temporal:neg:missing-confidence",
+  "description": "Record without a numeric confidence cannot be decay-projected; the control fails closed with named rule MISSING_CONFIDENCE instead of inventing a base confidence.",
+  "expectation": "fail",
+  "expectedRule": "MISSING_CONFIDENCE",
+  "record": {
+    "id": "obs:fixture:no-confidence",
+    "type": "Observation",
+    "capturedAt": "2026-07-10T00:00:00Z",
+    "evidenceClass": "funding",
+    "claim": "Fixture: a record that carries no confidence value at all."
+  }
+}

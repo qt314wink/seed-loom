@@ -1,0 +1,20 @@
+{
+  "fixtureId": "calibration:neg:unresolved-with-outcome",
+  "description": "Adversarial: an UNRESOLVED prediction with an observedOutcome field snuck in. Must be REJECTED with named rule UNRESOLVED_OUTCOME_FIELD so the smuggled outcome can never contaminate calibration scores.",
+  "expectation": "fail",
+  "expectedRule": "UNRESOLVED_OUTCOME_FIELD",
+  "events": [
+    {
+      "predictionId": "pred:fixture:sneak-01",
+      "predictionDate": "2026-07-01T00:00:00Z",
+      "originalConfidence": 0.75,
+      "predictedOutcome": "Series A term sheet within 90 days",
+      "evaluationDate": "2026-07-31T00:00:00Z",
+      "observedOutcome": 1,
+      "resolutionQuality": "clean",
+      "domain": "funding",
+      "notes": "Status says unresolved but an outcome field was snuck in.",
+      "status": "unresolved"
+    }
+  ]
+}

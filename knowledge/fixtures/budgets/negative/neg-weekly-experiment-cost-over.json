@@ -1,0 +1,21 @@
+{
+  "fixtureId": "budgets:neg:weekly-experiment-cost-over",
+  "description": "Weekly experiment cost ceiling: experiments cost 30+20+10=60 USD > maxExperimentBudgetUsd 50. Greedy grant in declaration order funds exp:a and exp:b (exactly 50 USD); exp:c is DENIED with named rule WEEKLY_EXPERIMENT_COST_CEILING. All experiments are non-concurrent so the concurrency ceiling stays silent.",
+  "expectation": "fail",
+  "expectedRule": "WEEKLY_EXPERIMENT_COST_CEILING",
+  "assert": {
+    "decisions.weeklyExperimentCost.verdict": {"eq": "partial"},
+    "decisions.weeklyExperimentCost.requested": {"eq": 60},
+    "decisions.weeklyExperimentCost.consumed": {"eq": 50},
+    "decisions.weeklyExperimentCost.remaining": {"eq": 0},
+    "exhaustion.weeklyExperimentCost.deniedExperiments": {"eq": ["exp:c"]}
+  },
+  "declaration": {
+    "runLabel": "run:fixture:weekly-cost-over",
+    "experiments": [
+      {"id": "exp:a", "costUsd": 30, "concurrent": false},
+      {"id": "exp:b", "costUsd": 20, "concurrent": false},
+      {"id": "exp:c", "costUsd": 10, "concurrent": false}
+    ]
+  }
+}

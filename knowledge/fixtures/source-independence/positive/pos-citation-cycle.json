@@ -1,0 +1,44 @@
+{
+  "fixtureId": "pos-citation-cycle",
+  "description": "Outlet A cites outlet B and outlet B cites outlet A (one direction via cites, the other via citedBy, exercising both reference styles). Acceptance test: the analyzer must emit a citation-cycle cluster with manualReviewRequired=true and a cycle warning, while keeping both sources as separate streams (cycles are never auto-merged).",
+  "expectation": "review",
+  "expectedRule": "citation-cycle",
+  "sources": [
+    {
+      "id": "source:fix-cyc-a",
+      "type": "Source",
+      "url": "https://marketjournal-a.example.com/2026/07/22/rare-earth-export-curbs",
+      "publisher": "Market Journal A",
+      "publishedAt": "2026-07-22T08:00:00Z",
+      "retrievedAt": "2026-07-22T09:00:00Z",
+      "sourceClass": "press",
+      "independenceKey": "market-journal-a-rare-earth",
+      "title": "Rare earth export curbs rattle magnet supply chains",
+      "lead": "Manufacturers warned that newly announced export curbs on rare earth oxides could constrain magnet production within two quarters.",
+      "cites": ["source:fix-cyc-b"]
+    },
+    {
+      "id": "source:fix-cyc-b",
+      "type": "Source",
+      "url": "https://globaltrade-b.example.net/analysis/magnet-shortage-scenarios",
+      "publisher": "Global Trade B",
+      "publishedAt": "2026-07-22T18:00:00Z",
+      "retrievedAt": "2026-07-22T19:00:00Z",
+      "sourceClass": "trade",
+      "independenceKey": "global-trade-b-magnet-scenarios",
+      "title": "Magnet shortage scenarios priced into motor suppliers",
+      "lead": "Equity analysts modelled three shortage scenarios for permanent magnet availability and revised margin forecasts for motor suppliers.",
+      "citedBy": ["source:fix-cyc-a"],
+      "cites": ["https://marketjournal-a.example.com/2026/07/22/rare-earth-export-curbs"]
+    }
+  ],
+  "observations": [],
+  "expected": {
+    "totalClusters": 1,
+    "independentStreams": 2,
+    "clusters": [
+      {"relationship": "citation-cycle", "memberCount": 2, "manualReviewRequired": true}
+    ],
+    "warningsContaining": ["citation-cycle"]
+  }
+}

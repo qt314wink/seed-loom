@@ -1,0 +1,9 @@
+{
+  "runId":"run:nightly:reconstructed:2026-07-30",
+  "type":"ResearchRun",
+  "ingestionMode":"reconstructed",
+  "retrievalWindow":{"from":"2026-07-28T00:00:00Z","to":"2026-07-30T16:31:00Z"},
+  "newObservations":["obs:2026-07-30:eu-ai-gigafactories","obs:2026-07-30:ftc-ai-accuracy","obs:2026-07-30:genesis-mission","obs:2026-07-30:openai-presence","obs:2026-07-30:ai-export-consortia"],
+  "updatedObservations":[],"candidatePatterns":[],"newRelationships":[],"contradictions":[],"opportunities":[],"proposedExperiments":[],"repositoryActions":[],"noChangeReceipts":[],
+  "collectionFailures":["Original 2026-07-28 and 2026-07-29 delivered automation payloads unavailable; this run is a source-backed reconstruction, not a replay."]
+}

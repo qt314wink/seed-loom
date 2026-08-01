@@ -1,0 +1,39 @@
+{
+  "fixtureId": "neg-same-entities-different-quantities",
+  "description": "ADVERSARIAL: three claims about the same entities and event, but the third changes the quantity (40 -> 55 million USD). The base/paraphrase pair is a legitimate duplicate-candidate; the changed-quantity claim MUST stay below the duplicate threshold (numeric-mismatch penalty) and MUST NOT be paired with either as a duplicate-candidate. Score-delta assertion: sim(base, paraphrase) - sim(base, changed-quantity) >= 0.05. If any changed-quantity pair is emitted as a duplicate-candidate, this fixture fails.",
+  "expectation": "fail",
+  "expectedRule": "numeric-mismatch-distinct",
+  "claims": [
+    {
+      "id": "claim:acme-raise-base",
+      "claim": "Acme Robotics raised 40 million USD in Series B funding on July 15, 2026."
+    },
+    {
+      "id": "claim:acme-raise-para",
+      "claim": "According to reports, Acme Robotics secured 40 million USD in Series B funding on 2026-07-15."
+    },
+    {
+      "id": "claim:acme-raise-qty",
+      "claim": "Acme Robotics raised 55 million USD in Series B funding on July 15, 2026."
+    }
+  ],
+  "expected": {
+    "candidates": [
+      {
+        "relation": "duplicate-candidate",
+        "members": ["claim:acme-raise-base", "claim:acme-raise-para"]
+      }
+    ],
+    "absentCandidates": [
+      {"relation": "duplicate-candidate", "members": ["claim:acme-raise-base", "claim:acme-raise-qty"]},
+      {"relation": "duplicate-candidate", "members": ["claim:acme-raise-para", "claim:acme-raise-qty"]}
+    ],
+    "scoreDeltas": [
+      {
+        "higher": ["claim:acme-raise-base", "claim:acme-raise-para"],
+        "lower": ["claim:acme-raise-base", "claim:acme-raise-qty"],
+        "minDelta": 0.05
+      }
+    ]
+  }
+}

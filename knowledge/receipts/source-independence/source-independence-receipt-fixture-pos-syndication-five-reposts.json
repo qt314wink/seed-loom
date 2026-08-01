@@ -1,0 +1,28 @@
+{
+  "control": "WS1",
+  "digest": "018879ada417848ad3ef618759f11f74db9f7da168e40c3e427383a60c06f518",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/source-independence/positive/pos-syndication-five-reposts.json",
+      "sha256": "1f28b413aaac4340868cf004da39ca4546696bffc241a11172fadef0d3160dd1"
+    }
+  ],
+  "receiptId": "receipt:source-independence:fixture:pos-syndication-five-reposts",
+  "results": {
+    "clusterCount": 1,
+    "expectation": "pass",
+    "expectedRule": "syndication",
+    "fixtureId": "pos-syndication-five-reposts",
+    "independentStreamCount": 1,
+    "polarity": "positive",
+    "relationships": [
+      "syndication"
+    ],
+    "reportDigest": "0576fa17630857e73ff9015a3504ccda9d98cb55b1ba42c63ded04e3f65cb786",
+    "reportId": "independence-report:d733930aebc0",
+    "reviewQueue": [],
+    "warnings": []
+  },
+  "violations": []
+}

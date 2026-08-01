@@ -1,0 +1,55 @@
+{
+  "fixtureId": "pos-three-independent-streams",
+  "description": "A primary government report plus two independently researched analyses of the same policy domain. Acceptance test: these count as MORE THAN one stream (exactly 3). No shared URLs, independence keys, wire origin, upstream identifiers, citations, or copied language may merge them.",
+  "expectation": "pass",
+  "expectedRule": "independent-streams-preserved",
+  "sources": [
+    {
+      "id": "source:fix-ind-primary",
+      "type": "Source",
+      "url": "https://energy-dept.example.gov/studies/2026/storage-procurement",
+      "publisher": "Department of Energy",
+      "publishedAt": "2026-07-15T14:00:00Z",
+      "retrievedAt": "2026-07-15T15:00:00Z",
+      "sourceClass": "official",
+      "independenceKey": "doe-storage-procurement-study-2026",
+      "title": "Department releases 2026 grid storage procurement study",
+      "lead": "The Department of Energy today published its annual grid storage procurement study covering bid volumes, awarded capacity, and price curves for fiscal year 2026."
+    },
+    {
+      "id": "source:fix-ind-analysis-1",
+      "type": "Source",
+      "url": "https://atlantic-institute.example.org/research/storage-bid-dynamics",
+      "publisher": "Atlantic Institute",
+      "publishedAt": "2026-07-18T10:00:00Z",
+      "retrievedAt": "2026-07-18T11:00:00Z",
+      "sourceClass": "research",
+      "independenceKey": "atlantic-institute-storage-bid-dynamics",
+      "title": "Independent benchmarking reveals widening spreads in regional power auctions",
+      "lead": "Our analysts collected bid-level data from twelve regional auctions and found that clearing price spreads widened materially during the second quarter of 2026."
+    },
+    {
+      "id": "source:fix-ind-analysis-2",
+      "type": "Source",
+      "url": "https://spectrum-review.example.com/features/interconnection-queue-survey",
+      "publisher": "Spectrum Review",
+      "publishedAt": "2026-07-19T09:30:00Z",
+      "retrievedAt": "2026-07-19T10:00:00Z",
+      "sourceClass": "trade",
+      "independenceKey": "spectrum-review-queue-survey-2026",
+      "title": "Survey of interconnection queues shows developers resequencing projects",
+      "lead": "Reporters interviewed forty project developers and reviewed queue filings, documenting how battery projects are being resequenced ahead of thermal retirements."
+    }
+  ],
+  "observations": [],
+  "expected": {
+    "totalClusters": 0,
+    "independentStreams": 3,
+    "clusters": [],
+    "noClusterContaining": [
+      ["source:fix-ind-primary", "source:fix-ind-analysis-1"],
+      ["source:fix-ind-primary", "source:fix-ind-analysis-2"],
+      ["source:fix-ind-analysis-1", "source:fix-ind-analysis-2"]
+    ]
+  }
+}

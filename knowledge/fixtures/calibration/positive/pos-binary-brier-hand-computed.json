@@ -1,0 +1,70 @@
+{
+  "fixtureId": "calibration:pos:binary-brier-hand-computed",
+  "description": "Four resolved clean binary events in one domain. Hand-computed: briers 0.01, 0.49, 0.16, 0.04 -> Brier 0.175; meanPredicted 0.75, observedFrequency 0.75, calibrationDelta 0. n=4 < 30 -> INSUFFICIENT_SAMPLE, thresholdChangeEligible=false.",
+  "expectation": "pass",
+  "expectedWarnings": ["INSUFFICIENT_SAMPLE"],
+  "assert": {
+    "overall.sampleSize": {"eq": 4},
+    "overall.brierScore": {"eq": 0.175},
+    "overall.meanPredicted": {"eq": 0.75},
+    "overall.observedFrequency": {"eq": 0.75},
+    "overall.calibrationDelta": {"eq": 0},
+    "overall.overconfidenceDelta": {"eq": 0},
+    "overall.underconfidenceDelta": {"eq": 0},
+    "thresholdChangeEligible": {"eq": false},
+    "domains.pricing.brierScore": {"eq": 0.175},
+    "domains.pricing.sampleSize": {"eq": 4}
+  },
+  "events": [
+    {
+      "predictionId": "pred:fixture:brier-01",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.9,
+      "predictedOutcome": "Vendor raises seat price within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [{"ref": "src:fixture:price-hike-01", "observedAt": "2026-06-20T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "pricing",
+      "notes": "Occurred as predicted.",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:brier-02",
+      "predictionDate": "2026-06-01T00:00:00Z",
+      "originalConfidence": 0.7,
+      "predictedOutcome": "Competitor ships SSO within 30 days",
+      "evaluationDate": "2026-07-01T00:00:00Z",
+      "observedOutcome": 0,
+      "outcomeEvidence": [{"ref": "src:fixture:no-sso-01", "observedAt": "2026-06-30T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "pricing",
+      "notes": "Did not occur; large Brier contribution 0.49.",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:brier-03",
+      "predictionDate": "2026-06-02T00:00:00Z",
+      "originalConfidence": 0.6,
+      "predictedOutcome": "Partner renews contract",
+      "evaluationDate": "2026-07-02T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [{"ref": "src:fixture:renewal-01", "observedAt": "2026-06-25T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "pricing",
+      "status": "resolved"
+    },
+    {
+      "predictionId": "pred:fixture:brier-04",
+      "predictionDate": "2026-06-02T00:00:00Z",
+      "originalConfidence": 0.8,
+      "predictedOutcome": "Grant call opens in Q3",
+      "evaluationDate": "2026-07-02T00:00:00Z",
+      "observedOutcome": 1,
+      "outcomeEvidence": [{"ref": "src:fixture:grant-call-01", "observedAt": "2026-07-01T00:00:00Z"}],
+      "resolutionQuality": "clean",
+      "domain": "pricing",
+      "status": "resolved"
+    }
+  ]
+}

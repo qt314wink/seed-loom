@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom/schemas/independence-report.schema.json",
+  "title": "IndependenceReport",
+  "description": "WS1 source independence analysis report. Clusters sources that do not represent independent evidence streams. Heuristic output only: never mutates canonical records. Confidence aggregation counts independent evidence streams, not article count.",
+  "type": "object",
+  "required": [
+    "reportId",
+    "type",
+    "control",
+    "generatedAt",
+    "config",
+    "input",
+    "sourcesAnalyzed",
+    "observationsAnalyzed",
+    "clusters",
+    "unclusteredSources",
+    "independentStreamCount",
+    "reviewQueue",
+    "warnings"
+  ],
+  "properties": {
+    "reportId": {"type": "string", "pattern": "^independence-report:[0-9a-f]{12}$"},
+    "type": {"const": "IndependenceReport"},
+    "control": {"const": "WS1"},
+    "generatedAt": {"type": "string", "format": "date-time"},
+    "config": {
+      "type": "object",
+      "required": ["minimumIndependentStreamsForPattern"],
+      "properties": {
+        "minimumIndependentStreamsForPattern": {"type": "integer", "minimum": 1}
+      },
+      "additionalProperties": false
+    },
+    "input": {
+      "type": "object",
+      "required": ["mode", "sources", "observations"],
+      "properties": {
+        "mode": {"enum": ["canonical", "input-dir", "fixture"]},
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "path", "sha256"],
+            "properties": {
+              "id": {"type": "string"},
+              "path": {"type": "string"},
+              "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+            },
+            "additionalProperties": false
+          }
+        },
+        "observations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "path", "sha256"],
+            "properties": {
+              "id": {"type": "string"},
+              "path": {"type": "string"},
+              "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "sourcesAnalyzed": {"type": "integer", "minimum": 0},
+    "observationsAnalyzed": {"type": "integer", "minimum": 0},
+    "clusters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "clusterId",
+          "relationship",
+          "originCandidates",
+          "members",
+          "confidence",
+          "independentStreams",
+          "evidence",
+          "manualReviewRequired"
+        ],
+        "properties": {
+          "clusterId": {"type": "string", "pattern": "^cluster:[0-9a-f]{12}$"},
+          "relationship": {
+            "enum": [
+              "exact-duplicate",
+              "syndication",
+              "shared-upstream",
+              "citation-cycle",
+              "analyst-echo",
+              "ambiguous-similarity"
+            ]
+          },
+          "originCandidates": {
+            "type": "array",
+            "minItems": 1,
+            "items": {"type": "string"}
+          },
+          "members": {
+            "type": "array",
+            "minItems": 2,
+            "items": {"type": "string"}
+          },
+          "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+          "independentStreams": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Independent evidence streams inside this cluster. Syndicated copies of one origin count as exactly 1 stream regardless of article count."
+          },
+          "evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["signal", "detail", "confidence"],
+              "properties": {
+                "signal": {
+                  "enum": [
+                    "raw-url-identical",
+                    "canonical-url-equal",
+                    "shared-independence-key",
+                    "shared-wire-origin",
+                    "copied-title",
+                    "copied-lead",
+                    "shared-doi",
+                    "shared-upstream-report",
+                    "shared-policy-document",
+                    "mutual-citation",
+                    "citation-cycle-path",
+                    "shared-analyst-language",
+                    "title-similarity-band",
+                    "lead-similarity-band"
+                  ]
+                },
+                "detail": {"type": "string", "minLength": 1},
+                "confidence": {"type": "number", "minimum": 0, "maximum": 1}
+              },
+              "additionalProperties": false
+            }
+          },
+          "manualReviewRequired": {"type": "boolean"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "unclusteredSources": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "independentStreamCount": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total independent evidence streams across the analyzed corpus: one per strong (merged) cluster plus one per unclustered source. Review-only clusters (citation-cycle, analyst-echo, ambiguous-similarity) never reduce this count."
+    },
+    "reviewQueue": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^cluster:[0-9a-f]{12}$"}
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["rule", "detail"],
+        "properties": {
+          "rule": {"type": "string", "minLength": 1},
+          "detail": {"type": "string", "minLength": 1},
+          "members": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,82 @@
+{
+  "fixtureId": "pos-syndication-five-reposts",
+  "description": "Five reposts of one Acme Wire press release across five outlets. Acceptance test: syndicated copies count as exactly ONE originating stream, never five. Three members share an independenceKey, two do not, proving the union of wire-origin + copied title/lead signals merges transitively.",
+  "expectation": "pass",
+  "expectedRule": "syndication",
+  "sources": [
+    {
+      "id": "source:fix-syn-origin",
+      "type": "Source",
+      "url": "https://wire.acme-example.com/releases/2026/07/gridscale-pilot",
+      "publisher": "Acme Wire",
+      "publishedAt": "2026-07-20T09:00:00Z",
+      "retrievedAt": "2026-07-20T10:00:00Z",
+      "sourceClass": "press",
+      "independenceKey": "acme-wire-gridscale-2026",
+      "syndicatedFrom": "Acme Wire",
+      "title": "Acme GridScale announces 400 MWh grid battery pilot in three provinces",
+      "lead": "Acme GridScale today announced a 400 MWh grid-scale battery pilot across three provinces, with construction starting in October 2026 and first dispatch expected in 2027."
+    },
+    {
+      "id": "source:fix-syn-repost-1",
+      "type": "Source",
+      "url": "https://dailynorth.example.com/business/acme-gridscale-battery-pilot",
+      "publisher": "Daily North",
+      "publishedAt": "2026-07-20T11:30:00Z",
+      "retrievedAt": "2026-07-20T12:00:00Z",
+      "sourceClass": "press",
+      "independenceKey": "acme-wire-gridscale-2026",
+      "syndicatedFrom": "Acme Wire",
+      "title": "Acme GridScale announces 400 MWh grid battery pilot in three provinces",
+      "lead": "Acme GridScale today announced a 400 MWh grid-scale battery pilot across three provinces, with construction starting in October 2026 and first dispatch expected in 2027."
+    },
+    {
+      "id": "source:fix-syn-repost-2",
+      "type": "Source",
+      "url": "https://coastalherald.example.com/markets/gridscale-400mwh",
+      "publisher": "Coastal Herald",
+      "publishedAt": "2026-07-20T13:15:00Z",
+      "retrievedAt": "2026-07-20T14:00:00Z",
+      "sourceClass": "press",
+      "independenceKey": "acme-wire-gridscale-2026",
+      "syndicatedFrom": "Acme Wire",
+      "title": "Acme GridScale announces 400 MWh grid battery pilot in three provinces",
+      "lead": "Acme GridScale today announced a 400 MWh grid-scale battery pilot across three provinces, with construction starting in October 2026 and first dispatch expected in 2027."
+    },
+    {
+      "id": "source:fix-syn-repost-3",
+      "type": "Source",
+      "url": "https://energywire-daily.example.com/archive/2026-07-20/acme-pilot",
+      "publisher": "Energy Wire Daily",
+      "publishedAt": "2026-07-20T16:40:00Z",
+      "retrievedAt": "2026-07-20T17:00:00Z",
+      "sourceClass": "trade",
+      "independenceKey": "energywire-daily-2026-07-20",
+      "syndicatedFrom": "Acme Wire",
+      "title": "Acme GridScale announces 400 MWh grid battery pilot in three provinces",
+      "lead": "Acme GridScale today announced a 400 MWh grid-scale battery pilot across three provinces, with construction starting in October 2026 and first dispatch expected in 2027."
+    },
+    {
+      "id": "source:fix-syn-repost-4",
+      "type": "Source",
+      "url": "https://provincejournal.example.com/economy/battery-pilot-gridscale",
+      "publisher": "Province Journal",
+      "publishedAt": "2026-07-21T08:05:00Z",
+      "retrievedAt": "2026-07-21T09:00:00Z",
+      "sourceClass": "press",
+      "independenceKey": "province-journal-economy",
+      "syndicatedFrom": "Acme Wire",
+      "title": "Acme GridScale announces 400 MWh grid battery pilot in three provinces",
+      "lead": "Acme GridScale today announced a 400 MWh grid-scale battery pilot across three provinces, with construction starting in October 2026 and first dispatch expected in 2027."
+    }
+  ],
+  "observations": [],
+  "expected": {
+    "totalClusters": 1,
+    "independentStreams": 1,
+    "clusters": [
+      {"relationship": "syndication", "memberCount": 5, "manualReviewRequired": false}
+    ],
+    "originCandidatesInclude": ["source:fix-syn-origin"]
+  }
+}

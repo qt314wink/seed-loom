@@ -1,0 +1,23 @@
+{
+  "fixtureId": "neg-boilerplate-heavy-distinct",
+  "description": "ADVERSARIAL: two claims wrapped in identical heavy boilerplate ('According to sources familiar with the matter, it was reported that ...') but with entirely different subjects, actions, and objects. Boilerplate stripping MUST prevent clustering: no candidate of any relation may pair them. If any candidate pairs the two claims, this fixture fails.",
+  "expectation": "fail",
+  "expectedRule": "boilerplate-distinct",
+  "claims": [
+    {
+      "id": "claim:boiler-funding",
+      "claim": "According to sources familiar with the matter, it was reported that Acme Robotics raised 40 million USD in Series B funding."
+    },
+    {
+      "id": "claim:boiler-bankruptcy",
+      "claim": "According to sources familiar with the matter, it was reported that BuildCorp Logistics filed for bankruptcy protection."
+    }
+  ],
+  "expected": {
+    "absentCandidates": [
+      {"relation": "duplicate-candidate", "members": ["claim:boiler-funding", "claim:boiler-bankruptcy"]},
+      {"relation": "negation-contrast", "members": ["claim:boiler-funding", "claim:boiler-bankruptcy"]},
+      {"relation": "distinct", "members": ["claim:boiler-funding", "claim:boiler-bankruptcy"]}
+    ]
+  }
+}

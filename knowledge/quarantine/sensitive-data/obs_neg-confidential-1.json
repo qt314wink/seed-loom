@@ -1,0 +1,22 @@
+{
+  "control": "WS5",
+  "detectedClass": "confidential",
+  "quarantineId": "quarantine:sensitive-data:815b01503ae2",
+  "record": {
+    "claim": "Partner shared draft pricing under NDA.",
+    "dataClassification": {
+      "class": "confidential",
+      "declaredAt": "2026-07-20T00:00:00Z",
+      "declaredBy": "partner-liaison",
+      "retention": "delete-after:2027-01-01"
+    },
+    "recordRef": "obs:neg-confidential-1",
+    "type": "Observation"
+  },
+  "recordRef": "obs:neg-confidential-1",
+  "recordedAt": "2026-07-31T00:00:00Z",
+  "redactionNote": "Record quarantined by WS5 sensitive-data scan. The scan receipt carries no raw sensitive values (secrets appear only as redacted fingerprints; personal-data signals as signal kinds only). This holding copy is retained for human review and classification; it is NOT canonical knowledge.",
+  "rulesFired": [
+    "GOVERNED_METADATA_MISSING"
+  ]
+}

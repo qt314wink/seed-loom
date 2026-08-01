@@ -1,0 +1,27 @@
+{
+  "type": "ClaimAliasConfig",
+  "version": "1.0.0",
+  "approvedBy": "knowledge-governance-board",
+  "approvedAt": "2026-07-30T00:00:00Z",
+  "description": "WS3 canonical, human-approved organization/term aliases for claim normalization. detect-semantic-duplicates.mjs expands aliases ONLY from this file and never auto-invents aliases. Any change requires human review and a version bump; historical versions stay addressable in git.",
+  "aliases": [
+    {
+      "alias": "eu",
+      "canonical": "european union",
+      "note": "Institutional acronym; expands so claims about the same regulator normalize identically.",
+      "approvedAt": "2026-07-30T00:00:00Z"
+    },
+    {
+      "alias": "the fed",
+      "canonical": "federal reserve",
+      "note": "Common press shorthand for the United States central bank.",
+      "approvedAt": "2026-07-30T00:00:00Z"
+    },
+    {
+      "alias": "ftc",
+      "canonical": "federal trade commission",
+      "note": "United States competition and consumer-protection regulator acronym.",
+      "approvedAt": "2026-07-30T00:00:00Z"
+    }
+  ]
+}

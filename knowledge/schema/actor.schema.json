@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.local/schema/actor.schema.json",
+  "title": "Actor",
+  "type": "object",
+  "required": ["id", "type", "name", "actorClass"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^actor:[a-z0-9][a-z0-9._:-]+$"},
+    "type": {"const": "Actor"},
+    "name": {"type": "string", "minLength": 1},
+    "actorClass": {"enum": ["provider", "supplier", "builder", "buyer", "participant", "media", "funder", "analyst", "regulator", "researcher"]},
+    "jurisdiction": {"type": ["string", "null"]},
+    "domains": {"type": "array", "items": {"type": "string"}},
+    "sourceRefs": {"type": "array", "items": {"type": "string"}}
+  },
+  "additionalProperties": false
+}

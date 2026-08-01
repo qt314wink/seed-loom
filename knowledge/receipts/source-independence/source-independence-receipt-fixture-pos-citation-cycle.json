@@ -1,0 +1,32 @@
+{
+  "control": "WS1",
+  "digest": "1d5c01989390ed9c93c377670cc2e5e2716bcbd1f5128f725de7053065dbd8f7",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/source-independence/positive/pos-citation-cycle.json",
+      "sha256": "99d8f8bf9619ea79d7bf48d06dbb116e57f68a2e006f3eefc75d3a71638cb163"
+    }
+  ],
+  "receiptId": "receipt:source-independence:fixture:pos-citation-cycle",
+  "results": {
+    "clusterCount": 1,
+    "expectation": "review",
+    "expectedRule": "citation-cycle",
+    "fixtureId": "pos-citation-cycle",
+    "independentStreamCount": 2,
+    "polarity": "positive",
+    "relationships": [
+      "citation-cycle"
+    ],
+    "reportDigest": "546d38161847ce0ec57efd0dd111b0ffc1a638580a7608d97696704b107eefdc",
+    "reportId": "independence-report:f11a4ff3d421",
+    "reviewQueue": [
+      "cluster:93598c806ccf"
+    ],
+    "warnings": [
+      "citation-cycle"
+    ]
+  },
+  "violations": []
+}

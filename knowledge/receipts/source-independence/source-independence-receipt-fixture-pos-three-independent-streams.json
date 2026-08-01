@@ -1,0 +1,26 @@
+{
+  "control": "WS1",
+  "digest": "ccb1c4cb4b27f9928699ac3e28e455934f24e7c078cd37bd790b10cfcdb72360",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/fixtures/source-independence/positive/pos-three-independent-streams.json",
+      "sha256": "11b58fda1a722499627cfbb16e664754cc6b59805c18188c016f9afb6f0529cb"
+    }
+  ],
+  "receiptId": "receipt:source-independence:fixture:pos-three-independent-streams",
+  "results": {
+    "clusterCount": 0,
+    "expectation": "pass",
+    "expectedRule": "independent-streams-preserved",
+    "fixtureId": "pos-three-independent-streams",
+    "independentStreamCount": 3,
+    "polarity": "positive",
+    "relationships": [],
+    "reportDigest": "9723e4b0560aeac4f704726d99a41ef5275a323418333416106911c5eb77193e",
+    "reportId": "independence-report:9961ab9667f7",
+    "reviewQueue": [],
+    "warnings": []
+  },
+  "violations": []
+}
