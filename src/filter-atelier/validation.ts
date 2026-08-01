@@ -44,6 +44,77 @@ function candidateRecipe(
   return recipe;
 }
 
+function normalizeRecipeIssue(issue: DraftIssue): DraftIssue {
+  const candidatePrefix = 'presets.atelier-candidate.values.';
+  if (issue.path.startsWith(candidatePrefix)) {
+    return {
+      path: `values.${issue.path.slice(candidatePrefix.length)}`,
+      message: issue.message,
+    };
+  }
+  return issue;
+}
+
+function pushIssue(
+  issues: DraftIssue[],
+  path: string,
+  message: string,
+): void {
+  if (issues.some((issue) => issue.path === path && issue.message === message)) {
+    return;
+  }
+  issues.push({ path, message });
+}
+
+function validateValue(
+  issues: DraftIssue[],
+  parameter: FilterParameter,
+  value: ParameterValue,
+): void {
+  const path = `values.${parameter.key}`;
+
+  if (
+    (parameter.type === 'number' || parameter.type === 'integer') &&
+    (typeof value !== 'number' || !Number.isFinite(value))
+  ) {
+    pushIssue(issues, path, 'must be a finite number');
+    return;
+  }
+
+  if (parameter.type === 'integer' && !Number.isInteger(value)) {
+    pushIssue(issues, path, 'must be an integer');
+    return;
+  }
+
+  if (parameter.type === 'boolean' && typeof value !== 'boolean') {
+    pushIssue(issues, path, 'must be true or false');
+    return;
+  }
+
+  if (parameter.type === 'color') {
+    if (typeof value !== 'string' || !/^#[0-9a-f]{6}$/i.test(value)) {
+      pushIssue(issues, path, 'must be a six-digit hex color');
+    }
+    return;
+  }
+
+  if (typeof value !== 'number') return;
+
+  if (parameter.min !== undefined && value < parameter.min) {
+    pushIssue(issues, path, `must be at least ${parameter.min}`);
+  }
+  if (parameter.max !== undefined && value > parameter.max) {
+    pushIssue(issues, path, `must be no more than ${parameter.max}`);
+  }
+  if (!isStepAligned(value, parameter)) {
+    pushIssue(
+      issues,
+      path,
+      `must align to ${parameter.step}${parameter.unit === 'deg' ? '°' : parameter.unit ?? ''} increments`,
+    );
+  }
+}
+
 export function validateDraft(
   model: AuthoringModel,
   values: Readonly<Record<string, ParameterValue>>,
@@ -55,10 +126,11 @@ export function validateDraft(
 
   for (const key of Object.keys(values)) {
     if (!expectedKeys.has(key)) {
-      issues.push({
-        path: `values.${key}`,
-        message: 'is not declared by the canonical recipe',
-      });
+      pushIssue(
+        issues,
+        `values.${key}`,
+        'is not declared by the canonical recipe',
+      );
     }
   }
 
@@ -66,37 +138,28 @@ export function validateDraft(
     const value = values[parameter.key];
 
     if (value === undefined) {
-      issues.push({
-        path: `values.${parameter.key}`,
-        message: 'is required',
-      });
+      pushIssue(issues, `values.${parameter.key}`, 'is required');
       continue;
     }
 
-    if (
-      (parameter.type === 'number' ||
-        parameter.type === 'integer') &&
-      typeof value === 'number' &&
-      !isStepAligned(value, parameter)
-    ) {
-      issues.push({
-        path: `values.${parameter.key}`,
-        message: `must align to step ${parameter.step}`,
-      });
+    validateValue(issues, parameter, value);
+  }
+
+  if (issues.length === 0) {
+    try {
+      resolveParameters(model.recipe, undefined, { ...values });
+    } catch (error) {
+      pushIssue(
+        issues,
+        'values',
+        error instanceof Error ? error.message : String(error),
+      );
     }
   }
 
-  try {
-    resolveParameters(model.recipe, undefined, { ...values });
-  } catch (error) {
-    issues.push({
-      path: 'values',
-      message: error instanceof Error ? error.message : String(error),
-    });
-  }
-
   for (const issue of validateRecipe(candidateRecipe(model, values))) {
-    issues.push(issue);
+    const normalized = normalizeRecipeIssue(issue);
+    pushIssue(issues, normalized.path, normalized.message);
   }
 
   return Object.freeze({
