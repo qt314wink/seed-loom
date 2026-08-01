@@ -27,7 +27,7 @@ jobs:
       - run: npm install
       - run: npx playwright install --with-deps chromium
       - run: npm run build
-      - run: npm run test:visual:update
+      - run: npx playwright test tests/visual.spec.ts --update-snapshots
       - name: Commit reviewed Linux baselines
         run: |
           set -euo pipefail
