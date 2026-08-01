@@ -23,25 +23,25 @@ type MaterialBinding = {
 
 const materialBindings: readonly MaterialBinding[] = [
   {
-    selector: '.material-satin .material-swatch',
+    selector: '.material-satin .material-swatch > span',
     recipe: 'nacre-laminate',
     preset: 'abalone-ridge',
     rationale: 'Broad spectral response for satin and iridescent lamé.',
   },
   {
-    selector: '.material-parchment .material-swatch',
+    selector: '.material-parchment .material-swatch > span',
     recipe: 'washi-fiber',
     preset: 'kozo-fine',
     rationale: 'Fine directional fiber without degrading text readability.',
   },
   {
-    selector: '.material-metal .material-swatch',
+    selector: '.material-metal .material-swatch > span',
     recipe: 'brass-inlay',
     preset: 'soft-patina',
     rationale: 'Restrained conductive edge for copper and brass.',
   },
   {
-    selector: '.material-glass .material-swatch',
+    selector: '.material-glass .material-swatch > span',
     recipe: 'stained-glass-light',
     preset: 'cathedral-calm',
     rationale: 'Low-displacement transmitted color for inspectable glass.',
@@ -70,9 +70,30 @@ function mountStyle(): void {
   const style = document.createElement('style');
   style.id = FILTER_STYLE_ID;
   style.textContent = `
+    .material-swatch {
+      position: relative;
+      overflow: hidden !important;
+      isolation: isolate;
+      contain: paint;
+    }
+
+    .material-swatch > span {
+      position: absolute;
+      inset: 0;
+      display: block;
+      border-radius: inherit;
+    }
+
     .has-atlas-material-filter {
       filter: var(--seed-loom-material-filter);
       isolation: isolate;
+      transform: translateZ(0);
+    }
+
+    .material-card > div:last-child {
+      position: relative;
+      z-index: 2;
+      filter: none !important;
     }
 
     @media (forced-colors: active) {
@@ -102,9 +123,9 @@ function bindMaterials(): void {
 }
 
 /**
- * Mounts one shared SVG definition bundle and applies the approved v0.1
- * material bindings. Text, navigation, and large scrolling surfaces are
- * intentionally left unfiltered.
+ * Mounts one shared SVG definition bundle and applies approved filters only
+ * to isolated swatch-render layers. Text, navigation, card shells, and large
+ * scrolling surfaces remain unfiltered.
  */
 export function installSeedLoomFilterAtlas(): void {
   if (!CSS.supports('filter', 'url("#seed-loom-filter-test")')) return;

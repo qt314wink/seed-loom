@@ -15,6 +15,13 @@ import {
   resolveGeneratedAt,
 } from "../scripts/reproducible-time.mjs";
 
+function isStepAligned(value, parameter) {
+  if (parameter.step === undefined) return true;
+  const origin = parameter.min ?? 0;
+  const quotient = (value - origin) / parameter.step;
+  return Math.abs(quotient - Math.round(quotient)) < 1e-8;
+}
+
 test("catalog contains the eight signature recipes", () => {
   assert.equal(recipes.length, 8);
   assert.equal(recipes.reduce((sum, recipe) => sum + Object.keys(recipe.presets).length, 0), 24);
@@ -24,11 +31,28 @@ test("every recipe passes runtime validation", () => {
   for (const recipe of recipes) assert.deepEqual(validateRecipe(recipe), []);
 });
 
+test("governed abalone authoring values align with declared steps", () => {
+  const recipe = filters.get("nacre-laminate");
+  const preset = recipe.presets["abalone-ridge"];
+  assert.ok(preset);
+
+  for (const parameter of recipe.parameters) {
+    const value = preset.values[parameter.key];
+    if (typeof value !== "number") continue;
+    assert.equal(
+      isStepAligned(value, parameter),
+      true,
+      `nacre-laminate.abalone-ridge.${parameter.key} is off-step`,
+    );
+  }
+});
+
 test("a named preset resolves over defaults", () => {
   const recipe = filters.get("nacre-laminate");
   const resolved = resolveParameters(recipe, "abalone-ridge");
   assert.equal(resolved["surface-scale"], 6.5);
   assert.equal(resolved["specular-exponent"], 38);
+  assert.equal(resolved.azimuth, 250);
 });
 
 test("compiler binds vector components and namespaces the filter", () => {
