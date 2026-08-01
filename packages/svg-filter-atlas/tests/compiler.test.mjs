@@ -15,6 +15,13 @@ import {
   resolveGeneratedAt,
 } from "../scripts/reproducible-time.mjs";
 
+function isStepAligned(value, parameter) {
+  if (parameter.step === undefined) return true;
+  const origin = parameter.min ?? 0;
+  const quotient = (value - origin) / parameter.step;
+  return Math.abs(quotient - Math.round(quotient)) < 1e-8;
+}
+
 test("catalog contains the eight signature recipes", () => {
   assert.equal(recipes.length, 8);
   assert.equal(recipes.reduce((sum, recipe) => sum + Object.keys(recipe.presets).length, 0), 24);
@@ -24,11 +31,36 @@ test("every recipe passes runtime validation", () => {
   for (const recipe of recipes) assert.deepEqual(validateRecipe(recipe), []);
 });
 
+test("every numeric default and preset aligns with its declared step", () => {
+  for (const recipe of recipes) {
+    for (const parameter of recipe.parameters) {
+      if (typeof parameter.default === "number") {
+        assert.equal(
+          isStepAligned(parameter.default, parameter),
+          true,
+          `${recipe.id}.${parameter.key} default is off-step`,
+        );
+      }
+
+      for (const [presetKey, preset] of Object.entries(recipe.presets)) {
+        const value = preset.values[parameter.key];
+        if (typeof value !== "number") continue;
+        assert.equal(
+          isStepAligned(value, parameter),
+          true,
+          `${recipe.id}.${presetKey}.${parameter.key} is off-step`,
+        );
+      }
+    }
+  }
+});
+
 test("a named preset resolves over defaults", () => {
   const recipe = filters.get("nacre-laminate");
   const resolved = resolveParameters(recipe, "abalone-ridge");
   assert.equal(resolved["surface-scale"], 6.5);
   assert.equal(resolved["specular-exponent"], 38);
+  assert.equal(resolved.azimuth, 250);
 });
 
 test("compiler binds vector components and namespaces the filter", () => {
