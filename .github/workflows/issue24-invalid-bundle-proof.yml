@@ -1,0 +1,116 @@
+name: Issue 24 Invalid Bundle Atomicity Proof
+
+on:
+  push:
+    branches:
+      - evidence/issue24-invalid-bundle-atomicity
+    paths:
+      - .github/workflows/issue24-invalid-bundle-proof.yml
+
+permissions:
+  contents: read
+
+jobs:
+  invalid-bundle-atomicity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install frozen dependencies
+        run: npm ci
+
+      - name: Reject invalid bundle without partial writes
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          hash_knowledge_tree() {
+            find knowledge -type f -print0 \
+              | sort -z \
+              | xargs -0 sha256sum \
+              | sha256sum \
+              | awk '{print $1}'
+          }
+
+          before="$(hash_knowledge_tree)"
+          before_files="$(find knowledge -type f | sort | wc -l | tr -d ' ')"
+
+          cat > /tmp/issue24-invalid-bundle.json <<'JSON'
+          {
+            "run": {
+              "runId": "run:issue24:invalid-atomicity:2026-08-05",
+              "type": "ResearchRun",
+              "ingestionMode": "delivered",
+              "newObservations": [],
+              "newRelationships": []
+            },
+            "sources": [],
+            "observations": [],
+            "relationships": [],
+            "stageAcks": []
+          }
+          JSON
+
+          input_sha256="$(sha256sum /tmp/issue24-invalid-bundle.json | awk '{print $1}')"
+
+          set +e
+          node scripts/knowledge/ingest-nightly-run.mjs \
+            /tmp/issue24-invalid-bundle.json \
+            > /tmp/issue24-invalid.stdout \
+            2> /tmp/issue24-invalid.stderr
+          exit_code=$?
+          set -e
+
+          test "$exit_code" -ne 0
+          grep -F "nightly bundle must contain exactly five observations" \
+            /tmp/issue24-invalid.stderr
+
+          after="$(hash_knowledge_tree)"
+          after_files="$(find knowledge -type f | sort | wc -l | tr -d ' ')"
+
+          test "$before" = "$after"
+          test "$before_files" = "$after_files"
+          test ! -e knowledge/receipts/run-issue24-invalid-atomicity-2026-08-05-ingest.json
+
+          cat > issue24-invalid-bundle-proof.json <<JSON
+          {
+            "proofType": "invalid-bundle-atomic-failure",
+            "baselineCommit": "${GITHUB_SHA}",
+            "input": {
+              "kind": "synthetic-invalid-bundle",
+              "reason": "zero observations violates the exactly-five invariant",
+              "sha256": "${input_sha256}"
+            },
+            "execution": {
+              "command": "node scripts/knowledge/ingest-nightly-run.mjs /tmp/issue24-invalid-bundle.json",
+              "exitCode": ${exit_code},
+              "expectedErrorObserved": true
+            },
+            "atomicity": {
+              "knowledgeTreeDigestBefore": "${before}",
+              "knowledgeTreeDigestAfter": "${after}",
+              "fileCountBefore": ${before_files},
+              "fileCountAfter": ${after_files},
+              "partialReceiptPresent": false,
+              "passed": true
+            },
+            "scope": "This proves the invalid-bundle fail-closed control only. It does not substitute for the missing August 5 delivered bundle or its required two valid governed runs."
+          }
+          JSON
+
+          cat issue24-invalid-bundle-proof.json
+
+      - name: Upload proof
+        uses: actions/upload-artifact@v4
+        with:
+          name: issue24-invalid-bundle-atomicity-proof
+          path: issue24-invalid-bundle-proof.json
+          if-no-files-found: error
+          retention-days: 14
