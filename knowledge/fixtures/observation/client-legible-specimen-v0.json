@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "0.1.0",
+  "specimenId": "client-legible-specimen-v0",
+  "type": "ObservationClientSpecimen",
+  "status": "fixture",
+  "observation": {
+    "schemaVersion": "1.1.0",
+    "id": "obs:fixture:client-legible-specimen-v0",
+    "type": "Observation",
+    "capturedAt": "2026-08-05T19:12:00Z",
+    "claim": "A governed observation can be rendered in client-readable language without collapsing verified facts into interpretation.",
+    "verifiedFacts": [
+      "The canonical Observation contract stores verifiedFacts and inference in separate arrays.",
+      "The canonical Observation contract exposes confidence, limitations, source references, and approval state as separate fields.",
+      "Daily intake is constrained to candidate approval state until a separate governed transition occurs."
+    ],
+    "inference": [
+      "A client-facing rendering can remain legible while preserving the canonical epistemic boundaries.",
+      "Explicit trace pointers reduce the risk that presentation copy silently outruns the underlying record."
+    ],
+    "significance": "The specimen provides a bounded handoff surface for client review while keeping the canonical observation auditable and unchanged.",
+    "confidence": 0.95,
+    "evidenceMaturity": "candidate",
+    "evidenceClass": "default",
+    "sourceRefs": [
+      "source:fixture:observation-schema-v1.1.0"
+    ],
+    "actorRefs": [
+      "actor:seed-loom-maintainer",
+      "actor:client-reviewer"
+    ],
+    "affectedRepositories": [
+      "qt314wink/seed-loom"
+    ],
+    "assumptions": [
+      "The client view is generated deterministically from the embedded observation rather than authored as an independent claim source."
+    ],
+    "knownLimitations": [
+      "This fixture proves the data contract and presentation boundary, not a production user interface.",
+      "The fixture source reference is synthetic and must not be represented as external evidence."
+    ],
+    "counterevidenceRefs": [],
+    "approvalState": "candidate"
+  },
+  "clientView": {
+    "title": "A client-readable observation that keeps evidence and interpretation separate",
+    "statusLabel": "Candidate specimen — not accepted knowledge",
+    "verifiedSummary": [
+      "Verified facts and interpretation are stored separately.",
+      "Confidence, evidence, limitations, and approval state remain visible.",
+      "The observation cannot become accepted knowledge through this presentation layer."
+    ],
+    "interpretationSummary": [
+      "This structure should make client review easier without weakening traceability.",
+      "Trace pointers should make unsupported wording easier to detect."
+    ],
+    "whyItMatters": "Clients can understand what is known, what is inferred, why it matters, and what decision remains without being asked to read the canonical JSON directly.",
+    "confidence": {
+      "score": 0.95,
+      "label": "high",
+      "basis": "The presentation fields map directly to explicit canonical Observation fields."
+    },
+    "evidenceDisclosure": [
+      {
+        "ref": "source:fixture:observation-schema-v1.1.0",
+        "label": "Synthetic schema-reference fixture",
+        "access": "fixture"
+      }
+    ],
+    "limitations": [
+      "No production interface or client usability study is included.",
+      "The source is synthetic and cannot support an external factual claim."
+    ],
+    "nextDecision": "Approve the v0 contract for implementation as a read-only client presentation adapter, or request bounded field changes.",
+    "prohibitedClaims": [
+      "Do not describe this fixture as accepted knowledge.",
+      "Do not describe the synthetic source as independent external evidence.",
+      "Do not infer implementation or client usability from schema validity alone."
+    ]
+  },
+  "traceability": {
+    "verifiedSummaryFrom": "/observation/verifiedFacts",
+    "interpretationSummaryFrom": "/observation/inference",
+    "whyItMattersFrom": "/observation/significance",
+    "confidenceFrom": "/observation/confidence",
+    "limitationsFrom": "/observation/knownLimitations",
+    "statusFrom": "/observation/approvalState"
+  }
+}
