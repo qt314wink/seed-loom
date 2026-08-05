@@ -1,3 +1,5 @@
+import './isolation.css';
+
 import {
   compileFilter,
   type FilterRecipe,
