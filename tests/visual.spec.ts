@@ -2,6 +2,8 @@ import { expect, test } from '@playwright/test';
 
 const stages = ['evidence', 'interpretation', 'tokens', 'code', 'verification'] as const;
 
+test.describe.configure({ mode: 'serial' });
+
 test.beforeEach(async ({ page }) => {
   await page.goto('/');
   await page.emulateMedia({ reducedMotion: 'reduce' });
@@ -39,8 +41,12 @@ test('cactus rib tabs are keyboard navigable', async ({ page }) => {
 
 test('mobile shell preserves material and analyzer legibility', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'mobile');
-  await expect(page).toHaveScreenshot('mobile-shell.png', {
-    fullPage: true,
+  await expect(page.locator('.hero')).toHaveScreenshot('mobile-hero-shell.png', {
+    animations: 'disabled',
+    maxDiffPixelRatio: 0.02
+  });
+  await page.locator('#analyzer').scrollIntoViewIfNeeded();
+  await expect(page.locator('#analyzer')).toHaveScreenshot('mobile-analyzer-shell.png', {
     animations: 'disabled',
     maxDiffPixelRatio: 0.02
   });
