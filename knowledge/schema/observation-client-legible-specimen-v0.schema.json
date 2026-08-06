@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.local/schema/observation-client-legible-specimen-v0.schema.json",
+  "title": "Observation Client-Legible Specimen v0",
+  "description": "A non-canonical presentation envelope that renders one canonical candidate Observation for client review without merging verified facts, inference, limitations, provenance, or approval state.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "specimenId",
+    "type",
+    "status",
+    "observation",
+    "clientView",
+    "traceability"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "0.1.0"
+    },
+    "specimenId": {
+      "type": "string",
+      "const": "client-legible-specimen-v0"
+    },
+    "type": {
+      "const": "ObservationClientSpecimen"
+    },
+    "status": {
+      "const": "fixture"
+    },
+    "observation": {
+      "$ref": "./observation.schema.json"
+    },
+    "clientView": {
+      "type": "object",
+      "required": [
+        "title",
+        "statusLabel",
+        "verifiedSummary",
+        "interpretationSummary",
+        "whyItMatters",
+        "confidence",
+        "evidenceDisclosure",
+        "limitations",
+        "nextDecision",
+        "prohibitedClaims"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 12
+        },
+        "statusLabel": {
+          "type": "string",
+          "minLength": 10
+        },
+        "verifiedSummary": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 10
+          }
+        },
+        "interpretationSummary": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 10
+          }
+        },
+        "whyItMatters": {
+          "type": "string",
+          "minLength": 20
+        },
+        "confidence": {
+          "type": "object",
+          "required": ["score", "label", "basis"],
+          "properties": {
+            "score": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "label": {
+              "enum": ["low", "moderate", "high"]
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 15
+            }
+          },
+          "additionalProperties": false
+        },
+        "evidenceDisclosure": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["ref", "label", "access"],
+            "properties": {
+              "ref": {
+                "type": "string"
+              },
+              "label": {
+                "type": "string",
+                "minLength": 5
+              },
+              "access": {
+                "enum": ["public", "private", "fixture", "restricted"]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 10
+          }
+        },
+        "nextDecision": {
+          "type": "string",
+          "minLength": 15
+        },
+        "prohibitedClaims": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 10
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "traceability": {
+      "type": "object",
+      "required": [
+        "verifiedSummaryFrom",
+        "interpretationSummaryFrom",
+        "whyItMattersFrom",
+        "confidenceFrom",
+        "limitationsFrom",
+        "statusFrom"
+      ],
+      "properties": {
+        "verifiedSummaryFrom": {
+          "const": "/observation/verifiedFacts"
+        },
+        "interpretationSummaryFrom": {
+          "const": "/observation/inference"
+        },
+        "whyItMattersFrom": {
+          "const": "/observation/significance"
+        },
+        "confidenceFrom": {
+          "const": "/observation/confidence"
+        },
+        "limitationsFrom": {
+          "const": "/observation/knownLimitations"
+        },
+        "statusFrom": {
+          "const": "/observation/approvalState"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
