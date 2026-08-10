@@ -1,0 +1,160 @@
+schemaVersion: 0.1.0
+contractType: ASGDomainDesignContract
+status: review_required_before_implementation
+repository: qt314wink/seed-loom
+branch: feat/asg-domain-module
+product:
+  name: Atmospheric Systems Grammar
+  shape: Seed Loom domain module + compiler
+  canonicalAuthority: git_versioned_json
+  projectionsAreDisposable: true
+capabilities:
+  - analyze_existing_experience
+  - generate_bounded_atmosphere_specification
+  - compare_implementations
+  - qualify_effects_and_failure_modes
+  - explain_design_decision_lineage
+canonicalResidency:
+  seedLoom:
+    - knowledge/sources
+    - knowledge/observations
+    - knowledge/relationships
+    - knowledge/runs
+    - knowledge/receipts
+  asg:
+    - knowledge/asg/nodes
+    - knowledge/asg/propagations
+    - knowledge/asg/evidence-links
+    - knowledge/asg/runs
+generatedResidency:
+  - knowledge/asg/projections/current-registry.json
+  - knowledge/asg/projections/lineage.json
+  - knowledge/asg/projections/part-matrix.json
+  - knowledge/asg/projections/part-matrix.csv
+  - knowledge/asg/projections/human
+nodeKinds:
+  - concept
+  - mechanism
+  - variable
+  - operator
+  - effect
+  - failure_mode
+  - specification_pattern
+propagationOperations:
+  GENESIS:
+    meaning: create a canonical identity only when reuse would materially distort the phenomenon
+    humanApprovalRequired: true
+  EXTEND:
+    meaning: add evidence, context, modality, or applicability without changing the core definition
+  REFINE:
+    meaning: sharpen a definition or add internal dimensions
+  CONSTRAIN:
+    meaning: narrow validity or add conditions, limits, or failure boundaries
+  COUNTER:
+    meaning: preserve source-backed opposition, reversal, or incompatible mechanism
+epistemicStatuses:
+  - explicit_source
+  - close_paraphrase
+  - derived_inference
+  - speculative_transfer
+externalEvidenceRoles:
+  - source_basis
+  - corroboration
+  - complication
+  - contradiction
+  - measurement_reference
+  - transfer_support
+measurementMaturity:
+  - conceptual
+  - literature_backed
+  - instrumented
+  - calibrated
+  - validated_for_scope
+sourceStoragePolicy:
+  persistFullText: false
+  optionalQuoteMaxWords: 25
+  requiredCoordinates:
+    - sourceRef
+    - part
+    - chapterNumber
+    - chapterTitle
+  optionalCoordinates:
+    - printedPageStart
+    - printedPageEnd
+    - pdfPageIndexStart
+    - pdfPageIndexEnd
+    - locatorNote
+    - excerptHash
+part1:
+  title: Mood Musics
+  role: bootstrap_candidate_grammar
+  genesisPermitted: candidate_only
+  primaryTargets:
+    - background
+    - foreground
+    - attention
+    - attention_elasticity
+    - furnishing
+    - environmentalization
+    - horizon
+    - ignorable
+    - interesting
+    - figure_field
+    - bounded_uncertainty
+    - temporal_deteleologization
+    - horizon_extension
+    - figure_dissolution
+    - affective_bounding
+    - perceptual_rebasing
+    - environmental_coupling
+part2:
+  title: Panoramic Interiors
+  role: propagate_resident_part1_grammar
+  requiresPriorRegistry: true
+  pressureTestTargets:
+    - horizon
+    - figure_field
+    - depth
+    - landscape
+    - subject_dispersion
+    - panoramic_perception
+    - interior_exterior_boundary
+    - environmentalization
+    - orientation
+    - mobility
+  genesisBias: last_resort
+compilerInvariants:
+  - propagation_node_must_exist_unless_genesis
+  - genesis_id_must_not_already_exist
+  - source_observation_must_resolve
+  - epistemic_status_required
+  - evidence_role_required
+  - confidence_in_closed_unit_interval
+  - part2_requires_part1_or_explicit_bootstrap_override
+  - duplicate_equivalent_propagations_rejected
+  - identical_clean_runs_have_identical_semantic_digest
+  - projections_never_used_as_authoritative_input
+firstImplementationSlice:
+  schemas:
+    - knowledge/asg/schema/asg-node.schema.json
+    - knowledge/asg/schema/asg-propagation.schema.json
+    - knowledge/asg/schema/asg-bundle.schema.json
+  scripts:
+    - scripts/knowledge/asg/normalize-asg-bundle.mjs
+    - scripts/knowledge/asg/ingest-asg-run.mjs
+    - scripts/knowledge/asg/compile-asg.mjs
+    - scripts/knowledge/asg/render-asg-report.mjs
+    - scripts/knowledge/asg/test-asg-contract.mjs
+    - scripts/knowledge/asg/test-asg-determinism.mjs
+  fixtures:
+    - examples/asg/roquet-part-1.bundle.json
+    - examples/asg/roquet-part-2.bundle.json
+nonGoals:
+  - raw_pdf_to_canonical_knowledge
+  - unreviewed_llm_auto_classification
+  - parts_3_4_ingestion
+  - graph_database
+  - dashboard_ui
+  - bidirectional_spreadsheet_sync
+  - universal_atmosphere_score
+  - production_affect_prediction
