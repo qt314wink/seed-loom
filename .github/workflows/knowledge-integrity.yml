@@ -30,7 +30,7 @@ jobs:
           node-version: 20
           cache: npm
       - name: Install dependencies
-        run: npm install --ignore-scripts --no-audit --no-fund
+        run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Setup knowledge directories
         run: npm run knowledge:setup
       - name: Verify knowledge pipeline

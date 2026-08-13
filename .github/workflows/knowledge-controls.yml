@@ -8,6 +8,7 @@ on:
       - 'docs/strategy-genesis/**'
       - 'tools/graph-workbench/**'
       - 'package.json'
+      - 'package-lock.json'
       - '.github/workflows/knowledge-controls.yml'
   workflow_dispatch:
 permissions:
@@ -26,7 +27,7 @@ jobs:
           node-version: 20
           cache: npm
       - name: Install dependencies without paid services or external model calls
-        run: npm install --ignore-scripts --no-audit --no-fund
+        run: npm ci --ignore-scripts --no-audit --no-fund
       - name: Required command 1 — setup
         run: npm run knowledge:setup
       - name: Required command 2 — all control layers
