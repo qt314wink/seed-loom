@@ -7,6 +7,7 @@ on:
       - 'tests/**'
       - 'index.html'
       - 'package.json'
+      - 'package-lock.json'
       - 'playwright.config.ts'
       - '.github/workflows/visual-regression.yml'
   workflow_dispatch:
@@ -20,7 +21,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm install
+      - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run build
       - run: npm run test:visual
