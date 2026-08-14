@@ -8,8 +8,6 @@ on:
 
 permissions:
   contents: write
-  issues: write
-  pull-requests: write
 
 jobs:
   refresh:
@@ -17,16 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Report baseline refresh run
-        uses: actions/github-script@v7
-        with:
-          script: |
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: 25,
-              body: `Visual baseline refresh run ${context.runId} started for ${context.sha}.`
-            })
       - uses: actions/checkout@v4
         with:
           ref: feat/filter-atelier-authoring-v0.2
@@ -49,4 +37,6 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git commit -m 'test: update remediated visual baselines'
-          git push --force-with-lease origin HEAD:feat/filter-atelier-authoring-v0.2
+          git fetch origin feat/filter-atelier-authoring-v0.2
+          git rebase origin/feat/filter-atelier-authoring-v0.2
+          git push origin HEAD:feat/filter-atelier-authoring-v0.2
