@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_f2019f3446ec86ef",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-08-14T07:08:48.139437Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "neobrutalism-lab",
+    "commit_sha": "2026-08-13T18:13:06Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1330970537,
+    "github_node_id": "R_kgDOT1T_qQ",
+    "language": "TypeScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": null,
+    "pushed_at": "2026-08-13T18:13:06Z",
+    "created_at": "2026-08-11T13:41:38Z",
+    "open_issues_count": 2
+  }
+}
