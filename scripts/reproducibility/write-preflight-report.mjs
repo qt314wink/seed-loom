@@ -28,3 +28,4 @@ await appendFile(process.env.GITHUB_STEP_SUMMARY || '/dev/null', [
   `Overall: **${report.passed ? 'PASS' : 'FAIL'}**`
 ].join('\n'));
 console.log(`Snowflake preflight: ${report.passed ? 'PASS' : 'FAIL'}`);
+if (!report.passed) process.exitCode = 1;
