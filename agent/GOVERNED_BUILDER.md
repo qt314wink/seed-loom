@@ -45,6 +45,8 @@ approval_required_for:
   - <action>
 ```
 
+Protected surfaces are files, systems, contracts, generated artifacts, external resources, or behaviors that must remain unchanged during the bounded task.
+
 Do not widen `allowed_change_surface` without new authorization.
 
 ### Gate 2 — Implement
