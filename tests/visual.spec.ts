@@ -1,7 +1,6 @@
 import { expect, test, type Page } from '@playwright/test';
 
 const stages = ['evidence', 'interpretation', 'tokens', 'code', 'verification'] as const;
-const stagePanelCaptureStyle = '.site-header { display: none !important; }';
 const materialAtlasCaptureStyle = `
   html { scroll-behavior: auto !important; }
   .site-header { display: none !important; }
@@ -15,7 +14,25 @@ const materialAtlasCaptureStyle = `
   #app > main > :not(#materials), #app > footer { visibility: hidden !important; }
 `;
 
-async function waitForMaterialFonts(page: Page): Promise<void> {
+function stagePanelCaptureStyle(width: number, top: number): string {
+  return `
+    html { scroll-behavior: auto !important; }
+    .site-header { display: none !important; }
+    #analyzer, .analyzer-grid { position: static !important; }
+    .stage-panel {
+      position: absolute !important;
+      top: ${top}px !important;
+      left: 0 !important;
+      width: ${width}px !important;
+    }
+    #app > main > :not(#analyzer),
+    #analyzer > :not(.analyzer-grid),
+    .analyzer-grid > :not(.stage-panel),
+    #app > footer { visibility: hidden !important; }
+  `;
+}
+
+async function waitForBrandFonts(page: Page): Promise<void> {
   await expect
     .poll(
       () =>
@@ -39,14 +56,54 @@ async function waitForMaterialFonts(page: Page): Promise<void> {
     .toBe(true);
 }
 
+async function scrollToDocumentOrigin(
+  page: Page
+): Promise<{ scrollX: number; scrollY: number; visualPageTop: number }> {
+  return page.evaluate(async () => {
+    window.scrollTo(0, 0);
+    await new Promise<void>((resolve) =>
+      requestAnimationFrame(() => requestAnimationFrame(() => resolve()))
+    );
+    return {
+      scrollX: window.scrollX,
+      scrollY: window.scrollY,
+      visualPageTop: window.visualViewport?.pageTop ?? window.scrollY
+    };
+  });
+}
+
 async function expectStagePanelScreenshot(
   page: Page,
   name: string
 ): Promise<void> {
-  const captureStyle = await page.addStyleTag({ content: stagePanelCaptureStyle });
+  const stagePanel = page.locator('.stage-panel');
+  await waitForBrandFonts(page);
+  const preStyleBoundingBox = await stagePanel.boundingBox();
+  expect(preStyleBoundingBox).not.toBeNull();
+  const captureOrigin = await scrollToDocumentOrigin(page);
+  expect(captureOrigin.scrollX).toBe(0);
+  expect(captureOrigin.scrollY).toBe(0);
+  const captureStyle = await page.addStyleTag({
+    content: stagePanelCaptureStyle(preStyleBoundingBox!.width, captureOrigin.visualPageTop)
+  });
 
   try {
-    await expect(page.locator('.stage-panel')).toHaveScreenshot(name, {
+    await expect(page.locator('.site-header')).toBeHidden();
+    await waitForBrandFonts(page);
+
+    const settledOrigin = await scrollToDocumentOrigin(page);
+    expect(settledOrigin.scrollX).toBe(0);
+    expect(settledOrigin.scrollY).toBe(0);
+    expect(settledOrigin.visualPageTop).toBe(captureOrigin.visualPageTop);
+
+    const postStyleBoundingBox = await stagePanel.boundingBox();
+    expect(postStyleBoundingBox).not.toBeNull();
+    expect(postStyleBoundingBox!.x).toBe(0);
+    expect(postStyleBoundingBox!.y).toBe(0);
+    expect(postStyleBoundingBox!.width).toBe(preStyleBoundingBox!.width);
+    expect(postStyleBoundingBox!.height).toBe(preStyleBoundingBox!.height);
+
+    await expect(stagePanel).toHaveScreenshot(name, {
       animations: 'disabled',
       maxDiffPixelRatio: 0.015
     });
@@ -57,14 +114,14 @@ async function expectStagePanelScreenshot(
 
 async function expectMaterialAtlasScreenshot(page: Page): Promise<void> {
   const materialAtlas = page.locator('#materials');
-  await waitForMaterialFonts(page);
+  await waitForBrandFonts(page);
   const preStyleBoundingBox = await materialAtlas.boundingBox();
   expect(preStyleBoundingBox).not.toBeNull();
   const captureStyle = await page.addStyleTag({ content: materialAtlasCaptureStyle });
 
   try {
     await expect(page.locator('.site-header')).toBeHidden();
-    await waitForMaterialFonts(page);
+    await waitForBrandFonts(page);
 
     const scrollY = await page.evaluate(async () => {
       window.scrollTo(0, 0);
