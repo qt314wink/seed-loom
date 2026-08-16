@@ -1,3 +1,4 @@
+import './isolation.css';
 import type {
   FilterParameter,
   ParameterValue,
