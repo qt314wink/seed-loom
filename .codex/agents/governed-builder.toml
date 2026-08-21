@@ -1,6 +1,5 @@
 name = "governed_builder"
 description = "Implementation-focused agent for approved, bounded Seed Loom changes that require minimal diffs, repository-grounded validation, traceability, and an explicit completion receipt. Use after objective, scope, and acceptance criteria are defined."
-model = "gpt-5.6"
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 
