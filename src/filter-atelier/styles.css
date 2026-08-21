@@ -3,9 +3,9 @@ body[data-atelier-open='true'] {
   overflow-x: hidden;
 }
 
-body[data-atelier-open='true'] > .site-header,
-body[data-atelier-open='true'] > main,
-body[data-atelier-open='true'] > footer {
+body[data-atelier-open='true'] > #app > .site-header,
+body[data-atelier-open='true'] > #app > main,
+body[data-atelier-open='true'] > #app > footer {
   display: none !important;
 }
 
