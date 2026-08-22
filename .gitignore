@@ -3,6 +3,7 @@ dist/
 .vercel/
 playwright-report/
 test-results/
+.reproducibility/
 .env
 .env.*
 !.env.example

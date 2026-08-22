@@ -1,0 +1,67 @@
+name: Root Reproducibility Boundary
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'portfolio/evidence/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  frozen-root:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Clean install from the authoritative lockfile
+        id: install
+        run: npm ci
+      - name: Check manifest and lockfile agreement
+        id: contract
+        run: npm run contract:check
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: TypeScript gate
+        id: typescript
+        run: npm run typecheck
+      - name: Build gate
+        id: build
+        run: npm run build
+      - name: Visual regression gate
+        id: visual
+        run: npm run test:visual
+      - name: Schema gate
+        id: schemas
+        run: npm run schemas:check
+      - name: Artifact gate
+        id: artifact
+        run: npm run artifact:check
+      - name: Finish Snowflake preflight Git-state and gate report
+        if: always()
+        env:
+          INSTALL: ${{ steps.install.outcome }}
+          CONTRACT: ${{ steps.contract.outcome }}
+          TYPESCRIPT: ${{ steps.typescript.outcome }}
+          BUILD: ${{ steps.build.outcome }}
+          VISUAL: ${{ steps.visual.outcome }}
+          SCHEMAS: ${{ steps.schemas.outcome }}
+          ARTIFACT: ${{ steps.artifact.outcome }}
+        run: node scripts/reproducibility/write-preflight-report.mjs
+      - name: Upload Snowflake preflight report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: snowflake-preflight-report
+          path: .reproducibility/snowflake-preflight.json
+          if-no-files-found: error
+          retention-days: 30
