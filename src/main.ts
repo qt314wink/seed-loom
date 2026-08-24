@@ -14,6 +14,16 @@ type Stage = {
   trace: string;
 };
 
+type ObligationId = 'traceability' | 'accessibility' | 'fidelity' | 'delivery';
+
+type Obligation = {
+  id: ObligationId;
+  label: string;
+  promise: string;
+  gate: string;
+  stage: StageId;
+};
+
 const stages: Stage[] = [
   {
     id: 'evidence', index: '01', label: 'Evidence', botanicalState: 'Rooted observation',
@@ -87,6 +97,13 @@ const materials = [
   ['metal','Copper / brass','Attachment, verification, conductive state']
 ] as const;
 
+const obligations: Obligation[] = [
+  { id: 'traceability', label: 'Trace every decision', promise: 'No artifact ships without a source or explicit human decision.', gate: 'Provenance coverage ≥ 95%', stage: 'evidence' },
+  { id: 'accessibility', label: 'Protect access', promise: 'Keyboard, contrast, semantics, and motion preferences are release requirements.', gate: 'Accessibility checks pass', stage: 'verification' },
+  { id: 'fidelity', label: 'Preserve material intent', promise: 'Translation keeps the selected texture, hierarchy, and symbolic role intact.', gate: 'Visual review approved', stage: 'tokens' },
+  { id: 'delivery', label: 'Meet the handoff', promise: 'The build ends in a portable artifact with a named owner and acceptance gate.', gate: 'Handoff package accepted', stage: 'code' }
+];
+
 let active: StageId = 'evidence';
 const app = document.querySelector<HTMLDivElement>('#app');
 if (!app) throw new Error('Seed-Loom app root was not found.');
@@ -110,6 +127,8 @@ app.innerHTML = `
 
     <section class="analyzer-section" id="analyzer" aria-labelledby="analyzer-title"><div class="section-heading"><p class="eyebrow">Live analyzer shell</p><h2 id="analyzer-title">Five ribs. One inspectable transformation.</h2></div><div class="analyzer-grid"><aside class="stage-rail" aria-label="Analyzer stage controls">${stages.map((stage,i)=>`<button data-stage="${stage.id}" class="stage-button ${i===0?'is-active':''}"><span>${stage.index}</span><span><b>${stage.label}</b><small>${stage.botanicalState}</small></span></button>`).join('')}</aside><article class="stage-panel" id="stage-panel" tabindex="-1" aria-live="polite"></article></div></section>
 
+    <section class="order-section" id="orders" aria-labelledby="orders-title"><div class="section-heading order-heading"><div><p class="eyebrow">Obligation planner</p><h2 id="orders-title">Turn promises into a build order.</h2></div><p>Select the obligations this run must fulfill. Seed-Loom places evidence before transformation, attaches a release gate to every promise, and exposes the critical path.</p></div><div class="order-workbench"><form class="obligation-list" id="obligation-form"><fieldset><legend>Required outcomes</legend>${obligations.map((item, index) => `<label class="obligation"><input type="checkbox" name="obligation" value="${item.id}" ${index < 3 ? 'checked' : ''}><span class="check-mark" aria-hidden="true"></span><span><b>${item.label}</b><small>${item.promise}</small><em>${item.gate}</em></span></label>`).join('')}</fieldset><button class="button primary build-order-action" type="submit">Build the order</button></form><article class="build-order" tabindex="-1" aria-live="polite"><header><div><p class="eyebrow">Release sequence</p><h3>Critical path</h3></div><strong id="order-readiness">3 obligations</strong></header><ol id="build-order-list"></ol><p class="order-note" id="order-note"></p></article></div></section>
+
     <section class="trace-section" id="trace" aria-labelledby="trace-title"><div><p class="eyebrow">Provenance field</p><h2 id="trace-title">Every transformation leaves a root and a thread.</h2></div><ol class="trace-chain"><li><span>Source region</span><b>OMNI / 07</b></li><li><span>Evidence</span><b>ceramic rib</b></li><li><span>Interpretation</span><b>durable structure</b></li><li><span>Token</span><b>material.cactus</b></li><li><span>Code</span><b>CSS + JSON</b></li><li><span>Gate</span><b>visual stable</b></li></ol></section>
 
     <section class="commerce-section" id="commerce" aria-labelledby="commerce-title"><div class="section-heading"><p class="eyebrow">Cultivation architecture</p><h2 id="commerce-title">Reusable systems, grown under explicit constraints.</h2></div><div class="plans">${[['Seed','Explore public references'],['Garden','Compile private design systems'],['Conservatory','Validate teams and production'],['Biome','Govern enterprise ontologies']].map(([name,desc],i)=>`<article class="plan"><span class="plan-symbol">${['✦','❋','✺','✹'][i]}</span><h3>${name}</h3><p>${desc}</p><button type="button">Inspect ${name}</button></article>`).join('')}</div></section>
@@ -119,6 +138,7 @@ app.innerHTML = `
 
 const panel = document.querySelector<HTMLElement>('#stage-panel');
 if (!panel) throw new Error('Analyzer stage panel was not found.');
+const stagePanel: HTMLElement = panel;
 
 function renderStage(stageId: StageId, focus = false) {
   const stage = stages.find((candidate) => candidate.id === stageId);
@@ -126,10 +146,35 @@ function renderStage(stageId: StageId, focus = false) {
   active = stageId;
   document.documentElement.dataset.stage = stageId;
   document.querySelectorAll<HTMLElement>('[data-stage]').forEach((control) => { const selected = control.dataset.stage === stageId; control.classList.toggle('is-active', selected); if (control.getAttribute('role') === 'tab') control.setAttribute('aria-selected', String(selected)); });
-  panel.innerHTML = `<header class="panel-header"><div><p class="panel-index">${stage.index} / ${stage.botanicalState}</p><h3>${stage.label}</h3></div><div class="metric"><strong>${stage.metric}</strong><span>${stage.metricLabel}</span></div></header><p class="panel-summary">${stage.summary}</p><div class="specimens">${stage.items.map((item) => `<article class="specimen"><span class="specimen-node" aria-hidden="true"></span><div><h4>${item.title}</h4><p>${item.detail}</p>${item.confidence === undefined ? '' : `<div class="confidence"><i style="width:${item.confidence*100}%"></i></div>`}</div></article>`).join('')}</div><div class="trace-readout"><span>TRACE</span><code>${stage.trace}</code></div>`;
-  if (focus) panel.focus();
+  stagePanel.innerHTML = `<header class="panel-header"><div><p class="panel-index">${stage.index} / ${stage.botanicalState}</p><h3>${stage.label}</h3></div><div class="metric"><strong>${stage.metric}</strong><span>${stage.metricLabel}</span></div></header><p class="panel-summary">${stage.summary}</p><div class="specimens">${stage.items.map((item) => `<article class="specimen"><span class="specimen-node" aria-hidden="true"></span><div><h4>${item.title}</h4><p>${item.detail}</p>${item.confidence === undefined ? '' : `<div class="confidence"><i style="width:${item.confidence*100}%"></i></div>`}</div></article>`).join('')}</div><div class="trace-readout"><span>TRACE</span><code>${stage.trace}</code></div>`;
+  if (focus) stagePanel.focus();
 }
 
 document.addEventListener('click', (event) => { const target = (event.target as HTMLElement).closest<HTMLElement>('[data-stage]'); const stage = target?.dataset.stage as StageId | undefined; if (stage) renderStage(stage, target?.getAttribute('role') !== 'tab'); });
 document.querySelector('.cactus')?.addEventListener('keydown', (event) => { if (!(event instanceof KeyboardEvent) || !['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(event.key)) return; event.preventDefault(); const index = stages.findIndex((stage) => stage.id === active); let next = index; if (event.key === 'Home') next = 0; else if (event.key === 'End') next = stages.length - 1; else next = (index + (event.key === 'ArrowRight' || event.key === 'ArrowDown' ? 1 : -1) + stages.length) % stages.length; const stage = stages[next]; if (stage) { renderStage(stage.id); document.querySelector<HTMLButtonElement>(`.rib[data-stage="${stage.id}"]`)?.focus(); } });
+
+const obligationForm = document.querySelector<HTMLFormElement>('#obligation-form');
+const buildOrderList = document.querySelector<HTMLOListElement>('#build-order-list');
+const orderReadiness = document.querySelector<HTMLElement>('#order-readiness');
+const orderNote = document.querySelector<HTMLElement>('#order-note');
+
+function renderBuildOrder() {
+  if (!obligationForm || !buildOrderList || !orderReadiness || !orderNote) return;
+  const data = new FormData(obligationForm);
+  const selected = obligations.filter((item) => data.getAll('obligation').includes(item.id));
+  const stageOrder: StageId[] = ['evidence', 'interpretation', 'tokens', 'code', 'verification'];
+  const ordered = [...selected].sort((a, b) => stageOrder.indexOf(a.stage) - stageOrder.indexOf(b.stage));
+  orderReadiness.textContent = `${selected.length} obligation${selected.length === 1 ? '' : 's'}`;
+  buildOrderList.innerHTML = ordered.length ? ordered.map((item, index) => {
+    const stage = stages.find((candidate) => candidate.id === item.stage);
+    return `<li><span>${String(index + 1).padStart(2, '0')}</span><div><small>${stage?.label ?? item.stage} gate</small><b>${item.label}</b><p>${item.promise}</p><em>${item.gate}</em></div></li>`;
+  }).join('') : '<li class="empty-order"><div><b>No obligations selected</b><p>Select at least one required outcome to establish a release sequence.</p></div></li>';
+  orderNote.textContent = ordered.length ? `Strategy: resolve ${ordered[0]?.label.toLowerCase()} first; release only after all ${ordered.length} attached gate${ordered.length === 1 ? '' : 's'} pass.` : 'A build order needs a promise to protect.';
+}
+
+obligationForm?.addEventListener('submit', (event) => { event.preventDefault(); renderBuildOrder(); document.querySelector<HTMLElement>('.build-order')?.focus(); });
+obligationForm?.addEventListener('change', renderBuildOrder);
+document.querySelector('.small-action')?.addEventListener('click', () => document.querySelector('#orders')?.scrollIntoView({ behavior: 'smooth' }));
+document.querySelectorAll<HTMLButtonElement>('.plan button').forEach((button) => button.addEventListener('click', () => document.querySelector('#orders')?.scrollIntoView({ behavior: 'smooth' })));
 renderStage(active);
+renderBuildOrder();
