@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_db8c65c61ce031ae",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-08-24T06:36:18.340232Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "seed-loom",
+    "commit_sha": "2026-08-24T00:41:36Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1295858033,
+    "github_node_id": "R_kgDOTT05cQ",
+    "language": "JavaScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": null,
+    "pushed_at": "2026-08-24T00:41:36Z",
+    "created_at": "2026-07-09T23:18:08Z",
+    "open_issues_count": 12
+  }
+}
