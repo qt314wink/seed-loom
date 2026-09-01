@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_5c032c8674fdde25",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-09-01T10:46:30.099663Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "kaleidoscope-simulator",
+    "commit_sha": "2026-08-31T00:15:31Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1351804382,
+    "github_node_id": "R_kgDOUJLl3g",
+    "language": "JavaScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": null,
+    "pushed_at": "2026-08-31T00:15:31Z",
+    "created_at": "2026-08-30T23:03:52Z",
+    "open_issues_count": 0
+  }
+}

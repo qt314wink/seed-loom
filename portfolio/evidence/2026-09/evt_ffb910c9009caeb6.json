@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_ffb910c9009caeb6",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-09-01T10:46:30.100050Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "mesh-system",
+    "commit_sha": "2026-08-08T08:24:06Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1327555198,
+    "github_node_id": "R_kgDOTyDifg",
+    "language": null,
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": "10-Space modular workspace system \u2014 MESH, ROOT, PULSE, STORYWORLD, SPIRAL, VESSEL, FORGE, ETCH, MARKET.",
+    "pushed_at": "2026-08-08T08:24:06Z",
+    "created_at": "2026-08-08T08:24:06Z",
+    "open_issues_count": 0
+  }
+}

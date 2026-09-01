@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_3b62117c973d74e1",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-09-01T10:46:30.100717Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "shader-grammar",
+    "commit_sha": "2026-09-01T05:01:39Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1353026496,
+    "github_node_id": "R_kgDOUKWLwA",
+    "language": "JavaScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": "Shader Grammar v0.1 \u2014 an ontology of shared optical primitives for describing materials without named-effect flags.",
+    "pushed_at": "2026-09-01T05:01:39Z",
+    "created_at": "2026-09-01T01:52:28Z",
+    "open_issues_count": 0
+  }
+}
