@@ -6,7 +6,7 @@ import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 
 const root = process.cwd();
-const inputArg = process.argv.find((arg) => !arg.startsWith('--')) || 'ops/nightly-intake/2026-09-08.json';
+const inputArg = process.argv.slice(2).find((arg) => !arg.startsWith('--')) || 'ops/nightly-intake/2026-09-08.json';
 const outputArg = process.argv.find((arg) => arg.startsWith('--out='))?.slice('--out='.length);
 const input = path.resolve(inputArg);
 const bundle = JSON.parse(fs.readFileSync(input, 'utf8'));
@@ -17,6 +17,12 @@ if (bundle.bundleType !== 'NightlyRunBundle' || bundle.review?.status !== 'revie
 }
 if (bundle.observations?.length !== 5) throw new Error('proof bundle must contain exactly five observations');
 const bundleSha256 = crypto.createHash('sha256').update(fs.readFileSync(input)).digest('hex');
+const sourceManifestSha256 = crypto.createHash('sha256')
+  .update(JSON.stringify(bundle.sources))
+  .digest('hex');
+if (bundle.provenance?.sourceManifestSha256 !== sourceManifestSha256) {
+  throw new Error('bundle provenance does not match its source manifest');
+}
 
 function copyWorkspace(target) {
   fs.cpSync(root, target, {
@@ -53,7 +59,7 @@ function withoutVolatile(value) {
   if (Array.isArray(value)) return value.map(withoutVolatile);
   if (!value || typeof value !== 'object') return value;
   return Object.fromEntries(Object.entries(value)
-    .filter(([key]) => !['createdAt'].includes(key))
+    .filter(([key]) => !['createdAt', 'sha256'].includes(key))
     .map(([key, item]) => [key, withoutVolatile(item)]));
 }
 
@@ -74,6 +80,25 @@ function proofDigest(workspace) {
   }
   records.sort((a, b) => a.path.localeCompare(b.path));
   return crypto.createHash('sha256').update(JSON.stringify(records)).digest('hex');
+}
+
+function proofRecords(workspace) {
+  const records = [];
+  for (const relative of [
+    'knowledge/sources', 'knowledge/observations', 'knowledge/relationships',
+    'knowledge/runs', 'knowledge/receipts', 'knowledge/projections',
+    'knowledge/candidates', 'knowledge/quarantine', 'tools/graph-workbench/data.json'
+  ]) {
+    const absolute = path.join(workspace, relative);
+    const paths = fs.existsSync(absolute) && fs.statSync(absolute).isDirectory() ? files(absolute) : [absolute];
+    for (const file of paths) {
+      records.push([
+        path.relative(workspace, file).replaceAll('\\', '/'),
+        JSON.stringify(withoutVolatile(JSON.parse(fs.readFileSync(file, 'utf8'))))
+      ]);
+    }
+  }
+  return new Map(records);
 }
 
 function canonicalDigest(workspace) {
@@ -124,6 +149,11 @@ try {
   const first = proveValidRun(workspaces[0]);
   const second = proveValidRun(workspaces[1]);
   if (first.proofDigest !== second.proofDigest || first.canonicalDigest !== second.canonicalDigest) {
+    const left = proofRecords(workspaces[0]);
+    const right = proofRecords(workspaces[1]);
+    for (const key of new Set([...left.keys(), ...right.keys()])) {
+      if (left.get(key) !== right.get(key)) console.error(`DIFF ${key}`);
+    }
     throw new Error(`proof digests differ: ${first.proofDigest} vs ${second.proofDigest}`);
   }
   proveInvalidRun(workspaces[0]);
