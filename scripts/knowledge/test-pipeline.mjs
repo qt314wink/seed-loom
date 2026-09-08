@@ -7,6 +7,7 @@ import { spawnSync } from 'node:child_process';
 const root = process.cwd();
 const failures = [];
 const passes = [];
+const recordDirs = ['sources','entities','observations','patterns','relationships','opportunities','strategies','experiments','runs'];
 const read = p => JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const exists = p => fs.existsSync(path.join(root,p));
 const test = (name, fn) => { try { fn(); passes.push(name); } catch (e) { failures.push({name,error:e.message}); } };
@@ -61,7 +62,12 @@ test('T06 no unsupported promotion',()=>{
 const buildIsolatedIndex = prepare => {
   const workspace = fs.mkdtempSync(path.join(os.tmpdir(),'seed-loom-index-'));
   try {
-    fs.cpSync(path.join(root,'knowledge'),path.join(workspace,'knowledge'),{recursive:true});
+    const isolatedKnowledge = path.join(workspace,'knowledge');
+    fs.mkdirSync(isolatedKnowledge,{recursive:true});
+    for (const dir of recordDirs) {
+      const source = path.join(root,'knowledge',dir);
+      if (fs.existsSync(source)) fs.cpSync(source,path.join(isolatedKnowledge,dir),{recursive:true});
+    }
     prepare?.(workspace);
     const result=spawnSync(process.execPath,[path.join(root,'scripts/knowledge/build-index.mjs')],{cwd:workspace});
     return {
