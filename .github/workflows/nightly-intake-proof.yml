@@ -1,6 +1,7 @@
-name: Nightly Intake Proof
+name: Nightly Intake Proof (PR/manual gate)
 
 on:
+  # This is intentionally a PR/manual gate; it does not retrieve or invent nightly inputs.
   pull_request:
     paths:
       - 'ops/nightly-intake/**'
@@ -21,8 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@03ac85d543c1fd49dde89910729f73c9432bf7f8 # v4.2.2
+      - uses: actions/setup-node@df64bca5e9465c42eab9ef5c975c3aa7392ada86 # v4.4.0
         with:
           node-version: 20
           cache: npm
@@ -30,7 +31,7 @@ jobs:
       - name: Run two isolated nightly proofs
         run: npm run knowledge:prove-nightly -- --out=nightly-intake-proof.json
       - name: Upload machine-readable proof
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@01a6856bd04dea4ee801a2be067f85e2336a3461 # v4.6.2
         with:
           name: nightly-intake-proof
           path: nightly-intake-proof.json

@@ -114,31 +114,33 @@ if (dryRun) {
 }
 
 const written = [];
+const receiptTarget = targetFor('receipts', `${bundle.run.runId}-ingest`);
+let receiptCreated = false;
 try {
   for (const { target, record } of planned) {
     fs.mkdirSync(path.dirname(target), { recursive: true });
     fs.writeFileSync(target, `${JSON.stringify(record, null, 2)}\n`, { flag: 'wx' });
     written.push(target);
   }
+  const receipt = {
+    runId: bundle.run.runId,
+    type: 'IngestReceipt',
+    schemaVersion: '1.1.0',
+    createdAt: new Date().toISOString(),
+    ingestionMode: bundle.run.ingestionMode,
+    normalizedDigest,
+    files: written.map((file) => path.relative(root, file)),
+    sha256: {}
+  };
+  for (const file of written) {
+    receipt.sha256[path.relative(root, file)] = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+  }
+  fs.mkdirSync(path.dirname(receiptTarget), { recursive: true });
+  fs.writeFileSync(receiptTarget, `${JSON.stringify(receipt, null, 2)}\n`, { flag: 'wx' });
+  receiptCreated = true;
 } catch (error) {
   for (const target of written.reverse()) fs.rmSync(target, { force: true });
+  if (receiptCreated) fs.rmSync(receiptTarget, { force: true });
   throw error;
 }
-
-const receipt = {
-  runId: bundle.run.runId,
-  type: 'IngestReceipt',
-  schemaVersion: '1.1.0',
-  createdAt: new Date().toISOString(),
-  ingestionMode: bundle.run.ingestionMode,
-  normalizedDigest,
-  files: written.map((file) => path.relative(root, file)),
-  sha256: {}
-};
-for (const file of written) {
-  receipt.sha256[path.relative(root, file)] = crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
-}
-const receiptTarget = targetFor('receipts', `${bundle.run.runId}-ingest`);
-fs.mkdirSync(path.dirname(receiptTarget), { recursive: true });
-fs.writeFileSync(receiptTarget, `${JSON.stringify(receipt, null, 2)}\n`, { flag: 'wx' });
-console.log(JSON.stringify(receipt, null, 2));
+console.log(JSON.stringify(JSON.parse(fs.readFileSync(receiptTarget, 'utf8')), null, 2));
