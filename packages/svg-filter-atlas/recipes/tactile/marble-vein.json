@@ -81,7 +81,7 @@
       },
       "min": 0.003,
       "max": 0.05,
-      "step": 0.002
+      "step": 0.001
     },
     {
       "key": "vein-y",
@@ -95,7 +95,7 @@
       },
       "min": 0.01,
       "max": 0.2,
-      "step": 0.005
+      "step": 0.002
     },
     {
       "key": "threshold-mult",

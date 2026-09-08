@@ -371,7 +371,7 @@ export const recipeCatalog = [
         },
         "min": 0.01,
         "max": 0.25,
-        "step": 0.005
+        "step": 0.001
       },
       {
         "key": "facet-y",
@@ -424,7 +424,7 @@ export const recipeCatalog = [
         },
         "min": 0,
         "max": 400,
-        "step": 10
+        "step": 5
       }
     ],
     "presets": {
@@ -759,7 +759,7 @@ export const recipeCatalog = [
         },
         "min": 0.003,
         "max": 0.05,
-        "step": 0.002
+        "step": 0.001
       },
       {
         "key": "vein-y",
@@ -773,7 +773,7 @@ export const recipeCatalog = [
         },
         "min": 0.01,
         "max": 0.2,
-        "step": 0.005
+        "step": 0.002
       },
       {
         "key": "threshold-mult",
@@ -1008,7 +1008,7 @@ export const recipeCatalog = [
         },
         "min": 0.005,
         "max": 0.09,
-        "step": 0.002
+        "step": 0.001
       },
       {
         "key": "threshold-mult",
@@ -1049,7 +1049,7 @@ export const recipeCatalog = [
         },
         "min": 0,
         "max": 3,
-        "step": 0.1
+        "step": 0.05
       },
       {
         "key": "glow",
@@ -1242,7 +1242,7 @@ export const recipeCatalog = [
         },
         "min": 0.004,
         "max": 0.05,
-        "step": 0.002
+        "step": 0.001
       },
       {
         "key": "grain-y",
@@ -1256,7 +1256,7 @@ export const recipeCatalog = [
         },
         "min": 0.02,
         "max": 0.2,
-        "step": 0.01
+        "step": 0.005
       },
       {
         "key": "surface-scale",
@@ -1477,7 +1477,7 @@ export const recipeCatalog = [
         },
         "min": 0.005,
         "max": 0.08,
-        "step": 0.003
+        "step": 0.001
       },
       {
         "key": "displacement",
@@ -1516,7 +1516,7 @@ export const recipeCatalog = [
         },
         "min": 0.1,
         "max": 2.5,
-        "step": 0.1
+        "step": 0.05
       }
     ],
     "presets": {
@@ -1717,7 +1717,7 @@ export const recipeCatalog = [
         },
         "min": 0.2,
         "max": 1.5,
-        "step": 0.05
+        "step": 0.01
       },
       {
         "key": "surface-scale",
@@ -1730,7 +1730,7 @@ export const recipeCatalog = [
         },
         "min": 0.5,
         "max": 5,
-        "step": 0.25
+        "step": 0.05
       }
     ],
     "presets": {

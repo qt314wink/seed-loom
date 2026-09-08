@@ -1,23 +1,30 @@
-name: Filter Atlas
+name: Filter Atlas and Atelier
 
 on:
   pull_request:
     paths:
-      - 'packages/svg-filter-atlas/**'
-      - 'src/filter-atlas.ts'
-      - 'src/main.ts'
-      - 'package.json'
-      - 'package-lock.json'
-      - '.github/workflows/filter-atlas.yml'
+      - "packages/svg-filter-atlas/**"
+      - "src/filter-atlas.ts"
+      - "src/filter-atelier/**"
+      - "src/main.ts"
+      - "tests/filter-atelier.spec.ts"
+      - "playwright.config.ts"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/filter-atlas.yml"
+
   push:
     branches: [main]
     paths:
-      - 'packages/svg-filter-atlas/**'
-      - 'src/filter-atlas.ts'
-      - 'src/main.ts'
-      - 'package.json'
-      - 'package-lock.json'
-      - '.github/workflows/filter-atlas.yml'
+      - "packages/svg-filter-atlas/**"
+      - "src/filter-atlas.ts"
+      - "src/filter-atelier/**"
+      - "src/main.ts"
+      - "tests/filter-atelier.spec.ts"
+      - "playwright.config.ts"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/filter-atlas.yml"
 
 jobs:
   validate-and-build:
@@ -25,28 +32,48 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
 
-      - name: Install Seed-Loom dependencies
-        # package.json currently contains knowledge-validation dependencies that
-        # have not yet been regenerated into package-lock.json. Use a lockfile-
-        # preserving install here so Filter Atlas validation can run without
-        # rewriting the repository checkout. Restore `npm ci` after the root
-        # lockfile is regenerated and verified in a dedicated dependency PR.
-        run: npm install --ignore-scripts --no-audit --no-fund --package-lock=false
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Install atlas development dependencies
-        run: npm install --prefix packages/svg-filter-atlas --no-audit --no-fund
+      - name: Validate and build
+        run: npm run check
 
-      - name: Validate and compile atlas
-        run: npm run filters:check
+  atelier-browser-tests:
+    needs: validate-and-build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
 
-      - name: Build Seed-Loom
-        run: npm run build
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Atelier browser tests
+        run: npm run test:visual -- tests/filter-atelier.spec.ts
+
+      - name: Upload failure evidence
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: filter-atelier-playwright-evidence
+          path: |
+            playwright-report/
+            test-results/
+          if-no-files-found: ignore
+          retention-days: 14
