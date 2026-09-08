@@ -59,7 +59,8 @@ for (const [key, file] of Object.entries({
   source: 'source.schema.json',
   observation: 'observation.schema.json',
   relationship: 'relationship.schema.json',
-  stageAck: 'stage-ack.schema.json'
+  stageAck: 'stage-ack.schema.json',
+  socraticAssessment: 'socratic-assessment.schema.json'
 })) {
   const schema = JSON.parse(fs.readFileSync(path.join(schemaDir, file), 'utf8'));
   validators[key] = ajv.compile(schema);
@@ -76,6 +77,12 @@ for (const source of bundle.sources) assertValid(source.id, validators.source, s
 for (const observation of bundle.observations) assertValid(observation.id, validators.observation, observation);
 for (const relationship of bundle.relationships) assertValid(relationship.id, validators.relationship, relationship);
 for (const ack of bundle.stageAcks) assertValid(ack.ackId, validators.stageAck, ack);
+for (const assessment of bundle.socraticAssessments ?? []) {
+  assertValid(assessment.assessmentId, validators.socraticAssessment, assessment);
+  if (!bundle.observations.some(({ id }) => id === assessment.observationId)) {
+    throw new Error(`Socratic assessment references unknown observation: ${assessment.observationId}`);
+  }
+}
 
 const safeName = (id) => id.replace(/[:/]/g, '-');
 const targetFor = (dir, id) => path.join(root, 'knowledge', dir, `${safeName(id)}.json`);
@@ -85,6 +92,9 @@ for (const observation of bundle.observations) planned.push({ target: targetFor(
 for (const relationship of bundle.relationships) planned.push({ target: targetFor('relationships', relationship.id), record: relationship });
 planned.push({ target: targetFor('runs', bundle.run.runId), record: bundle.run });
 for (const ack of bundle.stageAcks) planned.push({ target: targetFor('runs/stage-acks', ack.ackId), record: ack });
+for (const assessment of bundle.socraticAssessments ?? []) {
+  planned.push({ target: targetFor('runs/socratic-assessments', assessment.assessmentId), record: assessment });
+}
 
 for (const { target } of planned) {
   if (fs.existsSync(target)) throw new Error(`immutable record exists: ${target}`);
