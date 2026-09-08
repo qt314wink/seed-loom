@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
-import crypto from 'node:crypto';
+import { spawnSync } from 'node:child_process';
 
 const root = process.cwd();
 const failures = [];
 const passes = [];
+const recordDirs = ['sources','entities','observations','patterns','relationships','opportunities','strategies','experiments','runs'];
 const read = p => JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));
 const exists = p => fs.existsSync(path.join(root,p));
 const test = (name, fn) => { try { fn(); passes.push(name); } catch (e) { failures.push({name,error:e.message}); } };
@@ -57,11 +59,39 @@ test('T06 no unsupported promotion',()=>{
   assert(run.repositoryActions.length===0,'reconstructed cycle cannot auto-create repo action');
 });
 
-test('T07 deterministic digest',()=>{
-  const p='knowledge/runs/run-nightly-reconstructed-2026-07-30.json';
-  const a=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
-  const b=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p))).digest('hex');
-  assert(a===b,'digest unstable');
+const buildIsolatedIndex = prepare => {
+  const workspace = fs.mkdtempSync(path.join(os.tmpdir(),'seed-loom-index-'));
+  try {
+    const isolatedKnowledge = path.join(workspace,'knowledge');
+    fs.mkdirSync(isolatedKnowledge,{recursive:true});
+    for (const dir of recordDirs) {
+      const source = path.join(root,'knowledge',dir);
+      if (fs.existsSync(source)) fs.cpSync(source,path.join(isolatedKnowledge,dir),{recursive:true});
+    }
+    prepare?.(workspace);
+    const result=spawnSync(process.execPath,[path.join(root,'scripts/knowledge/build-index.mjs')],{cwd:workspace});
+    return {
+      result,
+      records: fs.existsSync(path.join(workspace,'knowledge/indexes/records.json')) && fs.readFileSync(path.join(workspace,'knowledge/indexes/records.json')),
+      receipt: fs.existsSync(path.join(workspace,'knowledge/receipts/index.sha256')) && fs.readFileSync(path.join(workspace,'knowledge/receipts/index.sha256'))
+    };
+  } finally {
+    fs.rmSync(workspace,{recursive:true,force:true});
+    assert(!fs.existsSync(workspace),'isolated build cleanup failed');
+  }
+};
+
+test('T07 deterministic isolated index builds',()=>{
+  const first=buildIsolatedIndex();
+  const second=buildIsolatedIndex();
+  [first,second].forEach(({result,records,receipt})=>{
+    assert(result.status===0,`index build failed: ${result.stderr}`);
+    assert(records&&receipt,'index build did not produce records and receipt');
+  });
+  assert(first.records.equals(second.records),'index records differ between isolated builds');
+  assert(first.receipt.equals(second.receipt),'index receipts differ between isolated builds');
+  const failed=buildIsolatedIndex(workspace=>fs.writeFileSync(path.join(workspace,'knowledge/runs/run-example.json'),'{'));
+  assert(failed.result.status!==0,'malformed input did not fail index build');
 });
 
 const report={passed:passes.length,failed:failures.length,passes,failures};
