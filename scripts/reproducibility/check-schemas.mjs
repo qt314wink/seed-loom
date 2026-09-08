@@ -25,6 +25,7 @@ const paths = (await Promise.all(roots.map(findSchemas))).flat().sort();
 for (const path of paths) {
   const schema = JSON.parse(await readFile(path, 'utf8'));
   if (!ajv.validateSchema(schema)) throw new Error(`${path}: ${ajv.errorsText(ajv.errors)}`);
+  ajv.compile(schema);
 }
 if (paths.length === 0) throw new Error('No JSON schemas were found.');
 console.log(`Validated ${paths.length} JSON schemas.`);

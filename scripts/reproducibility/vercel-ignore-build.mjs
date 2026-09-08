@@ -2,7 +2,7 @@
 import { execFileSync } from 'node:child_process';
 
 const deployable = [
-  /^(index\.html|package\.json|package-lock\.json|playwright\.config\.ts|tsconfig\.json|vercel\.json)$/,
+  /^(index\.html|package\.json|package-lock\.json|playwright\.config\.ts|tsconfig\.json|vercel\.json|vite\.config\.[^/]+)$/,
   /^(src|packages\/svg-filter-atlas|tokens)\//
 ];
 
