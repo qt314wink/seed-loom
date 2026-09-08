@@ -32,7 +32,7 @@
     "clean": "node scripts/clean.mjs",
     "catalog": "node scripts/generate-catalog.mjs",
     "validate": "node scripts/validate-recipes.mjs",
-    "build": "npm run clean && npm run catalog && npm run validate && ../../node_modules/.bin/tsc -p tsconfig.json && node scripts/copy-assets.mjs && node scripts/generate-assets.mjs",
+    "build": "npm run clean && npm run catalog && npm run validate && node scripts/run-tsc.mjs -p tsconfig.json && node scripts/copy-assets.mjs && node scripts/generate-assets.mjs",
     "test": "node --test tests/*.test.mjs",
     "check": "npm run build && npm test",
     "prepack": "npm run check"
