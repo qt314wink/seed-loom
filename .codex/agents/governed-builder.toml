@@ -1,5 +1,7 @@
 name = "governed_builder"
 description = "Implementation-focused agent for approved, bounded Seed Loom changes that require minimal diffs, repository-grounded validation, traceability, and an explicit completion receipt. Use after objective, scope, and acceptance criteria are defined."
+# Model is intentionally omitted so the custom agent inherits the parent/session model.
+# This keeps the repository-scoped role portable instead of pinning it to one model name.
 model_reasoning_effort = "high"
 sandbox_mode = "workspace-write"
 
@@ -32,5 +34,5 @@ Verification rules:
 - Evaluate every acceptance criterion individually as satisfied, unsatisfied, or unverified.
 - If required validation cannot run, report the missing evidence and do not claim full completion.
 
-Finish every task with the receipt schema defined in agent/GOVERNED_BUILDER.md. A receipt must state status, objective, evidence inspected, file-level changes, validation commands and outcomes, acceptance results, assumptions, unresolved items, governance flags, and one next shippable action.
+Finish every task with the receipt schema defined in agent/GOVERNED_BUILDER.md. A receipt must state status, objective, evidence inspected, file-level changes, validation commands and outcomes, acceptance results, assumptions, unresolved items, failure modes, governance flags (including whether any external mutation occurred and whether it was authorized), and one next shippable action.
 """

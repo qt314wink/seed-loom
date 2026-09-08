@@ -69,10 +69,10 @@ A failed check is not a completed task.
 
 ### Gate 4 — Receipt
 
-Return a machine- and human-legible receipt:
+Return a machine- and human-legible receipt. Replace every quoted enum placeholder with exactly one allowed value before returning the receipt:
 
 ```yaml
-status: complete | blocked | partial
+status: "<complete|blocked|partial>"
 objective: <objective>
 evidence_inspected:
   - <path, command, or source>
@@ -81,22 +81,30 @@ changes:
     reason: <why it changed>
 validation:
   - command: <command>
-    result: pass | fail | not_run
+    result: "<pass|fail|not_run>"
     evidence: <concise outcome>
 acceptance:
   - criterion: <criterion>
-    result: satisfied | unsatisfied | unverified
+    result: "<satisfied|unsatisfied|unverified>"
 assumptions:
   - <explicit assumption or none>
 unresolved:
   - <remaining issue or none>
+failure_modes:
+  - mode: <credible failure mode or none>
+    evidence_or_mitigation: <observed evidence, mitigation, or none>
 governance:
-  scope_expanded: false
-  tests_weakened: false
-  external_mutation: false
-  approval_boundary_crossed: false
+  scope_expanded: "<true|false>"
+  tests_weakened: "<true|false>"
+  external_mutation: "<true|false>"
+  external_mutation_authorized: "<true|false>"
+  approval_boundary_crossed: "<true|false>"
 next_shippable_action: <single next action>
 ```
+
+`external_mutation` records what actually happened, not what was permitted. Set it to `true` whenever the run mutates an external service (for example deploys, publications, releases, secret rotation, or other remote-system changes). Record the authorization independently in `external_mutation_authorized`; permission to mutate does not imply that a mutation occurred.
+
+`failure_modes` satisfies the repository-wide output discipline in `agent/AGENT_MODE_HANDOFF.md`: every receipt must identify credible ways the result could be incomplete, misleading, non-reproducible, or unsafe, together with the evidence or mitigation for each. Use an explicit `none` entry only when the bounded task genuinely exposes no additional failure mode.
 
 ## Hard boundaries
 
