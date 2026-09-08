@@ -3,7 +3,7 @@ import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import Ajv2020 from 'ajv/dist/2020.js';
 
-const roots = ['schemas', 'packages'];
+const roots = ['schemas', 'packages', 'knowledge', 'initiatives'];
 const ajv = new Ajv2020({ strict: false, validateSchema: true });
 
 async function findSchemas(directory) {
@@ -22,10 +22,17 @@ async function findSchemas(directory) {
 }
 
 const paths = (await Promise.all(roots.map(findSchemas))).flat().sort();
-for (const path of paths) {
-  const schema = JSON.parse(await readFile(path, 'utf8'));
+const schemas = await Promise.all(paths.map(async (path) => [path, JSON.parse(await readFile(path, 'utf8'))]));
+for (const [path, schema] of schemas) {
   if (!ajv.validateSchema(schema)) throw new Error(`${path}: ${ajv.errorsText(ajv.errors)}`);
-  ajv.compile(schema);
+  ajv.addSchema(schema, schema.$id || path);
+}
+for (const [path, schema] of schemas) {
+  try {
+    ajv.getSchema(schema.$id || path);
+  } catch (error) {
+    throw new Error(`${path}: ${error.message}`, { cause: error });
+  }
 }
 if (paths.length === 0) throw new Error('No JSON schemas were found.');
 console.log(`Validated ${paths.length} JSON schemas.`);
