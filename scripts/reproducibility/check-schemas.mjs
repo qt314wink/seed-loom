@@ -29,7 +29,10 @@ for (const [path, schema] of schemas) {
 }
 for (const [path, schema] of schemas) {
   try {
-    ajv.getSchema(schema.$id || path);
+    const validate = ajv.getSchema(schema.$id || path);
+    if (typeof validate !== 'function') {
+      throw new Error('schema did not compile to a validate function');
+    }
   } catch (error) {
     throw new Error(`${path}: ${error.message}`, { cause: error });
   }
