@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_a2abb40cc0c0a126",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-09-09T10:23:51.283859Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "aurora-collage-ui-system",
+    "commit_sha": "2026-09-08T20:33:33Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1279964348,
+    "github_node_id": "R_kgDOTEq0vA",
+    "language": null,
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": "AURORA Collage UI System \u2014 Production-ready Vite React design system with lithographic texture, risograph ink, newspaper collage, watercolor washes, and papercraft assemblage aesthetics.",
+    "pushed_at": "2026-09-08T20:33:33Z",
+    "created_at": "2026-06-25T06:44:12Z",
+    "open_issues_count": 3
+  }
+}
