@@ -1,3 +1,4 @@
+import fs from 'node:fs';
 import path from 'node:path';
 
 // Resolve a raw HTTP request path against a served base directory.
@@ -15,7 +16,15 @@ export function resolveWithin(base, requestPath) {
   }
   const name = decoded === '/' ? 'index.html' : decoded.replace(/^\/+/, '');
   const file = path.resolve(base, name);
-  const rel = path.relative(base, file);
-  if (rel === '' || rel === '..' || rel.startsWith('..' + path.sep) || path.isAbsolute(rel)) return null;
-  return file;
+  const lexicalRel = path.relative(base, file);
+  if (lexicalRel === '' || lexicalRel === '..' || lexicalRel.startsWith('..' + path.sep) || path.isAbsolute(lexicalRel)) return null;
+  try {
+    const realBase = fs.realpathSync(base);
+    const realFile = fs.realpathSync(file);
+    const realRel = path.relative(realBase, realFile);
+    if (realRel === '' || realRel === '..' || realRel.startsWith('..' + path.sep) || path.isAbsolute(realRel)) return null;
+    return realFile;
+  } catch {
+    return null;
+  }
 }

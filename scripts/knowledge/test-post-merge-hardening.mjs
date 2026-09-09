@@ -32,6 +32,16 @@ fs.writeFileSync(path.join(base, 'sub', 'data.json'), '{}');
 const sibling = base + '-evil';
 fs.mkdirSync(sibling, { recursive: true });
 fs.writeFileSync(path.join(sibling, 'secret.txt'), 'nope');
+const outside = path.join(os.tmpdir(), 'hardening-wb-outside-secret.txt');
+fs.writeFileSync(outside, 'nope');
+const link = path.join(base, 'linked-secret.txt');
+let symlinkCreated = false;
+try {
+  fs.symlinkSync(outside, link, 'file');
+  symlinkCreated = true;
+} catch {
+  // Symlink creation may be unavailable on Windows without developer mode.
+}
 
 check('T1.1 root maps to index.html', resolveWithin(base, '/') === path.join(base, 'index.html'));
 check('T1.2 nested file allowed', resolveWithin(base, '/sub/data.json') === path.join(base, 'sub', 'data.json'));
@@ -47,8 +57,10 @@ check('T1.8 invalid percent-encoding rejected', resolveWithin(base, '/%zz') === 
   const r = resolveWithin(base, '/..%5c..%5csecret');
   check('T1.9 encoded backslash cannot escape base', r === null || r.startsWith(base + path.sep));
 }
+check('T1.10 symlink escape rejected', !symlinkCreated || resolveWithin(base, '/linked-secret.txt') === null);
 fs.rmSync(base, { recursive: true, force: true });
 fs.rmSync(sibling, { recursive: true, force: true });
+fs.rmSync(outside, { force: true });
 
 // --- 2. emit-jsonl ---
 const fix = fs.mkdtempSync(path.join(os.tmpdir(), 'hardening-jsonl-'));
