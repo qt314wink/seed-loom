@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-10:document-to-evidence-artifact",
+  "type": "Observation",
+  "capturedAt": "2026-09-10T23:21:48Z",
+  "claim": "Adobe's Acrobat Productivity Agent turns governed document collections into cited reports, structured data, audio and presentations.",
+  "verifiedFacts": [
+    "Adobe announced cross-document trusted collections, clickable citations, structured extraction, and transformations from source documents into visual, audio and presentation outputs."
+  ],
+  "inference": [
+    "Evidence systems can preserve lineage while compiling one governed source corpus into multiple decision and communication artifacts.",
+    "Consultancy: evidence-to-brief, deck and decision-artifact workflows with verification checkpoints.",
+    "Disposition: Seed Loom CORE; Melodyfire PRODUCTIZE; Observation Ad Pipeline PRODUCTIZE."
+  ],
+  "significance": "The source-to-output boundary is becoming a product surface rather than merely a reporting step.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "sourceRefs": [
+    "source:adobe:acrobat-agent:2026-09-09"
+  ],
+  "actorRefs": [
+    "actor:adobe:provider-builder",
+    "actor:enterprise-document-teams:buyer"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/melodyfire",
+    "qt314wink/observation-ad-pipeline"
+  ],
+  "assumptions": [
+    "Source-preserving transformations materially reduce review friction."
+  ],
+  "knownLimitations": [
+    "Independent faithfulness, error and review-time measurements are unavailable."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

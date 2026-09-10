@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-09-10",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-09-08T23:21:48Z",
+    "to": "2026-09-10T23:21:48Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-09-10:regulated-data-workflows",
+    "obs:nightly:2026-09-10:semi-custom-inference-stack",
+    "obs:nightly:2026-09-10:water-intelligence",
+    "obs:nightly:2026-09-10:ontology-operational-intelligence",
+    "obs:nightly:2026-09-10:document-to-evidence-artifact"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "pattern:governed-context-as-product-surface",
+    "pattern:bounded-specialization-on-shared-substrates",
+    "pattern:operational-ecology-and-ontology"
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-09-10:1",
+    "rel:nightly:2026-09-10:2",
+    "rel:nightly:2026-09-10:3",
+    "rel:nightly:2026-09-10:4",
+    "rel:nightly:2026-09-10:5"
+  ],
+  "contradictions": [
+    "contradiction:interoperability-can-deepen-platform-dependence",
+    "contradiction:ecological-outcome-claims-remain-vendor-reported"
+  ],
+  "opportunities": [
+    "opportunity:regulated-ai-evidence",
+    "opportunity:modular-boundary-review",
+    "opportunity:regenerative-operations-intelligence",
+    "opportunity:operational-ontology",
+    "opportunity:evidence-artifact-compiler"
+  ],
+  "proposedExperiments": [
+    "experiment:source-entitlement-lineage-v0",
+    "experiment:evidence-artifact-compiler-v0"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false
+    },
+    {
+      "status": "proposed",
+      "executed": false
+    }
+  ],
+  "noChangeReceipts": [
+    "Observation Ad Pipeline: no default-branch commit in window; PR4 remains open on historical base.",
+    "LithoMemphis/nextjs-boilerplate and Kozo Dreams: no default-branch commit in window.",
+    "Omni-Loom, AETHER and Melodyfire: no default-branch commit in window."
+  ],
+  "collectionFailures": [
+    "Seed Loom main has no nightly-knowledge-ingest workflow; PR45 remains draft/unmerged.",
+    "Canonical ingest dry-run and normalizedDigest were not executed in this runtime.",
+    "Issue #24 delivered-bundle two-isolated-run proof is not verified on main.",
+    "OpenAI finance launch timing is sourced to Reuters; official industry page corroborates capability but lacks the launch timestamp.",
+    "Closed Observation schema forbids consultancyImplications/projectDispositionImplications; preserved in top-level observationExtensions and mirrored into inference.",
+    "Canonical ingest script does not persist top-level socraticAssessments."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-10:experiment",
+  "runId": "run:nightly:2026-09-10",
+  "stage": "experiment",
+  "status": "deferred",
+  "startedAt": "2026-09-10T23:21:48Z",
+  "completedAt": "2026-09-10T23:21:48Z",
+  "inputs": [
+    "experiment-proposals"
+  ],
+  "outputs": [
+    "no-executed-experiment"
+  ],
+  "checks": [
+    {
+      "name": "execution-block",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "proposal only"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "bounded experiment design only",
+    "inputHashes": [
+      "ef0aeaffbdad2701e416c44ab2969428cc6018284ca6cf90bb69fec4caf386ec"
+    ]
+  }
+}

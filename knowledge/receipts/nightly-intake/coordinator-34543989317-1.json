@@ -1,0 +1,55 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-09-10T23:51:44.093Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-09-10",
+      "bundlePath": "knowledge/intake/nightly/2026-09-10/nightly-run-bundle-2026-09-10.json",
+      "bundleSha256": "35723cf256d336eece3f9b3c3ffa14d9db56d12e403a34c9d4040403d858ab3c",
+      "normalizedDigest": "e7a8aa83dea4fbe3997756c66d35b85031343650714c036035f8f3b94e3e4c3e",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-reuters-openai-finance-2026-09-10.json",
+        "knowledge/sources/source-openai-financial-services-2026-09-10.json",
+        "knowledge/sources/source-nvidia-dmatrix-nvlink-2026-09-10.json",
+        "knowledge/sources/source-wint-series-d-2026-09-09.json",
+        "knowledge/sources/source-nvidia-palantir-supply-chain-2026-09-10.json",
+        "knowledge/sources/source-adobe-acrobat-agent-2026-09-09.json",
+        "knowledge/observations/obs-nightly-2026-09-10-regulated-data-workflows.json",
+        "knowledge/observations/obs-nightly-2026-09-10-semi-custom-inference-stack.json",
+        "knowledge/observations/obs-nightly-2026-09-10-water-intelligence.json",
+        "knowledge/observations/obs-nightly-2026-09-10-ontology-operational-intelligence.json",
+        "knowledge/observations/obs-nightly-2026-09-10-document-to-evidence-artifact.json",
+        "knowledge/relationships/rel-nightly-2026-09-10-1.json",
+        "knowledge/relationships/rel-nightly-2026-09-10-2.json",
+        "knowledge/relationships/rel-nightly-2026-09-10-3.json",
+        "knowledge/relationships/rel-nightly-2026-09-10-4.json",
+        "knowledge/relationships/rel-nightly-2026-09-10-5.json",
+        "knowledge/runs/run-nightly-2026-09-10.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-10-collect.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-10-vet.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-10-normalize.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-10-observe.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-10-inquire.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-10-interpret.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-10-relate.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-10-pattern.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-10-opportunity.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-10-strategy.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-10-experiment.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-10-genesis.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-10-publish.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-09-10-ingest.json",
+      "generatedRecordCount": 30
+    }
+  ]
+}

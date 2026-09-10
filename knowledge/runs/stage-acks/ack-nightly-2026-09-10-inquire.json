@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-10:inquire",
+  "runId": "run:nightly:2026-09-10",
+  "stage": "inquire",
+  "status": "passed",
+  "startedAt": "2026-09-10T23:21:48Z",
+  "completedAt": "2026-09-10T23:21:48Z",
+  "inputs": [
+    "five-candidate-observations"
+  ],
+  "outputs": [
+    "five-socratic-assessments"
+  ],
+  "checks": [
+    {
+      "name": "ten-question-descent",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "stop at evidence boundary"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "bounded Socratic descent",
+    "inputHashes": [
+      "f8f2d5a00b569f07d7cca84538139892bbfb1c01ef41828689e5ebd3a1b577bf"
+    ]
+  }
+}

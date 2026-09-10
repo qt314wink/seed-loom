@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-10:ontology-operational-intelligence",
+  "type": "Observation",
+  "capturedAt": "2026-09-10T23:21:48Z",
+  "claim": "NVIDIA and Palantir are deploying ontology-grounded AI inside NVIDIA's own supply chain.",
+  "verifiedFacts": [
+    "NVIDIA and Palantir announced a stack combining Foundry/AIP, Palantir Ontology and NVIDIA Nemotron models, first deployed within NVIDIA's supply chain."
+  ],
+  "inference": [
+    "Knowledge graphs become commercially stronger when linked to operational entities, constraints, decisions and owned data rather than passive semantic maps.",
+    "Consultancy: operational ontology and decision-lineage prototypes.",
+    "Disposition: Seed Loom CORE; Project Constellation PRODUCTIZE; Agent Runtime INCUBATE."
+  ],
+  "significance": "A major supplier is using its own operations as the first proving ground for ontology-grounded AI.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "sourceRefs": [
+    "source:nvidia:palantir-supply-chain:2026-09-10"
+  ],
+  "actorRefs": [
+    "actor:nvidia:buyer-builder",
+    "actor:palantir:supplier-builder",
+    "actor:supply-chain-operators:participant"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/project-constellation",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "Ontology grounding materially contributes to operational value."
+  ],
+  "knownLimitations": [
+    "No independent ROI, reliability or decision-quality measurements were published."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

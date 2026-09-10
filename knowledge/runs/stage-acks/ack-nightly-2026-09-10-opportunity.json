@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-10:opportunity",
+  "runId": "run:nightly:2026-09-10",
+  "stage": "opportunity",
+  "status": "passed",
+  "startedAt": "2026-09-10T23:21:48Z",
+  "completedAt": "2026-09-10T23:21:48Z",
+  "inputs": [
+    "candidate-patterns",
+    "repository-watch"
+  ],
+  "outputs": [
+    "five-opportunity-candidates"
+  ],
+  "checks": [
+    {
+      "name": "consultancy-usecase-bounded",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "no outreach or spend"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "problem-to-offer mapping",
+    "inputHashes": [
+      "b220c9db3f8afca04d24eb5713235046f9f61e7598d8e5c1504a90269e2a7508"
+    ]
+  }
+}
