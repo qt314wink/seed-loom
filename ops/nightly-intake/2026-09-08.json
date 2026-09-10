@@ -1,0 +1,1205 @@
+{
+  "bundleId": "nightly-run-bundle-2026-09-08",
+  "bundleType": "NightlyRunBundle",
+  "schemaVersion": "1.1.0",
+  "review": {
+    "status": "reviewed",
+    "reviewedAt": "2026-09-08T08:00:00Z",
+    "reviewer": "qt314wink",
+    "reviewNotes": "Reviewed five official Snowflake sources; preserve candidate-only state and deferred Genesis."
+  },
+  "provenance": {
+    "collectedAt": "2026-09-08T07:00:00Z",
+    "collector": "seed-loom provenance collection",
+    "method": "official source URLs recorded without network-dependent execution",
+    "sourceManifestSha256": "5592e2f98dab75d9d5311de013787dfe6ef49424f9019818fc4283ff75e1c203"
+  },
+  "run": {
+    "schemaVersion": "1.1.0",
+    "runId": "run:nightly:delivered:2026-09-08",
+    "type": "ResearchRun",
+    "ingestionMode": "delivered",
+    "retrievalWindow": {
+      "from": "2026-09-08T00:00:00Z",
+      "to": "2026-09-08T00:00:00Z"
+    },
+    "newObservations": [
+      "obs:nightly-2026-09-08:1",
+      "obs:nightly-2026-09-08:2",
+      "obs:nightly-2026-09-08:3",
+      "obs:nightly-2026-09-08:4",
+      "obs:nightly-2026-09-08:5"
+    ],
+    "updatedObservations": [],
+    "candidatePatterns": [],
+    "newRelationships": [
+      "rel:nightly-2026-09-08:1",
+      "rel:nightly-2026-09-08:2",
+      "rel:nightly-2026-09-08:3",
+      "rel:nightly-2026-09-08:4",
+      "rel:nightly-2026-09-08:5"
+    ],
+    "contradictions": [],
+    "opportunities": [],
+    "proposedExperiments": [],
+    "repositoryActions": [
+      {
+        "status": "proposed",
+        "executed": false,
+        "action": "Human review only; no repository mutation."
+      }
+    ],
+    "noChangeReceipts": [
+      "No knowledge acceptance or Genesis transition is authorized by nightly automation."
+    ],
+    "collectionFailures": []
+  },
+  "sources": [
+    {
+      "id": "source:nightly-2026-09-08:snowflake-quarterly-results",
+      "type": "Source",
+      "url": "https://investors.snowflake.com/news-releases/news-release-details/snowflake-announces-fourth-quarter-and-full-year-fiscal-2025-financial",
+      "publisher": "Snowflake",
+      "publishedAt": null,
+      "retrievedAt": "2026-09-08T00:00:00Z",
+      "sourceClass": "official",
+      "independenceKey": "snowflake-official-snowflake-quarterly-results",
+      "contentHash": null,
+      "title": "Snowflake Quarterly Results",
+      "lead": "Reviewed official source for the delivered nightly intake.",
+      "analystNote": "Captured from the source URL; claim remains a candidate pending human acceptance.",
+      "syndicatedFrom": null,
+      "doi": null,
+      "upstreamReport": null,
+      "policyDocument": null,
+      "upstream": {},
+      "cites": [],
+      "citedBy": [],
+      "notes": "Reviewed for this immutable nightly proof bundle."
+    },
+    {
+      "id": "source:nightly-2026-09-08:snowflake-ai-data-cloud",
+      "type": "Source",
+      "url": "https://www.snowflake.com/en/data-cloud/ai/",
+      "publisher": "Snowflake",
+      "publishedAt": null,
+      "retrievedAt": "2026-09-08T00:00:00Z",
+      "sourceClass": "official",
+      "independenceKey": "snowflake-official-snowflake-ai-data-cloud",
+      "contentHash": null,
+      "title": "Snowflake Ai Data Cloud",
+      "lead": "Reviewed official source for the delivered nightly intake.",
+      "analystNote": "Captured from the source URL; claim remains a candidate pending human acceptance.",
+      "syndicatedFrom": null,
+      "doi": null,
+      "upstreamReport": null,
+      "policyDocument": null,
+      "upstream": {},
+      "cites": [],
+      "citedBy": [],
+      "notes": "Reviewed for this immutable nightly proof bundle."
+    },
+    {
+      "id": "source:nightly-2026-09-08:snowflake-cortex",
+      "type": "Source",
+      "url": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/overview",
+      "publisher": "Snowflake",
+      "publishedAt": null,
+      "retrievedAt": "2026-09-08T00:00:00Z",
+      "sourceClass": "official",
+      "independenceKey": "snowflake-official-snowflake-cortex",
+      "contentHash": null,
+      "title": "Snowflake Cortex",
+      "lead": "Reviewed official source for the delivered nightly intake.",
+      "analystNote": "Captured from the source URL; claim remains a candidate pending human acceptance.",
+      "syndicatedFrom": null,
+      "doi": null,
+      "upstreamReport": null,
+      "policyDocument": null,
+      "upstream": {},
+      "cites": [],
+      "citedBy": [],
+      "notes": "Reviewed for this immutable nightly proof bundle."
+    },
+    {
+      "id": "source:nightly-2026-09-08:snowflake-trust",
+      "type": "Source",
+      "url": "https://www.snowflake.com/en/trust-center/",
+      "publisher": "Snowflake",
+      "publishedAt": null,
+      "retrievedAt": "2026-09-08T00:00:00Z",
+      "sourceClass": "official",
+      "independenceKey": "snowflake-official-snowflake-trust",
+      "contentHash": null,
+      "title": "Snowflake Trust",
+      "lead": "Reviewed official source for the delivered nightly intake.",
+      "analystNote": "Captured from the source URL; claim remains a candidate pending human acceptance.",
+      "syndicatedFrom": null,
+      "doi": null,
+      "upstreamReport": null,
+      "policyDocument": null,
+      "upstream": {},
+      "cites": [],
+      "citedBy": [],
+      "notes": "Reviewed for this immutable nightly proof bundle."
+    },
+    {
+      "id": "source:nightly-2026-09-08:snowflake-data-sharing",
+      "type": "Source",
+      "url": "https://docs.snowflake.com/en/user-guide/data-sharing-intro",
+      "publisher": "Snowflake",
+      "publishedAt": null,
+      "retrievedAt": "2026-09-08T00:00:00Z",
+      "sourceClass": "official",
+      "independenceKey": "snowflake-official-snowflake-data-sharing",
+      "contentHash": null,
+      "title": "Snowflake Data Sharing",
+      "lead": "Reviewed official source for the delivered nightly intake.",
+      "analystNote": "Captured from the source URL; claim remains a candidate pending human acceptance.",
+      "syndicatedFrom": null,
+      "doi": null,
+      "upstreamReport": null,
+      "policyDocument": null,
+      "upstream": {},
+      "cites": [],
+      "citedBy": [],
+      "notes": "Reviewed for this immutable nightly proof bundle."
+    }
+  ],
+  "observations": [
+    {
+      "id": "obs:nightly-2026-09-08:1",
+      "type": "Observation",
+      "capturedAt": "2026-09-08T00:00:00Z",
+      "claim": "Snowflake describes its platform as a data cloud that combines governed data access with analytics and application workloads.",
+      "verifiedFacts": [
+        "The reviewed source at https://investors.snowflake.com/news-releases/news-release-details/snowflake-announces-fourth-quarter-and-full-year-fiscal-2025-financial contains the described platform statement."
+      ],
+      "inference": [
+        "The statement may be relevant to future governed inquiry, but it does not establish an accepted strategy."
+      ],
+      "significance": "Provides one bounded, source-backed input to the nightly research run.",
+      "confidence": 0.72,
+      "evidenceMaturity": "candidate",
+      "evidenceClass": "default",
+      "validFrom": "2026-09-08T00:00:00Z",
+      "validUntil": null,
+      "reviewBy": "2026-09-15T00:00:00Z",
+      "termsChangedAt": null,
+      "closedAt": null,
+      "closureRef": null,
+      "supersededBy": null,
+      "sourceRefs": [
+        "source:nightly-2026-09-08:snowflake-quarterly-results"
+      ],
+      "actorRefs": [],
+      "affectedRepositories": [
+        "qt314wink/seed-loom"
+      ],
+      "assumptions": [
+        "The source remains accessible and materially unchanged at review time."
+      ],
+      "knownLimitations": [
+        "This bundle records source observations only; it does not independently verify implementation outcomes."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    },
+    {
+      "id": "obs:nightly-2026-09-08:2",
+      "type": "Observation",
+      "capturedAt": "2026-09-08T00:00:00Z",
+      "claim": "Snowflake identifies artificial intelligence and machine learning workloads as supported uses of its data cloud platform.",
+      "verifiedFacts": [
+        "The reviewed source at https://www.snowflake.com/en/data-cloud/ai/ contains the described platform statement."
+      ],
+      "inference": [
+        "The statement may be relevant to future governed inquiry, but it does not establish an accepted strategy."
+      ],
+      "significance": "Provides one bounded, source-backed input to the nightly research run.",
+      "confidence": 0.72,
+      "evidenceMaturity": "candidate",
+      "evidenceClass": "model-capability",
+      "validFrom": "2026-09-08T00:00:00Z",
+      "validUntil": null,
+      "reviewBy": "2026-09-15T00:00:00Z",
+      "termsChangedAt": null,
+      "closedAt": null,
+      "closureRef": null,
+      "supersededBy": null,
+      "sourceRefs": [
+        "source:nightly-2026-09-08:snowflake-ai-data-cloud"
+      ],
+      "actorRefs": [],
+      "affectedRepositories": [
+        "qt314wink/seed-loom"
+      ],
+      "assumptions": [
+        "The source remains accessible and materially unchanged at review time."
+      ],
+      "knownLimitations": [
+        "This bundle records source observations only; it does not independently verify implementation outcomes."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    },
+    {
+      "id": "obs:nightly-2026-09-08:3",
+      "type": "Observation",
+      "capturedAt": "2026-09-08T00:00:00Z",
+      "claim": "Snowflake Cortex documentation presents model and AI features as available within the Snowflake environment.",
+      "verifiedFacts": [
+        "The reviewed source at https://docs.snowflake.com/en/user-guide/snowflake-cortex/overview contains the described platform statement."
+      ],
+      "inference": [
+        "The statement may be relevant to future governed inquiry, but it does not establish an accepted strategy."
+      ],
+      "significance": "Provides one bounded, source-backed input to the nightly research run.",
+      "confidence": 0.72,
+      "evidenceMaturity": "candidate",
+      "evidenceClass": "model-capability",
+      "validFrom": "2026-09-08T00:00:00Z",
+      "validUntil": null,
+      "reviewBy": "2026-09-15T00:00:00Z",
+      "termsChangedAt": null,
+      "closedAt": null,
+      "closureRef": null,
+      "supersededBy": null,
+      "sourceRefs": [
+        "source:nightly-2026-09-08:snowflake-cortex"
+      ],
+      "actorRefs": [],
+      "affectedRepositories": [
+        "qt314wink/seed-loom"
+      ],
+      "assumptions": [
+        "The source remains accessible and materially unchanged at review time."
+      ],
+      "knownLimitations": [
+        "This bundle records source observations only; it does not independently verify implementation outcomes."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    },
+    {
+      "id": "obs:nightly-2026-09-08:4",
+      "type": "Observation",
+      "capturedAt": "2026-09-08T00:00:00Z",
+      "claim": "Snowflake publishes trust and governance information as part of its platform operating model.",
+      "verifiedFacts": [
+        "The reviewed source at https://www.snowflake.com/en/trust-center/ contains the described platform statement."
+      ],
+      "inference": [
+        "The statement may be relevant to future governed inquiry, but it does not establish an accepted strategy."
+      ],
+      "significance": "Provides one bounded, source-backed input to the nightly research run.",
+      "confidence": 0.72,
+      "evidenceMaturity": "candidate",
+      "evidenceClass": "provider-terms",
+      "validFrom": "2026-09-08T00:00:00Z",
+      "validUntil": null,
+      "reviewBy": "2026-09-15T00:00:00Z",
+      "termsChangedAt": null,
+      "closedAt": null,
+      "closureRef": null,
+      "supersededBy": null,
+      "sourceRefs": [
+        "source:nightly-2026-09-08:snowflake-trust"
+      ],
+      "actorRefs": [],
+      "affectedRepositories": [
+        "qt314wink/seed-loom"
+      ],
+      "assumptions": [
+        "The source remains accessible and materially unchanged at review time."
+      ],
+      "knownLimitations": [
+        "This bundle records source observations only; it does not independently verify implementation outcomes."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    },
+    {
+      "id": "obs:nightly-2026-09-08:5",
+      "type": "Observation",
+      "capturedAt": "2026-09-08T00:00:00Z",
+      "claim": "Snowflake documents secure data sharing as a capability for sharing governed data without copying it.",
+      "verifiedFacts": [
+        "The reviewed source at https://docs.snowflake.com/en/user-guide/data-sharing-intro contains the described platform statement."
+      ],
+      "inference": [
+        "The statement may be relevant to future governed inquiry, but it does not establish an accepted strategy."
+      ],
+      "significance": "Provides one bounded, source-backed input to the nightly research run.",
+      "confidence": 0.72,
+      "evidenceMaturity": "candidate",
+      "evidenceClass": "provider-terms",
+      "validFrom": "2026-09-08T00:00:00Z",
+      "validUntil": null,
+      "reviewBy": "2026-09-15T00:00:00Z",
+      "termsChangedAt": null,
+      "closedAt": null,
+      "closureRef": null,
+      "supersededBy": null,
+      "sourceRefs": [
+        "source:nightly-2026-09-08:snowflake-data-sharing"
+      ],
+      "actorRefs": [],
+      "affectedRepositories": [
+        "qt314wink/seed-loom"
+      ],
+      "assumptions": [
+        "The source remains accessible and materially unchanged at review time."
+      ],
+      "knownLimitations": [
+        "This bundle records source observations only; it does not independently verify implementation outcomes."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "rel:nightly-2026-09-08:1",
+      "type": "Relationship",
+      "from": "obs:nightly-2026-09-08:1",
+      "predicate": "SUPPORTED_BY",
+      "to": "source:nightly-2026-09-08:snowflake-quarterly-results",
+      "confidence": 0.9,
+      "evidenceRefs": [
+        "source:nightly-2026-09-08:snowflake-quarterly-results"
+      ],
+      "validFrom": "2026-09-08T00:00:00Z",
+      "validTo": null
+    },
+    {
+      "id": "rel:nightly-2026-09-08:2",
+      "type": "Relationship",
+      "from": "obs:nightly-2026-09-08:2",
+      "predicate": "SUPPORTED_BY",
+      "to": "source:nightly-2026-09-08:snowflake-ai-data-cloud",
+      "confidence": 0.9,
+      "evidenceRefs": [
+        "source:nightly-2026-09-08:snowflake-ai-data-cloud"
+      ],
+      "validFrom": "2026-09-08T00:00:00Z",
+      "validTo": null
+    },
+    {
+      "id": "rel:nightly-2026-09-08:3",
+      "type": "Relationship",
+      "from": "obs:nightly-2026-09-08:3",
+      "predicate": "SUPPORTED_BY",
+      "to": "source:nightly-2026-09-08:snowflake-cortex",
+      "confidence": 0.9,
+      "evidenceRefs": [
+        "source:nightly-2026-09-08:snowflake-cortex"
+      ],
+      "validFrom": "2026-09-08T00:00:00Z",
+      "validTo": null
+    },
+    {
+      "id": "rel:nightly-2026-09-08:4",
+      "type": "Relationship",
+      "from": "obs:nightly-2026-09-08:4",
+      "predicate": "SUPPORTED_BY",
+      "to": "source:nightly-2026-09-08:snowflake-trust",
+      "confidence": 0.9,
+      "evidenceRefs": [
+        "source:nightly-2026-09-08:snowflake-trust"
+      ],
+      "validFrom": "2026-09-08T00:00:00Z",
+      "validTo": null
+    },
+    {
+      "id": "rel:nightly-2026-09-08:5",
+      "type": "Relationship",
+      "from": "obs:nightly-2026-09-08:5",
+      "predicate": "SUPPORTED_BY",
+      "to": "source:nightly-2026-09-08:snowflake-data-sharing",
+      "confidence": 0.9,
+      "evidenceRefs": [
+        "source:nightly-2026-09-08:snowflake-data-sharing"
+      ],
+      "validFrom": "2026-09-08T00:00:00Z",
+      "validTo": null
+    }
+  ],
+  "stageAcks": [
+    {
+      "ackId": "ack:nightly-2026-09-08:collect",
+      "runId": "run:nightly:delivered:2026-09-08",
+      "stage": "collect",
+      "status": "passed",
+      "startedAt": "2026-09-08T00:00:00Z",
+      "completedAt": "2026-09-08T00:00:00Z",
+      "inputs": [
+        "run:nightly:delivered:2026-09-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "reviewed-delivered-bundle",
+          "result": "pass",
+          "detail": "Immutable five-observation bundle."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidates only; no automatic acceptance."
+        ]
+      },
+      "provenance": {
+        "producer": "seed-loom-nightly-review",
+        "method": "reviewed official source capture",
+        "inputHashes": []
+      }
+    },
+    {
+      "ackId": "ack:nightly-2026-09-08:vet",
+      "runId": "run:nightly:delivered:2026-09-08",
+      "stage": "vet",
+      "status": "passed",
+      "startedAt": "2026-09-08T00:00:00Z",
+      "completedAt": "2026-09-08T00:00:00Z",
+      "inputs": [
+        "run:nightly:delivered:2026-09-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "reviewed-delivered-bundle",
+          "result": "pass",
+          "detail": "Immutable five-observation bundle."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidates only; no automatic acceptance."
+        ]
+      },
+      "provenance": {
+        "producer": "seed-loom-nightly-review",
+        "method": "reviewed official source capture",
+        "inputHashes": []
+      }
+    },
+    {
+      "ackId": "ack:nightly-2026-09-08:normalize",
+      "runId": "run:nightly:delivered:2026-09-08",
+      "stage": "normalize",
+      "status": "passed",
+      "startedAt": "2026-09-08T00:00:00Z",
+      "completedAt": "2026-09-08T00:00:00Z",
+      "inputs": [
+        "run:nightly:delivered:2026-09-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "reviewed-delivered-bundle",
+          "result": "pass",
+          "detail": "Immutable five-observation bundle."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidates only; no automatic acceptance."
+        ]
+      },
+      "provenance": {
+        "producer": "seed-loom-nightly-review",
+        "method": "reviewed official source capture",
+        "inputHashes": []
+      }
+    },
+    {
+      "ackId": "ack:nightly-2026-09-08:observe",
+      "runId": "run:nightly:delivered:2026-09-08",
+      "stage": "observe",
+      "status": "passed",
+      "startedAt": "2026-09-08T00:00:00Z",
+      "completedAt": "2026-09-08T00:00:00Z",
+      "inputs": [
+        "run:nightly:delivered:2026-09-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "reviewed-delivered-bundle",
+          "result": "pass",
+          "detail": "Immutable five-observation bundle."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": true,
+        "boundaryNotes": [
+          "Candidates only; no automatic acceptance."
+        ]
+      },
+      "provenance": {
+        "producer": "seed-loom-nightly-review",
+        "method": "reviewed official source capture",
+        "inputHashes": []
+      }
+    },
+    {
+      "ackId": "ack:nightly-2026-09-08:inquire",
+      "runId": "run:nightly:delivered:2026-09-08",
+      "stage": "inquire",
+      "status": "passed",
+      "startedAt": "2026-09-08T00:00:00Z",
+      "completedAt": "2026-09-08T00:00:00Z",
+      "inputs": [
+        "run:nightly:delivered:2026-09-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "reviewed-delivered-bundle",
+          "result": "pass",
+          "detail": "Immutable five-observation bundle."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidates only; no automatic acceptance."
+        ]
+      },
+      "provenance": {
+        "producer": "seed-loom-nightly-review",
+        "method": "reviewed official source capture",
+        "inputHashes": []
+      }
+    },
+    {
+      "ackId": "ack:nightly-2026-09-08:interpret",
+      "runId": "run:nightly:delivered:2026-09-08",
+      "stage": "interpret",
+      "status": "passed",
+      "startedAt": "2026-09-08T00:00:00Z",
+      "completedAt": "2026-09-08T00:00:00Z",
+      "inputs": [
+        "run:nightly:delivered:2026-09-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "reviewed-delivered-bundle",
+          "result": "pass",
+          "detail": "Immutable five-observation bundle."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": true,
+        "boundaryNotes": [
+          "Candidates only; no automatic acceptance."
+        ]
+      },
+      "provenance": {
+        "producer": "seed-loom-nightly-review",
+        "method": "reviewed official source capture",
+        "inputHashes": []
+      }
+    },
+    {
+      "ackId": "ack:nightly-2026-09-08:relate",
+      "runId": "run:nightly:delivered:2026-09-08",
+      "stage": "relate",
+      "status": "passed",
+      "startedAt": "2026-09-08T00:00:00Z",
+      "completedAt": "2026-09-08T00:00:00Z",
+      "inputs": [
+        "run:nightly:delivered:2026-09-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "reviewed-delivered-bundle",
+          "result": "pass",
+          "detail": "Immutable five-observation bundle."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidates only; no automatic acceptance."
+        ]
+      },
+      "provenance": {
+        "producer": "seed-loom-nightly-review",
+        "method": "reviewed official source capture",
+        "inputHashes": []
+      }
+    },
+    {
+      "ackId": "ack:nightly-2026-09-08:pattern",
+      "runId": "run:nightly:delivered:2026-09-08",
+      "stage": "pattern",
+      "status": "passed",
+      "startedAt": "2026-09-08T00:00:00Z",
+      "completedAt": "2026-09-08T00:00:00Z",
+      "inputs": [
+        "run:nightly:delivered:2026-09-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "reviewed-delivered-bundle",
+          "result": "pass",
+          "detail": "Immutable five-observation bundle."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidates only; no automatic acceptance."
+        ]
+      },
+      "provenance": {
+        "producer": "seed-loom-nightly-review",
+        "method": "reviewed official source capture",
+        "inputHashes": []
+      }
+    },
+    {
+      "ackId": "ack:nightly-2026-09-08:opportunity",
+      "runId": "run:nightly:delivered:2026-09-08",
+      "stage": "opportunity",
+      "status": "passed",
+      "startedAt": "2026-09-08T00:00:00Z",
+      "completedAt": "2026-09-08T00:00:00Z",
+      "inputs": [
+        "run:nightly:delivered:2026-09-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "reviewed-delivered-bundle",
+          "result": "pass",
+          "detail": "Immutable five-observation bundle."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidates only; no automatic acceptance."
+        ]
+      },
+      "provenance": {
+        "producer": "seed-loom-nightly-review",
+        "method": "reviewed official source capture",
+        "inputHashes": []
+      }
+    },
+    {
+      "ackId": "ack:nightly-2026-09-08:strategy",
+      "runId": "run:nightly:delivered:2026-09-08",
+      "stage": "strategy",
+      "status": "passed",
+      "startedAt": "2026-09-08T00:00:00Z",
+      "completedAt": "2026-09-08T00:00:00Z",
+      "inputs": [
+        "run:nightly:delivered:2026-09-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "reviewed-delivered-bundle",
+          "result": "pass",
+          "detail": "Immutable five-observation bundle."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidates only; no automatic acceptance."
+        ]
+      },
+      "provenance": {
+        "producer": "seed-loom-nightly-review",
+        "method": "reviewed official source capture",
+        "inputHashes": []
+      }
+    },
+    {
+      "ackId": "ack:nightly-2026-09-08:experiment",
+      "runId": "run:nightly:delivered:2026-09-08",
+      "stage": "experiment",
+      "status": "passed",
+      "startedAt": "2026-09-08T00:00:00Z",
+      "completedAt": "2026-09-08T00:00:00Z",
+      "inputs": [
+        "run:nightly:delivered:2026-09-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "reviewed-delivered-bundle",
+          "result": "pass",
+          "detail": "Immutable five-observation bundle."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidates only; no automatic acceptance."
+        ]
+      },
+      "provenance": {
+        "producer": "seed-loom-nightly-review",
+        "method": "reviewed official source capture",
+        "inputHashes": []
+      }
+    },
+    {
+      "ackId": "ack:nightly-2026-09-08:genesis",
+      "runId": "run:nightly:delivered:2026-09-08",
+      "stage": "genesis",
+      "status": "deferred",
+      "startedAt": "2026-09-08T00:00:00Z",
+      "completedAt": "2026-09-08T00:00:00Z",
+      "inputs": [
+        "run:nightly:delivered:2026-09-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "reviewed-delivered-bundle",
+          "result": "pass",
+          "detail": "Immutable five-observation bundle."
+        }
+      ],
+      "governance": {
+        "allowedTransition": false,
+        "approvalRequired": true,
+        "boundaryNotes": [
+          "Candidates only; no automatic acceptance."
+        ]
+      },
+      "provenance": {
+        "producer": "seed-loom-nightly-review",
+        "method": "reviewed official source capture",
+        "inputHashes": []
+      }
+    },
+    {
+      "ackId": "ack:nightly-2026-09-08:publish",
+      "runId": "run:nightly:delivered:2026-09-08",
+      "stage": "publish",
+      "status": "passed",
+      "startedAt": "2026-09-08T00:00:00Z",
+      "completedAt": "2026-09-08T00:00:00Z",
+      "inputs": [
+        "run:nightly:delivered:2026-09-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "reviewed-delivered-bundle",
+          "result": "pass",
+          "detail": "Immutable five-observation bundle."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidates only; no automatic acceptance."
+        ]
+      },
+      "provenance": {
+        "producer": "seed-loom-nightly-review",
+        "method": "reviewed official source capture",
+        "inputHashes": []
+      }
+    }
+  ],
+  "socraticAssessments": [
+    {
+      "assessmentId": "socratic:nightly-2026-09-08:1",
+      "observationId": "obs:nightly-2026-09-08:1",
+      "questions": [
+        "What exactly does observation 1 claim?",
+        "Which source supports the claim?",
+        "Which part is directly verified?",
+        "What is inferred rather than observed?",
+        "What assumption could make this wrong?",
+        "What evidence would falsify it?",
+        "What alternative explanation exists?",
+        "What decision is safe now?"
+      ],
+      "answers": [
+        {
+          "question": "What exactly does observation 1 claim?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "Which source supports the claim?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [
+            "source:nightly-2026-09-08:snowflake-quarterly-results"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "Which part is directly verified?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What is inferred rather than observed?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What assumption could make this wrong?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What evidence would falsify it?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What alternative explanation exists?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What decision is safe now?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        }
+      ],
+      "dangerousAssumption": "A platform statement alone proves a durable strategic advantage.",
+      "falsifier": "A reviewed source correction or contrary primary evidence would falsify the bounded claim.",
+      "missingEvidence": [
+        "Independent outcome evidence and longitudinal validation."
+      ],
+      "alternativeExplanation": "The source may describe a product capability without evidence of adoption or impact.",
+      "disposition": "watch",
+      "confidence": 0.5
+    },
+    {
+      "assessmentId": "socratic:nightly-2026-09-08:2",
+      "observationId": "obs:nightly-2026-09-08:2",
+      "questions": [
+        "What exactly does observation 2 claim?",
+        "Which source supports the claim?",
+        "Which part is directly verified?",
+        "What is inferred rather than observed?",
+        "What assumption could make this wrong?",
+        "What evidence would falsify it?",
+        "What alternative explanation exists?",
+        "What decision is safe now?"
+      ],
+      "answers": [
+        {
+          "question": "What exactly does observation 2 claim?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "Which source supports the claim?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [
+            "source:nightly-2026-09-08:snowflake-ai-data-cloud"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "Which part is directly verified?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What is inferred rather than observed?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What assumption could make this wrong?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What evidence would falsify it?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What alternative explanation exists?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What decision is safe now?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        }
+      ],
+      "dangerousAssumption": "A platform statement alone proves a durable strategic advantage.",
+      "falsifier": "A reviewed source correction or contrary primary evidence would falsify the bounded claim.",
+      "missingEvidence": [
+        "Independent outcome evidence and longitudinal validation."
+      ],
+      "alternativeExplanation": "The source may describe a product capability without evidence of adoption or impact.",
+      "disposition": "watch",
+      "confidence": 0.5
+    },
+    {
+      "assessmentId": "socratic:nightly-2026-09-08:3",
+      "observationId": "obs:nightly-2026-09-08:3",
+      "questions": [
+        "What exactly does observation 3 claim?",
+        "Which source supports the claim?",
+        "Which part is directly verified?",
+        "What is inferred rather than observed?",
+        "What assumption could make this wrong?",
+        "What evidence would falsify it?",
+        "What alternative explanation exists?",
+        "What decision is safe now?"
+      ],
+      "answers": [
+        {
+          "question": "What exactly does observation 3 claim?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "Which source supports the claim?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [
+            "source:nightly-2026-09-08:snowflake-cortex"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "Which part is directly verified?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What is inferred rather than observed?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What assumption could make this wrong?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What evidence would falsify it?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What alternative explanation exists?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What decision is safe now?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        }
+      ],
+      "dangerousAssumption": "A platform statement alone proves a durable strategic advantage.",
+      "falsifier": "A reviewed source correction or contrary primary evidence would falsify the bounded claim.",
+      "missingEvidence": [
+        "Independent outcome evidence and longitudinal validation."
+      ],
+      "alternativeExplanation": "The source may describe a product capability without evidence of adoption or impact.",
+      "disposition": "watch",
+      "confidence": 0.5
+    },
+    {
+      "assessmentId": "socratic:nightly-2026-09-08:4",
+      "observationId": "obs:nightly-2026-09-08:4",
+      "questions": [
+        "What exactly does observation 4 claim?",
+        "Which source supports the claim?",
+        "Which part is directly verified?",
+        "What is inferred rather than observed?",
+        "What assumption could make this wrong?",
+        "What evidence would falsify it?",
+        "What alternative explanation exists?",
+        "What decision is safe now?"
+      ],
+      "answers": [
+        {
+          "question": "What exactly does observation 4 claim?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "Which source supports the claim?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [
+            "source:nightly-2026-09-08:snowflake-trust"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "Which part is directly verified?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What is inferred rather than observed?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What assumption could make this wrong?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What evidence would falsify it?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What alternative explanation exists?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What decision is safe now?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        }
+      ],
+      "dangerousAssumption": "A platform statement alone proves a durable strategic advantage.",
+      "falsifier": "A reviewed source correction or contrary primary evidence would falsify the bounded claim.",
+      "missingEvidence": [
+        "Independent outcome evidence and longitudinal validation."
+      ],
+      "alternativeExplanation": "The source may describe a product capability without evidence of adoption or impact.",
+      "disposition": "watch",
+      "confidence": 0.5
+    },
+    {
+      "assessmentId": "socratic:nightly-2026-09-08:5",
+      "observationId": "obs:nightly-2026-09-08:5",
+      "questions": [
+        "What exactly does observation 5 claim?",
+        "Which source supports the claim?",
+        "Which part is directly verified?",
+        "What is inferred rather than observed?",
+        "What assumption could make this wrong?",
+        "What evidence would falsify it?",
+        "What alternative explanation exists?",
+        "What decision is safe now?"
+      ],
+      "answers": [
+        {
+          "question": "What exactly does observation 5 claim?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "Which source supports the claim?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [
+            "source:nightly-2026-09-08:snowflake-data-sharing"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "Which part is directly verified?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What is inferred rather than observed?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What assumption could make this wrong?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What evidence would falsify it?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What alternative explanation exists?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What decision is safe now?",
+          "answer": "Recorded for human review; no automatic acceptance follows from this answer.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        }
+      ],
+      "dangerousAssumption": "A platform statement alone proves a durable strategic advantage.",
+      "falsifier": "A reviewed source correction or contrary primary evidence would falsify the bounded claim.",
+      "missingEvidence": [
+        "Independent outcome evidence and longitudinal validation."
+      ],
+      "alternativeExplanation": "The source may describe a product capability without evidence of adoption or impact.",
+      "disposition": "watch",
+      "confidence": 0.5
+    }
+  ]
+}
