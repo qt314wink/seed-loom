@@ -1,0 +1,195 @@
+name: Nightly Knowledge Ingest
+
+on:
+  push:
+    branches:
+      - 'automation/nightly-intake-*'
+      - 'automation/nightly-backfill-*'
+    paths:
+      - 'knowledge/intake/nightly/**/nightly-run-bundle*.json'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Backfill every committed nightly bundle, or ingest one selected path'
+        required: true
+        type: choice
+        options:
+          - all
+          - selected
+        default: all
+      bundle_path:
+        description: 'Required when mode=selected; repository-relative bundle path'
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nightly-knowledge-ingest-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout exact intake branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 2
+
+      - name: Set up Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install repository dependencies
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Select committed nightly bundles
+        id: select
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          CURRENT_SHA: ${{ github.sha }}
+          DISPATCH_MODE: ${{ inputs.mode }}
+          DISPATCH_BUNDLE: ${{ inputs.bundle_path }}
+        run: |
+          set -euo pipefail
+          : > /tmp/nightly-bundles.txt
+
+          if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            if [[ "$DISPATCH_MODE" == "all" ]]; then
+              echo "mode=all" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            if [[ -z "$DISPATCH_BUNDLE" ]]; then
+              echo "bundle_path is required when mode=selected" >&2
+              exit 2
+            fi
+            case "$DISPATCH_BUNDLE" in
+              knowledge/intake/nightly/*/nightly-run-bundle*.json) ;;
+              *) echo "selected bundle path is outside the governed nightly intake surface" >&2; exit 2 ;;
+            esac
+            test -f "$DISPATCH_BUNDLE"
+            printf '%s\n' "$DISPATCH_BUNDLE" > /tmp/nightly-bundles.txt
+            echo "mode=selected" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if [[ -n "$BEFORE_SHA" && "$BEFORE_SHA" != "0000000000000000000000000000000000000000" ]] && git cat-file -e "${BEFORE_SHA}^{commit}" 2>/dev/null; then
+            git diff --name-only "$BEFORE_SHA" "$CURRENT_SHA" -- 'knowledge/intake/nightly/**/nightly-run-bundle*.json' > /tmp/nightly-bundles.txt
+          else
+            git show --pretty='' --name-only "$CURRENT_SHA" -- 'knowledge/intake/nightly/**/nightly-run-bundle*.json' > /tmp/nightly-bundles.txt
+          fi
+
+          sed -i '/^$/d' /tmp/nightly-bundles.txt
+          if [[ ! -s /tmp/nightly-bundles.txt ]]; then
+            echo "No nightly bundle changed in the triggering commit." >&2
+            exit 2
+          fi
+          while IFS= read -r bundle; do
+            case "$bundle" in
+              knowledge/intake/nightly/*/nightly-run-bundle*.json) ;;
+              *) echo "unexpected bundle path: $bundle" >&2; exit 2 ;;
+            esac
+            test -f "$bundle"
+          done < /tmp/nightly-bundles.txt
+          sort -u -o /tmp/nightly-bundles.txt /tmp/nightly-bundles.txt
+          echo "mode=selected" >> "$GITHUB_OUTPUT"
+
+      - name: Dry-run and ingest through canonical command
+        id: ingest
+        shell: bash
+        env:
+          MODE: ${{ steps.select.outputs.mode }}
+        run: |
+          set -euo pipefail
+          report="knowledge/receipts/nightly-intake/coordinator-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}.json"
+          mkdir -p "$(dirname "$report")"
+
+          if [[ "$MODE" == "all" ]]; then
+            node scripts/knowledge/ingest-nightly-intake.mjs --all --report "$report" | tee /tmp/nightly-ingest-output.json
+          else
+            mapfile -t bundles < /tmp/nightly-bundles.txt
+            node scripts/knowledge/ingest-nightly-intake.mjs "${bundles[@]}" --report "$report" | tee /tmp/nightly-ingest-output.json
+          fi
+
+          echo "report=$report" >> "$GITHUB_OUTPUT"
+
+      - name: Verify coordinator boundaries and generated paths
+        shell: bash
+        env:
+          REPORT: ${{ steps.ingest.outputs.report }}
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const report = JSON.parse(fs.readFileSync(process.env.REPORT, 'utf8'));
+          const allowed = new Set(['INGESTED_WITH_RECEIPT','DUPLICATE_ALREADY_PRESENT','BLOCKED_WITH_EXPLICIT_REASON']);
+          if (!Array.isArray(report.results) || report.results.length === 0) throw new Error('empty coordinator report');
+          for (const result of report.results) {
+            if (!allowed.has(result.status)) throw new Error(`unexpected status: ${result.status}`);
+            if (!String(result.bundlePath || '').startsWith('knowledge/intake/nightly/')) throw new Error(`bundle escaped intake surface: ${result.bundlePath}`);
+          }
+          console.log(JSON.stringify(report.statusCounts));
+          NODE
+
+          git diff --check
+
+          unexpected="$(git status --porcelain | awk '{print $2}' | grep -Ev '^(knowledge/(sources|observations|relationships|runs|receipts)/)' || true)"
+          if [[ -n "$unexpected" ]]; then
+            echo "Unexpected generated paths:" >&2
+            echo "$unexpected" >&2
+            exit 1
+          fi
+
+      - name: Commit canonical ingest outputs and receipts to intake branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "seed-loom-nightly-ingest[bot]"
+          git config user.email "seed-loom-nightly-ingest[bot]@users.noreply.github.com"
+
+          git add knowledge/sources knowledge/observations knowledge/relationships knowledge/runs knowledge/receipts
+          if git diff --cached --quiet; then
+            echo "No new candidate records to commit."
+          else
+            git commit -m "knowledge: ingest nightly intake ${GITHUB_SHA::12}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+
+      - name: Publish run receipt in job summary
+        if: always()
+        shell: bash
+        env:
+          REPORT: ${{ steps.ingest.outputs.report }}
+        run: |
+          if [[ -f "$REPORT" ]]; then
+            {
+              echo '## Nightly knowledge intake'
+              echo
+              echo '```json'
+              cat "$REPORT"
+              echo '```'
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Fail closed when any bundle is blocked
+        shell: bash
+        env:
+          REPORT: ${{ steps.ingest.outputs.report }}
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const report = JSON.parse(fs.readFileSync(process.env.REPORT, 'utf8'));
+          const blocked = report.results.filter((result) => result.status === 'BLOCKED_WITH_EXPLICIT_REASON');
+          if (blocked.length) {
+            console.error(JSON.stringify(blocked, null, 2));
+            process.exit(1);
+          }
+          NODE
