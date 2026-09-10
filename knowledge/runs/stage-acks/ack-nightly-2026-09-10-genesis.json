@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-10:genesis",
+  "runId": "run:nightly:2026-09-10",
+  "stage": "genesis",
+  "status": "deferred",
+  "startedAt": "2026-09-10T23:21:48Z",
+  "completedAt": "2026-09-10T23:21:48Z",
+  "inputs": [
+    "candidate-only-run"
+  ],
+  "outputs": [
+    "no-genesis-advancement"
+  ],
+  "checks": [
+    {
+      "name": "genesis-block",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "Genesis explicitly deferred"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "governance stop",
+    "inputHashes": [
+      "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+    ]
+  }
+}

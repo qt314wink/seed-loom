@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:wint:series-d:2026-09-09",
+  "type": "Source",
+  "url": "https://wint.ai/blog/series-d-funding/",
+  "publisher": "WINT",
+  "publishedAt": "2026-09-09T13:00:00Z",
+  "retrievedAt": "2026-09-10T23:21:48Z",
+  "sourceClass": "financial",
+  "independenceKey": "wint-series-d-20260909"
+}

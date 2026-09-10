@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-10:vet",
+  "runId": "run:nightly:2026-09-10",
+  "stage": "vet",
+  "status": "passed",
+  "startedAt": "2026-09-10T23:21:48Z",
+  "completedAt": "2026-09-10T23:21:48Z",
+  "inputs": [
+    "six-source-records"
+  ],
+  "outputs": [
+    "five-vetted-signals"
+  ],
+  "checks": [
+    {
+      "name": "source-actor-behavior",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "no manufactured novelty"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "primary/official preference plus direct behavior test",
+    "inputHashes": [
+      "656f3c4c88c1fd13ba3d3c3052a57acccf0edff2a64f526560e20642411d30f3"
+    ]
+  }
+}

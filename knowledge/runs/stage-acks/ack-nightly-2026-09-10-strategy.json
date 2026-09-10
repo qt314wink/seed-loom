@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-10:strategy",
+  "runId": "run:nightly:2026-09-10",
+  "stage": "strategy",
+  "status": "deferred",
+  "startedAt": "2026-09-10T23:21:48Z",
+  "completedAt": "2026-09-10T23:21:48Z",
+  "inputs": [
+    "opportunity-candidates"
+  ],
+  "outputs": [
+    "strategy-proposals-only"
+  ],
+  "checks": [
+    {
+      "name": "human-approval-gate",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "Jennipher approval required"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "proposal only",
+    "inputHashes": [
+      "4cb761989a0bbfe00867eda232509738b9916804847503e90776d097375fac6b"
+    ]
+  }
+}

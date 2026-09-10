@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-10:1",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-10:regulated-data-workflows",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:reuters:openai-finance:2026-09-10",
+  "confidence": 0.96,
+  "evidenceRefs": [
+    "source:reuters:openai-finance:2026-09-10"
+  ],
+  "validFrom": "2026-09-10T23:21:48Z",
+  "validTo": null
+}

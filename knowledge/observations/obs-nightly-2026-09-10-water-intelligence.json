@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-10:water-intelligence",
+  "type": "Observation",
+  "capturedAt": "2026-09-10T23:21:48Z",
+  "claim": "WINT raised $36M Series D to scale AI-powered water intelligence for buildings.",
+  "verifiedFacts": [
+    "WINT announced a $36M Series D co-led by LIP Ventures and Inven Capital to expand product development and global market reach."
+  ],
+  "inference": [
+    "Regenerative systems become easier to buy when ecological performance is tied to measurable operational loss, intervention and avoided cost.",
+    "Consultancy: regenerative operational-intelligence and evidence architecture around measurable resource flows.",
+    "Disposition: Project Constellation INCUBATE; Seed Loom CORE."
+  ],
+  "significance": "Growth capital supports water sensing and intervention as operational risk, not only ESG reporting.",
+  "confidence": 0.95,
+  "evidenceMaturity": "source-backed",
+  "sourceRefs": [
+    "source:wint:series-d:2026-09-09"
+  ],
+  "actorRefs": [
+    "actor:wint:builder",
+    "actor:lip-ventures:funder",
+    "actor:inven-capital:funder",
+    "actor:building-operators:buyer"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/project-constellation",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Reported operating metrics translate into durable buyer value."
+  ],
+  "knownLimitations": [
+    "Savings and avoided-damage figures are company-reported and not independently verified here."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-10:semi-custom-inference-stack",
+  "type": "Observation",
+  "capturedAt": "2026-09-10T23:21:48Z",
+  "claim": "d-Matrix adopted NVIDIA NVLink Fusion to place specialized inference silicon inside a common rack-scale platform.",
+  "verifiedFacts": [
+    "NVIDIA says d-Matrix will connect Raptor XPUs to NVLink, Spectrum-X and MGX infrastructure, with deployment expected in 2027."
+  ],
+  "inference": [
+    "Specialized systems can differentiate at a bounded layer while reusing mature surrounding infrastructure.",
+    "Consultancy: map specialize-versus-standardize boundaries plus dependency and exit-path risk.",
+    "Disposition: AETHER CONSOLIDATE; Seed Loom REFERENCE-ONLY for this architecture pattern."
+  ],
+  "significance": "Interoperability can reduce deployment duplication while deepening platform dependency.",
+  "confidence": 0.98,
+  "evidenceMaturity": "source-backed",
+  "sourceRefs": [
+    "source:nvidia:dmatrix-nvlink:2026-09-10"
+  ],
+  "actorRefs": [
+    "actor:dmatrix:builder",
+    "actor:nvidia:supplier",
+    "actor:datacenter-operators:buyer"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/aether",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Integration reduces total deployment risk."
+  ],
+  "knownLimitations": [
+    "Performance, TCO and concentration effects are forward-looking supplier claims."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

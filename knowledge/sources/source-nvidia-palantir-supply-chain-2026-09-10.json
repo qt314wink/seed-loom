@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nvidia:palantir-supply-chain:2026-09-10",
+  "type": "Source",
+  "url": "https://nvidianews.nvidia.com/news/nvidia-and-palantir-bring-sovereign-intelligence-to-critical-supply-chains",
+  "publisher": "NVIDIA",
+  "publishedAt": "2026-09-10T00:00:00Z",
+  "retrievedAt": "2026-09-10T23:21:48Z",
+  "sourceClass": "primary",
+  "independenceKey": "nvidia-palantir-20260910"
+}

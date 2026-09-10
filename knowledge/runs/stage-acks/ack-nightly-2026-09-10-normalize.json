@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-10:normalize",
+  "runId": "run:nightly:2026-09-10",
+  "stage": "normalize",
+  "status": "passed",
+  "startedAt": "2026-09-10T23:21:48Z",
+  "completedAt": "2026-09-10T23:21:48Z",
+  "inputs": [
+    "five-vetted-signals",
+    "live-schemas"
+  ],
+  "outputs": [
+    "five-schema-shaped-observations",
+    "extension-layer"
+  ],
+  "checks": [
+    {
+      "name": "closed-observation-boundary",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "advisory fields remain outside canonical Observation"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "live schema constrained normalization",
+    "inputHashes": [
+      "4a651b42c7c2a3d927e812e552ec413424287252"
+    ]
+  }
+}

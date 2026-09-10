@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-10:regulated-data-workflows",
+  "type": "Observation",
+  "capturedAt": "2026-09-10T23:21:48Z",
+  "claim": "OpenAI launched ChatGPT for Financial Services with regulated-data integrations, citations and audit controls.",
+  "verifiedFacts": [
+    "Reuters reports a September 10 launch with Morgan Stanley and Evercore as design partners, role-based access, encryption, audit-log export and financial-data integrations."
+  ],
+  "inference": [
+    "Vertical AI value is moving from model access toward licensed context, entitlement, citations, workflow templates and auditability.",
+    "Consultancy: regulated-AI evidence and source-entitlement architecture.",
+    "Disposition: Seed Loom CORE; Agent Runtime INCUBATE."
+  ],
+  "significance": "Regulated industries are buying governed context and audit surfaces alongside model capability.",
+  "confidence": 0.96,
+  "evidenceMaturity": "source-backed",
+  "sourceRefs": [
+    "source:reuters:openai-finance:2026-09-10",
+    "source:openai:financial-services:2026-09-10"
+  ],
+  "actorRefs": [
+    "actor:openai:provider",
+    "actor:morgan-stanley:buyer",
+    "actor:evercore:buyer",
+    "actor:financial-data-providers:supplier"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "Governance features materially influence adoption."
+  ],
+  "knownLimitations": [
+    "Independent ROI and compliance-outcome evidence is unavailable."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

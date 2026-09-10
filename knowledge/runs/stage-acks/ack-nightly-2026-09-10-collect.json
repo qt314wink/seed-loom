@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-10:collect",
+  "runId": "run:nightly:2026-09-10",
+  "stage": "collect",
+  "status": "passed",
+  "startedAt": "2026-09-10T23:21:48Z",
+  "completedAt": "2026-09-10T23:21:48Z",
+  "inputs": [
+    "fresh-sources"
+  ],
+  "outputs": [
+    "six-source-records"
+  ],
+  "checks": [
+    {
+      "name": "freshness-dedup",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "candidate-only"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "48h web and repository collection",
+    "inputHashes": [
+      "c6d6b76eb8a2bfd8257e4111e5c35567210bb2b81d6c7a5be1cb452fda16b997"
+    ]
+  }
+}
