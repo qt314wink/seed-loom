@@ -1,0 +1,38 @@
+{
+  "id": "obs:nightly:2026-09-11:tribal-water",
+  "type": "Observation",
+  "capturedAt": "2026-09-11T23:05:37Z",
+  "claim": "EPA opened about $3.5M in competitive Section 319 Tribal water-restoration funding.",
+  "verifiedFacts": [
+    "EPA announced about $3.5M for federally recognized Tribes to reduce nonpoint-source pollution."
+  ],
+  "inference": [
+    "Regenerative work benefits from a traceable condition-to-intervention-to-monitoring-to-receipt chain.",
+    "Consultancy: grant-to-evidence architecture without pre-claiming outcomes.",
+    "Disposition: Seed Loom CORE; Project Constellation INCUBATE."
+  ],
+  "significance": "Live funding links ecological evidence, intervention and reporting.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:epa:tribal-water:2026-09-10"
+  ],
+  "actorRefs": [
+    "actor:epa:funder-regulator",
+    "actor:tribal-governments:participant-buyer"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/project-constellation"
+  ],
+  "assumptions": [
+    "Observed behavior may not generalize."
+  ],
+  "knownLimitations": [
+    "Independent outcome evidence remains incomplete."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate",
+  "schemaVersion": "1.1.0"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "obs:nightly:2026-09-11:photonics",
+  "type": "Observation",
+  "capturedAt": "2026-09-11T23:05:37Z",
+  "claim": "Nature Photonics published a broadband thin-film-lithium-niobate electro-optic circulator without magnetic materials.",
+  "verifiedFacts": [
+    "The paper reports travelling-wave electro-optic modulation for non-reciprocal routing."
+  ],
+  "inference": [
+    "Useful mechanism reference for timed modulation, phase and directional fields.",
+    "Translate as visual analogy only, not physical equivalence.",
+    "Disposition: Shader Grammar INCUBATE; AETHER and Seed Loom REFERENCE-ONLY."
+  ],
+  "significance": "Adds a rigorous wave-mechanism reference to the visual-materials corpus.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:nature:photonics:2026-09-11"
+  ],
+  "actorRefs": [
+    "actor:photonics-researchers:researcher"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/aether",
+    "qt314wink/shader-grammar"
+  ],
+  "assumptions": [
+    "Visual translation may not produce useful controls."
+  ],
+  "knownLimitations": [
+    "Engineering performance does not imply shader relevance."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate",
+  "schemaVersion": "1.1.0"
+}

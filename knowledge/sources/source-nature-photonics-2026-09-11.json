@@ -1,0 +1,10 @@
+{
+  "id": "source:nature:photonics:2026-09-11",
+  "type": "Source",
+  "url": "https://www.nature.com/articles/s41566-026-02008-9",
+  "publisher": "Nature Photonics",
+  "retrievedAt": "2026-09-11T23:05:37Z",
+  "sourceClass": "research",
+  "independenceKey": "source:nature:photonics:2026-09-11",
+  "schemaVersion": "1.1.0"
+}
