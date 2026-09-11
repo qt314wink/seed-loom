@@ -31,5 +31,7 @@ for (const dir of dirs) {
     }
   }
 }
-records.sort((a, b) => recordId(a).localeCompare(recordId(b)));
-process.stdout.write(records.map((record) => JSON.stringify(record)).join('\n') + (records.length ? '\n' : ''));
+
+const keyedRecords = records.map((record) => ({ record, sortKey: recordId(record) }));
+keyedRecords.sort((a, b) => a.sortKey.localeCompare(b.sortKey));
+process.stdout.write(keyedRecords.map(({ record }) => JSON.stringify(record)).join('\n') + (records.length ? '\n' : ''));
