@@ -1,0 +1,95 @@
+{
+  "ledger_id": "portfolio-disposition:2026-08-stabilization",
+  "schema_version": "1.0.0",
+  "status": "open",
+  "as_of": "2026-08-21",
+  "authority": {
+    "repository": "qt314wink/seed-loom",
+    "main_sha": "cf925cf12237d30b0fa1b4a16b470d44b4ebefd9",
+    "final_infrastructure_gate": "qt314wink/seed-loom#24"
+  },
+  "portfolio_rules": {
+    "staleness_action_required": [
+      "revive",
+      "reconcile",
+      "freeze",
+      "consolidate",
+      "archive"
+    ],
+    "silent_removal_allowed": false,
+    "genesis": "deferred",
+    "external_contact_allowed": false,
+    "repository_mutation_allowed": false
+  },
+  "supporting_capabilities": [
+    {
+      "repository": "qt314wink/neobrutalism-lab",
+      "disposition": "incubate",
+      "role": "supporting capability",
+      "constraint": "May advance only when consumed by or directly de-risks one of the five approved active product proofs.",
+      "independent_product_line": false
+    }
+  ],
+  "next_deliverable": {
+    "name": "canonical cross-repository registry",
+    "authority": "MelodicBloom/.github#5",
+    "mode": "observe-only",
+    "required_fields": [
+      "canonical repository",
+      "aliases and forks",
+      "default branch",
+      "current SHA",
+      "deployment authority",
+      "package manager",
+      "lifecycle",
+      "supersession links"
+    ],
+    "archive_action_allowed": false
+  },
+  "approved_validation": {
+    "real_delivered_bundle_double_run": {
+      "genuine_reviewed_bundle_count": 1,
+      "observations_per_run": 5,
+      "clean_governed_runs": 2,
+      "identical_receipts_and_projection_digests": true,
+      "invalid_bundle_atomic_failure_case": 1,
+      "candidates_accepted": false,
+      "genesis": "deferred"
+    },
+    "observation_client_specimen": {
+      "count": 1,
+      "outreach_allowed": false,
+      "scope": [
+        "one owned or fictional source asset",
+        "three materially distinct hooks",
+        "one selected motion specification",
+        "one generated or clearly simulated execution",
+        "QA and disclosure/provenance manifest"
+      ],
+      "excluded_scope": [
+        "adapters",
+        "billing",
+        "authentication",
+        "dashboard expansion",
+        "multi-client architecture"
+      ]
+    },
+    "partnership_discovery": {
+      "organization_count": 3,
+      "maximum_minutes": 90,
+      "outreach_allowed": false
+    }
+  },
+  "stop_conditions": [
+    "ambiguous canonical ownership",
+    "missing provenance or licensing",
+    "deletion of history, assets, deployments, or unique implementation"
+  ],
+  "evidence": [
+    "qt314wink/seed-loom#27",
+    "qt314wink/seed-loom#24",
+    "qt314wink/seed-loom#33",
+    "qt314wink/seed-loom#36",
+    "MelodicBloom/.github#5"
+  ]
+}
