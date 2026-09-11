@@ -11,6 +11,12 @@ on:
       - 'playwright.config.ts'
       - '.github/workflows/visual-regression.yml'
   workflow_dispatch:
+    inputs:
+      update_snapshots:
+        description: 'Regenerate Linux baselines and upload them for review'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   visual-regression:
@@ -24,7 +30,21 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run build
-      - run: npm run test:visual
+      - name: Run visual regression suite
+        run: |
+          if [ "${{ inputs.update_snapshots }}" = "true" ]; then
+            npm run test:visual -- --update-snapshots
+          else
+            npm run test:visual
+          fi
+      - name: Upload regenerated Linux baselines
+        if: ${{ inputs.update_snapshots == true }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: visual-baselines-linux
+          path: tests/visual.spec.ts-snapshots/*-linux.png
+          if-no-files-found: error
+          retention-days: 7
       - name: Upload Playwright report
         if: always()
         uses: actions/upload-artifact@v4
