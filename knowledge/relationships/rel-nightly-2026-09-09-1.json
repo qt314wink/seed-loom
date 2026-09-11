@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-09:1",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-09:lab-agent",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:openai:q:2026-09-08",
+  "confidence": 0.99,
+  "evidenceRefs": [
+    "source:openai:q:2026-09-08"
+  ],
+  "validFrom": "2026-09-09T23:34:06Z",
+  "validTo": null
+}

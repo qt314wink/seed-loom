@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-09-09",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-09-07T23:34:06Z",
+    "to": "2026-09-09T23:34:06Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-09-09:lab-agent",
+    "obs:nightly:2026-09-09:workforce-graph",
+    "obs:nightly:2026-09-09:testbeds",
+    "obs:nightly:2026-09-09:energy-stack",
+    "obs:nightly:2026-09-09:institutional-intelligence"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "pattern:bounded-agent-physical-feedback",
+    "pattern:institutional-authority-and-domain-benchmarks",
+    "pattern:testbeds-and-physical-dependencies"
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-09-09:1",
+    "rel:nightly:2026-09-09:2",
+    "rel:nightly:2026-09-09:3",
+    "rel:nightly:2026-09-09:4",
+    "rel:nightly:2026-09-09:5"
+  ],
+  "contradictions": [
+    "contradiction:agent-execution-needs-expert-escalation",
+    "contradiction:intelligence-control-can-create-lock-in",
+    "contradiction:ai-growth-adds-clean-energy-and-grid-demand"
+  ],
+  "opportunities": [
+    "opportunity:instrument-agents",
+    "opportunity:authority-mapping",
+    "opportunity:testbeds",
+    "opportunity:ai-energy-mapping",
+    "opportunity:institutional-intelligence"
+  ],
+  "proposedExperiments": [
+    "experiment:skill-escalation-v0",
+    "experiment:intelligence-portability-v0"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false
+    },
+    {
+      "status": "proposed",
+      "executed": false
+    }
+  ],
+  "noChangeReceipts": [
+    "seed-loom main ecf6b4b4: Sep9 provenance only; PR45 remains unmerged",
+    "Observation PR3 merged Sep8; PR4 open on historical base",
+    "No strict-window commits in Omni-Loom, Melodyfire, AETHER or FLORÉ."
+  ],
+  "collectionFailures": [
+    "PR45 unmerged: canonical ingest bridge unavailable on main",
+    "Issue #24 delivered-bundle two-run proof unproven",
+    "Observation schema closed: advisory fields kept in observationExtensions",
+    "Canonical ingest does not persist Socratic assessments",
+    "GitHub cannot see local/unpushed work"
+  ]
+}
