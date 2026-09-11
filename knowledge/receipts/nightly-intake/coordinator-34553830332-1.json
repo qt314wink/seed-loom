@@ -1,0 +1,22 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-09-11T02:14:28.844Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "DUPLICATE_ALREADY_PRESENT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "DUPLICATE_ALREADY_PRESENT",
+      "runId": "run:nightly:2026-09-09",
+      "bundlePath": "knowledge/intake/nightly/2026-09-09/nightly-run-bundle-2026-09-09.json",
+      "bundleSha256": "3c5a2d9a2920a97415cb2e4c1f0ace82864a71c5d6f90cee0b34f19739bbac4c",
+      "normalizedDigest": "ef2d491c5ad8692c5b504717fb18fc8860762f531a8e84bc18f532d137e214c1",
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-09-09-ingest.json",
+      "generatedRecordCount": 29
+    }
+  ]
+}
