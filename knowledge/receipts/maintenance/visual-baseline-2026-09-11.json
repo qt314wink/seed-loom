@@ -16,9 +16,9 @@
   "diagnosis": {
     "classification": "linux_visual_baseline_drift",
     "reasoning": [
-      "The Root Reproducibility Boundary and Defensible Vertical Slice jobs both completed install, lockfile/contract, dependency, TypeScript, and build gates before failing in the same Playwright visual suite.",
-      "PR #49 changes governed knowledge records and receipts; it does not change application source, visual tests, or layout CSS.",
-      "The failing renders are stable dimension changes across all visual captures, including 1440x1499 to 1440x1520 for the desktop material atlas and 439x10478 to 439x10640 for the mobile full-page shell.",
+      "Root Reproducibility passed install, contract, TypeScript, and build before its visual gate failed. Defensible Vertical Slice passed dependencies and typecheck before Tests failed; its separately declared build step was skipped.",
+      "The original ingestion changes added knowledge records and receipts without changing application source, visual tests, or layout CSS. Maintenance subsequently updated 13 visual baseline binaries.",
+      "CI reported screenshot mismatches, including repeated dimensions of 1440x1499 versus 1440x1520 for the desktop material atlas and 439x10478 versus 439x10640 for the mobile shell. Some pixel differences varied across retries; these logs alone do not establish the exact cause of the baseline mismatch.",
       "A manual refresh on the same Ubuntu and Chromium path regenerated all 13 Linux baselines and completed 37 tests with 1 intentional mobile-only skip. This is evidence of baseline drift under the current CI browser/runtime, rather than a source regression in the ingestion PR."
     ]
   },
@@ -105,7 +105,7 @@
     "refreshRunPassed": true,
     "postApplyChecks": {
       "headSha": "805dde6a0e2d836021373818ff8b0c98d1650352",
-      "allRequiredChecksPassed": true,
+      "allListedWorkflowRunsPassed": true,
       "runs": [
         {
           "workflow": "Visual Regression",
