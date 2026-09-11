@@ -1,0 +1,118 @@
+{
+  "type": "MaintenanceReceipt",
+  "schemaVersion": "1.0.0",
+  "receiptId": "maintenance:visual-baseline:2026-09-11",
+  "createdAt": "2026-09-11T03:57:19.532Z",
+  "repository": "qt314wink/seed-loom",
+  "pullRequest": 49,
+  "branch": "automation/nightly-backfill-2026-09-09",
+  "base": "main",
+  "source": {
+    "failedChecksSha": "92d29c438b87f189a99d3b926b78a87f226ceedd",
+    "baselineGenerationSha": "4ab9597a8d283ae1f149fc4746ba43f07941ba35",
+    "appliedCommit": "fb3399164a5206893362dbe22aa1d4332a728bbf"
+  },
+  "status": "maintenance_applied_pending_post_apply_ci",
+  "diagnosis": {
+    "classification": "linux_visual_baseline_drift",
+    "reasoning": [
+      "The Root Reproducibility Boundary and Defensible Vertical Slice jobs both completed install, lockfile/contract, dependency, TypeScript, and build gates before failing in the same Playwright visual suite.",
+      "PR #49 changes governed knowledge records and receipts; it does not change application source, visual tests, or layout CSS.",
+      "The failing renders are stable dimension changes across all visual captures, including 1440x1499 to 1440x1520 for the desktop material atlas and 439x10478 to 439x10640 for the mobile full-page shell.",
+      "A manual refresh on the same Ubuntu and Chromium path regenerated all 13 Linux baselines and completed 37 tests with 1 intentional mobile-only skip. This is evidence of baseline drift under the current CI browser/runtime, rather than a source regression in the ingestion PR."
+    ]
+  },
+  "failedRuns": [
+    {
+      "workflow": "Root Reproducibility Boundary",
+      "runId": 34554160077,
+      "jobId": 103123126424,
+      "failedStep": "Visual regression gate",
+      "result": "13 failed, 24 passed, 1 skipped",
+      "preflightArtifactId": 10181955214,
+      "url": "https://github.com/qt314wink/seed-loom/actions/runs/34554160077"
+    },
+    {
+      "workflow": "Defensible Vertical Slice",
+      "runId": 34554160578,
+      "jobId": 103123128245,
+      "failedStep": "Tests",
+      "result": "visual suite failed; typecheck and dependency gates passed",
+      "verificationArtifactId": 10181943246,
+      "url": "https://github.com/qt314wink/seed-loom/actions/runs/34554160578"
+    }
+  ],
+  "evidence": {
+    "representativeDimensionChanges": [
+      {
+        "snapshot": "material-atlas-desktop-linux.png",
+        "expected": "1440x1499",
+        "received": "1440x1520",
+        "differentPixels": 169210,
+        "differentPixelRatio": 0.08
+      },
+      {
+        "snapshot": "material-atlas-mobile-linux.png",
+        "expected": "412x4508",
+        "received": "412x4460",
+        "differentPixels": 284449,
+        "differentPixelRatio": 0.16
+      },
+      {
+        "snapshot": "mobile-shell-mobile-linux.png",
+        "expected": "439x10478",
+        "received": "439x10640",
+        "differentPixels": 798435,
+        "differentPixelRatio": 0.18
+      }
+    ],
+    "sourceScope": {
+      "applicationSourceChangedByPr49": false,
+      "visualTestCodeChangedByPr49": false,
+      "linuxBaselinesRegenerated": 13
+    }
+  },
+  "maintenance": {
+    "method": "manual workflow_dispatch with update_snapshots on the existing Visual Regression workflow; the temporary refresh mode was reverted after artifact capture",
+    "runId": 34560083825,
+    "jobId": 103140830696,
+    "runtime": {
+      "runner": "ubuntu-latest",
+      "node": "22",
+      "chromium": "149.0.7827.55 / Playwright chromium v1228"
+    },
+    "result": "37 passed, 1 skipped",
+    "artifactId": 10184016507,
+    "artifactZipSha256": "b0bf04f5021985556db47ffd26020d706dc378df44b44ceb112ad9267cc43981",
+    "artifactUrl": "https://github.com/qt314wink/seed-loom/actions/runs/34560083825/artifacts/10184016507",
+    "changedPaths": [
+      "tests/visual.spec.ts-snapshots/material-atlas-desktop-linux.png",
+      "tests/visual.spec.ts-snapshots/material-atlas-mobile-linux.png",
+      "tests/visual.spec.ts-snapshots/mobile-shell-mobile-linux.png",
+      "tests/visual.spec.ts-snapshots/stage-code-desktop-linux.png",
+      "tests/visual.spec.ts-snapshots/stage-code-mobile-linux.png",
+      "tests/visual.spec.ts-snapshots/stage-evidence-desktop-linux.png",
+      "tests/visual.spec.ts-snapshots/stage-evidence-mobile-linux.png",
+      "tests/visual.spec.ts-snapshots/stage-interpretation-desktop-linux.png",
+      "tests/visual.spec.ts-snapshots/stage-interpretation-mobile-linux.png",
+      "tests/visual.spec.ts-snapshots/stage-tokens-desktop-linux.png",
+      "tests/visual.spec.ts-snapshots/stage-tokens-mobile-linux.png",
+      "tests/visual.spec.ts-snapshots/stage-verification-desktop-linux.png",
+      "tests/visual.spec.ts-snapshots/stage-verification-mobile-linux.png"
+    ]
+  },
+  "validation": {
+    "refreshRunPassed": true,
+    "postApplyChecks": "pending",
+    "scopeConstraint": "Only Linux Playwright baseline binaries changed in the applied maintenance commit; the temporary workflow input was reverted."
+  },
+  "knowledgeGovernance": {
+    "exactSep09BundleSha256": "3c5a2d9a2920a97415cb2e4c1f0ace82864a71c5d6f90cee0b34f19739bbac4c",
+    "normalizedDigest": "ef2d491c5ad8692c5b504717fb18fc8860762f531a8e84bc18f532d137e214c1",
+    "candidateObservations": 5,
+    "observationsAreCandidateOnly": true,
+    "genesis": "deferred",
+    "repositoryActions": "proposed/unexecuted",
+    "candidateKnowledgeMerged": false
+  }
+}
