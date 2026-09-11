@@ -12,7 +12,7 @@
     "baselineGenerationSha": "4ab9597a8d283ae1f149fc4746ba43f07941ba35",
     "appliedCommit": "fb3399164a5206893362dbe22aa1d4332a728bbf"
   },
-  "status": "maintenance_applied_pending_post_apply_ci",
+  "status": "verified",
   "diagnosis": {
     "classification": "linux_visual_baseline_drift",
     "reasoning": [
@@ -103,7 +103,48 @@
   },
   "validation": {
     "refreshRunPassed": true,
-    "postApplyChecks": "pending",
+    "postApplyChecks": {
+      "headSha": "805dde6a0e2d836021373818ff8b0c98d1650352",
+      "allRequiredChecksPassed": true,
+      "runs": [
+        {
+          "workflow": "Visual Regression",
+          "runId": 34560475879,
+          "conclusion": "success",
+          "url": "https://github.com/qt314wink/seed-loom/actions/runs/34560475879"
+        },
+        {
+          "workflow": "Root Reproducibility Boundary",
+          "runId": 34560475912,
+          "conclusion": "success",
+          "url": "https://github.com/qt314wink/seed-loom/actions/runs/34560475912"
+        },
+        {
+          "workflow": "Defensible Vertical Slice",
+          "runId": 34560476225,
+          "conclusion": "success",
+          "url": "https://github.com/qt314wink/seed-loom/actions/runs/34560476225"
+        },
+        {
+          "workflow": "Knowledge Integrity",
+          "runId": 34560475917,
+          "conclusion": "success",
+          "url": "https://github.com/qt314wink/seed-loom/actions/runs/34560475917"
+        },
+        {
+          "workflow": "Knowledge Controls",
+          "runId": 34560475893,
+          "conclusion": "success",
+          "url": "https://github.com/qt314wink/seed-loom/actions/runs/34560475893"
+        },
+        {
+          "workflow": "Signal Validation",
+          "runId": 34560475885,
+          "conclusion": "success",
+          "url": "https://github.com/qt314wink/seed-loom/actions/runs/34560475885"
+        }
+      ]
+    },
     "scopeConstraint": "Only Linux Playwright baseline binaries changed in the applied maintenance commit; the temporary workflow input was reverted."
   },
   "knowledgeGovernance": {
