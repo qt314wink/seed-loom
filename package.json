@@ -40,7 +40,8 @@
     "contract:check": "node scripts/reproducibility/check-root-contract.mjs",
     "schemas:check": "node scripts/reproducibility/check-schemas.mjs",
     "artifact:check": "node scripts/reproducibility/check-artifact.mjs",
-    "verify:root": "npm ci && npx playwright install chromium && npm run contract:check && npm run typecheck && npm run build && npm run test:visual && npm run schemas:check && npm run artifact:check"
+    "verify:root": "npm ci && npx playwright install chromium && npm run contract:check && npm run typecheck && npm run build && npm run test:visual && npm run schemas:check && npm run artifact:check",
+    "knowledge:prove-nightly": "node scripts/knowledge/prove-nightly-ingest.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.54.1",
