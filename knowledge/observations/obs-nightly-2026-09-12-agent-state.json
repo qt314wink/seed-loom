@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-12:agent-state",
+  "type": "Observation",
+  "capturedAt": "2026-09-12T23:39:35Z",
+  "claim": "Hermes Agent patched persistent state.db failures.",
+  "verifiedFacts": [
+    "v0.21.2 cites writer-lock cancellation, false corruption and bad-row failures."
+  ],
+  "inference": [
+    "Agent memory needs database concurrency, isolation and recovery receipts.",
+    "Offer agent-state integrity audits.",
+    "Disposition: Seed Loom CORE; Agent Runtime PRODUCTIZE."
+  ],
+  "significance": "Agent memory needs database concurrency, isolation and recovery receipts.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "default",
+  "sourceRefs": [
+    "source:github:hermes:2026-09-11"
+  ],
+  "actorRefs": [
+    "actor:nous:builder",
+    "actor:hermes-users:participants"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "Failures generalize."
+  ],
+  "knownLimitations": [
+    "No independent incident rate."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-12:3",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-12:creative-demand",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:openai:creative-growth:2026-09-12",
+  "confidence": 0.98,
+  "evidenceRefs": [
+    "source:openai:creative-growth:2026-09-12"
+  ]
+}

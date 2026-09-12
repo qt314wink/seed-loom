@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-12:rangeland-drought",
+  "type": "Observation",
+  "capturedAt": "2026-09-12T23:39:35Z",
+  "claim": "USGS funding closes Sep 12 for rangeland drought forecasting.",
+  "verifiedFacts": [
+    "G26AS00157 offers up to $480K to an eligible Colorado Plateau CESU partner."
+  ],
+  "inference": [
+    "Forecast→intervention→evidence is a regenerative decision pattern.",
+    "Use as ecological decision-support reference, not presumed lead.",
+    "Disposition: Project Constellation INCUBATE; Seed Loom CORE."
+  ],
+  "significance": "Forecast→intervention→evidence is a regenerative decision pattern.",
+  "confidence": 0.97,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:usgs:drought:2026-09-12"
+  ],
+  "actorRefs": [
+    "actor:usgs:funder",
+    "actor:cesu:participants"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/project-constellation",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Pattern generalizes."
+  ],
+  "knownLimitations": [
+    "Eligibility restricted; posted Aug 12."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

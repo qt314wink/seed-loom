@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:reuters:anthropic-nvidia:2026-09-11",
+  "type": "Source",
+  "url": "https://www.reuters.com/legal/transactional/nvidia-talks-invest-anthropics-mega-ipo-sources-say-2026-09-11/",
+  "publisher": "Reuters",
+  "retrievedAt": "2026-09-12T23:39:35Z",
+  "sourceClass": "press",
+  "independenceKey": "r-anthropic-nvidia",
+  "publishedAt": "2026-09-11T00:00:00Z"
+}

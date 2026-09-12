@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-12:creative-demand",
+  "type": "Observation",
+  "capturedAt": "2026-09-12T23:39:35Z",
+  "claim": "Remote creative hiring rewards AI fluency plus systems, craft and prototypes.",
+  "verifiedFacts": [
+    "OpenAI lists Growth Creative Director; Superside lists global remote Creative Technologist with GenAI/prototyping requirements."
+  ],
+  "inference": [
+    "Buyer-visible systems are stronger proof than generic AI fluency.",
+    "Package creative pipelines as outcome-linked proof.",
+    "Disposition: Observation Ad Pipeline PRODUCTIZE; Melodyfire PRODUCTIZE."
+  ],
+  "significance": "Buyer-visible systems are stronger proof than generic AI fluency.",
+  "confidence": 0.98,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "opportunity",
+  "sourceRefs": [
+    "source:openai:creative-growth:2026-09-12",
+    "source:superside:creative-tech:2026-09-12"
+  ],
+  "actorRefs": [
+    "actor:openai:employer",
+    "actor:superside:employer"
+  ],
+  "affectedRepositories": [
+    "qt314wink/observation-ad-pipeline",
+    "MelodicBloom/melodyfire"
+  ],
+  "assumptions": [
+    "Roles reflect durable demand."
+  ],
+  "knownLimitations": [
+    "Two employers are not the market."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

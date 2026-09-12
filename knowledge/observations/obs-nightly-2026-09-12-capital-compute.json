@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-12:capital-compute",
+  "type": "Observation",
+  "capturedAt": "2026-09-12T23:39:35Z",
+  "claim": "Nvidia may anchor Anthropic's planned IPO.",
+  "verifiedFacts": [
+    "Reuters reports talks for Nvidia to invest up to $10B; neither company commented."
+  ],
+  "inference": [
+    "Capital and compute ties may deepen supplier dependency.",
+    "Add compute concentration/exit-risk review.",
+    "Disposition: Seed Loom REFERENCE-ONLY."
+  ],
+  "significance": "Capital and compute ties may deepen supplier dependency.",
+  "confidence": 0.94,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:reuters:anthropic-nvidia:2026-09-11"
+  ],
+  "actorRefs": [
+    "actor:nvidia:funder-supplier",
+    "actor:anthropic:builder"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Talks become consequential."
+  ],
+  "knownLimitations": [
+    "Terms are unconfirmed."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}
