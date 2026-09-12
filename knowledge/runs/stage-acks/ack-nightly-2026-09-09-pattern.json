@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-09:pattern",
+  "runId": "run:nightly:2026-09-09",
+  "stage": "pattern",
+  "status": "passed",
+  "startedAt": "2026-09-09T23:34:06Z",
+  "completedAt": "2026-09-09T23:34:06Z",
+  "inputs": [
+    "nightly:pattern:input"
+  ],
+  "outputs": [
+    "nightly:pattern:output"
+  ],
+  "checks": [
+    {
+      "name": "contract",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "candidate-only"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "48h research + GitHub watch + live preflight",
+    "inputHashes": [
+      "58db49a00e942e0e94ef459cfaa2073453339ed8716525b1490d6a078eb0b5f"
+    ]
+  }
+}

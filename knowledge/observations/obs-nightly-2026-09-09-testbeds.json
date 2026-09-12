@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-09:testbeds",
+  "type": "Observation",
+  "capturedAt": "2026-09-09T23:34:06Z",
+  "claim": "DOE selected $73M of Mine of the Future projects to build real-world technology test grounds.",
+  "verifiedFacts": [
+    "DOE selected four projects totaling $73M to establish field-test grounds intended to accelerate mining-technology commercialization."
+  ],
+  "inference": [
+    "Industrial proof needs procurement-grade field evidence, not lab results alone.",
+    "Consultancy: Technical Testbed and Evidence-to-Commercialization Readiness.",
+    "Disposition: Omni-Loom INCUBATE; Seed Loom CORE."
+  ],
+  "significance": "Fresh federal funding supports field-test infrastructure as commercialization machinery.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:doe:mine:2026-09-09"
+  ],
+  "actorRefs": [
+    "actor:doe",
+    "actor:mining-operators"
+  ],
+  "affectedRepositories": [
+    "qt314wink/omni-loom",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Testbed evidence transfers to fabrication."
+  ],
+  "knownLimitations": [
+    "Funding does not prove commercialization."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

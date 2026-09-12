@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-09:energy-stack",
+  "type": "Observation",
+  "capturedAt": "2026-09-09T23:34:06Z",
+  "claim": "Google tied major Finland AI infrastructure growth to long-duration nuclear, battery and grid-flexibility commitments.",
+  "verifiedFacts": [
+    "Fortum says Google signed a 22-year PPA for up to 50% of Loviisa capacity and contracted a 94MW battery alongside Google's €13B Finland investment."
+  ],
+  "inference": [
+    "AI compute strategy must model energy-system dependencies and externalities.",
+    "Consultancy: AI Infrastructure-Energy Dependency Mapping.",
+    "Disposition: Seed Loom CORE; regenerative systems INCUBATE; Project Constellation PRODUCTIZE."
+  ],
+  "significance": "Large buyer behavior directly links AI growth to decades-long energy and grid commitments.",
+  "confidence": 0.995,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:fortum:google:2026-09-09"
+  ],
+  "actorRefs": [
+    "actor:google",
+    "actor:fortum"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/project-constellation"
+  ],
+  "assumptions": [
+    "Integrated contracts improve system outcomes."
+  ],
+  "knownLimitations": [
+    "Lifecycle and grid-cost evidence is future-facing."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-09:workforce-graph",
+  "type": "Observation",
+  "capturedAt": "2026-09-09T23:34:06Z",
+  "claim": "Cymphony launched with $30M around a workforce graph for human and AI-agent identity, data access and activity.",
+  "verifiedFacts": [
+    "Cymphony announced $30M total funding for a platform mapping employees and nonhuman agents across enterprise systems and sensitive data."
+  ],
+  "inference": [
+    "Agent governance is becoming an identity and authority graph problem.",
+    "Consultancy: Human-Agent Authority Mapping.",
+    "Disposition: Seed Loom CORE; Agent Runtime INCUBATE."
+  ],
+  "significance": "Funding and reported enterprise use give buyer evidence for agent-access governance.",
+  "confidence": 0.95,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:cymphony:2026-09-09"
+  ],
+  "actorRefs": [
+    "actor:cymphony",
+    "actor:enterprise-security-buyers"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "The category adds value beyond incumbent IAM."
+  ],
+  "knownLimitations": [
+    "Independent outcome and pricing evidence is limited."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

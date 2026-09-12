@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-09:3",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-09:testbeds",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:doe:mine:2026-09-09",
+  "confidence": 0.99,
+  "evidenceRefs": [
+    "source:doe:mine:2026-09-09"
+  ],
+  "validFrom": "2026-09-09T23:34:06Z",
+  "validTo": null
+}

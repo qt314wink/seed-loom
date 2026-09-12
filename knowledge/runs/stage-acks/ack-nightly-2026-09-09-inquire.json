@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-09:inquire",
+  "runId": "run:nightly:2026-09-09",
+  "stage": "inquire",
+  "status": "passed",
+  "startedAt": "2026-09-09T23:34:06Z",
+  "completedAt": "2026-09-09T23:34:06Z",
+  "inputs": [
+    "nightly:inquire:input"
+  ],
+  "outputs": [
+    "nightly:inquire:output"
+  ],
+  "checks": [
+    {
+      "name": "contract",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Socratic assessments remain bundle evidence"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "48h research + GitHub watch + live preflight",
+    "inputHashes": [
+      "3f3af5c758cda38bb68e2cfbda149d5b66f28c0498d4ed61fc74fa3d17987e0d"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-09:lab-agent",
+  "type": "Observation",
+  "capturedAt": "2026-09-09T23:34:06Z",
+  "claim": "Skill-bounded agents are now operating quantum-lab hardware with measured feedback and human escalation.",
+  "verifiedFacts": [
+    "MIT EQuS used GPT-5.6 Sol/Codex with measurement skills to run standard six-qubit calibration; noisy or ambiguous signals still needed expert help."
+  ],
+  "inference": [
+    "Bounded skills plus physical feedback and escalation are a credible experimental-agent pattern.",
+    "Consultancy: Instrument-Connected Agent Workflow Design.",
+    "Disposition: Seed Loom CORE; Omni-Loom INCUBATE; skills PRODUCTIZE."
+  ],
+  "significance": "Direct evidence for governed agents crossing from software into physical experiments.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:openai:q:2026-09-08"
+  ],
+  "actorRefs": [
+    "actor:openai",
+    "actor:mit-equs"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "qt314wink/omni-loom"
+  ],
+  "assumptions": [
+    "The pattern generalizes beyond routine calibration."
+  ],
+  "knownLimitations": [
+    "Provider-reported structured workflow."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

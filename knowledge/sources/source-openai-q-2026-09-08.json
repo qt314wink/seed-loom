@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:openai:q:2026-09-08",
+  "type": "Source",
+  "url": "https://openai.com/index/codex-quantum-computing-experiments/",
+  "publisher": "OpenAI",
+  "publishedAt": "2026-09-08T00:00:00Z",
+  "retrievedAt": "2026-09-09T23:34:06Z",
+  "sourceClass": "primary",
+  "independenceKey": "openai-q-0908"
+}

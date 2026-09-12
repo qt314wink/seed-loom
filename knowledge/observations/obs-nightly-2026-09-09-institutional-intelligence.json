@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-09:institutional-intelligence",
+  "type": "Observation",
+  "capturedAt": "2026-09-09T23:34:06Z",
+  "claim": "Harvey raised $550M at $15.5B after launching an open-weight legal model and legal-agent benchmark.",
+  "verifiedFacts": [
+    "Harvey announced $550M funding, reports use by 80% of Am Law 100 firms, and links the raise to its open-weight model and Harvey LAB benchmark."
+  ],
+  "inference": [
+    "Professional AI value is moving toward domain benchmarks and portable institutional intelligence.",
+    "Consultancy: Institutional Intelligence Ownership.",
+    "Disposition: Seed Loom CORE; Melodyfire PRODUCTIZE; skills PRODUCTIZE."
+  ],
+  "significance": "Investor commitment and reported adoption support domain-specific institutional-intelligence architecture.",
+  "confidence": 0.97,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:harvey:2026-09-09"
+  ],
+  "actorRefs": [
+    "actor:harvey",
+    "actor:law-firms"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/melodyfire"
+  ],
+  "assumptions": [
+    "The legal pattern generalizes."
+  ],
+  "knownLimitations": [
+    "Use depth, ROI and portability remain unclear."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

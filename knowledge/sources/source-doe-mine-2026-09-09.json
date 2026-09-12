@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:doe:mine:2026-09-09",
+  "type": "Source",
+  "url": "https://www.energy.gov/articles/does-office-critical-minerals-and-energy-innovation-announces-73-million-advance-domestic",
+  "publisher": "U.S. Department of Energy",
+  "publishedAt": "2026-09-09T00:00:00Z",
+  "retrievedAt": "2026-09-09T23:34:06Z",
+  "sourceClass": "official",
+  "independenceKey": "doe-mine-0909"
+}
