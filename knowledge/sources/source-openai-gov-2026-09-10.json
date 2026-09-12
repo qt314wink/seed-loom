@@ -1,0 +1,10 @@
+{
+  "id": "source:openai:gov:2026-09-10",
+  "type": "Source",
+  "url": "https://openai.com/index/expanding-ai-access-us-government/",
+  "publisher": "OpenAI",
+  "retrievedAt": "2026-09-11T23:05:37Z",
+  "sourceClass": "primary",
+  "independenceKey": "source:openai:gov:2026-09-10",
+  "schemaVersion": "1.1.0"
+}

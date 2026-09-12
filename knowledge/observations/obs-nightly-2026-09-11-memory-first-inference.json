@@ -1,0 +1,38 @@
+{
+  "id": "obs:nightly:2026-09-11:memory-first-inference",
+  "type": "Observation",
+  "capturedAt": "2026-09-11T23:05:37Z",
+  "claim": "Positron raised $875M at a $5B valuation for memory-first AI inference systems.",
+  "verifiedFacts": [
+    "Liberty Global announced participation in Positron's $875M round at a $5B valuation."
+  ],
+  "inference": [
+    "Inference economics are shifting toward memory pressure and workload fit.",
+    "Consultancy: include memory, latency, utilization and concentration in architecture reviews.",
+    "Disposition: Seed Loom and AETHER REFERENCE-ONLY."
+  ],
+  "significance": "Capital supports inference-economics as an advisory lens.",
+  "confidence": 0.96,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:liberty:positron:2026-09-11"
+  ],
+  "actorRefs": [
+    "actor:positron:builder",
+    "actor:liberty-global-tech-ventures:funder"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/aether"
+  ],
+  "assumptions": [
+    "Observed behavior may not generalize."
+  ],
+  "knownLimitations": [
+    "Independent outcome evidence remains incomplete."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate",
+  "schemaVersion": "1.1.0"
+}

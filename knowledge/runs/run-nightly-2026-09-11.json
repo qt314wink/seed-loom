@@ -1,0 +1,61 @@
+{
+  "runId": "run:nightly:2026-09-11",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-09-09T23:05:37Z",
+    "to": "2026-09-11T23:05:37Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-09-11:public-sector-ai",
+    "obs:nightly:2026-09-11:agent-runtime",
+    "obs:nightly:2026-09-11:memory-first-inference",
+    "obs:nightly:2026-09-11:tribal-water",
+    "obs:nightly:2026-09-11:photonics"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "pattern:governed-connectors",
+    "pattern:modular-agent-runtime",
+    "pattern:evidence-linked-restoration"
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-09-11:1",
+    "rel:nightly:2026-09-11:2",
+    "rel:nightly:2026-09-11:3",
+    "rel:nightly:2026-09-11:4",
+    "rel:nightly:2026-09-11:5"
+  ],
+  "contradictions": [
+    "Funding/procurement does not prove outcomes."
+  ],
+  "opportunities": [
+    "civic-ai-readiness",
+    "agent-runtime-review",
+    "inference-economics",
+    "grant-to-evidence",
+    "wave-mechanism-study"
+  ],
+  "proposedExperiments": [
+    "civic-mcp-evidence-slice-v0",
+    "photonic-wave-grammar-v0"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false
+    },
+    {
+      "status": "proposed",
+      "executed": false
+    }
+  ],
+  "noChangeReceipts": [
+    "nextjs-boilerplate, kozo-dreams, omni-loom-case-study, aether and project-constellation: no default-branch commits observed in window."
+  ],
+  "collectionFailures": [
+    "Local/unpushed repository work is not observable.",
+    "Canonical ingest does not persist top-level socraticAssessments; delivered bundle retains them for review."
+  ],
+  "schemaVersion": "1.1.0"
+}

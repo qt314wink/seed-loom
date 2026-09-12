@@ -1,0 +1,10 @@
+{
+  "id": "source:epa:tribal-water:2026-09-10",
+  "type": "Source",
+  "url": "https://www.epa.gov/newsreleases/epa-announces-35-million-grant-funding-help-tribes-restore-and-protect-local",
+  "publisher": "EPA",
+  "retrievedAt": "2026-09-11T23:05:37Z",
+  "sourceClass": "regulatory",
+  "independenceKey": "source:epa:tribal-water:2026-09-10",
+  "schemaVersion": "1.1.0"
+}
