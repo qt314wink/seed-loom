@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-09-12",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-09-10T23:39:35Z",
+    "to": "2026-09-12T23:39:35Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-09-12:capital-compute",
+    "obs:nightly:2026-09-12:agent-state",
+    "obs:nightly:2026-09-12:creative-demand",
+    "obs:nightly:2026-09-12:rangeland-drought",
+    "obs:nightly:2026-09-12:st-wave-laser"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "pattern:capital-compute",
+    "pattern:agent-state",
+    "pattern:creative-demand",
+    "pattern:regen-forecast"
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-09-12:1",
+    "rel:nightly:2026-09-12:2",
+    "rel:nightly:2026-09-12:3",
+    "rel:nightly:2026-09-12:4",
+    "rel:nightly:2026-09-12:5"
+  ],
+  "contradictions": [
+    "lock-in-vs-interoperability"
+  ],
+  "opportunities": [
+    "agent-state-audit",
+    "creative-proof-slices",
+    "regen-decision-evidence"
+  ],
+  "proposedExperiments": [
+    "agent-state-failure-injection-v0",
+    "space-time-wave-grammar-v0"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false
+    }
+  ],
+  "noChangeReceipts": [
+    "OAP latest verified main move remains Sep 11 motion-proof merge.",
+    "Seed Loom Sep 9 ingest merged; Sep 11 ingest PR remains draft."
+  ],
+  "collectionFailures": [
+    "Local/unpushed repo state unavailable.",
+    "Untimestamped sources excluded.",
+    "Socratic assessments are delivered but not persisted by canonical ingest."
+  ]
+}

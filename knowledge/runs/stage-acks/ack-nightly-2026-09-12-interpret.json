@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-12:interpret",
+  "runId": "run:nightly:2026-09-12",
+  "stage": "interpret",
+  "status": "passed",
+  "startedAt": "2026-09-12T23:39:35Z",
+  "completedAt": "2026-09-12T23:39:35Z",
+  "inputs": [],
+  "outputs": [],
+  "checks": [],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": []
+  },
+  "provenance": {
+    "producer": "Nightly Intelligence",
+    "method": "48h review",
+    "inputHashes": [
+      "a9e8cf62de967bee96de9ddbd13c795f21c30ac61acd0d632f97309a30f6127b"
+    ]
+  }
+}

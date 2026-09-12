@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-12:2",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-12:agent-state",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:github:hermes:2026-09-11",
+  "confidence": 0.99,
+  "evidenceRefs": [
+    "source:github:hermes:2026-09-11"
+  ]
+}
