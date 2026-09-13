@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-09-13",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-09-11T23:03:49Z",
+    "to": "2026-09-13T23:03:49Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-09-13:external-ai-evaluation",
+    "obs:nightly:2026-09-13:agent-hackathon-demand",
+    "obs:nightly:2026-09-13:common-species-decline",
+    "obs:nightly:2026-09-13:phonon-protected-qubits",
+    "obs:nightly:2026-09-13:agent-driven-deployments"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "pattern:external-evaluation-as-operating-control",
+    "pattern:agentic-delivery-needs-repository-governance",
+    "pattern:state-sensitive-regenerative-measurement"
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-09-13:1",
+    "rel:nightly:2026-09-13:2",
+    "rel:nightly:2026-09-13:3",
+    "rel:nightly:2026-09-13:4",
+    "rel:nightly:2026-09-13:5"
+  ],
+  "contradictions": [
+    "contradiction:voluntary-ai-safety-coordination-may-not-create-enforceable-controls",
+    "contradiction:provider-reported-agent-deployment-share-does-not-prove-output-quality"
+  ],
+  "opportunities": [
+    "opportunity:agent-evaluation-and-stop-gate-audit",
+    "opportunity:bounded-agent-task-proof",
+    "opportunity:ecological-abundance-evidence-architecture",
+    "opportunity:agentic-delivery-control-review"
+  ],
+  "proposedExperiments": [
+    "experiment:agent-stop-gate-fixture-v0",
+    "experiment:common-species-monitoring-schema-v0"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false
+    },
+    {
+      "status": "proposed",
+      "executed": false
+    }
+  ],
+  "noChangeReceipts": [
+    "No repository identity or product boundary was silently merged from the five signals.",
+    "No archive or kill recommendation crossed the evidence threshold in this run."
+  ],
+  "collectionFailures": [
+    "Representative image retrieval was incomplete for several signals; no synthetic evidence image was substituted.",
+    "Vercel's >50% deployment statistic is provider-reported and appears on a page originally published April 9, 2026 but currently updated with September 2026 state.",
+    "Local or unpushed repository work is not visible through GitHub endpoints."
+  ]
+}

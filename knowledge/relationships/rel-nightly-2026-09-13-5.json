@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-13:5",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-13:agent-driven-deployments",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:vercel:agentic-infrastructure:2026-09",
+  "confidence": 0.97,
+  "evidenceRefs": [
+    "source:vercel:agentic-infrastructure:2026-09"
+  ],
+  "validFrom": "2026-09-13T23:03:49Z",
+  "validTo": null
+}

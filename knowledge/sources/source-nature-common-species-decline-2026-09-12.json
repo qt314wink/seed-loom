@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nature:common-species-decline:2026-09-12",
+  "type": "Source",
+  "url": "https://www.nature.com/articles/s41467-026-77501-4",
+  "publisher": "Nature Communications",
+  "publishedAt": "2026-09-12T00:00:00Z",
+  "retrievedAt": "2026-09-13T23:03:49Z",
+  "sourceClass": "research",
+  "independenceKey": "nature-common-species-decline-20260912",
+  "doi": "10.1038/s41467-026-77501-4",
+  "title": "Widespread declines of formerly common species reshape local assemblages over time"
+}

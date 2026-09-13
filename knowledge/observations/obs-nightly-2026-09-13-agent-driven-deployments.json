@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-13:agent-driven-deployments",
+  "type": "Observation",
+  "capturedAt": "2026-09-13T23:03:49Z",
+  "claim": "Vercel now reports that coding agents initiate more than half of deployments on its platform, indicating that agent-driven software delivery has crossed from edge case to routine infrastructure load.",
+  "verifiedFacts": [
+    "Vercel's Agentic Infrastructure page currently states that, as of September 2026, more than 50% of deployments are initiated by coding agents, up from more than 30% earlier in 2026."
+  ],
+  "inference": [
+    "Repository governance, preview isolation, CI evidence, scoped write permissions, and rollback receipts need to be designed for machine-generated change as a default condition.",
+    "Consultancy: agentic delivery-control review can be packaged around branch policy, preview environments, tests, provenance, rollback, and human promotion gates.",
+    "Disposition: Seed Loom CORE; Project Constellation PRODUCTIZE for portfolio evidence; AETHER and design-system repos should adopt shared machine-change receipts rather than independent governance stacks."
+  ],
+  "significance": "The operating environment for web engineering is changing: machine-generated code is no longer exceptional, so control surfaces must move closer to the repository and deployment boundary.",
+  "confidence": 0.97,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:vercel:agentic-infrastructure:2026-09"
+  ],
+  "actorRefs": [
+    "actor:vercel:provider-builder",
+    "actor:coding-agents:builder",
+    "actor:web-teams:buyer-participant"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/project-constellation",
+    "MelodicBloom/aether"
+  ],
+  "assumptions": [
+    "Vercel's customer mix is directionally informative for modern web-development workflows."
+  ],
+  "knownLimitations": [
+    "The metric is provider-reported, platform-specific, and does not by itself measure code quality, review burden, or business value."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

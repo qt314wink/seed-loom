@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:reuters:ai-slowdown:2026-09-12",
+  "type": "Source",
+  "url": "https://www.reuters.com/business/anthropic-ceo-urges-ai-companies-slow-model-development-2026-09-12/",
+  "publisher": "Reuters",
+  "publishedAt": "2026-09-12T00:00:00Z",
+  "retrievedAt": "2026-09-13T23:03:49Z",
+  "sourceClass": "press",
+  "independenceKey": "reuters-ai-slowdown-20260912",
+  "title": "Anthropic CEO urges AI companies to slow model development amid fears over misuse"
+}

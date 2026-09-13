@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-13:phonon-protected-qubits",
+  "type": "Observation",
+  "capturedAt": "2026-09-13T23:03:49Z",
+  "claim": "Mechanical vibrations can both interact with and protect a solid-state spin qubit, extending coherence by roughly threefold in the reported device.",
+  "verifiedFacts": [
+    "Harvard researchers reported all-mechanical coherence protection of a silicon-vacancy spin in diamond using a continuous phonon driving field, extending coherence time by about a factor of three in work published in Nature Physics."
+  ],
+  "inference": [
+    "A single physical channel can sometimes serve both transport and stabilization functions, a useful systems-engineering pattern for mechanism studies.",
+    "Creative translation should remain explicitly analogical: vibration-mediated protection is not evidence that visual or audio vibration produces analogous biological effects.",
+    "Disposition: Shader Grammar INCUBATE for mechanism vocabulary; AETHER REFERENCE-ONLY; Seed Loom REFERENCE-ONLY."
+  ],
+  "significance": "The result is a strong mechanism reference for coupled transport/stabilization and for disciplined separation of physical evidence from creative metaphor.",
+  "confidence": 0.98,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:harvard:phonon-qubit:2026-09-12"
+  ],
+  "actorRefs": [
+    "actor:harvard-seas:researcher",
+    "actor:quantum-network-builders:builder"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/shader-grammar",
+    "MelodicBloom/aether",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "The dual-role transport/protection pattern is useful as an abstract systems pattern outside quantum hardware."
+  ],
+  "knownLimitations": [
+    "The experiment concerns a specific solid-state qubit platform and does not support claims about macroscopic physiology, consciousness, or generic vibration effects."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

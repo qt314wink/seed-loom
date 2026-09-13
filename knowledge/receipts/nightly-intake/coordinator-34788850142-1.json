@@ -1,0 +1,54 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-09-13T23:09:04.855Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-09-13",
+      "bundlePath": "knowledge/intake/nightly/2026-09-13/nightly-run-bundle-2026-09-13.json",
+      "bundleSha256": "abc19dca9197440ab88716a583234d22f397ca7138b9b83378e33dc5389d50ab",
+      "normalizedDigest": "ba89920eecb87106e3e0069cad26d1d466ecb5532096c89a4e402a1af05628f3",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-reuters-ai-slowdown-2026-09-12.json",
+        "knowledge/sources/source-devpost-aws-agents-for-humans-2026-09-13.json",
+        "knowledge/sources/source-nature-common-species-decline-2026-09-12.json",
+        "knowledge/sources/source-harvard-phonon-qubit-2026-09-12.json",
+        "knowledge/sources/source-vercel-agentic-infrastructure-2026-09.json",
+        "knowledge/observations/obs-nightly-2026-09-13-external-ai-evaluation.json",
+        "knowledge/observations/obs-nightly-2026-09-13-agent-hackathon-demand.json",
+        "knowledge/observations/obs-nightly-2026-09-13-common-species-decline.json",
+        "knowledge/observations/obs-nightly-2026-09-13-phonon-protected-qubits.json",
+        "knowledge/observations/obs-nightly-2026-09-13-agent-driven-deployments.json",
+        "knowledge/relationships/rel-nightly-2026-09-13-1.json",
+        "knowledge/relationships/rel-nightly-2026-09-13-2.json",
+        "knowledge/relationships/rel-nightly-2026-09-13-3.json",
+        "knowledge/relationships/rel-nightly-2026-09-13-4.json",
+        "knowledge/relationships/rel-nightly-2026-09-13-5.json",
+        "knowledge/runs/run-nightly-2026-09-13.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-13-collect.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-13-vet.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-13-normalize.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-13-observe.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-13-inquire.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-13-interpret.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-13-relate.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-13-pattern.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-13-opportunity.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-13-strategy.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-13-experiment.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-13-genesis.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-13-publish.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-09-13-ingest.json",
+      "generatedRecordCount": 29
+    }
+  ]
+}

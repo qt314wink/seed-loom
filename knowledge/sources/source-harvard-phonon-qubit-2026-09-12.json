@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:harvard:phonon-qubit:2026-09-12",
+  "type": "Source",
+  "url": "https://www.sciencedaily.com/releases/2026/09/260911214245.htm",
+  "publisher": "Harvard SEAS via ScienceDaily",
+  "publishedAt": "2026-09-12T00:00:00Z",
+  "retrievedAt": "2026-09-13T23:03:49Z",
+  "sourceClass": "research",
+  "independenceKey": "harvard-phonon-qubit-20260912",
+  "doi": "10.1038/s41567-026-03369-2",
+  "title": "Tiny sound waves could help solve a major quantum computing problem",
+  "upstream": {
+    "study": "All-mechanical coherence protection and fast control of a spin qubit"
+  }
+}
