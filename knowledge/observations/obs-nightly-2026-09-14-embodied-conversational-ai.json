@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-14:embodied-conversational-ai",
+  "type": "Observation",
+  "capturedAt": "2026-09-14T23:46:32Z",
+  "claim": "Nuance raised $50M to build a unified audiovisual model for low-latency, emotionally aware face-to-face AI interaction.",
+  "verifiedFacts": [
+    "Business Insider reports a $50M Series A led by Lightspeed with Accel, NVentures, South Park Commons and Define Ventures participating; Nuance is pre-product and developing unified audiovisual input/output models."
+  ],
+  "inference": [
+    "Embodied AI is becoming a distinct interaction layer where latency, multimodal coherence, persona consistency and consent provenance matter alongside language quality.",
+    "Consultancy: evaluate embodied-agent experience, data provenance and persona-control boundaries before treating avatars as a simple front end.",
+    "Disposition: Agent Runtime INCUBATE; Melodyfire REFERENCE-ONLY for presentation mechanics."
+  ],
+  "significance": "Funding is moving toward unified multimodal interaction rather than loosely coupled text, speech and avatar stacks.",
+  "confidence": 0.95,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:businessinsider:nuance-series-a:2026-09-14"
+  ],
+  "actorRefs": [
+    "actor:nuance:builder",
+    "actor:lightspeed:funder",
+    "actor:accel:funder",
+    "actor:nventures:funder"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/agent-runtime-control-center",
+    "MelodicBloom/melodyfire"
+  ],
+  "assumptions": [
+    "Unified audiovisual models will materially improve interaction quality enough to justify specialized adoption."
+  ],
+  "knownLimitations": [
+    "Nuance is pre-product; independent latency, safety, retention and commercial outcome data are unavailable."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

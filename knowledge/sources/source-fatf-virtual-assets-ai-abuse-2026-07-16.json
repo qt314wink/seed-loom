@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:fatf:virtual-assets-ai-abuse:2026-07-16",
+  "type": "Source",
+  "url": "https://www.fatf-gafi.org/fr/news/targeted-updated-va-vasps-2026.html",
+  "publisher": "Financial Action Task Force",
+  "publishedAt": "2026-07-16T00:00:00Z",
+  "retrievedAt": "2026-09-14T23:46:32Z",
+  "sourceClass": "official",
+  "independenceKey": "fatf-virtual-assets-20260716"
+}

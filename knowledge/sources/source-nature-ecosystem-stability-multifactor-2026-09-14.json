@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nature:ecosystem-stability-multifactor:2026-09-14",
+  "type": "Source",
+  "url": "https://www.nature.com/articles/s41559-026-03190-3",
+  "publisher": "Nature Ecology & Evolution",
+  "publishedAt": "2026-09-14T00:00:00Z",
+  "retrievedAt": "2026-09-14T23:46:32Z",
+  "sourceClass": "research",
+  "independenceKey": "nature-eco-stability-20260914"
+}

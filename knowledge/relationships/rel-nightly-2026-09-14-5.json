@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-14:5",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-14:biointegrated-flexible-photonics",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:photonix:flexible-photonics:2026-09-14",
+  "confidence": 0.98,
+  "evidenceRefs": [
+    "source:photonix:flexible-photonics:2026-09-14"
+  ],
+  "validFrom": "2026-09-14T23:46:32Z",
+  "validTo": null
+}

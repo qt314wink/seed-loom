@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-14:ecosystem-multifactor-stability",
+  "type": "Observation",
+  "capturedAt": "2026-09-14T23:46:32Z",
+  "claim": "A 13-year factorial grassland experiment found ecosystem stability depends on non-additive, time-dependent interactions among multiple global-change drivers.",
+  "verifiedFacts": [
+    "Nature Ecology & Evolution reports a 13-year fully factorial field experiment manipulating elevated CO2, nitrogen enrichment, warming and reduced rainfall, finding distinct single-driver effects and strongly non-additive, time-dependent interactions."
+  ],
+  "inference": [
+    "Regenerative decision systems should represent interacting drivers and temporal context explicitly instead of summing isolated risk scores.",
+    "Consultancy: design multi-driver ecological evidence models that preserve interaction terms, time horizon and uncertainty.",
+    "Disposition: Project Constellation INCUBATE; Seed Loom CORE for provenance and relationship structure."
+  ],
+  "significance": "Single-factor dashboards can misrepresent ecosystem response when combined drivers produce emergent effects.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:nature:ecosystem-stability-multifactor:2026-09-14"
+  ],
+  "actorRefs": [
+    "actor:ecosystem-researchers:researcher",
+    "actor:land-managers:buyer"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/project-constellation",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "The multi-driver interaction principle transfers usefully to management contexts beyond the experimental grassland system."
+  ],
+  "knownLimitations": [
+    "One experimental platform does not establish universal interaction structure across ecosystems or management regimes."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

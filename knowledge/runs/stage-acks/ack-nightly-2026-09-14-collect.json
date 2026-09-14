@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-14:collect",
+  "runId": "run:nightly:2026-09-14",
+  "stage": "collect",
+  "status": "passed",
+  "startedAt": "2026-09-14T23:46:32Z",
+  "completedAt": "2026-09-14T23:46:32Z",
+  "inputs": [
+    "48h-source-and-repository-set"
+  ],
+  "outputs": [
+    "six-source-records"
+  ],
+  "checks": [
+    {
+      "name": "freshness-dedup-provenance",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "candidate-only"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "48h web, research and GitHub review against live Seed Loom authority",
+    "inputHashes": [
+      "f33bcbc96677a8d9ddc7b54af77b42c2fc93bea314a647e5f90a8609b251d84b"
+    ]
+  }
+}

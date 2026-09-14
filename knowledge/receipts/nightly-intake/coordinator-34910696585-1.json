@@ -1,0 +1,55 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-09-14T23:51:27.993Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-09-14",
+      "bundlePath": "knowledge/intake/nightly/2026-09-14/nightly-run-bundle-2026-09-14.json",
+      "bundleSha256": "6ae4a3cba22ef47bde83513cac8a0c5a41eabb3dde96ab2cca5612a21bd521c7",
+      "normalizedDigest": "61491ff0ddb17134bb03c72010451aed7c412b06f8b8495f71ab43656df47caf",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-businessinsider-nuance-series-a-2026-09-14.json",
+        "knowledge/sources/source-ft-fatf-ai-scams-2026-09-14.json",
+        "knowledge/sources/source-fatf-virtual-assets-ai-abuse-2026-07-16.json",
+        "knowledge/sources/source-nature-ecosystem-stability-multifactor-2026-09-14.json",
+        "knowledge/sources/source-hpcwire-llnl-layer-inspection-2026-09-14.json",
+        "knowledge/sources/source-photonix-flexible-photonics-2026-09-14.json",
+        "knowledge/observations/obs-nightly-2026-09-14-embodied-conversational-ai.json",
+        "knowledge/observations/obs-nightly-2026-09-14-ai-fraud-coordination.json",
+        "knowledge/observations/obs-nightly-2026-09-14-ecosystem-multifactor-stability.json",
+        "knowledge/observations/obs-nightly-2026-09-14-in-process-fabrication-inspection.json",
+        "knowledge/observations/obs-nightly-2026-09-14-biointegrated-flexible-photonics.json",
+        "knowledge/relationships/rel-nightly-2026-09-14-1.json",
+        "knowledge/relationships/rel-nightly-2026-09-14-2.json",
+        "knowledge/relationships/rel-nightly-2026-09-14-3.json",
+        "knowledge/relationships/rel-nightly-2026-09-14-4.json",
+        "knowledge/relationships/rel-nightly-2026-09-14-5.json",
+        "knowledge/runs/run-nightly-2026-09-14.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-14-collect.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-14-vet.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-14-normalize.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-14-observe.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-14-inquire.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-14-interpret.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-14-relate.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-14-pattern.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-14-opportunity.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-14-strategy.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-14-experiment.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-14-genesis.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-14-publish.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-09-14-ingest.json",
+      "generatedRecordCount": 30
+    }
+  ]
+}

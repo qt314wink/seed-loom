@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-14:2",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-14:ai-fraud-coordination",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:ft:fatf-ai-scams:2026-09-14",
+  "confidence": 0.97,
+  "evidenceRefs": [
+    "source:ft:fatf-ai-scams:2026-09-14",
+    "source:fatf:virtual-assets-ai-abuse:2026-07-16"
+  ],
+  "validFrom": "2026-09-14T23:46:32Z",
+  "validTo": null
+}

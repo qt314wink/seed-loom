@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-14:biointegrated-flexible-photonics",
+  "type": "Observation",
+  "capturedAt": "2026-09-14T23:46:32Z",
+  "claim": "A new review frames flexible photonics as a converging platform for conformal sensing, therapy and bio-interfacing with soft biological systems.",
+  "verifiedFacts": [
+    "PhotoniX published an open-access review on September 14 describing soft, stretchable and biocompatible photonic devices designed to conform to dynamic biological systems and surveying sensing, therapeutic and interface applications."
+  ],
+  "inference": [
+    "For the materials lexicon, geometry, mechanical compliance, optical function and biological interface should be modeled as coupled constraints rather than aesthetic attributes.",
+    "Consultancy relevance is exploratory: a mechanism-informed interface-materials research capability, not a biomedical product claim.",
+    "Disposition: Shader Grammar INCUBATE; AETHER REFERENCE-ONLY; Seed Loom REFERENCE-ONLY."
+  ],
+  "significance": "The review offers rigorous vocabulary for material behavior where optical and mechanical properties co-determine function.",
+  "confidence": 0.98,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:photonix:flexible-photonics:2026-09-14"
+  ],
+  "actorRefs": [
+    "actor:flexible-photonics-researchers:researcher",
+    "actor:biomedical-engineers:builder"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/aether",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Mechanism vocabulary can improve material-system representation without implying biomedical efficacy."
+  ],
+  "knownLimitations": [
+    "This is a review article; individual device claims vary in maturity and no user-specific biomedical application is demonstrated."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}
