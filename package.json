@@ -29,7 +29,7 @@
     "knowledge:validate": "node scripts/knowledge/validate.mjs",
     "knowledge:controls": "node scripts/knowledge/run-controls.mjs",
     "knowledge:run": "node scripts/knowledge/run-all.mjs",
-    "knowledge:verify": "npm run knowledge:doctor && npm run knowledge:test:contract && npm run knowledge:test:integrity && npm run knowledge:test:independence && npm run knowledge:test:claim-identity && npm run knowledge:test:temporal && npm run knowledge:test && npm run knowledge:controls && npm run knowledge:run",
+    "knowledge:verify": "npm run knowledge:doctor && npm run knowledge:test:contract && npm run knowledge:test:integrity && npm run knowledge:test:independence && npm run knowledge:test:claim-identity && npm run knowledge:test:temporal && npm run knowledge:test && npm run knowledge:test:hardening && npm run knowledge:controls && npm run knowledge:run",
     "knowledge:verify:observed": "node scripts/knowledge/run-observed.mjs",
     "knowledge:weekly": "node scripts/knowledge/weekly-review.mjs",
     "knowledge:ingest": "node scripts/knowledge/ingest-nightly-run.mjs",
@@ -40,7 +40,8 @@
     "contract:check": "node scripts/reproducibility/check-root-contract.mjs",
     "schemas:check": "node scripts/reproducibility/check-schemas.mjs",
     "artifact:check": "node scripts/reproducibility/check-artifact.mjs",
-    "verify:root": "npm ci && npx playwright install chromium && npm run contract:check && npm run typecheck && npm run build && npm run test:visual && npm run schemas:check && npm run artifact:check"
+    "verify:root": "npm ci && npx playwright install chromium && npm run contract:check && npm run typecheck && npm run build && npm run test:visual && npm run schemas:check && npm run artifact:check",
+    "knowledge:test:hardening": "node scripts/knowledge/test-post-merge-hardening.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.54.1",

@@ -1,0 +1,68 @@
+{
+  "control": "post-merge-hardening",
+  "digest": "b9b3fe2e6ebf1159cfcde42969b4873ee3acd80a4fc461db9c3495e04aaa590e",
+  "generatedAt": "2026-08-27T00:00:00Z",
+  "inputs": [
+    {
+      "path": "docs/strategy-genesis/POST_MERGE_HARDENING.md",
+      "sha256": "bc7068a5f6620a6a54b72ae2a1e1363237beadd5ddc0c3a1a3f1b8c821cf826f"
+    },
+    {
+      "path": "knowledge/schema/run.schema.json",
+      "sha256": "740aee8c2fb3290d6d48887cf5ee6856c672aa17c84f2617f7b57ee507b71afd"
+    },
+    {
+      "path": "package.json",
+      "sha256": "087e9d249ae83dead9a9e7c447c862b91c42877b94b6bec77f39261c9a52832d"
+    },
+    {
+      "path": "scripts/knowledge/emit-jsonl.mjs",
+      "sha256": "c7d117584c09b14d512a90c58bc578609fbb86fa73613bf86fec9f5b373a644e"
+    },
+    {
+      "path": "scripts/knowledge/lib/safe-path.mjs",
+      "sha256": "6dfbf7835f2a5f95f5c814efbb24de019563a0629c3d9c8b9ba5cb2eb93db31e"
+    },
+    {
+      "path": "scripts/knowledge/serve-workbench.mjs",
+      "sha256": "79eeacb8753a6384270afe520f36303b91b641bd1c1c6ed603e7bfe4d1266f20"
+    },
+    {
+      "path": "scripts/knowledge/test-post-merge-hardening.mjs",
+      "sha256": "ceef0ac614cd56019d24d4e0274d0e2bc8719d991c0003173bb2d43be651aeb9"
+    },
+    {
+      "path": "scripts/knowledge/weekly-review.mjs",
+      "sha256": "8e7ab17c0614739f61aea76520fa9ba141d768b727671ee7b59893f784b47edd"
+    }
+  ],
+  "receiptId": "post-merge-hardening:b9b3fe2e6ebf",
+  "results": {
+    "defectsAddressed": 4,
+    "regressionTests": "scripts/knowledge/test-post-merge-hardening.mjs",
+    "wiredInto": "knowledge:verify"
+  },
+  "sequence": [
+    {
+      "phase": "original-ws1-ws10-proof",
+      "ref": "issue#24 completion ledger, head 6612741, completionDigest 698a81530787537693216555fcaa4870dd9494cb4fcfa2483b56513327566a23"
+    },
+    {
+      "phase": "owner-merge",
+      "ref": "PR #23 merged by qt314wink 2026-08-01, merge commit b76dd5d06795c8d52163a7e3c2f64637121656f7"
+    },
+    {
+      "phase": "post-merge-review-findings",
+      "ref": "five Copilot threads post-merge; filter-atlas npm ci fixed on main; four defects open"
+    },
+    {
+      "phase": "corrections-applied",
+      "ref": "this receipt: path boundary, JSONL flattening, run schema required, weekly-review baseline fixes plus regression tests wired into knowledge:verify"
+    },
+    {
+      "phase": "remaining-limitations",
+      "ref": "docs/strategy-genesis/POST_MERGE_HARDENING.md#remaining-limitations"
+    }
+  ],
+  "violations": []
+}
