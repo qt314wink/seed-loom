@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:businessinsider:nuance-series-a:2026-09-14",
+  "type": "Source",
+  "url": "https://www.businessinsider.com/former-apple-researchers-raise-50-million-to-build-foundational-model-2026-9",
+  "publisher": "Business Insider",
+  "publishedAt": "2026-09-14T12:01:00Z",
+  "retrievedAt": "2026-09-14T23:46:32Z",
+  "sourceClass": "press",
+  "independenceKey": "businessinsider-nuance-20260914"
+}

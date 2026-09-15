@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-14:in-process-fabrication-inspection",
+  "type": "Observation",
+  "capturedAt": "2026-09-14T23:46:32Z",
+  "claim": "LLNL demonstrated camera-and-ML inspection that measures direct-ink-written structures layer by layer during fabrication.",
+  "verifiedFacts": [
+    "A September 14 LLNL release carried by HPCwire describes cameras plus ML-based segmentation and computer vision converting thousands of in-process images into measurements and spatial maps of deposited material for direct ink writing."
+  ],
+  "inference": [
+    "Deterministic fabrication proof should include observation during fabrication, not only final-object verification; intermediate evidence can localize drift before costly completion.",
+    "Consultancy: pair digital fabrication pipelines with in-process measurement, tolerance maps and traceable intervention rules.",
+    "Disposition: Omni-Loom PRODUCTIZE toward fabrication proof; Seed Loom REFERENCE-ONLY for receipt structure."
+  ],
+  "significance": "This strengthens the case for observable compiler-to-fabrication loops with evidence captured at intermediate stages.",
+  "confidence": 0.98,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:hpcwire:llnl-layer-inspection:2026-09-14"
+  ],
+  "actorRefs": [
+    "actor:llnl:researcher-builder",
+    "actor:additive-manufacturing-teams:buyer"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/omni-loom-case-study",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Layer-level inspection can be adapted economically to smaller-scale fabrication proofs."
+  ],
+  "knownLimitations": [
+    "Transfer cost, sensor requirements and generalization to other fabrication processes are unknown."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

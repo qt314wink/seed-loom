@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:hpcwire:llnl-layer-inspection:2026-09-14",
+  "type": "Source",
+  "url": "https://www.hpcwire.com/off-the-wire/llnl-uses-ai-to-inspect-3d-printed-parts-layer-by-layer/",
+  "publisher": "HPCwire / Lawrence Livermore National Laboratory",
+  "publishedAt": "2026-09-14T00:00:00Z",
+  "retrievedAt": "2026-09-14T23:46:32Z",
+  "sourceClass": "trade",
+  "independenceKey": "llnl-layer-inspection-20260914"
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-14:observe",
+  "runId": "run:nightly:2026-09-14",
+  "stage": "observe",
+  "status": "passed",
+  "startedAt": "2026-09-14T23:46:32Z",
+  "completedAt": "2026-09-14T23:46:32Z",
+  "inputs": [
+    "five-vetted-signals"
+  ],
+  "outputs": [
+    "five-candidate-observations"
+  ],
+  "checks": [
+    {
+      "name": "exactly-five",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "approvalState=candidate"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "fact-inference separation",
+    "inputHashes": [
+      "f33bcbc96677a8d9ddc7b54af77b42c2fc93bea314a647e5f90a8609b251d84b"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-14:3",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-14:ecosystem-multifactor-stability",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:nature:ecosystem-stability-multifactor:2026-09-14",
+  "confidence": 0.99,
+  "evidenceRefs": [
+    "source:nature:ecosystem-stability-multifactor:2026-09-14"
+  ],
+  "validFrom": "2026-09-14T23:46:32Z",
+  "validTo": null
+}

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-14:ai-fraud-coordination",
+  "type": "Observation",
+  "capturedAt": "2026-09-14T23:46:32Z",
+  "claim": "FATF leadership says AI is increasing scam capability and is pushing coordinated anti-scam centers as a policy response.",
+  "verifiedFacts": [
+    "The Financial Times reports FATF president Giles Thomson warning that smaller criminal teams are using AI for deepfakes, fake sites and impersonation scams and that FATF will recommend more national anti-scam centers.",
+    "FATF's July virtual-assets update separately documented rising misuse of AI, deepfakes and synthetic identities in fraud and illicit-finance activity."
+  ],
+  "inference": [
+    "AI risk governance crosses model, identity, payments, communications and incident-response boundaries; controls cannot live in one application layer.",
+    "Consultancy: threat-model AI-enabled impersonation workflows and define cross-system evidence and response handoffs.",
+    "Disposition: Seed Loom CORE for evidence lineage; Agent Runtime PRODUCTIZE for bounded permissions and incident receipts."
+  ],
+  "significance": "The operational unit of AI-risk governance is increasingly the cross-system workflow, not the model alone.",
+  "confidence": 0.97,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "law-or-policy",
+  "sourceRefs": [
+    "source:ft:fatf-ai-scams:2026-09-14",
+    "source:fatf:virtual-assets-ai-abuse:2026-07-16"
+  ],
+  "actorRefs": [
+    "actor:fatf:regulator",
+    "actor:criminal-networks:participant",
+    "actor:national-authorities:buyer"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "National anti-scam coordination will create demand for inspectable cross-system controls and evidence architecture."
+  ],
+  "knownLimitations": [
+    "The recommendation is prospective; effectiveness of proposed anti-scam centers is not yet demonstrated."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

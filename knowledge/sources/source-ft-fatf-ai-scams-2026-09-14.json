@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:ft:fatf-ai-scams:2026-09-14",
+  "type": "Source",
+  "url": "https://www.ft.com/content/d545bae1-d770-46f3-9913-07e85d4ae34c",
+  "publisher": "Financial Times",
+  "publishedAt": "2026-09-14T00:00:00Z",
+  "retrievedAt": "2026-09-14T23:46:32Z",
+  "sourceClass": "press",
+  "independenceKey": "ft-fatf-ai-scams-20260914"
+}

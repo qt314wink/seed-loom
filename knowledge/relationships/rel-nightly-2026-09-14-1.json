@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-14:1",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-14:embodied-conversational-ai",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:businessinsider:nuance-series-a:2026-09-14",
+  "confidence": 0.95,
+  "evidenceRefs": [
+    "source:businessinsider:nuance-series-a:2026-09-14"
+  ],
+  "validFrom": "2026-09-14T23:46:32Z",
+  "validTo": null
+}

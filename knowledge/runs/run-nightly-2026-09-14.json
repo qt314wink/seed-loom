@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-09-14",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-09-12T23:46:32Z",
+    "to": "2026-09-14T23:46:32Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-09-14:embodied-conversational-ai",
+    "obs:nightly:2026-09-14:ai-fraud-coordination",
+    "obs:nightly:2026-09-14:ecosystem-multifactor-stability",
+    "obs:nightly:2026-09-14:in-process-fabrication-inspection",
+    "obs:nightly:2026-09-14:biointegrated-flexible-photonics"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "pattern:cross-system-governance-boundaries",
+    "pattern:multi-driver-context-over-single-metric",
+    "pattern:in-process-evidence-before-final-output"
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-09-14:1",
+    "rel:nightly:2026-09-14:2",
+    "rel:nightly:2026-09-14:3",
+    "rel:nightly:2026-09-14:4",
+    "rel:nightly:2026-09-14:5"
+  ],
+  "contradictions": [
+    "contradiction:embodied-ai-funding-precedes-product-outcomes",
+    "contradiction:inspection-value-may-not-transfer-across-fabrication-scales"
+  ],
+  "opportunities": [
+    "opportunity:agent-identity-fraud-control-review",
+    "opportunity:multi-driver-regenerative-evidence-model",
+    "opportunity:fabrication-in-process-proof",
+    "opportunity:embodied-agent-governance"
+  ],
+  "proposedExperiments": [
+    "experiment:omni-loom-layer-receipt-v0",
+    "experiment:multi-driver-ecology-fixture-v0"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false
+    },
+    {
+      "status": "proposed",
+      "executed": false
+    }
+  ],
+  "noChangeReceipts": [
+    "Observation Ad Pipeline: no default-branch commits in strict 48-hour window.",
+    "Older nightly candidate PR #53 remains open/draft and is untouched."
+  ],
+  "collectionFailures": [
+    "Representative-image retrieval did not return stable image references for all five signals; no synthetic evidence image was substituted.",
+    "Local or unpushed repository work is outside GitHub visibility.",
+    "Canonical ingest validates but does not persist top-level Socratic assessments or advisory extensions as separate canonical records."
+  ]
+}
