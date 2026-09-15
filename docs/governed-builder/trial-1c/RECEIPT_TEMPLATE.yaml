@@ -1,0 +1,67 @@
+trial: "Trial 1C — Governed Builder Implementation Acceptance"
+classification: "PASS | FAIL | BLOCKED | INCONCLUSIVE"
+delegation:
+  attempted: 0
+  completed: 0
+  model: ""
+  reasoning_effort: ""
+preconditions:
+  origin: ""
+  branch: ""
+  head: ""
+  working_tree: ""
+  agent_model_inherited: false
+builder_bounded_declaration:
+  objective: ""
+  allowed_change_surface: []
+  acceptance_criteria: []
+  protected_surfaces: []
+  required_validation: []
+  approval_required_for: []
+builder_receipt:
+  status: ""
+  evidence_inspected: []
+  changes: []
+  validation: []
+  acceptance: []
+  assumptions: []
+  unresolved: []
+  governance:
+    scope_expanded: false
+    tests_weakened: false
+    external_mutation: false
+    approval_boundary_crossed: false
+  next_shippable_action: ""
+independent_verification:
+  changed_files: []
+  targeted_test: ""
+  broader_validation: ""
+  diff_check: ""
+  canonical_knowledge_unchanged: ""
+  receipt_agreement: ""
+acceptance:
+  t07_replaces_tautology: "satisfied | unsatisfied | unverified"
+  two_isolated_builds_execute: "satisfied | unsatisfied | unverified"
+  records_byte_identical: "satisfied | unsatisfied | unverified"
+  receipt_byte_identical: "satisfied | unsatisfied | unverified"
+  failed_build_surfaces: "satisfied | unsatisfied | unverified"
+  temp_cleanup_success_and_failure: "satisfied | unsatisfied | unverified"
+  t00_t06_semantics_preserved: "satisfied | unsatisfied | unverified"
+  no_new_dependency: "satisfied | unsatisfied | unverified"
+  t07_no_repo_knowledge_mutation: "satisfied | unsatisfied | unverified"
+  pre_broad_diff_only_test_pipeline: "satisfied | unsatisfied | unverified"
+  targeted_test_passes: "satisfied | unsatisfied | unverified"
+  broader_verify_passes: "satisfied | unsatisfied | unverified"
+  final_diff_only_test_pipeline: "satisfied | unsatisfied | unverified"
+governance:
+  scope_expanded: false
+  tests_weakened: false
+  additional_writer_agent: false
+  commit: false
+  push: false
+  merge: false
+  deploy: false
+  publish: false
+  external_mutation: false
+  approval_boundary_crossed: false
+unresolved: []
