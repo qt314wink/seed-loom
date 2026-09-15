@@ -1,0 +1,149 @@
+name: Issue 24 Nightly Dry-Run Proof
+
+on:
+  pull_request:
+    paths:
+      - 'knowledge/intake/nightly/2026-09-10/nightly-run-bundle-2026-09-10.json'
+      - '.github/workflows/issue-24-nightly-dry-run-proof.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dry_run_a:
+    runs-on: ubuntu-latest
+    outputs:
+      normalized_digest: ${{ steps.verify.outputs.normalized_digest }}
+      plan_hash: ${{ steps.verify.outputs.plan_hash }}
+      bundle_hash: ${{ steps.verify.outputs.bundle_hash }}
+      run_id: ${{ steps.verify.outputs.run_id }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Canonical dry-run A
+        run: node scripts/knowledge/ingest-nightly-run.mjs knowledge/intake/nightly/2026-09-10/nightly-run-bundle-2026-09-10.json --dry-run > /tmp/dry-run.json
+      - name: Verify deterministic envelope A
+        id: verify
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE' >> "$GITHUB_OUTPUT"
+          import fs from 'node:fs';
+          import crypto from 'node:crypto';
+          const bundlePath='knowledge/intake/nightly/2026-09-10/nightly-run-bundle-2026-09-10.json';
+          const bundle=JSON.parse(fs.readFileSync(bundlePath,'utf8'));
+          const dry=JSON.parse(fs.readFileSync('/tmp/dry-run.json','utf8'));
+          if (bundle.run?.runId !== 'run:nightly:2026-09-10') throw new Error('unexpected runId in specimen');
+          if (bundle.run?.newObservations?.length !== 5 || bundle.observations?.length !== 5) throw new Error('specimen must contain exactly five observations');
+          if (!bundle.observations.every(o => o.approvalState === 'candidate')) throw new Error('non-candidate observation');
+          if (!bundle.run?.repositoryActions?.every(a => a.status === 'proposed' && a.executed === false)) throw new Error('repository action escaped proposal boundary');
+          const genesis=bundle.stageAcks?.find(a => a.stage === 'genesis');
+          if (!genesis || genesis.status !== 'deferred' || genesis.governance?.allowedTransition !== false) throw new Error('Genesis must be deferred and transition-blocked');
+          if (dry.status !== 'validated' || dry.runId !== bundle.run.runId || !dry.normalizedDigest || !Array.isArray(dry.plannedFiles)) throw new Error('canonical dry-run contract mismatch');
+          const stable=JSON.stringify({status:dry.status,runId:dry.runId,normalizedDigest:dry.normalizedDigest,plannedFiles:dry.plannedFiles});
+          const planHash=crypto.createHash('sha256').update(stable).digest('hex');
+          const bundleHash=crypto.createHash('sha256').update(fs.readFileSync(bundlePath)).digest('hex');
+          console.log(`normalized_digest=${dry.normalizedDigest}`);
+          console.log(`plan_hash=${planHash}`);
+          console.log(`bundle_hash=${bundleHash}`);
+          console.log(`run_id=${dry.runId}`);
+          NODE
+
+  dry_run_b:
+    runs-on: ubuntu-latest
+    outputs:
+      normalized_digest: ${{ steps.verify.outputs.normalized_digest }}
+      plan_hash: ${{ steps.verify.outputs.plan_hash }}
+      bundle_hash: ${{ steps.verify.outputs.bundle_hash }}
+      run_id: ${{ steps.verify.outputs.run_id }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Canonical dry-run B
+        run: node scripts/knowledge/ingest-nightly-run.mjs knowledge/intake/nightly/2026-09-10/nightly-run-bundle-2026-09-10.json --dry-run > /tmp/dry-run.json
+      - name: Verify deterministic envelope B
+        id: verify
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE' >> "$GITHUB_OUTPUT"
+          import fs from 'node:fs';
+          import crypto from 'node:crypto';
+          const bundlePath='knowledge/intake/nightly/2026-09-10/nightly-run-bundle-2026-09-10.json';
+          const bundle=JSON.parse(fs.readFileSync(bundlePath,'utf8'));
+          const dry=JSON.parse(fs.readFileSync('/tmp/dry-run.json','utf8'));
+          if (bundle.run?.runId !== 'run:nightly:2026-09-10') throw new Error('unexpected runId in specimen');
+          if (bundle.run?.newObservations?.length !== 5 || bundle.observations?.length !== 5) throw new Error('specimen must contain exactly five observations');
+          if (!bundle.observations.every(o => o.approvalState === 'candidate')) throw new Error('non-candidate observation');
+          if (!bundle.run?.repositoryActions?.every(a => a.status === 'proposed' && a.executed === false)) throw new Error('repository action escaped proposal boundary');
+          const genesis=bundle.stageAcks?.find(a => a.stage === 'genesis');
+          if (!genesis || genesis.status !== 'deferred' || genesis.governance?.allowedTransition !== false) throw new Error('Genesis must be deferred and transition-blocked');
+          if (dry.status !== 'validated' || dry.runId !== bundle.run.runId || !dry.normalizedDigest || !Array.isArray(dry.plannedFiles)) throw new Error('canonical dry-run contract mismatch');
+          const stable=JSON.stringify({status:dry.status,runId:dry.runId,normalizedDigest:dry.normalizedDigest,plannedFiles:dry.plannedFiles});
+          const planHash=crypto.createHash('sha256').update(stable).digest('hex');
+          const bundleHash=crypto.createHash('sha256').update(fs.readFileSync(bundlePath)).digest('hex');
+          console.log(`normalized_digest=${dry.normalizedDigest}`);
+          console.log(`plan_hash=${planHash}`);
+          console.log(`bundle_hash=${bundleHash}`);
+          console.log(`run_id=${dry.runId}`);
+          NODE
+
+  compare:
+    needs: [dry_run_a, dry_run_b]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Compare isolated dry-runs and emit sub-gate receipt
+        shell: bash
+        env:
+          A_DIGEST: ${{ needs.dry_run_a.outputs.normalized_digest }}
+          B_DIGEST: ${{ needs.dry_run_b.outputs.normalized_digest }}
+          A_PLAN: ${{ needs.dry_run_a.outputs.plan_hash }}
+          B_PLAN: ${{ needs.dry_run_b.outputs.plan_hash }}
+          A_BUNDLE: ${{ needs.dry_run_a.outputs.bundle_hash }}
+          B_BUNDLE: ${{ needs.dry_run_b.outputs.bundle_hash }}
+          A_RUN: ${{ needs.dry_run_a.outputs.run_id }}
+          B_RUN: ${{ needs.dry_run_b.outputs.run_id }}
+        run: |
+          set -euo pipefail
+          test "$A_RUN" = "run:nightly:2026-09-10"
+          test "$A_RUN" = "$B_RUN"
+          test "$A_DIGEST" = "$B_DIGEST"
+          test "$A_PLAN" = "$B_PLAN"
+          test "$A_BUNDLE" = "$B_BUNDLE"
+          mkdir -p issue-24-proof
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const receipt={
+            type:'Issue24NightlyDryRunSubgateReceipt',
+            schemaVersion:'1.0.0',
+            issue:24,
+            specimenPath:'knowledge/intake/nightly/2026-09-10/nightly-run-bundle-2026-09-10.json',
+            runId:process.env.A_RUN,
+            bundleSha256:process.env.A_BUNDLE,
+            normalizedDigest:process.env.A_DIGEST,
+            deterministicPlanSha256:process.env.A_PLAN,
+            isolatedDryRuns:2,
+            identical:true,
+            candidateOnly:true,
+            genesisDeferred:true,
+            fullIssue24DefinitionOfDone:false,
+            remainingGate:'two isolated real ingests + governed output/Graph Workbench comparison + malformed-input atomicity + independent verification'
+          };
+          fs.writeFileSync('issue-24-proof/dry-run-receipt.json',JSON.stringify(receipt,null,2)+'\n');
+          console.log(JSON.stringify(receipt,null,2));
+          NODE
+      - name: Upload machine-readable proof receipt
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: issue-24-nightly-dry-run-proof-${{ github.sha }}
+          path: issue-24-proof/dry-run-receipt.json
+          if-no-files-found: error
