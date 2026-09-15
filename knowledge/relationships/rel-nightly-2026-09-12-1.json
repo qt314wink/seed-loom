@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-12:1",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-12:capital-compute",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:reuters:anthropic-nvidia:2026-09-11",
+  "confidence": 0.94,
+  "evidenceRefs": [
+    "source:reuters:anthropic-nvidia:2026-09-11"
+  ]
+}

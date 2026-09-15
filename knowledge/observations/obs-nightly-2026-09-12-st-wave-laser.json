@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-12:st-wave-laser",
+  "type": "Observation",
+  "capturedAt": "2026-09-12T23:39:35Z",
+  "claim": "Nature Photonics published an on-chip space-time wave-packet laser array.",
+  "verifiedFacts": [
+    "Sep 11 paper reports integrated DFB laser-array generation of space-time wave packets."
+  ],
+  "inference": [
+    "Map spatiotemporal coupling/phase/invariance as analogy, not physics simulation.",
+    "Test bounded physics→visual Shader Grammar mapping.",
+    "Disposition: Shader Grammar INCUBATE; AETHER REFERENCE-ONLY."
+  ],
+  "significance": "Map spatiotemporal coupling/phase/invariance as analogy, not physics simulation.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:nature:st-laser:2026-09-11"
+  ],
+  "actorRefs": [
+    "actor:st-laser-researchers:researchers"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/shader-grammar",
+    "MelodicBloom/aether"
+  ],
+  "assumptions": [
+    "Visual mapping is useful."
+  ],
+  "knownLimitations": [
+    "Creative transfer untested."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

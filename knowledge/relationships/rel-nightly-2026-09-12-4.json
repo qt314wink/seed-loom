@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-12:4",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-12:rangeland-drought",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:usgs:drought:2026-09-12",
+  "confidence": 0.97,
+  "evidenceRefs": [
+    "source:usgs:drought:2026-09-12"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:github:hermes:2026-09-11",
+  "type": "Source",
+  "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.11",
+  "publisher": "NousResearch",
+  "retrievedAt": "2026-09-12T23:39:35Z",
+  "sourceClass": "repository",
+  "independenceKey": "hermes-2026-9-11",
+  "publishedAt": "2026-09-11T19:20:00Z"
+}

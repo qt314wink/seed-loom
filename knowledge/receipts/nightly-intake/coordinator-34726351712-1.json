@@ -1,0 +1,55 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-09-12T23:48:17.186Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-09-12",
+      "bundlePath": "knowledge/intake/nightly/2026-09-12/nightly-run-bundle-2026-09-12.json",
+      "bundleSha256": "f247d02231f3b7236289e2ca3b80e9647be2e8eadd702ca024e07dc7af10a891",
+      "normalizedDigest": "be84efefd62d851ae8ff6acad64bbfa12de1c7223cdfcc9446807610e65b42c2",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-reuters-anthropic-nvidia-2026-09-11.json",
+        "knowledge/sources/source-github-hermes-2026-09-11.json",
+        "knowledge/sources/source-openai-creative-growth-2026-09-12.json",
+        "knowledge/sources/source-superside-creative-tech-2026-09-12.json",
+        "knowledge/sources/source-usgs-drought-2026-09-12.json",
+        "knowledge/sources/source-nature-st-laser-2026-09-11.json",
+        "knowledge/observations/obs-nightly-2026-09-12-capital-compute.json",
+        "knowledge/observations/obs-nightly-2026-09-12-agent-state.json",
+        "knowledge/observations/obs-nightly-2026-09-12-creative-demand.json",
+        "knowledge/observations/obs-nightly-2026-09-12-rangeland-drought.json",
+        "knowledge/observations/obs-nightly-2026-09-12-st-wave-laser.json",
+        "knowledge/relationships/rel-nightly-2026-09-12-1.json",
+        "knowledge/relationships/rel-nightly-2026-09-12-2.json",
+        "knowledge/relationships/rel-nightly-2026-09-12-3.json",
+        "knowledge/relationships/rel-nightly-2026-09-12-4.json",
+        "knowledge/relationships/rel-nightly-2026-09-12-5.json",
+        "knowledge/runs/run-nightly-2026-09-12.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-12-collect.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-12-vet.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-12-normalize.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-12-observe.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-12-inquire.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-12-interpret.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-12-relate.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-12-pattern.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-12-opportunity.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-12-strategy.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-12-experiment.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-12-genesis.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-12-publish.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-09-12-ingest.json",
+      "generatedRecordCount": 30
+    }
+  ]
+}

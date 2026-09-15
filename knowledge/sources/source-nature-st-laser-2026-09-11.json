@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nature:st-laser:2026-09-11",
+  "type": "Source",
+  "url": "https://www.nature.com/articles/s41566-026-02003-0",
+  "publisher": "Nature Photonics",
+  "retrievedAt": "2026-09-12T23:39:35Z",
+  "sourceClass": "research",
+  "independenceKey": "doi-02003",
+  "publishedAt": "2026-09-11T00:00:00Z",
+  "doi": "10.1038/s41566-026-02003-0"
+}
