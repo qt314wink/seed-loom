@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:usac:ai-consulting-rfp:2026-09-15",
+  "type": "Source",
+  "url": "https://www.usac.org/about/procurement/",
+  "publisher": "Universal Service Administrative Company",
+  "publishedAt": "2026-08-31T00:00:00Z",
+  "retrievedAt": "2026-09-15T23:24:08Z",
+  "sourceClass": "official",
+  "independenceKey": "usac-rfp-it-26-139",
+  "title": "RFP IT-26-139 – Artificial Intelligence (AI) Consulting and Support Services"
+}

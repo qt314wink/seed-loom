@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:reuters:delos-data:2026-09-15",
+  "type": "Source",
+  "url": "https://www.reuters.com/business/delos-data-chip-startup-founded-by-intel-veterans-raises-100-million-ai-networks-2026-09-15/",
+  "publisher": "Reuters",
+  "publishedAt": "2026-09-15T00:00:00Z",
+  "retrievedAt": "2026-09-15T23:24:08Z",
+  "sourceClass": "press",
+  "independenceKey": "reuters-delos-data-20260915",
+  "title": "Delos Data, a chip startup founded by Intel veterans, raises $100 million for AI networks"
+}

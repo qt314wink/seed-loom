@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-15:agentic-infrastructure-interconnect",
+  "type": "Observation",
+  "capturedAt": "2026-09-15T23:24:08Z",
+  "claim": "Delos Data's $100 million financing and heterogeneous AI-networking architecture indicate that agentic inference is making data movement, interoperability, and energy efficiency first-order infrastructure constraints.",
+  "verifiedFacts": [
+    "Reuters reported Delos Data raised $100 million on September 15, 2026.",
+    "The company is developing networking chips and software intended to move data across heterogeneous AI compute configurations.",
+    "Investors and company leaders identify idle compute waiting on data movement as an energy and cost inefficiency."
+  ],
+  "inference": [
+    "The useful cross-scale pattern is orchestration cost: intelligence systems fail when relationships between components become bottlenecks even if individual components are powerful.",
+    "For the portfolio this is REFERENCE-ONLY: use it to sharpen interoperability/performance reasoning in agent and WebGL systems, not to create an infrastructure or photonics product."
+  ],
+  "significance": "A useful systems-engineering signal about interfaces and orchestration, but not a direct product opportunity for the consultancy.",
+  "confidence": 0.96,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:reuters:delos-data:2026-09-15"
+  ],
+  "actorRefs": [
+    "actor:delos-data:builder",
+    "actor:venture-investors:funders",
+    "actor:ai-datacenter-operators:buyers"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Heterogeneous agentic inference workloads materially increase networking complexity."
+  ],
+  "knownLimitations": [
+    "Company architecture and performance claims require independent benchmarks."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-15:interpret",
+  "runId": "run:nightly:2026-09-15",
+  "stage": "interpret",
+  "status": "passed",
+  "startedAt": "2026-09-15T23:24:08Z",
+  "completedAt": "2026-09-15T23:24:08Z",
+  "inputs": [
+    "run:nightly:2026-09-15"
+  ],
+  "outputs": [
+    "interpret:nightly:2026-09-15"
+  ],
+  "checks": [
+    {
+      "name": "bounded-nightly-stage",
+      "result": "pass",
+      "detail": "Candidate-only nightly processing; no acceptance or external action."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Daily automation may create only source-backed candidate records.",
+      "Human approval remains required for strategy, experiment execution, Genesis, merge, and publication."
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence",
+    "method": "48-hour source review plus live GitHub authority/repository inspection",
+    "inputHashes": [
+      "f4be4da775248e9ff9aab46db8abd7b0a67dcc93d4bc9fd33717297248e79dfb"
+    ]
+  }
+}

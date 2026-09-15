@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-15:civic-ai-consulting-procurement",
+  "type": "Observation",
+  "capturedAt": "2026-09-15T23:24:08Z",
+  "claim": "USAC has an active federal-adjacent procurement for AI consulting and support services, providing direct buyer evidence for governance, implementation, and advisory demand beyond venture-backed technology companies.",
+  "verifiedFacts": [
+    "USAC lists RFP IT-26-139 for Artificial Intelligence Consulting and Support Services as open.",
+    "The procurement was posted August 31, 2026 and closes September 30, 2026.",
+    "USAC administers Universal Service Fund support mechanisms under FCC authority."
+  ],
+  "inference": [
+    "This is a concrete buyer signal for AI consulting in a regulated civic infrastructure context, but qualification and scope fit must be inspected before treating it as an application lead.",
+    "Consultancy implication: use the RFP as a requirements-mining specimen to compare demanded capabilities against the approved Seed Loom/Agent Evaluation service package; do not submit without separate approval."
+  ],
+  "significance": "Provides inspectable procurement behavior that can sharpen service packaging and capability-gap analysis without requiring speculative market narratives.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "procurement",
+  "sourceRefs": [
+    "source:usac:ai-consulting-rfp:2026-09-15"
+  ],
+  "actorRefs": [
+    "actor:usac:buyer",
+    "actor:fcc:regulator"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/project-constellation"
+  ],
+  "assumptions": [
+    "The full RFP contains requirements relevant to governance/evaluation rather than generic staff augmentation only."
+  ],
+  "knownLimitations": [
+    "The full solicitation requirements, vendor eligibility, contract value, and incumbent landscape were not ingested in this run."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

@@ -1,0 +1,54 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-09-15T23:28:18.011Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-09-15",
+      "bundlePath": "knowledge/intake/nightly/2026-09-15/nightly-run-bundle-2026-09-15.json",
+      "bundleSha256": "cc7fd8405ad59359d464da098d7fc824b07609d59035b2f0e314cbcb8248d46d",
+      "normalizedDigest": "1d9ec10db3b8f32adb30a383d655f796fae4aa6a640747adba9387024c269b71",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-microsoft-ai-humanist-code-2026-09-14.json",
+        "knowledge/sources/source-reuters-factory-funding-2026-09-15.json",
+        "knowledge/sources/source-gates-goalkeepers-ai-equity-2026-09-15.json",
+        "knowledge/sources/source-usac-ai-consulting-rfp-2026-09-15.json",
+        "knowledge/sources/source-reuters-delos-data-2026-09-15.json",
+        "knowledge/observations/obs-nightly-2026-09-15-human-control-specification.json",
+        "knowledge/observations/obs-nightly-2026-09-15-enterprise-agent-capital.json",
+        "knowledge/observations/obs-nightly-2026-09-15-equitable-ai-outcome-funding.json",
+        "knowledge/observations/obs-nightly-2026-09-15-civic-ai-consulting-procurement.json",
+        "knowledge/observations/obs-nightly-2026-09-15-agentic-infrastructure-interconnect.json",
+        "knowledge/relationships/rel-nightly-2026-09-15-1.json",
+        "knowledge/relationships/rel-nightly-2026-09-15-2.json",
+        "knowledge/relationships/rel-nightly-2026-09-15-3.json",
+        "knowledge/relationships/rel-nightly-2026-09-15-4.json",
+        "knowledge/relationships/rel-nightly-2026-09-15-5.json",
+        "knowledge/runs/run-nightly-2026-09-15.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-15-collect.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-15-vet.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-15-normalize.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-15-observe.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-15-inquire.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-15-interpret.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-15-relate.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-15-pattern.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-15-opportunity.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-15-strategy.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-15-experiment.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-15-genesis.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-15-publish.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-09-15-ingest.json",
+      "generatedRecordCount": 29
+    }
+  ]
+}

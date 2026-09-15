@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-15:3",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-15:equitable-ai-outcome-funding",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:gates:goalkeepers-ai-equity:2026-09-15",
+  "confidence": 0.98,
+  "evidenceRefs": [
+    "source:gates:goalkeepers-ai-equity:2026-09-15"
+  ]
+}
