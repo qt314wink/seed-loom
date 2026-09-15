@@ -2,6 +2,11 @@
 
 This branch adds read-only proof tooling. It does not mutate canonical knowledge, accepted state, application UI, or unrelated repositories.
 
+The current portfolio disposition ledger is
+`portfolio/ledger/2026-08-stabilization.json`. It is an open governance record:
+the registry pass is observe-only, and no archive, transfer, deletion, outreach, or
+genesis action is authorized by the ledger.
+
 ## Seed Loom aggregate proof
 
 Run:
