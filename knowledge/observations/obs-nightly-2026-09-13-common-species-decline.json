@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-13:common-species-decline",
+  "type": "Observation",
+  "capturedAt": "2026-09-13T23:03:49Z",
+  "claim": "A large cross-ecosystem synthesis finds that formerly common species are declining disproportionately in marine and terrestrial assemblages.",
+  "verifiedFacts": [
+    "Nature Communications analyzed population trends across 4,748 sites from 129 studies and found stronger declines among formerly common species in marine and terrestrial assemblages, while freshwater assemblages showed no clear directional pattern."
+  ],
+  "inference": [
+    "Regenerative monitoring systems should track abundance structure and functional dominance, not only species richness or rare-species counts.",
+    "Consultancy: ecological evidence architectures should surface changes in common-species abundance as a potential early indicator of function loss.",
+    "Disposition: Project Constellation INCUBATE; Seed Loom CORE for evidence lineage."
+  ],
+  "significance": "Stable aggregate biodiversity metrics can conceal meaningful community reorganization, creating a clear measurement-design problem for ecological stewardship and restoration programs.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:nature:common-species-decline:2026-09-12"
+  ],
+  "actorRefs": [
+    "actor:biodiversity-researchers:researcher",
+    "actor:land-and-water-managers:buyer-participant"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/project-constellation",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Changes in formerly common species can materially affect ecosystem function in many monitored systems."
+  ],
+  "knownLimitations": [
+    "The study reports heterogeneous drivers and does not establish a universal causal mechanism or direct management intervention."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

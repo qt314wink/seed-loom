@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:devpost:aws-agents-for-humans:2026-09-13",
+  "type": "Source",
+  "url": "https://agentsforhumans.devpost.com/details/faqs",
+  "publisher": "Devpost / Amazon Web Services",
+  "retrievedAt": "2026-09-13T23:03:49Z",
+  "sourceClass": "official",
+  "independenceKey": "aws-agents-for-humans-2026",
+  "title": "Agents for Humans Hackathon"
+}

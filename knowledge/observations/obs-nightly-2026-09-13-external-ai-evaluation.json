@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-13:external-ai-evaluation",
+  "type": "Observation",
+  "capturedAt": "2026-09-13T23:03:49Z",
+  "claim": "Major frontier-AI leaders are publicly converging on stronger external evaluation and coordinated safety controls as model capability advances.",
+  "verifiedFacts": [
+    "Reuters reported Anthropic CEO Dario Amodei calling for slower advanced-model development and proposing independent evaluators, coordinated safety standards, and international cooperation; OpenAI CEO Sam Altman publicly supported the concern."
+  ],
+  "inference": [
+    "Governed external evaluation is becoming an operating requirement rather than an optional AI-safety narrative.",
+    "Consultancy: independent evaluation boundary design, evidence capture, and stop-gate architecture.",
+    "Disposition: Seed Loom CORE; Agent Runtime PRODUCTIZE only where execution receipts and permissions are required."
+  ],
+  "significance": "This strengthens the business case for inspectable evaluator access, explicit stop gates, and evidence-backed promotion decisions in advanced agent systems.",
+  "confidence": 0.96,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "law-or-policy",
+  "sourceRefs": [
+    "source:reuters:ai-slowdown:2026-09-12"
+  ],
+  "actorRefs": [
+    "actor:anthropic:provider-builder",
+    "actor:openai:provider-builder",
+    "actor:external-evaluators:analyst"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "Public safety commitments will translate into durable evaluation interfaces and operational controls."
+  ],
+  "knownLimitations": [
+    "The proposal is partly voluntary and coordination mechanisms are not yet standardized or independently measured."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

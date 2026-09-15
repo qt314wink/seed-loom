@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:vercel:agentic-infrastructure:2026-09",
+  "type": "Source",
+  "url": "https://vercel.com/blog/agentic-infrastructure",
+  "publisher": "Vercel",
+  "publishedAt": "2026-04-09T00:00:00Z",
+  "retrievedAt": "2026-09-13T23:03:49Z",
+  "sourceClass": "primary",
+  "independenceKey": "vercel-agentic-infrastructure-current-202609",
+  "title": "Agentic Infrastructure",
+  "analystNote": "Page currently states that as of September 2026 more than 50% of Vercel deployments are initiated by coding agents."
+}

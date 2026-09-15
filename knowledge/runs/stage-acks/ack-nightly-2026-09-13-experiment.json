@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-13:experiment",
+  "runId": "run:nightly:2026-09-13",
+  "stage": "experiment",
+  "status": "deferred",
+  "startedAt": "2026-09-13T23:03:49Z",
+  "completedAt": "2026-09-13T23:03:49Z",
+  "inputs": [
+    "48h-source-set",
+    "live-seed-loom-authority"
+  ],
+  "outputs": [
+    "experiment-proposal-deferred"
+  ],
+  "checks": [
+    {
+      "name": "experiment-boundary",
+      "result": "pass",
+      "detail": "Candidate-only nightly boundary preserved."
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "candidate-only",
+      "no acceptance or Genesis promotion"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "48h web, research, opportunity, and repository review against live Seed Loom contracts",
+    "inputHashes": [
+      "8169aa8577bbe08f6ad1edf690feb31d0b1bfadabcd845cd98df7faf0f672d81"
+    ]
+  }
+}

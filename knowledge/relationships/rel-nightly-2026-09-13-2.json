@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-13:2",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-13:agent-hackathon-demand",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:devpost:aws-agents-for-humans:2026-09-13",
+  "confidence": 0.99,
+  "evidenceRefs": [
+    "source:devpost:aws-agents-for-humans:2026-09-13"
+  ],
+  "validFrom": "2026-09-13T23:03:49Z",
+  "validTo": null
+}

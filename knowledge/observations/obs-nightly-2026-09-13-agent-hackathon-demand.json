@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-13:agent-hackathon-demand",
+  "type": "Observation",
+  "capturedAt": "2026-09-13T23:03:49Z",
+  "claim": "AWS is funding a large public agent-building challenge focused on practical repetitive-task automation, with submissions closing September 14.",
+  "verifiedFacts": [
+    "The AWS-sponsored Agents for Humans Hackathon lists a September 14, 2026 5:00 p.m. PDT submission deadline, $40,000 in cash prizes, and thousands of registered participants; entries must use the Strands Agents SDK as the foundation."
+  ],
+  "inference": [
+    "Buyer and builder attention is concentrating on bounded task-completion agents rather than generic chat demos.",
+    "Consultancy: use a narrow automation proof with measurable task completion, human approval, failure recovery, and receipts as a market-facing specimen.",
+    "Disposition: Agent Runtime PRODUCTIZE; Seed Loom CORE for governance; Observation Ad Pipeline REFERENCE-ONLY for proof packaging."
+  ],
+  "significance": "The competition provides a concrete near-term benchmark for what a practical agent demonstration must show: task completion, implementation quality, and deployability.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "opportunity",
+  "sourceRefs": [
+    "source:devpost:aws-agents-for-humans:2026-09-13"
+  ],
+  "actorRefs": [
+    "actor:aws:sponsor-provider",
+    "actor:devpost:administrator",
+    "actor:agent-builders:participants"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/agent-runtime-control-center",
+    "qt314wink/seed-loom",
+    "qt314wink/observation-ad-pipeline"
+  ],
+  "assumptions": [
+    "The judging criteria and participation level are a useful proxy for current agent-builder demand."
+  ],
+  "knownLimitations": [
+    "Hackathon participation does not prove enterprise procurement or long-term product demand."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}
