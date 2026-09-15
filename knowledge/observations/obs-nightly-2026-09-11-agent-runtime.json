@@ -1,0 +1,40 @@
+{
+  "id": "obs:nightly:2026-09-11:agent-runtime",
+  "type": "Observation",
+  "capturedAt": "2026-09-11T23:05:37Z",
+  "claim": "Vercel documented OpenAI Agents API deployment using Sandbox, Queues, persistent workspaces and signed webhooks.",
+  "verifiedFacts": [
+    "OpenAI manages agent loop/state while Vercel hosts the app and isolated execution substrate."
+  ],
+  "inference": [
+    "Agent stacks are separating control, state and execution layers.",
+    "Consultancy: agent-runtime boundary and portability review.",
+    "Disposition: Seed Loom CORE; Agent Runtime PRODUCTIZE; AETHER REFERENCE-ONLY."
+  ],
+  "significance": "Reduces the need to own every agent runtime layer.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:vercel:agents:2026-09-10"
+  ],
+  "actorRefs": [
+    "actor:vercel:builder-provider",
+    "actor:openai:provider",
+    "actor:agent-builders:buyer"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center",
+    "MelodicBloom/aether"
+  ],
+  "assumptions": [
+    "Observed behavior may not generalize."
+  ],
+  "knownLimitations": [
+    "Independent outcome evidence remains incomplete."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate",
+  "schemaVersion": "1.1.0"
+}

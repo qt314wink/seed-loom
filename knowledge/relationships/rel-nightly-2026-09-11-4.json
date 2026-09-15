@@ -1,0 +1,12 @@
+{
+  "id": "rel:nightly:2026-09-11:4",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-11:tribal-water",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:epa:tribal-water:2026-09-10",
+  "confidence": 0.99,
+  "evidenceRefs": [
+    "source:epa:tribal-water:2026-09-10"
+  ],
+  "schemaVersion": "1.1.0"
+}

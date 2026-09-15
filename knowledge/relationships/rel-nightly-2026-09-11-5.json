@@ -1,0 +1,12 @@
+{
+  "id": "rel:nightly:2026-09-11:5",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-11:photonics",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:nature:photonics:2026-09-11",
+  "confidence": 0.99,
+  "evidenceRefs": [
+    "source:nature:photonics:2026-09-11"
+  ],
+  "schemaVersion": "1.1.0"
+}

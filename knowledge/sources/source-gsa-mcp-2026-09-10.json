@@ -1,0 +1,10 @@
+{
+  "id": "source:gsa:mcp:2026-09-10",
+  "type": "Source",
+  "url": "https://www.gsa.gov/artificial-intelligence/ai-community-of-practice/events-and-training/mcp-server-and-ai-agent-government-hackathon",
+  "publisher": "GSA",
+  "retrievedAt": "2026-09-11T23:05:37Z",
+  "sourceClass": "official",
+  "independenceKey": "source:gsa:mcp:2026-09-10",
+  "schemaVersion": "1.1.0"
+}

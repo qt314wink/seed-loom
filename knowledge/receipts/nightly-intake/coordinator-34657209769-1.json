@@ -1,0 +1,56 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-09-11T23:14:03.851Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-09-11",
+      "bundlePath": "knowledge/intake/nightly/2026-09-11/nightly-run-bundle-2026-09-11.json",
+      "bundleSha256": "a7d7cc264ab49f69700f1266924d62777f5d6ca3fa8205b76a95bb27d2fd1345",
+      "normalizedDigest": "13265eeee4dac01b96a06150d82ac6457a493e7d1cbdb6a88e848d244ad8c622",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-gsa-onegov-2026-09-10.json",
+        "knowledge/sources/source-openai-gov-2026-09-10.json",
+        "knowledge/sources/source-gsa-mcp-2026-09-10.json",
+        "knowledge/sources/source-vercel-agents-2026-09-10.json",
+        "knowledge/sources/source-liberty-positron-2026-09-11.json",
+        "knowledge/sources/source-epa-tribal-water-2026-09-10.json",
+        "knowledge/sources/source-nature-photonics-2026-09-11.json",
+        "knowledge/observations/obs-nightly-2026-09-11-public-sector-ai.json",
+        "knowledge/observations/obs-nightly-2026-09-11-agent-runtime.json",
+        "knowledge/observations/obs-nightly-2026-09-11-memory-first-inference.json",
+        "knowledge/observations/obs-nightly-2026-09-11-tribal-water.json",
+        "knowledge/observations/obs-nightly-2026-09-11-photonics.json",
+        "knowledge/relationships/rel-nightly-2026-09-11-1.json",
+        "knowledge/relationships/rel-nightly-2026-09-11-2.json",
+        "knowledge/relationships/rel-nightly-2026-09-11-3.json",
+        "knowledge/relationships/rel-nightly-2026-09-11-4.json",
+        "knowledge/relationships/rel-nightly-2026-09-11-5.json",
+        "knowledge/runs/run-nightly-2026-09-11.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-11-collect.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-11-vet.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-11-normalize.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-11-observe.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-11-inquire.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-11-interpret.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-11-relate.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-11-pattern.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-11-opportunity.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-11-strategy.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-11-experiment.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-11-genesis.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-11-publish.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-09-11-ingest.json",
+      "generatedRecordCount": 31
+    }
+  ]
+}

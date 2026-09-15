@@ -1,0 +1,10 @@
+{
+  "id": "source:vercel:agents:2026-09-10",
+  "type": "Source",
+  "url": "https://vercel.com/changelog/build-with-openai-agents-api-on-vercel",
+  "publisher": "Vercel",
+  "retrievedAt": "2026-09-11T23:05:37Z",
+  "sourceClass": "primary",
+  "independenceKey": "source:vercel:agents:2026-09-10",
+  "schemaVersion": "1.1.0"
+}

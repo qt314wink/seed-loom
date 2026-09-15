@@ -1,0 +1,43 @@
+{
+  "id": "obs:nightly:2026-09-11:public-sector-ai",
+  "type": "Observation",
+  "capturedAt": "2026-09-11T23:05:37Z",
+  "claim": "GSA and OpenAI expanded discounted public-sector AI access while GSA opened an MCP/agent government hackathon.",
+  "verifiedFacts": [
+    "GSA announced a 27-month discounted OpenAI agreement; OpenAI extended zero license fee and 50% usage discounts to federal, state, local and tribal government.",
+    "GSA opened an MCP/agent hackathon around government data and services."
+  ],
+  "inference": [
+    "Public-sector AI is shifting toward governed access plus service connectors.",
+    "Consultancy: civic AI readiness, entitlement, MCP and approval boundaries.",
+    "Disposition: Seed Loom CORE; Project Constellation PRODUCTIZE; Agent Runtime INCUBATE."
+  ],
+  "significance": "Creates a live civic-AI procurement and demonstration pathway.",
+  "confidence": 0.98,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "procurement",
+  "sourceRefs": [
+    "source:gsa:onegov:2026-09-10",
+    "source:openai:gov:2026-09-10",
+    "source:gsa:mcp:2026-09-10"
+  ],
+  "actorRefs": [
+    "actor:gsa:buyer-regulator",
+    "actor:openai:provider",
+    "actor:public-agencies:buyer"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/project-constellation",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "Observed behavior may not generalize."
+  ],
+  "knownLimitations": [
+    "Independent outcome evidence remains incomplete."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate",
+  "schemaVersion": "1.1.0"
+}

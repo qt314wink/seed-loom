@@ -1,0 +1,35 @@
+{
+  "ackId": "ack:nightly:2026-09-11:experiment",
+  "runId": "run:nightly:2026-09-11",
+  "stage": "experiment",
+  "status": "deferred",
+  "startedAt": "2026-09-11T23:05:37Z",
+  "completedAt": "2026-09-11T23:05:37Z",
+  "inputs": [
+    "nightly-run"
+  ],
+  "outputs": [
+    "experiment"
+  ],
+  "checks": [
+    {
+      "name": "boundary",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "candidate-only"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Intelligence",
+    "method": "48h source/repository review",
+    "inputHashes": [
+      "a752c41132a86d585d2b07cd94cc5aecd87cc4f91e14cfd46d212a4ff0dcd733"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}
