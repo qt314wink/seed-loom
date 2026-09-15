@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-10:2",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-10:semi-custom-inference-stack",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:nvidia:dmatrix-nvlink:2026-09-10",
+  "confidence": 0.98,
+  "evidenceRefs": [
+    "source:nvidia:dmatrix-nvlink:2026-09-10"
+  ],
+  "validFrom": "2026-09-10T23:21:48Z",
+  "validTo": null
+}

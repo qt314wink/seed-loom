@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-10:relate",
+  "runId": "run:nightly:2026-09-10",
+  "stage": "relate",
+  "status": "passed",
+  "startedAt": "2026-09-10T23:21:48Z",
+  "completedAt": "2026-09-10T23:21:48Z",
+  "inputs": [
+    "five-observations",
+    "six-sources"
+  ],
+  "outputs": [
+    "five-supported-by-relationships"
+  ],
+  "checks": [
+    {
+      "name": "evidence-refs",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "no silent identity merging"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "explicit support edges",
+    "inputHashes": [
+      "638ef7b4276a07f252f60ac24b634b0a2022d14d"
+    ]
+  }
+}

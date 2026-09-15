@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-10:pattern",
+  "runId": "run:nightly:2026-09-10",
+  "stage": "pattern",
+  "status": "passed",
+  "startedAt": "2026-09-10T23:21:48Z",
+  "completedAt": "2026-09-10T23:21:48Z",
+  "inputs": [
+    "five-observations"
+  ],
+  "outputs": [
+    "three-candidate-patterns"
+  ],
+  "checks": [
+    {
+      "name": "cross-signal-distinction",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "patterns remain candidates"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "cross-signal comparison",
+    "inputHashes": [
+      "95adbc26595e148868150a105c2ecee7e724e4c1c7e70693d59788f408d13f30"
+    ]
+  }
+}

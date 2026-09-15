@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:reuters:openai-finance:2026-09-10",
+  "type": "Source",
+  "url": "https://www.reuters.com/business/openai-launches-chatgpt-financial-services-industry-2026-09-10/",
+  "publisher": "Reuters",
+  "publishedAt": "2026-09-10T17:29:00Z",
+  "retrievedAt": "2026-09-10T23:21:48Z",
+  "sourceClass": "press",
+  "independenceKey": "reuters-openai-finance-20260910"
+}
