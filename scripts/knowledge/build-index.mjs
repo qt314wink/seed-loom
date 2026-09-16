@@ -9,8 +9,19 @@ const recordDirs = ['sources','entities','observations','patterns','relationship
 const records = [];
 
 const stableFallbackId = (relative, index) => `aux:${crypto.createHash('sha256').update(`${relative}#${index}`).digest('hex').slice(0, 20)}`;
-const idOf = (value, relative, index) => value.id ?? value.runId ?? value.observationId ?? value.sourceId ?? value.relationshipId ?? value.ackId ?? value.assessmentId ?? value.bundleId ?? value.ledgerId ?? stableFallbackId(relative, index);
-const typeOf = (value, dir) => value.type ?? ({sources:'Source',entities:'Actor',observations:'ObservationCandidate',patterns:'Pattern',relationships:'Relationship',opportunities:'Opportunity',strategies:'Strategy',experiments:'Experiment',runs:'Run'}[dir] ?? 'AuxiliaryRecord');
+const idOf = (value, relative, index) => value.id ?? value.ackId ?? value.receiptId ?? value.runId ?? value.observationId ?? value.sourceId ?? value.relationshipId ?? value.assessmentId ?? value.bundleId ?? value.ledgerId ?? stableFallbackId(relative, index);
+const typeOf = (value, dir) => value.type ?? (value.ackId ? 'StageAcknowledgement' : ({sources:'Source',entities:'Actor',observations:'ObservationCandidate',patterns:'Pattern',relationships:'Relationship',opportunities:'Opportunity',strategies:'Strategy',experiments:'Experiment',runs:'Run'}[dir] ?? 'AuxiliaryRecord'));
+
+function jsonFiles(directory) {
+  if (!fs.existsSync(directory)) return [];
+  const found = [];
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true }).sort((a, b) => a.name.localeCompare(b.name))) {
+    const full = path.join(directory, entry.name);
+    if (entry.isDirectory()) found.push(...jsonFiles(full));
+    else if (entry.isFile() && entry.name.endsWith('.json')) found.push(full);
+  }
+  return found;
+}
 
 function expand(value, dir, relative) {
   if (Array.isArray(value)) return value;
@@ -29,8 +40,8 @@ function expand(value, dir, relative) {
 for (const dir of recordDirs) {
   const absolute = path.join(knowledge, dir);
   if (!fs.existsSync(absolute)) continue;
-  for (const file of fs.readdirSync(absolute).filter((name) => name.endsWith('.json')).sort()) {
-    const relative = path.join('knowledge', dir, file).replaceAll('\\', '/');
+  for (const full of jsonFiles(absolute)) {
+    const relative = path.relative(root, full).replaceAll('\\', '/');
     const value = JSON.parse(fs.readFileSync(path.join(root, relative), 'utf8'));
     const expanded = expand(value, dir, relative);
     for (const [index, record] of expanded.entries()) {
@@ -44,6 +55,13 @@ for (const dir of recordDirs) {
       });
     }
   }
+}
+const duplicateIds = new Map();
+for (const record of records) duplicateIds.set(record.id, [...(duplicateIds.get(record.id) ?? []), record.path]);
+const collisions = [...duplicateIds.entries()].filter(([, paths]) => paths.length > 1);
+if (collisions.length) {
+  for (const [id, paths] of collisions) console.error(`DUPLICATE_RECORD_ID ${id}: ${paths.join(', ')}`);
+  process.exit(1);
 }
 records.sort((a,b) => a.id.localeCompare(b.id) || a.path.localeCompare(b.path));
 const payload = JSON.stringify(records, null, 2) + '\n';

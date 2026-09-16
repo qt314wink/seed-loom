@@ -94,6 +94,21 @@ test('T07 deterministic isolated index builds',()=>{
   assert(failed.result.status!==0,'malformed input did not fail index build');
 });
 
+test('T08 nested stage acknowledgements are indexed and duplicate identities fail closed',()=>{
+  const indexed=buildIsolatedIndex();
+  assert(indexed.result.status===0,`nested acknowledgement index build failed: ${indexed.result.stderr}`);
+  const records=JSON.parse(indexed.records);
+  const expected=['collect','vet','normalize','observe','inquire','interpret','relate','pattern','opportunity','strategy','experiment','genesis','publish']
+    .map(stage=>`ack:nightly:2026-09-10:${stage}`);
+  expected.forEach(id=>assert(records.some(record=>record.id===id&&record.type==='StageAcknowledgement'),`missing nested acknowledgement ${id}`));
+  const duplicate=buildIsolatedIndex(workspace=>{
+    const target=path.join(workspace,'knowledge/runs/stage-acks/duplicate-ack.json');
+    fs.mkdirSync(path.dirname(target),{recursive:true});
+    fs.writeFileSync(target,JSON.stringify({ackId:'ack:nightly:2026-09-10:collect',runId:'run:nightly:2026-09-10',stage:'collect'}));
+  });
+  assert(duplicate.result.status!==0,'duplicate acknowledgement identity did not fail index build');
+});
+
 const report={passed:passes.length,failed:failures.length,passes,failures};
 console.log(JSON.stringify(report,null,2));
 process.exitCode=failures.length?1:0;
