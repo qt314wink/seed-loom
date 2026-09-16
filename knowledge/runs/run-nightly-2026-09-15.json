@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-09-15",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-09-13T23:24:08Z",
+    "to": "2026-09-15T23:24:08Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-09-15:human-control-specification",
+    "obs:nightly:2026-09-15:enterprise-agent-capital",
+    "obs:nightly:2026-09-15:equitable-ai-outcome-funding",
+    "obs:nightly:2026-09-15:civic-ai-consulting-procurement",
+    "obs:nightly:2026-09-15:agentic-infrastructure-interconnect"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "pattern:policy-to-executable-control",
+    "pattern:agentic-enterprise-governance-demand",
+    "pattern:outcome-and-access-governed-ai"
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-09-15:1",
+    "rel:nightly:2026-09-15:2",
+    "rel:nightly:2026-09-15:3",
+    "rel:nightly:2026-09-15:4",
+    "rel:nightly:2026-09-15:5"
+  ],
+  "contradictions": [
+    "contradiction:written-ai-governance-does-not-prove-enforcement",
+    "contradiction:agent-funding-does-not-prove-agent-roi"
+  ],
+  "opportunities": [
+    "opportunity:agent-evaluation-delivery-control-review",
+    "opportunity:regulated-ai-consulting-requirements-mining",
+    "opportunity:locally-governed-ai-pilot-evidence-architecture"
+  ],
+  "proposedExperiments": [
+    "experiment:microsoft-code-to-stop-gate-crosswalk-v0",
+    "experiment:usac-rfp-capability-gap-map-v0"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false
+    },
+    {
+      "status": "proposed",
+      "executed": false
+    }
+  ],
+  "noChangeReceipts": [
+    "No strict-window default-branch commits detected for Observation Ad Pipeline, Project Constellation, or Omni-Loom case study.",
+    "No archive or kill recommendation crossed the evidence threshold."
+  ],
+  "collectionFailures": [
+    "Representative image retrieval did not return stable image refs for every signal; no synthetic evidence image was substituted.",
+    "Local or unpushed repository state is outside GitHub visibility.",
+    "The full USAC IT-26-139 solicitation document was not retrieved in this run; only the official procurement listing was verified."
+  ]
+}

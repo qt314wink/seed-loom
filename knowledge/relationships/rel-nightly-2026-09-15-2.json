@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-15:2",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-15:enterprise-agent-capital",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:reuters:factory-funding:2026-09-15",
+  "confidence": 0.97,
+  "evidenceRefs": [
+    "source:reuters:factory-funding:2026-09-15"
+  ]
+}

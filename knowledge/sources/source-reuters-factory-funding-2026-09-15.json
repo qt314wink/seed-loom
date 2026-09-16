@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:reuters:factory-funding:2026-09-15",
+  "type": "Source",
+  "url": "https://www.reuters.com/business/ai-coding-agent-startup-factory-triples-valuation-5-billion-latest-funding-round-2026-09-15/",
+  "publisher": "Reuters",
+  "publishedAt": "2026-09-15T00:00:00Z",
+  "retrievedAt": "2026-09-15T23:24:08Z",
+  "sourceClass": "press",
+  "independenceKey": "reuters-factory-funding-20260915",
+  "title": "AI coding agent startup Factory triples valuation to $5 billion in latest funding round"
+}

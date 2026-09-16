@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:microsoft-ai:humanist-code:2026-09-14",
+  "type": "Source",
+  "url": "https://microsoft.ai/code-of-conduct/",
+  "publisher": "Microsoft AI",
+  "publishedAt": "2026-09-14T00:00:00Z",
+  "retrievedAt": "2026-09-15T23:24:08Z",
+  "sourceClass": "primary",
+  "independenceKey": "microsoft-humanist-code-20260914",
+  "title": "Humanist AI Code of Conduct"
+}

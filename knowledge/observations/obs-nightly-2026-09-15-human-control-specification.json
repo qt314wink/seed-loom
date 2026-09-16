@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-15:human-control-specification",
+  "type": "Observation",
+  "capturedAt": "2026-09-15T23:24:08Z",
+  "claim": "Microsoft AI has published an explicit chain-of-command and human-control specification, creating a concrete benchmark for executable agent authority and evaluation controls.",
+  "verifiedFacts": [
+    "Microsoft AI published a draft Humanist AI Code of Conduct on September 14, 2026 and opened a six-week public consultation.",
+    "The document defines Users and Operators, a Chain of Command, Human Control Requirements, absolute constraints, transparency requirements, and a future evaluation program.",
+    "Microsoft states the draft is not yet used to train current models and is not a guarantee of present model behavior."
+  ],
+  "inference": [
+    "The market is moving from broad AI principles toward inspectable role, authority, interruption, traceability, and evaluation specifications; Seed Loom can benchmark its approved authority fixtures against this without copying Microsoft's ontology.",
+    "Consultancy implication: an Agent Evaluation & Delivery Control Review can test whether written policy is connected to executable permissions, stop gates, receipts, and independent evaluation."
+  ],
+  "significance": "Directly reinforces the newly approved Seed Loom authority and stop-gate fixtures with a primary-source external benchmark.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "law-or-policy",
+  "sourceRefs": [
+    "source:microsoft-ai:humanist-code:2026-09-14"
+  ],
+  "actorRefs": [
+    "actor:microsoft-ai:provider-builder",
+    "actor:operators:participants"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Microsoft's specification is useful as a benchmark even though it applies only to MAI models."
+  ],
+  "knownLimitations": [
+    "The code is draft and aspirational; enforcement effectiveness is unproven."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

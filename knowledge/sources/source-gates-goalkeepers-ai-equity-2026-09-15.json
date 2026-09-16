@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:gates:goalkeepers-ai-equity:2026-09-15",
+  "type": "Source",
+  "url": "https://goalkeepers.gatesfoundation.org/report/2026-report/",
+  "publisher": "Gates Foundation Goalkeepers",
+  "publishedAt": "2026-09-15T00:00:00Z",
+  "retrievedAt": "2026-09-15T23:24:08Z",
+  "sourceClass": "primary",
+  "independenceKey": "gates-goalkeepers-2026",
+  "title": "2026 Goalkeepers Report: AI, Equity, and the Choice We Can't Delay"
+}

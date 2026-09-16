@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-15:equitable-ai-outcome-funding",
+  "type": "Observation",
+  "capturedAt": "2026-09-15T23:24:08Z",
+  "claim": "The Gates Foundation's $1 billion two-year equitable-AI commitment turns local-language data, frontline evaluation, health, education, and smallholder agriculture into funded implementation priorities.",
+  "verifiedFacts": [
+    "The Gates Foundation announced at least $1 billion over two years for equitable AI.",
+    "The announced allocation is approximately 40% education, 40% health, 10% agriculture, and 10% digital foundations including underrepresented-language datasets.",
+    "The Goalkeepers program emphasizes local access, community-relevant data, and practical outcomes rather than technology for its own sake."
+  ],
+  "inference": [
+    "The consultancy opportunity is evidence and decision infrastructure for locally governed pilots: who defines success, whose data is used, how local evaluation changes deployment, and whether outcomes survive handoff.",
+    "Project Constellation's ecological/civic specimen should add an explicit beneficiary/evaluator/data-sovereignty lens, while remaining a demonstration rather than claiming eligibility for Gates funding."
+  ],
+  "significance": "Adds a funded buyer/funder behavior signal to the existing regenerative and civic-intelligence thesis and strengthens outcome-oriented evidence architecture.",
+  "confidence": 0.98,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:gates:goalkeepers-ai-equity:2026-09-15"
+  ],
+  "actorRefs": [
+    "actor:gates-foundation:funder",
+    "actor:frontline-workers:participants",
+    "actor:communities:beneficiaries"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/project-constellation",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "The announced funding will translate into procurements, grants, and pilots requiring evidence/governance support."
+  ],
+  "knownLimitations": [
+    "Specific open calls, eligibility, award mechanisms, and evaluation contracts are not established by the report alone."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}
