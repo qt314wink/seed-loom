@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-10:5",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-10:document-to-evidence-artifact",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:adobe:acrobat-agent:2026-09-09",
+  "confidence": 0.99,
+  "evidenceRefs": [
+    "source:adobe:acrobat-agent:2026-09-09"
+  ],
+  "validFrom": "2026-09-10T23:21:48Z",
+  "validTo": null
+}

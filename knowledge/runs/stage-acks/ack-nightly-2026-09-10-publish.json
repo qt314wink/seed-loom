@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-10:publish",
+  "runId": "run:nightly:2026-09-10",
+  "stage": "publish",
+  "status": "passed",
+  "startedAt": "2026-09-10T23:21:48Z",
+  "completedAt": "2026-09-10T23:21:48Z",
+  "inputs": [
+    "delivered-bundle"
+  ],
+  "outputs": [
+    "internal-intake-artifact"
+  ],
+  "checks": [
+    {
+      "name": "public-publication-block",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "internal intake artifact only"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "bounded repository staging",
+    "inputHashes": [
+      "246067f6a830ea22b052a0d4460e95f1cca583fe"
+    ]
+  }
+}

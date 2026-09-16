@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:openai:financial-services:2026-09-10",
+  "type": "Source",
+  "url": "https://openai.com/solutions/industries/financial-services/",
+  "publisher": "OpenAI",
+  "retrievedAt": "2026-09-10T23:21:48Z",
+  "sourceClass": "primary",
+  "independenceKey": "openai-finance-surface"
+}

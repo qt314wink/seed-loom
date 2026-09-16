@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-10:interpret",
+  "runId": "run:nightly:2026-09-10",
+  "stage": "interpret",
+  "status": "passed",
+  "startedAt": "2026-09-10T23:21:48Z",
+  "completedAt": "2026-09-10T23:21:48Z",
+  "inputs": [
+    "observations",
+    "socratic-assessments"
+  ],
+  "outputs": [
+    "bounded-interpretations"
+  ],
+  "checks": [
+    {
+      "name": "fact-inference-boundary",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "candidate interpretation only"
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "bounded synthesis",
+    "inputHashes": [
+      "293e5e45df1fcd684c38b183bc56bc76dde25d02189f8d642d5bf2405fd27419"
+    ]
+  }
+}

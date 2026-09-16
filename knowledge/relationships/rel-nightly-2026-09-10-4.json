@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-10:4",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-10:ontology-operational-intelligence",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:nvidia:palantir-supply-chain:2026-09-10",
+  "confidence": 0.99,
+  "evidenceRefs": [
+    "source:nvidia:palantir-supply-chain:2026-09-10"
+  ],
+  "validFrom": "2026-09-10T23:21:48Z",
+  "validTo": null
+}

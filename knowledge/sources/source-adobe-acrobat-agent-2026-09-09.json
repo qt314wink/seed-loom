@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:adobe:acrobat-agent:2026-09-09",
+  "type": "Source",
+  "url": "https://news.adobe.com/news/2026/09/adobe-productivity-agent-in-acrobat-now-transforms-complex-documents",
+  "publisher": "Adobe",
+  "publishedAt": "2026-09-09T10:00:00Z",
+  "retrievedAt": "2026-09-10T23:21:48Z",
+  "sourceClass": "primary",
+  "independenceKey": "adobe-acrobat-agent-20260909"
+}
