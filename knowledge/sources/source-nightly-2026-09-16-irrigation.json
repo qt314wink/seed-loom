@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-09-16:irrigation",
+  "type": "Source",
+  "url": "https://e3.eurekalert.org/news-releases/1143964",
+  "publisher": "Colorado State University via EurekAlert",
+  "publishedAt": "2026-09-14T00:00:00Z",
+  "retrievedAt": "2026-09-16T23:42:56Z",
+  "sourceClass": "research",
+  "independenceKey": "csu-pnas-irrigation",
+  "title": "Greenhouse gas benefits of ag irrigation outweigh emissions costs"
+}

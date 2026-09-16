@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-09-16:stanford",
+  "type": "Source",
+  "url": "https://med.stanford.edu/news/all-news/2026/09/model-to-study-brain-development.html",
+  "publisher": "Stanford Medicine",
+  "publishedAt": "2026-09-16T00:00:00Z",
+  "retrievedAt": "2026-09-16T23:42:56Z",
+  "sourceClass": "research",
+  "independenceKey": "stanford-xenocortical",
+  "title": "Stanford Medicine team creates advanced model for studying brain development, disorders"
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-16:2",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-16:artifact-workspace",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:nightly:2026-09-16:claude-work",
+  "confidence": 0.97,
+  "evidenceRefs": [
+    "source:nightly:2026-09-16:claude-work"
+  ]
+}
