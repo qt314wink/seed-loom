@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-17:pattern",
+  "runId": "run:nightly:2026-09-17",
+  "stage": "pattern",
+  "status": "passed",
+  "startedAt": "2026-09-17T23:49:41Z",
+  "completedAt": "2026-09-17T23:58:00Z",
+  "inputs": [
+    "five related observations"
+  ],
+  "outputs": [
+    "three candidate patterns"
+  ],
+  "checks": [
+    {
+      "name": "pattern-bounds",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Patterns remain candidate synthesis."
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "cross-signal comparison",
+    "inputHashes": [
+      "3565d5ae89e8d82fce4bb81dcc5dcb51c97d2e5d0822c9bc337d91ccb4f47101"
+    ]
+  }
+}

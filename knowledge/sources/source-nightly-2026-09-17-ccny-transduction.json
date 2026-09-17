@@ -1,0 +1,13 @@
+{
+  "id": "source:nightly:2026-09-17:ccny-transduction",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://www.ccny.cuny.edu/news/new-bridge-quantum-networks-ccny-physicists-convert-microwaves-light-using-2d-magnets",
+  "publisher": "The City College of New York",
+  "publishedAt": "2026-09-17T00:00:00Z",
+  "retrievedAt": "2026-09-17T23:55:00Z",
+  "sourceClass": "research",
+  "independenceKey": "ccny:magnon-exciton-transduction:2026-09-17",
+  "title": "A new bridge for quantum networks: CCNY physicists convert microwaves to light using 2D magnets",
+  "doi": "10.1038/s41563-026-02748-7"
+}

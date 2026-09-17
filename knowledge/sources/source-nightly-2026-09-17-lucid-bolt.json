@@ -1,0 +1,12 @@
+{
+  "id": "source:nightly:2026-09-17:lucid-bolt",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://www.reuters.com/technology/lucid-bolt-team-up-deploy-25000-robotaxis-across-europe-2026-09-17/",
+  "publisher": "Reuters",
+  "publishedAt": "2026-09-17T00:00:00Z",
+  "retrievedAt": "2026-09-17T23:55:00Z",
+  "sourceClass": "financial",
+  "independenceKey": "reuters:lucid-bolt-robotaxi:2026-09-17",
+  "title": "Lucid, Bolt team up to deploy 25,000 robotaxis across Europe"
+}

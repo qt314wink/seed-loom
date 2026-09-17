@@ -1,0 +1,12 @@
+{
+  "id": "rel:nightly:2026-09-17:1",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:nightly:2026-09-17:misalignment-disclosure",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:nightly:2026-09-17:openai-misalignment",
+  "confidence": 0.99,
+  "evidenceRefs": [
+    "source:nightly:2026-09-17:openai-misalignment"
+  ]
+}
