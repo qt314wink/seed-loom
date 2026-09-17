@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_f373be83643c37ea",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-09-17T10:39:23.089279Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "philly-civic-ai",
+    "commit_sha": "2026-09-16T15:48:46Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1247990928,
+    "github_node_id": "R_kgDOSmLUkA",
+    "language": "JavaScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": "Multi-persona AI system for Philadelphia city planning, regenerative design & community development \u2014 Germantown, South Philly, CREJ, and beyond.",
+    "pushed_at": "2026-09-16T15:48:46Z",
+    "created_at": "2026-05-24T03:34:42Z",
+    "open_issues_count": 2
+  }
+}
