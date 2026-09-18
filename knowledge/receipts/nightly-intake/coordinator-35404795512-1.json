@@ -1,0 +1,18 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-09-18T23:13:05.511Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "BLOCKED_WITH_EXPLICIT_REASON": 1
+  },
+  "overallStatus": "PARTIAL_OR_BLOCKED",
+  "results": [
+    {
+      "status": "BLOCKED_WITH_EXPLICIT_REASON",
+      "bundlePath": "knowledge/intake/nightly/2026-09-19/nightly-run-bundle-2026-09-19.json",
+      "reason": "bundle parse/normalize failed: Unexpected token '_', \"__PLACEHOLDER__\" is not valid JSON"
+    }
+  ]
+}
