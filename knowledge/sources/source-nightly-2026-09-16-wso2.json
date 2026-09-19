@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-09-16:wso2",
+  "type": "Source",
+  "url": "https://wso2.com/about/news/wso2-agent-manager-sovereign-ai-governance/",
+  "publisher": "WSO2",
+  "publishedAt": "2026-09-15T13:00:00Z",
+  "retrievedAt": "2026-09-16T23:42:56Z",
+  "sourceClass": "primary",
+  "independenceKey": "wso2-agent-manager-ga",
+  "title": "WSO2 Agent Manager Brings Sovereign AI Governance to Enterprise Agent Sprawl"
+}
