@@ -1,0 +1,38 @@
+{
+  "id": "obs:nightly:2026-09-17:parallel-agent-projects",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-09-17T23:55:00Z",
+  "claim": "Claude Code Projects is normalizing coordinated parallel agents with shared goals, memory, file context, and branch-isolated execution.",
+  "verifiedFacts": [
+    "The Verge reported September 17 that Claude Code Projects is relaunching in beta for managing multiple cloud agents.",
+    "Project threads run as separate Claude Code cloud sessions on different repository branches.",
+    "A central coordinator manages shared project goals and context while standard merge-conflict procedures handle overlap."
+  ],
+  "inference": [
+    "Branch isolation, shared context provenance, coordinator authority, and integration receipts are becoming ordinary multi-agent engineering concerns.",
+    "Seed Loom and Agent Runtime should evaluate coordination state and merge authority rather than attempting to become another coding-agent orchestrator."
+  ],
+  "significance": "High: directly reinforces governed handoff, branch isolation, conflict evidence, and independent evaluation in multi-agent delivery.",
+  "confidence": 0.94,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:nightly:2026-09-17:claude-projects"
+  ],
+  "actorRefs": [
+    "actor:anthropic"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "The reported beta behavior will resemble the generally available product."
+  ],
+  "knownLimitations": [
+    "Primary Anthropic documentation for this exact relaunch was not retrieved tonight; evidence relies on current press reporting."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}
