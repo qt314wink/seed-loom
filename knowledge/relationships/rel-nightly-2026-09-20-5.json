@@ -1,0 +1,12 @@
+{
+  "id": "rel:nightly:2026-09-20:5",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:nightly:2026-09-20:acousto-optic-steering",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:acousto-optic-2026-09-19",
+  "confidence": 0.96,
+  "evidenceRefs": [
+    "source:acousto-optic-2026-09-19"
+  ]
+}

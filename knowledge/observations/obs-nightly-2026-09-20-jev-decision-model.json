@@ -1,0 +1,37 @@
+{
+  "id": "obs:nightly:2026-09-20:jev-decision-model",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-09-20T07:30:00Z",
+  "claim": "Rapid adoption of a specialized probabilistic decision model suggests agent control loops are separating decision functions from general-purpose text generation.",
+  "verifiedFacts": [
+    "Vercel reports Jev reached nearly 13% of paid AI Gateway teams within 24 hours, more than twice any prior model launch on that gateway.",
+    "Jev returns typed choices, scores and booleans with probabilities for tool selection and continue, retry, stop or review decisions."
+  ],
+  "inference": [
+    "Seed Loom should compare explicit probabilistic decision surfaces with free-text evaluator decisions.",
+    "Specialized decision components may make uncertainty easier to route to human review."
+  ],
+  "significance": "Inspectible production adoption of a component shape aligned with governed stop, retry and review decisions.",
+  "confidence": 0.97,
+  "evidenceMaturity": "source-backed",
+  "sourceRefs": [
+    "source:vercel-jev-2026-09-18"
+  ],
+  "actorRefs": [
+    "actor:vercel",
+    "actor:typesafe-ai"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Vercel paid-team telemetry is representative of its gateway customers."
+  ],
+  "knownLimitations": [
+    "One-day adoption may reflect launch curiosity.",
+    "TypeSafe performance claims were not independently validated."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

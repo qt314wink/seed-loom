@@ -1,0 +1,54 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-09-19T23:42:26.240Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-09-20",
+      "bundlePath": "knowledge/intake/nightly/2026-09-20/nightly-run-bundle-2026-09-20.json",
+      "bundleSha256": "df1817bd8b2cf7427014b410d0eacb147b2dcfa404681253b122715ace3f65d8",
+      "normalizedDigest": "30581fb6afe93c155294f795d82f3c360dcae25d1e95fcceff501167e7ede1b4",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-gemini-breakout-2026-09-18.json",
+        "knowledge/sources/source-vercel-jev-2026-09-18.json",
+        "knowledge/sources/source-pwc-speed-2026-09-19.json",
+        "knowledge/sources/source-mantic-funding-2026-09-18.json",
+        "knowledge/sources/source-acousto-optic-2026-09-19.json",
+        "knowledge/observations/obs-nightly-2026-09-20-gemini-breakout.json",
+        "knowledge/observations/obs-nightly-2026-09-20-jev-decision-model.json",
+        "knowledge/observations/obs-nightly-2026-09-20-consulting-speed.json",
+        "knowledge/observations/obs-nightly-2026-09-20-mantic-forecasting.json",
+        "knowledge/observations/obs-nightly-2026-09-20-acousto-optic-steering.json",
+        "knowledge/relationships/rel-nightly-2026-09-20-1.json",
+        "knowledge/relationships/rel-nightly-2026-09-20-2.json",
+        "knowledge/relationships/rel-nightly-2026-09-20-3.json",
+        "knowledge/relationships/rel-nightly-2026-09-20-4.json",
+        "knowledge/relationships/rel-nightly-2026-09-20-5.json",
+        "knowledge/runs/run-nightly-2026-09-20.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-20-collect.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-20-vet.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-20-normalize.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-20-observe.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-20-inquire.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-20-interpret.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-20-relate.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-20-pattern.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-20-opportunity.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-20-strategy.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-20-experiment.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-20-genesis.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-20-publish.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-09-20-ingest.json",
+      "generatedRecordCount": 29
+    }
+  ]
+}

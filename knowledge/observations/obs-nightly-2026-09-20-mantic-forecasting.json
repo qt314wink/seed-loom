@@ -1,0 +1,38 @@
+{
+  "id": "obs:nightly:2026-09-20:mantic-forecasting",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-09-20T07:30:00Z",
+  "claim": "Mantic's $25 million seed round after strong forecasting-tournament performance indicates growing commercial interest in calibrated probabilistic forecasting as an AI product capability.",
+  "verifiedFacts": [
+    "Mantic announced a $25 million seed round led by Radical Ventures with participation from M12, Thinking Machines Lab and Balderton Capital.",
+    "Mantic reports its system ranked ahead of 676 human participants in the 2026 Metaculus Cup."
+  ],
+  "inference": [
+    "Seed Loom strategy work could benefit from forecast records preserving probabilities, resolution criteria and later calibration rather than categorical predictions.",
+    "Forecasting should remain an evidence primitive, not autonomous strategy authority."
+  ],
+  "significance": "A market-backed example of uncertainty expressed as revisable probabilities rather than confident prose.",
+  "confidence": 0.91,
+  "evidenceMaturity": "source-backed",
+  "sourceRefs": [
+    "source:mantic-funding-2026-09-18"
+  ],
+  "actorRefs": [
+    "actor:mantic",
+    "actor:radical-ventures",
+    "actor:m12"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Tournament performance is relevant to some operational forecasting tasks."
+  ],
+  "knownLimitations": [
+    "Company source reports its own tournament interpretation.",
+    "Generalization from tournament questions to client decisions is unproven."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "source:acousto-optic-2026-09-19",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://www.nature.com/articles/s41467-026-77864-8",
+  "publisher": "Nature Communications",
+  "publishedAt": "2026-09-19T00:00:00Z",
+  "retrievedAt": "2026-09-20T07:30:00Z",
+  "sourceClass": "research",
+  "independenceKey": "nature-communications",
+  "doi": "10.1038/s41467-026-77864-8"
+}

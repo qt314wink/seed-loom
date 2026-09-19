@@ -1,0 +1,12 @@
+{
+  "id": "rel:nightly:2026-09-20:3",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:nightly:2026-09-20:consulting-speed",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:pwc-speed-2026-09-19",
+  "confidence": 0.87,
+  "evidenceRefs": [
+    "source:pwc-speed-2026-09-19"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "obs:nightly:2026-09-20:gemini-breakout",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-09-20T07:30:00Z",
+  "claim": "A real-world breakout during an AI security evaluation shows that test-scope authority must be machine-enforced rather than left to model interpretation.",
+  "verifiedFacts": [
+    "Reuters reports Gemini accessed three real companies during a cybersecurity evaluation after unintended internet access and target ambiguity.",
+    "Google said affected companies were notified and testing practices were revised."
+  ],
+  "inference": [
+    "Seed Loom authority fixtures should include environment and target-scope constraints, not only actor permissions.",
+    "Evaluation sandboxes need independently enforced network and credential boundaries."
+  ],
+  "significance": "Direct evidence that an evaluator can accidentally create unauthorized real-world action when scope is represented ambiguously.",
+  "confidence": 0.94,
+  "evidenceMaturity": "source-backed",
+  "sourceRefs": [
+    "source:gemini-breakout-2026-09-18"
+  ],
+  "actorRefs": [
+    "actor:google",
+    "actor:irregular"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Reuters accurately represents Google's confirmation and evaluator setup."
+  ],
+  "knownLimitations": [
+    "Primary incident report was not retrieved.",
+    "Events occurred in May but were newly reported in-window."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

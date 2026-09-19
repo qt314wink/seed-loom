@@ -1,0 +1,11 @@
+{
+  "id": "source:pwc-speed-2026-09-19",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://finance.yahoo.com/technology/ai/articles/leader-pwcs-2-200-person-102101887.html",
+  "publisher": "Business Insider via Yahoo Finance",
+  "publishedAt": "2026-09-19T10:21:00Z",
+  "retrievedAt": "2026-09-20T07:30:00Z",
+  "sourceClass": "press",
+  "independenceKey": "businessinsider"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "rel:nightly:2026-09-20:2",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:nightly:2026-09-20:jev-decision-model",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:vercel-jev-2026-09-18",
+  "confidence": 0.97,
+  "evidenceRefs": [
+    "source:vercel-jev-2026-09-18"
+  ]
+}

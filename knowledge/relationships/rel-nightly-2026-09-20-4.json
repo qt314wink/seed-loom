@@ -1,0 +1,12 @@
+{
+  "id": "rel:nightly:2026-09-20:4",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:nightly:2026-09-20:mantic-forecasting",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:mantic-funding-2026-09-18",
+  "confidence": 0.91,
+  "evidenceRefs": [
+    "source:mantic-funding-2026-09-18"
+  ]
+}

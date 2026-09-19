@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-09-20",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-09-18T07:30:00Z",
+    "to": "2026-09-20T07:30:00Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-09-20:gemini-breakout",
+    "obs:nightly:2026-09-20:jev-decision-model",
+    "obs:nightly:2026-09-20:consulting-speed",
+    "obs:nightly:2026-09-20:mantic-forecasting",
+    "obs:nightly:2026-09-20:acousto-optic-steering"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "Agent governance is shifting toward explicit decision, scope and evaluation boundaries.",
+    "Consulting demand favors faster bounded proofs with inspectable evidence."
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-09-20:1",
+    "rel:nightly:2026-09-20:2",
+    "rel:nightly:2026-09-20:3",
+    "rel:nightly:2026-09-20:4",
+    "rel:nightly:2026-09-20:5"
+  ],
+  "contradictions": [
+    "Rapid agent adoption increases pressure for speed while breakout evidence increases the need for independently enforced boundaries."
+  ],
+  "opportunities": [
+    "Agent Evaluation and Delivery Control Review",
+    "Bounded AI proof-of-concept engagement with evidence receipt"
+  ],
+  "proposedExperiments": [
+    "scope-boundary-breakout-fixture-v0",
+    "probabilistic-decision-gate-comparison-v0"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false,
+      "action": "Extend existing Seed Loom authority fixtures with environment/target scope and probabilistic decision comparison; no schema change."
+    }
+  ],
+  "noChangeReceipts": [
+    "Observation Ad Pipeline, Omni-Loom, Shader Grammar and Kozo Dreams showed no default-branch commit in the inspected recent-commit result set within the strict retrieval window."
+  ],
+  "collectionFailures": [
+    "Primary Google/Irregular incident report for the Gemini breakout was not retrieved; Reuters reporting is used.",
+    "PwC consulting-speed evidence is based on one executive interview and lacks buyer-side procurement data.",
+    "Full MelodicBloom organization-wide 48-hour activity was not exhaustively enumerated in this run."
+  ]
+}

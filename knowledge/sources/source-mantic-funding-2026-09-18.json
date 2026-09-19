@@ -1,0 +1,11 @@
+{
+  "id": "source:mantic-funding-2026-09-18",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://blog.mantic.com/p/mantic-raises-25mn-to-scale-superhuman",
+  "publisher": "Mantic",
+  "publishedAt": "2026-09-18T12:00:00Z",
+  "retrievedAt": "2026-09-20T07:30:00Z",
+  "sourceClass": "primary",
+  "independenceKey": "mantic"
+}

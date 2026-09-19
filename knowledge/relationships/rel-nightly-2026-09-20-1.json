@@ -1,0 +1,12 @@
+{
+  "id": "rel:nightly:2026-09-20:1",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:nightly:2026-09-20:gemini-breakout",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:gemini-breakout-2026-09-18",
+  "confidence": 0.94,
+  "evidenceRefs": [
+    "source:gemini-breakout-2026-09-18"
+  ]
+}

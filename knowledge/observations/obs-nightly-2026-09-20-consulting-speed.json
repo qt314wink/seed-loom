@@ -1,0 +1,38 @@
+{
+  "id": "obs:nightly:2026-09-20:consulting-speed",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-09-20T07:30:00Z",
+  "claim": "A major consulting leader reports clients increasingly expect pilots and proofs of concept in roughly half the historical delivery time, increasing the value of bounded evidence-producing engagements.",
+  "verifiedFacts": [
+    "PwC's Washington DC managing partner said work previously framed as eight to ten weeks may now be expected in about half that time.",
+    "She distinguished faster pilots and proofs of concept from completing entire transformations in half the time."
+  ],
+  "inference": [
+    "The consultancy should package short evidence-producing reviews and specimens rather than lead with open-ended transformation programs.",
+    "Reusable governed workflows and receipts can support speed without hiding uncertainty."
+  ],
+  "significance": "Direct consulting evidence for shorter bounded engagements, matching the service shape emerging from Seed Loom proofs.",
+  "confidence": 0.87,
+  "evidenceMaturity": "source-backed",
+  "sourceRefs": [
+    "source:pwc-speed-2026-09-19"
+  ],
+  "actorRefs": [
+    "actor:pwc",
+    "actor:consulting-clients"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "qt314wink/observation-ad-pipeline"
+  ],
+  "assumptions": [
+    "PwC DC client behavior is directionally relevant beyond that office."
+  ],
+  "knownLimitations": [
+    "One executive interview is not a market-wide demand study.",
+    "No pricing or procurement conversion data were provided."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

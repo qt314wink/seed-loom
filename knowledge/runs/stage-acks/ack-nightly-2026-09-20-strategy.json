@@ -1,0 +1,33 @@
+{
+  "ackId": "ack:nightly:2026-09-20:strategy",
+  "runId": "run:nightly:2026-09-20",
+  "stage": "strategy",
+  "status": "deferred",
+  "startedAt": "2026-09-20T07:30:00Z",
+  "completedAt": "2026-09-20T07:30:00Z",
+  "inputs": [
+    "opportunity-candidates"
+  ],
+  "outputs": [],
+  "checks": [
+    {
+      "name": "human-approval",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "Jennipher approval required"
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly intelligence",
+    "method": "defer",
+    "inputHashes": [
+      "sha256:source-set-2026-09-20"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "source:gemini-breakout-2026-09-18",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://www.reuters.com/business/gemini-hacked-three-companies-first-known-breakout-by-google-ai-wsj-reports-2026-09-18/",
+  "publisher": "Reuters",
+  "publishedAt": "2026-09-18T12:00:00Z",
+  "retrievedAt": "2026-09-20T07:30:00Z",
+  "sourceClass": "press",
+  "independenceKey": "reuters"
+}

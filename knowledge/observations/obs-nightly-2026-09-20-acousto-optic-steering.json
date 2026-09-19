@@ -1,0 +1,36 @@
+{
+  "id": "obs:nightly:2026-09-20:acousto-optic-steering",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-09-20T07:30:00Z",
+  "claim": "A new integrated acousto-optic beam-steering method provides a mechanism-grounded reference for translating resonance, acoustic drive and optical deflection into controllable visual-system parameters.",
+  "verifiedFacts": [
+    "Nature Communications published the peer-reviewed paper on September 19, 2026.",
+    "The work demonstrates resonance-enhanced integrated acousto-optic beam steering."
+  ],
+  "inference": [
+    "Shader Grammar can treat the paper as a reference mechanism without claiming physical simulation.",
+    "A non-commercial visual specimen could map drive frequency, resonance and deflection concepts into labeled artistic controls."
+  ],
+  "significance": "Expands the mechanism-first visual-material corpus with a current sound-to-light interaction while preserving a strict physics-versus-art distinction.",
+  "confidence": 0.96,
+  "evidenceMaturity": "source-backed",
+  "sourceRefs": [
+    "source:acousto-optic-2026-09-19"
+  ],
+  "actorRefs": [
+    "actor:acousto-optic-researchers"
+  ],
+  "affectedRepositories": [
+    "qt314wink/shader-grammar"
+  ],
+  "assumptions": [
+    "Mechanism vocabulary is useful for the visual ontology when implementation is illustrative."
+  ],
+  "knownLimitations": [
+    "A shader would not reproduce the device physics.",
+    "Article imagery must not be adapted beyond its license."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

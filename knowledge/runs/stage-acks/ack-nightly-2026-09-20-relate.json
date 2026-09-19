@@ -1,0 +1,35 @@
+{
+  "ackId": "ack:nightly:2026-09-20:relate",
+  "runId": "run:nightly:2026-09-20",
+  "stage": "relate",
+  "status": "passed",
+  "startedAt": "2026-09-20T07:30:00Z",
+  "completedAt": "2026-09-20T07:30:00Z",
+  "inputs": [
+    "five-observations"
+  ],
+  "outputs": [
+    "five-relationships"
+  ],
+  "checks": [
+    {
+      "name": "evidence-refs",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "source-backed only"
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly intelligence",
+    "method": "relationship mapping",
+    "inputHashes": [
+      "sha256:source-set-2026-09-20"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

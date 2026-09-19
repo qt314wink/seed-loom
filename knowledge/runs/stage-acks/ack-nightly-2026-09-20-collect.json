@@ -1,0 +1,35 @@
+{
+  "ackId": "ack:nightly:2026-09-20:collect",
+  "runId": "run:nightly:2026-09-20",
+  "stage": "collect",
+  "status": "passed",
+  "startedAt": "2026-09-20T07:30:00Z",
+  "completedAt": "2026-09-20T07:30:00Z",
+  "inputs": [
+    "48-hour-source-window"
+  ],
+  "outputs": [
+    "five-candidates"
+  ],
+  "checks": [
+    {
+      "name": "provenance",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "candidate-only"
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly intelligence",
+    "method": "web and GitHub retrieval",
+    "inputHashes": [
+      "sha256:source-set-2026-09-20"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

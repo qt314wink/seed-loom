@@ -1,0 +1,35 @@
+{
+  "ackId": "ack:nightly:2026-09-20:inquire",
+  "runId": "run:nightly:2026-09-20",
+  "stage": "inquire",
+  "status": "passed",
+  "startedAt": "2026-09-20T07:30:00Z",
+  "completedAt": "2026-09-20T07:30:00Z",
+  "inputs": [
+    "five-observations"
+  ],
+  "outputs": [
+    "socratic-assessments"
+  ],
+  "checks": [
+    {
+      "name": "evidence-boundary",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "stop where evidence ends"
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly intelligence",
+    "method": "Socratic descent",
+    "inputHashes": [
+      "sha256:source-set-2026-09-20"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

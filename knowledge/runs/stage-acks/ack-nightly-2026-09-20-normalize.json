@@ -1,0 +1,35 @@
+{
+  "ackId": "ack:nightly:2026-09-20:normalize",
+  "runId": "run:nightly:2026-09-20",
+  "stage": "normalize",
+  "status": "passed",
+  "startedAt": "2026-09-20T07:30:00Z",
+  "completedAt": "2026-09-20T07:30:00Z",
+  "inputs": [
+    "live-schema-1.1.0"
+  ],
+  "outputs": [
+    "normalized-bundle"
+  ],
+  "checks": [
+    {
+      "name": "live-contract",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "closed Observation respected"
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly intelligence",
+    "method": "live schema normalization",
+    "inputHashes": [
+      "sha256:source-set-2026-09-20"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

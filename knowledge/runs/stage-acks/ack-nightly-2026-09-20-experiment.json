@@ -1,0 +1,33 @@
+{
+  "ackId": "ack:nightly:2026-09-20:experiment",
+  "runId": "run:nightly:2026-09-20",
+  "stage": "experiment",
+  "status": "deferred",
+  "startedAt": "2026-09-20T07:30:00Z",
+  "completedAt": "2026-09-20T07:30:00Z",
+  "inputs": [
+    "proposed-experiments"
+  ],
+  "outputs": [],
+  "checks": [
+    {
+      "name": "execution-blocked",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "no experiment execution"
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly intelligence",
+    "method": "defer",
+    "inputHashes": [
+      "sha256:source-set-2026-09-20"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}
