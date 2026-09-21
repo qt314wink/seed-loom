@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:bigid-agentiq-2026-09-21",
+  "type": "Source",
+  "url": "https://www.prnewswire.com/news-releases/bigid-launches-agentiq-the-agentic-automation-layer-for-data--ai-security-and-compliance-302884730.html",
+  "publisher": "BigID / PR Newswire",
+  "publishedAt": "2026-09-21T13:01:00Z",
+  "retrievedAt": "2026-09-22T07:30:00Z",
+  "sourceClass": "primary",
+  "independenceKey": "bigid",
+  "title": "BigID Launches AgentIQ",
+  "contentHash": null
+}

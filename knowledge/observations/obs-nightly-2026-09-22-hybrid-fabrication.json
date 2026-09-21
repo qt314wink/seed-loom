@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-22:hybrid-fabrication",
+  "type": "Observation",
+  "capturedAt": "2026-09-22T07:30:00Z",
+  "claim": "XYZO introduced a modular manufacturing platform combining additive, CNC micro-milling, deposition, finishing, inspection and process control in one chain.",
+  "verifiedFacts": [
+    "XYZO announced additive processes plus CNC micro-milling and drop-on-demand deposition.",
+    "The announced workflow includes finishing, inspection and process control."
+  ],
+  "inference": [
+    "Omni-Loom should model multi-stage process lineage rather than a single printer command.",
+    "Consultancy implication: reproducibility receipts gain value as additive/subtractive operations converge. Disposition: Omni-Loom PRODUCTIZE."
+  ],
+  "significance": "High for fabrication architecture: hybrid production multiplies transformations and machine assumptions.",
+  "confidence": 0.84,
+  "evidenceMaturity": "captured",
+  "sourceRefs": [
+    "source:xyzo-2026-09-21"
+  ],
+  "actorRefs": [
+    "actor:xyzo"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/omni-loom"
+  ],
+  "assumptions": [
+    "The announced platform reaches described capability."
+  ],
+  "knownLimitations": [
+    "Independent production validation was not found."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:michigan-pfas-2026-09-21",
+  "type": "Source",
+  "url": "https://www.michigan.gov/mdard/about/media/pressreleases/2026/09/21/mdard-marks-pfas-awareness-week-by-supporting-new-pfas-research-projects",
+  "publisher": "Michigan Department of Agriculture and Rural Development",
+  "publishedAt": "2026-09-21T00:00:00Z",
+  "retrievedAt": "2026-09-22T07:30:00Z",
+  "sourceClass": "official",
+  "independenceKey": "michigan-mdard",
+  "title": "MDARD supports new PFAS research projects",
+  "contentHash": null
+}

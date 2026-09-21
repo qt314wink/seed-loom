@@ -1,0 +1,54 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-09-21T23:48:15.429Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-09-22",
+      "bundlePath": "knowledge/intake/nightly/2026-09-22/nightly-run-bundle-2026-09-22.json",
+      "bundleSha256": "1e6373e5b564caf13d4d900a4683ef77666d8851f9653a70b3bbcc33a3fb77dc",
+      "normalizedDigest": "1e6373e5b564caf13d4d900a4683ef77666d8851f9653a70b3bbcc33a3fb77dc",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-aikido-altar-2026-09-21.json",
+        "knowledge/sources/source-amazon-muse-block-2026-09-21.json",
+        "knowledge/sources/source-bigid-agentiq-2026-09-21.json",
+        "knowledge/sources/source-michigan-pfas-2026-09-21.json",
+        "knowledge/sources/source-xyzo-2026-09-21.json",
+        "knowledge/observations/obs-nightly-2026-09-22-sovereign-model.json",
+        "knowledge/observations/obs-nightly-2026-09-22-service-authority.json",
+        "knowledge/observations/obs-nightly-2026-09-22-agentic-remediation.json",
+        "knowledge/observations/obs-nightly-2026-09-22-pfas-funding.json",
+        "knowledge/observations/obs-nightly-2026-09-22-hybrid-fabrication.json",
+        "knowledge/relationships/rel-nightly-2026-09-22-1.json",
+        "knowledge/relationships/rel-nightly-2026-09-22-2.json",
+        "knowledge/relationships/rel-nightly-2026-09-22-3.json",
+        "knowledge/relationships/rel-nightly-2026-09-22-4.json",
+        "knowledge/relationships/rel-nightly-2026-09-22-5.json",
+        "knowledge/runs/run-nightly-2026-09-22.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-22-collect.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-22-vet.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-22-normalize.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-22-observe.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-22-inquire.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-22-interpret.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-22-relate.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-22-pattern.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-22-opportunity.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-22-strategy.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-22-experiment.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-22-genesis.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-22-publish.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-09-22-ingest.json",
+      "generatedRecordCount": 29
+    }
+  ]
+}

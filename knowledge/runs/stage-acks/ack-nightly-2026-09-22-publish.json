@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-22:publish",
+  "runId": "run:nightly:2026-09-22",
+  "stage": "publish",
+  "status": "deferred",
+  "startedAt": "2026-09-22T07:30:00Z",
+  "completedAt": "2026-09-22T07:30:00Z",
+  "inputs": [
+    "stage:genesis"
+  ],
+  "outputs": [],
+  "checks": [
+    {
+      "name": "external-boundary",
+      "result": "pass",
+      "detail": "No publication authorized."
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "Internal candidate intake only."
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly intelligence edge",
+    "method": "deferred",
+    "inputHashes": [
+      "sha256:live-source-set-2026-09-22"
+    ]
+  }
+}

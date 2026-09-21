@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-22:1",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-22:sovereign-model",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:aikido-altar-2026-09-21",
+  "confidence": 0.96,
+  "evidenceRefs": [
+    "source:aikido-altar-2026-09-21"
+  ]
+}

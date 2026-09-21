@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-22:agentic-remediation",
+  "type": "Observation",
+  "capturedAt": "2026-09-22T07:30:00Z",
+  "claim": "BigID launched an agentic interface that can retrieve, report, respond to and remediate data and AI security violations from external agent surfaces.",
+  "verifiedFacts": [
+    "BigID launched AgentIQ on September 21.",
+    "BigID says customers can invoke it from Claude, Copilot, GPT and Gemini.",
+    "The announced action surface includes remediation."
+  ],
+  "inference": [
+    "Read, recommend and remediate authority should be distinguished across agent identities.",
+    "Consultancy implication: test whether remediation rights are narrower and more observable than read rights. Disposition: Seed Loom CORE."
+  ],
+  "significance": "High: remediation turns advisory automation into consequential mutation.",
+  "confidence": 0.94,
+  "evidenceMaturity": "source-backed",
+  "sourceRefs": [
+    "source:bigid-agentiq-2026-09-21"
+  ],
+  "actorRefs": [
+    "actor:bigid"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Announced capabilities are available as described."
+  ],
+  "knownLimitations": [
+    "Independent production outcome data is absent."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

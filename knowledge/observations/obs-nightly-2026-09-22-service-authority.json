@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-22:service-authority",
+  "type": "Observation",
+  "capturedAt": "2026-09-22T07:30:00Z",
+  "claim": "Amazon blocked Meta's Muse shopping agent, showing that user delegation does not automatically confer authority inside a third-party service.",
+  "verifiedFacts": [
+    "Amazon blocked Muse from its marketplace.",
+    "Amazon said external agents should respect provider policies, opt-outs and transparency expectations."
+  ],
+  "inference": [
+    "User permission, agent capability and target-service permission are separate grants.",
+    "Seed Loom should test service-owner consent/revocation as a distinct authority boundary. Disposition: CORE."
+  ],
+  "significance": "Very high: it exposes a missing authority dimension in many agent workflows.",
+  "confidence": 0.93,
+  "evidenceMaturity": "source-backed",
+  "sourceRefs": [
+    "source:amazon-muse-block-2026-09-21"
+  ],
+  "actorRefs": [
+    "actor:amazon",
+    "actor:meta"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Amazon's stated policy rationale materially explains the block."
+  ],
+  "knownLimitations": [
+    "Meta's detailed technical response was unavailable.",
+    "Competitive incentives may also matter."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

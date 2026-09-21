@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-09-22",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-09-20T07:30:00Z",
+    "to": "2026-09-22T07:30:00Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-09-22:sovereign-model",
+    "obs:nightly:2026-09-22:service-authority",
+    "obs:nightly:2026-09-22:agentic-remediation",
+    "obs:nightly:2026-09-22:pfas-funding",
+    "obs:nightly:2026-09-22:hybrid-fabrication"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "Authority is becoming multi-party and boundary-specific.",
+    "Portability increasingly includes deployment sovereignty and capability retention.",
+    "Physical and ecological systems strengthen transformation-level provenance."
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-09-22:1",
+    "rel:nightly:2026-09-22:2",
+    "rel:nightly:2026-09-22:3",
+    "rel:nightly:2026-09-22:4",
+    "rel:nightly:2026-09-22:5"
+  ],
+  "contradictions": [
+    "User delegation alone is insufficient when a target service withholds agent access."
+  ],
+  "opportunities": [
+    "Agent authority and remediation-boundary review",
+    "Institutional intelligence portability under local deployment",
+    "Whole-system environmental evidence review",
+    "Hybrid fabrication provenance receipt"
+  ],
+  "proposedExperiments": [
+    "third-party-service-authority-fixture-v0",
+    "hybrid-fabrication-lineage-fixture-v0"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false
+    }
+  ],
+  "noChangeReceipts": [
+    "No autonomous merge, deploy, promotion, outreach, application or publication authorized.",
+    "No archive or kill recommendation promoted."
+  ],
+  "collectionFailures": [
+    "No independent production validation found for XYZO in-window.",
+    "BigID evidence is launch-supplied; independent customer outcomes were not found.",
+    "Aikido benchmarks are vendor-reported; independent replication was not found."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-22:4",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-22:pfas-funding",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:michigan-pfas-2026-09-21",
+  "confidence": 0.98,
+  "evidenceRefs": [
+    "source:michigan-pfas-2026-09-21"
+  ]
+}

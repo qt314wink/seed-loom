@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-22:pfas-funding",
+  "type": "Observation",
+  "capturedAt": "2026-09-22T07:30:00Z",
+  "claim": "Michigan committed $1.9 million to PFAS-in-agriculture research, creating a real evidence domain where contamination, remediation, farm impacts and policy interact.",
+  "verifiedFacts": [
+    "Michigan announced $1.9 million in PFAS research grants on September 21.",
+    "The program targets PFAS in agriculture."
+  ],
+  "inference": [
+    "Project Constellation can use contamination programs as claim-boundary specimens across measurement, remediation and policy scales.",
+    "Consultancy implication: whole-system evidence review may help translate environmental evidence into decisions. Disposition: Project Constellation INCUBATE."
+  ],
+  "significance": "Medium-high: inspectable funding behavior in a systems problem where evidence boundaries matter.",
+  "confidence": 0.98,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:michigan-pfas-2026-09-21"
+  ],
+  "actorRefs": [
+    "actor:michigan-mdard"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/project-constellation",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Funded projects will generate public evidence."
+  ],
+  "knownLimitations": [
+    "Funding does not prove remediation success.",
+    "Michigan results may not generalize."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

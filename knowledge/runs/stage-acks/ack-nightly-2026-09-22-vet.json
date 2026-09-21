@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-22:vet",
+  "runId": "run:nightly:2026-09-22",
+  "stage": "vet",
+  "status": "passed",
+  "startedAt": "2026-09-22T07:30:00Z",
+  "completedAt": "2026-09-22T07:30:00Z",
+  "inputs": [
+    "stage:collect"
+  ],
+  "outputs": [
+    "deduplicated candidate set"
+  ],
+  "checks": [
+    {
+      "name": "dedup",
+      "result": "pass",
+      "detail": "Prior Muse persona signal excluded; new service-boundary behavior retained."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "No novelty manufactured."
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly intelligence edge",
+    "method": "cross-run deduplication",
+    "inputHashes": [
+      "sha256:live-source-set-2026-09-22"
+    ]
+  }
+}

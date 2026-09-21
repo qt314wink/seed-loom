@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-22:sovereign-model",
+  "type": "Observation",
+  "capturedAt": "2026-09-22T07:30:00Z",
+  "claim": "Aikido released a workload-specialized open-weight security model for local and air-gapped deployment, making deployment sovereignty a concrete product property.",
+  "verifiedFacts": [
+    "Aikido released Altar for customer-controlled infrastructure.",
+    "Aikido reports reducing storage from 1.51 TB full precision to 328 GB using quantization and expert pruning.",
+    "Aikido reports 23 of 32 known vulnerabilities rediscovered at least once across three runs."
+  ],
+  "inference": [
+    "Institutional-intelligence portability should test deployment sovereignty and capability retention, not only provider switching.",
+    "Consultancy implication: test which capabilities survive compression/local deployment. Disposition: Seed Loom CORE; no new model repo."
+  ],
+  "significance": "High: a measurable portability specimen with explicit capability-loss tradeoffs.",
+  "confidence": 0.96,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:aikido-altar-2026-09-21"
+  ],
+  "actorRefs": [
+    "actor:aikido"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Vendor benchmarks are directionally representative."
+  ],
+  "knownLimitations": [
+    "Independent replication is absent."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

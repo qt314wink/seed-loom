@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-22:opportunity",
+  "runId": "run:nightly:2026-09-22",
+  "stage": "opportunity",
+  "status": "passed",
+  "startedAt": "2026-09-22T07:30:00Z",
+  "completedAt": "2026-09-22T07:30:00Z",
+  "inputs": [
+    "stage:pattern"
+  ],
+  "outputs": [
+    "candidate opportunities"
+  ],
+  "checks": [
+    {
+      "name": "advisory-only",
+      "result": "pass",
+      "detail": "No outreach or spend."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Opportunity is not authorization."
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly intelligence edge",
+    "method": "consultancy relevance mapping",
+    "inputHashes": [
+      "sha256:live-source-set-2026-09-22"
+    ]
+  }
+}

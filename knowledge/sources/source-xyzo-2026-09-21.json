@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:xyzo-2026-09-21",
+  "type": "Source",
+  "url": "https://www.indexbox.io/blog/xyzo-launches-hybrid-manufacturing-system-combining-3d-printing-cnc-micro-milling-and-drop-on-demand-deposition/",
+  "publisher": "IndexBox",
+  "publishedAt": "2026-09-21T00:00:00Z",
+  "retrievedAt": "2026-09-22T07:30:00Z",
+  "sourceClass": "trade",
+  "independenceKey": "indexbox",
+  "title": "XYZO launches hybrid manufacturing platform",
+  "contentHash": null
+}

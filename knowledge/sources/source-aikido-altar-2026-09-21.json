@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:aikido-altar-2026-09-21",
+  "type": "Source",
+  "url": "https://www.aikido.dev/blog/aikido-altar-open-weight-ai-sovereign-security",
+  "publisher": "Aikido Security",
+  "publishedAt": "2026-09-21T00:00:00Z",
+  "retrievedAt": "2026-09-22T07:30:00Z",
+  "sourceClass": "primary",
+  "independenceKey": "aikido",
+  "title": "Aikido Altar: open-weight AI for sovereign security",
+  "contentHash": null
+}

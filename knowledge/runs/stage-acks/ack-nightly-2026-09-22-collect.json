@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-22:collect",
+  "runId": "run:nightly:2026-09-22",
+  "stage": "collect",
+  "status": "passed",
+  "startedAt": "2026-09-22T07:30:00Z",
+  "completedAt": "2026-09-22T07:30:00Z",
+  "inputs": [
+    "48h web and repository retrieval"
+  ],
+  "outputs": [
+    "five source-backed candidates"
+  ],
+  "checks": [
+    {
+      "name": "provenance",
+      "result": "pass",
+      "detail": "Sources retain URLs and classes."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Candidate-only."
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly intelligence edge",
+    "method": "web+GitHub retrieval",
+    "inputHashes": [
+      "sha256:live-source-set-2026-09-22"
+    ]
+  }
+}

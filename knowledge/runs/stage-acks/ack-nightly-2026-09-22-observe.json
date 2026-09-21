@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-22:observe",
+  "runId": "run:nightly:2026-09-22",
+  "stage": "observe",
+  "status": "passed",
+  "startedAt": "2026-09-22T07:30:00Z",
+  "completedAt": "2026-09-22T07:30:00Z",
+  "inputs": [
+    "stage:normalize"
+  ],
+  "outputs": [
+    "five observations"
+  ],
+  "checks": [
+    {
+      "name": "count",
+      "result": "pass",
+      "detail": "Exactly five candidate observations."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "No acceptance."
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly intelligence edge",
+    "method": "fact/inference separation",
+    "inputHashes": [
+      "sha256:live-source-set-2026-09-22"
+    ]
+  }
+}

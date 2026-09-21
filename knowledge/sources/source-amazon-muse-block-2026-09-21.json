@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:amazon-muse-block-2026-09-21",
+  "type": "Source",
+  "url": "https://www.axios.com/2026/09/21/amazon-meta-muse-ai-agentic-shopping",
+  "publisher": "Axios",
+  "publishedAt": "2026-09-21T00:00:00Z",
+  "retrievedAt": "2026-09-22T07:30:00Z",
+  "sourceClass": "press",
+  "independenceKey": "axios",
+  "title": "Amazon boots Meta's Muse in fight over AI shopping",
+  "contentHash": null
+}

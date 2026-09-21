@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-22:3",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-22:agentic-remediation",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:bigid-agentiq-2026-09-21",
+  "confidence": 0.94,
+  "evidenceRefs": [
+    "source:bigid-agentiq-2026-09-21"
+  ]
+}

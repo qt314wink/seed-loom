@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-22:normalize",
+  "runId": "run:nightly:2026-09-22",
+  "stage": "normalize",
+  "status": "passed",
+  "startedAt": "2026-09-22T07:30:00Z",
+  "completedAt": "2026-09-22T07:30:00Z",
+  "inputs": [
+    "stage:vet",
+    "live schema 1.1.0"
+  ],
+  "outputs": [
+    "schema-shaped bundle"
+  ],
+  "checks": [
+    {
+      "name": "closed-observation-boundary",
+      "result": "pass",
+      "detail": "Advisory implications mirrored into inference; canonical schema unchanged."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Live schema is authority."
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly intelligence edge",
+    "method": "live-schema normalization",
+    "inputHashes": [
+      "sha256:seed-loom-main-6d0f46e"
+    ]
+  }
+}

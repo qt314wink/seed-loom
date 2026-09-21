@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-22:pattern",
+  "runId": "run:nightly:2026-09-22",
+  "stage": "pattern",
+  "status": "passed",
+  "startedAt": "2026-09-22T07:30:00Z",
+  "completedAt": "2026-09-22T07:30:00Z",
+  "inputs": [
+    "stage:relate"
+  ],
+  "outputs": [
+    "candidate patterns"
+  ],
+  "checks": [
+    {
+      "name": "cross-signal",
+      "result": "pass",
+      "detail": "Patterns remain candidates."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "No thesis acceptance."
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly intelligence edge",
+    "method": "cross-signal synthesis",
+    "inputHashes": [
+      "sha256:live-source-set-2026-09-22"
+    ]
+  }
+}

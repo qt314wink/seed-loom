@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-22:interpret",
+  "runId": "run:nightly:2026-09-22",
+  "stage": "interpret",
+  "status": "passed",
+  "startedAt": "2026-09-22T07:30:00Z",
+  "completedAt": "2026-09-22T07:30:00Z",
+  "inputs": [
+    "stage:inquire"
+  ],
+  "outputs": [
+    "candidate interpretations"
+  ],
+  "checks": [
+    {
+      "name": "claims",
+      "result": "pass",
+      "detail": "Interpretations remain inference."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "No promotion."
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly intelligence edge",
+    "method": "bounded interpretation",
+    "inputHashes": [
+      "sha256:live-source-set-2026-09-22"
+    ]
+  }
+}
