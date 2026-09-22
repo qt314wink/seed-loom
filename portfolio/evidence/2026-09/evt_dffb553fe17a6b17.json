@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_dffb553fe17a6b17",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-09-22T10:34:55.321065Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "shaders",
+    "commit_sha": "2026-09-22T03:00:48Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1380796693,
+    "github_node_id": "R_kgDOUk1JFQ",
+    "language": "JavaScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": null,
+    "pushed_at": "2026-09-22T03:00:48Z",
+    "created_at": "2026-09-22T03:00:41Z",
+    "open_issues_count": 0
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "event_id": "evt_87ab9e16498e2537",
+  "schema_version": "v1",
+  "event_type": "asset.discovered",
+  "occurred_at": "2026-09-22T10:34:55.320009Z",
+  "asset": {
+    "provider": "github",
+    "owner": "qt314wink",
+    "repo": "liquid-chill-responsive-realtime-shader",
+    "commit_sha": "2026-09-22T02:16:12Z",
+    "ref": "main"
+  },
+  "actor": {
+    "type": "workflow",
+    "id": "collect_repo_provenance"
+  },
+  "confidence": "supported",
+  "claims": {
+    "github_repo_id": 1380757360,
+    "github_node_id": "R_kgDOUkyvcA",
+    "language": "JavaScript",
+    "archived": false,
+    "private": false,
+    "fork": false,
+    "description": null,
+    "pushed_at": "2026-09-22T02:16:12Z",
+    "created_at": "2026-09-22T02:16:01Z",
+    "open_issues_count": 0
+  }
+}
