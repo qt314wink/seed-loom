@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-23:simulation-to-fabrication-lineage",
+  "type": "Observation",
+  "capturedAt": "2026-09-23T07:45:00Z",
+  "claim": "ORNL and Boeing used multi-material wire-arc additive manufacturing plus 32 simulation iterations and conventional finishing to produce a nearly two-ton aerospace forming tool.",
+  "verifiedFacts": [
+    "ORNL and Boeing produced a six-foot-tall, nearly two-ton Stamp Form Die using wire-arc additive manufacturing.",
+    "The tool uses mild steel structurally and stainless steel at the working surface.",
+    "Engineers used 32 simulation iterations to compensate for residual-stress warping.",
+    "The printed tool then underwent annealing, rib removal and conventional finishing at Baker Industries before meeting Boeing requirements.",
+    "The tool supports NASA's Hi-Rate Composite Aircraft Manufacturing project."
+  ],
+  "inference": [
+    "Deterministic fabrication receipts should preserve simulation iterations, temporary geometry, material transitions and post-processing rather than only final geometry and machine settings.",
+    "Consultancy implication: provenance across simulation-to-physical transformation is a stronger Omni-Loom proof than another fabrication feature. Project disposition: Omni-Loom PRODUCTIZE."
+  ],
+  "significance": "Very high for Omni-Loom: the artifact's correctness depends on a chain of model, simulation, deposition, stress relief and finishing decisions.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "sourceRefs": [
+    "source:ornl-boeing-waam-2026-09-21"
+  ],
+  "actorRefs": [
+    "actor:ornl",
+    "actor:boeing",
+    "actor:nasa",
+    "actor:baker-industries"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/omni-loom"
+  ],
+  "assumptions": [
+    "The official project account accurately represents the process sequence."
+  ],
+  "knownLimitations": [
+    "The public report does not expose full machine parameters, simulation files or cost comparison needed for independent reproduction."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

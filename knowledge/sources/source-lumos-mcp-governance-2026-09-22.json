@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:lumos-mcp-governance-2026-09-22",
+  "type": "Source",
+  "url": "https://www.lumos.com/products/mcp-governance",
+  "publisher": "Lumos",
+  "publishedAt": "2026-09-22T00:00:00Z",
+  "retrievedAt": "2026-09-23T07:45:00Z",
+  "sourceClass": "primary",
+  "independenceKey": "lumos",
+  "contentHash": null,
+  "title": "MCP Governance: Control AI Agent Tool Calls"
+}

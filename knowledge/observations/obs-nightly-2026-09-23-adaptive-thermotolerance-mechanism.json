@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-23:adaptive-thermotolerance-mechanism",
+  "type": "Observation",
+  "capturedAt": "2026-09-23T07:45:00Z",
+  "claim": "A newly described geothermal amoeba can reproduce at 63°C and survive higher temperatures through state change, expanding the known thermal boundary for eukaryotic life.",
+  "verifiedFacts": [
+    "Cell Press reports Incendiamoeba cascadensis undergoing mitosis at 63°C, a record for known eukaryotes.",
+    "The organism remained active around 64°C and recovered after 70°C exposure by forming a protective state.",
+    "Genome analysis found extra genes associated with protein maintenance and DNA repair compared with milder-environment amoebae.",
+    "Researchers also found protein-surface characteristics associated with heat stability in other thermophiles."
+  ],
+  "inference": [
+    "This is a useful mechanism-first reference for regenerative/adaptive systems: persistence can arise from state transition, repair capacity and molecular stabilization rather than static resistance.",
+    "Consultancy implication is research-level only: use as a cross-domain mechanism reference, not as evidence for human physiology or design claims. Project disposition: Project Constellation REFERENCE-ONLY for this signal."
+  ],
+  "significance": "Medium but unusually generative: it provides a well-bounded biological example of adaptation, threshold behavior and recovery without licensing cross-domain causal claims.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:cell-fire-amoeba-2026-09-22"
+  ],
+  "actorRefs": [
+    "actor:syracuse-researchers",
+    "actor:cell-press"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/project-constellation"
+  ],
+  "assumptions": [
+    "The reported Cell study methods support the stated thermal limits."
+  ],
+  "knownLimitations": [
+    "Mechanisms in a single-celled extremophile do not transfer directly to human, ecological or engineered systems.",
+    "Biotechnological applications remain speculative."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-23:normalize",
+  "runId": "run:nightly:2026-09-23",
+  "stage": "normalize",
+  "status": "passed",
+  "startedAt": "2026-09-23T07:45:00Z",
+  "completedAt": "2026-09-23T07:45:00Z",
+  "inputs": [
+    "stage:vet"
+  ],
+  "outputs": [
+    "stage:normalize:candidate"
+  ],
+  "checks": [
+    {
+      "name": "live-contract",
+      "result": "pass",
+      "detail": "Bundle shaped to live 1.1.0 contracts; advisory material mirrored into inference where canonical Observation is closed."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "No schema modified to fit nightly intake."
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly intelligence edge",
+    "method": "live-schema normalization",
+    "inputHashes": [
+      "sha256:source-set-2026-09-23"
+    ]
+  }
+}

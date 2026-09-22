@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-09-23",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-09-21T07:45:00Z",
+    "to": "2026-09-23T07:45:00Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-09-23:runtime-tool-call-governance",
+    "obs:nightly:2026-09-23:long-horizon-agent-economics",
+    "obs:nightly:2026-09-23:accountability-layer-finance",
+    "obs:nightly:2026-09-23:simulation-to-fabrication-lineage",
+    "obs:nightly:2026-09-23:adaptive-thermotolerance-mechanism"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "Agent governance is separating evidence, identity, runtime enforcement and accountable judgment into distinct layers.",
+    "Cheaper long-horizon agents increase the value of predeclared authority and post-hoc reconstructability.",
+    "Physical and biological systems reinforce transformation-level provenance and explicit state transitions."
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-09-23:1",
+    "rel:nightly:2026-09-23:2",
+    "rel:nightly:2026-09-23:3",
+    "rel:nightly:2026-09-23:4",
+    "rel:nightly:2026-09-23:5"
+  ],
+  "contradictions": [
+    "Increasing agent autonomy reduces supervision cost but raises the cost of weakly specified authority and integration boundaries."
+  ],
+  "opportunities": [
+    "Governed Agent Action-Surface Review",
+    "Accountable Decision Workflow Review",
+    "Simulation-to-Fabrication Provenance Proof"
+  ],
+  "proposedExperiments": [
+    "tool-call-authority-crosswalk-v0",
+    "simulation-to-artifact-lineage-v0"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false
+    },
+    {
+      "status": "proposed",
+      "executed": false
+    }
+  ],
+  "noChangeReceipts": [
+    "No autonomous merge, deploy, acceptance, promotion, outreach, application or publication authorized.",
+    "No new repository is justified by tonight's signals.",
+    "No archive or kill recommendation promoted from this run."
+  ],
+  "collectionFailures": [
+    "Independent production false-block and latency evidence for Lumos MCP Governance was not found.",
+    "Independent post-release Opus 5.5 long-horizon repository outcome data is not yet available.",
+    "MindBridge customer outcome data for the newly announced agentic oversight capabilities was not found.",
+    "ORNL's public account does not provide the complete machine/simulation package required for independent reproduction."
+  ]
+}

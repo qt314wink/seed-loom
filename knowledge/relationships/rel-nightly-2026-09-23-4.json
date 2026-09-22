@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-23:4",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-23:simulation-to-fabrication-lineage",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:ornl-boeing-waam-2026-09-21",
+  "confidence": 0.99,
+  "evidenceRefs": [
+    "source:ornl-boeing-waam-2026-09-21"
+  ]
+}

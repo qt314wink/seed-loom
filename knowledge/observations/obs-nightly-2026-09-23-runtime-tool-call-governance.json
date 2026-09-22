@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-23:runtime-tool-call-governance",
+  "type": "Observation",
+  "capturedAt": "2026-09-23T07:45:00Z",
+  "claim": "Lumos released runtime governance for Claude Code and Codex that observes and can block individual MCP and other tool calls before execution.",
+  "verifiedFacts": [
+    "Lumos released MCP Governance for Claude Code and Codex.",
+    "The product records MCP/tool usage and can apply allow-or-deny policy before a tool call executes.",
+    "Lumos says coverage extends beyond MCP to Bash commands, file edits, browser use and locally added MCP servers.",
+    "Its product page says recorded call metadata includes human identity and policy decision."
+  ],
+  "inference": [
+    "The Seed Loom authority thesis should distinguish evidence of authority from independent runtime enforcement at the exact action boundary.",
+    "Consultancy implication: a governed-agent review can compare declared scope with observed tool-call scope and identify over-broad inherited human permissions. Project disposition: Seed Loom CORE; Agent Runtime PRODUCTIZE only where enforcement is required."
+  ],
+  "significance": "Very high: this is a direct market implementation of the evidence-versus-enforcement boundary Seed Loom has been trying to articulate.",
+  "confidence": 0.98,
+  "evidenceMaturity": "source-backed",
+  "sourceRefs": [
+    "source:lumos-mcp-governance-2026-09-22"
+  ],
+  "actorRefs": [
+    "actor:lumos"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Lumos's released product behaves as its technical documentation describes."
+  ],
+  "knownLimitations": [
+    "Latency, false-block rates and independent production outcomes are vendor reported or unavailable.",
+    "Runtime enforcement remains an external system capability, not evidence that Seed Loom should implement it."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

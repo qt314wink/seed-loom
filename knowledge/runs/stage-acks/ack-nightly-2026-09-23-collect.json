@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-23:collect",
+  "runId": "run:nightly:2026-09-23",
+  "stage": "collect",
+  "status": "passed",
+  "startedAt": "2026-09-23T07:45:00Z",
+  "completedAt": "2026-09-23T07:45:00Z",
+  "inputs": [
+    "source-backed nightly intake"
+  ],
+  "outputs": [
+    "stage:collect:candidate"
+  ],
+  "checks": [
+    {
+      "name": "candidate-boundary",
+      "result": "pass",
+      "detail": "Candidate-only; no accepted knowledge or autonomous repository action created."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Human approval required for strategy, experiment, genesis and publication; repository actions remain proposals."
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly intelligence edge",
+    "method": "48-hour web research + live GitHub authority preflight + schema-bounded normalization",
+    "inputHashes": [
+      "sha256:source-set-2026-09-23"
+    ]
+  }
+}

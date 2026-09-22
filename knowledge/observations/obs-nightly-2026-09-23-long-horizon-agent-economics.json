@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-23:long-horizon-agent-economics",
+  "type": "Observation",
+  "capturedAt": "2026-09-23T07:45:00Z",
+  "claim": "Anthropic released Opus 5.5 with lower reported task cost, stronger long-horizon coding performance, external pre-release evaluation and action-level safeguards.",
+  "verifiedFacts": [
+    "Anthropic released Claude Opus 5.5 on September 22.",
+    "Anthropic reports 40% lower typical running cost than Opus 5 and more than 30% faster output.",
+    "Anthropic says the model was externally tested by Frontier Design and METR before release.",
+    "Anthropic describes an action classifier, auditable sandbox and pre-merge code review for agentic coding.",
+    "Early testers reported long unattended and multi-repository engineering tasks, though those reports are vendor-selected."
+  ],
+  "inference": [
+    "As long-horizon agents become cheaper and more capable, governance cost shifts from supervising every step to defining authority, checkpoints, evidence and integration conditions before execution.",
+    "Consultancy implication: bounded handoff design and receipt quality become more valuable as agent sessions grow longer. Project disposition: Seed Loom CORE; no model-specific architecture change is justified."
+  ],
+  "significance": "High: improved economics make unattended multi-step work more plausible, increasing the practical value of governed delegation and integration receipts.",
+  "confidence": 0.96,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:anthropic-opus-5-5-2026-09-22"
+  ],
+  "actorRefs": [
+    "actor:anthropic"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Vendor and early-tester results are directionally representative of real workloads."
+  ],
+  "knownLimitations": [
+    "Most performance and safety evidence is provider-produced or provider-selected.",
+    "Benchmark superiority does not guarantee better results on Jennipher's repositories."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

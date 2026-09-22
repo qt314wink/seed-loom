@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:mindbridge-agentic-risk-2026-09-22",
+  "type": "Source",
+  "url": "https://www.businesswire.com/news/home/20260922804090/en/MindBridge-Advances-Financial-Oversight-for-the-Agentic-Era-with-New-Platform-Capabilities",
+  "publisher": "MindBridge via Business Wire",
+  "publishedAt": "2026-09-22T00:00:00Z",
+  "retrievedAt": "2026-09-23T07:45:00Z",
+  "sourceClass": "primary",
+  "independenceKey": "mindbridge",
+  "contentHash": null,
+  "title": "MindBridge Advances Financial Oversight for the Agentic Era"
+}

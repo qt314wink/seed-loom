@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-23:accountability-layer-finance",
+  "type": "Observation",
+  "capturedAt": "2026-09-23T07:45:00Z",
+  "claim": "MindBridge introduced agentic risk assessment and governed financial oversight that explicitly keeps accountable human judgment separate from automated analysis.",
+  "verifiedFacts": [
+    "MindBridge announced Agentic Risk Assessment and additional financial oversight capabilities on September 22.",
+    "The announced system connects evidence, analytics and materiality for audit planning.",
+    "MindBridge is previewing continuous Financial Close Oversight and Spend Integrity Oversight that move from risk detection to investigation and governed action.",
+    "The company explicitly states that automation does not change who is accountable for financial outcomes."
+  ],
+  "inference": [
+    "A sellable governance service may be strongest when attached to a named accountable decision rather than generic AI governance.",
+    "Consultancy implication: Seed Loom should demonstrate evidence lineage into a human-owned decision point, not only agent traces. Project disposition: Seed Loom CORE and consultancy packaging PRODUCTIZE."
+  ],
+  "significance": "High commercially: a financial oversight vendor is packaging explainability, evidence and accountable judgment as a product boundary.",
+  "confidence": 0.95,
+  "evidenceMaturity": "source-backed",
+  "sourceRefs": [
+    "source:mindbridge-agentic-risk-2026-09-22"
+  ],
+  "actorRefs": [
+    "actor:mindbridge"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "The announced capabilities reach customers substantially as described."
+  ],
+  "knownLimitations": [
+    "No independent outcome evidence yet shows reduced audit errors or improved decisions.",
+    "The announcement is company-supplied."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

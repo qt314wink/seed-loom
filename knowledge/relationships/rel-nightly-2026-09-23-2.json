@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-23:2",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-23:long-horizon-agent-economics",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:anthropic-opus-5-5-2026-09-22",
+  "confidence": 0.96,
+  "evidenceRefs": [
+    "source:anthropic-opus-5-5-2026-09-22"
+  ]
+}

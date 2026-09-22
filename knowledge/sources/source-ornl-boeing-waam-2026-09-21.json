@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:ornl-boeing-waam-2026-09-21",
+  "type": "Source",
+  "url": "https://www.eurekalert.org/news-releases/1144690",
+  "publisher": "DOE Oak Ridge National Laboratory via EurekAlert",
+  "publishedAt": "2026-09-21T00:00:00Z",
+  "retrievedAt": "2026-09-23T07:45:00Z",
+  "sourceClass": "official",
+  "independenceKey": "ornl-doe",
+  "contentHash": null,
+  "title": "Partnership between ORNL, Boeing advances manufacturing for aircraft parts"
+}
