@@ -1,0 +1,81 @@
+name: package lattice beyond color
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - agent/lattice-beyond-color
+    paths:
+      - 'case-studies/lattice-beyond-color/**'
+      - '.github/workflows/package-lattice-beyond-color.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install deterministic render dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends pandoc librsvg2-bin zip libreoffice-writer
+
+      - name: Build derived artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          SRC='case-studies/lattice-beyond-color'
+          DIST='dist/lattice-beyond-color'
+          mkdir -p "$DIST"
+
+          cp "$SRC/README.md" "$DIST/README.md"
+          cp "$SRC/DECISION_LOG.md" "$DIST/DECISION_LOG.md"
+          cp "$SRC/STRATEGY.md" "$DIST/STRATEGY.md"
+          cp "$SRC/concept-board.svg" "$DIST/concept-board.svg"
+          cp "$SRC/lattice-system.tokens.json" "$DIST/lattice-system.tokens.json"
+          cp "$SRC/lattice-engine.ts" "$DIST/lattice-engine.ts"
+          cp "$SRC/lattice-web-demo.html" "$DIST/lattice-web-demo.html"
+          cp "$SRC/ARTIFACT_MANIFEST.json" "$DIST/ARTIFACT_MANIFEST.json"
+
+          pandoc "$SRC/STRATEGY.md" \
+            --from=gfm \
+            --standalone \
+            --metadata title='Lattice Beyond Color' \
+            --output "$DIST/Lattice_Beyond_Color.docx"
+
+          rsvg-convert \
+            --width 2400 \
+            --height 1720 \
+            "$SRC/concept-board.svg" \
+            --output "$DIST/lattice_concept_board.png"
+
+          mkdir -p "$RUNNER_TEMP/docx-render"
+          libreoffice --headless --convert-to pdf --outdir "$RUNNER_TEMP/docx-render" "$DIST/Lattice_Beyond_Color.docx"
+          test -s "$RUNNER_TEMP/docx-render/Lattice_Beyond_Color.pdf"
+
+          (
+            cd "$DIST"
+            sha256sum \
+              README.md DECISION_LOG.md STRATEGY.md concept-board.svg \
+              lattice-system.tokens.json lattice-engine.ts lattice-web-demo.html \
+              ARTIFACT_MANIFEST.json Lattice_Beyond_Color.docx lattice_concept_board.png \
+              > SHA256SUMS.txt
+            zip -X -9 Lattice_Beyond_Color_Package.zip \
+              README.md DECISION_LOG.md STRATEGY.md concept-board.svg \
+              lattice-system.tokens.json lattice-engine.ts lattice-web-demo.html \
+              ARTIFACT_MANIFEST.json Lattice_Beyond_Color.docx lattice_concept_board.png \
+              SHA256SUMS.txt
+          )
+
+      - name: Upload bounded package
+        uses: actions/upload-artifact@v4
+        with:
+          name: lattice-beyond-color
+          path: dist/lattice-beyond-color/
+          if-no-files-found: error
+          retention-days: 30

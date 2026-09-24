@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "package": "lattice-beyond-color",
+  "canonicalSources": [
+    "README.md",
+    "DECISION_LOG.md",
+    "STRATEGY.md",
+    "concept-board.svg",
+    "lattice-system.tokens.json",
+    "lattice-engine.ts",
+    "lattice-web-demo.html"
+  ],
+  "derivedArtifacts": {
+    "Lattice_Beyond_Color.docx": {
+      "source": "STRATEGY.md",
+      "builder": "pandoc",
+      "status": "generated-in-ci"
+    },
+    "lattice_concept_board.png": {
+      "source": "concept-board.svg",
+      "builder": "rsvg-convert",
+      "status": "generated-in-ci"
+    },
+    "Lattice_Beyond_Color_Package.zip": {
+      "source": "canonicalSources + generated DOCX + generated PNG + SHA256SUMS.txt",
+      "builder": "zip -X -9",
+      "status": "generated-in-ci"
+    }
+  },
+  "priorGeneratedArtifactProvenance": {
+    "note": "Hashes preserve the exact local artifacts created before reconciliation. They are provenance receipts, not canonical build outputs.",
+    "Lattice_Beyond_Color.docx": {
+      "sha256": "4ada4fe258926f6b57aa32363436f4f8186f03f12baf1eac14bbedda0b83263a"
+    },
+    "lattice_concept_board.png": {
+      "sha256": "77545b3b1e972fb06b319cf333b71ba4929aa42baa37a5d8c91e4784f6e5870d"
+    },
+    "Lattice_Beyond_Color_Package.zip": {
+      "sha256": "917b39d7cd8a1380ed09c00d273d3b4bcce9adeeb8cf3a8f7f4cfa13c0efcfee"
+    }
+  },
+  "policy": {
+    "gitStores": "editable canonical sources and traceability metadata",
+    "ciProduces": "binary human-readable and distribution artifacts",
+    "reason": "avoid binary drift while preserving reproducibility, provenance, and downloadable packaging"
+  }
+}

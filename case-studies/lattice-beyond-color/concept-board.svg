@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1720" viewBox="0 0 2400 1720">
+<rect width="2400" height="1720" fill="#0b1114"/>
+<text x="120" y="150" fill="#edf2ed" font-family="Inter,Segoe UI,sans-serif" font-size="76" font-weight="700" letter-spacing="8">LATTICE BEYOND COLOR</text>
+<text x="120" y="215" fill="#9fb0aa" font-family="Inter,Segoe UI,sans-serif" font-size="31">Mechanism → parameter → behavior → visible state → verification</text>
+<rect x="120" y="280" width="2160" height="128" rx="28" fill="#121b20" stroke="#33434a" stroke-width="2"/>
+<text x="170" y="338" fill="#9fb0aa" font-family="Inter,Segoe UI,sans-serif" font-size="24">SHARED COMPILER</text>
+<text x="170" y="379" fill="#edf2ed" font-family="ui-monospace,Menlo,monospace" font-size="28">evidence → mechanism → formula → semantic parameter → behavior → visible state → replay</text>
+
+<g transform="translate(120 470)">
+  <rect width="1030" height="470" rx="34" fill="#121b20" stroke="#33434a" stroke-width="2"/>
+  <rect width="14" height="470" rx="7" fill="#71c7b6"/>
+  <text x="46" y="72" fill="#71c7b6" font-family="Inter,Segoe UI,sans-serif" font-size="32" font-weight="700">HELIOVEIL</text>
+  <text x="46" y="118" fill="#edf2ed" font-family="Inter,Segoe UI,sans-serif" font-size="30">Adaptive climate skin</text>
+  <text x="46" y="164" fill="#9fb0aa" font-family="Inter,Segoe UI,sans-serif" font-size="23">Failure: heat / glare</text>
+  <text x="46" y="207" fill="#9fb0aa" font-family="Inter,Segoe UI,sans-serif" font-size="22">photonic spacing · aperture · radiative control</text>
+  <rect x="46" y="238" width="938" height="58" rx="16" fill="#0b1114" stroke="#33434a"/>
+  <text x="66" y="276" fill="#edf2ed" font-family="ui-monospace,Menlo,monospace" font-size="22">λ = 2 n d cos θ</text>
+  <g fill="#71c7b6" fill-opacity=".12" stroke="#71c7b6" stroke-width="3" stroke-opacity=".7">
+    <polygon points="95,350 120,307 170,307 195,350 170,393 120,393"/>
+    <polygon points="215,350 240,307 290,307 315,350 290,393 240,393"/>
+    <polygon points="335,350 360,307 410,307 435,350 410,393 360,393"/>
+    <polygon points="455,350 480,307 530,307 555,350 530,393 480,393"/>
+    <polygon points="575,350 600,307 650,307 675,350 650,393 600,393"/>
+    <polygon points="695,350 720,307 770,307 795,350 770,393 720,393"/>
+    <polygon points="815,350 840,307 890,307 915,350 890,393 840,393"/>
+  </g>
+</g>
+
+<g transform="translate(1250 470)">
+  <rect width="1030" height="470" rx="34" fill="#121b20" stroke="#33434a" stroke-width="2"/>
+  <rect width="14" height="470" rx="7" fill="#8da6d9"/>
+  <text x="46" y="72" fill="#8da6d9" font-family="Inter,Segoe UI,sans-serif" font-size="32" font-weight="700">ECHOVAULT</text>
+  <text x="46" y="118" fill="#edf2ed" font-family="Inter,Segoe UI,sans-serif" font-size="30">Spatial acoustic privacy</text>
+  <text x="46" y="164" fill="#9fb0aa" font-family="Inter,Segoe UI,sans-serif" font-size="23">Failure: noise / privacy</text>
+  <text x="46" y="207" fill="#9fb0aa" font-family="Inter,Segoe UI,sans-serif" font-size="22">phononic gaps · graded resonators · attenuation</text>
+  <rect x="46" y="238" width="938" height="58" rx="16" fill="#0b1114" stroke="#33434a"/>
+  <text x="66" y="276" fill="#edf2ed" font-family="ui-monospace,Menlo,monospace" font-size="22">f_gap ≈ c / 2a</text>
+  <g fill="none" stroke="#8da6d9">
+    <path d="M60 360 C160 320 240 405 340 360 S520 315 620 360 S800 405 960 350" stroke-width="4" opacity=".75"/>
+    <path d="M60 405 C160 365 240 450 340 405 S520 360 620 405 S800 450 960 395" stroke-width="3" opacity=".45"/>
+    <circle cx="170" cy="360" r="22" stroke-width="5"/><circle cx="320" cy="360" r="28" stroke-width="5"/>
+    <circle cx="490" cy="360" r="34" stroke-width="5"/><circle cx="680" cy="360" r="40" stroke-width="5"/>
+    <circle cx="890" cy="360" r="48" stroke-width="5"/>
+  </g>
+</g>
+
+<g transform="translate(120 1010)">
+  <rect width="670" height="560" rx="34" fill="#121b20" stroke="#33434a" stroke-width="2"/>
+  <rect width="14" height="560" rx="7" fill="#b59cc8"/>
+  <text x="46" y="72" fill="#b59cc8" font-family="Inter,Segoe UI,sans-serif" font-size="32" font-weight="700">FAULT GARDEN</text>
+  <text x="46" y="118" fill="#edf2ed" font-family="Inter,Segoe UI,sans-serif" font-size="30">Evidence intelligence</text>
+  <text x="46" y="164" fill="#9fb0aa" font-family="Inter,Segoe UI,sans-serif" font-size="23">Failure: uncertainty</text>
+  <text x="46" y="207" fill="#9fb0aa" font-family="Inter,Segoe UI,sans-serif" font-size="22">vacancy · dislocation · dopant · grain boundary</text>
+  <rect x="46" y="238" width="578" height="58" rx="16" fill="#0b1114" stroke="#33434a"/>
+  <text x="66" y="276" fill="#edf2ed" font-family="ui-monospace,Menlo,monospace" font-size="22">P(h|e) ∝ P(e|h)P(h)</text>
+  <g fill="#b59cc8" fill-opacity=".15" stroke="#b59cc8" stroke-width="3">
+    <rect x="55" y="340" width="40" height="40" rx="6"/><rect x="125" y="340" width="40" height="40" rx="6"/><rect x="195" y="340" width="40" height="40" rx="6"/><rect x="265" y="340" width="40" height="40" rx="6"/><rect x="335" y="340" width="40" height="40" rx="6"/><rect x="405" y="340" width="40" height="40" rx="6"/><rect x="475" y="340" width="40" height="40" rx="6"/>
+    <rect x="55" y="410" width="40" height="40" rx="6"/><rect x="125" y="410" width="40" height="40" rx="6"/><rect x="195" y="410" width="40" height="40" rx="6"/><rect x="405" y="410" width="40" height="40" rx="6"/><rect x="475" y="410" width="40" height="40" rx="6"/>
+  </g>
+  <path d="M350 335 L370 405 L350 475 L385 530" fill="none" stroke="#b59cc8" stroke-width="8"/>
+</g>
+
+<g transform="translate(865 1010)">
+  <rect width="670" height="560" rx="34" fill="#121b20" stroke="#33434a" stroke-width="2"/>
+  <rect width="14" height="560" rx="7" fill="#b6c98f"/>
+  <text x="46" y="72" fill="#b6c98f" font-family="Inter,Segoe UI,sans-serif" font-size="32" font-weight="700">CAPILLARY COMMONS</text>
+  <text x="46" y="118" fill="#edf2ed" font-family="Inter,Segoe UI,sans-serif" font-size="30">Resilient routing</text>
+  <text x="46" y="164" fill="#9fb0aa" font-family="Inter,Segoe UI,sans-serif" font-size="23">Failure: scarcity / failure</text>
+  <text x="46" y="207" fill="#9fb0aa" font-family="Inter,Segoe UI,sans-serif" font-size="22">reticulate loops · porous transport · rerouting</text>
+  <rect x="46" y="238" width="578" height="58" rx="16" fill="#0b1114" stroke="#33434a"/>
+  <text x="66" y="276" fill="#edf2ed" font-family="ui-monospace,Menlo,monospace" font-size="22">Q = ΔP / R</text>
+  <g fill="none" stroke="#b6c98f" stroke-width="10" stroke-linecap="round" opacity=".78">
+    <path d="M55 420 L175 350 L295 410 L425 340 L575 410"/>
+    <path d="M55 420 L165 510 L305 450 L445 530 L575 430"/>
+    <path d="M175 350 L165 510"/><path d="M295 410 L305 450"/><path d="M425 340 L445 530"/>
+  </g>
+</g>
+
+<g transform="translate(1610 1010)">
+  <rect width="670" height="560" rx="34" fill="#121b20" stroke="#33434a" stroke-width="2"/>
+  <rect width="14" height="560" rx="7" fill="#d1b08a"/>
+  <text x="46" y="72" fill="#d1b08a" font-family="Inter,Segoe UI,sans-serif" font-size="32" font-weight="700">NACRE SENTINEL</text>
+  <text x="46" y="118" fill="#edf2ed" font-family="Inter,Segoe UI,sans-serif" font-size="30">Layered cyber resilience</text>
+  <text x="46" y="164" fill="#9fb0aa" font-family="Inter,Segoe UI,sans-serif" font-size="23">Failure: attack / recovery</text>
+  <text x="46" y="207" fill="#9fb0aa" font-family="Inter,Segoe UI,sans-serif" font-size="22">lamellae · sacrificial interfaces · bridging</text>
+  <rect x="46" y="238" width="578" height="58" rx="16" fill="#0b1114" stroke="#33434a"/>
+  <text x="66" y="276" fill="#edf2ed" font-family="ui-monospace,Menlo,monospace" font-size="22">riskₜ₊₁ = clip(A·riskₜ − healₜ)</text>
+  <g fill="#d1b08a" fill-opacity=".13" stroke="#d1b08a" stroke-width="2">
+    <rect x="55" y="340" width="105" height="34" rx="7"/><rect x="180" y="340" width="105" height="34" rx="7"/><rect x="305" y="340" width="105" height="34" rx="7"/><rect x="430" y="340" width="105" height="34" rx="7"/>
+    <rect x="115" y="398" width="105" height="34" rx="7"/><rect x="240" y="398" width="105" height="34" rx="7"/><rect x="365" y="398" width="105" height="34" rx="7"/><rect x="490" y="398" width="105" height="34" rx="7"/>
+    <rect x="55" y="456" width="105" height="34" rx="7"/><rect x="180" y="456" width="105" height="34" rx="7"/><rect x="305" y="456" width="105" height="34" rx="7"/><rect x="430" y="456" width="105" height="34" rx="7"/>
+  </g>
+  <path d="M65 350 L175 388 L150 440 L305 472 L275 525 L465 550" fill="none" stroke="#edf2ed" stroke-width="7" stroke-dasharray="13 10"/>
+</g>
+
+<text x="120" y="1650" fill="#9fb0aa" font-family="Inter,Segoe UI,sans-serif" font-size="24">Heuristic: biomimicry must change routing, filtering, resilience, inference, energy, or controlled failure — not merely appearance.</text>
+</svg>
