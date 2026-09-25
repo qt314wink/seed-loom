@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-09-16:claude-work",
+  "type": "Source",
+  "url": "https://www.reuters.com/business/media-telecom/anthropic-fold-claude-ai-features-into-one-interface-launches-document-tools-2026-09-16/",
+  "publisher": "Reuters",
+  "publishedAt": null,
+  "retrievedAt": "2026-09-16T23:42:56Z",
+  "sourceClass": "press",
+  "independenceKey": "reuters-claude-work",
+  "title": "Anthropic to fold Claude AI features into one interface, launches document tools"
+}
