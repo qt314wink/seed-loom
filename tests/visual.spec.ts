@@ -37,6 +37,17 @@ test('cactus rib tabs are keyboard navigable', async ({ page }) => {
   await expect(page.locator('html')).toHaveAttribute('data-stage', 'interpretation');
 });
 
+test('obligations compile into a gated build order', async ({ page }) => {
+  await page.locator('#orders').scrollIntoViewIfNeeded();
+  await expect(page.locator('#build-order-list > li')).toHaveCount(3);
+  await page.getByLabel('Meet the handoff').check();
+  await expect(page.locator('#order-readiness')).toHaveText('4 obligations');
+  await expect(page.locator('#build-order-list > li')).toHaveCount(4);
+  await expect(page.locator('#build-order-list > li').last()).toContainText('Protect access');
+  await page.getByRole('button', { name: 'Build the order' }).click();
+  await expect(page.locator('.build-order')).toBeFocused();
+});
+
 test('mobile shell preserves material and analyzer legibility', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'mobile');
   await expect(page).toHaveScreenshot('mobile-shell.png', {
