@@ -1,0 +1,43 @@
+{
+  "id": "obs:nightly:2026-09-17:regenerative-whole-system",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-09-17T23:55:00Z",
+  "claim": "A large working-farm regenerative-agriculture dataset strengthens the case for whole-system measurement while exposing causal and extrapolation limits.",
+  "verifiedFacts": [
+    "Ecdysis reported analysis spanning more than 2,000 North American farms and 39% higher soil carbon on the most regenerative farms than the most conventional farms.",
+    "Independent reporting notes the study is observational, farms self-selected management practices, and the national carbon projection is a modeled extrapolation.",
+    "Reported net profit was similar across the management gradient even where conventional farms in the sample had higher yields."
+  ],
+  "inference": [
+    "Regenerative advisory systems need coupled ecological and economic measures plus explicit causal-status and extrapolation boundaries.",
+    "Project Constellation's synthetic ecological specimen should distinguish measured association, modeled extrapolation, mechanism hypothesis, and policy claim."
+  ],
+  "significance": "High: provides a concrete whole-system evidence specimen aligned with regenerative consultancy goals while demonstrating why provenance and inference boundaries matter.",
+  "confidence": 0.94,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:nightly:2026-09-17:ecdysis",
+    "source:nightly:2026-09-17:ecdysis-independent"
+  ],
+  "actorRefs": [
+    "actor:ecdysis",
+    "actor:farmers"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/project-constellation",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "The reported peer-reviewed study accurately reflects the underlying published methods and dataset."
+  ],
+  "knownLimitations": [
+    "Observational cross-farm comparisons do not by themselves prove that regenerative practices caused the carbon differences.",
+    "The national carbon estimate depends on extrapolation, accumulation rate, saturation, and persistence assumptions."
+  ],
+  "counterevidenceRefs": [
+    "source:nightly:2026-09-17:ecdysis-independent"
+  ],
+  "approvalState": "candidate"
+}

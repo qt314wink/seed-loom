@@ -1,0 +1,37 @@
+{
+  "id": "obs:nightly:2026-09-17:microwave-optical-transduction",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-09-17T23:55:00Z",
+  "claim": "CCNY demonstrated microwave-to-optical transduction through magnon-exciton coupling in a layered magnetic semiconductor.",
+  "verifiedFacts": [
+    "CCNY announced September 17 a demonstrated method for transferring microwave signals onto reflected laser light using magnetic waves in CrSBr.",
+    "The work appears in Nature Materials with DOI 10.1038/s41563-026-02748-7.",
+    "The research was supported by DOE Basic Energy Sciences, DARPA, and the Gordon and Betty Moore Foundation."
+  ],
+  "inference": [
+    "The mechanism offers a rigorous reference specimen for the visual-materials lexicon: microwave drive, magnon dynamics, excitonic optical response, coupling, and readout should remain distinct controllable concepts.",
+    "This is research inspiration, not evidence that visual shaders reproduce quantum or biomedical effects."
+  ],
+  "significance": "Medium: useful mechanism-level material-language input and a strong example of cross-domain signal translation, but not a near-term product direction.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:nightly:2026-09-17:ccny-transduction"
+  ],
+  "actorRefs": [
+    "actor:ccny-researchers"
+  ],
+  "affectedRepositories": [
+    "qt314wink/shader-grammar"
+  ],
+  "assumptions": [
+    "Mechanism vocabulary can improve semantic precision in the shader/material corpus without implying physical equivalence."
+  ],
+  "knownLimitations": [
+    "The demonstrated platform targets quantum-network interfaces; creative-web transfer is metaphorical or parametric unless separately implemented and tested."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}
