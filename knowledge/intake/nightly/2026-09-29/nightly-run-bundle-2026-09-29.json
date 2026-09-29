@@ -1,0 +1,854 @@
+{
+  "run": {
+    "schemaVersion": "1.1.0",
+    "runId": "run:nightly:2026-09-29",
+    "type": "ResearchRun",
+    "ingestionMode": "delivered",
+    "retrievalWindow": {
+      "from": "2026-09-27T23:47:10Z",
+      "to": "2026-09-29T23:47:10Z"
+    },
+    "newObservations": [
+      "obs:nightly:2026-09-29:runtime-enforcement",
+      "obs:nightly:2026-09-29:always-on-agent-persona",
+      "obs:nightly:2026-09-29:enterprise-execution-consolidation",
+      "obs:nightly:2026-09-29:creative-quality-infrastructure",
+      "obs:nightly:2026-09-29:space-ai-infrastructure"
+    ],
+    "updatedObservations": [],
+    "candidatePatterns": [
+      "independent-runtime-enforcement",
+      "always-on-persona-as-authority-surface",
+      "creative-quality-as-infrastructure",
+      "legacy-system-execution-bridge"
+    ],
+    "newRelationships": [
+      "rel:nightly:2026-09-29:1",
+      "rel:nightly:2026-09-29:2",
+      "rel:nightly:2026-09-29:3",
+      "rel:nightly:2026-09-29:4",
+      "rel:nightly:2026-09-29:5"
+    ],
+    "contradictions": [
+      "More capable always-on agents increase the need for stronger independent controls.",
+      "Creative-quality infrastructure may improve consistency while narrowing human taste if criteria are overformalized."
+    ],
+    "opportunities": [
+      "Layered agent-boundary audit",
+      "Persona and permission review",
+      "Legacy-system workflow evidence map",
+      "Creative quality and brand-consistency evaluation"
+    ],
+    "proposedExperiments": [
+      "agent-boundary-cross-layer-v0",
+      "editable-creative-quality-acceptance-v0"
+    ],
+    "repositoryActions": [
+      {
+        "status": "proposed",
+        "executed": false
+      }
+    ],
+    "noChangeReceipts": [
+      "No merge, deploy, publish, spend, outreach, application, acceptance, archive or kill action.",
+      "No new repository justified by tonight's evidence."
+    ],
+    "collectionFailures": [
+      "Connected GitHub write actions were not exercised after preflight; no bundle commit or ingest occurred in this run.",
+      "OpenAI Dots and Taste Labs evidence is press-based or company-claim dependent.",
+      "Google Suncatcher remains an early feasibility experiment."
+    ]
+  },
+  "sources": [
+    {
+      "schemaVersion": "1.1.0",
+      "id": "source:nightly:2026-09-29:nvidia",
+      "type": "Source",
+      "url": "https://nvidianews.nvidia.com/news/open-agent-safety-platform",
+      "publisher": "NVIDIA",
+      "publishedAt": "2026-09-28T00:00:00Z",
+      "retrievedAt": "2026-09-29T23:47:10Z",
+      "sourceClass": "primary",
+      "independenceKey": "nvidia-open-agent-safety",
+      "contentHash": null,
+      "title": "NVIDIA Open Agent Safety Platform"
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "source:nightly:2026-09-29:openai-dots",
+      "type": "Source",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1002033/openai-dots-launch-muse-competitor",
+      "publisher": "The Verge",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "retrievedAt": "2026-09-29T23:47:10Z",
+      "sourceClass": "press",
+      "independenceKey": "verge-openai-dots",
+      "contentHash": null,
+      "title": "OpenAI launches Dots, its Muse competitor",
+      "upstreamReport": "OpenAI DevDay announcement"
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "source:nightly:2026-09-29:hcl-robotiq",
+      "type": "Source",
+      "url": "https://www.financialexpress.com/business/industry-hcltech-to-acquire-robotiq-ai-as-demand-for-enterprise-ai-automation-grows-4349557/",
+      "publisher": "Financial Express",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "retrievedAt": "2026-09-29T23:47:10Z",
+      "sourceClass": "financial",
+      "independenceKey": "financialexpress-hcl-robotiq",
+      "contentHash": null,
+      "title": "HCLTech to acquire Robotiq.ai as demand for enterprise AI automation grows"
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "source:nightly:2026-09-29:taste-labs",
+      "type": "Source",
+      "url": "https://www.businessinsider.com/taste-labs-ai-good-taste-creativity-slop-2026-9",
+      "publisher": "Business Insider",
+      "publishedAt": "2026-09-29T00:00:00Z",
+      "retrievedAt": "2026-09-29T23:47:10Z",
+      "sourceClass": "press",
+      "independenceKey": "businessinsider-taste-labs",
+      "contentHash": null,
+      "title": "A startup wants to replace human creativity. But first, it needs to eliminate slop.",
+      "upstreamReport": "Taste Labs company statements"
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "source:nightly:2026-09-29:suncatcher",
+      "type": "Source",
+      "url": "https://people.com/google-is-sending-an-ai-data-center-to-outer-space-12138621",
+      "publisher": "People",
+      "publishedAt": "2026-09-24T00:00:00Z",
+      "retrievedAt": "2026-09-29T23:47:10Z",
+      "sourceClass": "press",
+      "independenceKey": "people-google-suncatcher",
+      "contentHash": null,
+      "title": "Google is sending an AI data center to outer space",
+      "upstreamReport": "Google Project Suncatcher"
+    }
+  ],
+  "observations": [
+    {
+      "schemaVersion": "1.1.0",
+      "id": "obs:nightly:2026-09-29:runtime-enforcement",
+      "type": "Observation",
+      "capturedAt": "2026-09-29T23:47:10Z",
+      "claim": "NVIDIA launched an open agent-safety platform that places enforceable boundaries and out-of-band monitoring below the agent application layer.",
+      "verifiedFacts": [
+        "NVIDIA announced Open Agent Safety Platform on September 28.",
+        "OpenShell enforces runtime boundaries and traces actions; Sentry monitors externally and can quarantine agents.",
+        "NVIDIA says more than 100 organizations are participating."
+      ],
+      "inference": [
+        "Seed Loom should remain vendor-neutral and test evidence across model safeguards, harness permissions, runtime enforcement and independent monitoring.",
+        "Consultancy implication: agent-boundary audits can be sold as a layered control review rather than a generic governance workshop. Project disposition: Seed Loom CORE; agent-runtime-control-center PRODUCTIZE if bounded to evidence/attention/reconciliation."
+      ],
+      "significance": "Very high: runtime enforcement is being productized as a separate infrastructure layer.",
+      "confidence": 0.98,
+      "evidenceMaturity": "source-backed",
+      "evidenceClass": "model-capability",
+      "sourceRefs": [
+        "source:nightly:2026-09-29:nvidia"
+      ],
+      "actorRefs": [
+        "provider:nvidia",
+        "participants:agent-safety-ecosystem"
+      ],
+      "affectedRepositories": [
+        "qt314wink/seed-loom",
+        "MelodicBloom/agent-runtime-control-center"
+      ],
+      "assumptions": [
+        "The partner ecosystem will mature into deployable controls."
+      ],
+      "knownLimitations": [
+        "Vendor claims lack independent production benchmarks."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "obs:nightly:2026-09-29:always-on-agent-persona",
+      "type": "Observation",
+      "capturedAt": "2026-09-29T23:47:10Z",
+      "claim": "OpenAI launched Dots as always-on enterprise agents with customizable permissions, auto-review and specialist role pilots.",
+      "verifiedFacts": [
+        "OpenAI announced Dots at DevDay on September 29.",
+        "Dots can work across 4,000+ supported applications and can be used for software, content and scheduling tasks.",
+        "OpenAI added permission controls and auto-review; rollout follows recent safety concerns about unauthorized agent actions."
+      ],
+      "inference": [
+        "AI persona design is becoming an authority surface: identity, memory, permissions, review and continuity matter more than voice or tone alone.",
+        "Consultancy implication: persona reviews should examine delegated authority, context scope and recovery behavior. Project disposition: Seed Loom CORE; agent-runtime-control-center PRODUCTIZE."
+      ],
+      "significance": "Very high: persona and execution are being bundled into one continuously acting product surface.",
+      "confidence": 0.96,
+      "evidenceMaturity": "source-backed",
+      "evidenceClass": "provider-terms",
+      "sourceRefs": [
+        "source:nightly:2026-09-29:openai-dots"
+      ],
+      "actorRefs": [
+        "provider:openai",
+        "buyers:enterprise-users"
+      ],
+      "affectedRepositories": [
+        "qt314wink/seed-loom"
+      ],
+      "assumptions": [
+        "Dots rollout and permission controls will behave as described."
+      ],
+      "knownLimitations": [
+        "Press reporting is secondary and the product is newly launched; adoption and incident data are not available."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "obs:nightly:2026-09-29:enterprise-execution-consolidation",
+      "type": "Observation",
+      "capturedAt": "2026-09-29T23:47:10Z",
+      "claim": "HCLTech agreed to acquire Robotiq.ai to extend enterprise agent orchestration into systems without APIs.",
+      "verifiedFacts": [
+        "HCLTech announced an acquisition expected to close by November 2026.",
+        "Robotiq.ai provides RPA-style interaction with systems lacking APIs and offers audit logs and flexible deployment.",
+        "HCL positioned the deal as strengthening UnO Agentic from decision-making into execution."
+      ],
+      "inference": [
+        "Enterprise buyers may prefer service providers that can bridge modern agents to legacy systems rather than replace entire estates.",
+        "Consultancy implication: offer workflow boundary and legacy-surface evidence mapping; do not compete on generic RPA. Project disposition: Seed Loom CORE; Observation Ad Pipeline PRODUCTIZE for bounded workflow proof."
+      ],
+      "significance": "High: services firms are purchasing execution bridges, not only models.",
+      "confidence": 0.93,
+      "evidenceMaturity": "source-backed",
+      "evidenceClass": "funding",
+      "sourceRefs": [
+        "source:nightly:2026-09-29:hcl-robotiq"
+      ],
+      "actorRefs": [
+        "buyer:hcltech",
+        "builder:robotiq-ai",
+        "buyers:banking-insurance-telecom"
+      ],
+      "affectedRepositories": [
+        "qt314wink/seed-loom",
+        "qt314wink/observation-ad-pipeline"
+      ],
+      "assumptions": [
+        "The acquisition closes and capabilities integrate as announced."
+      ],
+      "knownLimitations": [
+        "Deal has not closed; source is financial press; customer outcomes remain unknown."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "obs:nightly:2026-09-29:creative-quality-infrastructure",
+      "type": "Observation",
+      "capturedAt": "2026-09-29T23:47:10Z",
+      "claim": "Taste Labs raised $18.5M and is building a human-curated taste layer plus Brand API to score and improve AI-generated creative outputs.",
+      "verifiedFacts": [
+        "Business Insider reports $18.5M raised and tens of millions in revenue.",
+        "Taste Labs uses a network of roughly 1,000 tastemakers and focuses initially on visual design.",
+        "Its Brand API is intended to preserve brand consistency across AI-generated materials."
+      ],
+      "inference": [
+        "Creative AI differentiation is moving from generation to evaluation, taste calibration and brand-consistency infrastructure.",
+        "Consultancy implication: Observation should measure accepted creative quality, not novelty; the service can encode explicit taste criteria and human review. Project disposition: Observation Ad Pipeline PRODUCTIZE; Visual Mechanism Compiler INCUBATE."
+      ],
+      "significance": "High: the market is paying for taste/evaluation layers as an antidote to slop.",
+      "confidence": 0.88,
+      "evidenceMaturity": "source-backed",
+      "evidenceClass": "opportunity",
+      "sourceRefs": [
+        "source:nightly:2026-09-29:taste-labs"
+      ],
+      "actorRefs": [
+        "builder:taste-labs",
+        "funders:venture-investors",
+        "participants:tastemakers"
+      ],
+      "affectedRepositories": [
+        "qt314wink/observation-ad-pipeline"
+      ],
+      "assumptions": [
+        "Funding and revenue figures are directionally accurate."
+      ],
+      "knownLimitations": [
+        "Secondary source; company claims are not independently audited; taste criteria remain partly proprietary."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "obs:nightly:2026-09-29:space-ai-infrastructure",
+      "type": "Observation",
+      "capturedAt": "2026-09-29T23:47:10Z",
+      "claim": "Google is testing whether AI compute can be hosted in orbit, using a prototype satellite and laser interconnect concepts.",
+      "verifiedFacts": [
+        "Google plans a prototype satellite launch on October 1 for Project Suncatcher.",
+        "The experiment uses Trillium TPUs and tests radiation, cooling and solar-power assumptions.",
+        "The long-term concept includes satellite constellations and laser-based interconnectivity."
+      ],
+      "inference": [
+        "This is a frontier infrastructure signal about energy, cooling and geography of compute, not a near-term product opportunity.",
+        "Consultancy implication: preserve as a surprise architecture reference for infrastructure scenarios; do not spin out a space-compute workstream. Project disposition: Seed Loom REFERENCE-ONLY; Omni-Loom REFERENCE-ONLY for physical-system provenance parallels."
+      ],
+      "significance": "Medium-high: it reframes AI infrastructure as an energy/physics problem with strong systems-engineering implications.",
+      "confidence": 0.91,
+      "evidenceMaturity": "source-backed",
+      "evidenceClass": "default",
+      "sourceRefs": [
+        "source:nightly:2026-09-29:suncatcher"
+      ],
+      "actorRefs": [
+        "provider:google",
+        "supplier:spacex"
+      ],
+      "affectedRepositories": [
+        "qt314wink/seed-loom",
+        "MelodicBloom/omni-loom"
+      ],
+      "assumptions": [
+        "The prototype mission occurs as reported and yields useful engineering data."
+      ],
+      "knownLimitations": [
+        "Early experiment; feasibility and economics remain highly uncertain."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    }
+  ],
+  "relationships": [
+    {
+      "schemaVersion": "1.1.0",
+      "id": "rel:nightly:2026-09-29:1",
+      "type": "Relationship",
+      "from": "obs:nightly:2026-09-29:runtime-enforcement",
+      "predicate": "SUPPORTED_BY",
+      "to": "source:nightly:2026-09-29:nvidia",
+      "confidence": 0.98,
+      "evidenceRefs": [
+        "source:nightly:2026-09-29:nvidia"
+      ]
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "rel:nightly:2026-09-29:2",
+      "type": "Relationship",
+      "from": "obs:nightly:2026-09-29:always-on-agent-persona",
+      "predicate": "SUPPORTED_BY",
+      "to": "source:nightly:2026-09-29:openai-dots",
+      "confidence": 0.96,
+      "evidenceRefs": [
+        "source:nightly:2026-09-29:openai-dots"
+      ]
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "rel:nightly:2026-09-29:3",
+      "type": "Relationship",
+      "from": "obs:nightly:2026-09-29:enterprise-execution-consolidation",
+      "predicate": "SUPPORTED_BY",
+      "to": "source:nightly:2026-09-29:hcl-robotiq",
+      "confidence": 0.93,
+      "evidenceRefs": [
+        "source:nightly:2026-09-29:hcl-robotiq"
+      ]
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "rel:nightly:2026-09-29:4",
+      "type": "Relationship",
+      "from": "obs:nightly:2026-09-29:creative-quality-infrastructure",
+      "predicate": "SUPPORTED_BY",
+      "to": "source:nightly:2026-09-29:taste-labs",
+      "confidence": 0.88,
+      "evidenceRefs": [
+        "source:nightly:2026-09-29:taste-labs"
+      ]
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "rel:nightly:2026-09-29:5",
+      "type": "Relationship",
+      "from": "obs:nightly:2026-09-29:space-ai-infrastructure",
+      "predicate": "SUPPORTED_BY",
+      "to": "source:nightly:2026-09-29:suncatcher",
+      "confidence": 0.91,
+      "evidenceRefs": [
+        "source:nightly:2026-09-29:suncatcher"
+      ]
+    }
+  ],
+  "stageAcks": [
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-09-29:collect",
+      "runId": "run:nightly:2026-09-29",
+      "stage": "collect",
+      "status": "passed",
+      "startedAt": "2026-09-29T23:47:10Z",
+      "completedAt": "2026-09-29T23:47:10Z",
+      "inputs": [
+        "run:nightly:2026-09-29"
+      ],
+      "outputs": [
+        "candidate:collect"
+      ],
+      "checks": [
+        {
+          "name": "candidate-boundary",
+          "result": "pass",
+          "detail": "No accepted knowledge or autonomous action."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only"
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-intelligence",
+        "method": "48-hour fresh-source research + live preflight",
+        "inputHashes": [
+          "sha256:research-window"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-09-29:vet",
+      "runId": "run:nightly:2026-09-29",
+      "stage": "vet",
+      "status": "passed",
+      "startedAt": "2026-09-29T23:47:10Z",
+      "completedAt": "2026-09-29T23:47:10Z",
+      "inputs": [
+        "stage:collect"
+      ],
+      "outputs": [
+        "candidate:vet"
+      ],
+      "checks": [
+        {
+          "name": "source-class",
+          "result": "pass",
+          "detail": "Primary/official/research/financial/press sources distinguished."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only"
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-intelligence",
+        "method": "deduplication and source-class review",
+        "inputHashes": [
+          "sha256:research-window"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-09-29:normalize",
+      "runId": "run:nightly:2026-09-29",
+      "stage": "normalize",
+      "status": "passed",
+      "startedAt": "2026-09-29T23:47:10Z",
+      "completedAt": "2026-09-29T23:47:10Z",
+      "inputs": [
+        "stage:vet"
+      ],
+      "outputs": [
+        "candidate:normalize"
+      ],
+      "checks": [
+        {
+          "name": "live-contract",
+          "result": "pass",
+          "detail": "Constructed against current main schemas."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Advisory fields kept outside closed Observation schema."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-intelligence",
+        "method": "live schema normalization",
+        "inputHashes": [
+          "sha256:research-window"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-09-29:observe",
+      "runId": "run:nightly:2026-09-29",
+      "stage": "observe",
+      "status": "passed",
+      "startedAt": "2026-09-29T23:47:10Z",
+      "completedAt": "2026-09-29T23:47:10Z",
+      "inputs": [
+        "stage:normalize"
+      ],
+      "outputs": [
+        "candidate:observe"
+      ],
+      "checks": [
+        {
+          "name": "candidate-boundary",
+          "result": "pass",
+          "detail": "No acceptance or autonomous action."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only"
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-intelligence",
+        "method": "bounded interpretation",
+        "inputHashes": [
+          "sha256:research-window"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-09-29:inquire",
+      "runId": "run:nightly:2026-09-29",
+      "stage": "inquire",
+      "status": "passed",
+      "startedAt": "2026-09-29T23:47:10Z",
+      "completedAt": "2026-09-29T23:47:10Z",
+      "inputs": [
+        "stage:prior"
+      ],
+      "outputs": [
+        "candidate:inquire"
+      ],
+      "checks": [
+        {
+          "name": "candidate-boundary",
+          "result": "pass",
+          "detail": "No acceptance or autonomous action."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only"
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-intelligence",
+        "method": "bounded interpretation",
+        "inputHashes": [
+          "sha256:research-window"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-09-29:interpret",
+      "runId": "run:nightly:2026-09-29",
+      "stage": "interpret",
+      "status": "passed",
+      "startedAt": "2026-09-29T23:47:10Z",
+      "completedAt": "2026-09-29T23:47:10Z",
+      "inputs": [
+        "stage:prior"
+      ],
+      "outputs": [
+        "candidate:interpret"
+      ],
+      "checks": [
+        {
+          "name": "candidate-boundary",
+          "result": "pass",
+          "detail": "No acceptance or autonomous action."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only"
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-intelligence",
+        "method": "bounded interpretation",
+        "inputHashes": [
+          "sha256:research-window"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-09-29:relate",
+      "runId": "run:nightly:2026-09-29",
+      "stage": "relate",
+      "status": "passed",
+      "startedAt": "2026-09-29T23:47:10Z",
+      "completedAt": "2026-09-29T23:47:10Z",
+      "inputs": [
+        "stage:prior"
+      ],
+      "outputs": [
+        "candidate:relate"
+      ],
+      "checks": [
+        {
+          "name": "candidate-boundary",
+          "result": "pass",
+          "detail": "No acceptance or autonomous action."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only"
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-intelligence",
+        "method": "bounded interpretation",
+        "inputHashes": [
+          "sha256:research-window"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-09-29:pattern",
+      "runId": "run:nightly:2026-09-29",
+      "stage": "pattern",
+      "status": "passed",
+      "startedAt": "2026-09-29T23:47:10Z",
+      "completedAt": "2026-09-29T23:47:10Z",
+      "inputs": [
+        "stage:prior"
+      ],
+      "outputs": [
+        "candidate:pattern"
+      ],
+      "checks": [
+        {
+          "name": "candidate-boundary",
+          "result": "pass",
+          "detail": "No acceptance or autonomous action."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only"
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-intelligence",
+        "method": "bounded interpretation",
+        "inputHashes": [
+          "sha256:research-window"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-09-29:opportunity",
+      "runId": "run:nightly:2026-09-29",
+      "stage": "opportunity",
+      "status": "passed",
+      "startedAt": "2026-09-29T23:47:10Z",
+      "completedAt": "2026-09-29T23:47:10Z",
+      "inputs": [
+        "stage:prior"
+      ],
+      "outputs": [
+        "candidate:opportunity"
+      ],
+      "checks": [
+        {
+          "name": "candidate-boundary",
+          "result": "pass",
+          "detail": "No acceptance or autonomous action."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only"
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-intelligence",
+        "method": "bounded interpretation",
+        "inputHashes": [
+          "sha256:research-window"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-09-29:strategy",
+      "runId": "run:nightly:2026-09-29",
+      "stage": "strategy",
+      "status": "deferred",
+      "startedAt": "2026-09-29T23:47:10Z",
+      "completedAt": "2026-09-29T23:47:10Z",
+      "inputs": [
+        "stage:opportunity"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "human-approval-gate",
+          "result": "pass",
+          "detail": "Strategy not promoted."
+        }
+      ],
+      "governance": {
+        "allowedTransition": false,
+        "approvalRequired": true,
+        "boundaryNotes": [
+          "Jennipher approval required."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-intelligence",
+        "method": "deferred by policy",
+        "inputHashes": [
+          "sha256:research-window"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-09-29:experiment",
+      "runId": "run:nightly:2026-09-29",
+      "stage": "experiment",
+      "status": "deferred",
+      "startedAt": "2026-09-29T23:47:10Z",
+      "completedAt": "2026-09-29T23:47:10Z",
+      "inputs": [
+        "stage:strategy"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "human-approval-gate",
+          "result": "pass",
+          "detail": "No experiment executed."
+        }
+      ],
+      "governance": {
+        "allowedTransition": false,
+        "approvalRequired": true,
+        "boundaryNotes": [
+          "Jennipher approval required."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-intelligence",
+        "method": "deferred by policy",
+        "inputHashes": [
+          "sha256:research-window"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-09-29:genesis",
+      "runId": "run:nightly:2026-09-29",
+      "stage": "genesis",
+      "status": "deferred",
+      "startedAt": "2026-09-29T23:47:10Z",
+      "completedAt": "2026-09-29T23:47:10Z",
+      "inputs": [
+        "stage:experiment"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "human-approval-gate",
+          "result": "pass",
+          "detail": "Genesis not advanced."
+        }
+      ],
+      "governance": {
+        "allowedTransition": false,
+        "approvalRequired": true,
+        "boundaryNotes": [
+          "Genesis remains human-controlled."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-intelligence",
+        "method": "deferred by policy",
+        "inputHashes": [
+          "sha256:research-window"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-09-29:publish",
+      "runId": "run:nightly:2026-09-29",
+      "stage": "publish",
+      "status": "deferred",
+      "startedAt": "2026-09-29T23:47:10Z",
+      "completedAt": "2026-09-29T23:47:10Z",
+      "inputs": [
+        "stage:genesis"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "human-approval-gate",
+          "result": "pass",
+          "detail": "No publication."
+        }
+      ],
+      "governance": {
+        "allowedTransition": false,
+        "approvalRequired": true,
+        "boundaryNotes": [
+          "Publication remains human-controlled."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-intelligence",
+        "method": "deferred by policy",
+        "inputHashes": [
+          "sha256:research-window"
+        ]
+      }
+    }
+  ],
+  "socraticAssessments": []
+}
