@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-29:opportunity",
+  "runId": "run:nightly:2026-09-29",
+  "stage": "opportunity",
+  "status": "passed",
+  "startedAt": "2026-09-29T23:47:10Z",
+  "completedAt": "2026-09-29T23:47:10Z",
+  "inputs": [
+    "stage:prior"
+  ],
+  "outputs": [
+    "candidate:opportunity"
+  ],
+  "checks": [
+    {
+      "name": "candidate-boundary",
+      "result": "pass",
+      "detail": "No acceptance or autonomous action."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Candidate-only"
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence",
+    "method": "bounded interpretation",
+    "inputHashes": [
+      "sha256:research-window"
+    ]
+  }
+}

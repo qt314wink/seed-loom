@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-29:runtime-enforcement",
+  "type": "Observation",
+  "capturedAt": "2026-09-29T23:47:10Z",
+  "claim": "NVIDIA launched an open agent-safety platform that places enforceable boundaries and out-of-band monitoring below the agent application layer.",
+  "verifiedFacts": [
+    "NVIDIA announced Open Agent Safety Platform on September 28.",
+    "OpenShell enforces runtime boundaries and traces actions; Sentry monitors externally and can quarantine agents.",
+    "NVIDIA says more than 100 organizations are participating."
+  ],
+  "inference": [
+    "Seed Loom should remain vendor-neutral and test evidence across model safeguards, harness permissions, runtime enforcement and independent monitoring.",
+    "Consultancy implication: agent-boundary audits can be sold as a layered control review rather than a generic governance workshop. Project disposition: Seed Loom CORE; agent-runtime-control-center PRODUCTIZE if bounded to evidence/attention/reconciliation."
+  ],
+  "significance": "Very high: runtime enforcement is being productized as a separate infrastructure layer.",
+  "confidence": 0.98,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:nightly:2026-09-29:nvidia"
+  ],
+  "actorRefs": [
+    "provider:nvidia",
+    "participants:agent-safety-ecosystem"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "The partner ecosystem will mature into deployable controls."
+  ],
+  "knownLimitations": [
+    "Vendor claims lack independent production benchmarks."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

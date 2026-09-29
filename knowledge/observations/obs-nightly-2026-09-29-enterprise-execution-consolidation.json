@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-29:enterprise-execution-consolidation",
+  "type": "Observation",
+  "capturedAt": "2026-09-29T23:47:10Z",
+  "claim": "HCLTech agreed to acquire Robotiq.ai to extend enterprise agent orchestration into systems without APIs.",
+  "verifiedFacts": [
+    "HCLTech announced an acquisition expected to close by November 2026.",
+    "Robotiq.ai provides RPA-style interaction with systems lacking APIs and offers audit logs and flexible deployment.",
+    "HCL positioned the deal as strengthening UnO Agentic from decision-making into execution."
+  ],
+  "inference": [
+    "Enterprise buyers may prefer service providers that can bridge modern agents to legacy systems rather than replace entire estates.",
+    "Consultancy implication: offer workflow boundary and legacy-surface evidence mapping; do not compete on generic RPA. Project disposition: Seed Loom CORE; Observation Ad Pipeline PRODUCTIZE for bounded workflow proof."
+  ],
+  "significance": "High: services firms are purchasing execution bridges, not only models.",
+  "confidence": 0.93,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:nightly:2026-09-29:hcl-robotiq"
+  ],
+  "actorRefs": [
+    "buyer:hcltech",
+    "builder:robotiq-ai",
+    "buyers:banking-insurance-telecom"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "qt314wink/observation-ad-pipeline"
+  ],
+  "assumptions": [
+    "The acquisition closes and capabilities integrate as announced."
+  ],
+  "knownLimitations": [
+    "Deal has not closed; source is financial press; customer outcomes remain unknown."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

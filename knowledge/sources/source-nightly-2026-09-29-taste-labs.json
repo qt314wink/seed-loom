@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-09-29:taste-labs",
+  "type": "Source",
+  "url": "https://www.businessinsider.com/taste-labs-ai-good-taste-creativity-slop-2026-9",
+  "publisher": "Business Insider",
+  "publishedAt": "2026-09-29T00:00:00Z",
+  "retrievedAt": "2026-09-29T23:47:10Z",
+  "sourceClass": "press",
+  "independenceKey": "businessinsider-taste-labs",
+  "contentHash": null,
+  "title": "A startup wants to replace human creativity. But first, it needs to eliminate slop.",
+  "upstreamReport": "Taste Labs company statements"
+}

@@ -1,0 +1,54 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-09-29T23:27:02.582Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-09-29",
+      "bundlePath": "knowledge/intake/nightly/2026-09-29/nightly-run-bundle-2026-09-29.json",
+      "bundleSha256": "1b19c2e937a9389639e1f06c4cdd047815318f11464d2f50dab956a3882b5fe2",
+      "normalizedDigest": "e8adbc0e5fa830bcf23e114ef8784d60b7b1db7df91476010ff578b8f3bb8df0",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-nightly-2026-09-29-nvidia.json",
+        "knowledge/sources/source-nightly-2026-09-29-openai-dots.json",
+        "knowledge/sources/source-nightly-2026-09-29-hcl-robotiq.json",
+        "knowledge/sources/source-nightly-2026-09-29-taste-labs.json",
+        "knowledge/sources/source-nightly-2026-09-29-suncatcher.json",
+        "knowledge/observations/obs-nightly-2026-09-29-runtime-enforcement.json",
+        "knowledge/observations/obs-nightly-2026-09-29-always-on-agent-persona.json",
+        "knowledge/observations/obs-nightly-2026-09-29-enterprise-execution-consolidation.json",
+        "knowledge/observations/obs-nightly-2026-09-29-creative-quality-infrastructure.json",
+        "knowledge/observations/obs-nightly-2026-09-29-space-ai-infrastructure.json",
+        "knowledge/relationships/rel-nightly-2026-09-29-1.json",
+        "knowledge/relationships/rel-nightly-2026-09-29-2.json",
+        "knowledge/relationships/rel-nightly-2026-09-29-3.json",
+        "knowledge/relationships/rel-nightly-2026-09-29-4.json",
+        "knowledge/relationships/rel-nightly-2026-09-29-5.json",
+        "knowledge/runs/run-nightly-2026-09-29.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-29-collect.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-29-vet.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-29-normalize.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-29-observe.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-29-inquire.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-29-interpret.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-29-relate.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-29-pattern.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-29-opportunity.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-29-strategy.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-29-experiment.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-29-genesis.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-29-publish.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-09-29-ingest.json",
+      "generatedRecordCount": 29
+    }
+  ]
+}

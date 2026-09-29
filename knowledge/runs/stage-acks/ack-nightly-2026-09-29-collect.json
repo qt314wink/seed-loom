@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-29:collect",
+  "runId": "run:nightly:2026-09-29",
+  "stage": "collect",
+  "status": "passed",
+  "startedAt": "2026-09-29T23:47:10Z",
+  "completedAt": "2026-09-29T23:47:10Z",
+  "inputs": [
+    "run:nightly:2026-09-29"
+  ],
+  "outputs": [
+    "candidate:collect"
+  ],
+  "checks": [
+    {
+      "name": "candidate-boundary",
+      "result": "pass",
+      "detail": "No accepted knowledge or autonomous action."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Candidate-only"
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence",
+    "method": "48-hour fresh-source research + live preflight",
+    "inputHashes": [
+      "sha256:research-window"
+    ]
+  }
+}

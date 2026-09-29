@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-09-29:suncatcher",
+  "type": "Source",
+  "url": "https://people.com/google-is-sending-an-ai-data-center-to-outer-space-12138621",
+  "publisher": "People",
+  "publishedAt": "2026-09-24T00:00:00Z",
+  "retrievedAt": "2026-09-29T23:47:10Z",
+  "sourceClass": "press",
+  "independenceKey": "people-google-suncatcher",
+  "contentHash": null,
+  "title": "Google is sending an AI data center to outer space",
+  "upstreamReport": "Google Project Suncatcher"
+}

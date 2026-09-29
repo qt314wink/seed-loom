@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-09-29:openai-dots",
+  "type": "Source",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/1002033/openai-dots-launch-muse-competitor",
+  "publisher": "The Verge",
+  "publishedAt": "2026-09-29T00:00:00Z",
+  "retrievedAt": "2026-09-29T23:47:10Z",
+  "sourceClass": "press",
+  "independenceKey": "verge-openai-dots",
+  "contentHash": null,
+  "title": "OpenAI launches Dots, its Muse competitor",
+  "upstreamReport": "OpenAI DevDay announcement"
+}

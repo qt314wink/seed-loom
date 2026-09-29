@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-09-29",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-09-27T23:47:10Z",
+    "to": "2026-09-29T23:47:10Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-09-29:runtime-enforcement",
+    "obs:nightly:2026-09-29:always-on-agent-persona",
+    "obs:nightly:2026-09-29:enterprise-execution-consolidation",
+    "obs:nightly:2026-09-29:creative-quality-infrastructure",
+    "obs:nightly:2026-09-29:space-ai-infrastructure"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "independent-runtime-enforcement",
+    "always-on-persona-as-authority-surface",
+    "creative-quality-as-infrastructure",
+    "legacy-system-execution-bridge"
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-09-29:1",
+    "rel:nightly:2026-09-29:2",
+    "rel:nightly:2026-09-29:3",
+    "rel:nightly:2026-09-29:4",
+    "rel:nightly:2026-09-29:5"
+  ],
+  "contradictions": [
+    "More capable always-on agents increase the need for stronger independent controls.",
+    "Creative-quality infrastructure may improve consistency while narrowing human taste if criteria are overformalized."
+  ],
+  "opportunities": [
+    "Layered agent-boundary audit",
+    "Persona and permission review",
+    "Legacy-system workflow evidence map",
+    "Creative quality and brand-consistency evaluation"
+  ],
+  "proposedExperiments": [
+    "agent-boundary-cross-layer-v0",
+    "editable-creative-quality-acceptance-v0"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false
+    }
+  ],
+  "noChangeReceipts": [
+    "No merge, deploy, publish, spend, outreach, application, acceptance, archive or kill action.",
+    "No new repository justified by tonight's evidence."
+  ],
+  "collectionFailures": [
+    "Connected GitHub write actions were not exercised after preflight; no bundle commit or ingest occurred in this run.",
+    "OpenAI Dots and Taste Labs evidence is press-based or company-claim dependent.",
+    "Google Suncatcher remains an early feasibility experiment."
+  ]
+}

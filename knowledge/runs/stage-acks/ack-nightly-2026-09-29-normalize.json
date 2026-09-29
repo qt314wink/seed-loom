@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-29:normalize",
+  "runId": "run:nightly:2026-09-29",
+  "stage": "normalize",
+  "status": "passed",
+  "startedAt": "2026-09-29T23:47:10Z",
+  "completedAt": "2026-09-29T23:47:10Z",
+  "inputs": [
+    "stage:vet"
+  ],
+  "outputs": [
+    "candidate:normalize"
+  ],
+  "checks": [
+    {
+      "name": "live-contract",
+      "result": "pass",
+      "detail": "Constructed against current main schemas."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Advisory fields kept outside closed Observation schema."
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence",
+    "method": "live schema normalization",
+    "inputHashes": [
+      "sha256:research-window"
+    ]
+  }
+}

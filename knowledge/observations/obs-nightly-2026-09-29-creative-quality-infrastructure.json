@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-29:creative-quality-infrastructure",
+  "type": "Observation",
+  "capturedAt": "2026-09-29T23:47:10Z",
+  "claim": "Taste Labs raised $18.5M and is building a human-curated taste layer plus Brand API to score and improve AI-generated creative outputs.",
+  "verifiedFacts": [
+    "Business Insider reports $18.5M raised and tens of millions in revenue.",
+    "Taste Labs uses a network of roughly 1,000 tastemakers and focuses initially on visual design.",
+    "Its Brand API is intended to preserve brand consistency across AI-generated materials."
+  ],
+  "inference": [
+    "Creative AI differentiation is moving from generation to evaluation, taste calibration and brand-consistency infrastructure.",
+    "Consultancy implication: Observation should measure accepted creative quality, not novelty; the service can encode explicit taste criteria and human review. Project disposition: Observation Ad Pipeline PRODUCTIZE; Visual Mechanism Compiler INCUBATE."
+  ],
+  "significance": "High: the market is paying for taste/evaluation layers as an antidote to slop.",
+  "confidence": 0.88,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "opportunity",
+  "sourceRefs": [
+    "source:nightly:2026-09-29:taste-labs"
+  ],
+  "actorRefs": [
+    "builder:taste-labs",
+    "funders:venture-investors",
+    "participants:tastemakers"
+  ],
+  "affectedRepositories": [
+    "qt314wink/observation-ad-pipeline"
+  ],
+  "assumptions": [
+    "Funding and revenue figures are directionally accurate."
+  ],
+  "knownLimitations": [
+    "Secondary source; company claims are not independently audited; taste criteria remain partly proprietary."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

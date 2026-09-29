@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-29:3",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-29:enterprise-execution-consolidation",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:nightly:2026-09-29:hcl-robotiq",
+  "confidence": 0.93,
+  "evidenceRefs": [
+    "source:nightly:2026-09-29:hcl-robotiq"
+  ]
+}

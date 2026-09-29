@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-29:space-ai-infrastructure",
+  "type": "Observation",
+  "capturedAt": "2026-09-29T23:47:10Z",
+  "claim": "Google is testing whether AI compute can be hosted in orbit, using a prototype satellite and laser interconnect concepts.",
+  "verifiedFacts": [
+    "Google plans a prototype satellite launch on October 1 for Project Suncatcher.",
+    "The experiment uses Trillium TPUs and tests radiation, cooling and solar-power assumptions.",
+    "The long-term concept includes satellite constellations and laser-based interconnectivity."
+  ],
+  "inference": [
+    "This is a frontier infrastructure signal about energy, cooling and geography of compute, not a near-term product opportunity.",
+    "Consultancy implication: preserve as a surprise architecture reference for infrastructure scenarios; do not spin out a space-compute workstream. Project disposition: Seed Loom REFERENCE-ONLY; Omni-Loom REFERENCE-ONLY for physical-system provenance parallels."
+  ],
+  "significance": "Medium-high: it reframes AI infrastructure as an energy/physics problem with strong systems-engineering implications.",
+  "confidence": 0.91,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "default",
+  "sourceRefs": [
+    "source:nightly:2026-09-29:suncatcher"
+  ],
+  "actorRefs": [
+    "provider:google",
+    "supplier:spacex"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/omni-loom"
+  ],
+  "assumptions": [
+    "The prototype mission occurs as reported and yields useful engineering data."
+  ],
+  "knownLimitations": [
+    "Early experiment; feasibility and economics remain highly uncertain."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

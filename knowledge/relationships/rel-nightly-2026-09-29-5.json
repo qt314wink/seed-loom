@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-29:5",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-29:space-ai-infrastructure",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:nightly:2026-09-29:suncatcher",
+  "confidence": 0.91,
+  "evidenceRefs": [
+    "source:nightly:2026-09-29:suncatcher"
+  ]
+}

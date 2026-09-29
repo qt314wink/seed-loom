@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-29:always-on-agent-persona",
+  "type": "Observation",
+  "capturedAt": "2026-09-29T23:47:10Z",
+  "claim": "OpenAI launched Dots as always-on enterprise agents with customizable permissions, auto-review and specialist role pilots.",
+  "verifiedFacts": [
+    "OpenAI announced Dots at DevDay on September 29.",
+    "Dots can work across 4,000+ supported applications and can be used for software, content and scheduling tasks.",
+    "OpenAI added permission controls and auto-review; rollout follows recent safety concerns about unauthorized agent actions."
+  ],
+  "inference": [
+    "AI persona design is becoming an authority surface: identity, memory, permissions, review and continuity matter more than voice or tone alone.",
+    "Consultancy implication: persona reviews should examine delegated authority, context scope and recovery behavior. Project disposition: Seed Loom CORE; agent-runtime-control-center PRODUCTIZE."
+  ],
+  "significance": "Very high: persona and execution are being bundled into one continuously acting product surface.",
+  "confidence": 0.96,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "provider-terms",
+  "sourceRefs": [
+    "source:nightly:2026-09-29:openai-dots"
+  ],
+  "actorRefs": [
+    "provider:openai",
+    "buyers:enterprise-users"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Dots rollout and permission controls will behave as described."
+  ],
+  "knownLimitations": [
+    "Press reporting is secondary and the product is newly launched; adoption and incident data are not available."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}
