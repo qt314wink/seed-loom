@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-16:agent-control-plane",
+  "type": "Observation",
+  "capturedAt": "2026-09-16T23:42:56Z",
+  "claim": "Agent governance is converging on explicit identity, delegated authority, policy enforcement, sandboxed execution, evaluation and durable action evidence.",
+  "verifiedFacts": [
+    "WSO2 announced GA of Agent Manager with agent identity, MCP governance, sandboxed runtime, observability and evaluation.",
+    "Traefik introduced a trust plane connecting delegated access, policy enforcement and protected records of allowed and refused traffic."
+  ],
+  "inference": [
+    "Independent suppliers shipping adjacent controls strengthens Seed Loom #55/#57's market relevance.",
+    "Seed Loom should remain the evidence spine while enforcement stays in a runtime or gateway."
+  ],
+  "significance": "Very high: validates the approved authority, stop-gate and evidence-receipt thesis.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:nightly:2026-09-16:wso2",
+    "source:nightly:2026-09-16:traefik"
+  ],
+  "actorRefs": [
+    "actor:wso2:provider",
+    "actor:traefik:provider",
+    "actor:enterprise-security:buyer"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "Buyers will value interoperable governance."
+  ],
+  "knownLimitations": [
+    "Supplier claims lack independent incident-reduction evidence."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

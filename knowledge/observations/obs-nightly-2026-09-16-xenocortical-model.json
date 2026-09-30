@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-16:xenocortical-model",
+  "type": "Observation",
+  "capturedAt": "2026-09-16T23:42:56Z",
+  "claim": "Stanford's xenocortical mouse model creates a more integrated substrate for studying human brain development while increasing model-boundary and ethics requirements.",
+  "verifiedFacts": [
+    "Stanford reports transplanting human cortical organoids into mice engineered to lack most cerebral cortex.",
+    "The tissue matured in vivo for studies of development, disease mechanisms and injury."
+  ],
+  "inference": [
+    "Experimental substrate should be first-class evidence metadata because it constrains what can be inferred about humans."
+  ],
+  "significance": "Medium strategically but high as a research-method signal about inference boundaries.",
+  "confidence": 0.98,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:nightly:2026-09-16:stanford"
+  ],
+  "actorRefs": [
+    "actor:stanford:researcher",
+    "actor:biomed-community:participant"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "The model will receive meaningful replication or adoption."
+  ],
+  "knownLimitations": [
+    "It does not recreate a human brain and carries animal-welfare and human-tissue ethics constraints."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-16:publish",
+  "runId": "run:nightly:2026-09-16",
+  "stage": "publish",
+  "status": "passed",
+  "startedAt": "2026-09-16T23:42:56Z",
+  "completedAt": "2026-09-16T23:42:56Z",
+  "inputs": [
+    "candidate bundle"
+  ],
+  "outputs": [
+    "bounded intake artifact"
+  ],
+  "checks": [
+    {
+      "name": "internal-only",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "intake artifact is not canonical acceptance or external publication"
+    ]
+  },
+  "provenance": {
+    "producer": "nightly intelligence automation",
+    "method": "bounded branch intake",
+    "inputHashes": [
+      "3ac28032bfeec0884353850f5d0cc9c3ca9a8ae5ee6913d943afb0788cf555fe"
+    ]
+  }
+}

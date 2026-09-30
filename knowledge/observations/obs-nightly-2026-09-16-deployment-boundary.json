@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-16:deployment-boundary",
+  "type": "Observation",
+  "capturedAt": "2026-09-16T23:42:56Z",
+  "claim": "Anthropic and AWS are explicitly treating AI deployment topology as a governance decision shaped by processor responsibility, residency, isolation, administration and procurement.",
+  "verifiedFacts": [
+    "Anthropic and AWS presented Claude Platform on AWS, Bedrock, Enterprise through AWS Marketplace and Desktop pointed at Bedrock as distinct paths.",
+    "They state that compliance, engineering environment, scale, residency and isolation affect path choice."
+  ],
+  "inference": [
+    "A consultancy should produce a deployment-authority decision record before recommending an AI stack.",
+    "Institutional-intelligence portability should be tested across provider and deployment boundaries."
+  ],
+  "significance": "High: deployment architecture is becoming governance and procurement rather than post-hoc infrastructure.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "provider-terms",
+  "sourceRefs": [
+    "source:nightly:2026-09-16:anthropic-aws"
+  ],
+  "actorRefs": [
+    "actor:anthropic:provider",
+    "actor:aws:supplier",
+    "actor:regulated-enterprise:buyer"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "Multi-path deployment remains common enough that portability has value."
+  ],
+  "knownLimitations": [
+    "Provider guidance lacks independent cost, reliability and compliance comparison."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

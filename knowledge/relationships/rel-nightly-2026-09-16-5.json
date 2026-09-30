@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-16:5",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-16:deployment-boundary",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:nightly:2026-09-16:anthropic-aws",
+  "confidence": 0.99,
+  "evidenceRefs": [
+    "source:nightly:2026-09-16:anthropic-aws"
+  ]
+}
