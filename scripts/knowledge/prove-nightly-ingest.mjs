@@ -7,164 +7,23 @@ import { spawnSync } from 'node:child_process';
 import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 
-const root = process.cwd();
-const inputArg = process.argv.slice(2).find((arg) => !arg.startsWith('--')) || 'knowledge/intake/nightly/2026-10-01/nightly-run-bundle-2026-10-01.json';
-const outputArg = process.argv.find((arg) => arg.startsWith('--out='))?.slice('--out='.length);
-const input = path.resolve(root, inputArg);
-
-const sha256 = (value) => crypto.createHash('sha256').update(value).digest('hex');
-const fileSha256 = (file) => sha256(fs.readFileSync(file));
-const canonicalize = (value) => {
-  if (Array.isArray(value)) return value.map(canonicalize);
-  if (!value || typeof value !== 'object') return value;
-  return Object.fromEntries(Object.entries(value)
-    .filter(([key]) => !['createdAt', 'generatedAt', 'updatedAt', 'sha256'].includes(key))
-    .sort(([a], [b]) => a.localeCompare(b))
-    .map(([key, item]) => [key, canonicalize(item)]));
-};
-const digest = (value) => sha256(JSON.stringify(canonicalize(value)));
-const safe = (id) => id.replace(/[:/]/g, '-');
-
-function jsonFiles(dir) {
-  if (!fs.existsSync(dir)) return [];
-  return fs.readdirSync(dir, { withFileTypes: true }).sort((a, b) => a.name.localeCompare(b.name)).flatMap((entry) => {
-    const file = path.join(dir, entry.name);
-    return entry.isDirectory() ? jsonFiles(file) : entry.name.endsWith('.json') ? [file] : [];
-  });
-}
-
-function proofTree(workspace) {
-  const paths = ['knowledge/sources','knowledge/observations','knowledge/relationships','knowledge/runs','knowledge/receipts','knowledge/projections','knowledge/candidates','knowledge/quarantine','tools/graph-workbench/data.json'];
-  const records = [];
-  for (const relative of paths) {
-    const absolute = path.join(workspace, relative);
-    const files = fs.existsSync(absolute) && fs.statSync(absolute).isDirectory() ? jsonFiles(absolute) : fs.existsSync(absolute) ? [absolute] : [];
-    for (const file of files) records.push({ path: path.relative(workspace, file).replaceAll('\\', '/'), record: canonicalize(JSON.parse(fs.readFileSync(file, 'utf8'))) });
-  }
-  return records.sort((a, b) => a.path.localeCompare(b.path));
-}
-
-function runNode(workspace, args, env = {}) {
-  const result = spawnSync(process.execPath, args, { cwd: workspace, encoding: 'utf8', env: { ...process.env, ...env } });
-  const output = `${result.stdout || ''}\n${result.stderr || ''}`.trim();
-  if (result.status !== 0) throw new Error(`${args.join(' ')} failed (${result.status})\n${output}`);
-  return output;
-}
-
-function targetFiles(bundle) {
-  return [
-    ...bundle.sources.map(({ id }) => `knowledge/sources/${safe(id)}.json`),
-    ...bundle.observations.map(({ id }) => `knowledge/observations/${safe(id)}.json`),
-    ...bundle.relationships.map(({ id }) => `knowledge/relationships/${safe(id)}.json`),
-    `knowledge/runs/${safe(bundle.run.runId)}.json`,
-    ...bundle.stageAcks.map(({ ackId }) => `knowledge/runs/stage-acks/${safe(ackId)}.json`),
-    ...(bundle.socraticAssessments ?? []).map(({ assessmentId }) => `knowledge/runs/socratic-assessments/${safe(assessmentId)}.json`),
-    `knowledge/receipts/${safe(bundle.run.runId)}-ingest.json`
-  ];
-}
-
-function copyWorkspace(target, bundle) {
-  fs.cpSync(root, target, { recursive: true, filter: (source) => !source.includes(`${path.sep}.git${path.sep}`) && !source.endsWith(`${path.sep}.git`) && !source.includes(`${path.sep}node_modules${path.sep}`) && !source.endsWith(`${path.sep}node_modules`) });
-  fs.symlinkSync(path.join(root, 'node_modules'), path.join(target, 'node_modules'), 'dir');
-  for (const relative of targetFiles(bundle)) {
-    const file = path.join(target, relative);
-    if (fs.existsSync(file)) fs.rmSync(file, { recursive: true, force: true });
-  }
-}
-
-function validateBundle(bundle) {
-  if (bundle.run?.type !== 'ResearchRun' || bundle.run?.ingestionMode !== 'delivered') throw new Error('run contract failed');
-  if (bundle.observations?.length !== 5) throw new Error('proof specimen must contain exactly five observations');
-  if (bundle.observations.some(({ approvalState }) => approvalState !== 'candidate')) throw new Error('candidate-only boundary failed');
-  if (bundle.run.repositoryActions?.some(({ status, executed }) => status !== 'proposed' || executed !== false)) throw new Error('repository action boundary failed');
-  const genesis = bundle.stageAcks?.find(({ stage }) => stage === 'genesis');
-  if (!genesis || genesis.status !== 'deferred' || genesis.governance?.allowedTransition !== false) throw new Error('Genesis boundary failed');
-
-  const ajv = new Ajv2020({ allErrors: true, strict: true });
-  addFormats(ajv);
-  const schema = JSON.parse(fs.readFileSync(path.join(root, 'knowledge/schema/socratic-assessment.schema.json'), 'utf8'));
-  const validate = ajv.compile(schema);
-  for (const assessment of bundle.socraticAssessments ?? []) {
-    if (!validate(assessment)) throw new Error(`Socratic schema failure: ${JSON.stringify(validate.errors)}`);
-    if (!bundle.observations.some(({ id }) => id === assessment.observationId)) throw new Error(`unknown Socratic observation: ${assessment.observationId}`);
-  }
-}
-
-function proveRun(workspace, bundle) {
-  const relativeBundle = path.relative(workspace, input);
-  const now = bundle.run.retrievalWindow.to;
-  runNode(workspace, ['scripts/knowledge/ingest-nightly-run.mjs', relativeBundle], { KNOWLEDGE_NOW: now });
-  runNode(workspace, ['scripts/knowledge/run-controls.mjs'], { KNOWLEDGE_NOW: now });
-  runNode(workspace, ['scripts/knowledge/build-workbench.mjs'], { KNOWLEDGE_NOW: now });
-
-  const expected = new Set(bundle.observations.map(({ id }) => id));
-  const observed = jsonFiles(path.join(workspace, 'knowledge/observations')).map((file) => JSON.parse(fs.readFileSync(file, 'utf8'))).filter(({ id }) => expected.has(id));
-  if (observed.length !== 5 || observed.some(({ approvalState }) => approvalState !== 'candidate')) throw new Error('candidate-only proof failed');
-  const genesisAck = bundle.stageAcks.find(({ stage }) => stage === 'genesis');
-  const genesisPath = path.join(workspace, 'knowledge/runs/stage-acks', `${safe(genesisAck.ackId)}.json`);
-  const persistedGenesis = JSON.parse(fs.readFileSync(genesisPath, 'utf8'));
-  if (persistedGenesis.status !== 'deferred' || persistedGenesis.governance?.allowedTransition !== false) throw new Error('deferred Genesis proof failed');
-  const workbench = path.join(workspace, 'tools/graph-workbench/data.json');
-  if (!fs.existsSync(workbench)) throw new Error('Graph Workbench projection missing');
-  const workbenchText = fs.readFileSync(workbench, 'utf8');
-  for (const id of expected) if (!workbenchText.includes(id)) throw new Error(`Graph Workbench missing ${id}`);
-  return digest(proofTree(workspace));
-}
-
-function proveMalformedAtomicity(workspace, bundle) {
-  const before = digest(proofTree(workspace));
-  fs.writeFileSync(path.join(workspace, 'invalid-bundle.json'), JSON.stringify({ ...bundle, observations: [] }));
-  const result = spawnSync(process.execPath, ['scripts/knowledge/ingest-nightly-run.mjs', 'invalid-bundle.json'], { cwd: workspace, encoding: 'utf8' });
-  if (result.status === 0) throw new Error('malformed bundle unexpectedly succeeded');
-  if (before !== digest(proofTree(workspace))) throw new Error('malformed bundle changed canonical state');
-}
-
-function proveLateReceiptRollback(workspace, bundle) {
-  const before = digest(proofTree(workspace));
-  const receipt = path.join(workspace, 'knowledge/receipts', `${safe(bundle.run.runId)}-ingest.json`);
-  fs.mkdirSync(path.dirname(receipt), { recursive: true });
-  fs.writeFileSync(receipt, '{"sentinel":"pre-existing-late-write-failure"}\n');
-  const result = spawnSync(process.execPath, ['scripts/knowledge/ingest-nightly-run.mjs', path.relative(workspace, input)], { cwd: workspace, encoding: 'utf8', env: { ...process.env, KNOWLEDGE_NOW: bundle.run.retrievalWindow.to } });
-  if (result.status === 0) throw new Error('late receipt collision unexpectedly succeeded');
-  if (fs.readFileSync(receipt, 'utf8') !== '{"sentinel":"pre-existing-late-write-failure"}\n') throw new Error('pre-existing receipt was mutated');
-  if (before !== digest(proofTree(workspace))) throw new Error('late receipt failure left partial canonical state');
-}
-
-const bundle = JSON.parse(fs.readFileSync(input, 'utf8'));
-validateBundle(bundle);
-const bundleSha256 = fileSha256(input);
-for (const relative of targetFiles(bundle)) if (fs.existsSync(path.join(root, relative))) throw new Error(`proof specimen already exists on baseline: ${relative}`);
-
-const workspaces = [fs.mkdtempSync(path.join(os.tmpdir(), 'seed-loom-issue24-a-')), fs.mkdtempSync(path.join(os.tmpdir(), 'seed-loom-issue24-b-'))];
-let digests;
-try {
-  workspaces.forEach((workspace) => copyWorkspace(workspace, bundle));
-  digests = workspaces.map((workspace) => proveRun(workspace, bundle));
-  if (digests[0] !== digests[1]) throw new Error(`isolated proof digests differ: ${digests[0]} vs ${digests[1]}`);
-
-  const malformed = fs.mkdtempSync(path.join(os.tmpdir(), 'seed-loom-issue24-malformed-'));
-  try { copyWorkspace(malformed, bundle); proveMalformedAtomicity(malformed, bundle); } finally { fs.rmSync(malformed, { recursive: true, force: true }); }
-
-  const late = fs.mkdtempSync(path.join(os.tmpdir(), 'seed-loom-issue24-late-'));
-  try { copyWorkspace(late, bundle); proveLateReceiptRollback(late, bundle); } finally { fs.rmSync(late, { recursive: true, force: true }); }
-} finally { workspaces.forEach((workspace) => fs.rmSync(workspace, { recursive: true, force: true })); }
-
-const report = {
-  status: 'passed',
-  issue: 24,
-  runId: bundle.run.runId,
-  bundle: path.relative(root, input).replaceAll('\\', '/'),
-  bundleSha256,
-  observations: 5,
-  candidateOnly: true,
-  genesis: 'deferred',
-  repositoryActionsExecuted: false,
-  socraticAssessmentsValidated: (bundle.socraticAssessments ?? []).length,
-  isolatedRunDigests: digests,
-  deterministic: true,
-  graphWorkbench: 'all-five-observations-present',
-  malformedBundleAtomicity: 'passed',
-  lateReceiptRollback: 'passed'
-};
-if (outputArg) { const out = path.resolve(root, outputArg); fs.mkdirSync(path.dirname(out), { recursive: true }); fs.writeFileSync(out, `${JSON.stringify(report, null, 2)}\n`); }
-console.log(JSON.stringify(report, null, 2));
+const root=process.cwd();
+const inputArg=process.argv.slice(2).find(a=>!a.startsWith('--'))||'knowledge/intake/nightly/2026-10-01/nightly-run-bundle-2026-10-01.json';
+const outputArg=process.argv.find(a=>a.startsWith('--out='))?.slice(6);
+const input=path.resolve(root,inputArg), safe=id=>id.replace(/[:/]/g,'-');
+const hash=v=>crypto.createHash('sha256').update(v).digest('hex');
+const fileHash=f=>hash(fs.readFileSync(f));
+const norm=v=>Array.isArray(v)?v.map(norm):(!v||typeof v!=='object'?v:Object.fromEntries(Object.entries(v).filter(([k])=>!['createdAt','generatedAt','updatedAt','sha256'].includes(k)).sort(([a],[b])=>a.localeCompare(b)).map(([k,x])=>[k,norm(x)])));
+const digest=v=>hash(JSON.stringify(norm(v)));
+function jsonFiles(dir){if(!fs.existsSync(dir))return[];return fs.readdirSync(dir,{withFileTypes:true}).sort((a,b)=>a.name.localeCompare(b.name)).flatMap(e=>{const f=path.join(dir,e.name);return e.isDirectory()?jsonFiles(f):e.name.endsWith('.json')?[f]:[];});}
+function proofTree(ws){const roots=['knowledge/sources','knowledge/observations','knowledge/relationships','knowledge/runs','knowledge/receipts','knowledge/projections','knowledge/candidates','knowledge/quarantine','tools/graph-workbench/data.json'];const out=[];for(const r of roots){const a=path.join(ws,r);const fsx=fs.existsSync(a)&&fs.statSync(a).isDirectory()?jsonFiles(a):fs.existsSync(a)?[a]:[];for(const f of fsx)out.push({path:path.relative(ws,f).replaceAll('\\','/'),record:norm(JSON.parse(fs.readFileSync(f,'utf8')))});}return out.sort((a,b)=>a.path.localeCompare(b.path));}
+function run(ws,args,env={}){const r=spawnSync(process.execPath,args,{cwd:ws,encoding:'utf8',env:{...process.env,...env}});if(r.status!==0)throw new Error(`${args.join(' ')} failed (${r.status})\n${r.stdout||''}\n${r.stderr||''}`);return r.stdout;}
+function targets(b){return[...b.sources.map(x=>`knowledge/sources/${safe(x.id)}.json`),...b.observations.map(x=>`knowledge/observations/${safe(x.id)}.json`),...b.relationships.map(x=>`knowledge/relationships/${safe(x.id)}.json`),`knowledge/runs/${safe(b.run.runId)}.json`,...b.stageAcks.map(x=>`knowledge/runs/stage-acks/${safe(x.ackId)}.json`),...(b.socraticAssessments||[]).map(x=>`knowledge/runs/socratic-assessments/${safe(x.assessmentId)}.json`),`knowledge/receipts/${safe(b.run.runId)}-ingest.json`];}
+function copy(ws,b){fs.cpSync(root,ws,{recursive:true,filter:s=>!s.includes(`${path.sep}.git${path.sep}`)&&!s.endsWith(`${path.sep}.git`)&&!s.includes(`${path.sep}node_modules${path.sep}`)&&!s.endsWith(`${path.sep}node_modules`)});fs.symlinkSync(path.join(root,'node_modules'),path.join(ws,'node_modules'),'dir');for(const r of targets(b)){const f=path.join(ws,r);if(fs.existsSync(f))fs.rmSync(f,{recursive:true,force:true});}}
+function validate(b){if(b.run?.type!=='ResearchRun'||b.run?.ingestionMode!=='delivered')throw Error('run contract failed');if(b.observations?.length!==5)throw Error('proof specimen must contain exactly five observations');if(b.observations.some(x=>x.approvalState!=='candidate'))throw Error('candidate-only boundary failed');if((b.run.repositoryActions||[]).some(x=>x.status!=='proposed'||x.executed!==false))throw Error('repository action boundary failed');const g=b.stageAcks?.find(x=>x.stage==='genesis');if(!g||g.status!=='deferred'||g.governance?.allowedTransition!==false)throw Error('Genesis boundary failed');const ajv=new Ajv2020({allErrors:true,strict:true});addFormats(ajv);const v=ajv.compile(JSON.parse(fs.readFileSync(path.join(root,'knowledge/schema/socratic-assessment.schema.json'),'utf8')));for(const a of b.socraticAssessments||[]){if(!v(a))throw Error(`Socratic schema failure: ${JSON.stringify(v.errors)}`);if(!b.observations.some(o=>o.id===a.observationId))throw Error(`unknown observation: ${a.observationId}`);}}
+function validRun(ws,b){const rel=path.relative(ws,input),now=b.run.retrievalWindow.to;run(ws,['scripts/knowledge/ingest-nightly-run.mjs',rel],{KNOWLEDGE_NOW:now});run(ws,['scripts/knowledge/run-controls.mjs'],{KNOWLEDGE_NOW:now});run(ws,['scripts/knowledge/build-workbench.mjs'],{KNOWLEDGE_NOW:now});const ids=new Set(b.observations.map(x=>x.id));const obs=jsonFiles(path.join(ws,'knowledge/observations')).map(f=>JSON.parse(fs.readFileSync(f,'utf8'))).filter(x=>ids.has(x.id));if(obs.length!==5||obs.some(x=>x.approvalState!=='candidate'))throw Error('candidate-only proof failed');const g=b.stageAcks.find(x=>x.stage==='genesis'),gp=path.join(ws,'knowledge/runs/stage-acks',`${safe(g.ackId)}.json`),gr=JSON.parse(fs.readFileSync(gp,'utf8'));if(gr.status!=='deferred'||gr.governance?.allowedTransition!==false)throw Error('deferred Genesis proof failed');const wb=path.join(ws,'tools/graph-workbench/data.json');if(!fs.existsSync(wb))throw Error('Graph Workbench projection missing');const text=fs.readFileSync(wb,'utf8');for(const id of ids)if(!text.includes(id))throw Error(`Graph Workbench missing ${id}`);return digest(proofTree(ws));}
+function malformed(ws,b){const before=digest(proofTree(ws));fs.writeFileSync(path.join(ws,'invalid-bundle.json'),JSON.stringify({...b,observations:[]}));const r=spawnSync(process.execPath,['scripts/knowledge/ingest-nightly-run.mjs','invalid-bundle.json'],{cwd:ws,encoding:'utf8'});if(r.status===0)throw Error('malformed bundle unexpectedly succeeded');if(before!==digest(proofTree(ws)))throw Error('malformed bundle changed canonical state');}
+function late(ws,b){const receipt=path.join(ws,'knowledge/receipts',`${safe(b.run.runId)}-ingest.json`);fs.mkdirSync(path.dirname(receipt),{recursive:true});fs.writeFileSync(receipt,'{"sentinel":"pre-existing"}\n');const before=digest(proofTree(ws));const r=spawnSync(process.execPath,['scripts/knowledge/ingest-nightly-run.mjs',path.relative(ws,input)],{cwd:ws,encoding:'utf8',env:{...process.env,KNOWLEDGE_NOW:b.run.retrievalWindow.to}});if(r.status===0)throw Error('late receipt collision unexpectedly succeeded');if(fs.readFileSync(receipt,'utf8')!=='{"sentinel":"pre-existing"}\n')throw Error('pre-existing receipt mutated');if(before!==digest(proofTree(ws)))throw Error('late receipt failure left partial canonical state');for(const rpath of targets(b)){if(rpath.endsWith('-ingest.json'))continue;if(fs.existsSync(path.join(ws,rpath)))throw Error(`partial record remained: ${rpath}`);}}
+const b=JSON.parse(fs.readFileSync(input,'utf8'));validate(b);const bundleSha256=fileHash(input);for(const r of targets(b))if(fs.existsSync(path.join(root,r)))throw Error(`proof specimen already exists on baseline: ${r}`);
+const ws=[fs.mkdtempSync(path.join(os.tmpdir(),'seed-loom-24-a-')),fs.mkdtempSync(path.join(os.tmpdir(),'seed-loom-24-b-'))];let ds;try{ws.forEach(w=>copy(w,b));ds=ws.map(w=>validRun(w,b));if(ds[0]!==ds[1])throw Error(`isolated proof digests differ: ${ds[0]} vs ${ds[1]}`);const m=fs.mkdtempSync(path.join(os.tmpdir(),'seed-loom-24-m-'));try{copy(m,b);malformed(m,b);}finally{fs.rmSync(m,{recursive:true,force:true});}const l=fs.mkdtempSync(path.join(os.tmpdir(),'seed-loom-24-l-'));try{copy(l,b);late(l,b);}finally{fs.rmSync(l,{recursive:true,force:true});}}finally{ws.forEach(w=>fs.rmSync(w,{recursive:true,force:true}));}
+const report={status:'passed',issue:24,runId:b.run.runId,bundle:path.relative(root,input).replaceAll('\\','/'),bundleSha256,observations:5,candidateOnly:true,genesis:'deferred',repositoryActionsExecuted:false,socraticAssessmentsValidated:(b.socraticAssessments||[]).length,isolatedRunDigests:ds,deterministic:true,graphWorkbench:'all-five-observations-present',malformedBundleAtomicity:'passed',lateReceiptRollback:'passed'};if(outputArg){const out=path.resolve(root,outputArg);fs.mkdirSync(path.dirname(out),{recursive:true});fs.writeFileSync(out,`${JSON.stringify(report,null,2)}\n`);}console.log(JSON.stringify(report,null,2));
