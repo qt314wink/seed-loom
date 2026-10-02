@@ -1,0 +1,49 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-10-02T23:08:40.416Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-10-02",
+      "bundlePath": "knowledge/intake/nightly/2026-10-02/nightly-run-bundle-2026-10-02.json",
+      "bundleSha256": "3ccf58b2fa471678c3ab778cbe254b083d6c914dbf8963744d8c37a62a90523f",
+      "normalizedDigest": "10eb64e49e47b8ddc5ae296875cae0ca495bc90f6d747259c091f51f876c37ba",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-openai-model-distillation-2026-09-30.json",
+        "knowledge/sources/source-reuters-ftc-ai-probe-2026-09-30.json",
+        "knowledge/sources/source-flow-series-b-2026-09-30.json",
+        "knowledge/sources/source-elevenlabs-tender-2026-09-30.json",
+        "knowledge/sources/source-vercel-node20-deprecation-2026-10-01.json",
+        "knowledge/observations/obs-ai-distillation-boundary-2026-10-02.json",
+        "knowledge/observations/obs-ftc-agent-consumer-risk-2026-10-02.json",
+        "knowledge/observations/obs-flow-agentic-hardware-systems-2026-10-02.json",
+        "knowledge/observations/obs-elevenlabs-conversational-agent-demand-2026-10-02.json",
+        "knowledge/observations/obs-vercel-node20-deprecation-2026-10-02.json",
+        "knowledge/runs/run-nightly-2026-10-02.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-02-collect.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-02-vet.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-02-normalize.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-02-observe.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-02-inquire.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-02-interpret.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-02-relate.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-02-pattern.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-02-opportunity.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-02-strategy.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-02-experiment.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-02-genesis.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-02-publish.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-10-02-ingest.json",
+      "generatedRecordCount": 24
+    }
+  ]
+}

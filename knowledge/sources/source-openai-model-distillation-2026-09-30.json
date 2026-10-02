@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:openai-model-distillation-2026-09-30",
+  "type": "Source",
+  "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/",
+  "publisher": "OpenAI",
+  "publishedAt": "2026-09-30T12:00:00Z",
+  "retrievedAt": "2026-10-02T23:04:47Z",
+  "sourceClass": "official",
+  "independenceKey": "openai.com:source:openai-model-distillation-2026-09-30",
+  "contentHash": null,
+  "title": "OpenAI says it identified and disrupted coordinated adversarial model-distillation activity beginning in early July; the campaign manipulated model interactions to reproduce protected reasoning without database compromise.",
+  "lead": "OpenAI says it identified and disrupted coordinated adversarial model-distillation activity beginning in early July; the campaign manipulated model interactions to reproduce protected reasoning without database compromise.",
+  "analystNote": null,
+  "syndicatedFrom": null,
+  "doi": null,
+  "upstreamReport": null,
+  "policyDocument": null,
+  "upstream": {},
+  "cites": [],
+  "citedBy": [],
+  "notes": null
+}
