@@ -1,0 +1,12 @@
+{
+  "id": "source:nightly:2026-09-17:openai-misalignment",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://openai.com/index/model-misalignment-reporting-framework/",
+  "publisher": "OpenAI",
+  "publishedAt": "2026-09-16T00:00:00Z",
+  "retrievedAt": "2026-09-17T23:55:00Z",
+  "sourceClass": "primary",
+  "independenceKey": "openai:model-misalignment-framework:2026-09-16",
+  "title": "Our framework for reporting model misalignment"
+}

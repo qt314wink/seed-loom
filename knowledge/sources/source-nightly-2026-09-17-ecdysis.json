@@ -1,0 +1,12 @@
+{
+  "id": "source:nightly:2026-09-17:ecdysis",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://www.globenewswire.com/news-release/2026/09/17/3363925/0/en/regenerative-farming-outpaces-tech-based-carbon-capture-solutions-in-first-large-scale-systemic-study.html",
+  "publisher": "Ecdysis Foundation via GlobeNewswire",
+  "publishedAt": "2026-09-17T12:00:00Z",
+  "retrievedAt": "2026-09-17T23:55:00Z",
+  "sourceClass": "primary",
+  "independenceKey": "ecdysis:1000-farms:2026-09-17",
+  "title": "Regenerative Farming Outpaces Tech-Based Carbon Capture Solutions in First Large-Scale Systemic Study"
+}
