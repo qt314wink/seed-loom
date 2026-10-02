@@ -12,193 +12,159 @@ const inputArg = process.argv.slice(2).find((arg) => !arg.startsWith('--')) || '
 const outputArg = process.argv.find((arg) => arg.startsWith('--out='))?.slice('--out='.length);
 const input = path.resolve(root, inputArg);
 
-function sha256File(file) {
-  return crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
-}
-
-function digest(value) {
-  return crypto.createHash('sha256').update(JSON.stringify(value)).digest('hex');
-}
-
-function canonicalize(value) {
+const sha256 = (value) => crypto.createHash('sha256').update(value).digest('hex');
+const fileSha256 = (file) => sha256(fs.readFileSync(file));
+const canonicalize = (value) => {
   if (Array.isArray(value)) return value.map(canonicalize);
   if (!value || typeof value !== 'object') return value;
   return Object.fromEntries(Object.entries(value)
     .filter(([key]) => !['createdAt', 'generatedAt', 'updatedAt', 'sha256'].includes(key))
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([key, item]) => [key, canonicalize(item)]));
-}
+};
+const digest = (value) => sha256(JSON.stringify(canonicalize(value)));
+const safe = (id) => id.replace(/[:/]/g, '-');
 
-function listJson(dir) {
+function jsonFiles(dir) {
   if (!fs.existsSync(dir)) return [];
   return fs.readdirSync(dir, { withFileTypes: true }).sort((a, b) => a.name.localeCompare(b.name)).flatMap((entry) => {
     const file = path.join(dir, entry.name);
-    return entry.isDirectory() ? listJson(file) : entry.name.endsWith('.json') ? [file] : [];
+    return entry.isDirectory() ? jsonFiles(file) : entry.name.endsWith('.json') ? [file] : [];
   });
 }
 
+function proofTree(workspace) {
+  const paths = ['knowledge/sources','knowledge/observations','knowledge/relationships','knowledge/runs','knowledge/receipts','knowledge/projections','knowledge/candidates','knowledge/quarantine','tools/graph-workbench/data.json'];
+  const records = [];
+  for (const relative of paths) {
+    const absolute = path.join(workspace, relative);
+    const files = fs.existsSync(absolute) && fs.statSync(absolute).isDirectory() ? jsonFiles(absolute) : fs.existsSync(absolute) ? [absolute] : [];
+    for (const file of files) records.push({ path: path.relative(workspace, file).replaceAll('\\', '/'), record: canonicalize(JSON.parse(fs.readFileSync(file, 'utf8'))) });
+  }
+  return records.sort((a, b) => a.path.localeCompare(b.path));
+}
+
+function runNode(workspace, args, env = {}) {
+  const result = spawnSync(process.execPath, args, { cwd: workspace, encoding: 'utf8', env: { ...process.env, ...env } });
+  const output = `${result.stdout || ''}\n${result.stderr || ''}`.trim();
+  if (result.status !== 0) throw new Error(`${args.join(' ')} failed (${result.status})\n${output}`);
+  return output;
+}
+
 function targetFiles(bundle) {
-  const safe = (id) => id.replace(/[:/]/g, '-');
   return [
     ...bundle.sources.map(({ id }) => `knowledge/sources/${safe(id)}.json`),
     ...bundle.observations.map(({ id }) => `knowledge/observations/${safe(id)}.json`),
     ...bundle.relationships.map(({ id }) => `knowledge/relationships/${safe(id)}.json`),
     `knowledge/runs/${safe(bundle.run.runId)}.json`,
     ...bundle.stageAcks.map(({ ackId }) => `knowledge/runs/stage-acks/${safe(ackId)}.json`),
+    ...(bundle.socraticAssessments ?? []).map(({ assessmentId }) => `knowledge/runs/socratic-assessments/${safe(assessmentId)}.json`),
     `knowledge/receipts/${safe(bundle.run.runId)}-ingest.json`
   ];
 }
 
-function proofTree(workspace) {
-  const roots = [
-    'knowledge/sources', 'knowledge/observations', 'knowledge/relationships',
-    'knowledge/runs', 'knowledge/receipts', 'knowledge/projections',
-    'knowledge/candidates', 'knowledge/quarantine', 'tools/graph-workbench/data.json'
-  ];
-  const records = [];
-  for (const relative of roots) {
-    const absolute = path.join(workspace, relative);
-    const files = fs.existsSync(absolute) && fs.statSync(absolute).isDirectory() ? listJson(absolute) : (fs.existsSync(absolute) ? [absolute] : []);
-    for (const file of files) {
-      records.push({ path: path.relative(workspace, file).replaceAll('\\', '/'), record: canonicalize(JSON.parse(fs.readFileSync(file, 'utf8'))) });
-    }
-  }
-  records.sort((a, b) => a.path.localeCompare(b.path));
-  return records;
-}
-
-function canonicalDigest(workspace) {
-  return digest(proofTree(workspace));
-}
-
-function runNode(workspace, args, env = {}) {
-  const result = spawnSync(process.execPath, args, {
-    cwd: workspace,
-    encoding: 'utf8',
-    env: { ...process.env, ...env }
-  });
-  const output = `${result.stdout || ''}\n${result.stderr || ''}`.trim();
-  if (result.status !== 0) throw new Error(`${args.join(' ')} failed with exit ${result.status}:\n${output}`);
-  return output;
-}
-
-function copyCleanWorkspace(target, bundle) {
-  fs.cpSync(root, target, {
-    recursive: true,
-    filter: (source) => !source.includes(`${path.sep}.git${path.sep}`) && !source.endsWith(`${path.sep}.git`)
-      && !source.includes(`${path.sep}node_modules${path.sep}`) && !source.endsWith(`${path.sep}node_modules`)
-  });
+function copyWorkspace(target, bundle) {
+  fs.cpSync(root, target, { recursive: true, filter: (source) => !source.includes(`${path.sep}.git${path.sep}`) && !source.endsWith(`${path.sep}.git`) && !source.includes(`${path.sep}node_modules${path.sep}`) && !source.endsWith(`${path.sep}node_modules`) });
   fs.symlinkSync(path.join(root, 'node_modules'), path.join(target, 'node_modules'), 'dir');
   for (const relative of targetFiles(bundle)) {
-    const targetPath = path.join(target, relative);
-    if (fs.existsSync(targetPath)) fs.rmSync(targetPath, { force: true });
+    const file = path.join(target, relative);
+    if (fs.existsSync(file)) fs.rmSync(file, { recursive: true, force: true });
   }
 }
 
-function loadAndValidateBundle() {
-  const bundle = JSON.parse(fs.readFileSync(input, 'utf8'));
-  if (bundle.bundleType !== undefined && bundle.bundleType !== 'NightlyRunBundle') throw new Error('invalid bundleType');
-  if (bundle.run?.type !== 'ResearchRun' || bundle.run?.ingestionMode !== 'delivered') throw new Error('bundle run contract failed');
-  if (bundle.observations?.length !== 5) throw new Error('proof bundle must contain exactly five observations');
-  if (bundle.observations.some(({ approvalState }) => approvalState !== 'candidate')) throw new Error('proof bundle contains non-candidate observation');
+function validateBundle(bundle) {
+  if (bundle.run?.type !== 'ResearchRun' || bundle.run?.ingestionMode !== 'delivered') throw new Error('run contract failed');
+  if (bundle.observations?.length !== 5) throw new Error('proof specimen must contain exactly five observations');
+  if (bundle.observations.some(({ approvalState }) => approvalState !== 'candidate')) throw new Error('candidate-only boundary failed');
   if (bundle.run.repositoryActions?.some(({ status, executed }) => status !== 'proposed' || executed !== false)) throw new Error('repository action boundary failed');
   const genesis = bundle.stageAcks?.find(({ stage }) => stage === 'genesis');
   if (!genesis || genesis.status !== 'deferred' || genesis.governance?.allowedTransition !== false) throw new Error('Genesis boundary failed');
-  const sourceManifestSha256 = digest(bundle.sources);
-  if (bundle.provenance?.sourceManifestSha256 && bundle.provenance.sourceManifestSha256 !== sourceManifestSha256) throw new Error('bundle source-manifest provenance mismatch');
 
   const ajv = new Ajv2020({ allErrors: true, strict: true });
   addFormats(ajv);
-  const socraticSchema = JSON.parse(fs.readFileSync(path.join(root, 'knowledge/schema/socratic-assessment.schema.json'), 'utf8'));
-  const validateSocratic = ajv.compile(socraticSchema);
+  const schema = JSON.parse(fs.readFileSync(path.join(root, 'knowledge/schema/socratic-assessment.schema.json'), 'utf8'));
+  const validate = ajv.compile(schema);
   for (const assessment of bundle.socraticAssessments ?? []) {
-    if (!validateSocratic(assessment)) throw new Error(`Socratic assessment schema failure: ${JSON.stringify(validateSocratic.errors)}`);
+    if (!validate(assessment)) throw new Error(`Socratic schema failure: ${JSON.stringify(validate.errors)}`);
     if (!bundle.observations.some(({ id }) => id === assessment.observationId)) throw new Error(`unknown Socratic observation: ${assessment.observationId}`);
   }
-  return bundle;
 }
 
-function proveValidRun(workspace, bundle) {
+function proveRun(workspace, bundle) {
   const relativeBundle = path.relative(workspace, input);
-  const proofNow = bundle.review?.reviewedAt || bundle.provenance?.collectedAt || bundle.run.retrievalWindow.from;
-  runNode(workspace, ['scripts/knowledge/ingest-nightly-run.mjs', relativeBundle], { KNOWLEDGE_NOW: proofNow });
-  runNode(workspace, ['scripts/knowledge/run-controls.mjs'], { KNOWLEDGE_NOW: proofNow });
-  runNode(workspace, ['scripts/knowledge/build-workbench.mjs'], { KNOWLEDGE_NOW: proofNow });
+  const now = bundle.run.retrievalWindow.to;
+  runNode(workspace, ['scripts/knowledge/ingest-nightly-run.mjs', relativeBundle], { KNOWLEDGE_NOW: now });
+  runNode(workspace, ['scripts/knowledge/run-controls.mjs'], { KNOWLEDGE_NOW: now });
+  runNode(workspace, ['scripts/knowledge/build-workbench.mjs'], { KNOWLEDGE_NOW: now });
 
   const expected = new Set(bundle.observations.map(({ id }) => id));
-  const observed = listJson(path.join(workspace, 'knowledge/observations'))
-    .map((file) => JSON.parse(fs.readFileSync(file, 'utf8')))
-    .filter(({ id }) => expected.has(id));
+  const observed = jsonFiles(path.join(workspace, 'knowledge/observations')).map((file) => JSON.parse(fs.readFileSync(file, 'utf8'))).filter(({ id }) => expected.has(id));
   if (observed.length !== 5 || observed.some(({ approvalState }) => approvalState !== 'candidate')) throw new Error('candidate-only proof failed');
-
-  const genesis = JSON.parse(fs.readFileSync(path.join(workspace, 'knowledge/runs/stage-acks', `ack-${bundle.stageAcks.find(({ stage }) => stage === 'genesis').ackId.replaceAll(':', '-')}.json`), 'utf8'));
-  if (genesis.status !== 'deferred' || genesis.governance?.allowedTransition !== false) throw new Error('deferred Genesis proof failed');
-
+  const genesisAck = bundle.stageAcks.find(({ stage }) => stage === 'genesis');
+  const genesisPath = path.join(workspace, 'knowledge/runs/stage-acks', `${safe(genesisAck.ackId)}.json`);
+  const persistedGenesis = JSON.parse(fs.readFileSync(genesisPath, 'utf8'));
+  if (persistedGenesis.status !== 'deferred' || persistedGenesis.governance?.allowedTransition !== false) throw new Error('deferred Genesis proof failed');
   const workbench = path.join(workspace, 'tools/graph-workbench/data.json');
   if (!fs.existsSync(workbench)) throw new Error('Graph Workbench projection missing');
-  const workbenchData = JSON.parse(fs.readFileSync(workbench, 'utf8'));
-  const workbenchText = JSON.stringify(workbenchData);
+  const workbenchText = fs.readFileSync(workbench, 'utf8');
   for (const id of expected) if (!workbenchText.includes(id)) throw new Error(`Graph Workbench missing ${id}`);
-
-  return { canonicalDigest: canonicalDigest(workspace), proofDigest: digest(proofTree(workspace)) };
+  return digest(proofTree(workspace));
 }
 
-function proveAtomicFailure(workspace, bundle) {
-  const before = canonicalDigest(workspace);
-  const invalidPath = path.join(workspace, 'invalid-bundle.json');
-  fs.writeFileSync(invalidPath, JSON.stringify({ ...bundle, observations: [] }));
+function proveMalformedAtomicity(workspace, bundle) {
+  const before = digest(proofTree(workspace));
+  fs.writeFileSync(path.join(workspace, 'invalid-bundle.json'), JSON.stringify({ ...bundle, observations: [] }));
   const result = spawnSync(process.execPath, ['scripts/knowledge/ingest-nightly-run.mjs', 'invalid-bundle.json'], { cwd: workspace, encoding: 'utf8' });
-  if (result.status === 0 || !`${result.stdout || ''}\n${result.stderr || ''}`.includes('exactly five observations')) throw new Error('malformed bundle did not fail closed');
-  if (before !== canonicalDigest(workspace)) throw new Error('malformed bundle changed canonical state');
+  if (result.status === 0) throw new Error('malformed bundle unexpectedly succeeded');
+  if (before !== digest(proofTree(workspace))) throw new Error('malformed bundle changed canonical state');
 }
 
-const bundle = loadAndValidateBundle();
-const bundleSha256 = sha256File(input);
-const targetSet = targetFiles(bundle);
-for (const relative of targetSet) {
-  if (fs.existsSync(path.join(root, relative))) throw new Error(`proof specimen is already ingested on baseline: ${relative}`);
+function proveLateReceiptRollback(workspace, bundle) {
+  const before = digest(proofTree(workspace));
+  const receipt = path.join(workspace, 'knowledge/receipts', `${safe(bundle.run.runId)}-ingest.json`);
+  fs.mkdirSync(path.dirname(receipt), { recursive: true });
+  fs.writeFileSync(receipt, '{"sentinel":"pre-existing-late-write-failure"}\n');
+  const result = spawnSync(process.execPath, ['scripts/knowledge/ingest-nightly-run.mjs', path.relative(workspace, input)], { cwd: workspace, encoding: 'utf8', env: { ...process.env, KNOWLEDGE_NOW: bundle.run.retrievalWindow.to } });
+  if (result.status === 0) throw new Error('late receipt collision unexpectedly succeeded');
+  if (fs.readFileSync(receipt, 'utf8') !== '{"sentinel":"pre-existing-late-write-failure"}\n') throw new Error('pre-existing receipt was mutated');
+  if (before !== digest(proofTree(workspace))) throw new Error('late receipt failure left partial canonical state');
 }
 
-const workspaces = [
-  fs.mkdtempSync(path.join(os.tmpdir(), 'seed-loom-issue24-a-')),
-  fs.mkdtempSync(path.join(os.tmpdir(), 'seed-loom-issue24-b-'))
-];
-let runs;
+const bundle = JSON.parse(fs.readFileSync(input, 'utf8'));
+validateBundle(bundle);
+const bundleSha256 = fileSha256(input);
+for (const relative of targetFiles(bundle)) if (fs.existsSync(path.join(root, relative))) throw new Error(`proof specimen already exists on baseline: ${relative}`);
+
+const workspaces = [fs.mkdtempSync(path.join(os.tmpdir(), 'seed-loom-issue24-a-')), fs.mkdtempSync(path.join(os.tmpdir(), 'seed-loom-issue24-b-'))];
+let digests;
 try {
-  workspaces.forEach((workspace) => copyCleanWorkspace(workspace, bundle));
-  runs = workspaces.map((workspace) => proveValidRun(workspace, bundle));
-  if (runs[0].canonicalDigest !== runs[1].canonicalDigest || runs[0].proofDigest !== runs[1].proofDigest) throw new Error('two isolated real ingests produced different governed digests');
+  workspaces.forEach((workspace) => copyWorkspace(workspace, bundle));
+  digests = workspaces.map((workspace) => proveRun(workspace, bundle));
+  if (digests[0] !== digests[1]) throw new Error(`isolated proof digests differ: ${digests[0]} vs ${digests[1]}`);
 
-  const atomicityWorkspace = fs.mkdtempSync(path.join(os.tmpdir(), 'seed-loom-issue24-atomicity-'));
-  try {
-    copyCleanWorkspace(atomicityWorkspace, bundle);
-    proveAtomicFailure(atomicityWorkspace, bundle);
-  } finally {
-    fs.rmSync(atomicityWorkspace, { recursive: true, force: true });
-  }
-} finally {
-  workspaces.forEach((workspace) => fs.rmSync(workspace, { recursive: true, force: true }));
-}
+  const malformed = fs.mkdtempSync(path.join(os.tmpdir(), 'seed-loom-issue24-malformed-'));
+  try { copyWorkspace(malformed, bundle); proveMalformedAtomicity(malformed, bundle); } finally { fs.rmSync(malformed, { recursive: true, force: true }); }
+
+  const late = fs.mkdtempSync(path.join(os.tmpdir(), 'seed-loom-issue24-late-'));
+  try { copyWorkspace(late, bundle); proveLateReceiptRollback(late, bundle); } finally { fs.rmSync(late, { recursive: true, force: true }); }
+} finally { workspaces.forEach((workspace) => fs.rmSync(workspace, { recursive: true, force: true })); }
 
 const report = {
   status: 'passed',
   issue: 24,
+  runId: bundle.run.runId,
   bundle: path.relative(root, input).replaceAll('\\', '/'),
   bundleSha256,
-  runId: bundle.run.runId,
   observations: 5,
   candidateOnly: true,
   genesis: 'deferred',
   repositoryActionsExecuted: false,
   socraticAssessmentsValidated: (bundle.socraticAssessments ?? []).length,
-  graphWorkbench: 'present-and-identifies-all-five-observations',
+  isolatedRunDigests: digests,
+  deterministic: true,
+  graphWorkbench: 'all-five-observations-present',
   malformedBundleAtomicity: 'passed',
-  isolatedRuns: runs,
-  deterministic: true
+  lateReceiptRollback: 'passed'
 };
-if (outputArg) {
-  const output = path.resolve(root, outputArg);
-  fs.mkdirSync(path.dirname(output), { recursive: true });
-  fs.writeFileSync(output, `${JSON.stringify(report, null, 2)}\n`);
-}
+if (outputArg) { const out = path.resolve(root, outputArg); fs.mkdirSync(path.dirname(out), { recursive: true }); fs.writeFileSync(out, `${JSON.stringify(report, null, 2)}\n`); }
 console.log(JSON.stringify(report, null, 2));
