@@ -35,6 +35,7 @@
     "knowledge:ingest": "node scripts/knowledge/ingest-nightly-run.mjs",
     "knowledge:graph:build": "node scripts/knowledge/build-workbench.mjs",
     "knowledge:graph": "node scripts/knowledge/serve-workbench.mjs",
+    "knowledge:prove-nightly": "node scripts/knowledge/prove-nightly-ingest.mjs",
     "observability:up": "docker compose -f observability/docker-compose.yml up -d",
     "observability:down": "docker compose -f observability/docker-compose.yml down",
     "contract:check": "node scripts/reproducibility/check-root-contract.mjs",
