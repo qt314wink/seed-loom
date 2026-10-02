@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-01:repair-2026-09-30:mdard",
+  "type": "Observation",
+  "capturedAt": "2026-09-30T23:49:52-04:00",
+  "claim": "Michigan MDARD awarded regenerative value-chain grants supporting infrastructure and market development beyond on-farm practice.",
+  "verifiedFacts": [
+    "MDARD announced the grant recipients on September 29, 2026.",
+    "Awards support infrastructure, marketing and market opportunities for regenerative agriculture products."
+  ],
+  "inference": [
+    "Adoption requires supply-chain and demand-side support, not only field technique.",
+    "This is a concrete buyer/value-chain problem suitable for service mapping rather than a new standalone software product."
+  ],
+  "significance": "Medium-high: regenerative adoption is being funded as a value-chain coordination problem.",
+  "confidence": 0.97,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:mdard"
+  ],
+  "actorRefs": [
+    "funder:mdard",
+    "participant:grantees"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/project-constellation"
+  ],
+  "assumptions": [
+    "Grant-funded work will be implemented as described."
+  ],
+  "knownLimitations": [
+    "Awards are not evidence of sustained demand, margins or ecological outcomes."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:mdard",
+  "type": "Source",
+  "url": "https://www.michigan.gov/mdard/about/media/pressreleases/2026/09/29/mdards-farm-to-family-program-announces-grant-recipients-focused-on-regen-ag",
+  "publisher": "Michigan Department of Agriculture and Rural Development",
+  "publishedAt": "2026-09-29T00:00:00Z",
+  "retrievedAt": "2026-09-30T23:49:52-04:00",
+  "sourceClass": "official",
+  "independenceKey": "mdard-farm-to-family",
+  "contentHash": null,
+  "title": "MDARD regenerative grants"
+}
