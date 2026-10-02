@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-01:repair-2026-09-30:nvidia",
+  "type": "Observation",
+  "capturedAt": "2026-09-30T23:49:52-04:00",
+  "claim": "NVIDIA launched an open agent-safety platform combining runtime enforcement with out-of-band monitoring from testing through deployment.",
+  "verifiedFacts": [
+    "NVIDIA announced Open Agent Safety Platform on September 28, 2026.",
+    "OpenShell provides a runtime boundary, traces actions and enforces policy."
+  ],
+  "inference": [
+    "Agent governance is separating into model safeguards, harness permissions, runtime enforcement and independent monitoring.",
+    "This strengthens the case for a layered, vendor-neutral agent-boundary audit rather than a single safety control."
+  ],
+  "significance": "High: runtime containment is becoming a distinct engineering surface.",
+  "confidence": 0.98,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:nvidia"
+  ],
+  "actorRefs": [
+    "provider:nvidia",
+    "participant:microsoft",
+    "participant:jpmorgan-chase"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "Named participants represent substantive participation."
+  ],
+  "knownLimitations": [
+    "Provider announcements do not establish independent reliability or buyer criteria."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}
