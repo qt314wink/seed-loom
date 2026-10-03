@@ -1,0 +1,35 @@
+{
+  "ackId": "ack:vet:2026-10-03",
+  "runId": "run:nightly:2026-10-03",
+  "stage": "vet",
+  "status": "passed",
+  "startedAt": "2026-10-03T19:42:57-04:00",
+  "completedAt": "2026-10-03T19:42:57-04:00",
+  "inputs": [
+    "run:nightly:2026-10-03"
+  ],
+  "outputs": [
+    "vetted sources"
+  ],
+  "checks": [
+    {
+      "name": "source-class",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "claims remain bounded"
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence-runtime",
+    "method": "source-class review",
+    "inputHashes": [
+      "c077126fc67d0efcceb9e8c114c1e9c09f8fa3c8"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

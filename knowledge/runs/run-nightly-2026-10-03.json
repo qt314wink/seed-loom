@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-10-03",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-10-01T19:42:57-04:00",
+    "to": "2026-10-03T19:42:57-04:00"
+  },
+  "newObservations": [
+    "obs:agent-control-plane:2026-10-03",
+    "obs:voice-agent-demand:2026-10-03",
+    "obs:optical-ai-interconnect:2026-10-03",
+    "obs:molecular-vibration-xr:2026-10-03",
+    "obs:living-fabrication:2026-10-03"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "pattern:governed-agent-infrastructure",
+    "pattern:science-to-experience-translation",
+    "pattern:regenerative-computational-fabrication"
+  ],
+  "newRelationships": [
+    "rel:mongodb-refines-control:2026-10-03",
+    "rel:voice-enables-eve:2026-10-03",
+    "rel:optical-enables-omni:2026-10-03",
+    "rel:molecular-refines-compiler:2026-10-03",
+    "rel:facade-enables-regenerative:2026-10-03"
+  ],
+  "contradictions": [],
+  "opportunities": [
+    "opportunity:agent-boundary-review",
+    "opportunity:multimodal-knowledge-interface",
+    "opportunity:science-to-experience-compiler",
+    "opportunity:regenerative-fabrication-evidence"
+  ],
+  "proposedExperiments": [
+    "experiment:agent-boundary-review",
+    "experiment:molecular-vibration-spatial-compiler"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false,
+      "repository": "qt314wink/seed-loom",
+      "allowedPaths": [
+        "knowledge/intake/nightly/**"
+      ]
+    },
+    {
+      "status": "proposed",
+      "executed": false,
+      "repository": "qt314wink/omni-loom",
+      "allowedPaths": [
+        "src/**",
+        "tests/**",
+        "docs/**"
+      ]
+    }
+  ],
+  "noChangeReceipts": [
+    "dedup:prior-nightly-signals-reviewed",
+    "repo-watch:inspection-only"
+  ],
+  "collectionFailures": [
+    "Independent procurement, retention and measured-outcome evidence was not found within the bounded window."
+  ]
+}

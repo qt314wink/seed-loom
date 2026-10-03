@@ -1,0 +1,29 @@
+{
+  "id": "source:cmu-facade-tectonics:2026",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://www.architecture.cmu.edu/events/facade-tectonics-institute-2026-world-congress",
+  "publisher": "Carnegie Mellon University",
+  "publishedAt": "2026-09-29T00:00:00Z",
+  "retrievedAt": "2026-10-03T19:42:57-04:00",
+  "sourceClass": "official",
+  "independenceKey": "cmu-facade-tectonics-2026",
+  "contentHash": "sha256:url-cmu",
+  "title": "Facade Tectonics 2026",
+  "lead": "Engineered living materials, adaptive facades and robotic construction featured.",
+  "analystNote": "Institutional event evidence; participation is not procurement validation.",
+  "syndicatedFrom": null,
+  "doi": null,
+  "upstreamReport": null,
+  "policyDocument": null,
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": [],
+  "notes": "Event Sep 29-Oct 1."
+}

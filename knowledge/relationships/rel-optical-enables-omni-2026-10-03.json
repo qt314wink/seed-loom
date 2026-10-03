@@ -1,0 +1,14 @@
+{
+  "id": "rel:optical-enables-omni:2026-10-03",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:optical-ai-interconnect:2026-10-03",
+  "predicate": "MAY_ENABLE",
+  "to": "project:omni-loom",
+  "confidence": 0.68,
+  "evidenceRefs": [
+    "source:volantis-vcsel:2026"
+  ],
+  "validFrom": "2026-10-01T00:00:00Z",
+  "validTo": null
+}

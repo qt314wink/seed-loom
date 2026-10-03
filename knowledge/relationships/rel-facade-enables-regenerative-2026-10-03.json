@@ -1,0 +1,14 @@
+{
+  "id": "rel:facade-enables-regenerative:2026-10-03",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:living-fabrication:2026-10-03",
+  "predicate": "MAY_ENABLE",
+  "to": "thesis:regenerative-fabrication-systems",
+  "confidence": 0.82,
+  "evidenceRefs": [
+    "source:cmu-facade-tectonics:2026"
+  ],
+  "validFrom": "2026-09-29T00:00:00Z",
+  "validTo": null
+}
