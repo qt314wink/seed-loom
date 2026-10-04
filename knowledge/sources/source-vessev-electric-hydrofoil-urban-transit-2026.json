@@ -1,0 +1,29 @@
+{
+  "id": "source:vessev-electric-hydrofoil-urban-transit:2026",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://techcrunch.com/2026/10/03/vessev-built-an-electric-ferry-that-almost-flies/",
+  "publisher": "TechCrunch",
+  "publishedAt": "2026-10-03T14:42:00Z",
+  "retrievedAt": "2026-10-04T19:19:42-04:00",
+  "sourceClass": "press",
+  "independenceKey": "vessev-electric-hydrofoil-urban-transit-2026-10-03",
+  "contentHash": null,
+  "title": "Vessev electric hydrofoil demonstration",
+  "lead": "A live demonstration shows an integrated electric hydrofoil targeting transit use.",
+  "analystNote": "Commercial economics remain unproven.",
+  "syndicatedFrom": null,
+  "doi": null,
+  "upstreamReport": null,
+  "policyDocument": null,
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": [],
+  "notes": "Fresh demonstration evidence."
+}

@@ -1,0 +1,36 @@
+{
+  "ackId": "ack:pattern:2026-10-04",
+  "runId": "run:nightly:2026-10-04",
+  "stage": "pattern",
+  "status": "passed",
+  "startedAt": "2026-10-04T19:19:42-04:00",
+  "completedAt": "2026-10-04T19:19:42-04:00",
+  "inputs": [
+    "ack:relate:2026-10-04"
+  ],
+  "outputs": [
+    "stage:pattern:2026-10-04"
+  ],
+  "checks": [
+    {
+      "name": "cross-signal-patterns",
+      "result": "pass",
+      "detail": "Patterns are bounded and candidate-only."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "No genesis."
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence-automation",
+    "method": "cross-signal pattern synthesis",
+    "inputHashes": [
+      "sha256:research-window-2026-10-04"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

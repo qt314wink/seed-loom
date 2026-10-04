@@ -1,0 +1,49 @@
+{
+  "id": "obs:data-center-social-license:2026-10-04",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-04T19:19:42-04:00",
+  "claim": "AI infrastructure deployment is creating a more explicit community-approval and transparency problem around data-center projects, with Amazon changing its government-facing disclosure posture.",
+  "verifiedFacts": [
+    "TechCrunch reported October 3 that AWS CEO Matt Garman said Amazon stopped using NDAs in dealings with government agencies while seeking data-center approvals.",
+    "The report connects the change to public backlash and disclosure concerns.",
+    "The action occurs inside ongoing government approval processes."
+  ],
+  "inference": [
+    "Verified: disclosure posture is being treated as infrastructure deployment risk.",
+    "Inferred: compute projects may need traceable technical, environmental and civic evidence packages.",
+    "Unknown: whether the NDA change materially changes approval outcomes."
+  ],
+  "significance": "Expands the consultancy thesis into civic intelligence for compute infrastructure.",
+  "confidence": 0.9,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "procurement",
+  "validFrom": "2026-10-03T18:43:00Z",
+  "validUntil": null,
+  "reviewBy": "2026-11-04T23:59:59-04:00",
+  "termsChangedAt": null,
+  "closedAt": null,
+  "closureRef": null,
+  "supersededBy": null,
+  "sourceRefs": [
+    "source:amazon-data-center-nda-shift:2026"
+  ],
+  "actorRefs": [
+    "actor:amazon",
+    "actor:aws",
+    "actor:government-agencies",
+    "actor:communities"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/philly-civic-ai",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Public disclosure quality can affect legitimacy or approval."
+  ],
+  "knownLimitations": [
+    "Only executive statement and press coverage were collected."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

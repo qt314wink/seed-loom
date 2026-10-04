@@ -1,0 +1,14 @@
+{
+  "id": "rel:civic-evidence-enables-compute-advisory:2026-10-04",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:data-center-social-license:2026-10-04",
+  "predicate": "MAY_ENABLE",
+  "to": "opportunity:civic-compute-evidence-review",
+  "confidence": 0.86,
+  "evidenceRefs": [
+    "source:amazon-data-center-nda-shift:2026"
+  ],
+  "validFrom": "2026-10-03T18:43:00Z",
+  "validTo": null
+}

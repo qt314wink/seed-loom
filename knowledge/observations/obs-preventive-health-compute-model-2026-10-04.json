@@ -1,0 +1,49 @@
+{
+  "id": "obs:preventive-health-compute-model:2026-10-04",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-04T19:19:42-04:00",
+  "claim": "Technology-heavy preventive healthcare is moving toward repeatable self-pay diagnostic experiences combining dense sensing, computer vision and clinician interpretation.",
+  "verifiedFacts": [
+    "Fresh October 3 coverage documents Neko Health's U.S. expansion.",
+    "Neko combines technology-driven scanning with clinicians and preventive interpretation.",
+    "Neko's U.S. terms use a self-pay model."
+  ],
+  "inference": [
+    "Verified: preventive care can be packaged as a recurring technology-enabled service.",
+    "Inferred: the transferable service pattern is measurement-to-evidence translation, not the medical device itself.",
+    "Unknown: clinical outcomes and long-term health economics at scale."
+  ],
+  "significance": "Provides a biomedical-service precedent for evidence translation without requiring medical claims.",
+  "confidence": 0.88,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "opportunity",
+  "validFrom": "2026-10-03T14:00:00Z",
+  "validUntil": null,
+  "reviewBy": "2026-11-04T23:59:59-04:00",
+  "termsChangedAt": null,
+  "closedAt": null,
+  "closureRef": null,
+  "supersededBy": null,
+  "sourceRefs": [
+    "source:neko-us-preventive-care-demand:2026"
+  ],
+  "actorRefs": [
+    "actor:neko-health",
+    "actor:patients",
+    "actor:clinicians",
+    "actor:health-investors"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/nse-kb",
+    "qt314wink/observation-ad-pipeline"
+  ],
+  "assumptions": [
+    "Evidence translation can be studied without clinical claims."
+  ],
+  "knownLimitations": [
+    "No independent efficacy or reimbursement evidence was collected."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "rel:hydrofoil-refines-physical-system-proof:2026-10-04",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:integrated-electric-mobility-system:2026-10-04",
+  "predicate": "REFINES",
+  "to": "thesis:omni-loom-deterministic-fabrication-proof",
+  "confidence": 0.88,
+  "evidenceRefs": [
+    "source:vessev-electric-hydrofoil-urban-transit:2026"
+  ],
+  "validFrom": "2026-10-03T14:42:00Z",
+  "validTo": null
+}

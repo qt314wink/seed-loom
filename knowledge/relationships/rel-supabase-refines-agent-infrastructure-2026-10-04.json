@@ -1,0 +1,14 @@
+{
+  "id": "rel:supabase-refines-agent-infrastructure:2026-10-04",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:agent-database-infrastructure:2026-10-04",
+  "predicate": "REFINES",
+  "to": "thesis:seed-loom-governed-control-plane",
+  "confidence": 0.96,
+  "evidenceRefs": [
+    "source:supabase-turso-agent-databases:2026"
+  ],
+  "validFrom": "2026-10-02T00:00:00Z",
+  "validTo": null
+}

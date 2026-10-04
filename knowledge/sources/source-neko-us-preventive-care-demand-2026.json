@@ -1,0 +1,29 @@
+{
+  "id": "source:neko-us-preventive-care-demand:2026",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://techcrunch.com/2026/10/03/spotify-billionaires-body-scan-startup-has-come-to-america/",
+  "publisher": "TechCrunch",
+  "publishedAt": "2026-10-03T14:00:00Z",
+  "retrievedAt": "2026-10-04T19:19:42-04:00",
+  "sourceClass": "press",
+  "independenceKey": "neko-us-preventive-care-demand-2026-10-03",
+  "contentHash": null,
+  "title": "Neko Health comes to America",
+  "lead": "Fresh coverage documents active U.S. expansion of Neko Health's technology-heavy preventive-care model.",
+  "analystNote": "Underlying New York opening predates window; current U.S. expansion is the fresh development.",
+  "syndicatedFrom": null,
+  "doi": null,
+  "upstreamReport": null,
+  "policyDocument": null,
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": [],
+  "notes": "Fresh coverage retrieved in window."
+}
