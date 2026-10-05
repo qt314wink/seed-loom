@@ -1,0 +1,43 @@
+{
+  "id": "obs:physical-ai-safety-evaluation-layer:2026-10-05",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-05T19:33:37-04:00",
+  "claim": "Physical-AI deployment is generating a market for repeatable simulation-based safety evaluation, with funding and product positioning centered on evidence before robots meet people.",
+  "verifiedFacts": [
+    "SafeWorld offers scenario generation, interaction-risk prediction and evidence preservation.",
+    "AI Weekly reported Oct. 5 that SafeWorld raised more than $12M."
+  ],
+  "inference": [
+    "Inferred: safety evidence is becoming a reusable product layer.",
+    "Inferred: the observe→infer→test→receipt pattern can transfer to physical-system demonstrations.",
+    "Unknown: retention and measured safety outcomes."
+  ],
+  "significance": "Reinforces the physical-system proof line around Omni-Loom and suggests a bounded safety/evidence compiler.",
+  "confidence": 0.9,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:safeworld-physical-ai-safety:2026-10-05",
+    "source:safeworld-funding:2026-10-05"
+  ],
+  "actorRefs": [
+    "actor:safeworld",
+    "actor:shine-capital",
+    "actor:a16z-speedrun",
+    "actor:robotics-deployers"
+  ],
+  "affectedRepositories": [
+    "qt314wink/omni-loom",
+    "qt314wink/observation-ad-pipeline",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Simulation evidence must not be presented as safety certification."
+  ],
+  "knownLimitations": [
+    "No contract values, retention or independent safety outcomes."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

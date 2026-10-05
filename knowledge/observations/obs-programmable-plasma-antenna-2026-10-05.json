@@ -1,0 +1,41 @@
+{
+  "id": "obs:programmable-plasma-antenna:2026-10-05",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-05T19:33:37-04:00",
+  "claim": "Laser-created plasma can function as a dynamically configurable radio antenna, with geometry and direction controlled by beam parameters rather than mechanical deployment.",
+  "verifiedFacts": [
+    "NC State reported Oct. 5 a laser-induced plasma-filament antenna transmitting at 30 MHz VHF.",
+    "Length and direction can be changed via laser parameters and beam steering."
+  ],
+  "inference": [
+    "Inferred: programmable field geometry is a design variable at the optics/EM/radio boundary.",
+    "Inferred: this is a high-signal experimental demonstration opportunity, not product evidence.",
+    "Unknown: scale, receiving capability and space qualification."
+  ],
+  "significance": "Adds a concrete radio-physics thread and a bounded wave-field demonstration opportunity.",
+  "confidence": 0.93,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:plasma-beam-antenna-ncsu:2026-10-05"
+  ],
+  "actorRefs": [
+    "actor:nc-state-researchers",
+    "actor:IEEE-research-community",
+    "actor:space-systems-researchers"
+  ],
+  "affectedRepositories": [
+    "qt314wink/aether",
+    "qt314wink/shader-grammar",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Conceptual models must distinguish simulation from experimental validation."
+  ],
+  "knownLimitations": [
+    "Power efficiency, range and receiving capability are missing."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

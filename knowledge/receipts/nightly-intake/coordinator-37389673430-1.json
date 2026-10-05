@@ -1,0 +1,55 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-10-05T23:39:04.121Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-10-05",
+      "bundlePath": "knowledge/intake/nightly/2026-10-05/nightly-run-bundle-2026-10-05.json",
+      "bundleSha256": "a7e9702670574acadb000d30258f8af2dbc0a3b74a4a80ba1603a94abe738fc6",
+      "normalizedDigest": "16032ccdab4b380e96c836f91a06f96047649b85400ba836a9a7024d0d7edef4",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-reflection-beam-launch-2026-10-05.json",
+        "knowledge/sources/source-safeworld-physical-ai-safety-2026-10-05.json",
+        "knowledge/sources/source-safeworld-funding-2026-10-05.json",
+        "knowledge/sources/source-photonic-inspire-nature-2026-10-05.json",
+        "knowledge/sources/source-plasma-beam-antenna-ncsu-2026-10-05.json",
+        "knowledge/sources/source-epam-ai-native-hiring-2026-10-05.json",
+        "knowledge/observations/obs-open-weight-agent-frontier-2026-10-05.json",
+        "knowledge/observations/obs-physical-ai-safety-evaluation-layer-2026-10-05.json",
+        "knowledge/observations/obs-photonic-in-situ-learning-2026-10-05.json",
+        "knowledge/observations/obs-programmable-plasma-antenna-2026-10-05.json",
+        "knowledge/observations/obs-ai-native-consulting-demand-2026-10-05.json",
+        "knowledge/relationships/rel-beam-refines-model-portability-2026-10-05.json",
+        "knowledge/relationships/rel-safeworld-refines-physical-proof-2026-10-05.json",
+        "knowledge/relationships/rel-photonic-refines-fabrication-proof-2026-10-05.json",
+        "knowledge/relationships/rel-plasma-refines-wave-field-research-2026-10-05.json",
+        "knowledge/relationships/rel-epam-refines-consultancy-packaging-2026-10-05.json",
+        "knowledge/runs/run-nightly-2026-10-05.json",
+        "knowledge/runs/stage-acks/ack-collect-2026-10-05.json",
+        "knowledge/runs/stage-acks/ack-vet-2026-10-05.json",
+        "knowledge/runs/stage-acks/ack-normalize-2026-10-05.json",
+        "knowledge/runs/stage-acks/ack-observe-2026-10-05.json",
+        "knowledge/runs/stage-acks/ack-inquire-2026-10-05.json",
+        "knowledge/runs/stage-acks/ack-interpret-2026-10-05.json",
+        "knowledge/runs/stage-acks/ack-relate-2026-10-05.json",
+        "knowledge/runs/stage-acks/ack-pattern-2026-10-05.json",
+        "knowledge/runs/stage-acks/ack-opportunity-2026-10-05.json",
+        "knowledge/runs/stage-acks/ack-strategy-2026-10-05.json",
+        "knowledge/runs/stage-acks/ack-experiment-2026-10-05.json",
+        "knowledge/runs/stage-acks/ack-genesis-2026-10-05.json",
+        "knowledge/runs/stage-acks/ack-publish-2026-10-05.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-10-05-ingest.json",
+      "generatedRecordCount": 30
+    }
+  ]
+}
