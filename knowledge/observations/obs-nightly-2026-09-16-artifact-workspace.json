@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-16:artifact-workspace",
+  "type": "Observation",
+  "capturedAt": "2026-09-16T23:42:56Z",
+  "claim": "Anthropic is collapsing chat, delegated work, design, documents and presentations into one task-routed workspace, commoditizing basic artifact production.",
+  "verifiedFacts": [
+    "Anthropic announced a unified Claude interface combining chat and Cowork and integrating Design.",
+    "Claude Docs and Slides entered beta with export to common office formats."
+  ],
+  "inference": [
+    "Consultancy differentiation should move toward provenance, editability, review receipts and portability rather than raw deck generation."
+  ],
+  "significance": "High for Observation and Melodyfire because artifact generation itself is becoming less defensible.",
+  "confidence": 0.97,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:nightly:2026-09-16:claude-work"
+  ],
+  "actorRefs": [
+    "actor:anthropic:provider",
+    "actor:knowledge-worker:buyer"
+  ],
+  "affectedRepositories": [
+    "qt314wink/observation-ad-pipeline",
+    "MelodicBloom/melodyfire",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Integrated artifact creation will reduce willingness to pay for undifferentiated production."
+  ],
+  "knownLimitations": [
+    "Beta quality and adoption metrics are unavailable."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}
