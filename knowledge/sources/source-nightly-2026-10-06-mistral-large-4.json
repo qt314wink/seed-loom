@@ -1,0 +1,15 @@
+{
+  "id": "source:nightly:2026-10-06:mistral-large-4",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://mistral.ai/news/mistral-large-4/",
+  "publisher": "Mistral AI",
+  "publishedAt": "2026-10-06T00:00:00Z",
+  "retrievedAt": "2026-10-06T23:26:39Z",
+  "sourceClass": "primary",
+  "independenceKey": "mistral-ai:large-4:2026-10-06",
+  "contentHash": null,
+  "title": "Introducing Mistral Large 4",
+  "lead": "Mistral launched a public preview of a 1.05T-parameter multimodal open-weight model with 49B active parameters and planned weight release later in October.",
+  "analystNote": "Vendor-reported capability claims are not treated as independently verified benchmarks."
+}

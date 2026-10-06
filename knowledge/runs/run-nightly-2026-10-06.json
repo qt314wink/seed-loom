@@ -1,0 +1,80 @@
+{
+  "runId": "run:nightly:2026-10-06",
+  "type": "ResearchRun",
+  "schemaVersion": "1.1.0",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-10-04T23:26:39Z",
+    "to": "2026-10-06T23:26:39Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-10-06:open-weight-frontier",
+    "obs:nightly:2026-10-06:creative-ops-mcp",
+    "obs:nightly:2026-10-06:agent-authority-incident",
+    "obs:nightly:2026-10-06:ecological-redox-control",
+    "obs:nightly:2026-10-06:seed-loom-bridge"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "pattern:provider-portable-agent-systems",
+    "pattern:agent-authority-as-client-risk",
+    "pattern:network-centric-regenerative-control",
+    "pattern:proof-before-architecture"
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-10-06:1",
+    "rel:nightly:2026-10-06:2",
+    "rel:nightly:2026-10-06:3",
+    "rel:nightly:2026-10-06:4",
+    "rel:nightly:2026-10-06:5"
+  ],
+  "contradictions": [],
+  "opportunities": [
+    "opportunity:provider-portability-benchmark",
+    "opportunity:agent-authority-control-review",
+    "opportunity:creative-ops-agent-readiness",
+    "opportunity:ecological-feedback-sensing",
+    "opportunity:execute-seed-loom-proof-path"
+  ],
+  "proposedExperiments": [
+    "experiment:two-provider-governed-agent-benchmark",
+    "experiment:bounded-creative-ops-authority-fixture"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false,
+      "id": "repo-action:seed-loom:run-issue-24-proof",
+      "repository": "qt314wink/seed-loom",
+      "allowedPaths": [
+        "scripts/knowledge/**",
+        ".github/workflows/**",
+        "knowledge/intake/nightly/**"
+      ],
+      "action": "Run existing Issue #24 proof path if present; no implementation change authorized."
+    },
+    {
+      "status": "proposed",
+      "executed": false,
+      "id": "repo-action:observation-ad-pipeline:authority-fixture",
+      "repository": "qt314wink/observation-ad-pipeline",
+      "allowedPaths": [
+        "docs/**",
+        "governance/**",
+        "tests/**"
+      ],
+      "action": "Draft a bounded agent-authority fixture only; no external execution."
+    }
+  ],
+  "noChangeReceipts": [
+    "no-change:strategy-not-promoted",
+    "no-change:experiment-not-executed",
+    "no-change:genesis-blocked",
+    "no-change:publish-blocked"
+  ],
+  "collectionFailures": [
+    "No 2026-10-06 main-side NightlyRunBundle or receipt existed at preflight; current branch was created only after verifying absence.",
+    "GitHub connector repository search returned no result for the exact seed-loom name once before direct authority reads; direct file/commit/branch endpoints then succeeded.",
+    "Public Australian parliamentary source was robots-blocked in web retrieval; OpenAI's primary disclosure was used instead."
+  ]
+}

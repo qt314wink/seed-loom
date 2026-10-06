@@ -1,0 +1,16 @@
+{
+  "id": "source:nightly:2026-10-06:nature-redox",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://www.nature.com/articles/s43247-026-04100-y",
+  "publisher": "Communications Earth & Environment",
+  "publishedAt": "2026-10-06T00:00:00Z",
+  "retrievedAt": "2026-10-06T23:26:39Z",
+  "sourceClass": "research",
+  "independenceKey": "nature:carbon-pollutant-redox:2026-10-06",
+  "contentHash": null,
+  "title": "Carbon source and pollutant matching shapes microbial succession and removal regimes under electrochemical redox control",
+  "lead": "A nine-pair experiment found carbon identity changed microbial succession and removal performance, with up to roughly four-fold differences in pollutant removal.",
+  "doi": "10.1038/s43247-026-04100-y",
+  "analystNote": "Open-access peer-reviewed research; the operational generalization beyond the tested system remains an inference."
+}

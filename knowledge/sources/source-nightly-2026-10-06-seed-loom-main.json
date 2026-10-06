@@ -1,0 +1,15 @@
+{
+  "id": "source:nightly:2026-10-06:seed-loom-main",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://github.com/qt314wink/seed-loom/commit/15d5bdd74b6be8d7f2700f8595a2e25c420fcd03",
+  "publisher": "GitHub / qt314wink/seed-loom",
+  "publishedAt": "2026-10-06T06:07:09Z",
+  "retrievedAt": "2026-10-06T23:26:39Z",
+  "sourceClass": "repository",
+  "independenceKey": "github:qt314wink:seed-loom:main:15d5bdd7",
+  "contentHash": null,
+  "title": "Seed Loom main HEAD 15d5bdd — nightly provenance collection",
+  "lead": "The current main HEAD is 15d5bdd; the repository now contains a governed Nightly Knowledge Ingest workflow that triggers on bounded nightly intake branches and runs the canonical coordinator.",
+  "analystNote": "Repository facts were read from live GitHub authority surfaces during this run."
+}

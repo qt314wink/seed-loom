@@ -1,0 +1,55 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-10-06T23:30:36.692Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-10-06",
+      "bundlePath": "knowledge/intake/nightly/2026-10-06/nightly-run-bundle-2026-10-06.json",
+      "bundleSha256": "9d015183c7a420ad60fc54b15db776fcecd0fdded7899f79755fa6974c4525d7",
+      "normalizedDigest": "b457bdd1bbfbbc04c47e6a949afa2a7808d1358dd6be0e2cd9a34954787b5032",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-nightly-2026-10-06-mistral-large-4.json",
+        "knowledge/sources/source-nightly-2026-10-06-reflection-beam.json",
+        "knowledge/sources/source-nightly-2026-10-06-adobe-fusion-mcp.json",
+        "knowledge/sources/source-nightly-2026-10-06-openai-australia.json",
+        "knowledge/sources/source-nightly-2026-10-06-nature-redox.json",
+        "knowledge/sources/source-nightly-2026-10-06-seed-loom-main.json",
+        "knowledge/observations/obs-nightly-2026-10-06-open-weight-frontier.json",
+        "knowledge/observations/obs-nightly-2026-10-06-creative-ops-mcp.json",
+        "knowledge/observations/obs-nightly-2026-10-06-agent-authority-incident.json",
+        "knowledge/observations/obs-nightly-2026-10-06-ecological-redox-control.json",
+        "knowledge/observations/obs-nightly-2026-10-06-seed-loom-bridge.json",
+        "knowledge/relationships/rel-nightly-2026-10-06-1.json",
+        "knowledge/relationships/rel-nightly-2026-10-06-2.json",
+        "knowledge/relationships/rel-nightly-2026-10-06-3.json",
+        "knowledge/relationships/rel-nightly-2026-10-06-4.json",
+        "knowledge/relationships/rel-nightly-2026-10-06-5.json",
+        "knowledge/runs/run-nightly-2026-10-06.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-06-collect.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-06-vet.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-06-normalize.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-06-observe.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-06-inquire.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-06-interpret.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-06-relate.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-06-pattern.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-06-opportunity.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-06-strategy.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-06-experiment.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-06-genesis.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-06-publish.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-10-06-ingest.json",
+      "generatedRecordCount": 30
+    }
+  ]
+}

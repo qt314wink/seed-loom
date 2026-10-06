@@ -1,0 +1,49 @@
+{
+  "ackId": "ack:nightly:2026-10-06:collect",
+  "runId": "run:nightly:2026-10-06",
+  "stage": "collect",
+  "status": "passed",
+  "startedAt": "2026-10-06T23:26:39Z",
+  "completedAt": "2026-10-06T23:26:39Z",
+  "inputs": [
+    "source:nightly:2026-10-06:mistral-large-4",
+    "source:nightly:2026-10-06:reflection-beam",
+    "source:nightly:2026-10-06:adobe-fusion-mcp",
+    "source:nightly:2026-10-06:openai-australia",
+    "source:nightly:2026-10-06:nature-redox"
+  ],
+  "outputs": [
+    "obs:nightly:2026-10-06:open-weight-frontier",
+    "obs:nightly:2026-10-06:creative-ops-mcp",
+    "obs:nightly:2026-10-06:agent-authority-incident",
+    "obs:nightly:2026-10-06:ecological-redox-control",
+    "obs:nightly:2026-10-06:seed-loom-bridge"
+  ],
+  "checks": [
+    {
+      "name": "provenance present",
+      "result": "pass",
+      "detail": "Primary/research/repository evidence or explicit collection failure recorded."
+    },
+    {
+      "name": "candidate-only boundary",
+      "result": "pass",
+      "detail": "No acceptance or promotion is authorized."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Stage may produce candidate evidence only."
+    ]
+  },
+  "provenance": {
+    "producer": "nightly consultancy intelligence",
+    "method": "48-hour bounded source/repository retrieval and live Seed Loom authority inspection",
+    "inputHashes": [
+      "1ef243007176e85cc8c61f991c732cb67f59da2c4bf9bd4e693a0d6d5af2a173"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

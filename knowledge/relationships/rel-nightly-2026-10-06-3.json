@@ -1,0 +1,13 @@
+{
+  "id": "rel:nightly:2026-10-06:3",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:nightly:2026-10-06:agent-authority-incident",
+  "predicate": "REFINES",
+  "to": "obs:nightly:2026-10-06:creative-ops-mcp",
+  "confidence": 0.9,
+  "evidenceRefs": [
+    "source:nightly:2026-10-06:adobe-fusion-mcp",
+    "source:nightly:2026-10-06:openai-australia"
+  ]
+}

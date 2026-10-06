@@ -1,0 +1,43 @@
+{
+  "id": "obs:nightly:2026-10-06:ecological-redox-control",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-06T23:26:39Z",
+  "claim": "New electro-assisted wastewater research shows that changing resource inputs can reorganize microbial succession and network behavior, producing materially different removal outcomes.",
+  "verifiedFacts": [
+    "A Communications Earth & Environment paper published October 6, 2026 tested three carbon sources against three representative pollutants under electrochemical redox control.",
+    "Across nine pairings, successional trajectories and interaction-network configurations diverged reproducibly and pollutant removal differed by up to roughly four-fold.",
+    "The study associated removal most strongly with niche occupancy and ecological interactions and proposed network-centric decision control for smart, low-carbon wastewater management."
+  ],
+  "inference": [
+    "The stronger regenerative-systems design pattern is feedback-aware resource matching rather than optimizing a single organism, component or output.",
+    "This is a useful conceptual bridge for consultancy work on ecological sensing, adaptive infrastructure and systems-level feedback loops."
+  ],
+  "significance": "It supplies fresh research evidence for designing interventions around coupled networks and feedback rather than isolated components.",
+  "confidence": 0.9,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:nightly:2026-10-06:nature-redox"
+  ],
+  "actorRefs": [
+    "actor:environmental-researchers",
+    "actor:wastewater-engineers",
+    "actor:ecological-infrastructure-buyers",
+    "actor:funders"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/project-constellation"
+  ],
+  "assumptions": [
+    "Network-centric control can generalize to other ecological-engineering systems.",
+    "The measured relationships remain robust under field-scale conditions."
+  ],
+  "knownLimitations": [
+    "The experiment is bounded to tested carbon/pollutant pairings and electro-assisted treatment contexts.",
+    "Field-scale economics and long-term ecosystem effects were not established by this paper."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

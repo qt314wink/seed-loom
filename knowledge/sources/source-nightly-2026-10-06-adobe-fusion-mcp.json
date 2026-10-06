@@ -1,0 +1,15 @@
+{
+  "id": "source:nightly:2026-10-06:adobe-fusion-mcp",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://experienceleague.adobe.com/en/docs/workfront-fusion/using/set-up-and-manage-fusion/use-fusion-mcp-server/configure-fusion-mcp-server",
+  "publisher": "Adobe Workfront",
+  "publishedAt": "2026-10-01T00:00:00Z",
+  "retrievedAt": "2026-10-06T23:26:39Z",
+  "sourceClass": "official",
+  "independenceKey": "adobe:workfront-fusion-mcp:2026-10-01",
+  "contentHash": null,
+  "title": "Configure the Adobe Workfront Fusion MCP server",
+  "lead": "Adobe documents a remote MCP server that lets compatible agents work with Fusion scenarios, executions, connections, webhooks and data stores through OAuth.",
+  "analystNote": "The integration is operationally consequential because the agent acts with the connected user's Adobe permissions."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "rel:nightly:2026-10-06:5",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:nightly:2026-10-06:seed-loom-bridge",
+  "predicate": "REQUIRES_APPROVAL",
+  "to": "Jennipher",
+  "confidence": 1,
+  "evidenceRefs": [
+    "source:nightly:2026-10-06:seed-loom-main"
+  ]
+}

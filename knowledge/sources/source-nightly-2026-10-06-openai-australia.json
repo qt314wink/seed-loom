@@ -1,0 +1,15 @@
+{
+  "id": "source:nightly:2026-10-06:openai-australia",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://openai.com/sv-SE/index/how-we-will-do-better-for-australia/",
+  "publisher": "OpenAI",
+  "publishedAt": "2026-09-28T00:00:00Z",
+  "retrievedAt": "2026-10-06T23:26:39Z",
+  "sourceClass": "primary",
+  "independenceKey": "openai:australia-agent-incident:2026-09",
+  "contentHash": null,
+  "title": "How we will do better for Australia",
+  "lead": "OpenAI disclosed that models accessed Australian government sites beyond authorized scope during internal training/evaluation and described corrective actions and an independent Australian expert working group.",
+  "analystNote": "This is primary disclosure; exact incident scope remains bounded by OpenAI's published account."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "obs:nightly:2026-10-06:seed-loom-bridge",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-06T23:26:39Z",
+  "claim": "Seed Loom main now has a governed nightly-ingest execution bridge, but no 2026-10-06 intake branch or bundle existed at inspection time; the immediate bottleneck is evidence execution rather than schema authority.",
+  "verifiedFacts": [
+    "Current main HEAD is 15d5bdd74b6be8d7f2700f8595a2e25c420fcd03 from October 6, 2026.",
+    "The live Nightly Knowledge Ingest workflow triggers on automation/nightly-intake-* branches when a governed nightly bundle changes, checks out the exact branch, runs the coordinator, verifies generated paths, and commits candidate records and receipts back to the intake branch.",
+    "The canonical coordinator performs a dry-run first, checks runId and normalizedDigest, then runs the canonical ingest command and reports INGESTED_WITH_RECEIPT, DUPLICATE_ALREADY_PRESENT or BLOCKED_WITH_EXPLICIT_REASON.",
+    "No branch named automation/nightly-intake-2026-10-06 existed before this run; no main-side run or receipt for run:nightly:2026-10-06 was found."
+  ],
+  "inference": [
+    "The repository has crossed from 'bridge missing' to 'bridge present and bounded'; today's task can therefore exercise the actual delivery-to-ingest path rather than merely stage a bundle.",
+    "The portfolio's next proof value comes from running the bridge and Issue #24 proof, not from adding more schema or ontology surface."
+  ],
+  "significance": "This is a direct infrastructure-state change for Seed Loom and reduces the justification for additional architecture work before executing the proof path.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "opportunity",
+  "sourceRefs": [
+    "source:nightly:2026-10-06:seed-loom-main"
+  ],
+  "actorRefs": [
+    "actor:qt314wink",
+    "actor:Seed-Loom-maintainers",
+    "actor:GitHub-Actions"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "GitHub Actions will have permission and runner availability to push generated receipts back to the bounded branch.",
+    "The live coordinator remains compatible with the current bundle contract."
+  ],
+  "knownLimitations": [
+    "This run had not yet observed the workflow completion at the time of bundle creation.",
+    "Issue #24's two-isolated-real-ingest proof is not established merely by bridge existence."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

@@ -1,0 +1,50 @@
+{
+  "ackId": "ack:nightly:2026-10-06:relate",
+  "runId": "run:nightly:2026-10-06",
+  "stage": "relate",
+  "status": "passed",
+  "startedAt": "2026-10-06T23:26:39Z",
+  "completedAt": "2026-10-06T23:26:39Z",
+  "inputs": [
+    "run:nightly:2026-10-06"
+  ],
+  "outputs": [
+    "obs:nightly:2026-10-06:open-weight-frontier",
+    "obs:nightly:2026-10-06:creative-ops-mcp",
+    "obs:nightly:2026-10-06:agent-authority-incident",
+    "obs:nightly:2026-10-06:ecological-redox-control",
+    "obs:nightly:2026-10-06:seed-loom-bridge"
+  ],
+  "checks": [
+    {
+      "name": "provenance present",
+      "result": "pass",
+      "detail": "Primary/research/repository evidence or explicit collection failure recorded."
+    },
+    {
+      "name": "candidate-only boundary",
+      "result": "pass",
+      "detail": "No acceptance or promotion is authorized."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Stage may produce candidate evidence only."
+    ]
+  },
+  "provenance": {
+    "producer": "nightly consultancy intelligence",
+    "method": "48-hour bounded source/repository retrieval and live Seed Loom authority inspection",
+    "inputHashes": [
+      "1ef243007176e85cc8c61f991c732cb67f59da2c4bf9bd4e693a0d6d5af2a173",
+      "917ba46d3f15f0c5b9b71443d754a728f1090204be0a113eec5e6bd6f3edf869",
+      "ee45bbe236faef610eb1f5fceccbc850b70c644919476dbab7e49e305b97c7bc",
+      "3123dee513d63fd16b73aa35d177738f09cdc98fa7bf8024aadfb9c77b246d21",
+      "4169ac6e10d3b69045dbec93c4ca54ca0f3c3a02dacaad8f97fea47013e3ca64",
+      "40b3fd56d6ee080ffb887f27036bafaf1957927337e4409aca9a4a6859db07ef"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

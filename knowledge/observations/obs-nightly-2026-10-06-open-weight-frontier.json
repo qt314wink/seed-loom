@@ -1,0 +1,45 @@
+{
+  "id": "obs:nightly:2026-10-06:open-weight-frontier",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-06T23:26:39Z",
+  "claim": "Open-weight AI is moving closer to frontier-grade multimodal and agentic capability while keeping self-deployment and provider independence in the product story.",
+  "verifiedFacts": [
+    "Mistral launched a public preview of Mistral Large 4 on October 6, 2026; its model documentation lists 1.05T total parameters, 49B active parameters, native multimodality and a 1M-token context window.",
+    "Mistral says weights are planned for release later in October and is using the preview period for real-world red-teaming with cybersecurity leaders, vetted partners and public authorities.",
+    "Reflection AI introduced Beam on October 5, 2026 as a 501B-total/23B-active sparse MoE open-weight model for coding, reasoning and agentic workloads."
+  ],
+  "inference": [
+    "The competitive differentiator is shifting from access to a single best closed model toward controllable model supply, deployment sovereignty and fit-for-workload routing.",
+    "A consultancy that can benchmark governed workflows across open and closed providers can sell portability and evidence rather than model allegiance."
+  ],
+  "significance": "This strengthens the case for provider-portable, evidence-governed agent and knowledge workflows instead of provider-specific automation.",
+  "confidence": 0.9,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:nightly:2026-10-06:mistral-large-4",
+    "source:nightly:2026-10-06:reflection-beam"
+  ],
+  "actorRefs": [
+    "actor:Mistral-AI",
+    "actor:Reflection-AI",
+    "actor:AI-model-builders",
+    "actor:enterprise-buyers"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "qt314wink/observation-ad-pipeline",
+    "MelodicBloom/shader-gallery"
+  ],
+  "assumptions": [
+    "Open-weight availability will translate into usable deployment economics and support for real client workloads.",
+    "Provider portability will remain valuable as model capabilities converge."
+  ],
+  "knownLimitations": [
+    "Capability claims are primarily vendor-reported; independent benchmark replication is pending.",
+    "Beam is still undergoing final red-teaming according to its launch post."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

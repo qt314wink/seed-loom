@@ -1,0 +1,13 @@
+{
+  "id": "rel:nightly:2026-10-06:1",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:nightly:2026-10-06:open-weight-frontier",
+  "predicate": "MAY_ENABLE",
+  "to": "qt314wink/seed-loom",
+  "confidence": 0.92,
+  "evidenceRefs": [
+    "source:nightly:2026-10-06:mistral-large-4",
+    "source:nightly:2026-10-06:reflection-beam"
+  ]
+}

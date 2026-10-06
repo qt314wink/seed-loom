@@ -1,0 +1,15 @@
+{
+  "id": "source:nightly:2026-10-06:reflection-beam",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://reflection.ai/blog/introducing-beam",
+  "publisher": "Reflection AI",
+  "publishedAt": "2026-10-05T00:00:00Z",
+  "retrievedAt": "2026-10-06T23:26:39Z",
+  "sourceClass": "primary",
+  "independenceKey": "reflection-ai:beam:2026-10-05",
+  "contentHash": null,
+  "title": "Introducing Beam: Reflection’s 501B open-weight model",
+  "lead": "Reflection introduced Beam, a sparse MoE open-weight model with 501B total and 23B active parameters for coding, reasoning and agentic workloads.",
+  "analystNote": "Reflection's own capability and training claims remain vendor claims pending independent replication."
+}

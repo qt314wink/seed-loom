@@ -1,0 +1,44 @@
+{
+  "id": "obs:nightly:2026-10-06:creative-ops-mcp",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-06T23:26:39Z",
+  "claim": "Creative and enterprise workflow platforms are exposing real write-capable operations to external agents through MCP, making permission design part of creative-systems architecture.",
+  "verifiedFacts": [
+    "Adobe's Workfront Fusion MCP server supports compatible agentic platforms using remote Streamable HTTP MCP with OAuth.",
+    "Adobe documents tools that can let an agent find, inspect, create, run, update or delete Fusion items, subject to the connected user's Adobe permissions.",
+    "Adobe states the agent acts using the user's Adobe ID, organization role and team roles."
+  ],
+  "inference": [
+    "The durable service problem is no longer just prompt or workflow design; it is bounded authority design around real operational tools.",
+    "This creates a credible consultancy offer around agent-ready creative operations: permission maps, reversible actions, audit receipts and human gates."
+  ],
+  "significance": "Creative-tech consulting can move upstream from asset generation to safe orchestration of production systems.",
+  "confidence": 0.96,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "provider-terms",
+  "sourceRefs": [
+    "source:nightly:2026-10-06:adobe-fusion-mcp"
+  ],
+  "actorRefs": [
+    "actor:Adobe-Workfront",
+    "actor:creative-ops-platform-provider",
+    "actor:agent-builders",
+    "actor:creative-production-buyers"
+  ],
+  "affectedRepositories": [
+    "qt314wink/observation-ad-pipeline",
+    "qt314wink/seed-loom",
+    "MelodicBloom/shader-gallery"
+  ],
+  "assumptions": [
+    "Client teams will connect production systems to agents only when permissions and auditability are understandable.",
+    "MCP remains an important interoperability layer."
+  ],
+  "knownLimitations": [
+    "Adobe's documentation does not establish broad customer adoption or measured ROI.",
+    "This run did not inspect client-specific Fusion deployments."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}
