@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-10-07:normalize",
+  "runId": "run:nightly:2026-10-07",
+  "stage": "normalize",
+  "status": "passed",
+  "startedAt": "2026-10-07T19:18:14-04:00",
+  "completedAt": "2026-10-07T19:18:14-04:00",
+  "inputs": [
+    "5ee1997b37725f3fd97e7512e051754f529cffd9",
+    "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+    "984dae274d7fca05812874e5a1c338e3972c1c23",
+    "149024f2390b0e7c0be43926ad97ad35e272d7da",
+    "4a651b42c7c2a3d927e812e552ec413424287252",
+    "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+    "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+  ],
+  "outputs": [],
+  "checks": [
+    {
+      "name": "provenance present",
+      "result": "pass"
+    },
+    {
+      "name": "candidate-only boundary",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Daily intake remains candidate-only.",
+      "No acceptance or promotion is performed.",
+      "Consultancy/disposition substance is mirrored in inference because Observation is closed by live schema."
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-consultancy-intelligence",
+    "method": "48-hour source-vetted strategic sensing + GitHub authority inspection",
+    "inputHashes": [
+      "5ee1997b37725f3fd97e7512e051754f529cffd9",
+      "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+      "984dae274d7fca05812874e5a1c338e3972c1c23",
+      "149024f2390b0e7c0be43926ad97ad35e272d7da",
+      "4a651b42c7c2a3d927e812e552ec413424287252",
+      "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+      "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+    ]
+  }
+}

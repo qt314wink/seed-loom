@@ -1,0 +1,25 @@
+{
+  "id": "source:umass-mesh:2026-10-07",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://www.umass.edu/news/article/body-electric-umass-amherst-researchers-integrate-electronics-human-cells",
+  "publisher": "University of Massachusetts Amherst",
+  "publishedAt": "2026-10-07T19:18:14-04:00",
+  "retrievedAt": "2026-10-07T19:18:14-04:00",
+  "sourceClass": "official",
+  "independenceKey": "umass-mesh-2026-10-07",
+  "contentHash": null,
+  "title": "The Body Electric",
+  "lead": null,
+  "analystNote": null,
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": [],
+  "notes": null
+}

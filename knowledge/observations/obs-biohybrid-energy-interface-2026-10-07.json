@@ -1,0 +1,41 @@
+{
+  "id": "obs:biohybrid-energy-interface:2026-10-07",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-07T19:18:14-04:00",
+  "claim": "UMass Amherst researchers reported a flexible biohybrid mesh that integrates electronics with human cells and harvests biological electrical energy, pointing toward self-powered bioelectronic interfaces.",
+  "verifiedFacts": [
+    "UMass reported Oct. 7 that researchers developed an ultrathin flexible mesh integrating electronics with human cells.",
+    "The university reports continuous electrical supply and roughly ten-times the power density of standard centralized systems.",
+    "The work is described as published in Science Advances."
+  ],
+  "inference": [
+    "A durable design pattern is co-design of sensing, power, material substrate and biological feedback.",
+    "This reinforces translating cross-domain research into inspectable demonstrations without overstating readiness."
+  ],
+  "significance": "Medium-high: concrete bio-material/electronic interface with wearable and implantable implications.",
+  "confidence": 0.9,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:umass-mesh:2026-10-07"
+  ],
+  "actorRefs": [
+    "researcher:umass-amherst",
+    "researcher:science-advances",
+    "builder:bioelectronics"
+  ],
+  "affectedRepositories": [
+    "qt314wink/omni-loom",
+    "qt314wink/living-intelligence-architecture",
+    "MelodicBloom/mandala-laser-system"
+  ],
+  "assumptions": [
+    "Reported power-density result reproduces outside the reported setup."
+  ],
+  "knownLimitations": [
+    "Full paper, durability, manufacturing and in-vivo readiness were not inspected."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

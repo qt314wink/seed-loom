@@ -1,0 +1,55 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-10-07T23:22:34.816Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-10-07",
+      "bundlePath": "knowledge/intake/nightly/2026-10-07/nightly-run-bundle-2026-10-07.json",
+      "bundleSha256": "aedd0776faef5afea56bdb84aaaf4b3bafa677bf0e4166b1cd3632df3a1924f9",
+      "normalizedDigest": "2f14d51ab8699dc06e620ac2b1e9ce956542e6bf0973a35ca2a0a08de60e581d",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-google-playground-2026-10-07.json",
+        "knowledge/sources/source-unity-spark-2026-10-07.json",
+        "knowledge/sources/source-gitlab-factory-2026-10-07.json",
+        "knowledge/sources/source-rsa-agent-id-2026-10-07.json",
+        "knowledge/sources/source-virtual-biology-2026-10-07.json",
+        "knowledge/sources/source-umass-mesh-2026-10-07.json",
+        "knowledge/observations/obs-ai-interactive-creation-threshold-2026-10-07.json",
+        "knowledge/observations/obs-governed-software-factory-2026-10-07.json",
+        "knowledge/observations/obs-agent-identity-authority-layer-2026-10-07.json",
+        "knowledge/observations/obs-virtual-biology-open-data-infrastructure-2026-10-07.json",
+        "knowledge/observations/obs-biohybrid-energy-interface-2026-10-07.json",
+        "knowledge/relationships/rel-nightly-2026-10-07-1.json",
+        "knowledge/relationships/rel-nightly-2026-10-07-2.json",
+        "knowledge/relationships/rel-nightly-2026-10-07-3.json",
+        "knowledge/relationships/rel-nightly-2026-10-07-4.json",
+        "knowledge/relationships/rel-nightly-2026-10-07-5.json",
+        "knowledge/runs/run-nightly-2026-10-07.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-07-collect.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-07-vet.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-07-normalize.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-07-observe.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-07-inquire.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-07-interpret.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-07-relate.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-07-pattern.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-07-opportunity.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-07-strategy.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-07-experiment.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-07-genesis.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-07-publish.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-10-07-ingest.json",
+      "generatedRecordCount": 30
+    }
+  ]
+}

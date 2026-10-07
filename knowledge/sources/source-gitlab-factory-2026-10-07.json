@@ -1,0 +1,25 @@
+{
+  "id": "source:gitlab-factory:2026-10-07",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://about.gitlab.com/press/releases/2026-10-06-gitlab-announces-the-foundation-of-the-governed-software-factory/",
+  "publisher": "GitLab",
+  "publishedAt": "2026-10-07T19:18:14-04:00",
+  "retrievedAt": "2026-10-07T19:18:14-04:00",
+  "sourceClass": "official",
+  "independenceKey": "gitlab-factory-2026-10-07",
+  "contentHash": null,
+  "title": "Foundation for the Governed Software Factory",
+  "lead": null,
+  "analystNote": null,
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": [],
+  "notes": null
+}

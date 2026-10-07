@@ -1,0 +1,25 @@
+{
+  "id": "source:virtual-biology:2026-10-07",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-government-google-join-zuckerberg-backed-biohub-18-billion-push-ai-biology-2026-10-07/",
+  "publisher": "Reuters",
+  "publishedAt": "2026-10-07T19:18:14-04:00",
+  "retrievedAt": "2026-10-07T19:18:14-04:00",
+  "sourceClass": "press",
+  "independenceKey": "virtual-biology-2026-10-07",
+  "contentHash": null,
+  "title": "U.S. government, Google join Biohub in $1.8 billion AI biology push",
+  "lead": null,
+  "analystNote": null,
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": [],
+  "notes": null
+}

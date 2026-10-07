@@ -1,0 +1,25 @@
+{
+  "id": "source:google-playground:2026-10-07",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+  "publisher": "Google",
+  "publishedAt": "2026-10-07T19:18:14-04:00",
+  "retrievedAt": "2026-10-07T19:18:14-04:00",
+  "sourceClass": "official",
+  "independenceKey": "google-playground-2026-10-07",
+  "contentHash": null,
+  "title": "Introducing Playground: Create and play custom games",
+  "lead": null,
+  "analystNote": null,
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": [],
+  "notes": null
+}

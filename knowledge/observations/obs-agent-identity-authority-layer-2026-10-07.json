@@ -1,0 +1,39 @@
+{
+  "id": "obs:agent-identity-authority-layer:2026-10-07",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-07T19:18:14-04:00",
+  "claim": "RSA announced an agent-identity layer that treats AI agents as governable actors with named owners, scoped permissions and attributable per-call records.",
+  "verifiedFacts": [
+    "RSA announced Agent ID Oct. 7 for regulated organizations.",
+    "Discover and Secure are scheduled for Nov. 16, 2026; Govern is planned for H1 2027.",
+    "RSA describes discovery, ownership, bounded permissions, tool/argument policy and attributable records."
+  ],
+  "inference": [
+    "Identity and action authority are becoming explicit lifecycle objects.",
+    "A vendor-neutral agent evaluation/control review can sit above providers because governance questions recur across tools."
+  ],
+  "significance": "High: agent governance is becoming an identity and authorization buying surface.",
+  "confidence": 0.97,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:rsa-agent-id:2026-10-07"
+  ],
+  "actorRefs": [
+    "provider:rsa",
+    "buyer:regulated-enterprise"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "qt314wink/nextjs-boilerplate"
+  ],
+  "assumptions": [
+    "Organizations will need cross-provider agent inventories."
+  ],
+  "knownLimitations": [
+    "Product is not generally available; procurement and efficacy are unproven."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

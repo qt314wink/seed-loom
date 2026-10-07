@@ -1,0 +1,15 @@
+{
+  "id": "rel:nightly-2026-10-07:1",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:ai-interactive-creation-threshold:2026-10-07",
+  "predicate": "REFINES",
+  "to": "opportunity:governed-creative-runtime-pipeline",
+  "confidence": 0.9,
+  "evidenceRefs": [
+    "source:google-playground:2026-10-07",
+    "source:unity-spark:2026-10-07"
+  ],
+  "validFrom": "2026-10-07T19:18:14-04:00",
+  "validTo": null
+}

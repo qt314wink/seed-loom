@@ -1,0 +1,14 @@
+{
+  "id": "rel:nightly-2026-10-07:2",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:governed-software-factory:2026-10-07",
+  "predicate": "REFINES",
+  "to": "opportunity:agentic-delivery-control-review",
+  "confidence": 0.95,
+  "evidenceRefs": [
+    "source:gitlab-factory:2026-10-07"
+  ],
+  "validFrom": "2026-10-07T19:18:14-04:00",
+  "validTo": null
+}

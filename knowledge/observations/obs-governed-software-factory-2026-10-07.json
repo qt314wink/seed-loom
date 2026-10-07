@@ -1,0 +1,41 @@
+{
+  "id": "obs:governed-software-factory:2026-10-07",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-07T19:18:14-04:00",
+  "claim": "GitLab is packaging agentic software development as a governed software factory with shared identity, policy, evidence, security and cost-impact controls across the lifecycle.",
+  "verifiedFacts": [
+    "GitLab announced governed software-factory capabilities Oct. 6.",
+    "The release includes connected agentic flows, Artifact Central, Dependency Firewall, Secrets Manager, Security Standard and Impact Analytics.",
+    "GitLab reports agentic software-development active users grew 200% year over year and Orbit has been used by more than 3,500 organizations."
+  ],
+  "inference": [
+    "Enterprise buyers are being offered an explicit control-plane category for agent-generated software.",
+    "This strengthens the thesis that provenance, policy and evidence chains can be productized as delivery infrastructure."
+  ],
+  "significance": "High: agentic delivery governance is becoming a competitive platform boundary.",
+  "confidence": 0.96,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:gitlab-factory:2026-10-07"
+  ],
+  "actorRefs": [
+    "provider:gitlab",
+    "buyer:enterprise-engineering",
+    "supplier:anthropic"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "qt314wink/nextjs-boilerplate",
+    "qt314wink/epistemic-infrastructure-workflow"
+  ],
+  "assumptions": [
+    "GitLab-reported adoption figures generalize beyond its telemetry."
+  ],
+  "knownLimitations": [
+    "Independent ROI and customer outcome data are missing."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

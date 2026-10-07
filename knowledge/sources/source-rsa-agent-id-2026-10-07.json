@@ -1,0 +1,25 @@
+{
+  "id": "source:rsa-agent-id:2026-10-07",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://www.rsa.com/news/press-releases/rsa-agent-id-world-summit-ai/",
+  "publisher": "RSA",
+  "publishedAt": "2026-10-07T19:18:14-04:00",
+  "retrievedAt": "2026-10-07T19:18:14-04:00",
+  "sourceClass": "official",
+  "independenceKey": "rsa-agent-id-2026-10-07",
+  "contentHash": null,
+  "title": "RSA Agent ID",
+  "lead": null,
+  "analystNote": null,
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": [],
+  "notes": null
+}

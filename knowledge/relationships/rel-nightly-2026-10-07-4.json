@@ -1,0 +1,14 @@
+{
+  "id": "rel:nightly-2026-10-07:4",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:virtual-biology-open-data-infrastructure:2026-10-07",
+  "predicate": "REFINES",
+  "to": "opportunity:scientific-evidence-portability",
+  "confidence": 0.82,
+  "evidenceRefs": [
+    "source:virtual-biology:2026-10-07"
+  ],
+  "validFrom": "2026-10-07T19:18:14-04:00",
+  "validTo": null
+}

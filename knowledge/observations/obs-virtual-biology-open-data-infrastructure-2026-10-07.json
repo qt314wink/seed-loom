@@ -1,0 +1,41 @@
+{
+  "id": "obs:virtual-biology-open-data-infrastructure:2026-10-07",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-07T19:18:14-04:00",
+  "claim": "A large public-private initiative is committing billions toward open biological datasets and predictive virtual-cell models, making data provenance and benchmark infrastructure a strategic bottleneck for AI biology.",
+  "verifiedFacts": [
+    "Reuters reported Oct. 7 that Meta, Google and Isomorphic Labs are contributing $300M to Biohub's effort and the broader initiative is valued at $1.8B.",
+    "Reuters reported more than $500M in Department of Energy support over five years and additional federal coordination/funding.",
+    "The initiative aims to generate open biological datasets and predictive models of cellular responses."
+  ],
+  "inference": [
+    "High-consequence AI may increasingly bottleneck on governed data generation and benchmark quality.",
+    "Seed Loom provenance and evidence-maturity concepts have a plausible cross-domain analogue, but this remains a research thesis."
+  ],
+  "significance": "High: major capital is flowing into evidence-producing scientific infrastructure.",
+  "confidence": 0.91,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:virtual-biology:2026-10-07"
+  ],
+  "actorRefs": [
+    "funder:meta-google-isomorphic",
+    "funder:us-government",
+    "researcher:biohub",
+    "researcher:ai-biology"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "qt314wink/living-intelligence-architecture"
+  ],
+  "assumptions": [
+    "Reported funding and open-data commitments are implemented as described."
+  ],
+  "knownLimitations": [
+    "Primary Biohub announcement was not independently retrieved; direct consultancy demand is unknown."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}
