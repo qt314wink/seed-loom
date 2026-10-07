@@ -1,0 +1,29 @@
+{
+  "id": "source:amazon-data-center-nda-shift:2026",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/",
+  "publisher": "TechCrunch",
+  "publishedAt": "2026-10-03T18:43:00Z",
+  "retrievedAt": "2026-10-04T19:19:42-04:00",
+  "sourceClass": "press",
+  "independenceKey": "amazon-data-center-nda-shift-2026-10-03",
+  "contentHash": null,
+  "title": "Amazon responds to data center backlash",
+  "lead": "AWS CEO Matt Garman said Amazon stopped using NDAs with government agencies for data-center approvals.",
+  "analystNote": "Press report of direct executive statement; local approval records were not collected.",
+  "syndicatedFrom": null,
+  "doi": null,
+  "upstreamReport": null,
+  "policyDocument": null,
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": [],
+  "notes": "Fresh action signal."
+}

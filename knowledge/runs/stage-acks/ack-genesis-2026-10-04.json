@@ -1,0 +1,36 @@
+{
+  "ackId": "ack:genesis:2026-10-04",
+  "runId": "run:nightly:2026-10-04",
+  "stage": "genesis",
+  "status": "deferred",
+  "startedAt": "2026-10-04T19:19:42-04:00",
+  "completedAt": "2026-10-04T19:19:42-04:00",
+  "inputs": [
+    "ack:experiment:2026-10-04"
+  ],
+  "outputs": [
+    "stage:genesis:2026-10-04"
+  ],
+  "checks": [
+    {
+      "name": "genesis-gate",
+      "result": "pass",
+      "detail": "Transition explicitly blocked."
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "Genesis remains deferred."
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence-automation",
+    "method": "governed genesis boundary",
+    "inputHashes": [
+      "sha256:research-window-2026-10-04"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

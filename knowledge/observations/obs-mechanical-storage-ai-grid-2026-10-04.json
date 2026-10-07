@@ -1,0 +1,50 @@
+{
+  "id": "obs:mechanical-storage-ai-grid:2026-10-04",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-04T19:19:42-04:00",
+  "claim": "Long-duration mechanical energy storage is being publicly crowdfunded as infrastructure for a compute-heavy grid, with validation partners and pilot plans part of the investment case.",
+  "verifiedFacts": [
+    "Qnetic's current page shows a live Regulation CF offering with a target close of October 4.",
+    "At retrieval it showed $3.23M committed toward a $4.10M maximum and 1,377 investors.",
+    "Qnetic states plans for 2027 utility/lab pilots and EPRI validation and explicitly says it is pre-revenue."
+  ],
+  "inference": [
+    "Verified: retail capital is being solicited for physical grid infrastructure tied to AI-era electricity demand.",
+    "Inferred: validation evidence can be part of the commercialization stack for emerging climate hardware.",
+    "Unknown: whether the offering closes or pilots convert into procurement."
+  ],
+  "significance": "Provides a regenerative-infrastructure analogue for evidence-linked engineering, funding and pilot governance.",
+  "confidence": 0.9,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "validFrom": "2026-10-04T00:00:00Z",
+  "validUntil": null,
+  "reviewBy": "2026-11-04T23:59:59-04:00",
+  "termsChangedAt": null,
+  "closedAt": null,
+  "closureRef": null,
+  "supersededBy": null,
+  "sourceRefs": [
+    "source:qnetic-crowdfunding-close:2026"
+  ],
+  "actorRefs": [
+    "actor:qnetic",
+    "actor:retail-investors",
+    "actor:epri",
+    "actor:utilities"
+  ],
+  "affectedRepositories": [
+    "qt314wink/fabricate",
+    "qt314wink/omni-loom-case-study",
+    "MelodicBloom/philly-civic-ai"
+  ],
+  "assumptions": [
+    "Public evidence patterns can be reused as systems-engineering case studies."
+  ],
+  "knownLimitations": [
+    "Issuer claims are not independently measured commercial performance."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

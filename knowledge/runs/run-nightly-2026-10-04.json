@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-10-04",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-10-02T19:19:42-04:00",
+    "to": "2026-10-04T19:19:42-04:00"
+  },
+  "newObservations": [
+    "obs:agent-database-infrastructure:2026-10-04",
+    "obs:data-center-social-license:2026-10-04",
+    "obs:preventive-health-compute-model:2026-10-04",
+    "obs:integrated-electric-mobility-system:2026-10-04",
+    "obs:mechanical-storage-ai-grid:2026-10-04"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "pattern:agent-lifecycle-infrastructure",
+    "pattern:civic-compute-evidence",
+    "pattern:physical-system-evidence",
+    "pattern:regenerative-infrastructure-validation"
+  ],
+  "newRelationships": [
+    "rel:supabase-refines-agent-infrastructure:2026-10-04",
+    "rel:civic-evidence-enables-compute-advisory:2026-10-04",
+    "rel:preventive-evidence-refines-translation:2026-10-04",
+    "rel:hydrofoil-refines-physical-system-proof:2026-10-04",
+    "rel:storage-refines-regenerative-infrastructure:2026-10-04"
+  ],
+  "contradictions": [],
+  "opportunities": [
+    "opportunity:agent-lifecycle-governance-review",
+    "opportunity:civic-compute-evidence-review",
+    "opportunity:technical-evidence-translation",
+    "opportunity:physical-system-proof",
+    "opportunity:regenerative-infrastructure-evidence-service"
+  ],
+  "proposedExperiments": [
+    "experiment:agent-lifecycle-receipt",
+    "experiment:physical-system-telemetry-compiler"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false,
+      "repository": "qt314wink/seed-loom",
+      "allowedPaths": [
+        "knowledge/intake/nightly/**"
+      ]
+    }
+  ],
+  "noChangeReceipts": [
+    "dedup:2026-10-03-signals-reviewed",
+    "repo-watch:inspection-only",
+    "genesis:deferred"
+  ],
+  "collectionFailures": [
+    "Independent buyer procurement, consulting spend, retention, clinical outcomes and commercial route-economics evidence was not independently established within the strict 48-hour window."
+  ]
+}
