@@ -1,0 +1,1739 @@
+{
+  "run": {
+    "schemaVersion": "1.1.0",
+    "runId": "run:nightly:2026-10-07",
+    "type": "ResearchRun",
+    "ingestionMode": "delivered",
+    "retrievalWindow": {
+      "from": "2026-10-05T19:18:14-04:00",
+      "to": "2026-10-07T19:18:14-04:00"
+    },
+    "newObservations": [
+      "obs:ai-interactive-creation-threshold:2026-10-07",
+      "obs:governed-software-factory:2026-10-07",
+      "obs:agent-identity-authority-layer:2026-10-07",
+      "obs:virtual-biology-open-data-infrastructure:2026-10-07",
+      "obs:biohybrid-energy-interface:2026-10-07"
+    ],
+    "updatedObservations": [],
+    "candidatePatterns": [
+      "pattern:creative-authoring-to-runtime",
+      "pattern:governed-agent-control-plane",
+      "pattern:agent-identity-and-authority",
+      "pattern:evidence-producing-scientific-infrastructure",
+      "pattern:biohybrid-system-co-design"
+    ],
+    "newRelationships": [
+      "rel:nightly-2026-10-07:1",
+      "rel:nightly-2026-10-07:2",
+      "rel:nightly-2026-10-07:3",
+      "rel:nightly-2026-10-07:4",
+      "rel:nightly-2026-10-07:5"
+    ],
+    "contradictions": [
+      "AI authoring can lower implementation barriers while increasing the relative value of taste, verification and craft.",
+      "Integrated agent control planes may reduce fragmentation while increasing vendor concentration."
+    ],
+    "opportunities": [
+      "opportunity:governed-creative-runtime-pipeline",
+      "opportunity:agentic-delivery-control-review",
+      "opportunity:agent-evaluation-authority-review",
+      "opportunity:scientific-evidence-portability",
+      "opportunity:biohybrid-system-demonstration"
+    ],
+    "proposedExperiments": [
+      "experiment:prompt-to-proof-interactive-specimen",
+      "experiment:cross-provider-agent-authority-receipt"
+    ],
+    "repositoryActions": [
+      {
+        "status": "proposed",
+        "executed": false,
+        "repository": "qt314wink/seed-loom",
+        "allowedPaths": [
+          "knowledge/intake/nightly/2026-10-07/**"
+        ]
+      }
+    ],
+    "noChangeReceipts": [
+      "dedup:prior-nightly-observations-2026-10-05-reviewed",
+      "repo-watch:inspection-only",
+      "genesis:deferred",
+      "publish:deferred"
+    ],
+    "collectionFailures": [
+      "Independent buyer procurement, consulting spend, retention and measured commercial outcomes were not independently established within the strict 48-hour window.",
+      "Primary Biohub announcement was not independently retrieved; virtual-biology relies on Reuters.",
+      "Full Science Advances paper for the UMass mesh was not inspected.",
+      "Canonical push-triggered workflow execution cannot be directly verified by the available commit-run lookup, which exposes pull-request-triggered runs only."
+    ]
+  },
+  "sources": [
+    {
+      "id": "source:google-playground:2026-10-07",
+      "type": "Source",
+      "schemaVersion": "1.1.0",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+      "publisher": "Google",
+      "publishedAt": "2026-10-07T19:18:14-04:00",
+      "retrievedAt": "2026-10-07T19:18:14-04:00",
+      "sourceClass": "official",
+      "independenceKey": "google-playground-2026-10-07",
+      "contentHash": null,
+      "title": "Introducing Playground: Create and play custom games",
+      "lead": null,
+      "analystNote": null,
+      "upstream": {
+        "doi": null,
+        "report": null,
+        "policyDocument": null,
+        "announcement": null,
+        "study": null
+      },
+      "cites": [],
+      "citedBy": [],
+      "notes": null
+    },
+    {
+      "id": "source:unity-spark:2026-10-07",
+      "type": "Source",
+      "schemaVersion": "1.1.0",
+      "url": "https://unity.com/news/google-and-unity-partner-on-new-ai-gaming-platform-for-the-next-era-of-interactive-entertainment",
+      "publisher": "Unity",
+      "publishedAt": "2026-10-07T19:18:14-04:00",
+      "retrievedAt": "2026-10-07T19:18:14-04:00",
+      "sourceClass": "official",
+      "independenceKey": "unity-spark-2026-10-07",
+      "contentHash": null,
+      "title": "Google and Unity Partner on New AI Gaming Platform",
+      "lead": null,
+      "analystNote": null,
+      "upstream": {
+        "doi": null,
+        "report": null,
+        "policyDocument": null,
+        "announcement": null,
+        "study": null
+      },
+      "cites": [],
+      "citedBy": [],
+      "notes": null
+    },
+    {
+      "id": "source:gitlab-factory:2026-10-07",
+      "type": "Source",
+      "schemaVersion": "1.1.0",
+      "url": "https://about.gitlab.com/press/releases/2026-10-06-gitlab-announces-the-foundation-of-the-governed-software-factory/",
+      "publisher": "GitLab",
+      "publishedAt": "2026-10-07T19:18:14-04:00",
+      "retrievedAt": "2026-10-07T19:18:14-04:00",
+      "sourceClass": "official",
+      "independenceKey": "gitlab-factory-2026-10-07",
+      "contentHash": null,
+      "title": "Foundation for the Governed Software Factory",
+      "lead": null,
+      "analystNote": null,
+      "upstream": {
+        "doi": null,
+        "report": null,
+        "policyDocument": null,
+        "announcement": null,
+        "study": null
+      },
+      "cites": [],
+      "citedBy": [],
+      "notes": null
+    },
+    {
+      "id": "source:rsa-agent-id:2026-10-07",
+      "type": "Source",
+      "schemaVersion": "1.1.0",
+      "url": "https://www.rsa.com/news/press-releases/rsa-agent-id-world-summit-ai/",
+      "publisher": "RSA",
+      "publishedAt": "2026-10-07T19:18:14-04:00",
+      "retrievedAt": "2026-10-07T19:18:14-04:00",
+      "sourceClass": "official",
+      "independenceKey": "rsa-agent-id-2026-10-07",
+      "contentHash": null,
+      "title": "RSA Agent ID",
+      "lead": null,
+      "analystNote": null,
+      "upstream": {
+        "doi": null,
+        "report": null,
+        "policyDocument": null,
+        "announcement": null,
+        "study": null
+      },
+      "cites": [],
+      "citedBy": [],
+      "notes": null
+    },
+    {
+      "id": "source:virtual-biology:2026-10-07",
+      "type": "Source",
+      "schemaVersion": "1.1.0",
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/us-government-google-join-zuckerberg-backed-biohub-18-billion-push-ai-biology-2026-10-07/",
+      "publisher": "Reuters",
+      "publishedAt": "2026-10-07T19:18:14-04:00",
+      "retrievedAt": "2026-10-07T19:18:14-04:00",
+      "sourceClass": "press",
+      "independenceKey": "virtual-biology-2026-10-07",
+      "contentHash": null,
+      "title": "U.S. government, Google join Biohub in $1.8 billion AI biology push",
+      "lead": null,
+      "analystNote": null,
+      "upstream": {
+        "doi": null,
+        "report": null,
+        "policyDocument": null,
+        "announcement": null,
+        "study": null
+      },
+      "cites": [],
+      "citedBy": [],
+      "notes": null
+    },
+    {
+      "id": "source:umass-mesh:2026-10-07",
+      "type": "Source",
+      "schemaVersion": "1.1.0",
+      "url": "https://www.umass.edu/news/article/body-electric-umass-amherst-researchers-integrate-electronics-human-cells",
+      "publisher": "University of Massachusetts Amherst",
+      "publishedAt": "2026-10-07T19:18:14-04:00",
+      "retrievedAt": "2026-10-07T19:18:14-04:00",
+      "sourceClass": "official",
+      "independenceKey": "umass-mesh-2026-10-07",
+      "contentHash": null,
+      "title": "The Body Electric",
+      "lead": null,
+      "analystNote": null,
+      "upstream": {
+        "doi": null,
+        "report": null,
+        "policyDocument": null,
+        "announcement": null,
+        "study": null
+      },
+      "cites": [],
+      "citedBy": [],
+      "notes": null
+    }
+  ],
+  "observations": [
+    {
+      "id": "obs:ai-interactive-creation-threshold:2026-10-07",
+      "type": "Observation",
+      "schemaVersion": "1.1.0",
+      "capturedAt": "2026-10-07T19:18:14-04:00",
+      "claim": "Google and Unity are lowering the technical barrier to interactive-media creation by making prompt-driven game creation browser-native, with a path toward professional Unity tooling.",
+      "verifiedFacts": [
+        "Google launched Playground Oct. 7 as an experimental browser platform for creating, playing and sharing games from natural-language prompts.",
+        "Unity announced a Google partnership and Unity Spark as a later-2026 expansion with professional-level mechanics and higher-fidelity 3D.",
+        "Google says creators can iterate on rules, physics, characters and environments conversationally."
+      ],
+      "inference": [
+        "The scarce service layer may shift toward creative direction, interaction architecture, system coherence and polish.",
+        "A defensible offer should govern creative intent through runtime verification, not sell prompts alone."
+      ],
+      "significance": "High: accessible interactive authoring increases the relative value of taste, systems design and verification.",
+      "confidence": 0.93,
+      "evidenceMaturity": "source-backed",
+      "evidenceClass": "model-capability",
+      "sourceRefs": [
+        "source:google-playground:2026-10-07",
+        "source:unity-spark:2026-10-07"
+      ],
+      "actorRefs": [
+        "provider:google",
+        "builder:unity",
+        "participant:creators"
+      ],
+      "affectedRepositories": [
+        "qt314wink/nextjs-boilerplate",
+        "MelodicBloom/melodyfire",
+        "MelodicBloom/shader-gallery"
+      ],
+      "assumptions": [
+        "Playground capabilities persist beyond the experiment."
+      ],
+      "knownLimitations": [
+        "Unity Spark is not yet independently evaluated.",
+        "Commercial displacement of developers/designers is unproven."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    },
+    {
+      "id": "obs:governed-software-factory:2026-10-07",
+      "type": "Observation",
+      "schemaVersion": "1.1.0",
+      "capturedAt": "2026-10-07T19:18:14-04:00",
+      "claim": "GitLab is packaging agentic software development as a governed software factory with shared identity, policy, evidence, security and cost-impact controls across the lifecycle.",
+      "verifiedFacts": [
+        "GitLab announced governed software-factory capabilities Oct. 6.",
+        "The release includes connected agentic flows, Artifact Central, Dependency Firewall, Secrets Manager, Security Standard and Impact Analytics.",
+        "GitLab reports agentic software-development active users grew 200% year over year and Orbit has been used by more than 3,500 organizations."
+      ],
+      "inference": [
+        "Enterprise buyers are being offered an explicit control-plane category for agent-generated software.",
+        "This strengthens the thesis that provenance, policy and evidence chains can be productized as delivery infrastructure."
+      ],
+      "significance": "High: agentic delivery governance is becoming a competitive platform boundary.",
+      "confidence": 0.96,
+      "evidenceMaturity": "source-backed",
+      "evidenceClass": "model-capability",
+      "sourceRefs": [
+        "source:gitlab-factory:2026-10-07"
+      ],
+      "actorRefs": [
+        "provider:gitlab",
+        "buyer:enterprise-engineering",
+        "supplier:anthropic"
+      ],
+      "affectedRepositories": [
+        "qt314wink/seed-loom",
+        "qt314wink/nextjs-boilerplate",
+        "qt314wink/epistemic-infrastructure-workflow"
+      ],
+      "assumptions": [
+        "GitLab-reported adoption figures generalize beyond its telemetry."
+      ],
+      "knownLimitations": [
+        "Independent ROI and customer outcome data are missing."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    },
+    {
+      "id": "obs:agent-identity-authority-layer:2026-10-07",
+      "type": "Observation",
+      "schemaVersion": "1.1.0",
+      "capturedAt": "2026-10-07T19:18:14-04:00",
+      "claim": "RSA announced an agent-identity layer that treats AI agents as governable actors with named owners, scoped permissions and attributable per-call records.",
+      "verifiedFacts": [
+        "RSA announced Agent ID Oct. 7 for regulated organizations.",
+        "Discover and Secure are scheduled for Nov. 16, 2026; Govern is planned for H1 2027.",
+        "RSA describes discovery, ownership, bounded permissions, tool/argument policy and attributable records."
+      ],
+      "inference": [
+        "Identity and action authority are becoming explicit lifecycle objects.",
+        "A vendor-neutral agent evaluation/control review can sit above providers because governance questions recur across tools."
+      ],
+      "significance": "High: agent governance is becoming an identity and authorization buying surface.",
+      "confidence": 0.97,
+      "evidenceMaturity": "source-backed",
+      "evidenceClass": "model-capability",
+      "sourceRefs": [
+        "source:rsa-agent-id:2026-10-07"
+      ],
+      "actorRefs": [
+        "provider:rsa",
+        "buyer:regulated-enterprise"
+      ],
+      "affectedRepositories": [
+        "qt314wink/seed-loom",
+        "qt314wink/nextjs-boilerplate"
+      ],
+      "assumptions": [
+        "Organizations will need cross-provider agent inventories."
+      ],
+      "knownLimitations": [
+        "Product is not generally available; procurement and efficacy are unproven."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    },
+    {
+      "id": "obs:virtual-biology-open-data-infrastructure:2026-10-07",
+      "type": "Observation",
+      "schemaVersion": "1.1.0",
+      "capturedAt": "2026-10-07T19:18:14-04:00",
+      "claim": "A large public-private initiative is committing billions toward open biological datasets and predictive virtual-cell models, making data provenance and benchmark infrastructure a strategic bottleneck for AI biology.",
+      "verifiedFacts": [
+        "Reuters reported Oct. 7 that Meta, Google and Isomorphic Labs are contributing $300M to Biohub's effort and the broader initiative is valued at $1.8B.",
+        "Reuters reported more than $500M in Department of Energy support over five years and additional federal coordination/funding.",
+        "The initiative aims to generate open biological datasets and predictive models of cellular responses."
+      ],
+      "inference": [
+        "High-consequence AI may increasingly bottleneck on governed data generation and benchmark quality.",
+        "Seed Loom provenance and evidence-maturity concepts have a plausible cross-domain analogue, but this remains a research thesis."
+      ],
+      "significance": "High: major capital is flowing into evidence-producing scientific infrastructure.",
+      "confidence": 0.91,
+      "evidenceMaturity": "source-backed",
+      "evidenceClass": "funding",
+      "sourceRefs": [
+        "source:virtual-biology:2026-10-07"
+      ],
+      "actorRefs": [
+        "funder:meta-google-isomorphic",
+        "funder:us-government",
+        "researcher:biohub",
+        "researcher:ai-biology"
+      ],
+      "affectedRepositories": [
+        "qt314wink/seed-loom",
+        "qt314wink/living-intelligence-architecture"
+      ],
+      "assumptions": [
+        "Reported funding and open-data commitments are implemented as described."
+      ],
+      "knownLimitations": [
+        "Primary Biohub announcement was not independently retrieved; direct consultancy demand is unknown."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    },
+    {
+      "id": "obs:biohybrid-energy-interface:2026-10-07",
+      "type": "Observation",
+      "schemaVersion": "1.1.0",
+      "capturedAt": "2026-10-07T19:18:14-04:00",
+      "claim": "UMass Amherst researchers reported a flexible biohybrid mesh that integrates electronics with human cells and harvests biological electrical energy, pointing toward self-powered bioelectronic interfaces.",
+      "verifiedFacts": [
+        "UMass reported Oct. 7 that researchers developed an ultrathin flexible mesh integrating electronics with human cells.",
+        "The university reports continuous electrical supply and roughly ten-times the power density of standard centralized systems.",
+        "The work is described as published in Science Advances."
+      ],
+      "inference": [
+        "A durable design pattern is co-design of sensing, power, material substrate and biological feedback.",
+        "This reinforces translating cross-domain research into inspectable demonstrations without overstating readiness."
+      ],
+      "significance": "Medium-high: concrete bio-material/electronic interface with wearable and implantable implications.",
+      "confidence": 0.9,
+      "evidenceMaturity": "source-backed",
+      "evidenceClass": "peer-reviewed-research",
+      "sourceRefs": [
+        "source:umass-mesh:2026-10-07"
+      ],
+      "actorRefs": [
+        "researcher:umass-amherst",
+        "researcher:science-advances",
+        "builder:bioelectronics"
+      ],
+      "affectedRepositories": [
+        "qt314wink/omni-loom",
+        "qt314wink/living-intelligence-architecture",
+        "MelodicBloom/mandala-laser-system"
+      ],
+      "assumptions": [
+        "Reported power-density result reproduces outside the reported setup."
+      ],
+      "knownLimitations": [
+        "Full paper, durability, manufacturing and in-vivo readiness were not inspected."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "rel:nightly-2026-10-07:1",
+      "type": "Relationship",
+      "schemaVersion": "1.1.0",
+      "from": "obs:ai-interactive-creation-threshold:2026-10-07",
+      "predicate": "REFINES",
+      "to": "opportunity:governed-creative-runtime-pipeline",
+      "confidence": 0.9,
+      "evidenceRefs": [
+        "source:google-playground:2026-10-07",
+        "source:unity-spark:2026-10-07"
+      ],
+      "validFrom": "2026-10-07T19:18:14-04:00",
+      "validTo": null
+    },
+    {
+      "id": "rel:nightly-2026-10-07:2",
+      "type": "Relationship",
+      "schemaVersion": "1.1.0",
+      "from": "obs:governed-software-factory:2026-10-07",
+      "predicate": "REFINES",
+      "to": "opportunity:agentic-delivery-control-review",
+      "confidence": 0.95,
+      "evidenceRefs": [
+        "source:gitlab-factory:2026-10-07"
+      ],
+      "validFrom": "2026-10-07T19:18:14-04:00",
+      "validTo": null
+    },
+    {
+      "id": "rel:nightly-2026-10-07:3",
+      "type": "Relationship",
+      "schemaVersion": "1.1.0",
+      "from": "obs:agent-identity-authority-layer:2026-10-07",
+      "predicate": "REFINES",
+      "to": "opportunity:agent-evaluation-authority-review",
+      "confidence": 0.96,
+      "evidenceRefs": [
+        "source:rsa-agent-id:2026-10-07"
+      ],
+      "validFrom": "2026-10-07T19:18:14-04:00",
+      "validTo": null
+    },
+    {
+      "id": "rel:nightly-2026-10-07:4",
+      "type": "Relationship",
+      "schemaVersion": "1.1.0",
+      "from": "obs:virtual-biology-open-data-infrastructure:2026-10-07",
+      "predicate": "REFINES",
+      "to": "opportunity:scientific-evidence-portability",
+      "confidence": 0.82,
+      "evidenceRefs": [
+        "source:virtual-biology:2026-10-07"
+      ],
+      "validFrom": "2026-10-07T19:18:14-04:00",
+      "validTo": null
+    },
+    {
+      "id": "rel:nightly-2026-10-07:5",
+      "type": "Relationship",
+      "schemaVersion": "1.1.0",
+      "from": "obs:biohybrid-energy-interface:2026-10-07",
+      "predicate": "REFINES",
+      "to": "opportunity:biohybrid-system-demonstration",
+      "confidence": 0.84,
+      "evidenceRefs": [
+        "source:umass-mesh:2026-10-07"
+      ],
+      "validFrom": "2026-10-07T19:18:14-04:00",
+      "validTo": null
+    }
+  ],
+  "stageAcks": [
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-07:collect",
+      "runId": "run:nightly:2026-10-07",
+      "stage": "collect",
+      "status": "passed",
+      "startedAt": "2026-10-07T19:18:14-04:00",
+      "completedAt": "2026-10-07T19:18:14-04:00",
+      "inputs": [
+        "5ee1997b37725f3fd97e7512e051754f529cffd9",
+        "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+        "984dae274d7fca05812874e5a1c338e3972c1c23",
+        "149024f2390b0e7c0be43926ad97ad35e272d7da",
+        "4a651b42c7c2a3d927e812e552ec413424287252",
+        "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+        "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+      ],
+      "outputs": [
+        "source:google-playground:2026-10-07",
+        "source:unity-spark:2026-10-07",
+        "source:gitlab-factory:2026-10-07",
+        "source:rsa-agent-id:2026-10-07",
+        "source:virtual-biology:2026-10-07",
+        "source:umass-mesh:2026-10-07"
+      ],
+      "checks": [
+        {
+          "name": "provenance present",
+          "result": "pass"
+        },
+        {
+          "name": "candidate-only boundary",
+          "result": "pass"
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Daily intake remains candidate-only.",
+          "No acceptance or promotion is performed.",
+          "Consultancy/disposition substance is mirrored in inference because Observation is closed by live schema."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "48-hour source-vetted strategic sensing + GitHub authority inspection",
+        "inputHashes": [
+          "5ee1997b37725f3fd97e7512e051754f529cffd9",
+          "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+          "984dae274d7fca05812874e5a1c338e3972c1c23",
+          "149024f2390b0e7c0be43926ad97ad35e272d7da",
+          "4a651b42c7c2a3d927e812e552ec413424287252",
+          "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+          "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-07:vet",
+      "runId": "run:nightly:2026-10-07",
+      "stage": "vet",
+      "status": "passed",
+      "startedAt": "2026-10-07T19:18:14-04:00",
+      "completedAt": "2026-10-07T19:18:14-04:00",
+      "inputs": [
+        "5ee1997b37725f3fd97e7512e051754f529cffd9",
+        "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+        "984dae274d7fca05812874e5a1c338e3972c1c23",
+        "149024f2390b0e7c0be43926ad97ad35e272d7da",
+        "4a651b42c7c2a3d927e812e552ec413424287252",
+        "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+        "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "provenance present",
+          "result": "pass"
+        },
+        {
+          "name": "candidate-only boundary",
+          "result": "pass"
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Daily intake remains candidate-only.",
+          "No acceptance or promotion is performed.",
+          "Consultancy/disposition substance is mirrored in inference because Observation is closed by live schema."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "48-hour source-vetted strategic sensing + GitHub authority inspection",
+        "inputHashes": [
+          "5ee1997b37725f3fd97e7512e051754f529cffd9",
+          "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+          "984dae274d7fca05812874e5a1c338e3972c1c23",
+          "149024f2390b0e7c0be43926ad97ad35e272d7da",
+          "4a651b42c7c2a3d927e812e552ec413424287252",
+          "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+          "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-07:normalize",
+      "runId": "run:nightly:2026-10-07",
+      "stage": "normalize",
+      "status": "passed",
+      "startedAt": "2026-10-07T19:18:14-04:00",
+      "completedAt": "2026-10-07T19:18:14-04:00",
+      "inputs": [
+        "5ee1997b37725f3fd97e7512e051754f529cffd9",
+        "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+        "984dae274d7fca05812874e5a1c338e3972c1c23",
+        "149024f2390b0e7c0be43926ad97ad35e272d7da",
+        "4a651b42c7c2a3d927e812e552ec413424287252",
+        "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+        "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "provenance present",
+          "result": "pass"
+        },
+        {
+          "name": "candidate-only boundary",
+          "result": "pass"
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Daily intake remains candidate-only.",
+          "No acceptance or promotion is performed.",
+          "Consultancy/disposition substance is mirrored in inference because Observation is closed by live schema."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "48-hour source-vetted strategic sensing + GitHub authority inspection",
+        "inputHashes": [
+          "5ee1997b37725f3fd97e7512e051754f529cffd9",
+          "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+          "984dae274d7fca05812874e5a1c338e3972c1c23",
+          "149024f2390b0e7c0be43926ad97ad35e272d7da",
+          "4a651b42c7c2a3d927e812e552ec413424287252",
+          "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+          "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-07:observe",
+      "runId": "run:nightly:2026-10-07",
+      "stage": "observe",
+      "status": "passed",
+      "startedAt": "2026-10-07T19:18:14-04:00",
+      "completedAt": "2026-10-07T19:18:14-04:00",
+      "inputs": [
+        "5ee1997b37725f3fd97e7512e051754f529cffd9",
+        "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+        "984dae274d7fca05812874e5a1c338e3972c1c23",
+        "149024f2390b0e7c0be43926ad97ad35e272d7da",
+        "4a651b42c7c2a3d927e812e552ec413424287252",
+        "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+        "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+      ],
+      "outputs": [
+        "obs:ai-interactive-creation-threshold:2026-10-07",
+        "obs:governed-software-factory:2026-10-07",
+        "obs:agent-identity-authority-layer:2026-10-07",
+        "obs:virtual-biology-open-data-infrastructure:2026-10-07",
+        "obs:biohybrid-energy-interface:2026-10-07"
+      ],
+      "checks": [
+        {
+          "name": "provenance present",
+          "result": "pass"
+        },
+        {
+          "name": "candidate-only boundary",
+          "result": "pass"
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Daily intake remains candidate-only.",
+          "No acceptance or promotion is performed.",
+          "Consultancy/disposition substance is mirrored in inference because Observation is closed by live schema."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "48-hour source-vetted strategic sensing + GitHub authority inspection",
+        "inputHashes": [
+          "5ee1997b37725f3fd97e7512e051754f529cffd9",
+          "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+          "984dae274d7fca05812874e5a1c338e3972c1c23",
+          "149024f2390b0e7c0be43926ad97ad35e272d7da",
+          "4a651b42c7c2a3d927e812e552ec413424287252",
+          "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+          "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-07:inquire",
+      "runId": "run:nightly:2026-10-07",
+      "stage": "inquire",
+      "status": "passed",
+      "startedAt": "2026-10-07T19:18:14-04:00",
+      "completedAt": "2026-10-07T19:18:14-04:00",
+      "inputs": [
+        "5ee1997b37725f3fd97e7512e051754f529cffd9",
+        "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+        "984dae274d7fca05812874e5a1c338e3972c1c23",
+        "149024f2390b0e7c0be43926ad97ad35e272d7da",
+        "4a651b42c7c2a3d927e812e552ec413424287252",
+        "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+        "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "provenance present",
+          "result": "pass"
+        },
+        {
+          "name": "candidate-only boundary",
+          "result": "pass"
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Daily intake remains candidate-only.",
+          "No acceptance or promotion is performed.",
+          "Consultancy/disposition substance is mirrored in inference because Observation is closed by live schema."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "48-hour source-vetted strategic sensing + GitHub authority inspection",
+        "inputHashes": [
+          "5ee1997b37725f3fd97e7512e051754f529cffd9",
+          "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+          "984dae274d7fca05812874e5a1c338e3972c1c23",
+          "149024f2390b0e7c0be43926ad97ad35e272d7da",
+          "4a651b42c7c2a3d927e812e552ec413424287252",
+          "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+          "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-07:interpret",
+      "runId": "run:nightly:2026-10-07",
+      "stage": "interpret",
+      "status": "passed",
+      "startedAt": "2026-10-07T19:18:14-04:00",
+      "completedAt": "2026-10-07T19:18:14-04:00",
+      "inputs": [
+        "5ee1997b37725f3fd97e7512e051754f529cffd9",
+        "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+        "984dae274d7fca05812874e5a1c338e3972c1c23",
+        "149024f2390b0e7c0be43926ad97ad35e272d7da",
+        "4a651b42c7c2a3d927e812e552ec413424287252",
+        "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+        "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "provenance present",
+          "result": "pass"
+        },
+        {
+          "name": "candidate-only boundary",
+          "result": "pass"
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Daily intake remains candidate-only.",
+          "No acceptance or promotion is performed.",
+          "Consultancy/disposition substance is mirrored in inference because Observation is closed by live schema."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "48-hour source-vetted strategic sensing + GitHub authority inspection",
+        "inputHashes": [
+          "5ee1997b37725f3fd97e7512e051754f529cffd9",
+          "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+          "984dae274d7fca05812874e5a1c338e3972c1c23",
+          "149024f2390b0e7c0be43926ad97ad35e272d7da",
+          "4a651b42c7c2a3d927e812e552ec413424287252",
+          "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+          "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-07:relate",
+      "runId": "run:nightly:2026-10-07",
+      "stage": "relate",
+      "status": "passed",
+      "startedAt": "2026-10-07T19:18:14-04:00",
+      "completedAt": "2026-10-07T19:18:14-04:00",
+      "inputs": [
+        "5ee1997b37725f3fd97e7512e051754f529cffd9",
+        "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+        "984dae274d7fca05812874e5a1c338e3972c1c23",
+        "149024f2390b0e7c0be43926ad97ad35e272d7da",
+        "4a651b42c7c2a3d927e812e552ec413424287252",
+        "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+        "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+      ],
+      "outputs": [
+        "rel:nightly-2026-10-07:1",
+        "rel:nightly-2026-10-07:2",
+        "rel:nightly-2026-10-07:3",
+        "rel:nightly-2026-10-07:4",
+        "rel:nightly-2026-10-07:5"
+      ],
+      "checks": [
+        {
+          "name": "provenance present",
+          "result": "pass"
+        },
+        {
+          "name": "candidate-only boundary",
+          "result": "pass"
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Daily intake remains candidate-only.",
+          "No acceptance or promotion is performed.",
+          "Consultancy/disposition substance is mirrored in inference because Observation is closed by live schema."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "48-hour source-vetted strategic sensing + GitHub authority inspection",
+        "inputHashes": [
+          "5ee1997b37725f3fd97e7512e051754f529cffd9",
+          "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+          "984dae274d7fca05812874e5a1c338e3972c1c23",
+          "149024f2390b0e7c0be43926ad97ad35e272d7da",
+          "4a651b42c7c2a3d927e812e552ec413424287252",
+          "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+          "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-07:pattern",
+      "runId": "run:nightly:2026-10-07",
+      "stage": "pattern",
+      "status": "passed",
+      "startedAt": "2026-10-07T19:18:14-04:00",
+      "completedAt": "2026-10-07T19:18:14-04:00",
+      "inputs": [
+        "5ee1997b37725f3fd97e7512e051754f529cffd9",
+        "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+        "984dae274d7fca05812874e5a1c338e3972c1c23",
+        "149024f2390b0e7c0be43926ad97ad35e272d7da",
+        "4a651b42c7c2a3d927e812e552ec413424287252",
+        "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+        "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "provenance present",
+          "result": "pass"
+        },
+        {
+          "name": "candidate-only boundary",
+          "result": "pass"
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Daily intake remains candidate-only.",
+          "No acceptance or promotion is performed.",
+          "Consultancy/disposition substance is mirrored in inference because Observation is closed by live schema."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "48-hour source-vetted strategic sensing + GitHub authority inspection",
+        "inputHashes": [
+          "5ee1997b37725f3fd97e7512e051754f529cffd9",
+          "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+          "984dae274d7fca05812874e5a1c338e3972c1c23",
+          "149024f2390b0e7c0be43926ad97ad35e272d7da",
+          "4a651b42c7c2a3d927e812e552ec413424287252",
+          "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+          "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-07:opportunity",
+      "runId": "run:nightly:2026-10-07",
+      "stage": "opportunity",
+      "status": "passed",
+      "startedAt": "2026-10-07T19:18:14-04:00",
+      "completedAt": "2026-10-07T19:18:14-04:00",
+      "inputs": [
+        "5ee1997b37725f3fd97e7512e051754f529cffd9",
+        "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+        "984dae274d7fca05812874e5a1c338e3972c1c23",
+        "149024f2390b0e7c0be43926ad97ad35e272d7da",
+        "4a651b42c7c2a3d927e812e552ec413424287252",
+        "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+        "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "provenance present",
+          "result": "pass"
+        },
+        {
+          "name": "candidate-only boundary",
+          "result": "pass"
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Daily intake remains candidate-only.",
+          "No acceptance or promotion is performed.",
+          "Consultancy/disposition substance is mirrored in inference because Observation is closed by live schema."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "48-hour source-vetted strategic sensing + GitHub authority inspection",
+        "inputHashes": [
+          "5ee1997b37725f3fd97e7512e051754f529cffd9",
+          "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+          "984dae274d7fca05812874e5a1c338e3972c1c23",
+          "149024f2390b0e7c0be43926ad97ad35e272d7da",
+          "4a651b42c7c2a3d927e812e552ec413424287252",
+          "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+          "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-07:strategy",
+      "runId": "run:nightly:2026-10-07",
+      "stage": "strategy",
+      "status": "no-change",
+      "startedAt": "2026-10-07T19:18:14-04:00",
+      "completedAt": "2026-10-07T19:18:14-04:00",
+      "inputs": [
+        "5ee1997b37725f3fd97e7512e051754f529cffd9",
+        "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+        "984dae274d7fca05812874e5a1c338e3972c1c23",
+        "149024f2390b0e7c0be43926ad97ad35e272d7da",
+        "4a651b42c7c2a3d927e812e552ec413424287252",
+        "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+        "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "provenance present",
+          "result": "pass"
+        },
+        {
+          "name": "candidate-only boundary",
+          "result": "pass"
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": true,
+        "boundaryNotes": [
+          "Daily intake remains candidate-only.",
+          "No acceptance or promotion is performed.",
+          "Consultancy/disposition substance is mirrored in inference because Observation is closed by live schema."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "48-hour source-vetted strategic sensing + GitHub authority inspection",
+        "inputHashes": [
+          "5ee1997b37725f3fd97e7512e051754f529cffd9",
+          "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+          "984dae274d7fca05812874e5a1c338e3972c1c23",
+          "149024f2390b0e7c0be43926ad97ad35e272d7da",
+          "4a651b42c7c2a3d927e812e552ec413424287252",
+          "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+          "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-07:experiment",
+      "runId": "run:nightly:2026-10-07",
+      "stage": "experiment",
+      "status": "no-change",
+      "startedAt": "2026-10-07T19:18:14-04:00",
+      "completedAt": "2026-10-07T19:18:14-04:00",
+      "inputs": [
+        "5ee1997b37725f3fd97e7512e051754f529cffd9",
+        "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+        "984dae274d7fca05812874e5a1c338e3972c1c23",
+        "149024f2390b0e7c0be43926ad97ad35e272d7da",
+        "4a651b42c7c2a3d927e812e552ec413424287252",
+        "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+        "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "provenance present",
+          "result": "pass"
+        },
+        {
+          "name": "candidate-only boundary",
+          "result": "pass"
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": true,
+        "boundaryNotes": [
+          "Daily intake remains candidate-only.",
+          "No acceptance or promotion is performed.",
+          "Consultancy/disposition substance is mirrored in inference because Observation is closed by live schema."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "48-hour source-vetted strategic sensing + GitHub authority inspection",
+        "inputHashes": [
+          "5ee1997b37725f3fd97e7512e051754f529cffd9",
+          "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+          "984dae274d7fca05812874e5a1c338e3972c1c23",
+          "149024f2390b0e7c0be43926ad97ad35e272d7da",
+          "4a651b42c7c2a3d927e812e552ec413424287252",
+          "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+          "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-07:genesis",
+      "runId": "run:nightly:2026-10-07",
+      "stage": "genesis",
+      "status": "deferred",
+      "startedAt": "2026-10-07T19:18:14-04:00",
+      "completedAt": "2026-10-07T19:18:14-04:00",
+      "inputs": [
+        "5ee1997b37725f3fd97e7512e051754f529cffd9",
+        "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+        "984dae274d7fca05812874e5a1c338e3972c1c23",
+        "149024f2390b0e7c0be43926ad97ad35e272d7da",
+        "4a651b42c7c2a3d927e812e552ec413424287252",
+        "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+        "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "provenance present",
+          "result": "pass"
+        },
+        {
+          "name": "candidate-only boundary",
+          "result": "pass"
+        }
+      ],
+      "governance": {
+        "allowedTransition": false,
+        "approvalRequired": true,
+        "boundaryNotes": [
+          "Daily intake remains candidate-only.",
+          "No acceptance or promotion is performed.",
+          "Consultancy/disposition substance is mirrored in inference because Observation is closed by live schema."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "48-hour source-vetted strategic sensing + GitHub authority inspection",
+        "inputHashes": [
+          "5ee1997b37725f3fd97e7512e051754f529cffd9",
+          "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+          "984dae274d7fca05812874e5a1c338e3972c1c23",
+          "149024f2390b0e7c0be43926ad97ad35e272d7da",
+          "4a651b42c7c2a3d927e812e552ec413424287252",
+          "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+          "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-07:publish",
+      "runId": "run:nightly:2026-10-07",
+      "stage": "publish",
+      "status": "deferred",
+      "startedAt": "2026-10-07T19:18:14-04:00",
+      "completedAt": "2026-10-07T19:18:14-04:00",
+      "inputs": [
+        "5ee1997b37725f3fd97e7512e051754f529cffd9",
+        "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+        "984dae274d7fca05812874e5a1c338e3972c1c23",
+        "149024f2390b0e7c0be43926ad97ad35e272d7da",
+        "4a651b42c7c2a3d927e812e552ec413424287252",
+        "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+        "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "provenance present",
+          "result": "pass"
+        },
+        {
+          "name": "candidate-only boundary",
+          "result": "pass"
+        }
+      ],
+      "governance": {
+        "allowedTransition": false,
+        "approvalRequired": true,
+        "boundaryNotes": [
+          "Daily intake remains candidate-only.",
+          "No acceptance or promotion is performed.",
+          "Consultancy/disposition substance is mirrored in inference because Observation is closed by live schema."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "48-hour source-vetted strategic sensing + GitHub authority inspection",
+        "inputHashes": [
+          "5ee1997b37725f3fd97e7512e051754f529cffd9",
+          "ff348cbebf422440e5cf01374089fbbf5ef75f7b",
+          "984dae274d7fca05812874e5a1c338e3972c1c23",
+          "149024f2390b0e7c0be43926ad97ad35e272d7da",
+          "4a651b42c7c2a3d927e812e552ec413424287252",
+          "638ef7b4276a07f252f60ac24b634b0a2022d14d",
+          "794b7ec9413d8d7b9c8aa394ab76d3449ecd4418"
+        ]
+      }
+    }
+  ],
+  "socraticAssessments": [
+    {
+      "assessmentId": "socratic:ai-interactive-creation-threshold:2026-10-07",
+      "observationId": "obs:ai-interactive-creation-threshold:2026-10-07",
+      "questions": [
+        "what changed",
+        "whose behavior changed",
+        "what problem is demonstrated",
+        "who benefits",
+        "what substitute exists",
+        "what mechanism matters",
+        "what is the most dangerous assumption",
+        "what would falsify the interpretation",
+        "what evidence is missing",
+        "what simpler explanation competes"
+      ],
+      "answers": [
+        {
+          "question": "what changed",
+          "answer": "New product/research/funding action was announced in the window.",
+          "evidenceRefs": [
+            "source:google-playground:2026-10-07",
+            "source:unity-spark:2026-10-07"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "whose behavior changed",
+          "answer": "The named provider, builder, funder or researcher acted through a release, partnership or publication.",
+          "evidenceRefs": [
+            "source:google-playground:2026-10-07",
+            "source:unity-spark:2026-10-07"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "what problem is demonstrated",
+          "answer": "The signal demonstrates a concrete capability or infrastructure problem.",
+          "evidenceRefs": [
+            "source:google-playground:2026-10-07",
+            "source:unity-spark:2026-10-07"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "who benefits",
+          "answer": "The primary beneficiaries are the actors named in the source; broader beneficiaries are inferred.",
+          "evidenceRefs": [
+            "source:google-playground:2026-10-07",
+            "source:unity-spark:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what substitute exists",
+          "answer": "Existing platforms, point tools, conventional research and established engineering methods remain substitutes.",
+          "evidenceRefs": [
+            "source:google-playground:2026-10-07",
+            "source:unity-spark:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what mechanism matters",
+          "answer": "The mechanism is the newly announced or demonstrated technical/organizational change.",
+          "evidenceRefs": [
+            "source:google-playground:2026-10-07",
+            "source:unity-spark:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what is the most dangerous assumption",
+          "answer": "The main danger is extrapolating from provider-reported or early-stage evidence to durable market demand.",
+          "evidenceRefs": [
+            "source:google-playground:2026-10-07",
+            "source:unity-spark:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what would falsify the interpretation",
+          "answer": "Independent failure to reproduce the claimed outcome or lack of adoption would falsify the stronger interpretation.",
+          "evidenceRefs": [
+            "source:google-playground:2026-10-07",
+            "source:unity-spark:2026-10-07"
+          ],
+          "answerType": "unknown"
+        },
+        {
+          "question": "what evidence is missing",
+          "answer": "Buyer behavior, independent benchmarks, durability and longitudinal outcomes are missing where applicable.",
+          "evidenceRefs": [
+            "source:google-playground:2026-10-07",
+            "source:unity-spark:2026-10-07"
+          ],
+          "answerType": "unknown"
+        },
+        {
+          "question": "what simpler explanation competes",
+          "answer": "A simpler explanation is that the actor is extending an existing category or running an experiment rather than creating a durable new market.",
+          "evidenceRefs": [
+            "source:google-playground:2026-10-07",
+            "source:unity-spark:2026-10-07"
+          ],
+          "answerType": "unknown"
+        }
+      ],
+      "dangerousAssumption": "Early action implies durable market or technical significance.",
+      "falsifier": "Independent evidence fails to reproduce the claimed outcome or shows no meaningful adoption.",
+      "missingEvidence": [
+        "independent outcomes",
+        "buyer behavior",
+        "longitudinal evidence"
+      ],
+      "alternativeExplanation": "The development may be an incremental extension, vendor positioning move, or early research result.",
+      "disposition": "experiment",
+      "confidence": 0.89
+    },
+    {
+      "assessmentId": "socratic:governed-software-factory:2026-10-07",
+      "observationId": "obs:governed-software-factory:2026-10-07",
+      "questions": [
+        "what changed",
+        "whose behavior changed",
+        "what problem is demonstrated",
+        "who benefits",
+        "what substitute exists",
+        "what mechanism matters",
+        "what is the most dangerous assumption",
+        "what would falsify the interpretation",
+        "what evidence is missing",
+        "what simpler explanation competes"
+      ],
+      "answers": [
+        {
+          "question": "what changed",
+          "answer": "New product/research/funding action was announced in the window.",
+          "evidenceRefs": [
+            "source:gitlab-factory:2026-10-07"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "whose behavior changed",
+          "answer": "The named provider, builder, funder or researcher acted through a release, partnership or publication.",
+          "evidenceRefs": [
+            "source:gitlab-factory:2026-10-07"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "what problem is demonstrated",
+          "answer": "The signal demonstrates a concrete capability or infrastructure problem.",
+          "evidenceRefs": [
+            "source:gitlab-factory:2026-10-07"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "who benefits",
+          "answer": "The primary beneficiaries are the actors named in the source; broader beneficiaries are inferred.",
+          "evidenceRefs": [
+            "source:gitlab-factory:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what substitute exists",
+          "answer": "Existing platforms, point tools, conventional research and established engineering methods remain substitutes.",
+          "evidenceRefs": [
+            "source:gitlab-factory:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what mechanism matters",
+          "answer": "The mechanism is the newly announced or demonstrated technical/organizational change.",
+          "evidenceRefs": [
+            "source:gitlab-factory:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what is the most dangerous assumption",
+          "answer": "The main danger is extrapolating from provider-reported or early-stage evidence to durable market demand.",
+          "evidenceRefs": [
+            "source:gitlab-factory:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what would falsify the interpretation",
+          "answer": "Independent failure to reproduce the claimed outcome or lack of adoption would falsify the stronger interpretation.",
+          "evidenceRefs": [
+            "source:gitlab-factory:2026-10-07"
+          ],
+          "answerType": "unknown"
+        },
+        {
+          "question": "what evidence is missing",
+          "answer": "Buyer behavior, independent benchmarks, durability and longitudinal outcomes are missing where applicable.",
+          "evidenceRefs": [
+            "source:gitlab-factory:2026-10-07"
+          ],
+          "answerType": "unknown"
+        },
+        {
+          "question": "what simpler explanation competes",
+          "answer": "A simpler explanation is that the actor is extending an existing category or running an experiment rather than creating a durable new market.",
+          "evidenceRefs": [
+            "source:gitlab-factory:2026-10-07"
+          ],
+          "answerType": "unknown"
+        }
+      ],
+      "dangerousAssumption": "Early action implies durable market or technical significance.",
+      "falsifier": "Independent evidence fails to reproduce the claimed outcome or shows no meaningful adoption.",
+      "missingEvidence": [
+        "independent outcomes",
+        "buyer behavior",
+        "longitudinal evidence"
+      ],
+      "alternativeExplanation": "The development may be an incremental extension, vendor positioning move, or early research result.",
+      "disposition": "strategy-candidate",
+      "confidence": 0.92
+    },
+    {
+      "assessmentId": "socratic:agent-identity-authority-layer:2026-10-07",
+      "observationId": "obs:agent-identity-authority-layer:2026-10-07",
+      "questions": [
+        "what changed",
+        "whose behavior changed",
+        "what problem is demonstrated",
+        "who benefits",
+        "what substitute exists",
+        "what mechanism matters",
+        "what is the most dangerous assumption",
+        "what would falsify the interpretation",
+        "what evidence is missing",
+        "what simpler explanation competes"
+      ],
+      "answers": [
+        {
+          "question": "what changed",
+          "answer": "New product/research/funding action was announced in the window.",
+          "evidenceRefs": [
+            "source:rsa-agent-id:2026-10-07"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "whose behavior changed",
+          "answer": "The named provider, builder, funder or researcher acted through a release, partnership or publication.",
+          "evidenceRefs": [
+            "source:rsa-agent-id:2026-10-07"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "what problem is demonstrated",
+          "answer": "The signal demonstrates a concrete capability or infrastructure problem.",
+          "evidenceRefs": [
+            "source:rsa-agent-id:2026-10-07"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "who benefits",
+          "answer": "The primary beneficiaries are the actors named in the source; broader beneficiaries are inferred.",
+          "evidenceRefs": [
+            "source:rsa-agent-id:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what substitute exists",
+          "answer": "Existing platforms, point tools, conventional research and established engineering methods remain substitutes.",
+          "evidenceRefs": [
+            "source:rsa-agent-id:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what mechanism matters",
+          "answer": "The mechanism is the newly announced or demonstrated technical/organizational change.",
+          "evidenceRefs": [
+            "source:rsa-agent-id:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what is the most dangerous assumption",
+          "answer": "The main danger is extrapolating from provider-reported or early-stage evidence to durable market demand.",
+          "evidenceRefs": [
+            "source:rsa-agent-id:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what would falsify the interpretation",
+          "answer": "Independent failure to reproduce the claimed outcome or lack of adoption would falsify the stronger interpretation.",
+          "evidenceRefs": [
+            "source:rsa-agent-id:2026-10-07"
+          ],
+          "answerType": "unknown"
+        },
+        {
+          "question": "what evidence is missing",
+          "answer": "Buyer behavior, independent benchmarks, durability and longitudinal outcomes are missing where applicable.",
+          "evidenceRefs": [
+            "source:rsa-agent-id:2026-10-07"
+          ],
+          "answerType": "unknown"
+        },
+        {
+          "question": "what simpler explanation competes",
+          "answer": "A simpler explanation is that the actor is extending an existing category or running an experiment rather than creating a durable new market.",
+          "evidenceRefs": [
+            "source:rsa-agent-id:2026-10-07"
+          ],
+          "answerType": "unknown"
+        }
+      ],
+      "dangerousAssumption": "Early action implies durable market or technical significance.",
+      "falsifier": "Independent evidence fails to reproduce the claimed outcome or shows no meaningful adoption.",
+      "missingEvidence": [
+        "independent outcomes",
+        "buyer behavior",
+        "longitudinal evidence"
+      ],
+      "alternativeExplanation": "The development may be an incremental extension, vendor positioning move, or early research result.",
+      "disposition": "experiment",
+      "confidence": 0.9
+    },
+    {
+      "assessmentId": "socratic:virtual-biology-open-data-infrastructure:2026-10-07",
+      "observationId": "obs:virtual-biology-open-data-infrastructure:2026-10-07",
+      "questions": [
+        "what changed",
+        "whose behavior changed",
+        "what problem is demonstrated",
+        "who benefits",
+        "what substitute exists",
+        "what mechanism matters",
+        "what is the most dangerous assumption",
+        "what would falsify the interpretation",
+        "what evidence is missing",
+        "what simpler explanation competes"
+      ],
+      "answers": [
+        {
+          "question": "what changed",
+          "answer": "New product/research/funding action was announced in the window.",
+          "evidenceRefs": [
+            "source:virtual-biology:2026-10-07"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "whose behavior changed",
+          "answer": "The named provider, builder, funder or researcher acted through a release, partnership or publication.",
+          "evidenceRefs": [
+            "source:virtual-biology:2026-10-07"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "what problem is demonstrated",
+          "answer": "The signal demonstrates a concrete capability or infrastructure problem.",
+          "evidenceRefs": [
+            "source:virtual-biology:2026-10-07"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "who benefits",
+          "answer": "The primary beneficiaries are the actors named in the source; broader beneficiaries are inferred.",
+          "evidenceRefs": [
+            "source:virtual-biology:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what substitute exists",
+          "answer": "Existing platforms, point tools, conventional research and established engineering methods remain substitutes.",
+          "evidenceRefs": [
+            "source:virtual-biology:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what mechanism matters",
+          "answer": "The mechanism is the newly announced or demonstrated technical/organizational change.",
+          "evidenceRefs": [
+            "source:virtual-biology:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what is the most dangerous assumption",
+          "answer": "The main danger is extrapolating from provider-reported or early-stage evidence to durable market demand.",
+          "evidenceRefs": [
+            "source:virtual-biology:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what would falsify the interpretation",
+          "answer": "Independent failure to reproduce the claimed outcome or lack of adoption would falsify the stronger interpretation.",
+          "evidenceRefs": [
+            "source:virtual-biology:2026-10-07"
+          ],
+          "answerType": "unknown"
+        },
+        {
+          "question": "what evidence is missing",
+          "answer": "Buyer behavior, independent benchmarks, durability and longitudinal outcomes are missing where applicable.",
+          "evidenceRefs": [
+            "source:virtual-biology:2026-10-07"
+          ],
+          "answerType": "unknown"
+        },
+        {
+          "question": "what simpler explanation competes",
+          "answer": "A simpler explanation is that the actor is extending an existing category or running an experiment rather than creating a durable new market.",
+          "evidenceRefs": [
+            "source:virtual-biology:2026-10-07"
+          ],
+          "answerType": "unknown"
+        }
+      ],
+      "dangerousAssumption": "Early action implies durable market or technical significance.",
+      "falsifier": "Independent evidence fails to reproduce the claimed outcome or shows no meaningful adoption.",
+      "missingEvidence": [
+        "independent outcomes",
+        "buyer behavior",
+        "longitudinal evidence"
+      ],
+      "alternativeExplanation": "The development may be an incremental extension, vendor positioning move, or early research result.",
+      "disposition": "watch",
+      "confidence": 0.84
+    },
+    {
+      "assessmentId": "socratic:biohybrid-energy-interface:2026-10-07",
+      "observationId": "obs:biohybrid-energy-interface:2026-10-07",
+      "questions": [
+        "what changed",
+        "whose behavior changed",
+        "what problem is demonstrated",
+        "who benefits",
+        "what substitute exists",
+        "what mechanism matters",
+        "what is the most dangerous assumption",
+        "what would falsify the interpretation",
+        "what evidence is missing",
+        "what simpler explanation competes"
+      ],
+      "answers": [
+        {
+          "question": "what changed",
+          "answer": "New product/research/funding action was announced in the window.",
+          "evidenceRefs": [
+            "source:umass-mesh:2026-10-07"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "whose behavior changed",
+          "answer": "The named provider, builder, funder or researcher acted through a release, partnership or publication.",
+          "evidenceRefs": [
+            "source:umass-mesh:2026-10-07"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "what problem is demonstrated",
+          "answer": "The signal demonstrates a concrete capability or infrastructure problem.",
+          "evidenceRefs": [
+            "source:umass-mesh:2026-10-07"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "who benefits",
+          "answer": "The primary beneficiaries are the actors named in the source; broader beneficiaries are inferred.",
+          "evidenceRefs": [
+            "source:umass-mesh:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what substitute exists",
+          "answer": "Existing platforms, point tools, conventional research and established engineering methods remain substitutes.",
+          "evidenceRefs": [
+            "source:umass-mesh:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what mechanism matters",
+          "answer": "The mechanism is the newly announced or demonstrated technical/organizational change.",
+          "evidenceRefs": [
+            "source:umass-mesh:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what is the most dangerous assumption",
+          "answer": "The main danger is extrapolating from provider-reported or early-stage evidence to durable market demand.",
+          "evidenceRefs": [
+            "source:umass-mesh:2026-10-07"
+          ],
+          "answerType": "inferred"
+        },
+        {
+          "question": "what would falsify the interpretation",
+          "answer": "Independent failure to reproduce the claimed outcome or lack of adoption would falsify the stronger interpretation.",
+          "evidenceRefs": [
+            "source:umass-mesh:2026-10-07"
+          ],
+          "answerType": "unknown"
+        },
+        {
+          "question": "what evidence is missing",
+          "answer": "Buyer behavior, independent benchmarks, durability and longitudinal outcomes are missing where applicable.",
+          "evidenceRefs": [
+            "source:umass-mesh:2026-10-07"
+          ],
+          "answerType": "unknown"
+        },
+        {
+          "question": "what simpler explanation competes",
+          "answer": "A simpler explanation is that the actor is extending an existing category or running an experiment rather than creating a durable new market.",
+          "evidenceRefs": [
+            "source:umass-mesh:2026-10-07"
+          ],
+          "answerType": "unknown"
+        }
+      ],
+      "dangerousAssumption": "Early action implies durable market or technical significance.",
+      "falsifier": "Independent evidence fails to reproduce the claimed outcome or shows no meaningful adoption.",
+      "missingEvidence": [
+        "independent outcomes",
+        "buyer behavior",
+        "longitudinal evidence"
+      ],
+      "alternativeExplanation": "The development may be an incremental extension, vendor positioning move, or early research result.",
+      "disposition": "watch",
+      "confidence": 0.83
+    }
+  ]
+}
