@@ -1,0 +1,14 @@
+{
+  "id": "rel:mongodb-refines-control:2026-10-03",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:agent-control-plane:2026-10-03",
+  "predicate": "REFINES",
+  "to": "thesis:seed-loom-governed-control-plane",
+  "confidence": 0.96,
+  "evidenceRefs": [
+    "source:mongodb-agent-engine:2026"
+  ],
+  "validFrom": "2026-09-29T00:00:00Z",
+  "validTo": null
+}

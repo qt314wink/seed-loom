@@ -1,0 +1,29 @@
+{
+  "id": "source:elevenlabs-tender:2026",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://elevenlabs.io/blog/tender-22bn",
+  "publisher": "ElevenLabs",
+  "publishedAt": "2026-09-30T00:00:00Z",
+  "retrievedAt": "2026-10-03T19:42:57-04:00",
+  "sourceClass": "primary",
+  "independenceKey": "elevenlabs-tender-2026",
+  "contentHash": "sha256:url-elevenlabs",
+  "title": "ElevenLabs $22B valuation",
+  "lead": "$300M employee tender plus new voice models and agent platform.",
+  "analystNote": "Direct company source; valuation and demand claims are company-reported.",
+  "syndicatedFrom": null,
+  "doi": null,
+  "upstreamReport": null,
+  "policyDocument": null,
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": [],
+  "notes": "Retrieved in window."
+}

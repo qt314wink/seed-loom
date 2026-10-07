@@ -1,0 +1,35 @@
+{
+  "ackId": "ack:observe:2026-10-03",
+  "runId": "run:nightly:2026-10-03",
+  "stage": "observe",
+  "status": "passed",
+  "startedAt": "2026-10-03T19:42:57-04:00",
+  "completedAt": "2026-10-03T19:42:57-04:00",
+  "inputs": [
+    "run:nightly:2026-10-03"
+  ],
+  "outputs": [
+    "five candidate observations"
+  ],
+  "checks": [
+    {
+      "name": "five-observations",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "candidate-only"
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence-runtime",
+    "method": "structured observation capture",
+    "inputHashes": [
+      "4a651b42c7c2a3d927e812e552ec413424287252"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

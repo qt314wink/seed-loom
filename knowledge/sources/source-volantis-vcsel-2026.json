@@ -1,0 +1,29 @@
+{
+  "id": "source:volantis-vcsel:2026",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://www.reuters.com/business/volantis-raises-88-million-tech-connect-ai-memory-chips-2026-10-01/",
+  "publisher": "Reuters",
+  "publishedAt": "2026-10-01T00:00:00Z",
+  "retrievedAt": "2026-10-03T19:42:57-04:00",
+  "sourceClass": "financial",
+  "independenceKey": "reuters-volantis-2026",
+  "contentHash": "sha256:url-volantis",
+  "title": "Volantis raises $88M",
+  "lead": "VCSEL optical interconnects target AI memory bandwidth.",
+  "analystNote": "Financial/technical reporting; targets not independently validated here.",
+  "syndicatedFrom": null,
+  "doi": null,
+  "upstreamReport": null,
+  "policyDocument": null,
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": [],
+  "notes": "Retrieved in window."
+}

@@ -1,0 +1,49 @@
+{
+  "id": "obs:voice-agent-demand:2026-10-03",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-03T19:42:57-04:00",
+  "claim": "Enterprise conversational voice agents are being positioned as organizational interfaces connected to knowledge and systems.",
+  "verifiedFacts": [
+    "ElevenLabs announced a $300M employee tender valuing it at $22B.",
+    "ElevenLabs released v4 and v4 Turbo.",
+    "It describes agents connected to organizational knowledge and systems."
+  ],
+  "inference": [
+    "Verified: voice is being packaged as an organizational interaction platform.",
+    "Inferred: multimodal knowledge access could become a bounded service.",
+    "Unknown: whether voice improves outcomes over text."
+  ],
+  "significance": "Reinforces Eve as a multimodal interface experiment.",
+  "confidence": 0.88,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "validFrom": "2026-09-30T00:00:00Z",
+  "validUntil": null,
+  "reviewBy": "2026-10-24T23:59:59-04:00",
+  "termsChangedAt": null,
+  "closedAt": null,
+  "closureRef": null,
+  "supersededBy": null,
+  "sourceRefs": [
+    "source:elevenlabs-tender:2026"
+  ],
+  "actorRefs": [
+    "actor:elevenlabs",
+    "actor:investors",
+    "actor:enterprise-buyers"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/eve",
+    "MelodicBloom/eve-slack-agent",
+    "MelodicBloom/Content-Weaver"
+  ],
+  "assumptions": [
+    "Voice lowers friction for some knowledge tasks."
+  ],
+  "knownLimitations": [
+    "Tender is secondary liquidity, not a primary raise."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

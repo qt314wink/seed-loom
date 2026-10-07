@@ -1,0 +1,35 @@
+{
+  "ackId": "ack:publish:2026-10-03",
+  "runId": "run:nightly:2026-10-03",
+  "stage": "publish",
+  "status": "deferred",
+  "startedAt": "2026-10-03T19:42:57-04:00",
+  "completedAt": "2026-10-03T19:42:57-04:00",
+  "inputs": [
+    "run:nightly:2026-10-03"
+  ],
+  "outputs": [
+    "publish deferred"
+  ],
+  "checks": [
+    {
+      "name": "external-publication-boundary",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "No external publication"
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence-runtime",
+    "method": "publication gate",
+    "inputHashes": [
+      "run:nightly:2026-10-03"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

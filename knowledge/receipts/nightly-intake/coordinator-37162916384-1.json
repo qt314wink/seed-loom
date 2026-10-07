@@ -1,0 +1,54 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-10-03T23:48:18.361Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-10-03",
+      "bundlePath": "knowledge/intake/nightly/2026-10-03/nightly-run-bundle-2026-10-03.json",
+      "bundleSha256": "98ced599c76a86fdd52c7600677403238e505fc147587808c4dcd215a9235ffd",
+      "normalizedDigest": "8cd0c3e50baef8b7c60a68768477b3d5b6ad24a19ee67331c7959f47e6974c38",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-mongodb-agent-engine-2026.json",
+        "knowledge/sources/source-elevenlabs-tender-2026.json",
+        "knowledge/sources/source-volantis-vcsel-2026.json",
+        "knowledge/sources/source-mit-amphibian-drift-2026.json",
+        "knowledge/sources/source-cmu-facade-tectonics-2026.json",
+        "knowledge/observations/obs-agent-control-plane-2026-10-03.json",
+        "knowledge/observations/obs-voice-agent-demand-2026-10-03.json",
+        "knowledge/observations/obs-optical-ai-interconnect-2026-10-03.json",
+        "knowledge/observations/obs-molecular-vibration-xr-2026-10-03.json",
+        "knowledge/observations/obs-living-fabrication-2026-10-03.json",
+        "knowledge/relationships/rel-mongodb-refines-control-2026-10-03.json",
+        "knowledge/relationships/rel-voice-enables-eve-2026-10-03.json",
+        "knowledge/relationships/rel-optical-enables-omni-2026-10-03.json",
+        "knowledge/relationships/rel-molecular-refines-compiler-2026-10-03.json",
+        "knowledge/relationships/rel-facade-enables-regenerative-2026-10-03.json",
+        "knowledge/runs/run-nightly-2026-10-03.json",
+        "knowledge/runs/stage-acks/ack-collect-2026-10-03.json",
+        "knowledge/runs/stage-acks/ack-vet-2026-10-03.json",
+        "knowledge/runs/stage-acks/ack-normalize-2026-10-03.json",
+        "knowledge/runs/stage-acks/ack-observe-2026-10-03.json",
+        "knowledge/runs/stage-acks/ack-inquire-2026-10-03.json",
+        "knowledge/runs/stage-acks/ack-interpret-2026-10-03.json",
+        "knowledge/runs/stage-acks/ack-relate-2026-10-03.json",
+        "knowledge/runs/stage-acks/ack-pattern-2026-10-03.json",
+        "knowledge/runs/stage-acks/ack-opportunity-2026-10-03.json",
+        "knowledge/runs/stage-acks/ack-strategy-2026-10-03.json",
+        "knowledge/runs/stage-acks/ack-experiment-2026-10-03.json",
+        "knowledge/runs/stage-acks/ack-genesis-2026-10-03.json",
+        "knowledge/runs/stage-acks/ack-publish-2026-10-03.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-10-03-ingest.json",
+      "generatedRecordCount": 29
+    }
+  ]
+}

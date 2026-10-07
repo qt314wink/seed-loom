@@ -1,0 +1,29 @@
+{
+  "id": "source:mit-amphibian-drift:2026",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://act.mit.edu/2026/09/amphibian-drift-urbonas-mit-future-fest/",
+  "publisher": "MIT ACT",
+  "publishedAt": "2026-09-30T00:00:00Z",
+  "retrievedAt": "2026-10-03T19:42:57-04:00",
+  "sourceClass": "official",
+  "independenceKey": "mit-amphibian-drift-2026",
+  "contentHash": "sha256:url-mit",
+  "title": "Amphibian Drift",
+  "lead": "Molecular structure and vibration become spatial sound and XR interaction.",
+  "analystNote": "Institutional source with scientific, artistic and XR collaborators.",
+  "syndicatedFrom": null,
+  "doi": null,
+  "upstreamReport": null,
+  "policyDocument": null,
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": [],
+  "notes": "World premiere Oct 2-3."
+}
