@@ -1,0 +1,1354 @@
+{
+  "run": {
+    "schemaVersion": "1.1.0",
+    "runId": "run:nightly:2026-10-08",
+    "type": "ResearchRun",
+    "ingestionMode": "delivered",
+    "retrievalWindow": {
+      "from": "2026-10-06T23:26:44Z",
+      "to": "2026-10-08T23:26:44Z"
+    },
+    "newObservations": [
+      "obs:nightly:2026-10-08:gemini-agent",
+      "obs:nightly:2026-10-08:haiku-55",
+      "obs:nightly:2026-10-08:nuclear-clocks",
+      "obs:nightly:2026-10-08:living-planet-2026",
+      "obs:nightly:2026-10-08:venture-concentration"
+    ],
+    "updatedObservations": [],
+    "candidatePatterns": [
+      "Enterprise agents increase demand for provenance, permissions and verifiable outcomes.",
+      "Lower inference prices may help bounded extraction only when total verified cost falls.",
+      "Ecological and capital allocation metrics require denominator-aware evidence and buyer validation."
+    ],
+    "newRelationships": [
+      "rel:nightly:2026-10-08:support-1",
+      "rel:nightly:2026-10-08:support-2",
+      "rel:nightly:2026-10-08:support-3",
+      "rel:nightly:2026-10-08:support-4",
+      "rel:nightly:2026-10-08:support-5"
+    ],
+    "contradictions": [
+      "Unified enterprise agent interfaces simplify use but may increase vendor lock-in.",
+      "Record AI venture investment does not imply accessible consulting budgets.",
+      "WWF's 2026 73% headline matches 2024 despite an expanded dataset."
+    ],
+    "opportunities": [
+      "Governed agent-boundary and evidence audit",
+      "Cost-per-verified-claim model-routing evaluation",
+      "Regenerative baseline-to-intervention measurement design",
+      "Paid creative workflow QA and motion-control calibration"
+    ],
+    "proposedExperiments": [
+      "agent-boundary-audit-v0: compare permissions, lineage, approvals and receipts for one bounded cross-app workflow; no production access.",
+      "model-cost-per-verified-claim-v0: compare Haiku 5.5 against baseline on 25 fixed source snippets with reviewer time and rejection rate."
+    ],
+    "repositoryActions": [
+      {
+        "status": "proposed",
+        "executed": false,
+        "repository": "qt314wink/seed-loom",
+        "allowedPaths": [
+          "docs/strategy-genesis/**"
+        ],
+        "action": "Document vendor-neutral agent audit specimen; separate PR approval required."
+      },
+      {
+        "status": "proposed",
+        "executed": false,
+        "repository": "MelodicBloom/wan-artistic-pipeline",
+        "allowedPaths": [
+          "tests/**",
+          "docs/**"
+        ],
+        "action": "Investigate Motion Control Surface failing workflow on PR #4; no mutation in this run."
+      }
+    ],
+    "noChangeReceipts": [
+      "No repo branches other than the authorized nightly intake branch may be created or mutated.",
+      "No archival, consolidation, outreach, deployment, acceptance or Genesis advancement.",
+      "GitHub watch is sampled; absence of visible activity is not proof of project inactivity."
+    ],
+    "collectionFailures": [
+      "No independent customer deployment/usage outcomes for the newly announced Gemini agent.",
+      "No controlled benchmark of Claude Haiku 5.5 on Seed Loom tasks.",
+      "No buyer procurement evidence for the proposed ecological measurement service.",
+      "GitHub watch sampled selected repos, not exhaustive owner-wide inventory.",
+      "Source contentHash is null because a reproducible raw-byte capture was not performed; stage input hash covers source URLs only."
+    ]
+  },
+  "sources": [
+    {
+      "schemaVersion": "1.1.0",
+      "id": "source:nightly:2026-10-08:gemini-agent",
+      "type": "Source",
+      "url": "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026",
+      "publisher": "Google Cloud",
+      "publishedAt": null,
+      "retrievedAt": "2026-10-08T23:26:44Z",
+      "sourceClass": "official",
+      "independenceKey": "google-cloud:gemini-agent",
+      "contentHash": null,
+      "title": "Google Cloud announced the Gemini universal work agent"
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "source:nightly:2026-10-08:haiku-55",
+      "type": "Source",
+      "url": "https://www.anthropic.com/claude-haiku-5-5",
+      "publisher": "Anthropic",
+      "publishedAt": null,
+      "retrievedAt": "2026-10-08T23:26:44Z",
+      "sourceClass": "primary",
+      "independenceKey": "anthropic:haiku-55",
+      "contentHash": null,
+      "title": "Anthropic released Claude Haiku 5.5 with published low-cost"
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "source:nightly:2026-10-08:nuclear-clocks",
+      "type": "Source",
+      "url": "https://www.nature.com/articles/d41586-026-03060-9",
+      "publisher": "Nature",
+      "publishedAt": null,
+      "retrievedAt": "2026-10-08T23:26:44Z",
+      "sourceClass": "research",
+      "independenceKey": "nature:nuclear-clocks",
+      "contentHash": null,
+      "title": "Two independent research groups reported operational thorium-229 nuclear"
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "source:nightly:2026-10-08:living-planet-2026",
+      "type": "Source",
+      "url": "https://www.worldwildlife.org/publications/2026-living-planet-report/",
+      "publisher": "WWF",
+      "publishedAt": null,
+      "retrievedAt": "2026-10-08T23:26:44Z",
+      "sourceClass": "research",
+      "independenceKey": "wwf:living-planet-2026",
+      "contentHash": null,
+      "title": "WWF released the 2026 Living Planet Report, documenting"
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "source:nightly:2026-10-08:venture-concentration",
+      "type": "Source",
+      "url": "https://nvca.org/pitchbook-nvca-venture-monitor/",
+      "publisher": "NVCA and PitchBook",
+      "publishedAt": null,
+      "retrievedAt": "2026-10-08T23:26:44Z",
+      "sourceClass": "financial",
+      "independenceKey": "nvca-and-pitchbook:venture-concentration",
+      "contentHash": null,
+      "title": "The Q3 2026 PitchBook-NVCA Venture Monitor reports $515.8"
+    }
+  ],
+  "observations": [
+    {
+      "schemaVersion": "1.1.0",
+      "id": "obs:nightly:2026-10-08:gemini-agent",
+      "type": "Observation",
+      "capturedAt": "2026-10-08T23:26:44Z",
+      "claim": "Google Cloud announced the Gemini universal work agent on October 8, integrating work across Workspace, business systems, tools, models and enterprise policy controls.",
+      "verifiedFacts": [
+        "Google Cloud published its Gemini at Work announcement on October 8, 2026.",
+        "The announced agent plans and executes work across Workspace and connected business systems with enterprise identity, authorization and cost controls."
+      ],
+      "inference": [
+        "Consultancy: offer an agent-permissions and evidence-continuity audit rather than build another generic assistant.",
+        "Disposition: qt314wink/seed-loom CORE; MelodicBloom/agent-runtime-control-center CONSOLIDATE candidate pending boundary comparison.",
+        "Vendor demonstrations and claimed customer adoption are not independent proof of this specific new agent's production outcomes."
+      ],
+      "significance": "High: integrated enterprise agents make provenance, authorization, cost and reproducibility concrete buyer concerns.",
+      "confidence": 0.97,
+      "evidenceMaturity": "source-backed",
+      "evidenceClass": "model-capability",
+      "sourceRefs": [
+        "source:nightly:2026-10-08:gemini-agent"
+      ],
+      "actorRefs": [
+        "provider:google-cloud",
+        "buyer:enterprise-customers"
+      ],
+      "affectedRepositories": [
+        "qt314wink/seed-loom",
+        "MelodicBloom/agent-runtime-control-center"
+      ],
+      "assumptions": [
+        "Enterprise customers will need independent auditability across vendor agents."
+      ],
+      "knownLimitations": [
+        "Announcement does not independently establish production success or cross-vendor portability.",
+        "Private-preview access and eligibility were not independently tested."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "obs:nightly:2026-10-08:haiku-55",
+      "type": "Observation",
+      "capturedAt": "2026-10-08T23:26:44Z",
+      "claim": "Anthropic released Claude Haiku 5.5 with published low-cost token pricing and availability across major cloud platforms for high-volume AI workloads.",
+      "verifiedFacts": [
+        "Anthropic published Claude Haiku 5.5 availability and a pricing table in October 2026.",
+        "Its stated standard input/output pricing for prompts up to 100,000 tokens is $0.10/$0.50 per million tokens, subject to provider terms."
+      ],
+      "inference": [
+        "Consultancy: a bounded model-routing benchmark can test cost, quality, and evidence retention for nightly source classification.",
+        "Disposition: qt314wink/seed-loom CORE; motion and creative systems remain independent consumers, not a reason to merge them.",
+        "Lower token price does not establish lower end-to-end workflow cost when retries and review are included."
+      ],
+      "significance": "High: model-cost shifts can change feasible unit economics for governed evidence ingestion.",
+      "confidence": 0.96,
+      "evidenceMaturity": "source-backed",
+      "evidenceClass": "pricing",
+      "sourceRefs": [
+        "source:nightly:2026-10-08:haiku-55"
+      ],
+      "actorRefs": [
+        "provider:anthropic",
+        "supplier:cloud-platforms",
+        "buyer:developer-teams"
+      ],
+      "affectedRepositories": [
+        "qt314wink/seed-loom",
+        "qt314wink/observation-ad-pipeline"
+      ],
+      "assumptions": [
+        "Published API pricing applies to the selected workload and region."
+      ],
+      "knownLimitations": [
+        "No independent benchmark on Seed Loom classification tasks.",
+        "Published prices can change; terms and context-length tiers matter."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "obs:nightly:2026-10-08:nuclear-clocks",
+      "type": "Observation",
+      "capturedAt": "2026-10-08T23:26:44Z",
+      "claim": "Two independent research groups reported operational thorium-229 nuclear clocks in Nature in October 2026, establishing a laboratory metrology milestone.",
+      "verifiedFacts": [
+        "Nature's October 7, 2026 News & Views describes two peer-reviewed implementations of nuclear clocks.",
+        "The reported systems use nuclear transitions of thorium-229; they are research prototypes, not proven superior commercial clocks."
+      ],
+      "inference": [
+        "Consultancy: retain as a science-to-visualization teaching specimen, not a near-term product claim.",
+        "Disposition: qt314wink/shader-grammar REFERENCE-ONLY for optical explanatory diagrams; Omni-Loom should not absorb metrology scope.",
+        "The result is relevant to precise timing, optical systems and scientific visualization, but not proof of immediate commercial demand."
+      ],
+      "significance": "Medium: a tangible optical-physics milestone supports credible educational visualization while resisting speculative commercialization.",
+      "confidence": 0.96,
+      "evidenceMaturity": "source-backed",
+      "evidenceClass": "peer-reviewed-research",
+      "sourceRefs": [
+        "source:nightly:2026-10-08:nuclear-clocks"
+      ],
+      "actorRefs": [
+        "researcher:vienna-team",
+        "researcher:beijing-team",
+        "publisher:nature"
+      ],
+      "affectedRepositories": [
+        "qt314wink/shader-grammar",
+        "qt314wink/omni-loom"
+      ],
+      "assumptions": [
+        "The published implementations are independently reproducible."
+      ],
+      "knownLimitations": [
+        "Research prototypes have not demonstrated commercial reliability or price.",
+        "No evidence of immediate consultancy procurement."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "obs:nightly:2026-10-08:living-planet-2026",
+      "type": "Observation",
+      "capturedAt": "2026-10-08T23:26:44Z",
+      "claim": "WWF released the 2026 Living Planet Report, documenting a 73 percent average decline in monitored vertebrate population sizes from 1970 to 2022 while identifying recovery examples.",
+      "verifiedFacts": [
+        "WWF published its 2026 Living Planet Report on October 7, 2026.",
+        "The index covers 35,803 population trends across 5,790 vertebrate species and reports a 73 percent average monitored population-size decline.",
+        "WWF states the headline 73 percent was also reported in 2024; this is an updated dataset, not a newly worsened percentage."
+      ],
+      "inference": [
+        "Consultancy: offer a baseline-to-intervention ecological evidence map and explain population-index denominators clearly.",
+        "Disposition: MelodicBloom/project-constellation INCUBATE as a research/service case; Seed Loom CORE for source provenance.",
+        "A report's conservation examples are not evidence that a particular intervention generalizes to every ecosystem."
+      ],
+      "significance": "High: measurable ecological restoration requires source-aware indicators, baselines, interventions and counterfactuals.",
+      "confidence": 0.98,
+      "evidenceMaturity": "source-backed",
+      "evidenceClass": "default",
+      "sourceRefs": [
+        "source:nightly:2026-10-08:living-planet-2026"
+      ],
+      "actorRefs": [
+        "researcher:wwf",
+        "researcher:zsl",
+        "participant:conservation-programs"
+      ],
+      "affectedRepositories": [
+        "qt314wink/seed-loom",
+        "MelodicBloom/project-constellation"
+      ],
+      "assumptions": [
+        "Local clients can obtain appropriate baseline and follow-up monitoring data."
+      ],
+      "knownLimitations": [
+        "The index is an average of relative monitored population trends, not a count of all wildlife lost.",
+        "Data end in 2022; local ecological effects and causality require separate study."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "obs:nightly:2026-10-08:venture-concentration",
+      "type": "Observation",
+      "capturedAt": "2026-10-08T23:26:44Z",
+      "claim": "The Q3 2026 PitchBook-NVCA Venture Monitor reports $515.8 billion of US venture investment through September, with AI companies accounting for 82.7 percent of deal value.",
+      "verifiedFacts": [
+        "The PitchBook-NVCA Venture Monitor reports $515.8 billion in US VC deal value through Q3 2026.",
+        "AI companies accounted for 82.7 percent of that deal value; Q3 investment was $98.4 billion across an estimated 5,012 deals.",
+        "The report also describes concentrated fundraising and persistent exit constraints."
+      ],
+      "inference": [
+        "Consultancy: prioritize revenue-generating implementation and measurable proof over fundraising-dependent speculative platform expansion.",
+        "Disposition: Observation Ad Pipeline PRODUCTIZE only with buyer evidence; fragmentary portfolio lines remain CONSOLIDATE candidates, not automatic archive decisions.",
+        "AI capital concentration is not evidence that small creative consultancies can access that funding."
+      ],
+      "significance": "High: aggregate funding abundance conceals selective access to capital and favors sellable, bounded service proofs.",
+      "confidence": 0.97,
+      "evidenceMaturity": "source-backed",
+      "evidenceClass": "funding",
+      "sourceRefs": [
+        "source:nightly:2026-10-08:venture-concentration"
+      ],
+      "actorRefs": [
+        "analyst:pitchbook",
+        "organization:nvca",
+        "funder:venture-investors",
+        "buyer:startup-founders"
+      ],
+      "affectedRepositories": [
+        "qt314wink/observation-ad-pipeline",
+        "qt314wink/seed-loom",
+        "MelodicBloom/project-constellation"
+      ],
+      "assumptions": [
+        "Concentration persists long enough to affect near-term consultancy go-to-market."
+      ],
+      "knownLimitations": [
+        "Investment figures are aggregate estimates and can be revised.",
+        "Funding data do not demonstrate specific client budgets or procurement."
+      ],
+      "counterevidenceRefs": [],
+      "approvalState": "candidate"
+    }
+  ],
+  "relationships": [
+    {
+      "schemaVersion": "1.1.0",
+      "id": "rel:nightly:2026-10-08:support-1",
+      "type": "Relationship",
+      "from": "obs:nightly:2026-10-08:gemini-agent",
+      "predicate": "SUPPORTED_BY",
+      "to": "source:nightly:2026-10-08:gemini-agent",
+      "confidence": 0.97,
+      "evidenceRefs": [
+        "source:nightly:2026-10-08:gemini-agent"
+      ]
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "rel:nightly:2026-10-08:support-2",
+      "type": "Relationship",
+      "from": "obs:nightly:2026-10-08:haiku-55",
+      "predicate": "SUPPORTED_BY",
+      "to": "source:nightly:2026-10-08:haiku-55",
+      "confidence": 0.96,
+      "evidenceRefs": [
+        "source:nightly:2026-10-08:haiku-55"
+      ]
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "rel:nightly:2026-10-08:support-3",
+      "type": "Relationship",
+      "from": "obs:nightly:2026-10-08:nuclear-clocks",
+      "predicate": "SUPPORTED_BY",
+      "to": "source:nightly:2026-10-08:nuclear-clocks",
+      "confidence": 0.96,
+      "evidenceRefs": [
+        "source:nightly:2026-10-08:nuclear-clocks"
+      ]
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "rel:nightly:2026-10-08:support-4",
+      "type": "Relationship",
+      "from": "obs:nightly:2026-10-08:living-planet-2026",
+      "predicate": "SUPPORTED_BY",
+      "to": "source:nightly:2026-10-08:living-planet-2026",
+      "confidence": 0.98,
+      "evidenceRefs": [
+        "source:nightly:2026-10-08:living-planet-2026"
+      ]
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "id": "rel:nightly:2026-10-08:support-5",
+      "type": "Relationship",
+      "from": "obs:nightly:2026-10-08:venture-concentration",
+      "predicate": "SUPPORTED_BY",
+      "to": "source:nightly:2026-10-08:venture-concentration",
+      "confidence": 0.97,
+      "evidenceRefs": [
+        "source:nightly:2026-10-08:venture-concentration"
+      ]
+    }
+  ],
+  "stageAcks": [
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-08:collect",
+      "runId": "run:nightly:2026-10-08",
+      "stage": "collect",
+      "status": "passed",
+      "startedAt": "2026-10-08T23:26:44Z",
+      "completedAt": "2026-10-08T23:26:44Z",
+      "inputs": [
+        "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026",
+        "https://www.anthropic.com/claude-haiku-5-5",
+        "https://www.nature.com/articles/d41586-026-03060-9",
+        "https://www.worldwildlife.org/publications/2026-living-planet-report/",
+        "https://nvca.org/pitchbook-nvca-venture-monitor/"
+      ],
+      "outputs": [
+        "source:nightly:2026-10-08:gemini-agent",
+        "source:nightly:2026-10-08:haiku-55",
+        "source:nightly:2026-10-08:nuclear-clocks",
+        "source:nightly:2026-10-08:living-planet-2026",
+        "source:nightly:2026-10-08:venture-concentration"
+      ],
+      "checks": [
+        {
+          "name": "candidate-evidence-boundary",
+          "result": "pass",
+          "detail": "Source refs present; candidate-only state retained. Live schema validation must be confirmed by canonical dry-run."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only analytical transition; no external or repository mutations authorized by stage acknowledgement."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "Primary-source 48h retrieval, repository preflight and bounded Socratic review; input hash is of ordered URL strings, not source bodies.",
+        "inputHashes": [
+          "sha256:fc7af71ca05e00c38ae32ad278a2e458089b5fb4335a18435e6d838d3f2f90c2"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-08:vet",
+      "runId": "run:nightly:2026-10-08",
+      "stage": "vet",
+      "status": "passed",
+      "startedAt": "2026-10-08T23:26:44Z",
+      "completedAt": "2026-10-08T23:26:44Z",
+      "inputs": [
+        "source-candidate-set"
+      ],
+      "outputs": [
+        "candidate-vet-review"
+      ],
+      "checks": [
+        {
+          "name": "candidate-evidence-boundary",
+          "result": "pass",
+          "detail": "Source refs present; candidate-only state retained. Live schema validation must be confirmed by canonical dry-run."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only analytical transition; no external or repository mutations authorized by stage acknowledgement."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "Primary-source 48h retrieval, repository preflight and bounded Socratic review; input hash is of ordered URL strings, not source bodies.",
+        "inputHashes": [
+          "sha256:fc7af71ca05e00c38ae32ad278a2e458089b5fb4335a18435e6d838d3f2f90c2"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-08:normalize",
+      "runId": "run:nightly:2026-10-08",
+      "stage": "normalize",
+      "status": "passed",
+      "startedAt": "2026-10-08T23:26:44Z",
+      "completedAt": "2026-10-08T23:26:44Z",
+      "inputs": [
+        "source-candidate-set"
+      ],
+      "outputs": [
+        "candidate-normalize-review"
+      ],
+      "checks": [
+        {
+          "name": "candidate-evidence-boundary",
+          "result": "pass",
+          "detail": "Source refs present; candidate-only state retained. Live schema validation must be confirmed by canonical dry-run."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only analytical transition; no external or repository mutations authorized by stage acknowledgement."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "Primary-source 48h retrieval, repository preflight and bounded Socratic review; input hash is of ordered URL strings, not source bodies.",
+        "inputHashes": [
+          "sha256:fc7af71ca05e00c38ae32ad278a2e458089b5fb4335a18435e6d838d3f2f90c2"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-08:observe",
+      "runId": "run:nightly:2026-10-08",
+      "stage": "observe",
+      "status": "passed",
+      "startedAt": "2026-10-08T23:26:44Z",
+      "completedAt": "2026-10-08T23:26:44Z",
+      "inputs": [
+        "run:nightly:2026-10-08"
+      ],
+      "outputs": [
+        "obs:nightly:2026-10-08:gemini-agent",
+        "obs:nightly:2026-10-08:haiku-55",
+        "obs:nightly:2026-10-08:nuclear-clocks",
+        "obs:nightly:2026-10-08:living-planet-2026",
+        "obs:nightly:2026-10-08:venture-concentration"
+      ],
+      "checks": [
+        {
+          "name": "candidate-evidence-boundary",
+          "result": "pass",
+          "detail": "Source refs present; candidate-only state retained. Live schema validation must be confirmed by canonical dry-run."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only analytical transition; no external or repository mutations authorized by stage acknowledgement."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "Primary-source 48h retrieval, repository preflight and bounded Socratic review; input hash is of ordered URL strings, not source bodies.",
+        "inputHashes": [
+          "sha256:fc7af71ca05e00c38ae32ad278a2e458089b5fb4335a18435e6d838d3f2f90c2"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-08:inquire",
+      "runId": "run:nightly:2026-10-08",
+      "stage": "inquire",
+      "status": "passed",
+      "startedAt": "2026-10-08T23:26:44Z",
+      "completedAt": "2026-10-08T23:26:44Z",
+      "inputs": [
+        "run:nightly:2026-10-08"
+      ],
+      "outputs": [
+        "candidate-inquire-review"
+      ],
+      "checks": [
+        {
+          "name": "candidate-evidence-boundary",
+          "result": "pass",
+          "detail": "Source refs present; candidate-only state retained. Live schema validation must be confirmed by canonical dry-run."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only analytical transition; no external or repository mutations authorized by stage acknowledgement."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "Primary-source 48h retrieval, repository preflight and bounded Socratic review; input hash is of ordered URL strings, not source bodies.",
+        "inputHashes": [
+          "sha256:fc7af71ca05e00c38ae32ad278a2e458089b5fb4335a18435e6d838d3f2f90c2"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-08:interpret",
+      "runId": "run:nightly:2026-10-08",
+      "stage": "interpret",
+      "status": "passed",
+      "startedAt": "2026-10-08T23:26:44Z",
+      "completedAt": "2026-10-08T23:26:44Z",
+      "inputs": [
+        "run:nightly:2026-10-08"
+      ],
+      "outputs": [
+        "candidate-interpret-review"
+      ],
+      "checks": [
+        {
+          "name": "candidate-evidence-boundary",
+          "result": "pass",
+          "detail": "Source refs present; candidate-only state retained. Live schema validation must be confirmed by canonical dry-run."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only analytical transition; no external or repository mutations authorized by stage acknowledgement."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "Primary-source 48h retrieval, repository preflight and bounded Socratic review; input hash is of ordered URL strings, not source bodies.",
+        "inputHashes": [
+          "sha256:fc7af71ca05e00c38ae32ad278a2e458089b5fb4335a18435e6d838d3f2f90c2"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-08:relate",
+      "runId": "run:nightly:2026-10-08",
+      "stage": "relate",
+      "status": "passed",
+      "startedAt": "2026-10-08T23:26:44Z",
+      "completedAt": "2026-10-08T23:26:44Z",
+      "inputs": [
+        "run:nightly:2026-10-08"
+      ],
+      "outputs": [
+        "rel:nightly:2026-10-08:support-1",
+        "rel:nightly:2026-10-08:support-2",
+        "rel:nightly:2026-10-08:support-3",
+        "rel:nightly:2026-10-08:support-4",
+        "rel:nightly:2026-10-08:support-5"
+      ],
+      "checks": [
+        {
+          "name": "candidate-evidence-boundary",
+          "result": "pass",
+          "detail": "Source refs present; candidate-only state retained. Live schema validation must be confirmed by canonical dry-run."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only analytical transition; no external or repository mutations authorized by stage acknowledgement."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "Primary-source 48h retrieval, repository preflight and bounded Socratic review; input hash is of ordered URL strings, not source bodies.",
+        "inputHashes": [
+          "sha256:fc7af71ca05e00c38ae32ad278a2e458089b5fb4335a18435e6d838d3f2f90c2"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-08:pattern",
+      "runId": "run:nightly:2026-10-08",
+      "stage": "pattern",
+      "status": "passed",
+      "startedAt": "2026-10-08T23:26:44Z",
+      "completedAt": "2026-10-08T23:26:44Z",
+      "inputs": [
+        "run:nightly:2026-10-08"
+      ],
+      "outputs": [
+        "candidate-pattern-review"
+      ],
+      "checks": [
+        {
+          "name": "candidate-evidence-boundary",
+          "result": "pass",
+          "detail": "Source refs present; candidate-only state retained. Live schema validation must be confirmed by canonical dry-run."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only analytical transition; no external or repository mutations authorized by stage acknowledgement."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "Primary-source 48h retrieval, repository preflight and bounded Socratic review; input hash is of ordered URL strings, not source bodies.",
+        "inputHashes": [
+          "sha256:fc7af71ca05e00c38ae32ad278a2e458089b5fb4335a18435e6d838d3f2f90c2"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-08:opportunity",
+      "runId": "run:nightly:2026-10-08",
+      "stage": "opportunity",
+      "status": "passed",
+      "startedAt": "2026-10-08T23:26:44Z",
+      "completedAt": "2026-10-08T23:26:44Z",
+      "inputs": [
+        "run:nightly:2026-10-08"
+      ],
+      "outputs": [
+        "candidate-opportunity-review"
+      ],
+      "checks": [
+        {
+          "name": "candidate-evidence-boundary",
+          "result": "pass",
+          "detail": "Source refs present; candidate-only state retained. Live schema validation must be confirmed by canonical dry-run."
+        }
+      ],
+      "governance": {
+        "allowedTransition": true,
+        "approvalRequired": false,
+        "boundaryNotes": [
+          "Candidate-only analytical transition; no external or repository mutations authorized by stage acknowledgement."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "Primary-source 48h retrieval, repository preflight and bounded Socratic review; input hash is of ordered URL strings, not source bodies.",
+        "inputHashes": [
+          "sha256:fc7af71ca05e00c38ae32ad278a2e458089b5fb4335a18435e6d838d3f2f90c2"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-08:strategy",
+      "runId": "run:nightly:2026-10-08",
+      "stage": "strategy",
+      "status": "deferred",
+      "startedAt": "2026-10-08T23:26:44Z",
+      "completedAt": "2026-10-08T23:26:44Z",
+      "inputs": [
+        "run:nightly:2026-10-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "human-promotion-gate",
+          "result": "not-applicable",
+          "detail": "No acceptance, experiment execution, Genesis advancement or publication authorized."
+        }
+      ],
+      "governance": {
+        "allowedTransition": false,
+        "approvalRequired": true,
+        "boundaryNotes": [
+          "Stop before governed promotion."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "Primary-source 48h retrieval, repository preflight and bounded Socratic review; input hash is of ordered URL strings, not source bodies.",
+        "inputHashes": [
+          "sha256:fc7af71ca05e00c38ae32ad278a2e458089b5fb4335a18435e6d838d3f2f90c2"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-08:experiment",
+      "runId": "run:nightly:2026-10-08",
+      "stage": "experiment",
+      "status": "deferred",
+      "startedAt": "2026-10-08T23:26:44Z",
+      "completedAt": "2026-10-08T23:26:44Z",
+      "inputs": [
+        "run:nightly:2026-10-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "human-promotion-gate",
+          "result": "not-applicable",
+          "detail": "No acceptance, experiment execution, Genesis advancement or publication authorized."
+        }
+      ],
+      "governance": {
+        "allowedTransition": false,
+        "approvalRequired": true,
+        "boundaryNotes": [
+          "Stop before governed promotion."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "Primary-source 48h retrieval, repository preflight and bounded Socratic review; input hash is of ordered URL strings, not source bodies.",
+        "inputHashes": [
+          "sha256:fc7af71ca05e00c38ae32ad278a2e458089b5fb4335a18435e6d838d3f2f90c2"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-08:genesis",
+      "runId": "run:nightly:2026-10-08",
+      "stage": "genesis",
+      "status": "deferred",
+      "startedAt": "2026-10-08T23:26:44Z",
+      "completedAt": "2026-10-08T23:26:44Z",
+      "inputs": [
+        "run:nightly:2026-10-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "human-promotion-gate",
+          "result": "not-applicable",
+          "detail": "No acceptance, experiment execution, Genesis advancement or publication authorized."
+        }
+      ],
+      "governance": {
+        "allowedTransition": false,
+        "approvalRequired": true,
+        "boundaryNotes": [
+          "Stop before governed promotion."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "Primary-source 48h retrieval, repository preflight and bounded Socratic review; input hash is of ordered URL strings, not source bodies.",
+        "inputHashes": [
+          "sha256:fc7af71ca05e00c38ae32ad278a2e458089b5fb4335a18435e6d838d3f2f90c2"
+        ]
+      }
+    },
+    {
+      "schemaVersion": "1.1.0",
+      "ackId": "ack:nightly:2026-10-08:publish",
+      "runId": "run:nightly:2026-10-08",
+      "stage": "publish",
+      "status": "deferred",
+      "startedAt": "2026-10-08T23:26:44Z",
+      "completedAt": "2026-10-08T23:26:44Z",
+      "inputs": [
+        "run:nightly:2026-10-08"
+      ],
+      "outputs": [],
+      "checks": [
+        {
+          "name": "human-promotion-gate",
+          "result": "not-applicable",
+          "detail": "No acceptance, experiment execution, Genesis advancement or publication authorized."
+        }
+      ],
+      "governance": {
+        "allowedTransition": false,
+        "approvalRequired": true,
+        "boundaryNotes": [
+          "Stop before governed promotion."
+        ]
+      },
+      "provenance": {
+        "producer": "nightly-consultancy-intelligence",
+        "method": "Primary-source 48h retrieval, repository preflight and bounded Socratic review; input hash is of ordered URL strings, not source bodies.",
+        "inputHashes": [
+          "sha256:fc7af71ca05e00c38ae32ad278a2e458089b5fb4335a18435e6d838d3f2f90c2"
+        ]
+      }
+    }
+  ],
+  "socraticAssessments": [
+    {
+      "assessmentId": "socratic:nightly:2026-10-08:gemini-agent",
+      "observationId": "obs:nightly:2026-10-08:gemini-agent",
+      "questions": [
+        "What changed?",
+        "Whose behavior changed?",
+        "What demonstrated problem exists?",
+        "Who benefits?",
+        "What substitute exists?",
+        "What mechanism matters?",
+        "What is the most dangerous assumption?",
+        "What would falsify the interpretation?",
+        "What evidence is missing?",
+        "What simpler explanation competes?"
+      ],
+      "answers": [
+        {
+          "question": "What changed?",
+          "answer": "A new work agent was announced with cross-app tools and governance.",
+          "evidenceRefs": [
+            "source:nightly:2026-10-08:gemini-agent"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "Whose behavior changed?",
+          "answer": "Google Cloud as provider announced availability; buyer migration is not verified.",
+          "evidenceRefs": [
+            "source:nightly:2026-10-08:gemini-agent"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "What demonstrated problem exists?",
+          "answer": "Fragmented business context and permissions are identified by the provider, not independently demonstrated.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "Who benefits?",
+          "answer": "Enterprise teams with multi-app workflows are the proposed beneficiaries.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What substitute exists?",
+          "answer": "Existing Workspace automations and competing enterprise agents substitute.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What mechanism matters?",
+          "answer": "Identity, tool permissions, shared context and audit trail are the proposed mechanism.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What is the most dangerous assumption?",
+          "answer": "Cross-app provenance may not survive vendor boundaries.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What would falsify the interpretation?",
+          "answer": "A verified cross-platform audit with no missing lineage would undermine the consultancy gap.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What evidence is missing?",
+          "answer": "Independent buyer evaluations and measured cross-system outcomes are missing.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What simpler explanation competes?",
+          "answer": "Packaging of existing functionality is a plausible simpler explanation.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        }
+      ],
+      "dangerousAssumption": "Vendor-integrated context may be mistaken for trustworthy or portable provenance.",
+      "falsifier": "Customer audits show built-in controls already supply complete cross-system evidence without external integration.",
+      "missingEvidence": [
+        "Independent production error rates",
+        "Portability and policy enforcement comparisons"
+      ],
+      "alternativeExplanation": "The launch may primarily consolidate existing Workspace features and customer retention rather than create a new market.",
+      "disposition": "experiment",
+      "confidence": 0.85
+    },
+    {
+      "assessmentId": "socratic:nightly:2026-10-08:haiku-55",
+      "observationId": "obs:nightly:2026-10-08:haiku-55",
+      "questions": [
+        "What changed?",
+        "Whose behavior changed?",
+        "What demonstrated problem exists?",
+        "Who benefits?",
+        "What substitute exists?",
+        "What mechanism matters?",
+        "What is the most dangerous assumption?",
+        "What would falsify the interpretation?",
+        "What evidence is missing?",
+        "What simpler explanation competes?"
+      ],
+      "answers": [
+        {
+          "question": "What changed?",
+          "answer": "A low-cost model tier became available.",
+          "evidenceRefs": [
+            "source:nightly:2026-10-08:haiku-55"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "Whose behavior changed?",
+          "answer": "Anthropic released it; customers' migration behavior is unknown.",
+          "evidenceRefs": [
+            "source:nightly:2026-10-08:haiku-55"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "What demonstrated problem exists?",
+          "answer": "Provider claims target high-volume classification and extraction cost.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "Who benefits?",
+          "answer": "Teams with high request volume could benefit.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What substitute exists?",
+          "answer": "Existing Haiku, Sonnet and open-weight small models substitute.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What mechanism matters?",
+          "answer": "Pricing tiers plus inference speed change unit economics.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What is the most dangerous assumption?",
+          "answer": "A cheaper model might require more repair and verification.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What would falsify the interpretation?",
+          "answer": "Measured cost per verified claim not improving would falsify the benefit.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What evidence is missing?",
+          "answer": "Controlled benchmark and actual billing are missing.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What simpler explanation competes?",
+          "answer": "Ordinary price competition may explain the release.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        }
+      ],
+      "dangerousAssumption": "Cheaper tokens may induce more retries and lower evidence quality.",
+      "falsifier": "A fixed-task evaluation finds equal or worse total verified cost per accepted source.",
+      "missingEvidence": [
+        "Fixed corpus benchmark with failure and reviewer time",
+        "Actual per-workload API billing"
+      ],
+      "alternativeExplanation": "The model is a cheaper tier for existing tasks without changing demand.",
+      "disposition": "experiment",
+      "confidence": 0.85
+    },
+    {
+      "assessmentId": "socratic:nightly:2026-10-08:nuclear-clocks",
+      "observationId": "obs:nightly:2026-10-08:nuclear-clocks",
+      "questions": [
+        "What changed?",
+        "Whose behavior changed?",
+        "What demonstrated problem exists?",
+        "Who benefits?",
+        "What substitute exists?",
+        "What mechanism matters?",
+        "What is the most dangerous assumption?",
+        "What would falsify the interpretation?",
+        "What evidence is missing?",
+        "What simpler explanation competes?"
+      ],
+      "answers": [
+        {
+          "question": "What changed?",
+          "answer": "Two research teams published operational nuclear-clock implementations.",
+          "evidenceRefs": [
+            "source:nightly:2026-10-08:nuclear-clocks"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "Whose behavior changed?",
+          "answer": "Researchers demonstrated and published prototypes; buyer adoption is unknown.",
+          "evidenceRefs": [
+            "source:nightly:2026-10-08:nuclear-clocks"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "What demonstrated problem exists?",
+          "answer": "The research addresses precision metrology and tests of fundamental physics.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "Who benefits?",
+          "answer": "Metrology laboratories may benefit; commercial users are not yet shown.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What substitute exists?",
+          "answer": "Optical atomic clocks remain a strong substitute.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What mechanism matters?",
+          "answer": "Laser interrogation of thorium-229 nuclear transitions is the mechanism.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What is the most dangerous assumption?",
+          "answer": "Assuming laboratory clocks are commercially ready is dangerous.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What would falsify the interpretation?",
+          "answer": "Failed independent replication or persistent inferior performance would falsify the product thesis.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What evidence is missing?",
+          "answer": "Commercial deployment and operating-cost evidence are missing.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What simpler explanation competes?",
+          "answer": "This may remain a physics instrumentation advance.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        }
+      ],
+      "dangerousAssumption": "Scientific novelty could be mistaken for a deployable photonics product.",
+      "falsifier": "Replication fails or practical performance remains inferior under target conditions.",
+      "missingEvidence": [
+        "Independent replication under operating conditions",
+        "Customer demand and manufacturing constraints"
+      ],
+      "alternativeExplanation": "The main value may be fundamental-physics experimentation, not timekeeping products.",
+      "disposition": "watch",
+      "confidence": 0.85
+    },
+    {
+      "assessmentId": "socratic:nightly:2026-10-08:living-planet-2026",
+      "observationId": "obs:nightly:2026-10-08:living-planet-2026",
+      "questions": [
+        "What changed?",
+        "Whose behavior changed?",
+        "What demonstrated problem exists?",
+        "Who benefits?",
+        "What substitute exists?",
+        "What mechanism matters?",
+        "What is the most dangerous assumption?",
+        "What would falsify the interpretation?",
+        "What evidence is missing?",
+        "What simpler explanation competes?"
+      ],
+      "answers": [
+        {
+          "question": "What changed?",
+          "answer": "A new report updates monitoring through 2022 with more population trends.",
+          "evidenceRefs": [
+            "source:nightly:2026-10-08:living-planet-2026"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "Whose behavior changed?",
+          "answer": "WWF and ZSL published evidence; documented conservation programs show recoveries.",
+          "evidenceRefs": [
+            "source:nightly:2026-10-08:living-planet-2026"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "What demonstrated problem exists?",
+          "answer": "The report identifies severe biodiversity pressure and uneven recovery.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "Who benefits?",
+          "answer": "Conservation groups, land managers and policymakers could use better measurement.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What substitute exists?",
+          "answer": "Existing biodiversity monitoring and reporting services substitute.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What mechanism matters?",
+          "answer": "Longitudinal population indices plus intervention tracking provide the evidence mechanism.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What is the most dangerous assumption?",
+          "answer": "Assuming global index values directly describe local ecological outcomes is dangerous.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What would falsify the interpretation?",
+          "answer": "Failure to produce a defensible local baseline and comparison would falsify service readiness.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What evidence is missing?",
+          "answer": "Local interventions, monitoring costs and counterfactuals are missing.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What simpler explanation competes?",
+          "answer": "This may be a routine index refresh rather than a change in the global trend.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        }
+      ],
+      "dangerousAssumption": "Mistaking the 73 percent index change for 73 percent of animals or species extinct.",
+      "falsifier": "A proposed service cannot establish an attributable baseline, intervention and outcome.",
+      "missingEvidence": [
+        "Local time-series ecological measurements",
+        "Intervention counterfactuals and monitoring costs"
+      ],
+      "alternativeExplanation": "The unchanged headline is a periodic evidence update rather than a new ecological inflection.",
+      "disposition": "strategy-candidate",
+      "confidence": 0.85
+    },
+    {
+      "assessmentId": "socratic:nightly:2026-10-08:venture-concentration",
+      "observationId": "obs:nightly:2026-10-08:venture-concentration",
+      "questions": [
+        "What changed?",
+        "Whose behavior changed?",
+        "What demonstrated problem exists?",
+        "Who benefits?",
+        "What substitute exists?",
+        "What mechanism matters?",
+        "What is the most dangerous assumption?",
+        "What would falsify the interpretation?",
+        "What evidence is missing?",
+        "What simpler explanation competes?"
+      ],
+      "answers": [
+        {
+          "question": "What changed?",
+          "answer": "The Q3 venture monitor quantified exceptional AI capital concentration.",
+          "evidenceRefs": [
+            "source:nightly:2026-10-08:venture-concentration"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "Whose behavior changed?",
+          "answer": "Investors made funded deals; the report does not prove local client purchasing.",
+          "evidenceRefs": [
+            "source:nightly:2026-10-08:venture-concentration"
+          ],
+          "answerType": "verified"
+        },
+        {
+          "question": "What demonstrated problem exists?",
+          "answer": "Funding is highly concentrated and liquidity remains constrained.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "Who benefits?",
+          "answer": "Investors in AI leaders benefit most directly; consultancy benefits are inferred.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What substitute exists?",
+          "answer": "Bootstrapping and fee-for-service revenue are substitutes to external funding.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What mechanism matters?",
+          "answer": "Capital allocation favors large AI rounds and established managers.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What is the most dangerous assumption?",
+          "answer": "Record aggregate funding may mislead a small consultancy's strategy.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        },
+        {
+          "question": "What would falsify the interpretation?",
+          "answer": "Evidence of broad small-client procurement would weaken the proposed service-first response.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What evidence is missing?",
+          "answer": "Actual client budget, procurement and conversion evidence is missing.",
+          "evidenceRefs": [],
+          "answerType": "unknown"
+        },
+        {
+          "question": "What simpler explanation competes?",
+          "answer": "A handful of mega-rounds may explain most of the headline increase.",
+          "evidenceRefs": [],
+          "answerType": "inferred"
+        }
+      ],
+      "dangerousAssumption": "Conflating record VC dollars with accessible financing or consultancy demand.",
+      "falsifier": "Verified client procurement shows broad willingness to pay for speculative platform builds without proof.",
+      "missingEvidence": [
+        "Small-client procurement and project budgets",
+        "Verified conversion data for service offers"
+      ],
+      "alternativeExplanation": "Mega-round concentration may be temporary and have little effect on local consulting demand.",
+      "disposition": "strategy-candidate",
+      "confidence": 0.85
+    }
+  ]
+}
