@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-10-08:gemini-agent",
+  "type": "Source",
+  "url": "https://cloud.google.com/blog/products/ai-machine-learning/welcome-to-gemini-at-work-2026",
+  "publisher": "Google Cloud",
+  "publishedAt": null,
+  "retrievedAt": "2026-10-08T23:26:44Z",
+  "sourceClass": "official",
+  "independenceKey": "google-cloud:gemini-agent",
+  "contentHash": null,
+  "title": "Google Cloud announced the Gemini universal work agent"
+}

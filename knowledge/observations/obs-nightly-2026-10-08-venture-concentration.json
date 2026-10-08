@@ -1,0 +1,44 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-08:venture-concentration",
+  "type": "Observation",
+  "capturedAt": "2026-10-08T23:26:44Z",
+  "claim": "The Q3 2026 PitchBook-NVCA Venture Monitor reports $515.8 billion of US venture investment through September, with AI companies accounting for 82.7 percent of deal value.",
+  "verifiedFacts": [
+    "The PitchBook-NVCA Venture Monitor reports $515.8 billion in US VC deal value through Q3 2026.",
+    "AI companies accounted for 82.7 percent of that deal value; Q3 investment was $98.4 billion across an estimated 5,012 deals.",
+    "The report also describes concentrated fundraising and persistent exit constraints."
+  ],
+  "inference": [
+    "Consultancy: prioritize revenue-generating implementation and measurable proof over fundraising-dependent speculative platform expansion.",
+    "Disposition: Observation Ad Pipeline PRODUCTIZE only with buyer evidence; fragmentary portfolio lines remain CONSOLIDATE candidates, not automatic archive decisions.",
+    "AI capital concentration is not evidence that small creative consultancies can access that funding."
+  ],
+  "significance": "High: aggregate funding abundance conceals selective access to capital and favors sellable, bounded service proofs.",
+  "confidence": 0.97,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:nightly:2026-10-08:venture-concentration"
+  ],
+  "actorRefs": [
+    "analyst:pitchbook",
+    "organization:nvca",
+    "funder:venture-investors",
+    "buyer:startup-founders"
+  ],
+  "affectedRepositories": [
+    "qt314wink/observation-ad-pipeline",
+    "qt314wink/seed-loom",
+    "MelodicBloom/project-constellation"
+  ],
+  "assumptions": [
+    "Concentration persists long enough to affect near-term consultancy go-to-market."
+  ],
+  "knownLimitations": [
+    "Investment figures are aggregate estimates and can be revised.",
+    "Funding data do not demonstrate specific client budgets or procurement."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

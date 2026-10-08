@@ -1,0 +1,91 @@
+{
+  "assessmentId": "socratic:nightly:2026-10-08:haiku-55",
+  "observationId": "obs:nightly:2026-10-08:haiku-55",
+  "questions": [
+    "What changed?",
+    "Whose behavior changed?",
+    "What demonstrated problem exists?",
+    "Who benefits?",
+    "What substitute exists?",
+    "What mechanism matters?",
+    "What is the most dangerous assumption?",
+    "What would falsify the interpretation?",
+    "What evidence is missing?",
+    "What simpler explanation competes?"
+  ],
+  "answers": [
+    {
+      "question": "What changed?",
+      "answer": "A low-cost model tier became available.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-08:haiku-55"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "Whose behavior changed?",
+      "answer": "Anthropic released it; customers' migration behavior is unknown.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-08:haiku-55"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "What demonstrated problem exists?",
+      "answer": "Provider claims target high-volume classification and extraction cost.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "Who benefits?",
+      "answer": "Teams with high request volume could benefit.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What substitute exists?",
+      "answer": "Existing Haiku, Sonnet and open-weight small models substitute.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What mechanism matters?",
+      "answer": "Pricing tiers plus inference speed change unit economics.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What is the most dangerous assumption?",
+      "answer": "A cheaper model might require more repair and verification.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What would falsify the interpretation?",
+      "answer": "Measured cost per verified claim not improving would falsify the benefit.",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What evidence is missing?",
+      "answer": "Controlled benchmark and actual billing are missing.",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What simpler explanation competes?",
+      "answer": "Ordinary price competition may explain the release.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    }
+  ],
+  "dangerousAssumption": "Cheaper tokens may induce more retries and lower evidence quality.",
+  "falsifier": "A fixed-task evaluation finds equal or worse total verified cost per accepted source.",
+  "missingEvidence": [
+    "Fixed corpus benchmark with failure and reviewer time",
+    "Actual per-workload API billing"
+  ],
+  "alternativeExplanation": "The model is a cheaper tier for existing tasks without changing demand.",
+  "disposition": "experiment",
+  "confidence": 0.85
+}

@@ -1,0 +1,91 @@
+{
+  "assessmentId": "socratic:nightly:2026-10-08:gemini-agent",
+  "observationId": "obs:nightly:2026-10-08:gemini-agent",
+  "questions": [
+    "What changed?",
+    "Whose behavior changed?",
+    "What demonstrated problem exists?",
+    "Who benefits?",
+    "What substitute exists?",
+    "What mechanism matters?",
+    "What is the most dangerous assumption?",
+    "What would falsify the interpretation?",
+    "What evidence is missing?",
+    "What simpler explanation competes?"
+  ],
+  "answers": [
+    {
+      "question": "What changed?",
+      "answer": "A new work agent was announced with cross-app tools and governance.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-08:gemini-agent"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "Whose behavior changed?",
+      "answer": "Google Cloud as provider announced availability; buyer migration is not verified.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-08:gemini-agent"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "What demonstrated problem exists?",
+      "answer": "Fragmented business context and permissions are identified by the provider, not independently demonstrated.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "Who benefits?",
+      "answer": "Enterprise teams with multi-app workflows are the proposed beneficiaries.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What substitute exists?",
+      "answer": "Existing Workspace automations and competing enterprise agents substitute.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What mechanism matters?",
+      "answer": "Identity, tool permissions, shared context and audit trail are the proposed mechanism.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What is the most dangerous assumption?",
+      "answer": "Cross-app provenance may not survive vendor boundaries.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What would falsify the interpretation?",
+      "answer": "A verified cross-platform audit with no missing lineage would undermine the consultancy gap.",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What evidence is missing?",
+      "answer": "Independent buyer evaluations and measured cross-system outcomes are missing.",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What simpler explanation competes?",
+      "answer": "Packaging of existing functionality is a plausible simpler explanation.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    }
+  ],
+  "dangerousAssumption": "Vendor-integrated context may be mistaken for trustworthy or portable provenance.",
+  "falsifier": "Customer audits show built-in controls already supply complete cross-system evidence without external integration.",
+  "missingEvidence": [
+    "Independent production error rates",
+    "Portability and policy enforcement comparisons"
+  ],
+  "alternativeExplanation": "The launch may primarily consolidate existing Workspace features and customer retention rather than create a new market.",
+  "disposition": "experiment",
+  "confidence": 0.85
+}

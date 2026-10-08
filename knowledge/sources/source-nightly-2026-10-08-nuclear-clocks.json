@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-10-08:nuclear-clocks",
+  "type": "Source",
+  "url": "https://www.nature.com/articles/d41586-026-03060-9",
+  "publisher": "Nature",
+  "publishedAt": null,
+  "retrievedAt": "2026-10-08T23:26:44Z",
+  "sourceClass": "research",
+  "independenceKey": "nature:nuclear-clocks",
+  "contentHash": null,
+  "title": "Two independent research groups reported operational thorium-229 nuclear"
+}

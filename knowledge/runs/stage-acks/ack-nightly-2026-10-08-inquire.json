@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-10-08:inquire",
+  "runId": "run:nightly:2026-10-08",
+  "stage": "inquire",
+  "status": "passed",
+  "startedAt": "2026-10-08T23:26:44Z",
+  "completedAt": "2026-10-08T23:26:44Z",
+  "inputs": [
+    "run:nightly:2026-10-08"
+  ],
+  "outputs": [
+    "candidate-inquire-review"
+  ],
+  "checks": [
+    {
+      "name": "candidate-evidence-boundary",
+      "result": "pass",
+      "detail": "Source refs present; candidate-only state retained. Live schema validation must be confirmed by canonical dry-run."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Candidate-only analytical transition; no external or repository mutations authorized by stage acknowledgement."
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-consultancy-intelligence",
+    "method": "Primary-source 48h retrieval, repository preflight and bounded Socratic review; input hash is of ordered URL strings, not source bodies.",
+    "inputHashes": [
+      "sha256:fc7af71ca05e00c38ae32ad278a2e458089b5fb4335a18435e6d838d3f2f90c2"
+    ]
+  }
+}

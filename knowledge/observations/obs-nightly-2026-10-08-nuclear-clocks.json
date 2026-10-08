@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-08:nuclear-clocks",
+  "type": "Observation",
+  "capturedAt": "2026-10-08T23:26:44Z",
+  "claim": "Two independent research groups reported operational thorium-229 nuclear clocks in Nature in October 2026, establishing a laboratory metrology milestone.",
+  "verifiedFacts": [
+    "Nature's October 7, 2026 News & Views describes two peer-reviewed implementations of nuclear clocks.",
+    "The reported systems use nuclear transitions of thorium-229; they are research prototypes, not proven superior commercial clocks."
+  ],
+  "inference": [
+    "Consultancy: retain as a science-to-visualization teaching specimen, not a near-term product claim.",
+    "Disposition: qt314wink/shader-grammar REFERENCE-ONLY for optical explanatory diagrams; Omni-Loom should not absorb metrology scope.",
+    "The result is relevant to precise timing, optical systems and scientific visualization, but not proof of immediate commercial demand."
+  ],
+  "significance": "Medium: a tangible optical-physics milestone supports credible educational visualization while resisting speculative commercialization.",
+  "confidence": 0.96,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:nightly:2026-10-08:nuclear-clocks"
+  ],
+  "actorRefs": [
+    "researcher:vienna-team",
+    "researcher:beijing-team",
+    "publisher:nature"
+  ],
+  "affectedRepositories": [
+    "qt314wink/shader-grammar",
+    "qt314wink/omni-loom"
+  ],
+  "assumptions": [
+    "The published implementations are independently reproducible."
+  ],
+  "knownLimitations": [
+    "Research prototypes have not demonstrated commercial reliability or price.",
+    "No evidence of immediate consultancy procurement."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

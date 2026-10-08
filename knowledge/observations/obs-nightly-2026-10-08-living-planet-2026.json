@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-08:living-planet-2026",
+  "type": "Observation",
+  "capturedAt": "2026-10-08T23:26:44Z",
+  "claim": "WWF released the 2026 Living Planet Report, documenting a 73 percent average decline in monitored vertebrate population sizes from 1970 to 2022 while identifying recovery examples.",
+  "verifiedFacts": [
+    "WWF published its 2026 Living Planet Report on October 7, 2026.",
+    "The index covers 35,803 population trends across 5,790 vertebrate species and reports a 73 percent average monitored population-size decline.",
+    "WWF states the headline 73 percent was also reported in 2024; this is an updated dataset, not a newly worsened percentage."
+  ],
+  "inference": [
+    "Consultancy: offer a baseline-to-intervention ecological evidence map and explain population-index denominators clearly.",
+    "Disposition: MelodicBloom/project-constellation INCUBATE as a research/service case; Seed Loom CORE for source provenance.",
+    "A report's conservation examples are not evidence that a particular intervention generalizes to every ecosystem."
+  ],
+  "significance": "High: measurable ecological restoration requires source-aware indicators, baselines, interventions and counterfactuals.",
+  "confidence": 0.98,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "default",
+  "sourceRefs": [
+    "source:nightly:2026-10-08:living-planet-2026"
+  ],
+  "actorRefs": [
+    "researcher:wwf",
+    "researcher:zsl",
+    "participant:conservation-programs"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/project-constellation"
+  ],
+  "assumptions": [
+    "Local clients can obtain appropriate baseline and follow-up monitoring data."
+  ],
+  "knownLimitations": [
+    "The index is an average of relative monitored population trends, not a count of all wildlife lost.",
+    "Data end in 2022; local ecological effects and causality require separate study."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

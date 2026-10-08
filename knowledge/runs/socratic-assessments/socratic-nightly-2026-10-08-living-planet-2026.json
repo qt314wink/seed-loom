@@ -1,0 +1,91 @@
+{
+  "assessmentId": "socratic:nightly:2026-10-08:living-planet-2026",
+  "observationId": "obs:nightly:2026-10-08:living-planet-2026",
+  "questions": [
+    "What changed?",
+    "Whose behavior changed?",
+    "What demonstrated problem exists?",
+    "Who benefits?",
+    "What substitute exists?",
+    "What mechanism matters?",
+    "What is the most dangerous assumption?",
+    "What would falsify the interpretation?",
+    "What evidence is missing?",
+    "What simpler explanation competes?"
+  ],
+  "answers": [
+    {
+      "question": "What changed?",
+      "answer": "A new report updates monitoring through 2022 with more population trends.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-08:living-planet-2026"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "Whose behavior changed?",
+      "answer": "WWF and ZSL published evidence; documented conservation programs show recoveries.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-08:living-planet-2026"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "What demonstrated problem exists?",
+      "answer": "The report identifies severe biodiversity pressure and uneven recovery.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "Who benefits?",
+      "answer": "Conservation groups, land managers and policymakers could use better measurement.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What substitute exists?",
+      "answer": "Existing biodiversity monitoring and reporting services substitute.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What mechanism matters?",
+      "answer": "Longitudinal population indices plus intervention tracking provide the evidence mechanism.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What is the most dangerous assumption?",
+      "answer": "Assuming global index values directly describe local ecological outcomes is dangerous.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What would falsify the interpretation?",
+      "answer": "Failure to produce a defensible local baseline and comparison would falsify service readiness.",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What evidence is missing?",
+      "answer": "Local interventions, monitoring costs and counterfactuals are missing.",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What simpler explanation competes?",
+      "answer": "This may be a routine index refresh rather than a change in the global trend.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    }
+  ],
+  "dangerousAssumption": "Mistaking the 73 percent index change for 73 percent of animals or species extinct.",
+  "falsifier": "A proposed service cannot establish an attributable baseline, intervention and outcome.",
+  "missingEvidence": [
+    "Local time-series ecological measurements",
+    "Intervention counterfactuals and monitoring costs"
+  ],
+  "alternativeExplanation": "The unchanged headline is a periodic evidence update rather than a new ecological inflection.",
+  "disposition": "strategy-candidate",
+  "confidence": 0.85
+}

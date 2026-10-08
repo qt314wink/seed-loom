@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-10-08",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-10-06T23:26:44Z",
+    "to": "2026-10-08T23:26:44Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-10-08:gemini-agent",
+    "obs:nightly:2026-10-08:haiku-55",
+    "obs:nightly:2026-10-08:nuclear-clocks",
+    "obs:nightly:2026-10-08:living-planet-2026",
+    "obs:nightly:2026-10-08:venture-concentration"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "Enterprise agents increase demand for provenance, permissions and verifiable outcomes.",
+    "Lower inference prices may help bounded extraction only when total verified cost falls.",
+    "Ecological and capital allocation metrics require denominator-aware evidence and buyer validation."
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-10-08:support-1",
+    "rel:nightly:2026-10-08:support-2",
+    "rel:nightly:2026-10-08:support-3",
+    "rel:nightly:2026-10-08:support-4",
+    "rel:nightly:2026-10-08:support-5"
+  ],
+  "contradictions": [
+    "Unified enterprise agent interfaces simplify use but may increase vendor lock-in.",
+    "Record AI venture investment does not imply accessible consulting budgets.",
+    "WWF's 2026 73% headline matches 2024 despite an expanded dataset."
+  ],
+  "opportunities": [
+    "Governed agent-boundary and evidence audit",
+    "Cost-per-verified-claim model-routing evaluation",
+    "Regenerative baseline-to-intervention measurement design",
+    "Paid creative workflow QA and motion-control calibration"
+  ],
+  "proposedExperiments": [
+    "agent-boundary-audit-v0: compare permissions, lineage, approvals and receipts for one bounded cross-app workflow; no production access.",
+    "model-cost-per-verified-claim-v0: compare Haiku 5.5 against baseline on 25 fixed source snippets with reviewer time and rejection rate."
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false,
+      "repository": "qt314wink/seed-loom",
+      "allowedPaths": [
+        "docs/strategy-genesis/**"
+      ],
+      "action": "Document vendor-neutral agent audit specimen; separate PR approval required."
+    },
+    {
+      "status": "proposed",
+      "executed": false,
+      "repository": "MelodicBloom/wan-artistic-pipeline",
+      "allowedPaths": [
+        "tests/**",
+        "docs/**"
+      ],
+      "action": "Investigate Motion Control Surface failing workflow on PR #4; no mutation in this run."
+    }
+  ],
+  "noChangeReceipts": [
+    "No repo branches other than the authorized nightly intake branch may be created or mutated.",
+    "No archival, consolidation, outreach, deployment, acceptance or Genesis advancement.",
+    "GitHub watch is sampled; absence of visible activity is not proof of project inactivity."
+  ],
+  "collectionFailures": [
+    "No independent customer deployment/usage outcomes for the newly announced Gemini agent.",
+    "No controlled benchmark of Claude Haiku 5.5 on Seed Loom tasks.",
+    "No buyer procurement evidence for the proposed ecological measurement service.",
+    "GitHub watch sampled selected repos, not exhaustive owner-wide inventory.",
+    "Source contentHash is null because a reproducible raw-byte capture was not performed; stage input hash covers source URLs only."
+  ]
+}

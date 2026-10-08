@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-10-08:haiku-55",
+  "type": "Source",
+  "url": "https://www.anthropic.com/claude-haiku-5-5",
+  "publisher": "Anthropic",
+  "publishedAt": null,
+  "retrievedAt": "2026-10-08T23:26:44Z",
+  "sourceClass": "primary",
+  "independenceKey": "anthropic:haiku-55",
+  "contentHash": null,
+  "title": "Anthropic released Claude Haiku 5.5 with published low-cost"
+}

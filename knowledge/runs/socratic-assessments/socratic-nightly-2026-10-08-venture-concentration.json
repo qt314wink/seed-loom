@@ -1,0 +1,91 @@
+{
+  "assessmentId": "socratic:nightly:2026-10-08:venture-concentration",
+  "observationId": "obs:nightly:2026-10-08:venture-concentration",
+  "questions": [
+    "What changed?",
+    "Whose behavior changed?",
+    "What demonstrated problem exists?",
+    "Who benefits?",
+    "What substitute exists?",
+    "What mechanism matters?",
+    "What is the most dangerous assumption?",
+    "What would falsify the interpretation?",
+    "What evidence is missing?",
+    "What simpler explanation competes?"
+  ],
+  "answers": [
+    {
+      "question": "What changed?",
+      "answer": "The Q3 venture monitor quantified exceptional AI capital concentration.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-08:venture-concentration"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "Whose behavior changed?",
+      "answer": "Investors made funded deals; the report does not prove local client purchasing.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-08:venture-concentration"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "What demonstrated problem exists?",
+      "answer": "Funding is highly concentrated and liquidity remains constrained.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "Who benefits?",
+      "answer": "Investors in AI leaders benefit most directly; consultancy benefits are inferred.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What substitute exists?",
+      "answer": "Bootstrapping and fee-for-service revenue are substitutes to external funding.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What mechanism matters?",
+      "answer": "Capital allocation favors large AI rounds and established managers.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What is the most dangerous assumption?",
+      "answer": "Record aggregate funding may mislead a small consultancy's strategy.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What would falsify the interpretation?",
+      "answer": "Evidence of broad small-client procurement would weaken the proposed service-first response.",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What evidence is missing?",
+      "answer": "Actual client budget, procurement and conversion evidence is missing.",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What simpler explanation competes?",
+      "answer": "A handful of mega-rounds may explain most of the headline increase.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    }
+  ],
+  "dangerousAssumption": "Conflating record VC dollars with accessible financing or consultancy demand.",
+  "falsifier": "Verified client procurement shows broad willingness to pay for speculative platform builds without proof.",
+  "missingEvidence": [
+    "Small-client procurement and project budgets",
+    "Verified conversion data for service offers"
+  ],
+  "alternativeExplanation": "Mega-round concentration may be temporary and have little effect on local consulting demand.",
+  "disposition": "strategy-candidate",
+  "confidence": 0.85
+}

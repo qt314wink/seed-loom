@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-10-08:venture-concentration",
+  "type": "Source",
+  "url": "https://nvca.org/pitchbook-nvca-venture-monitor/",
+  "publisher": "NVCA and PitchBook",
+  "publishedAt": null,
+  "retrievedAt": "2026-10-08T23:26:44Z",
+  "sourceClass": "financial",
+  "independenceKey": "nvca-and-pitchbook:venture-concentration",
+  "contentHash": null,
+  "title": "The Q3 2026 PitchBook-NVCA Venture Monitor reports $515.8"
+}

@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-10-08:living-planet-2026",
+  "type": "Source",
+  "url": "https://www.worldwildlife.org/publications/2026-living-planet-report/",
+  "publisher": "WWF",
+  "publishedAt": null,
+  "retrievedAt": "2026-10-08T23:26:44Z",
+  "sourceClass": "research",
+  "independenceKey": "wwf:living-planet-2026",
+  "contentHash": null,
+  "title": "WWF released the 2026 Living Planet Report, documenting"
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-08:gemini-agent",
+  "type": "Observation",
+  "capturedAt": "2026-10-08T23:26:44Z",
+  "claim": "Google Cloud announced the Gemini universal work agent on October 8, integrating work across Workspace, business systems, tools, models and enterprise policy controls.",
+  "verifiedFacts": [
+    "Google Cloud published its Gemini at Work announcement on October 8, 2026.",
+    "The announced agent plans and executes work across Workspace and connected business systems with enterprise identity, authorization and cost controls."
+  ],
+  "inference": [
+    "Consultancy: offer an agent-permissions and evidence-continuity audit rather than build another generic assistant.",
+    "Disposition: qt314wink/seed-loom CORE; MelodicBloom/agent-runtime-control-center CONSOLIDATE candidate pending boundary comparison.",
+    "Vendor demonstrations and claimed customer adoption are not independent proof of this specific new agent's production outcomes."
+  ],
+  "significance": "High: integrated enterprise agents make provenance, authorization, cost and reproducibility concrete buyer concerns.",
+  "confidence": 0.97,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:nightly:2026-10-08:gemini-agent"
+  ],
+  "actorRefs": [
+    "provider:google-cloud",
+    "buyer:enterprise-customers"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "Enterprise customers will need independent auditability across vendor agents."
+  ],
+  "knownLimitations": [
+    "Announcement does not independently establish production success or cross-vendor portability.",
+    "Private-preview access and eligibility were not independently tested."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

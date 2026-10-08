@@ -1,0 +1,59 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-10-08T23:29:17.097Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-10-08",
+      "bundlePath": "knowledge/intake/nightly/2026-10-08/nightly-run-bundle-2026-10-08.json",
+      "bundleSha256": "39da5ce15ffb07c362a781ab00981f217dd117d4a084618cce8230231a8f79bd",
+      "normalizedDigest": "f4e94c4c41a81e6c2e46dcf175a4b92e24fdf359169efb551098962731da917a",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-nightly-2026-10-08-gemini-agent.json",
+        "knowledge/sources/source-nightly-2026-10-08-haiku-55.json",
+        "knowledge/sources/source-nightly-2026-10-08-nuclear-clocks.json",
+        "knowledge/sources/source-nightly-2026-10-08-living-planet-2026.json",
+        "knowledge/sources/source-nightly-2026-10-08-venture-concentration.json",
+        "knowledge/observations/obs-nightly-2026-10-08-gemini-agent.json",
+        "knowledge/observations/obs-nightly-2026-10-08-haiku-55.json",
+        "knowledge/observations/obs-nightly-2026-10-08-nuclear-clocks.json",
+        "knowledge/observations/obs-nightly-2026-10-08-living-planet-2026.json",
+        "knowledge/observations/obs-nightly-2026-10-08-venture-concentration.json",
+        "knowledge/relationships/rel-nightly-2026-10-08-support-1.json",
+        "knowledge/relationships/rel-nightly-2026-10-08-support-2.json",
+        "knowledge/relationships/rel-nightly-2026-10-08-support-3.json",
+        "knowledge/relationships/rel-nightly-2026-10-08-support-4.json",
+        "knowledge/relationships/rel-nightly-2026-10-08-support-5.json",
+        "knowledge/runs/run-nightly-2026-10-08.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-08-collect.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-08-vet.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-08-normalize.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-08-observe.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-08-inquire.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-08-interpret.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-08-relate.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-08-pattern.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-08-opportunity.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-08-strategy.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-08-experiment.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-08-genesis.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-08-publish.json",
+        "knowledge/runs/socratic-assessments/socratic-nightly-2026-10-08-gemini-agent.json",
+        "knowledge/runs/socratic-assessments/socratic-nightly-2026-10-08-haiku-55.json",
+        "knowledge/runs/socratic-assessments/socratic-nightly-2026-10-08-nuclear-clocks.json",
+        "knowledge/runs/socratic-assessments/socratic-nightly-2026-10-08-living-planet-2026.json",
+        "knowledge/runs/socratic-assessments/socratic-nightly-2026-10-08-venture-concentration.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-10-08-ingest.json",
+      "generatedRecordCount": 34
+    }
+  ]
+}

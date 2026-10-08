@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-08:haiku-55",
+  "type": "Observation",
+  "capturedAt": "2026-10-08T23:26:44Z",
+  "claim": "Anthropic released Claude Haiku 5.5 with published low-cost token pricing and availability across major cloud platforms for high-volume AI workloads.",
+  "verifiedFacts": [
+    "Anthropic published Claude Haiku 5.5 availability and a pricing table in October 2026.",
+    "Its stated standard input/output pricing for prompts up to 100,000 tokens is $0.10/$0.50 per million tokens, subject to provider terms."
+  ],
+  "inference": [
+    "Consultancy: a bounded model-routing benchmark can test cost, quality, and evidence retention for nightly source classification.",
+    "Disposition: qt314wink/seed-loom CORE; motion and creative systems remain independent consumers, not a reason to merge them.",
+    "Lower token price does not establish lower end-to-end workflow cost when retries and review are included."
+  ],
+  "significance": "High: model-cost shifts can change feasible unit economics for governed evidence ingestion.",
+  "confidence": 0.96,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "pricing",
+  "sourceRefs": [
+    "source:nightly:2026-10-08:haiku-55"
+  ],
+  "actorRefs": [
+    "provider:anthropic",
+    "supplier:cloud-platforms",
+    "buyer:developer-teams"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "qt314wink/observation-ad-pipeline"
+  ],
+  "assumptions": [
+    "Published API pricing applies to the selected workload and region."
+  ],
+  "knownLimitations": [
+    "No independent benchmark on Seed Loom classification tasks.",
+    "Published prices can change; terms and context-length tiers matter."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}
