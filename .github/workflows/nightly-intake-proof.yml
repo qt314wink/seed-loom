@@ -1,0 +1,55 @@
+name: Nightly Intake Proof (Issue #24)
+
+on:
+  pull_request:
+    paths:
+      - 'knowledge/intake/nightly/**/nightly-run-bundle*.json'
+      - 'scripts/knowledge/prove-nightly-ingest.mjs'
+      - 'scripts/knowledge/ingest-nightly-run.mjs'
+      - 'scripts/knowledge/normalize-nightly-bundle.mjs'
+      - 'scripts/knowledge/run-controls.mjs'
+      - 'scripts/knowledge/build-workbench.mjs'
+      - 'knowledge/schema/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/nightly-intake-proof.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nightly-intake-proof-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout exact proof branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+
+      - name: Set up Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install repository dependencies
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Prove one real reviewed NightlyRunBundle twice
+        run: npm run knowledge:prove-nightly -- --out=nightly-intake-proof.json
+
+      - name: Upload machine-readable proof receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: issue-24-nightly-intake-proof
+          path: nightly-intake-proof.json
+          if-no-files-found: error
+          retention-days: 14
