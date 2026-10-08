@@ -4,7 +4,7 @@
   "schemaVersion": "1.1.0",
   "from": "obs:photonic-in-situ-learning:2026-10-05",
   "predicate": "REFINES",
-  "to": "qt314wink/omni-loom",
+  "to": "obs:nightly:2026-09-14:in-process-fabrication-inspection",
   "confidence": 0.82,
   "evidenceRefs": [
     "source:photonic-inspire-nature:2026-10-05"

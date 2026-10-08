@@ -4,7 +4,7 @@
   "schemaVersion": "1.1.0",
   "from": "obs:programmable-plasma-antenna:2026-10-05",
   "predicate": "MAY_ENABLE",
-  "to": "qt314wink/aether",
+  "to": "obs:nightly:2026-09-12:st-wave-laser",
   "confidence": 0.7,
   "evidenceRefs": [
     "source:plasma-beam-antenna-ncsu:2026-10-05"

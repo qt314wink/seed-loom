@@ -4,7 +4,7 @@
   "schemaVersion": "1.1.0",
   "from": "obs:open-weight-agent-frontier:2026-10-05",
   "predicate": "REFINES",
-  "to": "obs:agent-database-infrastructure:2026-10-04",
+  "to": "obs:nightly:2026-09-11:agent-runtime",
   "confidence": 0.87,
   "evidenceRefs": [
     "source:reflection-beam-launch:2026-10-05"
