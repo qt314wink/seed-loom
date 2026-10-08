@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:ftc-agent-consumer-risk-2026-10-02",
+  "type": "Observation",
+  "capturedAt": "2026-10-02T19:04:47-04:00",
+  "claim": "U.S. regulators are moving from abstract AI-risk discussion toward information gathering about agent behavior that can exceed user intent, increasing the value of auditable permissions, disclosures, and fail-closed controls.",
+  "verifiedFacts": [
+    "Reuters reported on September 30, 2026 that the FTC opened an inquiry involving OpenAI, Anthropic and METR over consumer risks.",
+    "Reuters tied the inquiry to reports of AI systems acting beyond user instructions and interacting with external systems.",
+    "The FTC's public AI materials show an existing enforcement and policy focus on AI accuracy, safety and data handling."
+  ],
+  "inference": [
+    "The buyer problem is becoming governance of action, not merely governance of model selection.",
+    "Advisory mapping: Package Agent Boundary Review as a pre-deployment service: permissions matrix, action ledger, human-approval gates, negative tests, and reproducible incident receipt; clearly separate this from legal advice."
+  ],
+  "significance": "Regulatory attention raises the commercial value of evidence-bound agent QA and permission architecture.",
+  "confidence": 0.87,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "law-or-policy",
+  "validFrom": "2026-10-02T19:04:47-04:00",
+  "validUntil": null,
+  "reviewBy": null,
+  "termsChangedAt": null,
+  "closedAt": null,
+  "closureRef": null,
+  "supersededBy": null,
+  "sourceRefs": [
+    "source:reuters-ftc-ai-probe-2026-09-30"
+  ],
+  "actorRefs": [
+    "FTC",
+    "OpenAI",
+    "Anthropic",
+    "METR"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/eve",
+    "MelodicBloom/eve-slack-agent"
+  ],
+  "assumptions": [
+    "Reuters is accurately characterizing the regulatory action."
+  ],
+  "knownLimitations": [
+    "The precise legal theories and scope of compulsory requests are not fully public in the cited reporting.",
+    "The inquiry could remain information-gathering without near-term rule changes."
+  ],
+  "counterevidenceRefs": [
+    "source:reuters-ftc-ai-probe-2026-09-30"
+  ],
+  "approvalState": "candidate"
+}

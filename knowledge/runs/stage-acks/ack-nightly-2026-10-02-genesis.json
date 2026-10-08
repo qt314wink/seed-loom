@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly-2026-10-02-genesis",
+  "runId": "run:nightly:2026-10-02",
+  "stage": "genesis",
+  "status": "deferred",
+  "startedAt": "2026-10-02T19:04:47-04:00",
+  "completedAt": "2026-10-02T19:04:47-04:00",
+  "inputs": [
+    "nightly-window:2026-09-30T19:04:47-04:00/2026-10-02T19:04:47-04:00"
+  ],
+  "outputs": [],
+  "checks": [
+    {
+      "name": "genesis transition",
+      "result": "not-applicable",
+      "detail": "No Genesis transition is authorized from daily candidate intake."
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "Daily intake cannot accept knowledge or advance Genesis.",
+      "Repository actions remain proposals with executed=false."
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "48-hour bounded web research + live GitHub authority inspection",
+    "inputHashes": [
+      "89ee4b3fd8fac4424cd5f1026fafd21bfd4e0b0dab26b7710dede77ce6c283d3"
+    ]
+  }
+}

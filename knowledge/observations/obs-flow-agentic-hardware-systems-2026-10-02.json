@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:flow-agentic-hardware-systems-2026-10-02",
+  "type": "Observation",
+  "capturedAt": "2026-10-02T19:04:47-04:00",
+  "claim": "Flow Engineering's $50M Series B and reported expansion across hardware customers demonstrate a concrete buyer pattern for AI agents that maintain a living system of record across requirements, CAD, simulation, code and verification.",
+  "verifiedFacts": [
+    "Flow announced $50M Series B at $750M valuation on September 30, 2026.",
+    "Flow says Rivian, Anduril, Joby, Stoke Space and others use its platform; it reports Rivian usage grew from 40 to 1,500 users in seven months.",
+    "Flow describes agents that continuously analyze changes, propagate impacts and verify requirements/test coverage."
+  ],
+  "inference": [
+    "The strongest product opportunity is not an isolated generative tool but a governed cross-artifact system of record.",
+    "Advisory mapping: Turn Omni-Loom into a small demonstrator of a living creative systems record: specification -> generator -> artifact -> visual proof -> QA receipt -> revision impact map, with no autonomous publication."
+  ],
+  "significance": "Flow validates a broader thesis: traceable change propagation and verification can be sold as infrastructure for complex creative/technical work.",
+  "confidence": 0.93,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "validFrom": "2026-10-02T19:04:47-04:00",
+  "validUntil": null,
+  "reviewBy": null,
+  "termsChangedAt": null,
+  "closedAt": null,
+  "closureRef": null,
+  "supersededBy": null,
+  "sourceRefs": [
+    "source:flow-series-b-2026-09-30"
+  ],
+  "actorRefs": [
+    "Flow Engineering",
+    "Rivian",
+    "Anduril",
+    "Joby",
+    "Stoke Space",
+    "Valor Equity Partners",
+    "Atreides Management",
+    "Sequoia Capital"
+  ],
+  "affectedRepositories": [
+    "qt314wink/omni-loom",
+    "MelodicBloom/omni-loom-case-study",
+    "MelodicBloom/Design-Fusion-Studio",
+    "qt314wink/observation-ad-pipeline"
+  ],
+  "assumptions": [
+    "Flow's reported customer growth reflects durable product adoption."
+  ],
+  "knownLimitations": [
+    "Customer numbers and product claims are company-reported.",
+    "No independent procurement data is cited here."
+  ],
+  "counterevidenceRefs": [
+    "source:flow-series-b-2026-09-30"
+  ],
+  "approvalState": "candidate"
+}
