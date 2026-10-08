@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-09-17",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-09-15T23:49:41Z",
+    "to": "2026-09-17T23:49:41Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-09-17:misalignment-disclosure",
+    "obs:nightly:2026-09-17:parallel-agent-projects",
+    "obs:nightly:2026-09-17:regenerative-whole-system",
+    "obs:nightly:2026-09-17:microwave-optical-transduction",
+    "obs:nightly:2026-09-17:robotaxi-scale-partnership"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "agent-governance-is-becoming-incident-and-execution-evidence",
+    "whole-system-measurement-needs-causal-and-extrapolation-boundaries",
+    "autonomy-value-moves-to-coordinated-operating-systems"
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-09-17:1",
+    "rel:nightly:2026-09-17:2",
+    "rel:nightly:2026-09-17:3",
+    "rel:nightly:2026-09-17:4",
+    "rel:nightly:2026-09-17:5"
+  ],
+  "contradictions": [
+    "Regenerative carbon findings are observational and extrapolated; they do not establish causal sequestration rates for every farm or permanence.",
+    "Robotaxi scale is announced rather than measured deployment."
+  ],
+  "opportunities": [
+    "Agent Evaluation and Delivery Control Review benchmarked against real incident disclosure and parallel-agent workflows.",
+    "Whole-system regenerative evidence architecture with explicit causal-status and extrapolation controls.",
+    "Cross-domain mechanism lexicon for material and signal translation without physical-equivalence claims."
+  ],
+  "proposedExperiments": [
+    "incident-to-stop-gate-crosswalk-v0",
+    "regenerative-claim-boundary-fixture-v0"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false,
+      "repository": "qt314wink/seed-loom",
+      "action": "Add incident-reporting and parallel-agent coordination cases to existing candidate governance fixtures after human approval."
+    },
+    {
+      "status": "proposed",
+      "executed": false,
+      "repository": "MelodicBloom/project-constellation",
+      "action": "Add causal-status and extrapolation-boundary fields to the synthetic regenerative evidence fixture after human approval."
+    }
+  ],
+  "noChangeReceipts": [
+    "No canonical schema change authorized.",
+    "No Genesis advancement, acceptance, deployment, merge, outreach, spending, or application submission performed."
+  ],
+  "collectionFailures": [
+    "Primary Anthropic documentation for the exact September 17 Claude Code Projects relaunch was not retrieved; current press reporting was used and marked accordingly.",
+    "User-wide GitHub inventory endpoints are not available through the connected GitHub surface; repository watch is bounded to accessible named repositories and current Seed Loom provenance evidence.",
+    "Representative images are presentation-only and are not ingested as canonical evidence unless separately source-recorded."
+  ]
+}

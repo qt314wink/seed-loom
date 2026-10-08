@@ -1,0 +1,12 @@
+{
+  "id": "rel:nightly:2026-09-17:5",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:nightly:2026-09-17:robotaxi-scale-partnership",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:nightly:2026-09-17:lucid-bolt",
+  "confidence": 0.98,
+  "evidenceRefs": [
+    "source:nightly:2026-09-17:lucid-bolt"
+  ]
+}

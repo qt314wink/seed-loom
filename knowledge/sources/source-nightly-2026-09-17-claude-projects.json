@@ -1,0 +1,12 @@
+{
+  "id": "source:nightly:2026-09-17:claude-projects",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://www.theverge.com/ai-artificial-intelligence/997134/anthropic-claude-code-projects",
+  "publisher": "The Verge",
+  "publishedAt": "2026-09-17T00:00:00Z",
+  "retrievedAt": "2026-09-17T23:55:00Z",
+  "sourceClass": "press",
+  "independenceKey": "theverge:claude-code-projects:2026-09-17",
+  "title": "Claude Code relaunches Projects to manage multiple AI agents in the cloud"
+}

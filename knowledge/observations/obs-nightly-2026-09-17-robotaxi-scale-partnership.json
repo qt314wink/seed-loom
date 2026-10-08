@@ -1,0 +1,40 @@
+{
+  "id": "obs:nightly:2026-09-17:robotaxi-scale-partnership",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-09-17T23:55:00Z",
+  "claim": "Lucid and Bolt announced a 25,000-vehicle European robotaxi deployment plan coupling vehicle, autonomy, fleet operations, city partnerships, and regulation.",
+  "verifiedFacts": [
+    "Reuters reported September 17 that Lucid and Bolt plan to deploy 25,000 robotaxis across major European cities.",
+    "The vehicles are planned around Lucid's Midsize platform and Nvidia Hyperion technology with SAE Level 4 operation in defined areas.",
+    "Bolt's autonomous-driving unit is to establish technical and safety standards, fleet infrastructure, operational systems, city partnerships, and regulator collaboration."
+  ],
+  "inference": [
+    "Autonomous-system value is shifting from isolated technical capability toward multi-actor operating systems with explicit safety, infrastructure, jurisdiction, and partnership boundaries.",
+    "This is a useful civic-systems case study for Project Constellation, not a reason to enter mobility engineering."
+  ],
+  "significance": "Medium-high: demonstrates commercial-scale autonomous deployment as a governed ecosystem rather than a standalone model or vehicle.",
+  "confidence": 0.98,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:nightly:2026-09-17:lucid-bolt"
+  ],
+  "actorRefs": [
+    "actor:lucid",
+    "actor:bolt",
+    "actor:nvidia",
+    "actor:european-regulators"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/project-constellation"
+  ],
+  "assumptions": [
+    "The announced deployment proceeds materially beyond planning and regulatory preparation."
+  ],
+  "knownLimitations": [
+    "This is an announced future deployment; actual city approvals, fleet utilization, safety outcomes, and unit economics are not yet demonstrated."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}
