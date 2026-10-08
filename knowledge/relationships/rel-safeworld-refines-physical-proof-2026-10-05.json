@@ -4,7 +4,7 @@
   "schemaVersion": "1.1.0",
   "from": "obs:physical-ai-safety-evaluation-layer:2026-10-05",
   "predicate": "REFINES",
-  "to": "obs:integrated-electric-mobility-system:2026-10-04",
+  "to": "qt314wink/omni-loom",
   "confidence": 0.84,
   "evidenceRefs": [
     "source:safeworld-physical-ai-safety:2026-10-05",

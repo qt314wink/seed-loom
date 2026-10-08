@@ -6,6 +6,7 @@ const root = process.cwd();
 const dirs = ['sources','entities','observations','patterns','relationships','opportunities','strategies','experiments','runs'];
 const records = new Map();
 const relationships = [];
+const repositoryRefs = new Set();
 for (const dir of dirs) {
   const absolute = path.join(root, 'knowledge', dir);
   if (!fs.existsSync(absolute)) continue;
@@ -13,13 +14,14 @@ for (const dir of dirs) {
     const record = JSON.parse(fs.readFileSync(path.join(absolute, file), 'utf8'));
     const id = record.id ?? record.runId;
     if (id) records.set(id, record);
+    for (const ref of record.affectedRepositories || []) repositoryRefs.add(ref);
     if (record.type === 'Relationship') relationships.push(record);
   }
 }
 let failures = 0;
 for (const rel of relationships.sort((a,b) => a.id.localeCompare(b.id))) {
   for (const endpoint of ['from','to']) {
-    if (!records.has(rel[endpoint])) {
+    if (!records.has(rel[endpoint]) && !repositoryRefs.has(rel[endpoint])) {
       console.error(`ORPHAN ${rel.id} ${endpoint}=${rel[endpoint]}`);
       failures += 1;
     }

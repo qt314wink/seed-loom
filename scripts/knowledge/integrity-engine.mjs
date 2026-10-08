@@ -79,6 +79,7 @@ function inventory() {
 function provenanceChecks(records) {
   const failures = [];
   const ids = new Set(records.map((record) => record.id).filter(Boolean));
+  const repositoryRefs = new Set();
   for (const record of records) {
     if (record.error) failures.push({code:'JSON_PARSE_FAILURE',path:record.path,detail:record.error});
     if (!record.id && record.type !== 'ParseFailure') failures.push({code:'MISSING_STABLE_ID',path:record.path});
@@ -87,12 +88,13 @@ function provenanceChecks(records) {
     const value = readJson(file);
     for (const record of expand(value)) {
       for (const ref of record.sourceRefs || []) if (!ids.has(ref)) failures.push({code:'UNRESOLVED_SOURCE_REF',path:path.relative(root,file).replaceAll('\\','/'),ref});
+      for (const ref of record.affectedRepositories || []) repositoryRefs.add(ref);
     }
   }
   for (const file of walk(path.join(root,'knowledge','relationships'))) {
     const value = readJson(file);
     for (const record of expand(value)) {
-      for (const ref of [record.from,record.to,...(record.evidenceRefs || [])].filter(Boolean)) if (!ids.has(ref)) failures.push({code:'UNRESOLVED_RELATIONSHIP_REF',path:path.relative(root,file).replaceAll('\\','/'),ref});
+      for (const ref of [record.from,record.to,...(record.evidenceRefs || [])].filter(Boolean)) if (!ids.has(ref) && !repositoryRefs.has(ref)) failures.push({code:'UNRESOLVED_RELATIONSHIP_REF',path:path.relative(root,file).replaceAll('\\','/'),ref});
     }
   }
   return failures.sort((a,b) => JSON.stringify(a).localeCompare(JSON.stringify(b)));
