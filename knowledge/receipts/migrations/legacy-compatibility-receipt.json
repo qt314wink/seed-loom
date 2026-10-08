@@ -1,0 +1,936 @@
+{
+  "control": "WS9",
+  "digest": "90fbf6109926677abd016782049fbbdc05874271ba01f0fb098af7095a4de2a1",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "inputs": [
+    {
+      "path": "knowledge/observations/2026-07-29--2026-07-30.json",
+      "sha256": "f19fc59f2960fae9c4fa4826d7432ee869595b9e4798efc894765422320db254"
+    },
+    {
+      "path": "knowledge/observations/obs-2026-07-30-ai-export-consortia.json",
+      "sha256": "e36b4f211aa117f5c91f40f7717248e9ddbcc1296de5bae9d02d4285deb1bbc8"
+    },
+    {
+      "path": "knowledge/observations/obs-2026-07-30-eu-ai-gigafactories.json",
+      "sha256": "9233080fd2befbd4d9eb98557f2923feba9fbfbfafe59cef6c25687cff5b429e"
+    },
+    {
+      "path": "knowledge/observations/obs-2026-07-30-ftc-ai-accuracy.json",
+      "sha256": "fdaa6ef1181899cf6cad34a3452d2a4ae7175ae5927ecb982eb4fedcee4319e3"
+    },
+    {
+      "path": "knowledge/observations/obs-2026-07-30-genesis-mission.json",
+      "sha256": "66fc8b8e1d8074fed8468a4a1c1c126ccb4008800b219bb0a090edb43d26c1f2"
+    },
+    {
+      "path": "knowledge/observations/obs-2026-07-30-openai-presence.json",
+      "sha256": "621b56a844c03124652b096cccf972f430b43ff0fc1a2f924111b6146a858e73"
+    },
+    {
+      "path": "knowledge/observations/obs-ai-native-consulting-demand-2026-10-05.json",
+      "sha256": "65d98f60b19e7106b260da421b3eed7346f5d4f7f59f4f04ef8d32ebf5af9eb1"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-09-energy-stack.json",
+      "sha256": "68b5300a9fd863816ab6936bf778502bad080787167019b329458e3d4a03cfac"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-09-institutional-intelligence.json",
+      "sha256": "55998e41e4051a61b5a5d3ae7da644ee4d6c4c39fea6605d00ee67fad68e85ac"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-09-lab-agent.json",
+      "sha256": "765aa419301923c8af367c088b07e503abb5f81c13431103f6777bba01b3ae92"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-09-testbeds.json",
+      "sha256": "7d74eee48f483718f5dc61635eadef7b63aeafafa226ee4d3dc5c5130c7bdc41"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-09-workforce-graph.json",
+      "sha256": "a205b7a544f41b2174768cdc2c79ddfb68e9b7d11a9f988af576f287664d1ad4"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-10-document-to-evidence-artifact.json",
+      "sha256": "6ca689cf072f15b94aab35bd8c321c4f718a7952bf97e4a39956f2efaefda0f9"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-10-ontology-operational-intelligence.json",
+      "sha256": "53d5607dca564110fc674d29ed73ad330a1b1f2dcaf42592bcd9a470cb5f96ee"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-10-regulated-data-workflows.json",
+      "sha256": "4e7854f49a8b32fb9b2502dc372feed04c3741a47ddb301c22a1c9b8be7ae2a1"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-10-semi-custom-inference-stack.json",
+      "sha256": "21674ce02e710dd99bc7b692073bd25cc08925a18c3a2f269536bf57d002f20f"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-10-water-intelligence.json",
+      "sha256": "d3992e29dfef91b29864f9ff008b7974764f75eb006a2706f14babc47ddd235b"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-11-agent-runtime.json",
+      "sha256": "1b7f40321a2fb49d1f99ccfd0c1980083f49f71c220ae8dbf9a47d07cfbdd08a"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-11-memory-first-inference.json",
+      "sha256": "101e75e3f7317e15297bad282b32c2236f2267d9e1984a937b5a7ed9f4363a1d"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-11-photonics.json",
+      "sha256": "bef0a8573f955ff075ac9ca704bc0b52cdd1c6363634f8df4e94368b836e801c"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-11-public-sector-ai.json",
+      "sha256": "25496b98376a001636cd3934dc2bb1918cf7d444fb79f0ce4085746d0fa4eee2"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-11-tribal-water.json",
+      "sha256": "479a651119f80c530e8e2fdad6b7220837e105e766e24d922ee6728b014cf96f"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-12-agent-state.json",
+      "sha256": "b9be3e4722b0b146040e73bf071c911c0b6c1f68a1522248ab0e1a83ff364f97"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-12-capital-compute.json",
+      "sha256": "8076bd3063e5a7d0a8efa06456fc0e3124df8593f4d57259f617aad986253311"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-12-creative-demand.json",
+      "sha256": "ad84556c2647137dc3fe177c0191e7675c7bce621099916f41ce3465363e1555"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-12-rangeland-drought.json",
+      "sha256": "c4c3ef2a46a26cc7b33a0626b50f37b4038f60bce893bcd802c2b03a64d4d72c"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-12-st-wave-laser.json",
+      "sha256": "86e537d460585df49e6b4e756603269f70310ea9fd1464392a29e447dc08ba33"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-13-agent-driven-deployments.json",
+      "sha256": "37b95c701df693097bc00e8dcc79cb7f1d3df74d6936846fcd1c1d44cfc018eb"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-13-agent-hackathon-demand.json",
+      "sha256": "d0ae8fd6f3c91dd44d9fdde11845b6d2c0f43ac2e59139484c6a257b29d7192c"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-13-common-species-decline.json",
+      "sha256": "96d6c50344ffb15b93c885feedca8c588993939b57f4a50144298086cda60ab3"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-13-external-ai-evaluation.json",
+      "sha256": "ba6b1ab4627aa1068311d1ceed5584e279561f8e2e7e046cf711b5f9bdae4e68"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-13-phonon-protected-qubits.json",
+      "sha256": "18f4898586d78723cc1f73394a2f6b0f7f069058b68f12a91e193eaa84ecbddf"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-14-ai-fraud-coordination.json",
+      "sha256": "9721b79945611ce3c3161c9b7045bfe1715fb6bd73c1c0ad1a0b0c1d03e90926"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-14-biointegrated-flexible-photonics.json",
+      "sha256": "9f9289710b23e2ca70a6e4c3aab705cf68e5d3a48cda69abd557dac2d73b164c"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-14-ecosystem-multifactor-stability.json",
+      "sha256": "65743f9e27ae425f0b5e9309c624e1202449fb3789d3d43e0f9108eeda30764d"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-14-embodied-conversational-ai.json",
+      "sha256": "a106ff5c7925e2e0f1c1b9c8f8eb157eed85ea3303d14c13d6b6b81864214864"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-14-in-process-fabrication-inspection.json",
+      "sha256": "8548e04185c53b9f5d2188ce2cb3dd5a6c62b7a78091457c6378ceb37acb2262"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-15-agentic-infrastructure-interconnect.json",
+      "sha256": "14e65c36142bab85a2804b1b182f56124401d8a637ea237ec9ffbd959f073451"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-15-civic-ai-consulting-procurement.json",
+      "sha256": "722e3e69196376d72c6b1b95c171fe27a5e2137afb9c5231ae32701a92426559"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-15-enterprise-agent-capital.json",
+      "sha256": "facdae22bda267c62a256f731abcc754b9d951e84e65cb00e56278a0c6385bc1"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-15-equitable-ai-outcome-funding.json",
+      "sha256": "5f3b36992405aa3a8b7b29932aaa04fd02da41bbaccff9aa617b48738fbd3a40"
+    },
+    {
+      "path": "knowledge/observations/obs-nightly-2026-09-15-human-control-specification.json",
+      "sha256": "54d2cc46f3c63beac70f2eaf6e260d388ffb0eaeabd70d8a901963ebbdc8add5"
+    },
+    {
+      "path": "knowledge/observations/obs-open-weight-agent-frontier-2026-10-05.json",
+      "sha256": "81ef9e47c41edcb11510e2390b85436a1f84ace606469d2acb45e2cb2b8b52a5"
+    },
+    {
+      "path": "knowledge/observations/obs-photonic-in-situ-learning-2026-10-05.json",
+      "sha256": "4c142da4eb5a9845c27a807cdcd53d9c7a1f00f7a3491349e07efba1822cab18"
+    },
+    {
+      "path": "knowledge/observations/obs-physical-ai-safety-evaluation-layer-2026-10-05.json",
+      "sha256": "1d9d2cc65fe21e45c70f05fda143ab8aa645cccd835dfbbc7390e761aca904de"
+    },
+    {
+      "path": "knowledge/observations/obs-programmable-plasma-antenna-2026-10-05.json",
+      "sha256": "9fd8cf8dd05b3e4ea9cdeee1eb78dcc557a14e1cf82d2e49d7e4b4f2ed48332d"
+    },
+    {
+      "path": "knowledge/runs/acks-nightly-reconstructed-2026-07-30.json",
+      "sha256": "6fb2de90102e1ab0a92ad791a44c478e3f763008952e0510f409319c2a82e35f"
+    },
+    {
+      "path": "knowledge/runs/backfill-ledger.json",
+      "sha256": "70309ff73e87306eb140a3708368ebee64db2d69d9d6debea748867bd2778fa9"
+    },
+    {
+      "path": "knowledge/runs/run-example.json",
+      "sha256": "e9930a5da21ee7271326204ac5529e43ce9a6c86198918435c5ec27d885862a7"
+    },
+    {
+      "path": "knowledge/sources/source-reconstructed-cycle-2026-07-30.json",
+      "sha256": "bf97596a9e1c40dba01ea8dc2a6540df066004cb3f9a388876bde9b1b0247730"
+    }
+  ],
+  "receiptId": "legacy-compatibility:90fbf6109926",
+  "results": {
+    "canonicalFilesChanged": false,
+    "migrations": [
+      {
+        "changes": [
+          "validated candidate briefing bundle as an immutable quarantine-style input; no entries promoted or rewritten"
+        ],
+        "mode": "auxiliary-observation-brief-validation",
+        "path": "knowledge/observations/2026-07-29--2026-07-30.json",
+        "recordId": "observation-brief:2026-07-29:2026-07-30"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-2026-07-30-ai-export-consortia.json",
+        "recordId": "obs:2026-07-30:ai-export-consortia"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-2026-07-30-eu-ai-gigafactories.json",
+        "recordId": "obs:2026-07-30:eu-ai-gigafactories"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-2026-07-30-ftc-ai-accuracy.json",
+        "recordId": "obs:2026-07-30:ftc-ai-accuracy"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-2026-07-30-genesis-mission.json",
+        "recordId": "obs:2026-07-30:genesis-mission"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-2026-07-30-openai-presence.json",
+        "recordId": "obs:2026-07-30:openai-presence"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-ai-native-consulting-demand-2026-10-05.json",
+        "recordId": "obs:ai-native-consulting-demand:2026-10-05"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-09-energy-stack.json",
+        "recordId": "obs:nightly:2026-09-09:energy-stack"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-09-institutional-intelligence.json",
+        "recordId": "obs:nightly:2026-09-09:institutional-intelligence"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-09-lab-agent.json",
+        "recordId": "obs:nightly:2026-09-09:lab-agent"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-09-testbeds.json",
+        "recordId": "obs:nightly:2026-09-09:testbeds"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-09-workforce-graph.json",
+        "recordId": "obs:nightly:2026-09-09:workforce-graph"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-10-document-to-evidence-artifact.json",
+        "recordId": "obs:nightly:2026-09-10:document-to-evidence-artifact"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-10-ontology-operational-intelligence.json",
+        "recordId": "obs:nightly:2026-09-10:ontology-operational-intelligence"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-10-regulated-data-workflows.json",
+        "recordId": "obs:nightly:2026-09-10:regulated-data-workflows"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-10-semi-custom-inference-stack.json",
+        "recordId": "obs:nightly:2026-09-10:semi-custom-inference-stack"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-10-water-intelligence.json",
+        "recordId": "obs:nightly:2026-09-10:water-intelligence"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-11-agent-runtime.json",
+        "recordId": "obs:nightly:2026-09-11:agent-runtime"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-11-memory-first-inference.json",
+        "recordId": "obs:nightly:2026-09-11:memory-first-inference"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-11-photonics.json",
+        "recordId": "obs:nightly:2026-09-11:photonics"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-11-public-sector-ai.json",
+        "recordId": "obs:nightly:2026-09-11:public-sector-ai"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-11-tribal-water.json",
+        "recordId": "obs:nightly:2026-09-11:tribal-water"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-12-agent-state.json",
+        "recordId": "obs:nightly:2026-09-12:agent-state"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-12-capital-compute.json",
+        "recordId": "obs:nightly:2026-09-12:capital-compute"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-12-creative-demand.json",
+        "recordId": "obs:nightly:2026-09-12:creative-demand"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-12-rangeland-drought.json",
+        "recordId": "obs:nightly:2026-09-12:rangeland-drought"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-12-st-wave-laser.json",
+        "recordId": "obs:nightly:2026-09-12:st-wave-laser"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-13-agent-driven-deployments.json",
+        "recordId": "obs:nightly:2026-09-13:agent-driven-deployments"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-13-agent-hackathon-demand.json",
+        "recordId": "obs:nightly:2026-09-13:agent-hackathon-demand"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-13-common-species-decline.json",
+        "recordId": "obs:nightly:2026-09-13:common-species-decline"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-13-external-ai-evaluation.json",
+        "recordId": "obs:nightly:2026-09-13:external-ai-evaluation"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-13-phonon-protected-qubits.json",
+        "recordId": "obs:nightly:2026-09-13:phonon-protected-qubits"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-14-ai-fraud-coordination.json",
+        "recordId": "obs:nightly:2026-09-14:ai-fraud-coordination"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-14-biointegrated-flexible-photonics.json",
+        "recordId": "obs:nightly:2026-09-14:biointegrated-flexible-photonics"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-14-ecosystem-multifactor-stability.json",
+        "recordId": "obs:nightly:2026-09-14:ecosystem-multifactor-stability"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-14-embodied-conversational-ai.json",
+        "recordId": "obs:nightly:2026-09-14:embodied-conversational-ai"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-14-in-process-fabrication-inspection.json",
+        "recordId": "obs:nightly:2026-09-14:in-process-fabrication-inspection"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-15-agentic-infrastructure-interconnect.json",
+        "recordId": "obs:nightly:2026-09-15:agentic-infrastructure-interconnect"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-15-civic-ai-consulting-procurement.json",
+        "recordId": "obs:nightly:2026-09-15:civic-ai-consulting-procurement"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-15-enterprise-agent-capital.json",
+        "recordId": "obs:nightly:2026-09-15:enterprise-agent-capital"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-15-equitable-ai-outcome-funding.json",
+        "recordId": "obs:nightly:2026-09-15:equitable-ai-outcome-funding"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-nightly-2026-09-15-human-control-specification.json",
+        "recordId": "obs:nightly:2026-09-15:human-control-specification"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-open-weight-agent-frontier-2026-10-05.json",
+        "recordId": "obs:open-weight-agent-frontier:2026-10-05"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-photonic-in-situ-learning-2026-10-05.json",
+        "recordId": "obs:photonic-in-situ-learning:2026-10-05"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-physical-ai-safety-evaluation-layer-2026-10-05.json",
+        "recordId": "obs:physical-ai-safety-evaluation-layer:2026-10-05"
+      },
+      {
+        "changes": [
+          "observationId→id",
+          "title→claim",
+          "capturedAt derived when absent",
+          "legacy maturity mapped to source-backed",
+          "candidate approval mapped to pending",
+          "legacy-only fields preserved in original git record but omitted from validation projection"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/observations/obs-programmable-plasma-antenna-2026-10-05.json",
+        "recordId": "obs:programmable-plasma-antenna:2026-10-05"
+      },
+      {
+        "changes": [
+          "expanded compact historical stage acknowledgement for current schema validation; original array unchanged"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/runs/acks-nightly-reconstructed-2026-07-30.json",
+        "recordId": "ack:2026-07-30:collect"
+      },
+      {
+        "changes": [
+          "expanded compact historical stage acknowledgement for current schema validation; original array unchanged"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/runs/acks-nightly-reconstructed-2026-07-30.json",
+        "recordId": "ack:2026-07-30:experiment"
+      },
+      {
+        "changes": [
+          "expanded compact historical stage acknowledgement for current schema validation; original array unchanged"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/runs/acks-nightly-reconstructed-2026-07-30.json",
+        "recordId": "ack:2026-07-30:genesis"
+      },
+      {
+        "changes": [
+          "expanded compact historical stage acknowledgement for current schema validation; original array unchanged"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/runs/acks-nightly-reconstructed-2026-07-30.json",
+        "recordId": "ack:2026-07-30:inquire"
+      },
+      {
+        "changes": [
+          "expanded compact historical stage acknowledgement for current schema validation; original array unchanged"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/runs/acks-nightly-reconstructed-2026-07-30.json",
+        "recordId": "ack:2026-07-30:interpret"
+      },
+      {
+        "changes": [
+          "expanded compact historical stage acknowledgement for current schema validation; original array unchanged"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/runs/acks-nightly-reconstructed-2026-07-30.json",
+        "recordId": "ack:2026-07-30:normalize"
+      },
+      {
+        "changes": [
+          "expanded compact historical stage acknowledgement for current schema validation; original array unchanged"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/runs/acks-nightly-reconstructed-2026-07-30.json",
+        "recordId": "ack:2026-07-30:observe"
+      },
+      {
+        "changes": [
+          "expanded compact historical stage acknowledgement for current schema validation; original array unchanged"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/runs/acks-nightly-reconstructed-2026-07-30.json",
+        "recordId": "ack:2026-07-30:opportunity"
+      },
+      {
+        "changes": [
+          "expanded compact historical stage acknowledgement for current schema validation; original array unchanged"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/runs/acks-nightly-reconstructed-2026-07-30.json",
+        "recordId": "ack:2026-07-30:pattern"
+      },
+      {
+        "changes": [
+          "expanded compact historical stage acknowledgement for current schema validation; original array unchanged"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/runs/acks-nightly-reconstructed-2026-07-30.json",
+        "recordId": "ack:2026-07-30:publish"
+      },
+      {
+        "changes": [
+          "expanded compact historical stage acknowledgement for current schema validation; original array unchanged"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/runs/acks-nightly-reconstructed-2026-07-30.json",
+        "recordId": "ack:2026-07-30:relate"
+      },
+      {
+        "changes": [
+          "expanded compact historical stage acknowledgement for current schema validation; original array unchanged"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/runs/acks-nightly-reconstructed-2026-07-30.json",
+        "recordId": "ack:2026-07-30:strategy"
+      },
+      {
+        "changes": [
+          "expanded compact historical stage acknowledgement for current schema validation; original array unchanged"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/runs/acks-nightly-reconstructed-2026-07-30.json",
+        "recordId": "ack:2026-07-30:vet"
+      },
+      {
+        "changes": [
+          "validated as immutable provenance ledger outside canonical typed-node schema map"
+        ],
+        "mode": "auxiliary-ledger-validation",
+        "path": "knowledge/runs/backfill-ledger.json",
+        "recordId": "backfill:nightly-intelligence:v1"
+      },
+      {
+        "changes": [
+          "missing ingestionMode projected as synthetic; original git record unchanged"
+        ],
+        "mode": "in-memory-validation-projection",
+        "path": "knowledge/runs/run-example.json",
+        "recordId": "run:example-2026-07-30"
+      },
+      {
+        "changes": [
+          "validated reconstructed source bundle as immutable provenance container; entries are consumed by control projections without rewriting canonical JSON"
+        ],
+        "mode": "auxiliary-source-bundle-validation",
+        "path": "knowledge/sources/source-reconstructed-cycle-2026-07-30.json",
+        "recordId": "source-bundle:reconstructed:2026-07-30"
+      }
+    ],
+    "recordsProjected": 62
+  },
+  "violations": []
+}

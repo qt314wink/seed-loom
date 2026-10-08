@@ -1,7 +1,7 @@
 {
   "control": "WS1",
   "digest": "018879ada417848ad3ef618759f11f74db9f7da168e40c3e427383a60c06f518",
-  "generatedAt": "2026-07-31T00:00:00Z",
+  "generatedAt": "2026-07-31T20:00:00Z",
   "inputs": [
     {
       "path": "knowledge/fixtures/source-independence/positive/pos-syndication-five-reposts.json",

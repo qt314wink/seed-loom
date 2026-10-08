@@ -1,0 +1,741 @@
+{
+  "clusters": [
+    {
+      "clusterId": "cluster:1895af6442db",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "confidence": 0.6,
+          "detail": "source:openai:financial-services:2026-09-10 and source:reuters:openai-finance:2026-09-10 share 18 distinctive 4-grams of analyst language (>= 3) despite distinct independence keys.",
+          "signal": "shared-analyst-language"
+        }
+      ],
+      "independentStreams": 2,
+      "manualReviewRequired": true,
+      "members": [
+        "source:openai:financial-services:2026-09-10",
+        "source:reuters:openai-finance:2026-09-10"
+      ],
+      "originCandidates": [
+        "source:openai:financial-services:2026-09-10"
+      ],
+      "relationship": "analyst-echo"
+    },
+    {
+      "clusterId": "cluster:2089becbef06",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "confidence": 0.6,
+          "detail": "source:gsa:mcp:2026-09-10 and source:openai:gov:2026-09-10 share 19 distinctive 4-grams of analyst language (>= 3) despite distinct independence keys.",
+          "signal": "shared-analyst-language"
+        }
+      ],
+      "independentStreams": 2,
+      "manualReviewRequired": true,
+      "members": [
+        "source:gsa:mcp:2026-09-10",
+        "source:openai:gov:2026-09-10"
+      ],
+      "originCandidates": [
+        "source:gsa:mcp:2026-09-10"
+      ],
+      "relationship": "analyst-echo"
+    },
+    {
+      "clusterId": "cluster:448447217287",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "confidence": 0.6,
+          "detail": "source:fatf:virtual-assets-ai-abuse:2026-07-16 and source:ft:fatf-ai-scams:2026-09-14 share 21 distinctive 4-grams of analyst language (>= 3) despite distinct independence keys.",
+          "signal": "shared-analyst-language"
+        }
+      ],
+      "independentStreams": 2,
+      "manualReviewRequired": true,
+      "members": [
+        "source:fatf:virtual-assets-ai-abuse:2026-07-16",
+        "source:ft:fatf-ai-scams:2026-09-14"
+      ],
+      "originCandidates": [
+        "source:fatf:virtual-assets-ai-abuse:2026-07-16"
+      ],
+      "relationship": "analyst-echo"
+    },
+    {
+      "clusterId": "cluster:6d2d4ccb54a6",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "confidence": 0.6,
+          "detail": "source:gsa:onegov:2026-09-10 and source:openai:gov:2026-09-10 share 19 distinctive 4-grams of analyst language (>= 3) despite distinct independence keys.",
+          "signal": "shared-analyst-language"
+        }
+      ],
+      "independentStreams": 2,
+      "manualReviewRequired": true,
+      "members": [
+        "source:gsa:onegov:2026-09-10",
+        "source:openai:gov:2026-09-10"
+      ],
+      "originCandidates": [
+        "source:gsa:onegov:2026-09-10"
+      ],
+      "relationship": "analyst-echo"
+    },
+    {
+      "clusterId": "cluster:7c91f2b8fff0",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "confidence": 0.6,
+          "detail": "source:gsa:mcp:2026-09-10 and source:gsa:onegov:2026-09-10 share 19 distinctive 4-grams of analyst language (>= 3) despite distinct independence keys.",
+          "signal": "shared-analyst-language"
+        }
+      ],
+      "independentStreams": 2,
+      "manualReviewRequired": true,
+      "members": [
+        "source:gsa:mcp:2026-09-10",
+        "source:gsa:onegov:2026-09-10"
+      ],
+      "originCandidates": [
+        "source:gsa:mcp:2026-09-10"
+      ],
+      "relationship": "analyst-echo"
+    },
+    {
+      "clusterId": "cluster:a48075f16a29",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "confidence": 0.6,
+          "detail": "source:openai:creative-growth:2026-09-12 and source:superside:creative-tech:2026-09-12 share 16 distinctive 4-grams of analyst language (>= 3) despite distinct independence keys.",
+          "signal": "shared-analyst-language"
+        }
+      ],
+      "independentStreams": 2,
+      "manualReviewRequired": true,
+      "members": [
+        "source:openai:creative-growth:2026-09-12",
+        "source:superside:creative-tech:2026-09-12"
+      ],
+      "originCandidates": [
+        "source:openai:creative-growth:2026-09-12"
+      ],
+      "relationship": "analyst-echo"
+    },
+    {
+      "clusterId": "cluster:f671caa29854",
+      "confidence": 0.6,
+      "evidence": [
+        {
+          "confidence": 0.6,
+          "detail": "source:safeworld-funding:2026-10-05 and source:safeworld-physical-ai-safety:2026-10-05 share 29 distinctive 4-grams of analyst language (>= 3) despite distinct independence keys.",
+          "signal": "shared-analyst-language"
+        }
+      ],
+      "independentStreams": 2,
+      "manualReviewRequired": true,
+      "members": [
+        "source:safeworld-funding:2026-10-05",
+        "source:safeworld-physical-ai-safety:2026-10-05"
+      ],
+      "originCandidates": [
+        "source:safeworld-funding:2026-10-05"
+      ],
+      "relationship": "analyst-echo"
+    }
+  ],
+  "config": {
+    "minimumIndependentStreamsForPattern": 2
+  },
+  "control": "WS1",
+  "generatedAt": "2026-07-31T20:00:00Z",
+  "independentStreamCount": 53,
+  "input": {
+    "mode": "canonical",
+    "observations": [
+      {
+        "id": "obs:2026-07-30:ai-export-consortia",
+        "path": "knowledge/observations/obs-2026-07-30-ai-export-consortia.json",
+        "sha256": "e36b4f211aa117f5c91f40f7717248e9ddbcc1296de5bae9d02d4285deb1bbc8"
+      },
+      {
+        "id": "obs:2026-07-30:eu-ai-gigafactories",
+        "path": "knowledge/observations/obs-2026-07-30-eu-ai-gigafactories.json",
+        "sha256": "9233080fd2befbd4d9eb98557f2923feba9fbfbfafe59cef6c25687cff5b429e"
+      },
+      {
+        "id": "obs:2026-07-30:ftc-ai-accuracy",
+        "path": "knowledge/observations/obs-2026-07-30-ftc-ai-accuracy.json",
+        "sha256": "fdaa6ef1181899cf6cad34a3452d2a4ae7175ae5927ecb982eb4fedcee4319e3"
+      },
+      {
+        "id": "obs:2026-07-30:genesis-mission",
+        "path": "knowledge/observations/obs-2026-07-30-genesis-mission.json",
+        "sha256": "66fc8b8e1d8074fed8468a4a1c1c126ccb4008800b219bb0a090edb43d26c1f2"
+      },
+      {
+        "id": "obs:2026-07-30:openai-presence",
+        "path": "knowledge/observations/obs-2026-07-30-openai-presence.json",
+        "sha256": "621b56a844c03124652b096cccf972f430b43ff0fc1a2f924111b6146a858e73"
+      },
+      {
+        "id": "obs:ai-native-consulting-demand:2026-10-05",
+        "path": "knowledge/observations/obs-ai-native-consulting-demand-2026-10-05.json",
+        "sha256": "65d98f60b19e7106b260da421b3eed7346f5d4f7f59f4f04ef8d32ebf5af9eb1"
+      },
+      {
+        "id": "obs:example-adoption",
+        "path": "knowledge/observations/obs-example-adoption.json",
+        "sha256": "4eeac1672f22147a64a49571a8ec0eb39a96ebac1c79728d09d3623bce43f452"
+      },
+      {
+        "id": "obs:nightly:2026-09-09:energy-stack",
+        "path": "knowledge/observations/obs-nightly-2026-09-09-energy-stack.json",
+        "sha256": "68b5300a9fd863816ab6936bf778502bad080787167019b329458e3d4a03cfac"
+      },
+      {
+        "id": "obs:nightly:2026-09-09:institutional-intelligence",
+        "path": "knowledge/observations/obs-nightly-2026-09-09-institutional-intelligence.json",
+        "sha256": "55998e41e4051a61b5a5d3ae7da644ee4d6c4c39fea6605d00ee67fad68e85ac"
+      },
+      {
+        "id": "obs:nightly:2026-09-09:lab-agent",
+        "path": "knowledge/observations/obs-nightly-2026-09-09-lab-agent.json",
+        "sha256": "765aa419301923c8af367c088b07e503abb5f81c13431103f6777bba01b3ae92"
+      },
+      {
+        "id": "obs:nightly:2026-09-09:testbeds",
+        "path": "knowledge/observations/obs-nightly-2026-09-09-testbeds.json",
+        "sha256": "7d74eee48f483718f5dc61635eadef7b63aeafafa226ee4d3dc5c5130c7bdc41"
+      },
+      {
+        "id": "obs:nightly:2026-09-09:workforce-graph",
+        "path": "knowledge/observations/obs-nightly-2026-09-09-workforce-graph.json",
+        "sha256": "a205b7a544f41b2174768cdc2c79ddfb68e9b7d11a9f988af576f287664d1ad4"
+      },
+      {
+        "id": "obs:nightly:2026-09-10:document-to-evidence-artifact",
+        "path": "knowledge/observations/obs-nightly-2026-09-10-document-to-evidence-artifact.json",
+        "sha256": "6ca689cf072f15b94aab35bd8c321c4f718a7952bf97e4a39956f2efaefda0f9"
+      },
+      {
+        "id": "obs:nightly:2026-09-10:ontology-operational-intelligence",
+        "path": "knowledge/observations/obs-nightly-2026-09-10-ontology-operational-intelligence.json",
+        "sha256": "53d5607dca564110fc674d29ed73ad330a1b1f2dcaf42592bcd9a470cb5f96ee"
+      },
+      {
+        "id": "obs:nightly:2026-09-10:regulated-data-workflows",
+        "path": "knowledge/observations/obs-nightly-2026-09-10-regulated-data-workflows.json",
+        "sha256": "4e7854f49a8b32fb9b2502dc372feed04c3741a47ddb301c22a1c9b8be7ae2a1"
+      },
+      {
+        "id": "obs:nightly:2026-09-10:semi-custom-inference-stack",
+        "path": "knowledge/observations/obs-nightly-2026-09-10-semi-custom-inference-stack.json",
+        "sha256": "21674ce02e710dd99bc7b692073bd25cc08925a18c3a2f269536bf57d002f20f"
+      },
+      {
+        "id": "obs:nightly:2026-09-10:water-intelligence",
+        "path": "knowledge/observations/obs-nightly-2026-09-10-water-intelligence.json",
+        "sha256": "d3992e29dfef91b29864f9ff008b7974764f75eb006a2706f14babc47ddd235b"
+      },
+      {
+        "id": "obs:nightly:2026-09-11:agent-runtime",
+        "path": "knowledge/observations/obs-nightly-2026-09-11-agent-runtime.json",
+        "sha256": "1b7f40321a2fb49d1f99ccfd0c1980083f49f71c220ae8dbf9a47d07cfbdd08a"
+      },
+      {
+        "id": "obs:nightly:2026-09-11:memory-first-inference",
+        "path": "knowledge/observations/obs-nightly-2026-09-11-memory-first-inference.json",
+        "sha256": "101e75e3f7317e15297bad282b32c2236f2267d9e1984a937b5a7ed9f4363a1d"
+      },
+      {
+        "id": "obs:nightly:2026-09-11:photonics",
+        "path": "knowledge/observations/obs-nightly-2026-09-11-photonics.json",
+        "sha256": "bef0a8573f955ff075ac9ca704bc0b52cdd1c6363634f8df4e94368b836e801c"
+      },
+      {
+        "id": "obs:nightly:2026-09-11:public-sector-ai",
+        "path": "knowledge/observations/obs-nightly-2026-09-11-public-sector-ai.json",
+        "sha256": "25496b98376a001636cd3934dc2bb1918cf7d444fb79f0ce4085746d0fa4eee2"
+      },
+      {
+        "id": "obs:nightly:2026-09-11:tribal-water",
+        "path": "knowledge/observations/obs-nightly-2026-09-11-tribal-water.json",
+        "sha256": "479a651119f80c530e8e2fdad6b7220837e105e766e24d922ee6728b014cf96f"
+      },
+      {
+        "id": "obs:nightly:2026-09-12:agent-state",
+        "path": "knowledge/observations/obs-nightly-2026-09-12-agent-state.json",
+        "sha256": "b9be3e4722b0b146040e73bf071c911c0b6c1f68a1522248ab0e1a83ff364f97"
+      },
+      {
+        "id": "obs:nightly:2026-09-12:capital-compute",
+        "path": "knowledge/observations/obs-nightly-2026-09-12-capital-compute.json",
+        "sha256": "8076bd3063e5a7d0a8efa06456fc0e3124df8593f4d57259f617aad986253311"
+      },
+      {
+        "id": "obs:nightly:2026-09-12:creative-demand",
+        "path": "knowledge/observations/obs-nightly-2026-09-12-creative-demand.json",
+        "sha256": "ad84556c2647137dc3fe177c0191e7675c7bce621099916f41ce3465363e1555"
+      },
+      {
+        "id": "obs:nightly:2026-09-12:rangeland-drought",
+        "path": "knowledge/observations/obs-nightly-2026-09-12-rangeland-drought.json",
+        "sha256": "c4c3ef2a46a26cc7b33a0626b50f37b4038f60bce893bcd802c2b03a64d4d72c"
+      },
+      {
+        "id": "obs:nightly:2026-09-12:st-wave-laser",
+        "path": "knowledge/observations/obs-nightly-2026-09-12-st-wave-laser.json",
+        "sha256": "86e537d460585df49e6b4e756603269f70310ea9fd1464392a29e447dc08ba33"
+      },
+      {
+        "id": "obs:nightly:2026-09-13:agent-driven-deployments",
+        "path": "knowledge/observations/obs-nightly-2026-09-13-agent-driven-deployments.json",
+        "sha256": "37b95c701df693097bc00e8dcc79cb7f1d3df74d6936846fcd1c1d44cfc018eb"
+      },
+      {
+        "id": "obs:nightly:2026-09-13:agent-hackathon-demand",
+        "path": "knowledge/observations/obs-nightly-2026-09-13-agent-hackathon-demand.json",
+        "sha256": "d0ae8fd6f3c91dd44d9fdde11845b6d2c0f43ac2e59139484c6a257b29d7192c"
+      },
+      {
+        "id": "obs:nightly:2026-09-13:common-species-decline",
+        "path": "knowledge/observations/obs-nightly-2026-09-13-common-species-decline.json",
+        "sha256": "96d6c50344ffb15b93c885feedca8c588993939b57f4a50144298086cda60ab3"
+      },
+      {
+        "id": "obs:nightly:2026-09-13:external-ai-evaluation",
+        "path": "knowledge/observations/obs-nightly-2026-09-13-external-ai-evaluation.json",
+        "sha256": "ba6b1ab4627aa1068311d1ceed5584e279561f8e2e7e046cf711b5f9bdae4e68"
+      },
+      {
+        "id": "obs:nightly:2026-09-13:phonon-protected-qubits",
+        "path": "knowledge/observations/obs-nightly-2026-09-13-phonon-protected-qubits.json",
+        "sha256": "18f4898586d78723cc1f73394a2f6b0f7f069058b68f12a91e193eaa84ecbddf"
+      },
+      {
+        "id": "obs:nightly:2026-09-14:ai-fraud-coordination",
+        "path": "knowledge/observations/obs-nightly-2026-09-14-ai-fraud-coordination.json",
+        "sha256": "9721b79945611ce3c3161c9b7045bfe1715fb6bd73c1c0ad1a0b0c1d03e90926"
+      },
+      {
+        "id": "obs:nightly:2026-09-14:biointegrated-flexible-photonics",
+        "path": "knowledge/observations/obs-nightly-2026-09-14-biointegrated-flexible-photonics.json",
+        "sha256": "9f9289710b23e2ca70a6e4c3aab705cf68e5d3a48cda69abd557dac2d73b164c"
+      },
+      {
+        "id": "obs:nightly:2026-09-14:ecosystem-multifactor-stability",
+        "path": "knowledge/observations/obs-nightly-2026-09-14-ecosystem-multifactor-stability.json",
+        "sha256": "65743f9e27ae425f0b5e9309c624e1202449fb3789d3d43e0f9108eeda30764d"
+      },
+      {
+        "id": "obs:nightly:2026-09-14:embodied-conversational-ai",
+        "path": "knowledge/observations/obs-nightly-2026-09-14-embodied-conversational-ai.json",
+        "sha256": "a106ff5c7925e2e0f1c1b9c8f8eb157eed85ea3303d14c13d6b6b81864214864"
+      },
+      {
+        "id": "obs:nightly:2026-09-14:in-process-fabrication-inspection",
+        "path": "knowledge/observations/obs-nightly-2026-09-14-in-process-fabrication-inspection.json",
+        "sha256": "8548e04185c53b9f5d2188ce2cb3dd5a6c62b7a78091457c6378ceb37acb2262"
+      },
+      {
+        "id": "obs:nightly:2026-09-15:agentic-infrastructure-interconnect",
+        "path": "knowledge/observations/obs-nightly-2026-09-15-agentic-infrastructure-interconnect.json",
+        "sha256": "14e65c36142bab85a2804b1b182f56124401d8a637ea237ec9ffbd959f073451"
+      },
+      {
+        "id": "obs:nightly:2026-09-15:civic-ai-consulting-procurement",
+        "path": "knowledge/observations/obs-nightly-2026-09-15-civic-ai-consulting-procurement.json",
+        "sha256": "722e3e69196376d72c6b1b95c171fe27a5e2137afb9c5231ae32701a92426559"
+      },
+      {
+        "id": "obs:nightly:2026-09-15:enterprise-agent-capital",
+        "path": "knowledge/observations/obs-nightly-2026-09-15-enterprise-agent-capital.json",
+        "sha256": "facdae22bda267c62a256f731abcc754b9d951e84e65cb00e56278a0c6385bc1"
+      },
+      {
+        "id": "obs:nightly:2026-09-15:equitable-ai-outcome-funding",
+        "path": "knowledge/observations/obs-nightly-2026-09-15-equitable-ai-outcome-funding.json",
+        "sha256": "5f3b36992405aa3a8b7b29932aaa04fd02da41bbaccff9aa617b48738fbd3a40"
+      },
+      {
+        "id": "obs:nightly:2026-09-15:human-control-specification",
+        "path": "knowledge/observations/obs-nightly-2026-09-15-human-control-specification.json",
+        "sha256": "54d2cc46f3c63beac70f2eaf6e260d388ffb0eaeabd70d8a901963ebbdc8add5"
+      },
+      {
+        "id": "obs:open-weight-agent-frontier:2026-10-05",
+        "path": "knowledge/observations/obs-open-weight-agent-frontier-2026-10-05.json",
+        "sha256": "81ef9e47c41edcb11510e2390b85436a1f84ace606469d2acb45e2cb2b8b52a5"
+      },
+      {
+        "id": "obs:photonic-in-situ-learning:2026-10-05",
+        "path": "knowledge/observations/obs-photonic-in-situ-learning-2026-10-05.json",
+        "sha256": "4c142da4eb5a9845c27a807cdcd53d9c7a1f00f7a3491349e07efba1822cab18"
+      },
+      {
+        "id": "obs:physical-ai-safety-evaluation-layer:2026-10-05",
+        "path": "knowledge/observations/obs-physical-ai-safety-evaluation-layer-2026-10-05.json",
+        "sha256": "1d9d2cc65fe21e45c70f05fda143ab8aa645cccd835dfbbc7390e761aca904de"
+      },
+      {
+        "id": "obs:programmable-plasma-antenna:2026-10-05",
+        "path": "knowledge/observations/obs-programmable-plasma-antenna-2026-10-05.json",
+        "sha256": "9fd8cf8dd05b3e4ea9cdeee1eb78dcc557a14e1cf82d2e49d7e4b4f2ed48332d"
+      }
+    ],
+    "sources": [
+      {
+        "id": "source:adobe:acrobat-agent:2026-09-09",
+        "path": "knowledge/sources/source-adobe-acrobat-agent-2026-09-09.json",
+        "sha256": "9ac748250de889f23e2128440d497ea38756aed21f250b6fcad871900933881e"
+      },
+      {
+        "id": "source:businessinsider:nuance-series-a:2026-09-14",
+        "path": "knowledge/sources/source-businessinsider-nuance-series-a-2026-09-14.json",
+        "sha256": "deb93e3c57ab916fd783c6d1d019e18a55a35a89f530ea4ec82f4c65f9a30595"
+      },
+      {
+        "id": "source:commerce:2026-07-06:ai-export-program",
+        "path": "knowledge/sources/source-reconstructed-cycle-2026-07-30.json#source:commerce:2026-07-06:ai-export-program",
+        "sha256": "bf97596a9e1c40dba01ea8dc2a6540df066004cb3f9a388876bde9b1b0247730"
+      },
+      {
+        "id": "source:cymphony:2026-09-09",
+        "path": "knowledge/sources/source-cymphony-2026-09-09.json",
+        "sha256": "197a68430360a5568df20dc5364041f199954b70b4a538eb8bdcb089f844530f"
+      },
+      {
+        "id": "source:devpost:aws-agents-for-humans:2026-09-13",
+        "path": "knowledge/sources/source-devpost-aws-agents-for-humans-2026-09-13.json",
+        "sha256": "01a6e75db5feeb55ac468575dc67cb4d57dbe3d53b6e0267f7ff9c66c36e7f6c"
+      },
+      {
+        "id": "source:doe:mine:2026-09-09",
+        "path": "knowledge/sources/source-doe-mine-2026-09-09.json",
+        "sha256": "614ed5103fbb6189d8dcb2ce7e7f64428f60f9585ae7d83b5581832aad95568b"
+      },
+      {
+        "id": "source:epa:tribal-water:2026-09-10",
+        "path": "knowledge/sources/source-epa-tribal-water-2026-09-10.json",
+        "sha256": "fcb177f331447ba751d0fd86205664ae22295ed8daae5f335c23e6dc241d1026"
+      },
+      {
+        "id": "source:epam-ai-native-hiring:2026-10-05",
+        "path": "knowledge/sources/source-epam-ai-native-hiring-2026-10-05.json",
+        "sha256": "9370513eb4f3f0bbd9533592265a4952e17e755cf432bf61a2bd36b38c42ec8f"
+      },
+      {
+        "id": "source:example-primary",
+        "path": "knowledge/sources/source-example-primary.json",
+        "sha256": "74f31de3e525f0b0dac940d346eba7aa4f1bb4a089fb362f8c33b2e717d7d7bc"
+      },
+      {
+        "id": "source:fatf:virtual-assets-ai-abuse:2026-07-16",
+        "path": "knowledge/sources/source-fatf-virtual-assets-ai-abuse-2026-07-16.json",
+        "sha256": "575556b86ebc0d4052b3704968515bd90775dd98d2cea1b57e4daa6a1a5496c6"
+      },
+      {
+        "id": "source:fortum:google:2026-09-09",
+        "path": "knowledge/sources/source-fortum-google-2026-09-09.json",
+        "sha256": "9a82ce40aa20019e27a9790ac9645abe712445219c21f309619b72fd0d980625"
+      },
+      {
+        "id": "source:ft:fatf-ai-scams:2026-09-14",
+        "path": "knowledge/sources/source-ft-fatf-ai-scams-2026-09-14.json",
+        "sha256": "39e42640023bda942ff65408c162a934581760edbc01d11f85ad89ac77df6658"
+      },
+      {
+        "id": "source:ftc:2026-07:ai-accuracy-policy",
+        "path": "knowledge/sources/source-reconstructed-cycle-2026-07-30.json#source:ftc:2026-07:ai-accuracy-policy",
+        "sha256": "bf97596a9e1c40dba01ea8dc2a6540df066004cb3f9a388876bde9b1b0247730"
+      },
+      {
+        "id": "source:gates:goalkeepers-ai-equity:2026-09-15",
+        "path": "knowledge/sources/source-gates-goalkeepers-ai-equity-2026-09-15.json",
+        "sha256": "b5eb39c82370fe62c8767ce05d67004fd4669b322bb0018bf3bdada8f6ba46c8"
+      },
+      {
+        "id": "source:github:hermes:2026-09-11",
+        "path": "knowledge/sources/source-github-hermes-2026-09-11.json",
+        "sha256": "eccf5595e762e5177b96ce288c70ff5cbf602531e96923318f12711404675c0e"
+      },
+      {
+        "id": "source:gsa:mcp:2026-09-10",
+        "path": "knowledge/sources/source-gsa-mcp-2026-09-10.json",
+        "sha256": "6f616233684bcc0022dc41a957ce986eb9a94219253747d07dd3529db3857476"
+      },
+      {
+        "id": "source:gsa:onegov:2026-09-10",
+        "path": "knowledge/sources/source-gsa-onegov-2026-09-10.json",
+        "sha256": "ee41bad246c6d5d0406a303da4542862ed0bd979de7cf5418b55334432ce8b54"
+      },
+      {
+        "id": "source:harvard:phonon-qubit:2026-09-12",
+        "path": "knowledge/sources/source-harvard-phonon-qubit-2026-09-12.json",
+        "sha256": "1415a1a7f7dd18c007b0a0357eac0da7c6ad2bf98919c70cdd582ab7c1f2ed05"
+      },
+      {
+        "id": "source:harvey:2026-09-09",
+        "path": "knowledge/sources/source-harvey-2026-09-09.json",
+        "sha256": "ac091da2cc12c5838200b0665d86c853a439a869a808b24ca5763c35e5c25354"
+      },
+      {
+        "id": "source:hpcwire:llnl-layer-inspection:2026-09-14",
+        "path": "knowledge/sources/source-hpcwire-llnl-layer-inspection-2026-09-14.json",
+        "sha256": "0f2f32921c99aa90e4bf64e4140cec5c932780fe39d2e91834e44c735c969c64"
+      },
+      {
+        "id": "source:liberty:positron:2026-09-11",
+        "path": "knowledge/sources/source-liberty-positron-2026-09-11.json",
+        "sha256": "14175f3380d6c448219cbf8a33aa846c5d3511f976fdaa21a62f06345d79b1e6"
+      },
+      {
+        "id": "source:microsoft-ai:humanist-code:2026-09-14",
+        "path": "knowledge/sources/source-microsoft-ai-humanist-code-2026-09-14.json",
+        "sha256": "b15c2323a92f219a4c76ae6cb73f04bbaf75e12d9fd2d1d2fa633655506123cb"
+      },
+      {
+        "id": "source:nature:2026-07-24:genesis-mission-analysis",
+        "path": "knowledge/sources/source-reconstructed-cycle-2026-07-30.json#source:nature:2026-07-24:genesis-mission-analysis",
+        "sha256": "bf97596a9e1c40dba01ea8dc2a6540df066004cb3f9a388876bde9b1b0247730"
+      },
+      {
+        "id": "source:nature:common-species-decline:2026-09-12",
+        "path": "knowledge/sources/source-nature-common-species-decline-2026-09-12.json",
+        "sha256": "60e9665e62ab50dceaa18ad09a11c05d82a2c76904d6c40e1da0e7a5bd08e52e"
+      },
+      {
+        "id": "source:nature:ecosystem-stability-multifactor:2026-09-14",
+        "path": "knowledge/sources/source-nature-ecosystem-stability-multifactor-2026-09-14.json",
+        "sha256": "e54d8b75522f01889d0c7aed5f7abfe0093f10251717f6bdc4744d8bf0fe9816"
+      },
+      {
+        "id": "source:nature:photonics:2026-09-11",
+        "path": "knowledge/sources/source-nature-photonics-2026-09-11.json",
+        "sha256": "9af88e6803d796a2f207e212024feacb865b22dd77156d8f6cff331a0659443a"
+      },
+      {
+        "id": "source:nature:st-laser:2026-09-11",
+        "path": "knowledge/sources/source-nature-st-laser-2026-09-11.json",
+        "sha256": "b7554030dcb2cba6102600293c3e75474f8516a63c40f5815777611d10487deb"
+      },
+      {
+        "id": "source:nvidia:dmatrix-nvlink:2026-09-10",
+        "path": "knowledge/sources/source-nvidia-dmatrix-nvlink-2026-09-10.json",
+        "sha256": "295ac16fcfd97b9ba16cd72e314665393020be58aeafa7976b37039522e35a11"
+      },
+      {
+        "id": "source:nvidia:palantir-supply-chain:2026-09-10",
+        "path": "knowledge/sources/source-nvidia-palantir-supply-chain-2026-09-10.json",
+        "sha256": "ee2c0e557ccc5c9857bffc92c20362ff02a9592377ec0fa8f3b9c90fdbbd584e"
+      },
+      {
+        "id": "source:openai:2026-07-22:presence",
+        "path": "knowledge/sources/source-reconstructed-cycle-2026-07-30.json#source:openai:2026-07-22:presence",
+        "sha256": "bf97596a9e1c40dba01ea8dc2a6540df066004cb3f9a388876bde9b1b0247730"
+      },
+      {
+        "id": "source:openai:creative-growth:2026-09-12",
+        "path": "knowledge/sources/source-openai-creative-growth-2026-09-12.json",
+        "sha256": "403faf5b084c3565c945deab3ae824740bbcc37674b996fce5a2476578a28a7c"
+      },
+      {
+        "id": "source:openai:financial-services:2026-09-10",
+        "path": "knowledge/sources/source-openai-financial-services-2026-09-10.json",
+        "sha256": "d57617bd0d1a15f64e0612d81c091a7f5153fbce43bde38c2df4087785ef7b95"
+      },
+      {
+        "id": "source:openai:gov:2026-09-10",
+        "path": "knowledge/sources/source-openai-gov-2026-09-10.json",
+        "sha256": "33750c97120d8b064a3f3cb2dfffbd7676e60c051c6cbf781c1af4c6d5bc9f54"
+      },
+      {
+        "id": "source:openai:q:2026-09-08",
+        "path": "knowledge/sources/source-openai-q-2026-09-08.json",
+        "sha256": "d4f3345087da8f99d6fe1b910900962c7e74627edbea066af8e5758f073eaee2"
+      },
+      {
+        "id": "source:photonic-inspire-nature:2026-10-05",
+        "path": "knowledge/sources/source-photonic-inspire-nature-2026-10-05.json",
+        "sha256": "d52a7f47f12bce48f6b86cea28bc289da4e359099d31cc2995d62de5b2efc94c"
+      },
+      {
+        "id": "source:photonix:flexible-photonics:2026-09-14",
+        "path": "knowledge/sources/source-photonix-flexible-photonics-2026-09-14.json",
+        "sha256": "626543c02de8dda0cda7e008eae4f50fedf27b61f645e3f32d0cfb8bc70c24dc"
+      },
+      {
+        "id": "source:plasma-beam-antenna-ncsu:2026-10-05",
+        "path": "knowledge/sources/source-plasma-beam-antenna-ncsu-2026-10-05.json",
+        "sha256": "cee0748630df172d1d633d3b5faefeabefa14541e463dfd890770a4fc2ed924d"
+      },
+      {
+        "id": "source:reflection-beam-launch:2026-10-05",
+        "path": "knowledge/sources/source-reflection-beam-launch-2026-10-05.json",
+        "sha256": "775656373a45fcc53f3d3ca1907ec8fdc53c81313801918bab1e3c29654df00f"
+      },
+      {
+        "id": "source:reuters:2026-07-30:eu-ai-gigafactories",
+        "path": "knowledge/sources/source-reconstructed-cycle-2026-07-30.json#source:reuters:2026-07-30:eu-ai-gigafactories",
+        "sha256": "bf97596a9e1c40dba01ea8dc2a6540df066004cb3f9a388876bde9b1b0247730"
+      },
+      {
+        "id": "source:reuters:ai-slowdown:2026-09-12",
+        "path": "knowledge/sources/source-reuters-ai-slowdown-2026-09-12.json",
+        "sha256": "8862c9ea127f8a68fd88dc95dd042f3f14a26989fa56aac87da4bda10a8b6e98"
+      },
+      {
+        "id": "source:reuters:anthropic-nvidia:2026-09-11",
+        "path": "knowledge/sources/source-reuters-anthropic-nvidia-2026-09-11.json",
+        "sha256": "3d90169872164db9f04bb4465d8414d911d32c73270d3c7ef292c0d42bf99f1f"
+      },
+      {
+        "id": "source:reuters:delos-data:2026-09-15",
+        "path": "knowledge/sources/source-reuters-delos-data-2026-09-15.json",
+        "sha256": "9461cc9556658179b7688c6095fadfd2a0344923c5a7c93431f17c7b6267b025"
+      },
+      {
+        "id": "source:reuters:factory-funding:2026-09-15",
+        "path": "knowledge/sources/source-reuters-factory-funding-2026-09-15.json",
+        "sha256": "dc88b534a5011f8dd0b4cd10d720f17aa24b42ce220bf74ef825612d1013f681"
+      },
+      {
+        "id": "source:reuters:openai-finance:2026-09-10",
+        "path": "knowledge/sources/source-reuters-openai-finance-2026-09-10.json",
+        "sha256": "d1e78ba2026be4ba86ef0f790c412850b38259b1befbd620c06c26a28961aecf"
+      },
+      {
+        "id": "source:safeworld-funding:2026-10-05",
+        "path": "knowledge/sources/source-safeworld-funding-2026-10-05.json",
+        "sha256": "af4ced98b627e3c9213aac81a3f56bf93b37e4540a34b2b3f06da27eeb9659aa"
+      },
+      {
+        "id": "source:safeworld-physical-ai-safety:2026-10-05",
+        "path": "knowledge/sources/source-safeworld-physical-ai-safety-2026-10-05.json",
+        "sha256": "824854df38844cb24afdd907c22ea4eb4121cfad7fa4d9467fb24de074645693"
+      },
+      {
+        "id": "source:superside:creative-tech:2026-09-12",
+        "path": "knowledge/sources/source-superside-creative-tech-2026-09-12.json",
+        "sha256": "4c90046197c28bbb0c494fe843d1d23db8a0415c25404ea86daacb6594789c76"
+      },
+      {
+        "id": "source:usac:ai-consulting-rfp:2026-09-15",
+        "path": "knowledge/sources/source-usac-ai-consulting-rfp-2026-09-15.json",
+        "sha256": "958a0d9b73e0edf862a2abb19dca8f00f26297870365590679db839a65ab468b"
+      },
+      {
+        "id": "source:usgs:drought:2026-09-12",
+        "path": "knowledge/sources/source-usgs-drought-2026-09-12.json",
+        "sha256": "eb46d3f0e608802ae0250e184a37b3aafc64242816448a4493ad53eee60f8040"
+      },
+      {
+        "id": "source:vercel:agentic-infrastructure:2026-09",
+        "path": "knowledge/sources/source-vercel-agentic-infrastructure-2026-09.json",
+        "sha256": "c6542b58009998881b8fec34a9412931926d1ffd846de40d4bf5eec3b906d84a"
+      },
+      {
+        "id": "source:vercel:agents:2026-09-10",
+        "path": "knowledge/sources/source-vercel-agents-2026-09-10.json",
+        "sha256": "ce8d6460b6e246e64386fc7d63d054781517b40a88ee045ed8118d8ed7160228"
+      },
+      {
+        "id": "source:whitehouse:2026-07-22:genesis-mission",
+        "path": "knowledge/sources/source-reconstructed-cycle-2026-07-30.json#source:whitehouse:2026-07-22:genesis-mission",
+        "sha256": "bf97596a9e1c40dba01ea8dc2a6540df066004cb3f9a388876bde9b1b0247730"
+      },
+      {
+        "id": "source:wint:series-d:2026-09-09",
+        "path": "knowledge/sources/source-wint-series-d-2026-09-09.json",
+        "sha256": "0fbdf3d84892aaadc848b3ab73002c72baee8ab62d981851a631fcaa4a6b2904"
+      }
+    ]
+  },
+  "observationsAnalyzed": 46,
+  "reportId": "independence-report:7566ff490a46",
+  "reviewQueue": [
+    "cluster:1895af6442db",
+    "cluster:2089becbef06",
+    "cluster:448447217287",
+    "cluster:6d2d4ccb54a6",
+    "cluster:7c91f2b8fff0",
+    "cluster:a48075f16a29",
+    "cluster:f671caa29854"
+  ],
+  "sourcesAnalyzed": 53,
+  "type": "IndependenceReport",
+  "unclusteredSources": [
+    "source:adobe:acrobat-agent:2026-09-09",
+    "source:businessinsider:nuance-series-a:2026-09-14",
+    "source:commerce:2026-07-06:ai-export-program",
+    "source:cymphony:2026-09-09",
+    "source:devpost:aws-agents-for-humans:2026-09-13",
+    "source:doe:mine:2026-09-09",
+    "source:epa:tribal-water:2026-09-10",
+    "source:epam-ai-native-hiring:2026-10-05",
+    "source:example-primary",
+    "source:fatf:virtual-assets-ai-abuse:2026-07-16",
+    "source:fortum:google:2026-09-09",
+    "source:ft:fatf-ai-scams:2026-09-14",
+    "source:ftc:2026-07:ai-accuracy-policy",
+    "source:gates:goalkeepers-ai-equity:2026-09-15",
+    "source:github:hermes:2026-09-11",
+    "source:gsa:mcp:2026-09-10",
+    "source:gsa:onegov:2026-09-10",
+    "source:harvard:phonon-qubit:2026-09-12",
+    "source:harvey:2026-09-09",
+    "source:hpcwire:llnl-layer-inspection:2026-09-14",
+    "source:liberty:positron:2026-09-11",
+    "source:microsoft-ai:humanist-code:2026-09-14",
+    "source:nature:2026-07-24:genesis-mission-analysis",
+    "source:nature:common-species-decline:2026-09-12",
+    "source:nature:ecosystem-stability-multifactor:2026-09-14",
+    "source:nature:photonics:2026-09-11",
+    "source:nature:st-laser:2026-09-11",
+    "source:nvidia:dmatrix-nvlink:2026-09-10",
+    "source:nvidia:palantir-supply-chain:2026-09-10",
+    "source:openai:2026-07-22:presence",
+    "source:openai:creative-growth:2026-09-12",
+    "source:openai:financial-services:2026-09-10",
+    "source:openai:gov:2026-09-10",
+    "source:openai:q:2026-09-08",
+    "source:photonic-inspire-nature:2026-10-05",
+    "source:photonix:flexible-photonics:2026-09-14",
+    "source:plasma-beam-antenna-ncsu:2026-10-05",
+    "source:reflection-beam-launch:2026-10-05",
+    "source:reuters:2026-07-30:eu-ai-gigafactories",
+    "source:reuters:ai-slowdown:2026-09-12",
+    "source:reuters:anthropic-nvidia:2026-09-11",
+    "source:reuters:delos-data:2026-09-15",
+    "source:reuters:factory-funding:2026-09-15",
+    "source:reuters:openai-finance:2026-09-10",
+    "source:safeworld-funding:2026-10-05",
+    "source:safeworld-physical-ai-safety:2026-10-05",
+    "source:superside:creative-tech:2026-09-12",
+    "source:usac:ai-consulting-rfp:2026-09-15",
+    "source:usgs:drought:2026-09-12",
+    "source:vercel:agentic-infrastructure:2026-09",
+    "source:vercel:agents:2026-09-10",
+    "source:whitehouse:2026-07-22:genesis-mission",
+    "source:wint:series-d:2026-09-09"
+  ],
+  "warnings": [
+    {
+      "detail": "Expanded source bundle source-reconstructed-cycle-2026-07-30.json into 6 source records for analysis.",
+      "members": [
+        "source:commerce:2026-07-06:ai-export-program",
+        "source:ftc:2026-07:ai-accuracy-policy",
+        "source:nature:2026-07-24:genesis-mission-analysis",
+        "source:openai:2026-07-22:presence",
+        "source:reuters:2026-07-30:eu-ai-gigafactories",
+        "source:whitehouse:2026-07-22:genesis-mission"
+      ],
+      "rule": "bundle-expanded"
+    }
+  ]
+}

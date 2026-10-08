@@ -1,7 +1,7 @@
 {
   "control": "WS1",
   "digest": "1d5c01989390ed9c93c377670cc2e5e2716bcbd1f5128f725de7053065dbd8f7",
-  "generatedAt": "2026-07-31T00:00:00Z",
+  "generatedAt": "2026-07-31T20:00:00Z",
   "inputs": [
     {
       "path": "knowledge/fixtures/source-independence/positive/pos-citation-cycle.json",

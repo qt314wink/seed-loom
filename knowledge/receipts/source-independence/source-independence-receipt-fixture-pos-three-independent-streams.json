@@ -1,7 +1,7 @@
 {
   "control": "WS1",
   "digest": "ccb1c4cb4b27f9928699ac3e28e455934f24e7c078cd37bd790b10cfcdb72360",
-  "generatedAt": "2026-07-31T00:00:00Z",
+  "generatedAt": "2026-07-31T20:00:00Z",
   "inputs": [
     {
       "path": "knowledge/fixtures/source-independence/positive/pos-three-independent-streams.json",

@@ -1,0 +1,98 @@
+{
+  "boundaries": {
+    "canonicalMutationAllowed": false,
+    "externalSpendAllowed": false,
+    "knowledgeAcceptanceAllowed": false,
+    "repositoryGenesisAllowed": false
+  },
+  "claimIdentity": {
+    "automaticMergeAllowed": false,
+    "canonicalObservationMutationAllowed": false,
+    "confidenceMutationAllowed": false,
+    "fingerprintMethod": "deterministic-normalized-claim-tuple-sha256",
+    "negationMayCollapseIntoAffirmation": false,
+    "receiptLocation": "knowledge/receipts/claim-identity/",
+    "reportLocation": "knowledge/candidates/claim-identity/",
+    "status": "passed"
+  },
+  "engineVersion": "0.5.0",
+  "generatedAt": "2026-07-31T20:00:00Z",
+  "governanceFailures": [],
+  "inventoryDigest": "2d3c3b0859bfbbc74ca67fb6253f89a5ace77f8f325aa85cc3dd89259f037845",
+  "provenanceFailures": [],
+  "receiptDigest": "855f3671400965f84caae47114e8b292c419fa94f8b215b2b0b020c66b67eb0a",
+  "receiptId": "integrity:20260731200000",
+  "recordCount": 274,
+  "sourceIndependence": {
+    "automaticMergeAllowed": false,
+    "baseConfidenceMutationAllowed": false,
+    "reportLocation": "knowledge/receipts/source-independence/",
+    "reviewQueueLocation": "knowledge/candidates/source-independence/",
+    "status": "passed"
+  },
+  "stages": [
+    {
+      "command": "/opt/hostedtoolcache/node/24.21.0/x64/bin/node scripts/knowledge/validate.mjs",
+      "completedAt": "2026-07-31T20:00:00Z",
+      "exitCode": 0,
+      "name": "schema",
+      "outputDigest": "90fbf6109926677abd016782049fbbdc05874271ba01f0fb098af7095a4de2a1",
+      "startedAt": "2026-07-31T20:00:00Z",
+      "stderrDigest": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "stdoutDigest": "22243be993f7276413aa9b3fcc4aa7192dbeaeafdaafd9e53653a45c914bff28"
+    },
+    {
+      "command": "/opt/hostedtoolcache/node/24.21.0/x64/bin/node scripts/knowledge/test-contract-phase-a.mjs",
+      "completedAt": "2026-07-31T20:00:00Z",
+      "exitCode": 0,
+      "name": "contract",
+      "outputDigest": null,
+      "startedAt": "2026-07-31T20:00:00Z",
+      "stderrDigest": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "stdoutDigest": "5eaab25539a2780875d0de30da80b5ee255a3bd995b73c0bc49a2264ac9212c1"
+    },
+    {
+      "command": "/opt/hostedtoolcache/node/24.21.0/x64/bin/node scripts/knowledge/test-source-independence.mjs --now 2026-07-31T20:00:00Z",
+      "completedAt": "2026-07-31T20:00:00Z",
+      "exitCode": 0,
+      "name": "source-independence",
+      "outputDigest": "353801552dead79b2014db6bed35f51157725f4c88be942aed9c2f91890997d7",
+      "startedAt": "2026-07-31T20:00:00Z",
+      "stderrDigest": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "stdoutDigest": "e57665dc23950653d7c5ed3cc4ad624d5dedb7661f29fe222eb394b82594786d"
+    },
+    {
+      "command": "/opt/hostedtoolcache/node/24.21.0/x64/bin/node scripts/knowledge/test-semantic-duplicates.mjs",
+      "completedAt": "2026-07-31T20:00:00Z",
+      "exitCode": 0,
+      "name": "claim-identity",
+      "outputDigest": "c9a7888c609db615aed7cf7e1354912eeaa0f2859a029f8c35811f85c0ee72c7",
+      "startedAt": "2026-07-31T20:00:00Z",
+      "stderrDigest": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "stdoutDigest": "471b262a1f3afe128b3ed50c7a58a1d40a0564aa8be6c667bf5b465b8ebf959d"
+    },
+    {
+      "command": "/opt/hostedtoolcache/node/24.21.0/x64/bin/node scripts/knowledge/test-temporal-decay.mjs",
+      "completedAt": "2026-07-31T20:00:00Z",
+      "exitCode": 0,
+      "name": "temporal-validity",
+      "outputDigest": "9ef7aa0df960504390c3aacdfccb7c410c72e6f2da841664db0ca2b47cfde7ec",
+      "startedAt": "2026-07-31T20:00:00Z",
+      "stderrDigest": "12ae32cb1ec02d01eda3581b127c1fee3b0dc53572ed6baf239721a03d82e126",
+      "stdoutDigest": "b2516ef93d81244d36db68ecd2d38c670130cbb5595a79411d0d38a415976ba8"
+    }
+  ],
+  "status": "passed",
+  "temporalValidity": {
+    "baseConfidenceMutationAllowed": false,
+    "canonicalRecordMutationAllowed": false,
+    "explicitClosureOverridesDecay": true,
+    "explicitSupersessionOverridesDecay": true,
+    "futureDatedRecordsAllowed": false,
+    "projectionLocation": "knowledge/projections/temporal-decay/",
+    "projectionMethod": "time-indexed-half-life-with-explicit-validity-and-state-overrides",
+    "receiptLocation": "knowledge/receipts/temporal-decay/",
+    "status": "passed"
+  },
+  "type": "KnowledgeIntegrityReceipt"
+}

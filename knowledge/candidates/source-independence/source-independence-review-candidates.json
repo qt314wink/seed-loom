@@ -42,7 +42,7 @@
     }
   ],
   "control": "WS1",
-  "generatedAt": "2026-07-31T00:00:00Z",
+  "generatedAt": "2026-07-31T20:00:00Z",
   "note": "Heuristic review queue only. Ambiguous similarity, analyst echoes, and citation cycles are NEVER auto-merged and never mutate canonical records.",
   "type": "IndependenceReviewCandidates"
 }

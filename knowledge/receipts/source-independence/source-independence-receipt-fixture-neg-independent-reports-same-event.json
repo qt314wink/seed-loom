@@ -1,7 +1,7 @@
 {
   "control": "WS1",
   "digest": "2adb9c55df052d7aa8325e419bd30d87867a921e77dec41337e44ff9435e0204",
-  "generatedAt": "2026-07-31T00:00:00Z",
+  "generatedAt": "2026-07-31T20:00:00Z",
   "inputs": [
     {
       "path": "knowledge/fixtures/source-independence/negative/neg-independent-reports-same-event.json",

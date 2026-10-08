@@ -1,7 +1,7 @@
 {
   "control": "WS1",
   "digest": "c7d2981780e0e48908b5005ce04ac7ad053173b9a3d9bc9d6791880b8e2d4501",
-  "generatedAt": "2026-07-31T00:00:00Z",
+  "generatedAt": "2026-07-31T20:00:00Z",
   "inputs": [
     {
       "path": "knowledge/fixtures/source-independence/positive/pos-shared-upstream-doi.json",

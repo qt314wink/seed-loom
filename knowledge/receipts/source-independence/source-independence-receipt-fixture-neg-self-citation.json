@@ -1,7 +1,7 @@
 {
   "control": "WS1",
   "digest": "f64f11ed31227d2f5629d15358a627a52e498cfb27f8475a2160361d044675e9",
-  "generatedAt": "2026-07-31T00:00:00Z",
+  "generatedAt": "2026-07-31T20:00:00Z",
   "inputs": [
     {
       "path": "knowledge/fixtures/source-independence/negative/neg-self-citation.json",

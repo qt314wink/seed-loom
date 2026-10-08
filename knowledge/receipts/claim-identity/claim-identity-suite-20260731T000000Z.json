@@ -1,0 +1,24 @@
+{
+  "control": "WS3",
+  "digest": "c9a7888c609db615aed7cf7e1354912eeaa0f2859a029f8c35811f85c0ee72c7",
+  "generatedAt": "2026-07-31T00:00:00Z",
+  "receiptId": "claim-identity-suite:c9a7888c609d",
+  "results": {
+    "automaticMerge": false,
+    "canonicalMutation": false,
+    "digests": {
+      "neg-boilerplate-heavy-distinct": "2cd1f0ccbb6cdbb730e95bcb9a627d20eac61822011bf9bf455072563243bc7d",
+      "neg-changed-date-jurisdiction-status": "f6a5fe42be2528657ea9e5b73f5b57ced72e857642bc1967a25d5b588db9fdbc",
+      "neg-negation-guard-never-merge": "47d094b5495c6d01b4f774bf9ea41306bb42f8399e5532fff4379b21c3fb81e3",
+      "neg-same-entities-different-quantities": "f43098779ee99ff6acdecee271038540502d65e465f1620e194315eb64ff8bd8",
+      "neg-unknown-alias-not-applied": "ee6e511d842a62234d66e59faa34c139d9d10952a4eef6e95267e460b89718a5",
+      "pos-alias-normalization": "f2348625fcd784b5c7a27ff0498299c48757fb53cde2c9073eff0f0aabbec075",
+      "pos-date-boilerplate-paraphrase": "ac9f07f97a6baee35b88c21ac8b0124b6e02a844698b2e72e9028ddb9790ba19",
+      "pos-identical-normalized-tuple": "3f9ecc4a5b13165aead06175d71dad8f3c6c3651c8654dcfd89191b0bff6173a",
+      "pos-negation-contrast": "c5ada2dad1364882a7883b3d978f7e2505c9fdec9b3abbbb18a972ece7b330b0",
+      "pos-paraphrase-same-event": "b908ae98edf28916b0fef0a6f2cb9f5ae751f50f50b4b4d7eceb3e33315b393d"
+    },
+    "fixtures": 10
+  },
+  "violations": []
+}

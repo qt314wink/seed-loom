@@ -1,7 +1,7 @@
 {
   "control": "WS1",
   "digest": "a77ad31cc2591cb331b031f3edb61c19573e5300283f166f8e87057a47ae14b1",
-  "generatedAt": "2026-07-31T00:00:00Z",
+  "generatedAt": "2026-07-31T20:00:00Z",
   "inputs": [
     {
       "path": "knowledge/fixtures/source-independence/positive/pos-ambiguous-similarity.json",
