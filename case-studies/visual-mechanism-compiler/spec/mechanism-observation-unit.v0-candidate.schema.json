@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.dev/candidates/mechanism-observation-unit.v0-candidate.schema.json",
+  "title": "Mechanism Observation Unit v0 Candidate",
+  "description": "Candidate-only contract for the Visual Mechanism Compiler PR #64. Not canonical.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "sourceRefs",
+    "entity",
+    "property",
+    "states",
+    "temporal",
+    "operation",
+    "observedEffect",
+    "qualityVector",
+    "weights",
+    "candidateMechanisms",
+    "epistemicStatus",
+    "confidence"
+  ],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "sourceRefs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidenceIds"],
+      "properties": {
+        "evidenceIds": { "type": "array", "minItems": 1, "items": { "type": "string" }, "uniqueItems": true },
+        "interpretationIds": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "locator": { "type": ["string", "null"] }
+      }
+    },
+    "entity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "role"],
+      "properties": {
+        "id": { "type": "string" },
+        "role": { "type": "string" },
+        "regionIds": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      }
+    },
+    "property": { "type": "string", "minLength": 1 },
+    "states": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["initial", "transition", "final"],
+      "properties": {
+        "initial": {},
+        "transition": {},
+        "final": {}
+      }
+    },
+    "temporal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["relation"],
+      "properties": {
+        "relation": { "type": "string" },
+        "onset": { "type": ["number", "string", "null"] },
+        "duration": { "type": ["number", "string", "null"] },
+        "lagMs": { "type": ["number", "null"] },
+        "applicability": {
+          "enum": ["measured", "estimated", "ordinal", "not-applicable", "not-observable-from-source"]
+        }
+      }
+    },
+    "trigger": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "type": "string" },
+        "ref": { "type": ["string", "null"] }
+      }
+    },
+    "operation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["class", "verb"],
+      "properties": {
+        "class": { "enum": ["spatial", "temporal", "relational", "semantic", "ontological"] },
+        "verb": { "type": "string", "minLength": 1 },
+        "parameters": { "type": "object" }
+      }
+    },
+    "observedEffect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["predicate", "value", "confidence"],
+      "properties": {
+        "predicate": { "type": "string" },
+        "value": {},
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "patternMembership": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "qualityVector": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["dimension", "value", "applicability", "confidence"],
+        "properties": {
+          "dimension": { "type": "string" },
+          "value": {},
+          "scale": { "type": ["string", "null"] },
+          "method": { "type": ["string", "null"] },
+          "applicability": {
+            "enum": ["measured", "estimated", "ordinal", "not-applicable", "not-observable-from-source"]
+          },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+        }
+      }
+    },
+    "weights": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "contribution": { "$ref": "#/$defs/weightValue" },
+        "salience": { "$ref": "#/$defs/weightValue" },
+        "evidence": { "$ref": "#/$defs/weightValue" },
+        "confidence": { "$ref": "#/$defs/weightValue" },
+        "recurrence": { "$ref": "#/$defs/weightValue" },
+        "dependency": { "$ref": "#/$defs/weightValue" },
+        "affective": { "$ref": "#/$defs/weightValue" },
+        "novelty": { "$ref": "#/$defs/weightValue" }
+      }
+    },
+    "candidateMechanisms": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "statement", "status", "evidenceIds", "confounders", "confidence"],
+        "properties": {
+          "id": { "type": "string" },
+          "statement": { "type": "string" },
+          "status": { "enum": ["candidate", "rejected", "supported"] },
+          "evidenceIds": { "type": "array", "minItems": 1, "items": { "type": "string" }, "uniqueItems": true },
+          "interpretationIds": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+          "missingDiscriminators": { "type": "array", "items": { "type": "string" } },
+          "confounders": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "description", "status"],
+              "properties": {
+                "id": { "type": "string" },
+                "description": { "type": "string" },
+                "status": { "enum": ["uncontrolled", "controlled", "ruled-out", "unknown"] }
+              }
+            }
+          },
+          "testReceiptRef": { "type": ["string", "null"] },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+        },
+        "allOf": [
+          {
+            "if": { "properties": { "status": { "const": "supported" } }, "required": ["status"] },
+            "then": {
+              "required": ["testReceiptRef"],
+              "properties": { "testReceiptRef": { "type": "string", "minLength": 1 } }
+            }
+          }
+        ]
+      }
+    },
+    "processRefs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "graphLinks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["layer", "relation", "targetId", "confidence"],
+        "properties": {
+          "layer": { "enum": ["causal-formal", "perceptual", "affective", "semantic", "capability"] },
+          "relation": { "type": "string" },
+          "targetId": { "type": "string" },
+          "translationRelation": { "type": ["string", "null"] },
+          "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+        }
+      }
+    },
+    "epistemicStatus": {
+      "enum": ["observed", "interpreted", "derived", "candidate", "rejected", "verified-against-fixture"]
+    },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+  },
+  "$defs": {
+    "weightValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "applicability"],
+      "properties": {
+        "value": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "applicability": {
+          "enum": ["measured", "estimated", "ordinal", "not-applicable", "not-observable-from-source"]
+        }
+      }
+    }
+  }
+}
