@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-10-10:rubrik-code-guardian-alliance",
+  "type": "Source",
+  "url": "https://www.rubrik.com/company/newsroom/press-releases/26/rubrik-expands-project-hourglass-with-rubrik-code-guardian-powered-by-claude",
+  "publisher": "Rubrik",
+  "publishedAt": null,
+  "retrievedAt": "2026-10-09T23:40:41Z",
+  "sourceClass": "primary",
+  "independenceKey": "rubrik.com",
+  "contentHash": null,
+  "title": "Project Hourglass alliance expansion",
+  "notes": "Source URL and public source metadata inspected; full response-body bytes not preserved, so contentHash intentionally null."
+}

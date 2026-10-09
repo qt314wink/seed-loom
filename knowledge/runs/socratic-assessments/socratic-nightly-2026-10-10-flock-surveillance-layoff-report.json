@@ -1,0 +1,91 @@
+{
+  "assessmentId": "socratic:nightly:2026-10-10:flock-surveillance-layoff-report",
+  "observationId": "obs:nightly:2026-10-10:flock-surveillance-layoff-report",
+  "questions": [
+    "What changed?",
+    "Whose behavior changed?",
+    "What problem is demonstrated?",
+    "Who benefits?",
+    "What substitute exists?",
+    "What mechanism matters?",
+    "What is the most dangerous assumption?",
+    "What would falsify the interpretation?",
+    "What evidence is missing?",
+    "What simpler explanation competes?"
+  ],
+  "answers": [
+    {
+      "question": "What changed?",
+      "answer": "Reuters reported, citing sources, that Flock Safety planned to cut about 18 percent of its workforce, roughly 270 positions. The report described growing legal and political scrutiny of automated license-plate surveillance. A reported plan is not verification that layoffs have occurred.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-10:flock-surveillance-layoff-report"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "Whose behavior changed?",
+      "answer": "actor:flock-safety:provider; actor:public-agencies:buyers; actor:privacy-advocates:participants",
+      "evidenceRefs": [
+        "source:nightly:2026-10-10:flock-surveillance-layoff-report"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "What problem is demonstrated?",
+      "answer": "Trust and accountability of public-facing automated surveillance systems.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "Who benefits?",
+      "answer": "Public agencies, affected communities and oversight bodies",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What substitute exists?",
+      "answer": "Existing privacy impact assessments and civil-liberties reviews",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What mechanism matters?",
+      "answer": "Public scrutiny and governance constraints on deployed surveillance",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What is the most dangerous assumption?",
+      "answer": "Inferring a causal connection between opposition and layoffs from temporal co-occurrence.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What would falsify the interpretation?",
+      "answer": "Company records show layoffs were unrelated to privacy concerns or plans were withdrawn.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What evidence is missing?",
+      "answer": "Company employment filings and confirmed completed layoffs; Contract cancellations, privacy audits and procurement records",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What simpler explanation competes?",
+      "answer": "Operational restructuring unrelated to surveillance backlash.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    }
+  ],
+  "dangerousAssumption": "Inferring a causal connection between opposition and layoffs from temporal co-occurrence.",
+  "falsifier": "Company records show layoffs were unrelated to privacy concerns or plans were withdrawn.",
+  "missingEvidence": [
+    "Company employment filings and confirmed completed layoffs",
+    "Contract cancellations, privacy audits and procurement records"
+  ],
+  "alternativeExplanation": "Operational restructuring unrelated to surveillance backlash.",
+  "disposition": "watch",
+  "confidence": 0.76
+}

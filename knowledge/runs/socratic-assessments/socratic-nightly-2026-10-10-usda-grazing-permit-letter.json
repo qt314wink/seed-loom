@@ -1,0 +1,91 @@
+{
+  "assessmentId": "socratic:nightly:2026-10-10:usda-grazing-permit-letter",
+  "observationId": "obs:nightly:2026-10-10:usda-grazing-permit-letter",
+  "questions": [
+    "What changed?",
+    "Whose behavior changed?",
+    "What problem is demonstrated?",
+    "Who benefits?",
+    "What substitute exists?",
+    "What mechanism matters?",
+    "What is the most dangerous assumption?",
+    "What would falsify the interpretation?",
+    "What evidence is missing?",
+    "What simpler explanation competes?"
+  ],
+  "answers": [
+    {
+      "question": "What changed?",
+      "answer": "A USDA release dated October 9 describes an October 8 letter to Forest Service grazing permittees. The June 12 directive seeks to restore at least 500,000 head-months within two years and addresses allotments, wildfire planning and virtual fencing. The policy directive predates the October letter; this is implementation outreach, not a newly enacted rule.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-10:usda-grazing-permit-letter"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "Whose behavior changed?",
+      "answer": "actor:usda:regulator; actor:grazing-permittees:participants",
+      "evidenceRefs": [
+        "source:nightly:2026-10-10:usda-grazing-permit-letter"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "What problem is demonstrated?",
+      "answer": "Tradeoffs between production, fire management and ecosystem outcomes need site-specific evidence.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "Who benefits?",
+      "answer": "Permittees, regulators and independent land stewards",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What substitute exists?",
+      "answer": "Existing range monitoring and conservation agencies",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What mechanism matters?",
+      "answer": "Federal outreach implementing an earlier grazing directive",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What is the most dangerous assumption?",
+      "answer": "Treating expanded grazing access as inherently regenerative or ecologically harmful without measurements.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What would falsify the interpretation?",
+      "answer": "Measured site-level soil, water and habitat outcomes fail to support the chosen hypothesis.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What evidence is missing?",
+      "answer": "Permit adoption and monitoring datasets; Independent site-level biodiversity, soil and water outcomes",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What simpler explanation competes?",
+      "answer": "The letter primarily reiterates an existing livestock-production policy.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    }
+  ],
+  "dangerousAssumption": "Treating expanded grazing access as inherently regenerative or ecologically harmful without measurements.",
+  "falsifier": "Measured site-level soil, water and habitat outcomes fail to support the chosen hypothesis.",
+  "missingEvidence": [
+    "Permit adoption and monitoring datasets",
+    "Independent site-level biodiversity, soil and water outcomes"
+  ],
+  "alternativeExplanation": "The letter primarily reiterates an existing livestock-production policy.",
+  "disposition": "watch",
+  "confidence": 0.91
+}

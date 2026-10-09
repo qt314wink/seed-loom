@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-10:doe-genesis-awards",
+  "type": "Observation",
+  "capturedAt": "2026-10-09T23:40:41Z",
+  "claim": "DOE announced 12 Phase II Genesis Mission awards totaling $159 million on October 8, 2026.",
+  "verifiedFacts": [
+    "DOE announced 12 selected Phase II projects totaling $159 million on October 8.",
+    "The announcement also describes six Phase I selections and a first-year Genesis Mission portfolio of 297 projects."
+  ],
+  "inference": [
+    "Research-funding and partnership intelligence could be a bounded consultancy offering; eligibility and procurement routes are unverified.",
+    "Consultancy implication: map awarded project needs and agency solicitations before proposing AI-science research support.",
+    "Project disposition implication: seed-loom CORE; Omni-Loom REFERENCE-ONLY for scientific-fabrication context until a direct partner need is verified."
+  ],
+  "significance": "Documented public research allocation creates a verifiable opportunity-mapping target without proving buyer demand.",
+  "confidence": 0.9,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:nightly:2026-10-10:doe-genesis-awards"
+  ],
+  "actorRefs": [
+    "actor:us-doe:regulator-funder",
+    "actor:awardees:researchers"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "qt314wink/omni-loom"
+  ],
+  "assumptions": [
+    "Awarded projects may need outside technical verification or visualization support."
+  ],
+  "knownLimitations": [
+    "Selections are not proof of subcontracting availability or funds disbursed."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

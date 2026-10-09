@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-10-10",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-10-07T23:40:41Z",
+    "to": "2026-10-09T23:40:41Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-10-10:doe-genesis-awards",
+    "obs:nightly:2026-10-10:rubrik-code-guardian-alliance",
+    "obs:nightly:2026-10-10:hermes-agent-stable-release",
+    "obs:nightly:2026-10-10:usda-grazing-permit-letter",
+    "obs:nightly:2026-10-10:flock-surveillance-layoff-report"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "Governed agent release and security evidence remain distinct from proven buyer outcomes.",
+    "Regulatory implementation events require independent ecological and civic outcome measurements."
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-10-10:doe-genesis-awards-applies",
+    "rel:nightly:2026-10-10:rubrik-code-guardian-alliance-applies",
+    "rel:nightly:2026-10-10:hermes-agent-stable-release-applies",
+    "rel:nightly:2026-10-10:usda-grazing-permit-letter-applies",
+    "rel:nightly:2026-10-10:flock-surveillance-layoff-report-applies"
+  ],
+  "contradictions": [
+    "AI platform growth and civic trust can diverge.",
+    "Expanded grazing and regenerative outcomes are not equivalent."
+  ],
+  "opportunities": [
+    "Bounded agent release-provenance audit",
+    "Research-award partner-eligibility mapping",
+    "Ecological and civic evidence-readiness assessment"
+  ],
+  "proposedExperiments": [
+    "Rebuild and compare two isolated Hermes release artifacts without trusting tag alone.",
+    "Compare two publicly documented land-use policy claims with independent baseline data before dashboard design."
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false,
+      "repository": "MelodicBloom/wan-artistic-pipeline",
+      "paths": [
+        "src/batch_scheduler.py",
+        "src/motion_control_surface.py",
+        "tests/test_motion_control_surface.py"
+      ],
+      "proposal": "Inspect PR #4 metadata regression and propose bounded fix on separate branch/draft PR; do not mutate under this nightly intake authorization."
+    },
+    {
+      "status": "proposed",
+      "executed": false,
+      "repository": "MelodicBloom/.github",
+      "paths": [
+        ".github/workflows/control-plane-qa.yml"
+      ],
+      "proposal": "Diagnose failed control-plane QA checks on draft PR #15 without promoting authority."
+    }
+  ],
+  "noChangeReceipts": [
+    "Observation Ad Pipeline main unchanged since September 11 in sampled commit view.",
+    "Omni-Loom and AETHER have no new default-branch commits in inspected 48-hour window.",
+    "Previous October 8 signals excluded to avoid repeating already delivered observations."
+  ],
+  "collectionFailures": [
+    "GitHub private motion-workflow-lab not verified through current connection.",
+    "Repository inspection sampled named projects, not exhaustive owner/org inventory.",
+    "Some news-site full article fetches failed; indexed source excerpts and official announcement metadata used.",
+    "Source response-body bytes not preserved; contentHash=null and URL-manifest hash only.",
+    "No independent buyer procurement, contract, or production performance outcomes for selected signals."
+  ]
+}

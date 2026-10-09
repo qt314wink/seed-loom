@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-10-10:hermes-agent-stable-release",
+  "type": "Source",
+  "url": "https://github.com/NousResearch/hermes-agent/releases/tag/v0.21.6",
+  "publisher": "Nous Research",
+  "publishedAt": null,
+  "retrievedAt": "2026-10-09T23:40:41Z",
+  "sourceClass": "repository",
+  "independenceKey": "github.com/NousResearch/hermes-agent",
+  "contentHash": null,
+  "title": "Hermes Agent v0.21.6 release",
+  "notes": "Source URL and public source metadata inspected; full response-body bytes not preserved, so contentHash intentionally null."
+}

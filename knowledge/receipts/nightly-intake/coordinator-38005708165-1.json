@@ -1,0 +1,59 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-10-09T23:42:24.583Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-10-10",
+      "bundlePath": "knowledge/intake/nightly/2026-10-10/nightly-run-bundle-2026-10-10.json",
+      "bundleSha256": "cb09be01a9b5b93206f708ce15943af6cf064bca28fe95299ad263a53c3681de",
+      "normalizedDigest": "0f24d3b23a6d26b3daac85d5e6aa137b288b92c89dd88cfb762d9d3bfbba8056",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-nightly-2026-10-10-doe-genesis-awards.json",
+        "knowledge/sources/source-nightly-2026-10-10-rubrik-code-guardian-alliance.json",
+        "knowledge/sources/source-nightly-2026-10-10-hermes-agent-stable-release.json",
+        "knowledge/sources/source-nightly-2026-10-10-usda-grazing-permit-letter.json",
+        "knowledge/sources/source-nightly-2026-10-10-flock-surveillance-layoff-report.json",
+        "knowledge/observations/obs-nightly-2026-10-10-doe-genesis-awards.json",
+        "knowledge/observations/obs-nightly-2026-10-10-rubrik-code-guardian-alliance.json",
+        "knowledge/observations/obs-nightly-2026-10-10-hermes-agent-stable-release.json",
+        "knowledge/observations/obs-nightly-2026-10-10-usda-grazing-permit-letter.json",
+        "knowledge/observations/obs-nightly-2026-10-10-flock-surveillance-layoff-report.json",
+        "knowledge/relationships/rel-nightly-2026-10-10-doe-genesis-awards-applies.json",
+        "knowledge/relationships/rel-nightly-2026-10-10-rubrik-code-guardian-alliance-applies.json",
+        "knowledge/relationships/rel-nightly-2026-10-10-hermes-agent-stable-release-applies.json",
+        "knowledge/relationships/rel-nightly-2026-10-10-usda-grazing-permit-letter-applies.json",
+        "knowledge/relationships/rel-nightly-2026-10-10-flock-surveillance-layoff-report-applies.json",
+        "knowledge/runs/run-nightly-2026-10-10.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-10-collect.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-10-vet.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-10-normalize.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-10-observe.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-10-inquire.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-10-interpret.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-10-relate.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-10-pattern.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-10-opportunity.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-10-strategy.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-10-experiment.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-10-genesis.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-10-publish.json",
+        "knowledge/runs/socratic-assessments/socratic-nightly-2026-10-10-doe-genesis-awards.json",
+        "knowledge/runs/socratic-assessments/socratic-nightly-2026-10-10-rubrik-code-guardian-alliance.json",
+        "knowledge/runs/socratic-assessments/socratic-nightly-2026-10-10-hermes-agent-stable-release.json",
+        "knowledge/runs/socratic-assessments/socratic-nightly-2026-10-10-usda-grazing-permit-letter.json",
+        "knowledge/runs/socratic-assessments/socratic-nightly-2026-10-10-flock-surveillance-layoff-report.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-10-10-ingest.json",
+      "generatedRecordCount": 34
+    }
+  ]
+}

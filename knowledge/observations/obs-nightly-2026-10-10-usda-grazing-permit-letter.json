@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-10:usda-grazing-permit-letter",
+  "type": "Observation",
+  "capturedAt": "2026-10-09T23:40:41Z",
+  "claim": "USDA issued an October 8 letter urging federal-land grazing permittees to use an existing June directive.",
+  "verifiedFacts": [
+    "A USDA release dated October 9 describes an October 8 letter to Forest Service grazing permittees.",
+    "The June 12 directive seeks to restore at least 500,000 head-months within two years and addresses allotments, wildfire planning and virtual fencing.",
+    "The policy directive predates the October letter; this is implementation outreach, not a newly enacted rule."
+  ],
+  "inference": [
+    "Land-use monitoring services may need to reconcile rancher production metrics with ecological indicators and contested outcomes.",
+    "Consultancy implication: prototype an evidence-neutral rangeland monitoring dashboard only after stakeholders and baselines are established.",
+    "Project disposition implication: project-constellation INCUBATE; seed-loom CORE for policy provenance; no agricultural efficacy claim."
+  ],
+  "significance": "Documented regulator-to-permittee outreach creates a traceable policy-implementation event with competing ecological and production objectives.",
+  "confidence": 0.91,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "law-or-policy",
+  "sourceRefs": [
+    "source:nightly:2026-10-10:usda-grazing-permit-letter"
+  ],
+  "actorRefs": [
+    "actor:usda:regulator",
+    "actor:grazing-permittees:participants"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/project-constellation"
+  ],
+  "assumptions": [
+    "Monitoring data could help evaluate grazing policy effects."
+  ],
+  "knownLimitations": [
+    "No observed ecological improvement, permit uptake or contract demand is established.",
+    "The announcement presents the agency's policy rationale, not independent ecological assessment."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

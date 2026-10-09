@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-10-10:normalize",
+  "runId": "run:nightly:2026-10-10",
+  "stage": "normalize",
+  "status": "passed",
+  "startedAt": "2026-10-09T23:40:41Z",
+  "completedAt": "2026-10-09T23:40:41Z",
+  "inputs": [
+    "ack:nightly:2026-10-10:vet"
+  ],
+  "outputs": [
+    "candidate:normalize:2026-10-10"
+  ],
+  "checks": [
+    {
+      "name": "candidate evidence and scope review",
+      "result": "pass",
+      "detail": "Candidate-only assessment; does not establish acceptance or independent source-body hashes."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Candidate-only; no promotion.",
+      "Input hash below is the ordered source-URL manifest SHA-256, not a source-content hash."
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly sensing edge",
+    "method": "manual source vetting, live GitHub inspection, bounded interpretation",
+    "inputHashes": [
+      "sha256:ee909927a8c6ee44e84741e2337fbfbfc739ae86d4ea4484ca8bfc7bbb985d9d"
+    ]
+  }
+}

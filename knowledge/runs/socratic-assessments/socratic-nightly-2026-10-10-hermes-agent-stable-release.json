@@ -1,0 +1,91 @@
+{
+  "assessmentId": "socratic:nightly:2026-10-10:hermes-agent-stable-release",
+  "observationId": "obs:nightly:2026-10-10:hermes-agent-stable-release",
+  "questions": [
+    "What changed?",
+    "Whose behavior changed?",
+    "What problem is demonstrated?",
+    "Who benefits?",
+    "What substitute exists?",
+    "What mechanism matters?",
+    "What is the most dangerous assumption?",
+    "What would falsify the interpretation?",
+    "What evidence is missing?",
+    "What simpler explanation competes?"
+  ],
+  "answers": [
+    {
+      "question": "What changed?",
+      "answer": "The official GitHub release was published October 8, 2026, at 11:51:57 UTC. Release notes describe one attempt ref, a tested Docker image, and a receipt tag; desktop and mobile packaging remain on earlier builds. Maintainers report 2,106 merged PRs since v0.21.5, a release-note claim not independently audited here.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-10:hermes-agent-stable-release"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "Whose behavior changed?",
+      "answer": "actor:nous-research:builder; actor:hermes-contributors:participants",
+      "evidenceRefs": [
+        "source:nightly:2026-10-10:hermes-agent-stable-release"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "What problem is demonstrated?",
+      "answer": "Agent release provenance and plugin compatibility need verification.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "Who benefits?",
+      "answer": "Agent developers and deployment operators",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What substitute exists?",
+      "answer": "Standard GitHub Releases and CI provenance tooling",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What mechanism matters?",
+      "answer": "Versioned release attempt, tested image, receipt tag",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What is the most dangerous assumption?",
+      "answer": "Treating a tagged Docker image as proof of deterministic or secure deployment.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What would falsify the interpretation?",
+      "answer": "Clean rebuilds produce inconsistent artifacts or receipt metadata cannot be verified.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What evidence is missing?",
+      "answer": "Independent two-run artifact comparison; Consumer usage and upgrade failure data",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What simpler explanation competes?",
+      "answer": "The release mainly stabilizes distribution while deferring curated changes.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    }
+  ],
+  "dangerousAssumption": "Treating a tagged Docker image as proof of deterministic or secure deployment.",
+  "falsifier": "Clean rebuilds produce inconsistent artifacts or receipt metadata cannot be verified.",
+  "missingEvidence": [
+    "Independent two-run artifact comparison",
+    "Consumer usage and upgrade failure data"
+  ],
+  "alternativeExplanation": "The release mainly stabilizes distribution while deferring curated changes.",
+  "disposition": "experiment",
+  "confidence": 0.93
+}

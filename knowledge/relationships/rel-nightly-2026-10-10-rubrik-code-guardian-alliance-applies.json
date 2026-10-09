@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-10-10:rubrik-code-guardian-alliance-applies",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-10-10:rubrik-code-guardian-alliance",
+  "predicate": "APPLIES_TO",
+  "to": "qt314wink/seed-loom",
+  "confidence": 0.8,
+  "evidenceRefs": [
+    "source:nightly:2026-10-10:rubrik-code-guardian-alliance"
+  ]
+}

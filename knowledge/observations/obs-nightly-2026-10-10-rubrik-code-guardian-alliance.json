@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-10:rubrik-code-guardian-alliance",
+  "type": "Observation",
+  "capturedAt": "2026-10-09T23:40:41Z",
+  "claim": "Rubrik announced an October 9 expansion of Project Hourglass and additional Code Guardian delivery partners.",
+  "verifiedFacts": [
+    "Rubrik announced on October 9 that AHEAD, Trace3 and WWT joined its Project Hourglass alliance.",
+    "Rubrik describes Code Guardian and Rubrik Agent Cloud as partner capabilities; Code Guardian had already been announced in September as a private preview."
+  ],
+  "inference": [
+    "A narrowly scoped repository security and recoverability readiness assessment may have buyers; independent demand is unproven.",
+    "Consultancy implication: demonstrate permission boundaries, immutable snapshots, actionable remediation, and recovery receipts without imitating a proprietary platform.",
+    "Project disposition implication: agent-runtime-control-center CONSOLIDATE candidate with seed-loom CORE; do not duplicate vendor security scanners."
+  ],
+  "significance": "Inspectable partner additions demonstrate security-service distribution, not verified end-customer outcomes.",
+  "confidence": 0.91,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "default",
+  "sourceRefs": [
+    "source:nightly:2026-10-10:rubrik-code-guardian-alliance"
+  ],
+  "actorRefs": [
+    "actor:rubrik:provider",
+    "actor:ahead:partner",
+    "actor:trace3:partner",
+    "actor:wwt:partner"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "Partnership expansion reflects addressable buyer need for independent audits."
+  ],
+  "knownLimitations": [
+    "Product remains private preview; vendor security effectiveness is not independently established."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

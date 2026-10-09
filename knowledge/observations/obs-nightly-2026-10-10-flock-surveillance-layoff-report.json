@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-10:flock-surveillance-layoff-report",
+  "type": "Observation",
+  "capturedAt": "2026-10-09T23:40:41Z",
+  "claim": "Reuters reported October 9 that Flock Safety planned layoffs amid mounting surveillance-privacy criticism.",
+  "verifiedFacts": [
+    "Reuters reported, citing sources, that Flock Safety planned to cut about 18 percent of its workforce, roughly 270 positions.",
+    "The report described growing legal and political scrutiny of automated license-plate surveillance.",
+    "A reported plan is not verification that layoffs have occurred."
+  ],
+  "inference": [
+    "Public-sector AI deployments face trust, privacy and legitimacy risks beyond model accuracy.",
+    "Consultancy implication: a civic AI privacy-and-provenance audit could map retention, access, data sharing, oversight and appeal mechanisms.",
+    "Project disposition implication: seed-loom CORE for governance patterns; civic intelligence use cases INCUBATE pending real stakeholders."
+  ],
+  "significance": "A reported staffing decision alongside documented privacy controversy tests the assumption that installed AI infrastructure ensures durable public legitimacy.",
+  "confidence": 0.76,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "default",
+  "sourceRefs": [
+    "source:nightly:2026-10-10:flock-surveillance-layoff-report"
+  ],
+  "actorRefs": [
+    "actor:flock-safety:provider",
+    "actor:public-agencies:buyers",
+    "actor:privacy-advocates:participants"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/project-constellation"
+  ],
+  "assumptions": [
+    "Privacy scrutiny materially contributes to the planned cuts; causation is not established."
+  ],
+  "knownLimitations": [
+    "Company confirmation of layoff completion not obtained.",
+    "Reported workforce figures and causal drivers require corroboration."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

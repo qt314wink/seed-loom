@@ -1,0 +1,91 @@
+{
+  "assessmentId": "socratic:nightly:2026-10-10:doe-genesis-awards",
+  "observationId": "obs:nightly:2026-10-10:doe-genesis-awards",
+  "questions": [
+    "What changed?",
+    "Whose behavior changed?",
+    "What problem is demonstrated?",
+    "Who benefits?",
+    "What substitute exists?",
+    "What mechanism matters?",
+    "What is the most dangerous assumption?",
+    "What would falsify the interpretation?",
+    "What evidence is missing?",
+    "What simpler explanation competes?"
+  ],
+  "answers": [
+    {
+      "question": "What changed?",
+      "answer": "DOE announced 12 selected Phase II projects totaling $159 million on October 8. The announcement also describes six Phase I selections and a first-year Genesis Mission portfolio of 297 projects.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-10:doe-genesis-awards"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "Whose behavior changed?",
+      "answer": "actor:us-doe:regulator-funder; actor:awardees:researchers",
+      "evidenceRefs": [
+        "source:nightly:2026-10-10:doe-genesis-awards"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "What problem is demonstrated?",
+      "answer": "Research teams need reproducible scientific AI work; their specific vendor gaps are unknown.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "Who benefits?",
+      "answer": "Awarded scientific teams and potential approved subcontractors",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What substitute exists?",
+      "answer": "University research offices and incumbent contractors",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What mechanism matters?",
+      "answer": "Selected project awards with defined scientific objectives",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What is the most dangerous assumption?",
+      "answer": "Assuming grant awards create immediately accessible consultancy contracts.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What would falsify the interpretation?",
+      "answer": "Award conditions prohibit relevant subcontracting or funded teams have no external need.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What evidence is missing?",
+      "answer": "Award list and procurement contacts verified per project; External contractor eligibility and purchasing decisions",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What simpler explanation competes?",
+      "answer": "Funding mainly supports established laboratories and existing institutional vendors.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    }
+  ],
+  "dangerousAssumption": "Assuming grant awards create immediately accessible consultancy contracts.",
+  "falsifier": "Award conditions prohibit relevant subcontracting or funded teams have no external need.",
+  "missingEvidence": [
+    "Award list and procurement contacts verified per project",
+    "External contractor eligibility and purchasing decisions"
+  ],
+  "alternativeExplanation": "Funding mainly supports established laboratories and existing institutional vendors.",
+  "disposition": "watch",
+  "confidence": 0.9
+}

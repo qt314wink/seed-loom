@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-10:hermes-agent-stable-release",
+  "type": "Observation",
+  "capturedAt": "2026-10-09T23:40:41Z",
+  "claim": "Nous Research published Hermes Agent v0.21.6 on October 8 with a receipt-tagged stable release pipeline.",
+  "verifiedFacts": [
+    "The official GitHub release was published October 8, 2026, at 11:51:57 UTC.",
+    "Release notes describe one attempt ref, a tested Docker image, and a receipt tag; desktop and mobile packaging remain on earlier builds.",
+    "Maintainers report 2,106 merged PRs since v0.21.5, a release-note claim not independently audited here."
+  ],
+  "inference": [
+    "Release-provenance techniques are borrowable as evaluation patterns, not an invitation to migrate Seed Loom.",
+    "Consultancy implication: test stable build receipts and version-bound plugin isolation in agent deployment assessments.",
+    "Project disposition implication: seed-loom CORE; Hermes REFERENCE-ONLY upstream exemplar."
+  ],
+  "significance": "A concrete open-source release pipeline offers inspectable patterns for artifact provenance and agent extensibility.",
+  "confidence": 0.93,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "default",
+  "sourceRefs": [
+    "source:nightly:2026-10-10:hermes-agent-stable-release"
+  ],
+  "actorRefs": [
+    "actor:nous-research:builder",
+    "actor:hermes-contributors:participants"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "Receipt-tagged releases reduce ambiguity for consumers."
+  ],
+  "knownLimitations": [
+    "No independent reproducible-build proof or adoption metrics inspected.",
+    "Release notes summarize a very large change set without curated per-change audit."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

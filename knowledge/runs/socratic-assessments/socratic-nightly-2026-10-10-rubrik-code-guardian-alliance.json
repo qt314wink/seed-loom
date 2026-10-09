@@ -1,0 +1,91 @@
+{
+  "assessmentId": "socratic:nightly:2026-10-10:rubrik-code-guardian-alliance",
+  "observationId": "obs:nightly:2026-10-10:rubrik-code-guardian-alliance",
+  "questions": [
+    "What changed?",
+    "Whose behavior changed?",
+    "What problem is demonstrated?",
+    "Who benefits?",
+    "What substitute exists?",
+    "What mechanism matters?",
+    "What is the most dangerous assumption?",
+    "What would falsify the interpretation?",
+    "What evidence is missing?",
+    "What simpler explanation competes?"
+  ],
+  "answers": [
+    {
+      "question": "What changed?",
+      "answer": "Rubrik announced on October 9 that AHEAD, Trace3 and WWT joined its Project Hourglass alliance. Rubrik describes Code Guardian and Rubrik Agent Cloud as partner capabilities; Code Guardian had already been announced in September as a private preview.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-10:rubrik-code-guardian-alliance"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "Whose behavior changed?",
+      "answer": "actor:rubrik:provider; actor:ahead:partner; actor:trace3:partner; actor:wwt:partner",
+      "evidenceRefs": [
+        "source:nightly:2026-10-10:rubrik-code-guardian-alliance"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "What problem is demonstrated?",
+      "answer": "Agent-generated code creates security and recovery risks; scale of incremental risk is not independently measured.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "Who benefits?",
+      "answer": "Enterprise security teams and delivery partners",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What substitute exists?",
+      "answer": "Existing SAST/DAST tools and internal red teams",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What mechanism matters?",
+      "answer": "Air-gapped code copies, attack-chain validation, recovery workflows",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What is the most dangerous assumption?",
+      "answer": "Equating alliance membership with customer adoption and proven exploit prevention.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What would falsify the interpretation?",
+      "answer": "No paying deployments or independent validation of attack-chain findings.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What evidence is missing?",
+      "answer": "Customer deployments and measured remediation outcomes; Contractor purchasing authority",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What simpler explanation competes?",
+      "answer": "Alliance expansion is primarily channel marketing ahead of general availability.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    }
+  ],
+  "dangerousAssumption": "Equating alliance membership with customer adoption and proven exploit prevention.",
+  "falsifier": "No paying deployments or independent validation of attack-chain findings.",
+  "missingEvidence": [
+    "Customer deployments and measured remediation outcomes",
+    "Contractor purchasing authority"
+  ],
+  "alternativeExplanation": "Alliance expansion is primarily channel marketing ahead of general availability.",
+  "disposition": "watch",
+  "confidence": 0.91
+}

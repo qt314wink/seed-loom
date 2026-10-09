@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-10-10:flock-surveillance-layoff-report",
+  "type": "Source",
+  "url": "https://www.reuters.com/business/ai-surveillance-startup-flock-safety-cut-several-hundred-jobs-amid-backlash-2026-10-09/",
+  "publisher": "Reuters",
+  "publishedAt": null,
+  "retrievedAt": "2026-10-09T23:40:41Z",
+  "sourceClass": "secondary",
+  "independenceKey": "reuters.com",
+  "contentHash": null,
+  "title": "Flock Safety planned layoffs and surveillance scrutiny",
+  "notes": "Source URL and public source metadata inspected; full response-body bytes not preserved, so contentHash intentionally null."
+}

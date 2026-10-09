@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-10-10:usda-grazing-permit-letter",
+  "type": "Source",
+  "url": "https://www.fsa.usda.gov/news-events/news/10-09-2026/rollins-urges-federal-land-ranchers-put-june-grazing-directive-work",
+  "publisher": "USDA Farm Service Agency",
+  "publishedAt": null,
+  "retrievedAt": "2026-10-09T23:40:41Z",
+  "sourceClass": "regulatory",
+  "independenceKey": "fsa.usda.gov",
+  "contentHash": null,
+  "title": "Federal grazing directive implementation letter",
+  "notes": "Source URL and public source metadata inspected; full response-body bytes not preserved, so contentHash intentionally null."
+}

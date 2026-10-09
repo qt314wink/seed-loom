@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-10-10:experiment",
+  "runId": "run:nightly:2026-10-10",
+  "stage": "experiment",
+  "status": "deferred",
+  "startedAt": "2026-10-09T23:40:41Z",
+  "completedAt": "2026-10-09T23:40:41Z",
+  "inputs": [
+    "ack:nightly:2026-10-10:strategy"
+  ],
+  "outputs": [],
+  "checks": [
+    {
+      "name": "human approval and promotion boundary",
+      "result": "not-applicable",
+      "detail": "No strategy execution, Genesis, or publication authorized."
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "Deferred pending human authorization.",
+      "Input hash below is the ordered source-URL manifest SHA-256, not a source-content hash."
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly sensing edge",
+    "method": "governance stop; no execution",
+    "inputHashes": [
+      "sha256:ee909927a8c6ee44e84741e2337fbfbfc739ae86d4ea4484ca8bfc7bbb985d9d"
+    ]
+  }
+}
