@@ -1,0 +1,25 @@
+{
+  "id": "source:plasma-beam-antenna-ncsu:2026-10-05",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://news.ncsu.edu/2026/10/plasma-beam-antenna/",
+  "publisher": "North Carolina State University",
+  "publishedAt": "2026-10-05T00:00:00Z",
+  "retrievedAt": "2026-10-05T23:33:37Z",
+  "sourceClass": "official",
+  "independenceKey": "plasma-beam-antenna-ncsu-2026-10-05",
+  "contentHash": null,
+  "title": "Researchers Successfully Demonstrate Plasma Beam Antenna",
+  "lead": "Researchers demonstrated a laser-created plasma filament antenna transmitting 30 MHz VHF.",
+  "analystNote": "University release identifying the IEEE paper.",
+  "doi": "10.1109/JMW.2026.3722433",
+  "upstream": {
+    "doi": "10.1109/JMW.2026.3722433",
+    "report": null,
+    "policyDocument": null,
+    "announcement": "NCSU research release",
+    "study": "IEEE Journal of Microwaves"
+  },
+  "cites": [],
+  "citedBy": []
+}

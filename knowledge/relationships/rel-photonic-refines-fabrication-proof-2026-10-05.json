@@ -1,0 +1,12 @@
+{
+  "id": "rel:photonic-refines-fabrication-proof:2026-10-05",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:photonic-in-situ-learning:2026-10-05",
+  "predicate": "REFINES",
+  "to": "qt314wink/omni-loom",
+  "confidence": 0.82,
+  "evidenceRefs": [
+    "source:photonic-inspire-nature:2026-10-05"
+  ]
+}

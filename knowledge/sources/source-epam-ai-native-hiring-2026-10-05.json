@@ -1,0 +1,24 @@
+{
+  "id": "source:epam-ai-native-hiring:2026-10-05",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://careers.epam.com/en/vacancy/senior-ai-native-engineer-bltra6lba5g82vw17xu_en",
+  "publisher": "EPAM Systems",
+  "publishedAt": null,
+  "retrievedAt": "2026-10-05T23:33:37Z",
+  "sourceClass": "official",
+  "independenceKey": "epam-ai-native-hiring-2026-10-05",
+  "contentHash": null,
+  "title": "Senior AI-Native Engineer",
+  "lead": "EPAM is recruiting for multi-agent systems, orchestration, reliability, observability and AI-assisted SDLC work.",
+  "analystNote": "Current careers-page evidence of hiring demand.",
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": []
+}

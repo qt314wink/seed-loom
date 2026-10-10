@@ -1,0 +1,12 @@
+{
+  "id": "rel:plasma-refines-wave-field-research:2026-10-05",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:programmable-plasma-antenna:2026-10-05",
+  "predicate": "MAY_ENABLE",
+  "to": "qt314wink/aether",
+  "confidence": 0.7,
+  "evidenceRefs": [
+    "source:plasma-beam-antenna-ncsu:2026-10-05"
+  ]
+}

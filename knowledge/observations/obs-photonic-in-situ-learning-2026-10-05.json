@@ -1,0 +1,41 @@
+{
+  "id": "obs:photonic-in-situ-learning:2026-10-05",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-05T19:33:37-04:00",
+  "claim": "Photonic computing research is moving part of the learning loop onto the physical device itself, making fabrication-aware optimization part of the learning mechanism.",
+  "verifiedFacts": [
+    "Nature Computational Science published INSPIRE Oct. 5 for in-situ physical gradient descent on photonic integrated circuits.",
+    "The paper addresses fabrication-induced error and costly physical modeling."
+  ],
+  "inference": [
+    "Inferred: compiler, hardware characterization and learning are becoming more coupled.",
+    "Inferred: governed receipts could capture hardware-conditioned parameters and fabrication state.",
+    "Unknown: commercial energy and scale advantage."
+  ],
+  "significance": "Creates a research bridge between governed generative compilers, fabrication evidence and physical-compute learning.",
+  "confidence": 0.95,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:photonic-inspire-nature:2026-10-05"
+  ],
+  "actorRefs": [
+    "actor:researchers",
+    "actor:photonic-hardware-builders",
+    "actor:AI-infrastructure-buyers"
+  ],
+  "affectedRepositories": [
+    "qt314wink/omni-loom",
+    "qt314wink/aether",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "A bounded simulation can communicate evidence architecture without claiming hardware reproduction."
+  ],
+  "knownLimitations": [
+    "No deployment economics or scale evidence."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}
