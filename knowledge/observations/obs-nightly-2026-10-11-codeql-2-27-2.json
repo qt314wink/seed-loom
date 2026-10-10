@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-11:codeql-2-27-2",
+  "type": "Observation",
+  "capturedAt": "2026-10-10T23:40:44Z",
+  "claim": "GitHub released CodeQL 2.27.2 on October 9 with new static-analysis coverage across four programming languages.",
+  "verifiedFacts": [
+    "GitHub released CodeQL 2.27.2 on October 9 with analysis improvements across C++, Go, Rust, and JavaScript.",
+    "The release adds ECMAScript std::regex parsing for C++, Go websocket modeling, and Rust async data-flow improvements."
+  ],
+  "inference": [
+    "A version-pinned code-scanning baseline can reveal coverage gaps in portfolio CI, but new query coverage is not evidence of a vulnerability in these repositories.",
+    "Consultancy implication: Package a version-pinned static-analysis coverage and reproducible remediation readiness check.",
+    "Project disposition implication: seed-loom CORE for receipts; shader-grammar CORE; WAN PRODUCTIZE candidate with separate test fixes."
+  ],
+  "significance": "A concrete security-tool update supports measured CI capability review without asserting unfounded defects.",
+  "confidence": 0.95,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "default",
+  "sourceRefs": [
+    "source:nightly:2026-10-11:codeql-2-27-2"
+  ],
+  "actorRefs": [
+    "actor:github:provider-builder"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "qt314wink/shader-grammar",
+    "MelodicBloom/wan-artistic-pipeline"
+  ],
+  "assumptions": [
+    "The portfolio uses or would benefit from CodeQL coverage on the supported languages."
+  ],
+  "knownLimitations": [
+    "No repository-specific CodeQL configuration or alerts verified.",
+    "Coverage additions may not apply to the inspected code paths."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

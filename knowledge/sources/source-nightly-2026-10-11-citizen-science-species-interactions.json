@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-10-11:citizen-science-species-interactions",
+  "type": "Source",
+  "url": "https://www.eurekalert.org/news-releases/1147174",
+  "publisher": "University of Michigan via EurekAlert",
+  "publishedAt": null,
+  "retrievedAt": "2026-10-10T23:40:44Z",
+  "sourceClass": "research",
+  "independenceKey": "umich.edu",
+  "contentHash": null,
+  "title": "University of Michigan reports AI extraction of ecological interactions",
+  "notes": "Publication date known to day, exact publication clock time not established; publishedAt uses null in canonical record; raw response bytes not retained."
+}

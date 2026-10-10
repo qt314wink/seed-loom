@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-10-11:normalize",
+  "runId": "run:nightly:2026-10-11",
+  "stage": "normalize",
+  "status": "passed",
+  "startedAt": "2026-10-10T23:40:44Z",
+  "completedAt": "2026-10-10T23:40:44Z",
+  "inputs": [
+    "ack:nightly:2026-10-11:vet"
+  ],
+  "outputs": [
+    "candidate:normalize:2026-10-11"
+  ],
+  "checks": [
+    {
+      "name": "candidate evidence and schema-shape review",
+      "result": "pass",
+      "detail": "Source date, distinctness and closed-schema shape inspected; no canonical executable verification claimed."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Candidate-only; no promotion or unrelated repository mutation.",
+      "Input hash is ordered source-URL manifest SHA-256, not a hash of source response bytes."
+    ]
+  },
+  "provenance": {
+    "producer": "ChatGPT nightly sensing edge",
+    "method": "official/direct-source web review, live GitHub preflight, bounded inference and Socratic assessment",
+    "inputHashes": [
+      "sha256:beadb373f51bdf73b4db77a5324aeff48973144166e88e60839bbbfb91157ad4"
+    ]
+  }
+}

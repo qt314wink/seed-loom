@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-10-11:codeql-2-27-2",
+  "type": "Source",
+  "url": "https://github.blog/changelog/2026-10-09-codeql-2-27-2-improves-c-go-rust-and-javascript-analysis/",
+  "publisher": "GitHub",
+  "publishedAt": null,
+  "retrievedAt": "2026-10-10T23:40:44Z",
+  "sourceClass": "primary",
+  "independenceKey": "github.blog",
+  "contentHash": null,
+  "title": "CodeQL expands multi-language security analysis",
+  "notes": "Publication date known to day, exact publication clock time not established; publishedAt uses null in canonical record; raw response bytes not retained."
+}

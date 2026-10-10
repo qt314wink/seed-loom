@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-10-11",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-10-08T23:40:44Z",
+    "to": "2026-10-10T23:40:44Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-10-11:copilot-agent-sandbox",
+    "obs:nightly:2026-10-11:codeql-2-27-2",
+    "obs:nightly:2026-10-11:pjm-large-load-cost-allocation",
+    "obs:nightly:2026-10-11:citizen-science-species-interactions",
+    "obs:nightly:2026-10-11:codex-composer-predictions"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "Agent permissions, static-analysis coverage and human approval are distinct verifiable controls.",
+    "Participatory ecological evidence and energy-regulatory claims require domain-specific outcome checks."
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-10-11:copilot-agent-sandbox-applies",
+    "rel:nightly:2026-10-11:codeql-2-27-2-applies",
+    "rel:nightly:2026-10-11:pjm-large-load-cost-allocation-applies",
+    "rel:nightly:2026-10-11:citizen-science-species-interactions-applies",
+    "rel:nightly:2026-10-11:codex-composer-predictions-applies"
+  ],
+  "contradictions": [
+    "Provider availability does not establish security efficacy or client procurement.",
+    "Ecological observation density does not imply unbiased ecosystem measurement."
+  ],
+  "opportunities": [
+    "Bounded coding-agent permission audit",
+    "Ecological interaction evidence extraction and review",
+    "Civic grid-cost allocation evidence map"
+  ],
+  "proposedExperiments": [
+    "Test agent file/network/credential sandbox boundaries in a disposable local fixture, with no production secrets.",
+    "Blind-review a small licensed biodiversity-comment corpus against expert labels, retaining location privacy."
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false,
+      "repository": "MelodicBloom/wan-artistic-pipeline",
+      "paths": [
+        "src/batch_scheduler.py",
+        "src/motion_control_surface.py",
+        "tests/test_motion_control_surface.py"
+      ],
+      "proposal": "Investigate open PR #4 motion_program metadata preservation; fix only on separately authorized bounded branch and draft PR."
+    },
+    {
+      "status": "proposed",
+      "executed": false,
+      "repository": "MelodicBloom/.github",
+      "paths": [
+        ".github/workflows/"
+      ],
+      "proposal": "Reconcile pending registry and authority drafts before adoption; inspect CI on the actual PR head."
+    }
+  ],
+  "noChangeReceipts": [
+    "Prior October 10 signals (DOE Genesis awards, Rubrik alliance, Hermes release, USDA grazing letter, Flock layoff report) excluded.",
+    "Sampled default-branch histories for shader-grammar, observation-ad-pipeline, WAN, .github, design-standards, project-constellation, omni-loom and agent-runtime-control-center show no new default-branch commits after October 8."
+  ],
+  "collectionFailures": [
+    "Private motion-workflow-lab, LithoMemphis and Kozo Dreams not verified in this sampled GitHub watch.",
+    "No independent buyer procurement or measured outcomes for selected commercial hypotheses.",
+    "Source-body bytes not preserved: source contentHash=null and stage input hashes represent ordered source URLs only.",
+    "Full final PNAS article and independent ecological replication not retrieved.",
+    "Repository issue, dependency and workflow coverage sampled rather than exhaustive."
+  ]
+}

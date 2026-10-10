@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-11:codex-composer-predictions",
+  "type": "Observation",
+  "capturedAt": "2026-10-10T23:40:44Z",
+  "claim": "OpenAI introduced beta next-message composer predictions in Codex on October 9, 2026, with explicit user acceptance before sending.",
+  "verifiedFacts": [
+    "OpenAI's October 9 release notes describe beta composer predictions in Codex desktop threads, with Tab to accept a proposed next message.",
+    "The release notes say accepting a prediction does not send it automatically and the beta is restricted to eligible Pro users on supported local or SSH threads."
+  ],
+  "inference": [
+    "Predictive agent instructions may reduce friction but can also bias investigation; preserve deliberate human approval and prompt-diff visibility.",
+    "Consultancy implication: Use as a UX research reference for consentful AI suggestions and decision provenance.",
+    "Project disposition implication: design-standards CORE for interaction guidance; seed-loom CORE for explicit approval boundaries."
+  ],
+  "significance": "A small interface change creates a useful test of anticipatory assistance versus reasoning autonomy.",
+  "confidence": 0.95,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "provider-terms",
+  "sourceRefs": [
+    "source:nightly:2026-10-11:codex-composer-predictions"
+  ],
+  "actorRefs": [
+    "actor:openai:provider"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/design-standards-2026-2027"
+  ],
+  "assumptions": [
+    "Suggested next actions measurably improve developer productivity without narrowing exploration."
+  ],
+  "knownLimitations": [
+    "Beta availability is limited; no independent productivity or cognitive-bias study inspected.",
+    "Not evidence of autonomous agent task execution."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

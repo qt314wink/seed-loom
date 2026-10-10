@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-10-11:pjm-large-load-cost-allocation",
+  "type": "Source",
+  "url": "https://www.energy.gov/articles/energy-department-supports-fercs-call-pjm-protect-ratepayers-and-build-more-reliable-power",
+  "publisher": "U.S. Department of Energy",
+  "publishedAt": null,
+  "retrievedAt": "2026-10-10T23:40:44Z",
+  "sourceClass": "regulatory",
+  "independenceKey": "energy.gov",
+  "contentHash": null,
+  "title": "DOE backs PJM large-load electricity cost-allocation reforms",
+  "notes": "Publication date known to day, exact publication clock time not established; publishedAt uses null in canonical record; raw response bytes not retained."
+}

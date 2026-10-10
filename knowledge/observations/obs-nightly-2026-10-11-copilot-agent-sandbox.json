@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-11:copilot-agent-sandbox",
+  "type": "Observation",
+  "capturedAt": "2026-10-10T23:40:44Z",
+  "claim": "GitHub announced general availability of local agent sandboxing across several Copilot development surfaces on October 9, 2026.",
+  "verifiedFacts": [
+    "GitHub's October 9 changelog states local sandboxing is generally available for Copilot CLI, the Copilot app, and VS Code sessions using Agent Host.",
+    "The changelog says the sandbox limits agent access to files, networks and credentials, and the Copilot app supports separate license and repository accounts."
+  ],
+  "inference": [
+    "Independent agent-governance audits should test actual file, network, credential and cross-account isolation; availability does not establish that every configuration is secure.",
+    "Consultancy implication: Offer a bounded agent permission and credential-isolation assessment with evidence receipts.",
+    "Project disposition implication: seed-loom CORE; agent-runtime-control-center CONSOLIDATE candidate after ownership audit."
+  ],
+  "significance": "A concrete provider release turns permission-boundary testing into an actionable agent-development QA specimen.",
+  "confidence": 0.95,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "provider-terms",
+  "sourceRefs": [
+    "source:nightly:2026-10-11:copilot-agent-sandbox"
+  ],
+  "actorRefs": [
+    "actor:github:provider-builder"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "Published sandbox boundaries match behavior under adversarial and multi-account conditions."
+  ],
+  "knownLimitations": [
+    "Vendor release notes are not an independent penetration test.",
+    "No measured client willingness to pay for an audit."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

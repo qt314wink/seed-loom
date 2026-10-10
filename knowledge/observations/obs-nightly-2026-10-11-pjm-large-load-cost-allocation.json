@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-11:pjm-large-load-cost-allocation",
+  "type": "Observation",
+  "capturedAt": "2026-10-10T23:40:44Z",
+  "claim": "DOE filed an October 9 position supporting FERC-directed PJM tariff reforms for large-load electricity cost allocation.",
+  "verifiedFacts": [
+    "DOE announced October 9 that it filed a Notice of Intervention and Statement of Position with FERC supporting recommendations for PJM's proposed Reliability Backstop Procurement.",
+    "DOE says FERC recommends revised tariff provisions concerning cost allocation and large electricity users' responsibility for generation and infrastructure."
+  ],
+  "inference": [
+    "Grid-cost allocation may become a material variable in AI infrastructure siting and regional civic-energy advice; the filing is not a final tariff or proof of reduced rates.",
+    "Consultancy implication: Research an evidence-neutral data-center load, tariff, and community-impact decision map.",
+    "Project disposition implication: seed-loom CORE for regulatory provenance; project-constellation INCUBATE for civic-energy prototype."
+  ],
+  "significance": "A documented regulatory filing makes energy externalities and ratepayer impacts a concrete evidence-governance problem.",
+  "confidence": 0.94,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "law-or-policy",
+  "sourceRefs": [
+    "source:nightly:2026-10-11:pjm-large-load-cost-allocation"
+  ],
+  "actorRefs": [
+    "actor:doe:regulator",
+    "actor:ferc:regulator",
+    "actor:pjm:system-operator"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/project-constellation"
+  ],
+  "assumptions": [
+    "Proposed allocation rules will meaningfully affect local project economics after approval."
+  ],
+  "knownLimitations": [
+    "DOE is an interested policy actor, not an independent outcome evaluator.",
+    "Final tariff, consumer price effects and project-specific load forecasts are not established."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-10-11:copilot-agent-sandbox",
+  "type": "Source",
+  "url": "https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5/",
+  "publisher": "GitHub",
+  "publishedAt": null,
+  "retrievedAt": "2026-10-10T23:40:44Z",
+  "sourceClass": "primary",
+  "independenceKey": "github.blog",
+  "contentHash": null,
+  "title": "GitHub Copilot agent sandbox reaches general availability",
+  "notes": "Publication date known to day, exact publication clock time not established; publishedAt uses null in canonical record; raw response bytes not retained."
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-11:citizen-science-species-interactions",
+  "type": "Observation",
+  "capturedAt": "2026-10-10T23:40:44Z",
+  "claim": "University of Michigan announced October 9 a PNAS study extracting species interactions from participatory biodiversity comments using LLMs.",
+  "verifiedFacts": [
+    "The University of Michigan issued an October 9 research announcement about extracting species-interaction observations from citizen-science comments using large language models.",
+    "The university identifies a PNAS study published October 8, DOI 10.1073/pnas.2602244123, covering bird and plant-pollinator interaction extraction."
+  ],
+  "inference": [
+    "A bounded ecological data-ingestion specimen could preserve observer provenance and expert corrections; extracted mentions are not unbiased population or ecological-outcome measurements.",
+    "Consultancy implication: Demonstrate traceable ecological interaction extraction with expert review and bias disclosure.",
+    "Project disposition implication: seed-loom CORE for source lineage; project-constellation INCUBATE as a domain demonstration."
+  ],
+  "significance": "A direct research result connects multilingual participatory observation to measurable ecological knowledge workflows.",
+  "confidence": 0.92,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:nightly:2026-10-11:citizen-science-species-interactions"
+  ],
+  "actorRefs": [
+    "actor:umich:researcher",
+    "actor:citizen-naturalists:participants"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/project-constellation"
+  ],
+  "assumptions": [
+    "Accessible comments can be used under platform terms and corrected sufficiently for a specific local ecology question."
+  ],
+  "knownLimitations": [
+    "Observer, spatial and taxonomic selection bias; privacy and sensitive-species concerns.",
+    "Press release is institution-issued; full final PNAS article was not independently retrieved in this run."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

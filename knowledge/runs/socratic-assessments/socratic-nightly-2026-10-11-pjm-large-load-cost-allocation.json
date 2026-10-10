@@ -1,0 +1,91 @@
+{
+  "assessmentId": "socratic:nightly:2026-10-11:pjm-large-load-cost-allocation",
+  "observationId": "obs:nightly:2026-10-11:pjm-large-load-cost-allocation",
+  "questions": [
+    "What changed?",
+    "Whose behavior changed?",
+    "What problem is demonstrated?",
+    "Who benefits?",
+    "What substitute exists?",
+    "What mechanism matters?",
+    "What is the most dangerous assumption?",
+    "What would falsify this interpretation?",
+    "What evidence is missing?",
+    "What simpler competing explanation exists?"
+  ],
+  "answers": [
+    {
+      "question": "What changed?",
+      "answer": "DOE announced October 9 that it filed a Notice of Intervention and Statement of Position with FERC supporting recommendations for PJM's proposed Reliability Backstop Procurement.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-11:pjm-large-load-cost-allocation"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "Whose behavior changed?",
+      "answer": "actor:doe:regulator; actor:ferc:regulator; actor:pjm:system-operator",
+      "evidenceRefs": [
+        "source:nightly:2026-10-11:pjm-large-load-cost-allocation"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "What problem is demonstrated?",
+      "answer": "Communities and developers need to understand who bears grid-expansion costs from large new loads.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "Who benefits?",
+      "answer": "Potential buyers and domain practitioners, not yet verified purchasers.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What substitute exists?",
+      "answer": "Utility tariff analysis, regulatory counsel, independent grid studies.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What mechanism matters?",
+      "answer": "PJM tariff revision and cost allocation for large loads.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What is the most dangerous assumption?",
+      "answer": "Proposed allocation rules will meaningfully affect local project economics after approval.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What would falsify this interpretation?",
+      "answer": "Final approved tariff leaves allocation unchanged or measured costs do not follow the projected mechanism.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What evidence is missing?",
+      "answer": "FERC docket/order and final tariff; Independent ratepayer impact model",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What simpler competing explanation exists?",
+      "answer": "The filing may chiefly restate an existing political position before binding market changes.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    }
+  ],
+  "dangerousAssumption": "Proposed allocation rules will meaningfully affect local project economics after approval.",
+  "falsifier": "Final approved tariff leaves allocation unchanged or measured costs do not follow the projected mechanism.",
+  "missingEvidence": [
+    "FERC docket/order and final tariff",
+    "Independent ratepayer impact model"
+  ],
+  "alternativeExplanation": "The filing may chiefly restate an existing political position before binding market changes.",
+  "disposition": "watch",
+  "confidence": 0.94
+}

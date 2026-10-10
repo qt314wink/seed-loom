@@ -1,0 +1,59 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-10-10T23:41:49.015Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-10-11",
+      "bundlePath": "knowledge/intake/nightly/2026-10-11/nightly-run-bundle-2026-10-11.json",
+      "bundleSha256": "8bee256d2ec17b3ec778f4576d6b6e2c49b776431a70d7240833dd6e8ced6380",
+      "normalizedDigest": "f6a6437a548444633bee3ff3f7a4fedd01fb6d1677cbd10ff26fb75342c241fa",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-nightly-2026-10-11-copilot-agent-sandbox.json",
+        "knowledge/sources/source-nightly-2026-10-11-codeql-2-27-2.json",
+        "knowledge/sources/source-nightly-2026-10-11-pjm-large-load-cost-allocation.json",
+        "knowledge/sources/source-nightly-2026-10-11-citizen-science-species-interactions.json",
+        "knowledge/sources/source-nightly-2026-10-11-codex-composer-predictions.json",
+        "knowledge/observations/obs-nightly-2026-10-11-copilot-agent-sandbox.json",
+        "knowledge/observations/obs-nightly-2026-10-11-codeql-2-27-2.json",
+        "knowledge/observations/obs-nightly-2026-10-11-pjm-large-load-cost-allocation.json",
+        "knowledge/observations/obs-nightly-2026-10-11-citizen-science-species-interactions.json",
+        "knowledge/observations/obs-nightly-2026-10-11-codex-composer-predictions.json",
+        "knowledge/relationships/rel-nightly-2026-10-11-copilot-agent-sandbox-applies.json",
+        "knowledge/relationships/rel-nightly-2026-10-11-codeql-2-27-2-applies.json",
+        "knowledge/relationships/rel-nightly-2026-10-11-pjm-large-load-cost-allocation-applies.json",
+        "knowledge/relationships/rel-nightly-2026-10-11-citizen-science-species-interactions-applies.json",
+        "knowledge/relationships/rel-nightly-2026-10-11-codex-composer-predictions-applies.json",
+        "knowledge/runs/run-nightly-2026-10-11.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-11-collect.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-11-vet.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-11-normalize.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-11-observe.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-11-inquire.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-11-interpret.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-11-relate.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-11-pattern.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-11-opportunity.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-11-strategy.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-11-experiment.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-11-genesis.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-10-11-publish.json",
+        "knowledge/runs/socratic-assessments/socratic-nightly-2026-10-11-copilot-agent-sandbox.json",
+        "knowledge/runs/socratic-assessments/socratic-nightly-2026-10-11-codeql-2-27-2.json",
+        "knowledge/runs/socratic-assessments/socratic-nightly-2026-10-11-pjm-large-load-cost-allocation.json",
+        "knowledge/runs/socratic-assessments/socratic-nightly-2026-10-11-citizen-science-species-interactions.json",
+        "knowledge/runs/socratic-assessments/socratic-nightly-2026-10-11-codex-composer-predictions.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-10-11-ingest.json",
+      "generatedRecordCount": 34
+    }
+  ]
+}

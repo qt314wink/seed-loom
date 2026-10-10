@@ -1,0 +1,91 @@
+{
+  "assessmentId": "socratic:nightly:2026-10-11:citizen-science-species-interactions",
+  "observationId": "obs:nightly:2026-10-11:citizen-science-species-interactions",
+  "questions": [
+    "What changed?",
+    "Whose behavior changed?",
+    "What problem is demonstrated?",
+    "Who benefits?",
+    "What substitute exists?",
+    "What mechanism matters?",
+    "What is the most dangerous assumption?",
+    "What would falsify this interpretation?",
+    "What evidence is missing?",
+    "What simpler competing explanation exists?"
+  ],
+  "answers": [
+    {
+      "question": "What changed?",
+      "answer": "The University of Michigan issued an October 9 research announcement about extracting species-interaction observations from citizen-science comments using large language models.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-11:citizen-science-species-interactions"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "Whose behavior changed?",
+      "answer": "actor:umich:researcher; actor:citizen-naturalists:participants",
+      "evidenceRefs": [
+        "source:nightly:2026-10-11:citizen-science-species-interactions"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "What problem is demonstrated?",
+      "answer": "Ecologists cannot manually structure enormous volumes of participatory text observations.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "Who benefits?",
+      "answer": "Potential buyers and domain practitioners, not yet verified purchasers.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What substitute exists?",
+      "answer": "Expert field surveys, manual annotation, curated species-interaction databases.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What mechanism matters?",
+      "answer": "LLM classification and entity extraction followed by expert correction.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What is the most dangerous assumption?",
+      "answer": "Accessible comments can be used under platform terms and corrected sufficiently for a specific local ecology question.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What would falsify this interpretation?",
+      "answer": "Blind domain-expert evaluation finds extraction too biased or costly for the chosen decision.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What evidence is missing?",
+      "answer": "Held-out ecological validation by locale and language; Licensing, privacy and sensitive-location review",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What simpler competing explanation exists?",
+      "answer": "The apparent gain may largely come from access to existing observations rather than model-specific capability.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    }
+  ],
+  "dangerousAssumption": "Accessible comments can be used under platform terms and corrected sufficiently for a specific local ecology question.",
+  "falsifier": "Blind domain-expert evaluation finds extraction too biased or costly for the chosen decision.",
+  "missingEvidence": [
+    "Held-out ecological validation by locale and language",
+    "Licensing, privacy and sensitive-location review"
+  ],
+  "alternativeExplanation": "The apparent gain may largely come from access to existing observations rather than model-specific capability.",
+  "disposition": "watch",
+  "confidence": 0.92
+}

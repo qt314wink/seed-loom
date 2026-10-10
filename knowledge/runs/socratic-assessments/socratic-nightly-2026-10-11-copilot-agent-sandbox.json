@@ -1,0 +1,91 @@
+{
+  "assessmentId": "socratic:nightly:2026-10-11:copilot-agent-sandbox",
+  "observationId": "obs:nightly:2026-10-11:copilot-agent-sandbox",
+  "questions": [
+    "What changed?",
+    "Whose behavior changed?",
+    "What problem is demonstrated?",
+    "Who benefits?",
+    "What substitute exists?",
+    "What mechanism matters?",
+    "What is the most dangerous assumption?",
+    "What would falsify this interpretation?",
+    "What evidence is missing?",
+    "What simpler competing explanation exists?"
+  ],
+  "answers": [
+    {
+      "question": "What changed?",
+      "answer": "GitHub's October 9 changelog states local sandboxing is generally available for Copilot CLI, the Copilot app, and VS Code sessions using Agent Host.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-11:copilot-agent-sandbox"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "Whose behavior changed?",
+      "answer": "actor:github:provider-builder",
+      "evidenceRefs": [
+        "source:nightly:2026-10-11:copilot-agent-sandbox"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "What problem is demonstrated?",
+      "answer": "Teams need to verify that coding agents cannot reach unapproved files, networks or secrets.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "Who benefits?",
+      "answer": "Potential buyers and domain practitioners, not yet verified purchasers.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What substitute exists?",
+      "answer": "Existing OS sandboxes, container isolation, and internal security review.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What mechanism matters?",
+      "answer": "Local sandbox access restrictions and account separation.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What is the most dangerous assumption?",
+      "answer": "Published sandbox boundaries match behavior under adversarial and multi-account conditions.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What would falsify this interpretation?",
+      "answer": "A controlled adversarial test demonstrates routine unauthorized access under documented configuration.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What evidence is missing?",
+      "answer": "Independent sandbox bypass tests; Buyer security acceptance criteria",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What simpler competing explanation exists?",
+      "answer": "This may be routine platform hardening rather than new demand for independent consulting.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    }
+  ],
+  "dangerousAssumption": "Published sandbox boundaries match behavior under adversarial and multi-account conditions.",
+  "falsifier": "A controlled adversarial test demonstrates routine unauthorized access under documented configuration.",
+  "missingEvidence": [
+    "Independent sandbox bypass tests",
+    "Buyer security acceptance criteria"
+  ],
+  "alternativeExplanation": "This may be routine platform hardening rather than new demand for independent consulting.",
+  "disposition": "watch",
+  "confidence": 0.95
+}

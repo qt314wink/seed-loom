@@ -1,0 +1,91 @@
+{
+  "assessmentId": "socratic:nightly:2026-10-11:codeql-2-27-2",
+  "observationId": "obs:nightly:2026-10-11:codeql-2-27-2",
+  "questions": [
+    "What changed?",
+    "Whose behavior changed?",
+    "What problem is demonstrated?",
+    "Who benefits?",
+    "What substitute exists?",
+    "What mechanism matters?",
+    "What is the most dangerous assumption?",
+    "What would falsify this interpretation?",
+    "What evidence is missing?",
+    "What simpler competing explanation exists?"
+  ],
+  "answers": [
+    {
+      "question": "What changed?",
+      "answer": "GitHub released CodeQL 2.27.2 on October 9 with analysis improvements across C++, Go, Rust, and JavaScript.",
+      "evidenceRefs": [
+        "source:nightly:2026-10-11:codeql-2-27-2"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "Whose behavior changed?",
+      "answer": "actor:github:provider-builder",
+      "evidenceRefs": [
+        "source:nightly:2026-10-11:codeql-2-27-2"
+      ],
+      "answerType": "verified"
+    },
+    {
+      "question": "What problem is demonstrated?",
+      "answer": "Engineering teams lack evidence that their security checks cover their actual language and framework usage.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "Who benefits?",
+      "answer": "Potential buyers and domain practitioners, not yet verified purchasers.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What substitute exists?",
+      "answer": "Existing linters, dependency scanning, manual reviews, alternative SAST tools.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What mechanism matters?",
+      "answer": "Updated CodeQL extractor and data-flow models.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What is the most dangerous assumption?",
+      "answer": "The portfolio uses or would benefit from CodeQL coverage on the supported languages.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What would falsify this interpretation?",
+      "answer": "A repository inventory shows no relevant languages, sinks, or security-scanning gap.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    },
+    {
+      "question": "What evidence is missing?",
+      "answer": "Per-repo CodeQL adoption; Before/after alert and false-positive comparisons",
+      "evidenceRefs": [],
+      "answerType": "unknown"
+    },
+    {
+      "question": "What simpler competing explanation exists?",
+      "answer": "This is an ordinary engine maintenance release with little marginal effect on a small portfolio.",
+      "evidenceRefs": [],
+      "answerType": "inferred"
+    }
+  ],
+  "dangerousAssumption": "The portfolio uses or would benefit from CodeQL coverage on the supported languages.",
+  "falsifier": "A repository inventory shows no relevant languages, sinks, or security-scanning gap.",
+  "missingEvidence": [
+    "Per-repo CodeQL adoption",
+    "Before/after alert and false-positive comparisons"
+  ],
+  "alternativeExplanation": "This is an ordinary engine maintenance release with little marginal effect on a small portfolio.",
+  "disposition": "watch",
+  "confidence": 0.95
+}
