@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:meta-mongodb",
+  "type": "Source",
+  "url": "https://www.reuters.com/technology/mongodb-ceo-desai-steps-down-lead-metas-enterprise-platform-2026-09-28/",
+  "publisher": "Reuters",
+  "publishedAt": "2026-09-29T00:00:00Z",
+  "retrievedAt": "2026-09-30T23:49:52-04:00",
+  "sourceClass": "press",
+  "independenceKey": "meta-mongodb-enterprise-platform",
+  "contentHash": null,
+  "title": "Meta hires MongoDB CEO"
+}

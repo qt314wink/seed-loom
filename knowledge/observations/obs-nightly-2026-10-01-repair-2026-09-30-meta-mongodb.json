@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-01:repair-2026-09-30:meta-mongodb",
+  "type": "Observation",
+  "capturedAt": "2026-09-30T23:49:52-04:00",
+  "claim": "Meta recruited MongoDB CEO CJ Desai to lead its enterprise platform initiative while MongoDB appointed an interim CEO.",
+  "verifiedFacts": [
+    "Reuters reported on September 28, 2026 that Desai left MongoDB to lead Meta Enterprise Platform.",
+    "MongoDB appointed Dev Ittycheria interim CEO."
+  ],
+  "inference": [
+    "Enterprise AI competition is recombining distribution, data platforms, workflow integration and executive talent.",
+    "Vendor-neutral evidence continuity becomes more valuable when strategic control points can move quickly."
+  ],
+  "significance": "Medium-high: platform and talent boundaries are moving fast enough to affect architecture assumptions.",
+  "confidence": 0.94,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "default",
+  "sourceRefs": [
+    "source:meta-mongodb"
+  ],
+  "actorRefs": [
+    "provider:meta",
+    "provider:mongodb",
+    "analyst:investors"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "The move has strategic implications beyond an isolated personnel change."
+  ],
+  "knownLimitations": [
+    "One executive move cannot establish durable product or market outcomes."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

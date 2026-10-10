@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-01:repair-2026-09-30:usda",
+  "type": "Observation",
+  "capturedAt": "2026-09-30T23:49:52-04:00",
+  "claim": "USDA increased Regenerative Pilot Program financial assistance from $700 million to $1 billion for fiscal year 2027.",
+  "verifiedFacts": [
+    "USDA announced the increase on September 29, 2026.",
+    "The program is intended to help producers adopt conservation systems improving soil health, water quality and farm resilience."
+  ],
+  "inference": [
+    "Regenerative programs create a demand for baseline, intervention, repeated measurement and cost/outcome comparison.",
+    "The strongest consultancy artifact would connect field outcomes to farmer economics without converting funding into proof of impact."
+  ],
+  "significance": "High: public funding is creating a larger implementation and evidence surface for regenerative systems.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "sourceRefs": [
+    "source:usda"
+  ],
+  "actorRefs": [
+    "funder:usda",
+    "participant:usda-nrcs",
+    "buyer:farmers"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/project-constellation",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Pilot structures will yield inspectable outcomes."
+  ],
+  "knownLimitations": [
+    "Funding and program design do not prove durable ecological or economic outcomes."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

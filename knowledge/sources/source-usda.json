@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:usda",
+  "type": "Source",
+  "url": "https://www.nrcs.usda.gov/programs-initiatives/regenerative-pilot-program/news/usda-increases-investment-in-regenerative",
+  "publisher": "USDA NRCS",
+  "publishedAt": "2026-09-29T00:00:00Z",
+  "retrievedAt": "2026-09-30T23:49:52-04:00",
+  "sourceClass": "official",
+  "independenceKey": "usda-regenerative-pilot",
+  "contentHash": null,
+  "title": "USDA regenerative pilot"
+}

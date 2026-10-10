@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-10-01:repair-2026-09-30:1",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-10-01:repair-2026-09-30:mongodb",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:mongodb",
+  "confidence": 0.98,
+  "evidenceRefs": [
+    "source:mongodb"
+  ]
+}
