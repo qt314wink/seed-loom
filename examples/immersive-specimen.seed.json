@@ -1,0 +1,252 @@
+{
+  "schema_version": "0.1.0-proposal",
+  "id": "specimen-coated-metal-001",
+  "status": "draft",
+  "authority": "qt314wink/seed-loom",
+  "identity": {
+    "name": "Layered coated metal reference",
+    "entity_type": "material-scene-specimen",
+    "fictional_demo": true,
+    "description": "Illustrative painted metal panel, exposed metal, fine surface imperfections and one optical inspection light. No measured sample implied.",
+    "use_cases": [
+      "optical shader parameter inspection",
+      "material-layer explanation",
+      "dual-mode accessibility demonstration",
+      "candidate acoustic comparison with explicit missing data",
+      "controlled narrative cue demonstration"
+    ]
+  },
+  "semantics": {
+    "material_family": "metal",
+    "subtype": "steel",
+    "finish_layers": [
+      {
+        "id": "substrate",
+        "role": "bulk-substrate",
+        "optical_mechanism_ref": "fresnel-conductor",
+        "claim_status": "proposal"
+      },
+      {
+        "id": "paint",
+        "role": "pigmented-dielectric-coating",
+        "optical_mechanism_ref": "fresnel-dielectric",
+        "claim_status": "proposal"
+      },
+      {
+        "id": "surface",
+        "role": "microfacet-top-layer",
+        "optical_mechanism_ref": "microfacet-scatter",
+        "claim_status": "proposal"
+      }
+    ],
+    "appearance": {
+      "observables": [
+        "paint color variation",
+        "specular lobe width",
+        "directional fine scratches",
+        "masked exposed substrate"
+      ],
+      "not_deducible_from_image": [
+        "unique IOR spectrum",
+        "physical coating thickness",
+        "acoustic absorption",
+        "surface roughness calibration",
+        "chemical composition"
+      ]
+    },
+    "relationships": [
+      {
+        "subject": "paint",
+        "predicate": "covers",
+        "object": "substrate"
+      },
+      {
+        "subject": "surface",
+        "predicate": "modulates_reflection_on",
+        "object": "paint"
+      }
+    ]
+  },
+  "parameters": [
+    {
+      "id": "base_color",
+      "kind": "display-color",
+      "value": "#538C91",
+      "unit": "sRGB hex",
+      "evidence_state": "illustrative"
+    },
+    {
+      "id": "perceptual_roughness",
+      "kind": "optical-roughness",
+      "value": 0.38,
+      "unit": "normalized",
+      "evidence_state": "illustrative"
+    },
+    {
+      "id": "metalness",
+      "kind": "metallic-workflow-control",
+      "value": 0,
+      "unit": "normalized",
+      "evidence_state": "illustrative"
+    },
+    {
+      "id": "scratch_direction",
+      "kind": "orientation",
+      "value": 0,
+      "unit": "radian",
+      "evidence_state": "illustrative"
+    }
+  ],
+  "optical": {
+    "governing_repo": "qt314wink/shader-grammar",
+    "mechanism_ids": [
+      "fresnel-dielectric",
+      "fresnel-conductor",
+      "microfacet-scatter"
+    ],
+    "candidate_profile": "examples/implementation-profiles/ggx-reference.json",
+    "evidence_state": "hypothesized",
+    "warning": "This is a demo appearance; no optically calibrated surface has been measured."
+  },
+  "acoustic": {
+    "governing_domain": "specialized acoustic simulation or material measurements, not the optical shader catalog",
+    "frequency_dependent_absorption": {
+      "status": "unknown",
+      "bands_hz": [],
+      "coefficients": []
+    },
+    "transmission_loss": {
+      "status": "unknown",
+      "bands_hz": [],
+      "values_db": []
+    },
+    "validation": "Only estimate after measured coefficients, bounded method and conditions are supplied; no extrapolation from visual roughness."
+  },
+  "scene": {
+    "id": "panel-lab-scene",
+    "semantic_entities": [
+      "specimen-coated-metal-001",
+      "inspection-light",
+      "camera",
+      "detail-label"
+    ],
+    "modes": [
+      "2d-information",
+      "3d-inspection"
+    ],
+    "spatial_annotations": [
+      {
+        "entity": "specimen-coated-metal-001",
+        "anchor": "material-surface",
+        "information_key": "optical-properties"
+      }
+    ]
+  },
+  "behavior": {
+    "events": [
+      "inspect",
+      "rotate",
+      "compare",
+      "reset",
+      "toggle-2d-3d"
+    ],
+    "invariants": [
+      "same selected specimen across views",
+      "accessible textual explanation at all times",
+      "unknown acoustic properties remain unknown"
+    ]
+  },
+  "motion": {
+    "governing_repo": "MelodicBloom/design-standards-2026-2027",
+    "profile_ref": "examples/immersive/inspection-scene.profile.json",
+    "classification": "nonessential ambient motion; bounded state transitions"
+  },
+  "performance": {
+    "governing_repo": "MelodicBloom/design-standards-2026-2027",
+    "budget_ref": "docs/immersive/SCENE_APPEARANCE_MOTION_BUDGET_v0.1.md",
+    "measurements": [],
+    "status": "unmeasured"
+  },
+  "evidence": [
+    {
+      "id": "reference-karis-2013",
+      "source": "Brian Karis SIGGRAPH 2013 Real Shading in Unreal Engine 4 slides 5-24",
+      "kind": "historical-rendering-reference",
+      "applies_to": [
+        "optical"
+      ]
+    },
+    {
+      "id": "reference-dual-2017",
+      "source": "Stanton et al. INTERACT 2017 DOI:10.1007/978-3-319-68059-0_47",
+      "kind": "small-study-reference",
+      "applies_to": [
+        "behavior",
+        "scene"
+      ]
+    },
+    {
+      "id": "reference-acoustics-2020",
+      "source": "Yeow, Tracy, Yogiaman CAADRIA 2020 immersive acoustics paper",
+      "kind": "method-limitation-reference",
+      "applies_to": [
+        "acoustic"
+      ]
+    },
+    {
+      "id": "seed-synthesis-2026-10-08",
+      "source": "cross-paper synthesis of four uploaded sources and Karis slides",
+      "kind": "design-hypothesis",
+      "applies_to": [
+        "scene",
+        "behavior",
+        "motion",
+        "performance"
+      ]
+    }
+  ],
+  "epistemics": {
+    "asserted_knowledge": [
+      "existing optical operator identifiers in shader-grammar",
+      "historical approaches from source papers"
+    ],
+    "hypotheses": [
+      "coated metal chosen as meaningful shared specimen across subsystems"
+    ],
+    "unknowns": [
+      "measured spectrum",
+      "actual coating stack",
+      "acoustic coefficients",
+      "mobile GPU performance"
+    ],
+    "alternatives": [
+      {
+        "id": "a",
+        "description": "Source renderer directly drives the semantics",
+        "tradeoff": "easy initial integration, loses neutral provenance and multi-renderer comparability"
+      },
+      {
+        "id": "b",
+        "description": "One single multi-physics material model",
+        "tradeoff": "simple conceptual UI, false coupling of unrelated domains"
+      },
+      {
+        "id": "c",
+        "description": "Shared semantic identity with specialized physics adapters",
+        "tradeoff": "better boundaries, integration contracts required",
+        "recommended_candidate": true
+      }
+    ],
+    "confidence": {
+      "value": 0.35,
+      "meaning": "design-hypothesis confidence only; not scientific confidence or rendering accuracy"
+    },
+    "temporal": {
+      "created_at": "2026-10-08",
+      "review_after": "2026-11-07",
+      "staleness_rule": "Stale observations lose decision authority and remain recoverable; new evidence creates successor records, not silent overwrite.",
+      "compost_use": "Only offer expired hypotheses as explicitly uncertain brainstorming candidates, never as verified claims."
+    },
+    "promotion_gate": "Human-reviewed evidence receipts for each physical domain; no automatic canonical promotion."
+  }
+}
