@@ -1,0 +1,3 @@
+[agents.governed_builder]
+description = "Implementation-focused agent for approved, bounded Seed Loom changes that require minimal diffs, repository-grounded validation, traceability, and an explicit completion receipt."
+config_file = "agents/governed-builder.toml"
