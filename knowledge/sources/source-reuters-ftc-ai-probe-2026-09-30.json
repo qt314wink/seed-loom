@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:reuters-ftc-ai-probe-2026-09-30",
+  "type": "Source",
+  "url": "https://www.reuters.com/business/ai/ftc-opens-probe-into-ai-giants-including-anthropic-openai-new-york-post-reports-2026-09-30/",
+  "publisher": "Reuters",
+  "publishedAt": "2026-09-30T12:00:00Z",
+  "retrievedAt": "2026-10-02T23:04:47Z",
+  "sourceClass": "press",
+  "independenceKey": "reuters.com:source:reuters-ftc-ai-probe-2026-09-30",
+  "contentHash": null,
+  "title": "Reuters reports the FTC opened an inquiry involving OpenAI, Anthropic and METR over consumer risks from AI systems acting beyond instructions.",
+  "lead": "Reuters reports the FTC opened an inquiry involving OpenAI, Anthropic and METR over consumer risks from AI systems acting beyond instructions.",
+  "analystNote": null,
+  "syndicatedFrom": null,
+  "doi": null,
+  "upstreamReport": null,
+  "policyDocument": null,
+  "upstream": {},
+  "cites": [],
+  "citedBy": [],
+  "notes": null
+}

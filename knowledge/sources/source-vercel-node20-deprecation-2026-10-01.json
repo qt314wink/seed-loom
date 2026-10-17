@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:vercel-node20-deprecation-2026-10-01",
+  "type": "Source",
+  "url": "https://vercel.com/changelog/node-js-20-is-being-deprecated",
+  "publisher": "Vercel",
+  "publishedAt": "2026-10-01T12:00:00Z",
+  "retrievedAt": "2026-10-02T23:04:47Z",
+  "sourceClass": "official",
+  "independenceKey": "vercel.com:source:vercel-node20-deprecation-2026-10-01",
+  "contentHash": null,
+  "title": "Vercel disabled Node.js 20 for new Builds and Functions deployments on October 1, 2026, requiring affected projects to move to a supported Node version or containerize.",
+  "lead": "Vercel disabled Node.js 20 for new Builds and Functions deployments on October 1, 2026, requiring affected projects to move to a supported Node version or containerize.",
+  "analystNote": null,
+  "syndicatedFrom": null,
+  "doi": null,
+  "upstreamReport": null,
+  "policyDocument": null,
+  "upstream": {},
+  "cites": [],
+  "citedBy": [],
+  "notes": null
+}

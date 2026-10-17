@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:ai-distillation-boundary-2026-10-02",
+  "type": "Observation",
+  "capturedAt": "2026-10-02T19:04:47-04:00",
+  "claim": "OpenAI reports a coordinated adversarial model-distillation campaign that manipulated model interactions to reproduce protected reasoning, making interaction-layer provenance and extraction resistance a live engineering problem.",
+  "verifiedFacts": [
+    "OpenAI published the finding on September 30, 2026.",
+    "OpenAI says the activity began in the first week of July and was coordinated at scale.",
+    "OpenAI says the campaign did not compromise encryption, databases, or stored conversations; it manipulated model interactions."
+  ],
+  "inference": [
+    "The attack surface is shifting from model weights and databases toward the interaction protocol, tool boundary, and observability layer.",
+    "Advisory mapping: Offer a bounded Agent Interaction Provenance Audit: map model/tool boundaries, capture decision-relevant traces, test extraction and prompt-leakage paths, and produce remediation gates."
+  ],
+  "significance": "This strengthens the case for governed AI workflow audits that treat interaction traces as evidence rather than disposable logs.",
+  "confidence": 0.91,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "validFrom": "2026-10-02T19:04:47-04:00",
+  "validUntil": null,
+  "reviewBy": null,
+  "termsChangedAt": null,
+  "closedAt": null,
+  "closureRef": null,
+  "supersededBy": null,
+  "sourceRefs": [
+    "source:openai-model-distillation-2026-09-30"
+  ],
+  "actorRefs": [
+    "OpenAI",
+    "Frontier Model Forum",
+    "adversarial model operators"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/Artisan-Solutions-Hub",
+    "MelodicBloom/Design-Fusion-Studio",
+    "MelodicBloom/omni-loom-case-study",
+    "qt314wink/observation-ad-pipeline"
+  ],
+  "assumptions": [
+    "The reported campaign generalizes to ordinary client workflows."
+  ],
+  "knownLimitations": [
+    "The public report does not disclose all affected model families or complete technical indicators."
+  ],
+  "counterevidenceRefs": [
+    "source:openai-model-distillation-2026-09-30"
+  ],
+  "approvalState": "candidate"
+}
