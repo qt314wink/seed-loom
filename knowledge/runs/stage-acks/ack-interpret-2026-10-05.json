@@ -1,0 +1,36 @@
+{
+  "ackId": "ack:interpret:2026-10-05",
+  "runId": "run:nightly:2026-10-05",
+  "schemaVersion": "1.1.0",
+  "stage": "interpret",
+  "status": "passed",
+  "startedAt": "2026-10-05T19:33:37-04:00",
+  "completedAt": "2026-10-05T19:33:37-04:00",
+  "inputs": [
+    "input:interpret"
+  ],
+  "outputs": [
+    "output:interpret"
+  ],
+  "checks": [
+    {
+      "name": "boundary",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "candidate-only",
+      "no promotion"
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence",
+    "method": "strict-48h research + live authority preflight",
+    "inputHashes": [
+      "hash:interpret"
+    ]
+  }
+}

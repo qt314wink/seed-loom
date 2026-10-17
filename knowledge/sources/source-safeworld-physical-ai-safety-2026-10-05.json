@@ -1,0 +1,24 @@
+{
+  "id": "source:safeworld-physical-ai-safety:2026-10-05",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://www.safeworld.ai/",
+  "publisher": "SafeWorld",
+  "publishedAt": null,
+  "retrievedAt": "2026-10-05T23:33:37Z",
+  "sourceClass": "official",
+  "independenceKey": "safeworld-physical-ai-safety-2026-10-05",
+  "contentHash": null,
+  "title": "SafeWorld Physical AI Safety",
+  "lead": "SafeWorld generates scenarios, predicts interaction risk and preserves evidence for robot deployment.",
+  "analystNote": "Official product behavior source.",
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": []
+}

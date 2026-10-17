@@ -1,0 +1,24 @@
+{
+  "id": "source:safeworld-funding:2026-10-05",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://aiweekly.co/alerts/safeworld-raises-12m-to-stress-test-gen-ai-robots-in-simulation",
+  "publisher": "AI Weekly",
+  "publishedAt": "2026-10-05T12:28:00Z",
+  "retrievedAt": "2026-10-05T23:33:37Z",
+  "sourceClass": "press",
+  "independenceKey": "safeworld-funding-2026-10-05",
+  "contentHash": null,
+  "title": "Safeworld raises $12M",
+  "lead": "SafeWorld reportedly raised more than $12M to stress-test AI-driven robots in simulation.",
+  "analystNote": "Funding is press-reported.",
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": []
+}

@@ -1,0 +1,24 @@
+{
+  "id": "source:reflection-beam-launch:2026-10-05",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://reflection.ai/blog/introducing-beam",
+  "publisher": "Reflection AI",
+  "publishedAt": "2026-10-05T00:00:00Z",
+  "retrievedAt": "2026-10-05T23:33:37Z",
+  "sourceClass": "official",
+  "independenceKey": "reflection-beam-launch-2026-10-05",
+  "contentHash": null,
+  "title": "Introducing Beam",
+  "lead": "Beam is a 501B/23B-active sparse MoE for coding, reasoning and agentic workloads.",
+  "analystNote": "Provider-reported claims; weights and technical report pending.",
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": []
+}
