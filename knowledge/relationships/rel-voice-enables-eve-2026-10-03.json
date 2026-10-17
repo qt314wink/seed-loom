@@ -1,0 +1,14 @@
+{
+  "id": "rel:voice-enables-eve:2026-10-03",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:voice-agent-demand:2026-10-03",
+  "predicate": "MAY_ENABLE",
+  "to": "project:eve-multimodal-interface",
+  "confidence": 0.79,
+  "evidenceRefs": [
+    "source:elevenlabs-tender:2026"
+  ],
+  "validFrom": "2026-09-30T00:00:00Z",
+  "validTo": null
+}

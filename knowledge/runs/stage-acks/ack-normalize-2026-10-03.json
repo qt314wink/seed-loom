@@ -1,0 +1,35 @@
+{
+  "ackId": "ack:normalize:2026-10-03",
+  "runId": "run:nightly:2026-10-03",
+  "stage": "normalize",
+  "status": "passed",
+  "startedAt": "2026-10-03T19:42:57-04:00",
+  "completedAt": "2026-10-03T19:42:57-04:00",
+  "inputs": [
+    "run:nightly:2026-10-03"
+  ],
+  "outputs": [
+    "schema 1.1.0 normalized bundle"
+  ],
+  "checks": [
+    {
+      "name": "live-contract",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "canonical schemas unchanged"
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence-runtime",
+    "method": "live-schema normalization",
+    "inputHashes": [
+      "984dae274d7fca05812874e5a1c338e3972c1c23"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

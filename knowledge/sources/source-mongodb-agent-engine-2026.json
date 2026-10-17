@@ -1,0 +1,29 @@
+{
+  "id": "source:mongodb-agent-engine:2026",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://www.mongodb.com/company/newsroom/press-releases/mongodb-launches-atlas-agent-engine-to-put-ai-agents-in-production-without-a-new-stack",
+  "publisher": "MongoDB",
+  "publishedAt": "2026-09-29T00:00:00Z",
+  "retrievedAt": "2026-10-03T19:42:57-04:00",
+  "sourceClass": "official",
+  "independenceKey": "mongodb-agent-engine-2026",
+  "contentHash": "sha256:url-mongodb",
+  "title": "MongoDB Atlas Agent Engine",
+  "lead": "Unified execution, memory, retrieval and governance for production agents.",
+  "analystNote": "Direct vendor source; adoption claims bounded.",
+  "syndicatedFrom": null,
+  "doi": null,
+  "upstreamReport": null,
+  "policyDocument": null,
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": [],
+  "notes": "Retrieved in window."
+}

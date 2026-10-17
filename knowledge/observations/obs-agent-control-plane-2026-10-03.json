@@ -1,0 +1,49 @@
+{
+  "id": "obs:agent-control-plane:2026-10-03",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-03T19:42:57-04:00",
+  "claim": "Production agent infrastructure is converging on unified execution, memory, retrieval and governance control planes.",
+  "verifiedFacts": [
+    "MongoDB launched Atlas Agent Engine as a unified execution, memory, retrieval and governance layer.",
+    "MongoDB states actions are logged against identity and governed by policy.",
+    "It supports model/framework/cloud neutrality with MCP and A2A."
+  ],
+  "inference": [
+    "Verified: governance and state are core agent infrastructure.",
+    "Inferred: the commercial boundary is the governed context/execution layer.",
+    "Unknown: whether buyers will pay for vendor-neutral governance."
+  ],
+  "significance": "Refines Seed Loom toward governed context, identity, memory and execution.",
+  "confidence": 0.94,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "provider-terms",
+  "validFrom": "2026-09-29T00:00:00Z",
+  "validUntil": null,
+  "reviewBy": "2026-10-17T23:59:59-04:00",
+  "termsChangedAt": null,
+  "closedAt": null,
+  "closureRef": null,
+  "supersededBy": null,
+  "sourceRefs": [
+    "source:mongodb-agent-engine:2026"
+  ],
+  "actorRefs": [
+    "actor:mongodb",
+    "actor:agent-builders",
+    "actor:enterprise-buyers"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/eve",
+    "MelodicBloom/eve-slack-agent"
+  ],
+  "assumptions": [
+    "Vendor-neutral evidence remains valuable beside native controls."
+  ],
+  "knownLimitations": [
+    "Adoption claims are vendor-reported."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

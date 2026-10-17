@@ -1,0 +1,35 @@
+{
+  "ackId": "ack:strategy:2026-10-03",
+  "runId": "run:nightly:2026-10-03",
+  "stage": "strategy",
+  "status": "no-change",
+  "startedAt": "2026-10-03T19:42:57-04:00",
+  "completedAt": "2026-10-03T19:42:57-04:00",
+  "inputs": [
+    "run:nightly:2026-10-03"
+  ],
+  "outputs": [
+    "no strategy promotion"
+  ],
+  "checks": [
+    {
+      "name": "approval-boundary",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "Jennipher approval required"
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence-runtime",
+    "method": "strategy gate",
+    "inputHashes": [
+      "run:nightly:2026-10-03"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}
