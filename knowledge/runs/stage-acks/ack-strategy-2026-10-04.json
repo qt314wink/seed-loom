@@ -1,0 +1,36 @@
+{
+  "ackId": "ack:strategy:2026-10-04",
+  "runId": "run:nightly:2026-10-04",
+  "stage": "strategy",
+  "status": "no-change",
+  "startedAt": "2026-10-04T19:19:42-04:00",
+  "completedAt": "2026-10-04T19:19:42-04:00",
+  "inputs": [
+    "ack:opportunity:2026-10-04"
+  ],
+  "outputs": [
+    "stage:strategy:2026-10-04"
+  ],
+  "checks": [
+    {
+      "name": "strategy-gate",
+      "result": "not-applicable",
+      "detail": "No strategy promotion."
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "Recommendations only; Jennipher approval required."
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence-automation",
+    "method": "human-gated strategy boundary",
+    "inputHashes": [
+      "sha256:research-window-2026-10-04"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

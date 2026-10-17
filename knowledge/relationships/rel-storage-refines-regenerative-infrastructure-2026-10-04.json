@@ -1,0 +1,14 @@
+{
+  "id": "rel:storage-refines-regenerative-infrastructure:2026-10-04",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:mechanical-storage-ai-grid:2026-10-04",
+  "predicate": "MAY_ENABLE",
+  "to": "opportunity:regenerative-infrastructure-evidence-service",
+  "confidence": 0.84,
+  "evidenceRefs": [
+    "source:qnetic-crowdfunding-close:2026"
+  ],
+  "validFrom": "2026-10-04T00:00:00Z",
+  "validTo": null
+}

@@ -1,0 +1,36 @@
+{
+  "ackId": "ack:collect:2026-10-04",
+  "runId": "run:nightly:2026-10-04",
+  "stage": "collect",
+  "status": "passed",
+  "startedAt": "2026-10-04T19:19:42-04:00",
+  "completedAt": "2026-10-04T19:19:42-04:00",
+  "inputs": [
+    "run:nightly:2026-10-04"
+  ],
+  "outputs": [
+    "stage:collect:2026-10-04"
+  ],
+  "checks": [
+    {
+      "name": "source-access",
+      "result": "pass",
+      "detail": "Fresh sources collected."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Candidate-only run."
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence-automation",
+    "method": "bounded 48-hour web research plus live GitHub authority preflight",
+    "inputHashes": [
+      "sha256:research-window-2026-10-04"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

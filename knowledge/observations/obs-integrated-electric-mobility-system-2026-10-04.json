@@ -1,0 +1,48 @@
+{
+  "id": "obs:integrated-electric-mobility-system:2026-10-04",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-04T19:19:42-04:00",
+  "claim": "Electric hydrofoil mobility is being demonstrated as an integrated system combining propulsion, control software, hydrodynamics, telemetry and a potential low-infrastructure transit use case.",
+  "verifiedFacts": [
+    "TechCrunch reported an October 3 live demonstration of Vessev's VS-9 in New York.",
+    "Vessev documentation describes real-time control, telemetry and commercial certification.",
+    "Vessev targets transit operations and low-wake travel."
+  ],
+  "inference": [
+    "Verified: the product is an integrated physical-digital control system.",
+    "Inferred: telemetry and system proof are part of product value.",
+    "Unknown: route economics versus conventional transit."
+  ],
+  "significance": "Reinforces the physical-systems consultancy line: model, control, telemetry, fabrication and operational evidence together.",
+  "confidence": 0.91,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "opportunity",
+  "validFrom": "2026-10-03T14:42:00Z",
+  "validUntil": null,
+  "reviewBy": "2026-11-04T23:59:59-04:00",
+  "termsChangedAt": null,
+  "closedAt": null,
+  "closureRef": null,
+  "supersededBy": null,
+  "sourceRefs": [
+    "source:vessev-electric-hydrofoil-urban-transit:2026"
+  ],
+  "actorRefs": [
+    "actor:vessev",
+    "actor:urban-transit-buyers",
+    "actor:marine-engineers"
+  ],
+  "affectedRepositories": [
+    "qt314wink/omni-loom-case-study",
+    "qt314wink/fabricate"
+  ],
+  "assumptions": [
+    "Bounded simulations can communicate systems-engineering competence."
+  ],
+  "knownLimitations": [
+    "Commercial route economics and procurement commitments were not established."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

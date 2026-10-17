@@ -1,0 +1,36 @@
+{
+  "ackId": "ack:publish:2026-10-04",
+  "runId": "run:nightly:2026-10-04",
+  "stage": "publish",
+  "status": "deferred",
+  "startedAt": "2026-10-04T19:19:42-04:00",
+  "completedAt": "2026-10-04T19:19:42-04:00",
+  "inputs": [
+    "ack:genesis:2026-10-04"
+  ],
+  "outputs": [
+    "stage:publish:2026-10-04"
+  ],
+  "checks": [
+    {
+      "name": "publish-gate",
+      "result": "not-applicable",
+      "detail": "No publication from daily candidate run."
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "No public publication."
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence-automation",
+    "method": "human-gated publication boundary",
+    "inputHashes": [
+      "sha256:research-window-2026-10-04"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

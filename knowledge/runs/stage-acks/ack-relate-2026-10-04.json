@@ -1,0 +1,36 @@
+{
+  "ackId": "ack:relate:2026-10-04",
+  "runId": "run:nightly:2026-10-04",
+  "stage": "relate",
+  "status": "passed",
+  "startedAt": "2026-10-04T19:19:42-04:00",
+  "completedAt": "2026-10-04T19:19:42-04:00",
+  "inputs": [
+    "ack:interpret:2026-10-04"
+  ],
+  "outputs": [
+    "stage:relate:2026-10-04"
+  ],
+  "checks": [
+    {
+      "name": "relationship-evidence",
+      "result": "pass",
+      "detail": "Five relationships each cite a source."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Relationships are candidate."
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence-automation",
+    "method": "evidence-linked relationship construction",
+    "inputHashes": [
+      "sha256:research-window-2026-10-04"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}
