@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-10-01:repair-2026-09-30",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-09-28T23:49:52-04:00",
+    "to": "2026-09-30T23:49:52-04:00"
+  },
+  "newObservations": [
+    "obs:nightly:2026-10-01:repair-2026-09-30:mongodb",
+    "obs:nightly:2026-10-01:repair-2026-09-30:nvidia",
+    "obs:nightly:2026-10-01:repair-2026-09-30:usda",
+    "obs:nightly:2026-10-01:repair-2026-09-30:mdard",
+    "obs:nightly:2026-10-01:repair-2026-09-30:meta-mongodb"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "agent production control planes are consolidating",
+    "runtime enforcement is separating from application logic",
+    "regenerative programs need field, value-chain and outcome evidence",
+    "vendor-neutral provenance matters amid enterprise-platform realignment"
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-10-01:repair-2026-09-30:1",
+    "rel:nightly:2026-10-01:repair-2026-09-30:2",
+    "rel:nightly:2026-10-01:repair-2026-09-30:3",
+    "rel:nightly:2026-10-01:repair-2026-09-30:4",
+    "rel:nightly:2026-10-01:repair-2026-09-30:5"
+  ],
+  "contradictions": [
+    "Integrated agent control planes may reduce complexity while increasing vendor concentration.",
+    "Regenerative funding may increase practice adoption without proving ecological or economic gains."
+  ],
+  "opportunities": [
+    "Production-readiness review for agent control planes",
+    "Layered agent-boundary audit",
+    "Regenerative evidence-to-adoption architecture",
+    "Vendor-neutral portability review"
+  ],
+  "proposedExperiments": [
+    "agent-control-plane-crosswalk-v0",
+    "regenerative-value-chain-evidence-map-v0"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false
+    }
+  ],
+  "noChangeReceipts": [
+    "Repair run only; no merge, acceptance, promotion, deployment, publication, spending, outreach or Genesis advancement."
+  ],
+  "collectionFailures": [
+    "No independent production metrics for MongoDB or NVIDIA platform.",
+    "Owner-wide repository listing was unavailable in the original collection; this repair preserves that failure rather than inventing activity.",
+    "The prior 2026-09-30 intake branch contained a non-authoritative placeholder bundle and was not overwritten because immutable candidate outputs were already generated."
+  ]
+}

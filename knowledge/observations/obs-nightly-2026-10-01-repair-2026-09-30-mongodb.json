@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-10-01:repair-2026-09-30:mongodb",
+  "type": "Observation",
+  "capturedAt": "2026-09-30T23:49:52-04:00",
+  "claim": "MongoDB launched Atlas Agent Engine in public preview as a unified execution, memory, retrieval and governance layer for production AI agents.",
+  "verifiedFacts": [
+    "MongoDB announced Atlas Agent Engine on September 29, 2026.",
+    "The product combines execution, memory, retrieval and governance and supports existing models/frameworks."
+  ],
+  "inference": [
+    "Agent infrastructure is consolidating around control planes that own context, identity, governance and cost.",
+    "A vendor-neutral production-readiness review can test whether that consolidation actually improves portability and operational evidence."
+  ],
+  "significance": "High: production agent infrastructure is becoming an explicit platform boundary.",
+  "confidence": 0.98,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:mongodb"
+  ],
+  "actorRefs": [
+    "provider:mongodb",
+    "buyer:paysafe",
+    "partner:accenture"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center"
+  ],
+  "assumptions": [
+    "Public-preview behavior matches the announcement."
+  ],
+  "knownLimitations": [
+    "Independent production outcomes and portability benchmarks are not established here."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}
