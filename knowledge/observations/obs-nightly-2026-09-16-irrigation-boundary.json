@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:nightly:2026-09-16:irrigation-boundary",
+  "type": "Observation",
+  "capturedAt": "2026-09-16T23:42:56Z",
+  "claim": "A new irrigation climate analysis demonstrates that system-boundary choice can reverse a sustainability interpretation when indirect land-use effects are included.",
+  "verifiedFacts": [
+    "Researchers estimate a no-U.S.-irrigation counterfactual would cause 6.86 gigatons of land-conversion emissions to replace lost production.",
+    "They report those avoided emissions equal roughly 363 years of current annual U.S. irrigation emissions."
+  ],
+  "inference": [
+    "Regenerative advisory should make boundary assumptions and counterfactuals first-class evidence.",
+    "Project Constellation should expose boundary choice in its synthetic ecological specimen."
+  ],
+  "significance": "Very high for regenerative evidence architecture because boundary definition changes the decision.",
+  "confidence": 0.97,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "peer-reviewed-research",
+  "sourceRefs": [
+    "source:nightly:2026-09-16:irrigation"
+  ],
+  "actorRefs": [
+    "actor:csu:researcher",
+    "actor:ag-policy:buyer",
+    "actor:farmers:participant"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/project-constellation",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "The counterfactual is useful for demonstrating boundary effects, not forecasting policy."
+  ],
+  "knownLimitations": [
+    "The model does not erase irrigation's water, biodiversity, energy or equity harms."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

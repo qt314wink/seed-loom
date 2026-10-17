@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-09-16:anthropic-aws",
+  "type": "Source",
+  "url": "https://www.anthropic.com/webinars/enterprise-transformation-with-claude-on-aws-three-paths-to-production",
+  "publisher": "Anthropic",
+  "publishedAt": "2026-09-16T17:00:00Z",
+  "retrievedAt": "2026-09-16T23:42:56Z",
+  "sourceClass": "primary",
+  "independenceKey": "anthropic-aws-paths",
+  "title": "Enterprise Transformation with Claude on AWS: Paths to Production"
+}

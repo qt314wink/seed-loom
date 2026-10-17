@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-16:3",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-16:irrigation-boundary",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:nightly:2026-09-16:irrigation",
+  "confidence": 0.97,
+  "evidenceRefs": [
+    "source:nightly:2026-09-16:irrigation"
+  ]
+}
