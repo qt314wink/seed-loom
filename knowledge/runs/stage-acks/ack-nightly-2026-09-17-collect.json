@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-17:collect",
+  "runId": "run:nightly:2026-09-17",
+  "stage": "collect",
+  "status": "passed",
+  "startedAt": "2026-09-17T23:49:41Z",
+  "completedAt": "2026-09-17T23:58:00Z",
+  "inputs": [
+    "48-hour web and repository search"
+  ],
+  "outputs": [
+    "six vetted source records"
+  ],
+  "checks": [
+    {
+      "name": "provenance-and-boundary-check",
+      "result": "pass",
+      "detail": "Primary/direct evidence preferred; collection failures preserved."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Candidate intake only."
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "fresh web research plus live GitHub authority preflight",
+    "inputHashes": [
+      "3565d5ae89e8d82fce4bb81dcc5dcb51c97d2e5d0822c9bc337d91ccb4f47101"
+    ]
+  }
+}
