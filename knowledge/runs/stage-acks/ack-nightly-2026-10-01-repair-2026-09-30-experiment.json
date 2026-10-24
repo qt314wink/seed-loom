@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-10-01:repair-2026-09-30:experiment",
+  "runId": "run:nightly:2026-10-01:repair-2026-09-30",
+  "stage": "experiment",
+  "status": "deferred",
+  "startedAt": "2026-09-30T23:49:52-04:00",
+  "completedAt": "2026-09-30T23:49:52-04:00",
+  "inputs": [
+    "run:nightly:2026-10-01:repair-2026-09-30"
+  ],
+  "outputs": [],
+  "checks": [
+    {
+      "name": "candidate-only boundary",
+      "result": "pass",
+      "detail": "No acceptance, promotion, publication or autonomous repository action."
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "Genesis and downstream promotion remain human-controlled."
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence",
+    "method": "48h research + live Seed Loom authority preflight + delivered bundle repair",
+    "inputHashes": [
+      "sha256:7c85897a8b44d4ed378cdf0148a281a4a431c5110adaa330837efdd3b7342e5e"
+    ]
+  }
+}

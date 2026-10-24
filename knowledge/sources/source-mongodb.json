@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:mongodb",
+  "type": "Source",
+  "url": "https://www.mongodb.com/company/newsroom/press-releases/mongodb-launches-atlas-agent-engine-to-put-ai-agents-in-production-without-a-new-stack",
+  "publisher": "MongoDB",
+  "publishedAt": "2026-09-29T00:00:00Z",
+  "retrievedAt": "2026-09-30T23:49:52-04:00",
+  "sourceClass": "primary",
+  "independenceKey": "mongodb-atlas-agent-engine",
+  "contentHash": null,
+  "title": "MongoDB Atlas Agent Engine"
+}
