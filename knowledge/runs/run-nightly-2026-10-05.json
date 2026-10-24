@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-10-05",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-10-03T19:33:37-04:00",
+    "to": "2026-10-05T19:33:37-04:00"
+  },
+  "newObservations": [
+    "obs:open-weight-agent-frontier:2026-10-05",
+    "obs:physical-ai-safety-evaluation-layer:2026-10-05",
+    "obs:photonic-in-situ-learning:2026-10-05",
+    "obs:programmable-plasma-antenna:2026-10-05",
+    "obs:ai-native-consulting-demand:2026-10-05"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "pattern:model-portability-and-governed-agents:2026-10-05",
+    "pattern:physical-ai-evidence-layer:2026-10-05",
+    "pattern:physical-compute-learning:2026-10-05",
+    "pattern:programmable-wave-fields:2026-10-05",
+    "pattern:ai-native-consulting-demand:2026-10-05"
+  ],
+  "newRelationships": [
+    "rel:beam-refines-model-portability:2026-10-05",
+    "rel:safeworld-refines-physical-proof:2026-10-05",
+    "rel:photonic-refines-fabrication-proof:2026-10-05",
+    "rel:plasma-refines-wave-field-research:2026-10-05",
+    "rel:epam-refines-consultancy-packaging:2026-10-05"
+  ],
+  "contradictions": [],
+  "opportunities": [
+    "opportunity:model-portability-evaluation",
+    "opportunity:physical-ai-safety-evidence",
+    "opportunity:fabrication-conditioned-compute-proof",
+    "opportunity:wave-field-demonstration",
+    "opportunity:agentic-workflow-consulting"
+  ],
+  "proposedExperiments": [
+    "experiment:provider-neutral-agent-eval-receipt",
+    "experiment:bounded-photonic-or-wave-field-proof"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false,
+      "repository": "qt314wink/seed-loom",
+      "allowedPaths": [
+        "knowledge/intake/nightly/2026-10-05/**"
+      ]
+    }
+  ],
+  "noChangeReceipts": [
+    "dedup:2026-10-04-signals-reviewed",
+    "repo-watch:inspection-only",
+    "genesis:deferred",
+    "publish:deferred"
+  ],
+  "collectionFailures": [
+    "Independent procurement, consulting spend, contract values, retention and measured commercial outcomes were not independently established inside the strict 48-hour window.",
+    "No local repository execution environment was available; canonical execution must use the verified GitHub Actions bridge."
+  ]
+}

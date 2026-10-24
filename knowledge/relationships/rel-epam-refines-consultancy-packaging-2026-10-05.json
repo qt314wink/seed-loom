@@ -1,0 +1,12 @@
+{
+  "id": "rel:epam-refines-consultancy-packaging:2026-10-05",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:ai-native-consulting-demand:2026-10-05",
+  "predicate": "REFINES",
+  "to": "obs:agent-database-infrastructure:2026-10-04",
+  "confidence": 0.79,
+  "evidenceRefs": [
+    "source:epam-ai-native-hiring:2026-10-05"
+  ]
+}

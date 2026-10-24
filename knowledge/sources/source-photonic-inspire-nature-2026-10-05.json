@@ -1,0 +1,25 @@
+{
+  "id": "source:photonic-inspire-nature:2026-10-05",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://www.nature.com/articles/s43588-026-01057-y",
+  "publisher": "Nature Computational Science",
+  "publishedAt": "2026-10-05T00:00:00Z",
+  "retrievedAt": "2026-10-05T23:33:37Z",
+  "sourceClass": "research",
+  "independenceKey": "photonic-inspire-nature-2026-10-05",
+  "contentHash": null,
+  "title": "Photonic neuromorphic learning via generalized in situ physical gradient descent",
+  "lead": "INSPIRE trains photonic integrated circuits using in-situ physical gradient descent.",
+  "analystNote": "Peer-reviewed source with supplementary data.",
+  "doi": "10.1038/s43588-026-01057-y",
+  "upstream": {
+    "doi": "10.1038/s43588-026-01057-y",
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": "Nature Computational Science 2026"
+  },
+  "cites": [],
+  "citedBy": []
+}

@@ -1,0 +1,42 @@
+{
+  "id": "obs:ai-native-consulting-demand:2026-10-05",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-05T19:33:37-04:00",
+  "claim": "Enterprise AI hiring is bundling agent orchestration, shared memory, evaluation, observability, reliability and AI-assisted delivery into one engineering competency profile.",
+  "verifiedFacts": [
+    "EPAM's current Senior AI-Native Engineer role calls for multi-agent systems, tool selection, execution, reliability and observability.",
+    "The role calls for orchestration layers managing agent communication, shared memory, context windows and task delegation."
+  ],
+  "inference": [
+    "Inferred: buyers need systems integration and operationalization, not merely prompting.",
+    "Inferred: the strongest service wedge is evidence-backed workflow architecture and implementation handoff.",
+    "Unknown: external consulting spend versus internal hiring."
+  ],
+  "significance": "Strengthens the consultancy packaging thesis around bounded diagnostics, evaluation, workflow architecture and handoff.",
+  "confidence": 0.88,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "opportunity",
+  "sourceRefs": [
+    "source:epam-ai-native-hiring:2026-10-05"
+  ],
+  "actorRefs": [
+    "actor:epam",
+    "actor:enterprise-buyers",
+    "actor:AI-engineering-hiring-managers",
+    "actor:consultancies"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "qt314wink/observation-ad-pipeline",
+    "qt314wink/omni-loom"
+  ],
+  "assumptions": [
+    "Job requirements are representative signals, not market-size claims."
+  ],
+  "knownLimitations": [
+    "No procurement, contract-value or pilot-conversion evidence."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

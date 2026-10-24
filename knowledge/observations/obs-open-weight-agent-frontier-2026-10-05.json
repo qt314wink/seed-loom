@@ -1,0 +1,41 @@
+{
+  "id": "obs:open-weight-agent-frontier:2026-10-05",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-05T19:33:37-04:00",
+  "claim": "Open-weight agentic models are moving toward enterprise coding and reasoning workloads while competing on inference efficiency, making model portability and evaluation more consequential.",
+  "verifiedFacts": [
+    "Reflection announced Beam Oct. 5 as a 501B-total/23B-active sparse MoE for coding, reasoning and agentic workloads.",
+    "Weights, technical report, model card and developer artifacts are planned later in October."
+  ],
+  "inference": [
+    "Inferred: model choice is becoming more replaceable infrastructure.",
+    "Inferred: evaluation, routing, provenance and cost/latency measurement become more valuable.",
+    "Unknown: independent workload performance."
+  ],
+  "significance": "Strengthens the thesis that Seed Loom should govern evidence and model substitution rather than couple strategy to one provider.",
+  "confidence": 0.91,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "sourceRefs": [
+    "source:reflection-beam-launch:2026-10-05"
+  ],
+  "actorRefs": [
+    "actor:reflection-ai",
+    "actor:nvidia",
+    "actor:enterprise-ai-buyers",
+    "actor:agent-builders"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "qt314wink/observation-ad-pipeline"
+  ],
+  "assumptions": [
+    "Open-weight options will expand enough to make portability useful."
+  ],
+  "knownLimitations": [
+    "Weights, independent evaluation and pricing were unavailable."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

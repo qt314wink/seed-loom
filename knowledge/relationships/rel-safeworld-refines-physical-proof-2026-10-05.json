@@ -1,0 +1,13 @@
+{
+  "id": "rel:safeworld-refines-physical-proof:2026-10-05",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:physical-ai-safety-evaluation-layer:2026-10-05",
+  "predicate": "REFINES",
+  "to": "obs:integrated-electric-mobility-system:2026-10-04",
+  "confidence": 0.84,
+  "evidenceRefs": [
+    "source:safeworld-physical-ai-safety:2026-10-05",
+    "source:safeworld-funding:2026-10-05"
+  ]
+}
