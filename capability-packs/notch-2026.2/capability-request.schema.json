@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.local/schemas/notch-2026.2/capability-request.schema.json",
+  "title": "Seed Loom Capability Pull Request",
+  "description": "A bounded, portable request to adapt one candidate capability-pack scene to one named target repository. It grants no authority to publish, merge, deploy, or promote the pack.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "pack",
+    "selection",
+    "target",
+    "role",
+    "objective",
+    "allowedScope",
+    "prohibitedScope",
+    "implementationOrders",
+    "validation",
+    "stopConditions",
+    "receiptRequirements"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "seed-loom.capability-request.v0.1" },
+    "id": { "type": "string", "pattern": "^capability-request:[a-z0-9][a-z0-9:_-]*$" },
+    "pack": { "$ref": "#/$defs/packReference" },
+    "selection": { "$ref": "#/$defs/selection" },
+    "target": { "$ref": "#/$defs/target" },
+    "role": { "type": "string", "minLength": 1 },
+    "objective": { "type": "string", "minLength": 1 },
+    "decision": { "type": "string", "minLength": 1 },
+    "allowedScope": { "$ref": "#/$defs/nonEmptyStringArray" },
+    "prohibitedScope": { "$ref": "#/$defs/nonEmptyStringArray" },
+    "implementationOrders": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/implementationOrder" }
+    },
+    "validation": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/validationStep" }
+    },
+    "stopConditions": { "$ref": "#/$defs/nonEmptyStringArray" },
+    "receiptRequirements": { "$ref": "#/$defs/nonEmptyStringArray" },
+    "humanReview": { "$ref": "#/$defs/nonEmptyStringArray" }
+  },
+  "$defs": {
+    "nonEmptyStringArray": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "packReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "expectedDigest", "status"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^capability-pack:" },
+        "expectedDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "status": { "const": "candidate" }
+      }
+    },
+    "selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sceneId", "adapterId"],
+      "properties": {
+        "sceneId": { "type": "string", "pattern": "^scene:" },
+        "adapterId": { "type": "string", "pattern": "^adapter:" }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "baseRef", "baseSha", "observedAt"],
+      "properties": {
+        "repository": { "type": "string", "pattern": "^[^/\\s]+/[^/\\s]+$" },
+        "baseRef": { "type": "string", "minLength": 1 },
+        "baseSha": { "type": "string", "pattern": "^[a-f0-9]{40}$" },
+        "observedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "implementationOrder": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "action", "paths", "invariant", "output"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+        "action": { "type": "string", "minLength": 1 },
+        "paths": { "$ref": "#/$defs/nonEmptyStringArray" },
+        "invariant": { "type": "string", "minLength": 1 },
+        "output": { "type": "string", "minLength": 1 }
+      }
+    },
+    "validationStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["command", "expectedExitCode", "evidence"],
+      "properties": {
+        "command": { "type": "string", "minLength": 1 },
+        "expectedExitCode": { "type": "integer", "minimum": 0, "maximum": 255 },
+        "evidence": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "schemaVersion": "seed-loom.capability-request.v0.1",
+  "id": "capability-request:shader-gallery:radial-field-bloom:v0",
+  "pack": {
+    "id": "capability-pack:notch:2026.2:creative-systems",
+    "expectedDigest": "5f8fc27420a9b7532a0d3f6026fd79c4f2aba7f7c86cd50e2661325305bbe0b9",
+    "status": "candidate"
+  },
+  "selection": {
+    "sceneId": "scene:radial-field-bloom",
+    "adapterId": "adapter:shader-gallery"
+  },
+  "target": {
+    "repository": "MelodicBloom/shader-gallery",
+    "baseRef": "main",
+    "baseSha": "93a0bd01aaefbed7094f803cfdf1134087302196",
+    "observedAt": "2026-10-23T00:00:00Z"
+  },
+  "role": "Act as a WebGL2 shader-library implementer. Fit: the target already owns a manifest-driven GLSL 300 ES library, deterministic preview generation, native compile/link/render validation, and live-preview checks.",
+  "objective": "Add one clearly labeled, deterministic WebGL2 specimen named Radial Field Bloom to the Shader Library v1 source package. It should translate the scene's radial-flow and palette intent into a stateless fragment-shader approximation with a frozen reduced-motion path; it must not claim Notch runtime parity, fluid simulation, or physical bloom.",
+  "decision": "Choose a bounded single-frame GLSL study over a feedback-buffer simulation. This retains reproducible fixed-seed stills and a low-power fallback in the gallery's existing renderer; temporal feedback parity would require a separately reviewed multi-pass runtime change.",
+  "allowedScope": [
+    "packages/shader-library-v1/source/manifest.json",
+    "packages/shader-library-v1/source/shaders/flow/radial-field-bloom/shader.glsl",
+    "packages/shader-library-v1/source/shaders/flow/radial-field-bloom/meta.json",
+    "packages/shader-library-v1/source/shaders/flow/radial-field-bloom/preview.png",
+    "library-v1/ generated output only after the existing build command succeeds",
+    "packages/shader-library-v1/melodicbloom-shader-library-v1-source.zip only if the repository's archive-integrity workflow requires a regenerated distributable"
+  ],
+  "prohibitedScope": [
+    "No edits to existing Shader Library v1 specimens, their metadata, or previews.",
+    "No dependency, package-manager, workflow, deployment, GitHub Pages, or CI configuration changes.",
+    "No multi-pass framebuffer, persistent temporal feedback, float-texture, or WebGL1 fallback implementation.",
+    "No claim of physical light transport, Notch renderer equivalence, or calibrated material behavior.",
+    "No commit, push, merge, publish, deploy, or pack-status promotion without separate approval."
+  ],
+  "implementationOrders": [
+    {
+      "id": "inspect-contract",
+      "action": "Read the current manifest, one Flow specimen, its metadata, the archive-integrity tool, and the live-preview builder before changing files.",
+      "paths": [
+        "packages/shader-library-v1/source/manifest.json",
+        "packages/shader-library-v1/source/shaders/flow/chromatic-flow/shader.glsl",
+        "packages/shader-library-v1/source/shaders/flow/chromatic-flow/meta.json",
+        "packages/shader-library-v1/source/tools/verify-source-archive.mjs",
+        "packages/shader-library-v1/source/tools/build-live-preview.mjs"
+      ],
+      "invariant": "Current target contracts outrank this handoff when their file layout or archive policy differs from this snapshot.",
+      "output": "A short implementation note naming any discovered contract drift before proceeding."
+    },
+    {
+      "id": "author-specimen",
+      "action": "Create an original GLSL 300 ES fullscreen-quad fragment shader and matching metadata for slug flow/radial-field-bloom. Map the portable controls to target-native uniform names: seed, radialFrequency, vortexStrength, feedbackAmount, paletteA, paletteB, paletteC, with u_time and u_resolution retained as hidden runtime uniforms.",
+      "paths": [
+        "packages/shader-library-v1/source/shaders/flow/radial-field-bloom/shader.glsl",
+        "packages/shader-library-v1/source/shaders/flow/radial-field-bloom/meta.json"
+      ],
+      "invariant": "feedbackAmount is a stateless recurrence/amplitude approximation, not retained frame history; metadata must say so. Preview seed is 42, reducedMotion is freeze, and the specimen remains texture-free and WebGL2-only.",
+      "output": "An original, compile-valid Radial Field Bloom shader plus metadata with a bounded control surface and explicit approximation statement."
+    },
+    {
+      "id": "register-and-build",
+      "action": "Add exactly one manifest entry, generate its deterministic preview, then rebuild the existing live gallery and any required distributable archive using the target's established scripts.",
+      "paths": [
+        "packages/shader-library-v1/source/manifest.json",
+        "packages/shader-library-v1/source/shaders/flow/radial-field-bloom/preview.png",
+        "library-v1/",
+        "packages/shader-library-v1/melodicbloom-shader-library-v1-source.zip"
+      ],
+      "invariant": "The manifest entry, metadata slug, shader path, preview path, generated gallery count, and archive contents must agree. Do not manually edit generated output or archive bytes.",
+      "output": "A manifest-registered specimen with generated preview, rebuilt gallery output, and archive parity if the repository requires it."
+    },
+    {
+      "id": "verify-boundaries",
+      "action": "Run the target's existing validation suite and inspect the fixed seed still plus reduced-motion/frozen behavior in the live-preview surface.",
+      "paths": [
+        "packages/shader-library-v1/source/",
+        "library-v1/"
+      ],
+      "invariant": "A successful compile does not authorize physical, simulation, performance-tier, or cross-renderer claims.",
+      "output": "Command receipts, fixed-seed evidence, browser observation, and an explicit statement of the unimplemented temporal-feedback path."
+    }
+  ],
+  "validation": [
+    {
+      "command": "node tools/verify-source-archive.mjs",
+      "expectedExitCode": 0,
+      "evidence": "Archive-integrity output from packages/shader-library-v1/source after any required archive regeneration."
+    },
+    {
+      "command": "npm test",
+      "expectedExitCode": 0,
+      "evidence": "Target-native metadata, EGL/GLES compile/link/render, shader validation, and live-preview-build output from packages/shader-library-v1/source."
+    },
+    {
+      "command": "npm run generate:previews",
+      "expectedExitCode": 0,
+      "evidence": "Generated fixed-seed preview path and SHA-256 recorded in the receipt."
+    },
+    {
+      "command": "npm run build:docs",
+      "expectedExitCode": 0,
+      "evidence": "Gallery-build output confirming the manifest-driven gallery includes the new specimen."
+    },
+    {
+      "command": "git diff --check",
+      "expectedExitCode": 0,
+      "evidence": "Whitespace-integrity output at the target repository root."
+    }
+  ],
+  "stopConditions": [
+    "The checked-out target base SHA differs from 93a0bd01aaefbed7094f803cfdf1134087302196 without an owner decision to rebase the request.",
+    "Target archive policy, metadata schema, or runtime contract differs materially from the paths or assumptions listed here.",
+    "Implementing the requested appearance requires copying proprietary Notch content, third-party code/assets, or an unlicensed model/texture.",
+    "The solution requires persistent feedback, new dependencies, a renderer/runtime rewrite, or a change outside allowed scope.",
+    "Any stated validation command fails, is unavailable, is flaky, or lacks enough evidence to distinguish a tool failure from an implementation failure."
+  ],
+  "receiptRequirements": [
+    "Target repository, branch, base SHA, resulting head SHA, and working-tree state.",
+    "Changed files grouped by authored source, generated output, and distributable/archive artifacts.",
+    "Every validation command with exit code and relevant output; name unavailable checks explicitly.",
+    "Fixed seed/time/resolution, preview SHA-256, and the browser/reduced-motion observation.",
+    "Statement that feedbackAmount is stateless and no Notch parity, physical accuracy, or performance certification is claimed.",
+    "Residual risks, deviations, non-actions, and the owner decision needed before commit/push/merge/deploy."
+  ],
+  "humanReview": [
+    "Confirm the intentional choice of a stateless WebGL2 study before authoring a multi-pass runtime.",
+    "Review the generated still for legibility, photosensitivity and motion comfort, and palette contrast in the intended gallery context.",
+    "Decide separately whether the candidate pack or this adapter should be promoted after a target-local receipt."
+  ]
+}

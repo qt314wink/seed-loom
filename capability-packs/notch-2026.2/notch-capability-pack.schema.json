@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.local/schema/notch-capability-pack.schema.json",
+  "title": "Notch Capability Pack",
+  "description": "A source-backed, adapter-first catalog of portable creative mechanisms. It records semantic contracts, not a claim that implementation code transfers unchanged across renderers.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "title",
+    "status",
+    "sourceManifest",
+    "canonicalBoundary",
+    "capabilityFamilies",
+    "sceneRecipes",
+    "adapterContracts",
+    "governance"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "seed-loom.notch-capability-pack.v0.1" },
+    "id": { "const": "capability-pack:notch:2026.2:creative-systems" },
+    "title": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["candidate", "reviewed", "approved", "deprecated"] },
+    "sourceManifest": { "type": "string", "const": "./source-manifest.json" },
+    "canonicalBoundary": {
+      "type": "object",
+      "required": ["sourceOfTruth", "notCanonical", "generatedOutputs", "portableUnit"],
+      "additionalProperties": false,
+      "properties": {
+        "sourceOfTruth": { "type": "string" },
+        "notCanonical": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "generatedOutputs": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "portableUnit": { "type": "string" }
+      }
+    },
+    "capabilityFamilies": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/capabilityFamily" }
+    },
+    "sceneRecipes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/sceneRecipe" }
+    },
+    "adapterContracts": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/adapterContract" }
+    },
+    "governance": {
+      "type": "object",
+      "required": ["promotionRule", "rightsBoundary", "stopConditions"],
+      "additionalProperties": false,
+      "properties": {
+        "promotionRule": { "type": "string" },
+        "rightsBoundary": { "type": "string" },
+        "stopConditions": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "capabilityFamily": {
+      "type": "object",
+      "required": ["id", "name", "notchFamilies", "semanticOperators", "inputs", "outputs", "constraints", "sourceRefs", "qa"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^family:[a-z0-9][a-z0-9-]+$" },
+        "name": { "type": "string" },
+        "notchFamilies": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "semanticOperators": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "inputs": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "outputs": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "constraints": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "sourceRefs": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "qa": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "sceneRecipe": {
+      "type": "object",
+      "required": ["id", "name", "purpose", "usesFamilies", "parameterContract", "notchBuildOrder", "targetAdapters", "qa"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^scene:[a-z0-9][a-z0-9-]+$" },
+        "name": { "type": "string" },
+        "purpose": { "type": "string" },
+        "usesFamilies": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "parameterContract": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "notchBuildOrder": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "targetAdapters": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "qa": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    },
+    "adapterContract": {
+      "type": "object",
+      "required": ["id", "target", "mode", "maps", "preserves", "doesNotPromise", "qa"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^adapter:[a-z0-9][a-z0-9-]+$" },
+        "target": { "type": "string" },
+        "mode": { "enum": ["spec-only", "manifest", "implementation"] },
+        "maps": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "preserves": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "doesNotPromise": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+        "qa": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    }
+  }
+}

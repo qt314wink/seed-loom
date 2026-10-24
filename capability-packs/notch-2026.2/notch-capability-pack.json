@@ -1,0 +1,248 @@
+{
+  "schemaVersion": "seed-loom.notch-capability-pack.v0.1",
+  "id": "capability-pack:notch:2026.2:creative-systems",
+  "title": "Notch 2026.2 Creative Systems Capability Pack",
+  "status": "candidate",
+  "sourceManifest": "./source-manifest.json",
+  "canonicalBoundary": {
+    "sourceOfTruth": "This JSON, its source manifest, and the adapter contracts are the shared semantic record. Each consumer repository owns its emitted code, project file, media, and test evidence.",
+    "notCanonical": [
+      "Notch .dfxdll blocks, projects, exported media, and HLSL .fx code",
+      "GLSL, WGSL, SVG, Canvas, CSS, React, or motion-library implementations",
+      "Generated images, videos, meshes, texture maps, prompts, previews, and benchmarks"
+    ],
+    "generatedOutputs": [
+      "target-specific scene manifests",
+      "parameter surfaces and presets",
+      "implementation briefs and prompt constraints",
+      "target-local QA receipts with this pack ID and input digest"
+    ],
+    "portableUnit": "A mechanism contract: named intent + typed inputs and outputs + declared parameters + invariants + degradation path + QA evidence."
+  },
+  "capabilityFamilies": [
+    {
+      "id": "family:procedural-field",
+      "name": "Procedural scalar and vector fields",
+      "notchFamilies": ["Generators", "Fields / Affectors", "Fields / Rendering", "Fields / Materials"],
+      "semanticOperators": ["generate scalar field", "derive direction field", "advect state", "feed state back", "render density or contour"],
+      "inputs": ["seed", "time", "resolution", "noise scale", "flow strength", "feedback amount", "palette"],
+      "outputs": ["field texture", "velocity texture", "density volume", "mask", "displacement signal"],
+      "constraints": ["Declare deterministic seed and time origin when repeatability matters.", "Keep simulation state separate from its visual palette.", "Provide a static-frame fallback when feedback or float textures are unavailable."],
+      "sourceRefs": ["source:notch:manual:2026.2:generators", "source:notch:manual:2026.2:fields", "source:notch:manual:2026.2:nodes"],
+      "qa": ["same seed, parameters, resolution, and time must reproduce the same still-frame hash within the target runtime", "confirm field update cost at target resolution", "verify reduced-motion or paused-state behavior"]
+    },
+    {
+      "id": "family:cellular-topology",
+      "name": "Cellular pattern and topology transformation",
+      "notchFamilies": ["Generators", "Deformers / Topology", "Deformers / UVs", "Cloning"],
+      "semanticOperators": ["partition space", "tile or route", "fracture", "subdivide", "extrude", "instance", "remap UVs"],
+      "inputs": ["cell seed", "density", "edge width", "tile symmetry", "fracture point set", "mesh budget"],
+      "outputs": ["2D pattern", "mesh topology", "instance transforms", "UV layout", "segmentation mask"],
+      "constraints": ["Do not equate a visual Voronoi pattern with a physical fracture simulation.", "Declare topology budget before subdivision, tessellation, or greeble operations.", "Preserve UV provenance after topology mutation or label the result procedural-only."],
+      "sourceRefs": ["source:notch:manual:2026.2:generators", "source:notch:manual:2026.2:deformers", "source:notch:manual:2026.2:nodes"],
+      "qa": ["record vertex, index, and instance counts", "verify mesh renders without normal or UV invalidation", "test seam behavior at the intended repeat boundary"]
+    },
+    {
+      "id": "family:particle-ecology",
+      "name": "Particle and agent ecology",
+      "notchFamilies": ["Particles / Emitters", "Particles / Affectors", "Particles / Shading", "Particles / Rendering", "Fields"],
+      "semanticOperators": ["emit", "age", "attract or repel", "collide", "advect", "shade by attributes", "render trails or points"],
+      "inputs": ["emission geometry", "birth rate", "lifetime", "velocity", "force field", "collision geometry", "audio or interaction signal"],
+      "outputs": ["particle state buffer", "instanced geometry", "trails", "density field", "event stream"],
+      "constraints": ["Keep simulation, rendering, and interaction signals independently controllable.", "Define a particle-count ceiling and a degradation ladder before production use.", "Never describe visual attraction as physics accuracy without a calibrated model."],
+      "sourceRefs": ["source:notch:manual:2026.2:particles", "source:notch:manual:2026.2:fields", "source:notch:manual:2026.2:nodes"],
+      "qa": ["measure frame time and VRAM at declared count and output resolution", "test collision and emitter behavior under a fixed seed", "verify safe pause, reset, and reduced-density modes"]
+    },
+    {
+      "id": "family:surface-deformation",
+      "name": "Surface deformation and line/mesh conversion",
+      "notchFamilies": ["Deformers / Vertex", "Deformers / Points", "Deformers / Splines And Lines", "Deformers / Physics", "Deformers / Weights"],
+      "semanticOperators": ["displace", "bend", "twist", "morph", "taper", "transfer skin", "weight", "convert object to points or lines"],
+      "inputs": ["base mesh", "weight map", "field or texture", "time", "audio envelope", "anchor or spline data"],
+      "outputs": ["deformed mesh", "point cloud", "line mesh", "attribute weight map"],
+      "constraints": ["Specify coordinate space for every deformation.", "Treat cloth and rope as target-runtime simulations, not portable geometry facts.", "Maintain a low-cost mesh or image-plane fallback for web targets."],
+      "sourceRefs": ["source:notch:manual:2026.2:deformers", "source:notch:manual:2026.2:nodes"],
+      "qa": ["check normals, winding, and silhouette continuity", "compare vertex count before and after topology operations", "validate parameter extrema against self-intersection or clipping"]
+    },
+    {
+      "id": "family:material-light-intent",
+      "name": "Material, lighting, and renderer intent",
+      "notchFamilies": ["Materials", "Lighting", "Rendering", "Shading", "Post-FX / Colour"],
+      "semanticOperators": ["assign material response", "shape key/fill/rim lighting", "select renderer budget", "grade", "tone-map", "separate AOV-like passes"],
+      "inputs": ["surface profile", "albedo or palette", "roughness", "metalness", "transmission", "normal or displacement", "lighting rig", "camera"],
+      "outputs": ["lit color", "depth or normal pass", "material response record", "grade-ready render"],
+      "constraints": ["Canonical material intent is renderer-neutral; numeric maps are adapter outputs.", "State whether glass, iridescence, bloom, and dispersion are physical approximations or expressive effects.", "Pair any high-cost optical effect with a bounded fallback."],
+      "sourceRefs": ["source:notch:manual:2026.2:materials-lighting-rendering", "source:notch:manual:2026.2:nura", "source:notch:manual:2026.2:post-fx"],
+      "qa": ["compare material identity under at least two lighting angles", "test HDR and SDR grade behavior", "measure visual and performance deltas with optical effects disabled"]
+    },
+    {
+      "id": "family:image-signal-composite",
+      "name": "Image, video, text, and post-processing signal chain",
+      "notchFamilies": ["Video", "Text-FX", "Post-FX", "2D", "Layers"],
+      "semanticOperators": ["sample", "composite", "feedback", "warp", "key", "edge detect", "normal-map", "stylize", "encode or export"],
+      "inputs": ["video or image", "text", "mask", "UV transform", "time", "feedback state", "grade controls"],
+      "outputs": ["composite frame", "derived mask", "motion-reactive texture", "export sequence"],
+      "constraints": ["Record alpha, color space, resolution, frame rate, and loop boundary as part of the asset contract.", "Feedback must have a reset route and bounded gain.", "Avoid relying on a stylization effect to conceal invalid source images or artifacts."],
+      "sourceRefs": ["source:notch:manual:2026.2:post-fx", "source:notch:manual:2026.2:nodes"],
+      "qa": ["verify first/last frame continuity when looping", "inspect alpha and color-channel behavior", "test source-loss or unavailable-video fallback"]
+    },
+    {
+      "id": "family:external-control",
+      "name": "Interactive control, modulation, and operator surface",
+      "notchFamilies": ["Modifiers", "Interactive", "Logic", "Exposed Nodes", "Sound", "Scripting"],
+      "semanticOperators": ["expose", "map range", "smooth", "quantize", "trigger", "sequence state", "bind audio", "accept tracking or array input"],
+      "inputs": ["operator value", "MIDI or OSC", "audio analysis", "pointer or touch", "tracking data", "timecode"],
+      "outputs": ["named parameter change", "state transition", "event", "control telemetry"],
+      "constraints": ["Name and group exposed controls by intention, not internal node trivia.", "Specify default, minimum, maximum, units, smoothing, and reset semantics.", "A host can overwrite exposed values; downstream adapters must state ownership and precedence."],
+      "sourceRefs": ["source:notch:manual:2026.2:exposed-parameters", "source:notch:manual:2026.2:interaction-control", "source:notch:manual:2026.2:nodes"],
+      "qa": ["export or generate a parameter manifest", "test safe extrema and reset behavior", "test keyboard-only operation and reduced-motion control paths when a web UI consumes the contract"]
+    },
+    {
+      "id": "family:ml-image-effect",
+      "name": "Bounded model-mediated image effect",
+      "notchFamilies": ["Post-FX / AI Model", "Video", "Image Processing", "Custom Shader Post Effect"],
+      "semanticOperators": ["preprocess image", "run image-to-image model", "postprocess", "mask or composite", "record inference configuration"],
+      "inputs": ["licensed or permitted image/video", "ONNX model", "input dimensions", "model metadata", "GPU and driver baseline"],
+      "outputs": ["derived image frame", "mask", "depth-like or segmentation-like auxiliary signal", "inference receipt"],
+      "constraints": ["Only image-to-image ONNX usage is claimed for Notch 2026.2.", "Model compatibility is a test obligation, not an assumption.", "Keep model provenance, rights, and input dimensions visible; do not ingest weights into the pack."],
+      "sourceRefs": ["source:notch:manual:2026.2:ai-models", "source:notch:manual:2026.2:post-fx"],
+      "qa": ["record model hash, input dimensions, target GPU/driver, and observed latency", "test missing-model and incompatible-model failure behavior", "review source entitlement before storing derived output"]
+    }
+  ],
+  "sceneRecipes": [
+    {
+      "id": "scene:radial-field-bloom",
+      "name": "Radial Field Bloom",
+      "purpose": "A controllable organic radial motion study: vector flow moves a colored density field through a bounded feedback loop, with a still-frame fallback for low-power targets.",
+      "usesFamilies": ["family:procedural-field", "family:image-signal-composite", "family:external-control"],
+      "parameterContract": ["seed:int", "timeSeconds:float", "radialFrequency:float", "vortexStrength:float", "feedback:0..1", "paletteStops:color[]", "motionEnabled:boolean"],
+      "notchBuildOrder": ["Fractal Noise or Radial Vortex → Field Procedural Affector", "Curl Noise or Vortex Affector → Field Feedback", "Field 3D Renderer → Field Colour Ramp Material", "Colour Grade or Glow as optional output stage", "Expose seed, flow, feedback, palette, and motion controls through grouped values"],
+      "targetAdapters": ["adapter:shader-grammar", "adapter:shader-gallery", "adapter:canvas-ui-motion", "adapter:prompt-inference"],
+      "qa": ["fixed seed still must be reproducible", "feedback=0 must render a valid first frame", "reduced-motion path must freeze or use a static procedural frame"]
+    },
+    {
+      "id": "scene:cellular-reconstruction",
+      "name": "Cellular Reconstruction",
+      "purpose": "A material or architecture study that moves from Voronoi or Truchet segmentation to controlled depth, linework, and surface relief without confusing pattern generation with physical fabrication.",
+      "usesFamilies": ["family:cellular-topology", "family:surface-deformation", "family:material-light-intent"],
+      "parameterContract": ["seed:int", "cellDensity:float", "edgeWidth:float", "reliefDepth:float", "subdivisionBudget:int", "surfaceRoughness:0..1", "lightingPreset:enum"],
+      "notchBuildOrder": ["Voronoi or Truchet Generator → map or mask", "Object To Lines / Lines To Mesh or topology operations as required", "Displacement, Extrude, Bevel, or Voronoi Fracture only under mesh budget", "Material and lighting intent pass", "Emit source mesh and surface-profile metadata separately"],
+      "targetAdapters": ["adapter:shader-grammar", "adapter:shader-gallery", "adapter:material-light-study", "adapter:prompt-inference"],
+      "qa": ["record mesh budget before topology transformation", "inspect seams, normals, and silhouettes", "keep a flat texture fallback"]
+    },
+    {
+      "id": "scene:signal-garden",
+      "name": "Signal Garden",
+      "purpose": "A particle ecology where audio, pointer, camera, or tracking signals perturb but do not erase a legible base flow.",
+      "usesFamilies": ["family:particle-ecology", "family:procedural-field", "family:external-control"],
+      "parameterContract": ["seed:int", "particleBudget:int", "emissionRate:float", "lifetime:float", "flowStrength:float", "signalGain:float", "pause:boolean", "densityMode:enum"],
+      "notchBuildOrder": ["Mesh/Primitive/Image Emitter → particle root", "Field/Vortex/Turbulence/Points Affectors → particle state", "Attribute/Life/Noise shading → particle renderer or trails", "Bind audio or interaction input through smoothed modifier", "Expose budget, gain, pause, and density controls"],
+      "targetAdapters": ["adapter:shader-gallery", "adapter:canvas-ui-motion", "adapter:motion-video", "adapter:prompt-inference"],
+      "qa": ["test reset to a known seed", "capture GPU cost at low, medium, and high density", "ensure controls remain understandable when input signal is absent"]
+    },
+    {
+      "id": "scene:optical-surface-ritual",
+      "name": "Optical Surface Ritual",
+      "purpose": "A surface study for glass, nacre-like iridescence, metallic or subsurface response, and expressive bloom—always declaring which response is physically grounded and which is a visual treatment.",
+      "usesFamilies": ["family:material-light-intent", "family:surface-deformation", "family:image-signal-composite"],
+      "parameterContract": ["baseColor:color", "roughness:0..1", "metalness:0..1", "transmission:0..1", "normalStrength:float", "iridescenceStrength:0..1", "bloomStrength:float", "cameraAngle:float"],
+      "notchBuildOrder": ["Surface mesh or image plane → normal/displacement signal", "Material assignment → named lighting rig", "Render node selected to target frame budget", "Optional physical glow/colour grade pass", "Capture beauty, normal, depth, and parameter manifest where available"],
+      "targetAdapters": ["adapter:shader-grammar", "adapter:shader-gallery", "adapter:material-light-study", "adapter:svg-filter-lab", "adapter:prompt-inference"],
+      "qa": ["compare at two camera or light angles", "test visual identity with bloom disabled", "provide SDR-safe grade and a no-transmission fallback"]
+    },
+    {
+      "id": "scene:inference-matte-loop",
+      "name": "Inference Matte Loop",
+      "purpose": "A bounded image-to-image or segmentation-like preprocessing loop that turns permitted source frames into a live mask or treatment while preserving model and input provenance.",
+      "usesFamilies": ["family:ml-image-effect", "family:image-signal-composite", "family:external-control"],
+      "parameterContract": ["modelId:string", "modelHash:string", "inputWidth:int", "inputHeight:int", "threshold:0..1", "feather:float", "fallbackMode:enum", "enabled:boolean"],
+      "notchBuildOrder": ["Permitted input video/image → resize to model contract", "AI Model Post-FX → mask or derived frame", "threshold/feather/composite stage", "Expose enable, threshold, and fallback only; do not expose hidden model assumptions", "write inference receipt outside the scene"],
+      "targetAdapters": ["adapter:prompt-inference", "adapter:motion-video", "adapter:shader-gallery"],
+      "qa": ["missing or incompatible model must fall back without a blank frame", "record model hash and dimensions", "human review must confirm source and derived-output rights"]
+    }
+  ],
+  "adapterContracts": [
+    {
+      "id": "adapter:seed-loom",
+      "target": "Seed Loom capability-pack store",
+      "mode": "implementation",
+      "maps": ["official Notch source locators → a versioned source manifest", "node families → semantic mechanism contracts", "scene recipes → target-neutral parameter and QA contracts"],
+      "preserves": ["source URL and version", "fact versus inference boundary", "candidate lifecycle state", "portable-unit identity"],
+      "doesNotPromise": ["automatic approval", "binary asset storage", "HLSL-to-GLSL transpilation", "cross-repository mutation"],
+      "qa": ["npm run capability:notch:verify", "npm run capability:notch:test", "review source rights before adding excerpts, assets, or model weights"]
+    },
+    {
+      "id": "adapter:shader-grammar",
+      "target": "qt314wink/shader-grammar",
+      "mode": "spec-only",
+      "maps": ["semantic operators → grammar productions", "parameter contract → uniform and control specification", "constraints → negative shader constraints and fallback rules"],
+      "preserves": ["operator identity", "range and default intent", "seed/time semantics", "declared approximation status"],
+      "doesNotPromise": ["direct HLSL/D3DX to GLSL or WGSL equivalence", "identical renderer output", "unmeasured mobile performance"],
+      "qa": ["compile in target shader toolchain", "run fixed-seed visual test", "record WebGL1/WebGL2/WebGPU fallback decision"]
+    },
+    {
+      "id": "adapter:shader-gallery",
+      "target": "MelodicBloom/shader-gallery",
+      "mode": "spec-only",
+      "maps": ["scene recipe → gallery specimen manifest", "parameter contract → accessible controls", "QA checks → preview and regression checklist"],
+      "preserves": ["scene name and pack ID", "parameter ranges", "reduced-motion/pause path", "source-manifest reference"],
+      "doesNotPromise": ["Notch runtime parity", "unbounded particle count", "automatic publication or deployment"],
+      "qa": ["native shader compile", "keyboard control test", "browser matrix with static fallback", "visual baseline at fixed seed"]
+    },
+    {
+      "id": "adapter:material-light-study",
+      "target": "Material studies and light studies",
+      "mode": "manifest",
+      "maps": ["surface profile → PBR/expressive material study", "lighting rig → reproducible light preset", "optical treatment → explicitly labeled approximation"],
+      "preserves": ["material intent", "camera/light comparison protocol", "map provenance", "HDR/SDR distinction"],
+      "doesNotPromise": ["measured BRDF accuracy", "physical dispersion or thin-film correctness without data", "shared numeric parameters across render engines"],
+      "qa": ["two-angle comparison", "reference image and map provenance review", "performance and bloom-off comparison"]
+    },
+    {
+      "id": "adapter:svg-filter-lab",
+      "target": "Seed Loom SVG Filter Atlas / SVG Filter Lab",
+      "mode": "spec-only",
+      "maps": ["image-signal operators → SVG filter candidates", "surface treatment → declarative filter recipe", "parameter contract → exposed SVG primitive attributes"],
+      "preserves": ["declared parameter identity", "named preset intent", "graceful fallback"],
+      "doesNotPromise": ["GPU field simulation", "particle simulation", "HLSL shader semantics", "filter support outside browser capability"] ,
+      "qa": ["SVG recipe compiler test", "feature-detection fallback", "filter-region and raster-cost inspection"]
+    },
+    {
+      "id": "adapter:canvas-ui-motion",
+      "target": "Canvas simulations and UI/UX physics",
+      "mode": "spec-only",
+      "maps": ["external-control contract → interaction state model", "field or particle scene → Canvas/WebGL simulation choice", "operator parameters → accessible UI controls"],
+      "preserves": ["control ownership", "safe defaults", "pause/reduced-motion state", "intentional versus decorative physics"],
+      "doesNotPromise": ["physical accuracy", "pointer-only interaction", "continuous animation when user preference says reduce"],
+      "qa": ["keyboard and touch interaction test", "reduced-motion test", "frame-budget test on bounded device tier"]
+    },
+    {
+      "id": "adapter:motion-video",
+      "target": "Motion, image, and video pipeline",
+      "mode": "manifest",
+      "maps": ["scene recipe → shot/timeline specification", "parameter changes → animation lanes", "image signal outputs → compositing stages"],
+      "preserves": ["timebase", "resolution", "color/alpha contract", "loop/reset semantics"],
+      "doesNotPromise": ["editor-project portability", "deterministic GPU render across applications", "automatic media-rights clearance"],
+      "qa": ["first/last frame loop check", "codec/color/alpha inspection", "source-to-output asset receipt"]
+    },
+    {
+      "id": "adapter:prompt-inference",
+      "target": "Reverse prompt analyzer, prompt engineering, and API inference layers",
+      "mode": "manifest",
+      "maps": ["mechanism contract → structured prompt vocabulary", "constraints → negative prompt and guardrail clauses", "scene recipe → inference plan with evaluation criteria"],
+      "preserves": ["fact/inference distinction", "source reference", "uncertainty", "copyright and model-rights boundary"],
+      "doesNotPromise": ["style ownership", "reproducible generative images", "model compatibility", "permission to use third-party assets or weights"],
+      "qa": ["candidate count and evaluation rubric", "prompt-to-output provenance record", "human review before training, publication, or paid API use"]
+    }
+  ],
+  "governance": {
+    "promotionRule": "A capability family or adapter may become reviewed only when a named target implementation returns its local test receipt and a reviewer confirms that the implementation stayed within the contract. Approval is a separate human decision.",
+    "rightsBoundary": "Store links, hashes, concise original facts, and user-authored mechanism contracts. Do not mirror copyrighted manual content, images, source code, model weights, or proprietary blocks into this pack.",
+    "stopConditions": [
+      "A requested implementation requires copying or redistributing protected source material, assets, model weights, or proprietary block binaries.",
+      "An adapter claims renderer, physics, model, or visual equivalence without a target-specific measurement.",
+      "A target repository is inaccessible, its branch/base is unknown, or its license and asset-rights constraints conflict with this pack.",
+      "The work expands into a general marketplace, registry, ontology, telemetry platform, or auto-deployment system before a bounded two-target proof demonstrates the need."
+    ]
+  }
+}

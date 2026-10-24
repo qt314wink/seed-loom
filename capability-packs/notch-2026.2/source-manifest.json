@@ -1,0 +1,169 @@
+{
+  "schemaVersion": "seed-loom.source-manifest.v0.1",
+  "id": "source-manifest:notch:2026.2:creative-systems",
+  "title": "Notch Manual 2026.2 — Creative Systems Locator Manifest",
+  "rightsBoundary": "This manifest stores URLs, source metadata, and short original capability statements only. It does not mirror manual text, images, binaries, example code, or bundled assets.",
+  "userSuppliedCoverage": "Every supplied official 2026.2 Manual node locator is preserved losslessly in user-supplied-locator-ledger.json. The family records in notch-capability-pack.json are grounded only in the source references named for them; unparsed leaf links remain locators for a future bounded extraction and are not implementation evidence.",
+  "locatorLedger": "./user-supplied-locator-ledger.json",
+  "sources": [
+    {
+      "id": "source:notch:manual:2026.2:nodes",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/",
+      "publisher": "Notch / 10Bit",
+      "sourceClass": "official",
+      "version": "2026.2",
+      "retrievedAt": "2026-10-23T00:00:00Z",
+      "coverage": "Observed index of node families, including 2D, 3D, cloning, deformers, fields, generators, materials, modifiers, particles, Post-FX, rendering, shading, sound, scripting, and video.",
+      "status": "parsed-index"
+    },
+    {
+      "id": "source:notch:manual:2026.2:node-hierarchy",
+      "url": "https://manual.notch.one/2026.2/en/docs/learning/using-the-node-system/node-hierarchy-and-data-flow/",
+      "publisher": "Notch / 10Bit",
+      "sourceClass": "official",
+      "version": "2026.2",
+      "retrievedAt": "2026-10-23T00:00:00Z",
+      "coverage": "Observed execution ordering: top-to-bottom, then left-to-right for nodes at the same height.",
+      "status": "parsed"
+    },
+    {
+      "id": "source:notch:manual:2026.2:assets",
+      "url": "https://manual.notch.one/2026.2/en/docs/learning/using-the-node-system/assets-and-embedded-nodes/building-assets/",
+      "publisher": "Notch / 10Bit",
+      "sourceClass": "official",
+      "version": "2026.2",
+      "retrievedAt": "2026-10-23T00:00:00Z",
+      "coverage": "Observed asset model: embedded node systems with a simplified parameter surface can be saved and shared with resources.",
+      "status": "parsed"
+    },
+    {
+      "id": "source:notch:manual:2026.2:custom-shaders",
+      "url": "https://manual.notch.one/2026.2/en/docs/workflows/working-with-custom-shaders/",
+      "publisher": "Notch / 10Bit",
+      "sourceClass": "official",
+      "version": "2026.2",
+      "retrievedAt": "2026-10-23T00:00:00Z",
+      "coverage": "Observed custom-shader boundary: HLSL in .fx resources using D3DX Effect; 2026.2 adds custom particle affectors, cloner effectors, and deformers.",
+      "status": "parsed"
+    },
+    {
+      "id": "source:notch:manual:2026.2:ai-models",
+      "url": "https://manual.notch.one/2026.2/en/docs/workflows/working-with-ai-models/ai-models-overview/",
+      "publisher": "Notch / 10Bit",
+      "sourceClass": "official",
+      "version": "2026.2",
+      "retrievedAt": "2026-10-23T00:00:00Z",
+      "coverage": "Observed first ONNX implementation: the AI Model Post-FX supports image-to-image models; compatibility depends on model, GPU architecture, drivers, and production testing.",
+      "status": "parsed"
+    },
+    {
+      "id": "source:notch:manual:2026.2:nura",
+      "url": "https://manual.notch.one/2026.2/en/docs/learning/lighting-and-renderers/nura-rendering-architecture/",
+      "publisher": "Notch / 10Bit",
+      "sourceClass": "official",
+      "version": "2026.2",
+      "retrievedAt": "2026-10-23T00:00:00Z",
+      "coverage": "Observed renderer intent boundary: NURA keeps material and lighting intent while render-node choice trades quality for performance.",
+      "status": "parsed"
+    },
+    {
+      "id": "source:notch:manual:2026.2:exposed-parameters",
+      "url": "https://manual.notch.one/2026.2/en/docs/workflows/working-with-media-servers/exposed-parameters/",
+      "publisher": "Notch / 10Bit",
+      "sourceClass": "official",
+      "version": "2026.2",
+      "retrievedAt": "2026-10-23T00:00:00Z",
+      "coverage": "Observed external control surface: exposed values can cover text, numbers, transforms, cameras, arrays, and video; the host overwrites exposed property values.",
+      "status": "parsed"
+    },
+    {
+      "id": "source:notch:manual:2026.2:block-verifier",
+      "url": "https://manual.notch.one/2026.2/en/docs/workflows/working-with-media-servers/blocks/notchblockverifier/",
+      "publisher": "Notch / 10Bit",
+      "sourceClass": "official",
+      "version": "2026.2",
+      "retrievedAt": "2026-10-23T00:00:00Z",
+      "coverage": "Observed host-side block QA: exposed controls, viewport, VRAM, frame render time, and effective frame rate.",
+      "status": "parsed"
+    },
+    {
+      "id": "source:notch:manual:2026.2:generators",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/generators/",
+      "publisher": "Notch / 10Bit",
+      "sourceClass": "official",
+      "version": "2026.2",
+      "retrievedAt": "2026-10-23T00:00:00Z",
+      "coverage": "User-supplied generator locators: Voronoi, Truchet, Sound Texture, Radial Vortex, Hilbert Curve, MIDI To Texture, and Fractal Noise.",
+      "status": "locator-family"
+    },
+    {
+      "id": "source:notch:manual:2026.2:fields",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/",
+      "publisher": "Notch / 10Bit",
+      "sourceClass": "official",
+      "version": "2026.2",
+      "retrievedAt": "2026-10-23T00:00:00Z",
+      "coverage": "User-supplied field locators: feedback, derivative feedback, procedural, fluid, image, points, primitive, turbulence, velocity, vortex, curl noise, collisions, image/mesh/particle/primitive/procedural emitters, reaction-diffusion, field rendering, and cloud/flame/pyro/colour-ramp materials.",
+      "status": "parsed-index-and-locator-family"
+    },
+    {
+      "id": "source:notch:manual:2026.2:deformers",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/",
+      "publisher": "Notch / 10Bit",
+      "sourceClass": "official",
+      "version": "2026.2",
+      "retrievedAt": "2026-10-23T00:00:00Z",
+      "coverage": "User-supplied deformer locators: colour/material, cloth/rope, points, splines/lines, topology, weights, vertex transforms, UV generation, and Voronoi fracture.",
+      "status": "parsed-index-and-locator-family"
+    },
+    {
+      "id": "source:notch:manual:2026.2:particles",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/particles/",
+      "publisher": "Notch / 10Bit",
+      "sourceClass": "official",
+      "version": "2026.2",
+      "retrievedAt": "2026-10-23T00:00:00Z",
+      "coverage": "Observed index coverage of particle roots, emitters, affectors, weights, shading, and renderers.",
+      "status": "parsed-index"
+    },
+    {
+      "id": "source:notch:manual:2026.2:post-fx",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/post-fx/",
+      "publisher": "Notch / 10Bit",
+      "sourceClass": "official",
+      "version": "2026.2",
+      "retrievedAt": "2026-10-23T00:00:00Z",
+      "coverage": "Observed index coverage of blur, feedback, colour, distortion, image processing, stylisation, warping, and custom shader post effects.",
+      "status": "parsed-index"
+    },
+    {
+      "id": "source:notch:manual:2026.2:materials-lighting-rendering",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/materials/",
+      "publisher": "Notch / 10Bit",
+      "sourceClass": "official",
+      "version": "2026.2",
+      "retrievedAt": "2026-10-23T00:00:00Z",
+      "coverage": "User-supplied materials, lighting, shading, and rendering category locators; the Nodes index identifies glass, metallic, subsurface, diffuse, emissive, and shadow-catcher materials plus ambient, area, directional, omni, sky, and spot lighting.",
+      "status": "parsed-index-and-locator-family"
+    },
+    {
+      "id": "source:notch:manual:2026.2:interaction-control",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/modifiers/",
+      "publisher": "Notch / 10Bit",
+      "sourceClass": "official",
+      "version": "2026.2",
+      "retrievedAt": "2026-10-23T00:00:00Z",
+      "coverage": "User-supplied modifiers, interactive, logic, sound, scripting, video, text-FX, motion-capture, layers, exposed-node, and node-utility category locators.",
+      "status": "parsed-index-and-locator-family"
+    }
+  ],
+  "userSuppliedLocatorFamilies": {
+    "core": ["2d", "3d", "cameras", "cloning", "colour", "deformers", "fields", "generators", "interactive", "layers", "lighting", "logic", "materials", "mocap", "modifiers", "nodes", "particles", "physics", "post-fx", "procedurals", "rendering", "scripting", "shading", "sound", "text-fx", "video", "exposed-nodes"],
+    "generators": ["voronoi", "truchet", "sound-texture", "radial-vortex", "hilbert-curve", "midi-to-texture", "fractal-noise"],
+    "fieldAffectors": ["fluid-2d", "primitive", "turbulence", "velocity", "vortex", "curl-noise", "derivative-feedback", "points", "image", "field-feedback", "field-procedural"],
+    "fieldCollisions": ["mesh", "primitive", "procedural"],
+    "fieldEmitters": ["image", "mesh", "particle-2d", "particle-3d", "primitive", "procedural", "reaction-diffusion"],
+    "fieldRenderingAndMaterials": ["render-to-object-surface", "field-3d-renderer", "field-pyro-material", "field-flame-material", "field-colour-ramp-material", "field-cloud-material"],
+    "deformerFamilies": ["colour-and-material", "physics", "points", "splines-and-lines", "topology", "weights", "vertex", "uvs"]
+  }
+}

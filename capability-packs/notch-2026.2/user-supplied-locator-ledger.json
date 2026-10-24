@@ -1,0 +1,224 @@
+{
+  "schemaVersion": "seed-loom.user-supplied-locator-ledger.v0.1",
+  "id": "source-locator-ledger:notch:2026.2:user-supplied",
+  "title": "Notch Manual 2026.2 — User-Supplied Node Locator Ledger",
+  "purpose": "A lossless, content-free record of the supplied Notch Manual page locators. Each full Manual URL is reconstructed deterministically as manualNodesBaseUrl plus a relativePath. These locators are not parsed source claims and must not be treated as implementation evidence until a bounded extraction records a source reference and fact.",
+  "manualNodesBaseUrl": "https://manual.notch.one/2026.2/en/docs/reference/nodes/",
+  "locatorGroups": [
+    {
+      "id": "group:core-node-categories",
+      "description": "Node-category landing pages supplied for cross-domain discovery.",
+      "relativePaths": [
+        "3d/",
+        "shading/",
+        "rendering/",
+        "post-fx/",
+        "procedurals/",
+        "scripting/",
+        "sound/",
+        "text-fx/",
+        "video/",
+        "exposed-nodes/",
+        "physics/",
+        "particles/",
+        "nodes/",
+        "modifiers/",
+        "mocap/",
+        "materials/",
+        "logic/",
+        "lighting/",
+        "layers/",
+        "interactive/",
+        "generators/",
+        "fields/",
+        "deformers/",
+        "colour/",
+        "cloning/",
+        "cameras/",
+        "2d/"
+      ]
+    },
+    {
+      "id": "group:generator-leaves",
+      "description": "Generator pages supplied for reusable procedural-pattern mechanisms.",
+      "relativePaths": [
+        "generators/voronoi/",
+        "generators/truchet/",
+        "generators/sound-texture/",
+        "generators/radial-vortex/",
+        "generators/hilbert-curve/",
+        "generators/midi-to-texture/",
+        "generators/fractal-noise/"
+      ]
+    },
+    {
+      "id": "group:field-affector-leaves",
+      "description": "Field-affector pages supplied for state, force, image, and feedback mechanisms.",
+      "relativePaths": [
+        "fields/affectors/fluid-2d-affector/",
+        "fields/affectors/primitive-affector/",
+        "fields/affectors/turbulence-affector/",
+        "fields/affectors/velocity-affector/",
+        "fields/affectors/vortex-affector/",
+        "fields/affectors/curl-noise-affector/",
+        "fields/affectors/derivative-feedback/",
+        "fields/affectors/points-affector/",
+        "fields/affectors/image-affector/",
+        "fields/affectors/field-feedback/",
+        "fields/affectors/field-procedural-affector/"
+      ]
+    },
+    {
+      "id": "group:field-collision-leaves",
+      "description": "Field-collision pages supplied for mesh, primitive, and procedural collision mechanisms.",
+      "relativePaths": [
+        "fields/collision/mesh-collision-affector/",
+        "fields/collision/primitive-collision-affector/",
+        "fields/collision/procedural-collision-affector/"
+      ]
+    },
+    {
+      "id": "group:field-emitter-leaves",
+      "description": "Field-emitter pages supplied for image, mesh, particle, primitive, procedural, and reaction-diffusion sources.",
+      "relativePaths": [
+        "fields/emitters/image-emitter/",
+        "fields/emitters/mesh-emitter/",
+        "fields/emitters/particle-2d-emitter/",
+        "fields/emitters/particle-3d-emitter/",
+        "fields/emitters/primitive-emitter/",
+        "fields/emitters/procedural-emitter/",
+        "fields/emitters/reaction-diffusion/"
+      ]
+    },
+    {
+      "id": "group:field-rendering-and-material-leaves",
+      "description": "Field-rendering and field-material pages supplied for volume, surface, flame, cloud, and colour-ramp treatments.",
+      "relativePaths": [
+        "fields/rendering/render-to-object-surface/",
+        "fields/rendering/field-3d-renderer/",
+        "fields/materials/field-pyro-material/",
+        "fields/materials/field-flame-material/",
+        "fields/materials/field-colour-ramp-material/",
+        "fields/materials/field-cloud-material/"
+      ]
+    },
+    {
+      "id": "group:deformer-colour-and-physics-leaves",
+      "description": "Colour/material and physics deformer pages supplied for material assignment, cloth, and rope exploration.",
+      "relativePaths": [
+        "deformers/colour-and-material/colour-map-deformer/",
+        "deformers/colour-and-material/colour-ramp-deformer/",
+        "deformers/colour-and-material/set-material-deformer/",
+        "deformers/physics/cloth-deformer/",
+        "deformers/physics/rope-deformer/"
+      ]
+    },
+    {
+      "id": "group:deformer-points-and-spline-leaves",
+      "description": "Point, spline, and line conversion pages supplied for 2D/3D object and mesh transformations.",
+      "relativePaths": [
+        "deformers/points/merge-points/",
+        "deformers/points/object-to-points/",
+        "deformers/points/scale-primitives/",
+        "deformers/points/spread-out-points/",
+        "deformers/splines-and-lines/connect-with-lines/",
+        "deformers/splines-and-lines/duplicate-splines/",
+        "deformers/splines-and-lines/lines-to-mesh/",
+        "deformers/splines-and-lines/object-to-lines/",
+        "deformers/splines-and-lines/simplify-spline/"
+      ]
+    },
+    {
+      "id": "group:deformer-topology-leaves",
+      "description": "Topology deformer pages supplied for structural and fracture transformations.",
+      "relativePaths": [
+        "deformers/topology/bevel/",
+        "deformers/topology/cull/",
+        "deformers/topology/cut/",
+        "deformers/topology/delete-polygons/",
+        "deformers/topology/detach-polygons/",
+        "deformers/topology/extend/",
+        "deformers/topology/extrude-polygons/",
+        "deformers/topology/fertilize/",
+        "deformers/topology/flip-polygons/",
+        "deformers/topology/greeble/",
+        "deformers/topology/mirror/",
+        "deformers/topology/retopologise/",
+        "deformers/topology/voronoi-fracture/",
+        "deformers/topology/triangulate/",
+        "deformers/topology/tessellate/",
+        "deformers/topology/subdivide/",
+        "deformers/topology/slice/",
+        "deformers/topology/shift-polygons/"
+      ]
+    },
+    {
+      "id": "group:deformer-weight-leaves",
+      "description": "Weight-map deformer pages supplied for procedural, attribute, occlusion, and combined weights.",
+      "relativePaths": [
+        "deformers/weights/smooth-weightmap/",
+        "deformers/weights/occlusion-weightmap/",
+        "deformers/weights/null-to-weightmap/",
+        "deformers/weights/modify-weightmap/",
+        "deformers/weights/generate-weightmap/",
+        "deformers/weights/fractal-noise-weightmap/",
+        "deformers/weights/combine-weightmaps/",
+        "deformers/weights/attribute-weightmap/"
+      ]
+    },
+    {
+      "id": "group:deformer-vertex-leaves",
+      "description": "Vertex deformer pages supplied for shaped, signal-driven, and custom-shader deformation.",
+      "relativePaths": [
+        "deformers/vertex/twist/",
+        "deformers/vertex/turbulence-deformer/",
+        "deformers/vertex/transfer-skin/",
+        "deformers/vertex/taper/",
+        "deformers/vertex/sound-deformer/",
+        "deformers/vertex/smooth/",
+        "deformers/vertex/sine-deformer/",
+        "deformers/vertex/ripple-deformer/",
+        "deformers/vertex/quantise-deformer/",
+        "deformers/vertex/point-deformer/",
+        "deformers/vertex/plain-deformer/",
+        "deformers/vertex/particle-mesh-deformer/",
+        "deformers/vertex/particle-bone-deformer/",
+        "deformers/vertex/ocean-wave-deformer/",
+        "deformers/vertex/noise-deformer/",
+        "deformers/vertex/morph-deformer/",
+        "deformers/vertex/mdd-deformer/",
+        "deformers/vertex/face-tracking-deformer/",
+        "deformers/vertex/distortion-deformer/",
+        "deformers/vertex/displacement-map/",
+        "deformers/vertex/custom-shader-deformer/",
+        "deformers/vertex/curl-noise-deformer/",
+        "deformers/vertex/chunk-effector-deformer/",
+        "deformers/vertex/bend/",
+        "deformers/vertex/3d-plasma-deformer/"
+      ]
+    },
+    {
+      "id": "group:deformer-uv-leaves",
+      "description": "UV deformer pages supplied for atlas-quad and generated UV workflows.",
+      "relativePaths": [
+        "deformers/uvs/generate-atlas-quad-uvs/",
+        "deformers/uvs/generate-uvs/"
+      ]
+    }
+  ],
+  "duplicateOccurrences": [
+    {
+      "relativePath": "3d/",
+      "occurrences": 2,
+      "reason": "The same 3D category URL appeared twice in the supplied link set; it is represented once as a canonical URL while preserving its occurrence count."
+    }
+  ],
+  "excludedDiscoveryUrls": [
+    {
+      "url": "https://www.google.com/search?sca_esv=725b7f6d48bff6dc&sxsrf=APpeQnvMsTOhh48EyBZ6n3l21fOkwhVGAQ:1792722587467&udm=vids&fbs=ABfTbFV7rKSy24gtoYhyOHQNmN31vnriod5IfnCwcY0K-6a6w2m9fzV4rZMPdZS-gOps9Kmb7GBU6hbR3tZ3fzPy1hmzAKP3XiVk_TdOP8yNwtvGeNdWZVblOYGKtcHVy2TbYF2c6r2r2z1VwuR87eRVO6dveW727YCVrLPcZ0m2nDVfKry5s1FXKW8S3LUgVWbu6bYxISpU-AZ9LGRcyJt474oX_qvCkIyy3Q9JOrDNlU4xVQ4JgRY&q=notch+procedural+generation&sa=X&sqi=2&ved=2ahUKEwjzwIaIjM-XAxX0kYkEHVJgKOUQtKgLegQIKhAB&biw=980&bih=1775&dpr=2.63#fpstate=ive&ip=1&vld=cid:b76bd120,vid:Zz3AugX3EVo,st:0",
+      "reason": "Discovery-only search link. It is retained for provenance of the intake, but it is not an authority, source, claim, or executable dependency."
+    }
+  ],
+  "expectedUniqueManualUrlCount": 128,
+  "expectedSuppliedManualUrlOccurrenceCount": 129
+}

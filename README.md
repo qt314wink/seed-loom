@@ -21,6 +21,7 @@ signal -> interpretation -> system -> artifact -> product -> ecosystem
 - `figma/FIGMA_BOARD_SPEC.md` — Figma/FigJam mapping plan
 - `.github/workflows/signal-validation.yml` — basic repository validation workflow
 - `scripts/check_pipeline.py` — validates required files and JSON schema syntax
+- `capability-packs/notch-2026.2/` — source-backed Notch 2026.2 mechanism store with portable scene contracts, adapters, deterministic verification, and no binary/manual-content mirroring
 
 ## The four engines
 
@@ -51,6 +52,23 @@ That means the work becomes cumulative. Each artifact becomes searchable, reusab
 4. Produce outputs into `/docs`, `/templates`, `/products`, or `/case-studies`.
 5. Validate using GitHub Actions.
 6. Mirror the visual map in Figma/FigJam.
+
+### Reusable capability packs
+
+Capability packs preserve a mechanism's intent, parameters, invariants,
+fallbacks, source references, and QA contract independently of the specific
+renderer or code dialect. Validate the current Notch intake with:
+
+```bash
+npm run capability:notch:verify
+npm run capability:notch:test
+npm run capability:notch:query -- --scene scene:radial-field-bloom --adapter adapter:shader-gallery
+npm run capability:notch:handoff
+```
+
+See `docs/NOTCH_2026_2_CAPABILITY_PACK.md` for the adapter boundary and the
+first bounded target proofs. `capability:notch:handoff` produces the first
+bounded Shader Gallery work order; it does not alter the target repository.
 
 ## Status
 
