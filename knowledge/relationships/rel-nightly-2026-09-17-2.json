@@ -1,0 +1,12 @@
+{
+  "id": "rel:nightly:2026-09-17:2",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:nightly:2026-09-17:parallel-agent-projects",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:nightly:2026-09-17:claude-projects",
+  "confidence": 0.94,
+  "evidenceRefs": [
+    "source:nightly:2026-09-17:claude-projects"
+  ]
+}

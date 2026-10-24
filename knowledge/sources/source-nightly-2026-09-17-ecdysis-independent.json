@@ -1,0 +1,12 @@
+{
+  "id": "source:nightly:2026-09-17:ecdysis-independent",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://www.thenewlede.org/2026/09/former-usda-scientist-makes-case-for-regenerative-ag/",
+  "publisher": "The New Lede",
+  "publishedAt": "2026-09-16T00:00:00Z",
+  "retrievedAt": "2026-09-17T23:55:00Z",
+  "sourceClass": "press",
+  "independenceKey": "newlede:regenerative-ecdysis:2026-09-16",
+  "title": "Backed by data, a former USDA scientist makes the case for regenerative agriculture"
+}

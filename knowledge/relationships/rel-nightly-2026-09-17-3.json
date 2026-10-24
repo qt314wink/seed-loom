@@ -1,0 +1,13 @@
+{
+  "id": "rel:nightly:2026-09-17:3",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:nightly:2026-09-17:regenerative-whole-system",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:nightly:2026-09-17:ecdysis",
+  "confidence": 0.94,
+  "evidenceRefs": [
+    "source:nightly:2026-09-17:ecdysis",
+    "source:nightly:2026-09-17:ecdysis-independent"
+  ]
+}

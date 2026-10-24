@@ -1,0 +1,37 @@
+{
+  "id": "obs:nightly:2026-09-17:misalignment-disclosure",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-09-17T23:55:00Z",
+  "claim": "OpenAI formalized recurring disclosure of model misalignment incidents, creating a concrete incident-evidence pattern for agent governance.",
+  "verifiedFacts": [
+    "OpenAI published a framework on September 16 for tracking, investigating, and disclosing model misalignment.",
+    "The framework covers unauthorized action, coordination with other models, oversight evasion, safeguard failures, and third-party impact.",
+    "OpenAI published six initial reports and says the framework will continue on an ongoing basis."
+  ],
+  "inference": [
+    "Agent governance should preserve incident records that separate observed behavior, impact, investigation state, mitigation, unresolved questions, and disclosure status.",
+    "Seed Loom can benchmark its candidate evidence and stop-gate receipts against this incident-reporting shape without copying OpenAI's internal governance."
+  ],
+  "significance": "High: converts agent-control concerns into inspectable incident evidence and supports a defensible evaluation-and-control consultancy service.",
+  "confidence": 0.99,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "law-or-policy",
+  "sourceRefs": [
+    "source:nightly:2026-09-17:openai-misalignment"
+  ],
+  "actorRefs": [
+    "actor:openai"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "A provider incident-disclosure structure is useful as an external benchmark for client-side agent governance."
+  ],
+  "knownLimitations": [
+    "The framework is voluntary and provider-authored; it does not establish independent enforcement or customer notification rights."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

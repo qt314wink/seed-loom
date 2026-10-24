@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly:2026-09-17:strategy",
+  "runId": "run:nightly:2026-09-17",
+  "stage": "strategy",
+  "status": "deferred",
+  "startedAt": "2026-09-17T23:49:41Z",
+  "completedAt": "2026-09-17T23:58:00Z",
+  "inputs": [
+    "opportunity hypotheses"
+  ],
+  "outputs": [
+    "recommendations awaiting approval"
+  ],
+  "checks": [
+    {
+      "name": "human-control",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": false,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "Jennipher approval required."
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "proposal only",
+    "inputHashes": [
+      "3565d5ae89e8d82fce4bb81dcc5dcb51c97d2e5d0822c9bc337d91ccb4f47101"
+    ]
+  }
+}
