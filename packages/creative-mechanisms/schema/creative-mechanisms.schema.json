@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://seed-loom.local/schema/creative-mechanisms-0.1.json",
+  "title": "Seed Loom Creative Mechanism Candidates",
+  "type": "object",
+  "required": [
+    "schema",
+    "version",
+    "records"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "melodicbloom.creative-mechanisms/0.1"
+    },
+    "version": {
+      "type": "string"
+    },
+    "authority": {
+      "type": "string"
+    },
+    "records": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/record"
+      }
+    }
+  },
+  "$defs": {
+    "record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "kind",
+        "source",
+        "summary",
+        "notchParameterLabels",
+        "portableTargets",
+        "conceptTags",
+        "semanticRisks",
+        "applications",
+        "reviewState"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+(\\.[a-z0-9-]+)+$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "sourceId",
+            "url",
+            "release",
+            "pageUpdated",
+            "evidenceStatus"
+          ],
+          "properties": {
+            "sourceId": {
+              "const": "source:notch:manual-2026.2"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "release": {
+              "const": "2026.2"
+            },
+            "pageUpdated": {
+              "type": "string",
+              "format": "date"
+            },
+            "evidenceStatus": {
+              "const": "selectively-reviewed"
+            }
+          }
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notchParameterLabels": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "portableTargets": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "enum": [
+              "native-reference-only",
+              "translation-candidate-unverified",
+              "implemented-original-approximation"
+            ]
+          }
+        },
+        "conceptTags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "semanticRisks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "applications": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "reviewState": {
+          "const": "candidate"
+        }
+      }
+    }
+  }
+}

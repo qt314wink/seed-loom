@@ -1,0 +1,42 @@
+name: Creative Mechanisms Registry
+on:
+  pull_request:
+    paths:
+      - 'packages/creative-mechanisms/**'
+      - 'knowledge/sources/source-notch-manual-2026-2.json'
+      - '.github/workflows/creative-mechanisms.yml'
+  push:
+    branches:
+      - 'feat/notch-2026-2-creative-mechanisms-v0'
+    paths:
+      - 'packages/creative-mechanisms/**'
+      - 'knowledge/sources/source-notch-manual-2026-2.json'
+      - '.github/workflows/creative-mechanisms.yml'
+permissions:
+  contents: read
+jobs:
+  contract-and-adapter:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Validate reference and mechanism contracts
+        run: node packages/creative-mechanisms/scripts/registry.mjs validate
+      - name: Validate canonical Seed Loom knowledge records
+        run: npm run knowledge:validate
+      - name: Run candidate and compiler tests
+        run: node --test packages/creative-mechanisms/test/registry.test.mjs
+      - name: Generate reproducible specimen and receipt
+        shell: bash
+        run: |
+          node packages/creative-mechanisms/scripts/registry.mjs compile pattern.truchet --seed=35 --grid=12 --ink=#c0f9f0 --paper=#18182b > "$RUNNER_TEMP/truchet.svg" 2> "$RUNNER_TEMP/truchet.receipt"
+          test -s "$RUNNER_TEMP/truchet.svg"
+          grep -q 'RECEIPT ' "$RUNNER_TEMP/truchet.receipt"
+          grep -q '<svg' "$RUNNER_TEMP/truchet.svg"
+          sha256sum "$RUNNER_TEMP/truchet.svg"
+          cat "$RUNNER_TEMP/truchet.receipt"

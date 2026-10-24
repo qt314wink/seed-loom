@@ -1,0 +1,13 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:notch:manual-2026.2",
+  "type": "Source",
+  "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/",
+  "publisher": "Notch (10bit)",
+  "retrievedAt": "2026-10-23T03:19:48.727Z",
+  "sourceClass": "official",
+  "independenceKey": "notch-manual-2026.2",
+  "contentHash": null,
+  "title": "Notch Manual 2026.2 Node Reference",
+  "notes": "Official third-party reference; links and selectively reviewed node labels only. No redistributed manual text, binary project export, or implied permission to run Notch. The live MCP server is https://mcp-manual.notch.one/ and may change."
+}

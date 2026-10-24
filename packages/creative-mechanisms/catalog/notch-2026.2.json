@@ -1,0 +1,650 @@
+{
+  "schema": "melodicbloom.notch-reference-links/0.1",
+  "provider": "Notch",
+  "release": "2026.2",
+  "baseUrl": "https://manual.notch.one/2026.2/en/docs/reference/nodes/",
+  "scope": "user-supplied links, deduplicated",
+  "warning": "Link presence is not proof of parameter verification, portability, executable Notch access, or full manual coverage.",
+  "links": [
+    {
+      "path": "3d/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/3d/",
+      "status": "linked-only"
+    },
+    {
+      "path": "shading/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/shading/",
+      "status": "linked-only"
+    },
+    {
+      "path": "rendering/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/rendering/",
+      "status": "linked-only"
+    },
+    {
+      "path": "post-fx/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/post-fx/",
+      "status": "linked-only"
+    },
+    {
+      "path": "procedurals/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/procedurals/",
+      "status": "linked-only"
+    },
+    {
+      "path": "scripting/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/scripting/",
+      "status": "linked-only"
+    },
+    {
+      "path": "sound/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/sound/",
+      "status": "linked-only"
+    },
+    {
+      "path": "text-fx/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/text-fx/",
+      "status": "linked-only"
+    },
+    {
+      "path": "video/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/video/",
+      "status": "linked-only"
+    },
+    {
+      "path": "exposed-nodes/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/exposed-nodes/",
+      "status": "linked-only"
+    },
+    {
+      "path": "physics/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/physics/",
+      "status": "linked-only"
+    },
+    {
+      "path": "particles/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/particles/",
+      "status": "linked-only"
+    },
+    {
+      "path": "nodes/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/nodes/",
+      "status": "linked-only"
+    },
+    {
+      "path": "modifiers/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/modifiers/",
+      "status": "linked-only"
+    },
+    {
+      "path": "mocap/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/mocap/",
+      "status": "linked-only"
+    },
+    {
+      "path": "materials/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/materials/",
+      "status": "linked-only"
+    },
+    {
+      "path": "logic/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/logic/",
+      "status": "linked-only"
+    },
+    {
+      "path": "lighting/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/lighting/",
+      "status": "linked-only"
+    },
+    {
+      "path": "layers/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/layers/",
+      "status": "linked-only"
+    },
+    {
+      "path": "interactive/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/interactive/",
+      "status": "linked-only"
+    },
+    {
+      "path": "generators/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/generators/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/",
+      "status": "linked-only"
+    },
+    {
+      "path": "colour/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/colour/",
+      "status": "linked-only"
+    },
+    {
+      "path": "cloning/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/cloning/",
+      "status": "linked-only"
+    },
+    {
+      "path": "cameras/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/cameras/",
+      "status": "linked-only"
+    },
+    {
+      "path": "2d/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/2d/",
+      "status": "linked-only"
+    },
+    {
+      "path": "generators/voronoi/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/generators/voronoi/",
+      "status": "selectively-reviewed"
+    },
+    {
+      "path": "generators/truchet/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/generators/truchet/",
+      "status": "selectively-reviewed"
+    },
+    {
+      "path": "generators/sound-texture/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/generators/sound-texture/",
+      "status": "linked-only"
+    },
+    {
+      "path": "generators/radial-vortex/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/generators/radial-vortex/",
+      "status": "linked-only"
+    },
+    {
+      "path": "generators/hilbert-curve/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/generators/hilbert-curve/",
+      "status": "linked-only"
+    },
+    {
+      "path": "generators/midi-to-texture/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/generators/midi-to-texture/",
+      "status": "linked-only"
+    },
+    {
+      "path": "generators/fractal-noise/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/generators/fractal-noise/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/affectors/fluid-2d-affector/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/affectors/fluid-2d-affector/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/affectors/primitive-affector/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/affectors/primitive-affector/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/affectors/turbulence-affector/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/affectors/turbulence-affector/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/affectors/velocity-affector/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/affectors/velocity-affector/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/affectors/vortex-affector/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/affectors/vortex-affector/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/affectors/curl-noise-affector/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/affectors/curl-noise-affector/",
+      "status": "selectively-reviewed"
+    },
+    {
+      "path": "fields/affectors/derivative-feedback/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/affectors/derivative-feedback/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/affectors/points-affector/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/affectors/points-affector/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/affectors/image-affector/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/affectors/image-affector/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/affectors/field-feedback/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/affectors/field-feedback/",
+      "status": "selectively-reviewed"
+    },
+    {
+      "path": "fields/affectors/field-procedural-affector/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/affectors/field-procedural-affector/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/collision/mesh-collision-affector/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/collision/mesh-collision-affector/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/collision/primitive-collision-affector/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/collision/primitive-collision-affector/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/collision/procedural-collision-affector/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/collision/procedural-collision-affector/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/emitters/image-emitter/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/emitters/image-emitter/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/emitters/mesh-emitter/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/emitters/mesh-emitter/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/emitters/particle-2d-emitter/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/emitters/particle-2d-emitter/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/emitters/particle-3d-emitter/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/emitters/particle-3d-emitter/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/emitters/primitive-emitter/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/emitters/primitive-emitter/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/emitters/procedural-emitter/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/emitters/procedural-emitter/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/emitters/reaction-diffusion/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/emitters/reaction-diffusion/",
+      "status": "selectively-reviewed"
+    },
+    {
+      "path": "fields/rendering/render-to-object-surface/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/rendering/render-to-object-surface/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/rendering/field-3d-renderer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/rendering/field-3d-renderer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/materials/field-pyro-material/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/materials/field-pyro-material/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/materials/field-flame-material/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/materials/field-flame-material/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/materials/field-colour-ramp-material/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/materials/field-colour-ramp-material/",
+      "status": "linked-only"
+    },
+    {
+      "path": "fields/materials/field-cloud-material/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/materials/field-cloud-material/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/colour-and-material/colour-map-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/colour-and-material/colour-map-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/colour-and-material/colour-ramp-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/colour-and-material/colour-ramp-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/colour-and-material/set-material-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/colour-and-material/set-material-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/physics/cloth-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/physics/cloth-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/physics/rope-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/physics/rope-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/points/merge-points/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/points/merge-points/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/points/object-to-points/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/points/object-to-points/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/points/scale-primitives/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/points/scale-primitives/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/points/spread-out-points/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/points/spread-out-points/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/splines-and-lines/connect-with-lines/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/splines-and-lines/connect-with-lines/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/splines-and-lines/duplicate-splines/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/splines-and-lines/duplicate-splines/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/splines-and-lines/lines-to-mesh/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/splines-and-lines/lines-to-mesh/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/splines-and-lines/object-to-lines/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/splines-and-lines/object-to-lines/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/splines-and-lines/simplify-spline/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/splines-and-lines/simplify-spline/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/bevel/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/bevel/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/cull/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/cull/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/cut/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/cut/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/delete-polygons/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/delete-polygons/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/detach-polygons/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/detach-polygons/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/extend/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/extend/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/extrude-polygons/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/extrude-polygons/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/fertilize/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/fertilize/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/flip-polygons/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/flip-polygons/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/greeble/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/greeble/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/mirror/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/mirror/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/retopologise/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/retopologise/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/voronoi-fracture/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/voronoi-fracture/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/triangulate/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/triangulate/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/tessellate/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/tessellate/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/subdivide/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/subdivide/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/slice/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/slice/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/topology/shift-polygons/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/topology/shift-polygons/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/weights/smooth-weightmap/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/weights/smooth-weightmap/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/weights/occlusion-weightmap/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/weights/occlusion-weightmap/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/weights/null-to-weightmap/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/weights/null-to-weightmap/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/weights/modify-weightmap/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/weights/modify-weightmap/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/weights/generate-weightmap/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/weights/generate-weightmap/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/weights/fractal-noise-weightmap/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/weights/fractal-noise-weightmap/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/weights/combine-weightmaps/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/weights/combine-weightmaps/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/weights/attribute-weightmap/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/weights/attribute-weightmap/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/twist/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/twist/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/turbulence-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/turbulence-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/transfer-skin/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/transfer-skin/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/taper/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/taper/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/sound-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/sound-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/smooth/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/smooth/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/sine-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/sine-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/ripple-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/ripple-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/quantise-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/quantise-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/point-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/point-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/plain-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/plain-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/particle-mesh-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/particle-mesh-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/particle-bone-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/particle-bone-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/ocean-wave-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/ocean-wave-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/noise-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/noise-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/morph-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/morph-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/mdd-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/mdd-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/face-tracking-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/face-tracking-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/distortion-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/distortion-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/displacement-map/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/displacement-map/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/custom-shader-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/custom-shader-deformer/",
+      "status": "selectively-reviewed"
+    },
+    {
+      "path": "deformers/vertex/curl-noise-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/curl-noise-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/chunk-effector-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/chunk-effector-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/bend/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/bend/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/vertex/3d-plasma-deformer/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/3d-plasma-deformer/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/uvs/generate-atlas-quad-uvs/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/uvs/generate-atlas-quad-uvs/",
+      "status": "linked-only"
+    },
+    {
+      "path": "deformers/uvs/generate-uvs/",
+      "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/uvs/generate-uvs/",
+      "status": "linked-only"
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "schema": "melodicbloom.creative-mechanisms/0.1",
+  "version": "0.1.0",
+  "authority": "candidate only: documented concepts and original adapters; native execution not verified",
+  "records": [
+    {
+      "id": "pattern.truchet",
+      "name": "Truchet tile pattern",
+      "kind": "texture-generator",
+      "source": {
+        "sourceId": "source:notch:manual-2026.2",
+        "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/generators/truchet/",
+        "release": "2026.2",
+        "pageUpdated": "2026-09-15",
+        "evidenceStatus": "selectively-reviewed"
+      },
+      "summary": "Seeded, randomly oriented line tiles. The portable adapter implements an original quarter-arc, square-grid approximation, not Notch's node or Style B.",
+      "notchParameterLabels": [
+        "Resolution",
+        "Thickness",
+        "Rounded",
+        "Seed",
+        "Style"
+      ],
+      "portableTargets": {
+        "notch": "native-reference-only",
+        "web-svg": "implemented-original-approximation",
+        "webgl2": "translation-candidate-unverified"
+      },
+      "conceptTags": [
+        "tiling",
+        "procedural-pattern",
+        "deterministic-seed"
+      ],
+      "semanticRisks": [
+        "Do not equate web-svg parameters with Notch native controls; Notch Style B is unsupported"
+      ],
+      "applications": [
+        "svg-filter-lab",
+        "motion-atlas",
+        "image-pipeline"
+      ],
+      "reviewState": "candidate"
+    },
+    {
+      "id": "pattern.voronoi",
+      "name": "Voronoi cell texture",
+      "kind": "texture-generator",
+      "source": {
+        "sourceId": "source:notch:manual-2026.2",
+        "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/generators/voronoi/",
+        "release": "2026.2",
+        "pageUpdated": "2026-09-15",
+        "evidenceStatus": "selectively-reviewed"
+      },
+      "summary": "Generate cell partitions from sites; useful as a mask, material texture, or seed field.",
+      "notchParameterLabels": [
+        "Num Points X",
+        "Num Points Y",
+        "Num Points Z",
+        "Edge Thickness",
+        "Cell Luminance Variation",
+        "Seed"
+      ],
+      "portableTargets": {
+        "notch": "native-reference-only",
+        "web-svg": "translation-candidate-unverified",
+        "webgl2": "translation-candidate-unverified"
+      },
+      "conceptTags": [
+        "voronoi",
+        "cellular",
+        "procedural-pattern"
+      ],
+      "semanticRisks": [
+        "2D/3D site placement, seed RNG and edge distances vary by engine"
+      ],
+      "applications": [
+        "shader-gallery",
+        "material-studies",
+        "reverse-prompt-analyzer"
+      ],
+      "reviewState": "candidate"
+    },
+    {
+      "id": "field.curl-noise",
+      "name": "Curl noise field affector",
+      "kind": "field-affector",
+      "source": {
+        "sourceId": "source:notch:manual-2026.2",
+        "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/affectors/curl-noise-affector/",
+        "release": "2026.2",
+        "pageUpdated": "2026-09-15",
+        "evidenceStatus": "selectively-reviewed"
+      },
+      "summary": "Perturbs a field's velocities using curl noise for flowing motion.",
+      "notchParameterLabels": [
+        "Affector Mode",
+        "Fluid Simulation Speed",
+        "Curl Noise Amount",
+        "Noise Size",
+        "Perturbation"
+      ],
+      "portableTargets": {
+        "notch": "native-reference-only",
+        "webgl2": "translation-candidate-unverified",
+        "canvas2d": "translation-candidate-unverified"
+      },
+      "conceptTags": [
+        "velocity-field",
+        "curl-noise",
+        "fluid-like-motion"
+      ],
+      "semanticRisks": [
+        "Force versus velocity modifier changes integration semantics; frame-rate effects must be measured"
+      ],
+      "applications": [
+        "particle-simulators",
+        "ui-physics",
+        "wake-liquid-simulator"
+      ],
+      "reviewState": "candidate"
+    },
+    {
+      "id": "field.reaction-diffusion",
+      "name": "Reaction diffusion field emitter",
+      "kind": "simulation",
+      "source": {
+        "sourceId": "source:notch:manual-2026.2",
+        "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/emitters/reaction-diffusion/",
+        "release": "2026.2",
+        "pageUpdated": "2026-09-15",
+        "evidenceStatus": "selectively-reviewed"
+      },
+      "summary": "Image-seeded Gray-Scott-like reaction diffusion yielding growing organic patterns.",
+      "notchParameterLabels": [
+        "Amount",
+        "Pattern",
+        "Rate",
+        "Input Scale",
+        "Softness"
+      ],
+      "portableTargets": {
+        "notch": "native-reference-only",
+        "webgl2": "translation-candidate-unverified",
+        "canvas2d": "translation-candidate-unverified"
+      },
+      "conceptTags": [
+        "reaction-diffusion",
+        "gray-scott",
+        "stateful-feedback"
+      ],
+      "semanticRisks": [
+        "Requires explicit state initialization, boundary conditions and fixed-step integration; native parameter labels are not universal Gray-Scott coefficients"
+      ],
+      "applications": [
+        "chromaflora",
+        "material-studies",
+        "animation-pipeline"
+      ],
+      "reviewState": "candidate"
+    },
+    {
+      "id": "field.feedback",
+      "name": "Field feedback",
+      "kind": "stateful-affector",
+      "source": {
+        "sourceId": "source:notch:manual-2026.2",
+        "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/fields/affectors/field-feedback/",
+        "release": "2026.2",
+        "pageUpdated": "2026-09-15",
+        "evidenceStatus": "selectively-reviewed"
+      },
+      "summary": "Blends field ink accumulated from previous frames with newly generated ink.",
+      "notchParameterLabels": [
+        "Feedback Amount"
+      ],
+      "portableTargets": {
+        "notch": "native-reference-only",
+        "webgl2": "translation-candidate-unverified"
+      },
+      "conceptTags": [
+        "feedback",
+        "temporal-memory",
+        "field"
+      ],
+      "semanticRisks": [
+        "Not a stateless shader; requires history buffer, reset semantics and stability tests"
+      ],
+      "applications": [
+        "kaleidoscopic-motion",
+        "post-fx",
+        "particle-simulators"
+      ],
+      "reviewState": "candidate"
+    },
+    {
+      "id": "mesh.custom-shader-deformer",
+      "name": "Custom shader mesh deformer",
+      "kind": "geometry-deformer",
+      "source": {
+        "sourceId": "source:notch:manual-2026.2",
+        "url": "https://manual.notch.one/2026.2/en/docs/reference/nodes/deformers/vertex/custom-shader-deformer/",
+        "release": "2026.2",
+        "pageUpdated": "2026-07-15",
+        "evidenceStatus": "selectively-reviewed"
+      },
+      "summary": "HLSL .fx shader-driven vertex deformation within Notch; parameter and buffer conventions require engine-specific handling.",
+      "notchParameterLabels": [],
+      "portableTargets": {
+        "notch": "native-reference-only",
+        "webgl2": "translation-candidate-unverified",
+        "webgpu": "translation-candidate-unverified"
+      },
+      "conceptTags": [
+        "hlsl",
+        "vertex-deformation",
+        "mesh-topology"
+      ],
+      "semanticRisks": [
+        "HLSL is not GLSL or WGSL; buffer layouts, thread grouping, normals and motion vectors require explicit translation and native build tests"
+      ],
+      "applications": [
+        "shader-grammar",
+        "shader-gallery",
+        "3d-motion-studies"
+      ],
+      "reviewState": "candidate"
+    }
+  ]
+}
