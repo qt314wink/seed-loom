@@ -1,0 +1,50 @@
+{
+  "id": "obs:agent-database-infrastructure:2026-10-04",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-04T19:19:42-04:00",
+  "claim": "Agent-created software is pushing application infrastructure toward databases provisioned cheaply and on demand at agent scale, while production operation is being bundled with observation, testing and permissions.",
+  "verifiedFacts": [
+    "Supabase announced October 2 that it is acquiring Turso to build infrastructure for agent-created databases.",
+    "Supabase says it launches more than one million databases per week and expects agent-driven demand to outpace current capacity.",
+    "Supabase also announced tools for coding agents to observe production data, test fixes and operate under explicit permissions."
+  ],
+  "inference": [
+    "Verified: agentic development changes infrastructure lifecycle requirements.",
+    "Inferred: knowledge infrastructure increasingly needs disposable execution state plus governed promotion into durable systems.",
+    "Unknown: whether vendor-native controls eliminate demand for independent governance."
+  ],
+  "significance": "Refines Seed Loom from governed knowledge toward governed lifecycle infrastructure.",
+  "confidence": 0.95,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "model-capability",
+  "validFrom": "2026-10-02T00:00:00Z",
+  "validUntil": null,
+  "reviewBy": "2026-11-04T23:59:59-04:00",
+  "termsChangedAt": null,
+  "closedAt": null,
+  "closureRef": null,
+  "supersededBy": null,
+  "sourceRefs": [
+    "source:supabase-turso-agent-databases:2026"
+  ],
+  "actorRefs": [
+    "actor:supabase",
+    "actor:turso",
+    "actor:agent-builders",
+    "actor:enterprise-developers"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "MelodicBloom/agent-runtime-control-center",
+    "MelodicBloom/nse-kb"
+  ],
+  "assumptions": [
+    "Independent governance remains valuable across multiple vendors."
+  ],
+  "knownLimitations": [
+    "Scale claims are vendor-reported."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

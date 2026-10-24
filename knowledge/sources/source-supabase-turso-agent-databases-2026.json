@@ -1,0 +1,29 @@
+{
+  "id": "source:supabase-turso-agent-databases:2026",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://supabase.com/blog/supabase-is-acquiring-turso",
+  "publisher": "Supabase",
+  "publishedAt": "2026-10-02T00:00:00Z",
+  "retrievedAt": "2026-10-04T19:19:42-04:00",
+  "sourceClass": "official",
+  "independenceKey": "supabase-turso-agent-databases-2026",
+  "contentHash": null,
+  "title": "Supabase is acquiring Turso",
+  "lead": "Supabase says agent-created software is changing database infrastructure requirements.",
+  "analystNote": "Direct company source; scale claims are company-reported.",
+  "syndicatedFrom": null,
+  "doi": null,
+  "upstreamReport": null,
+  "policyDocument": null,
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": [],
+  "notes": "Retrieved in strict 48-hour window."
+}

@@ -1,0 +1,14 @@
+{
+  "id": "rel:preventive-evidence-refines-translation:2026-10-04",
+  "type": "Relationship",
+  "schemaVersion": "1.1.0",
+  "from": "obs:preventive-health-compute-model:2026-10-04",
+  "predicate": "REFINES",
+  "to": "thesis:evidence-translation-service",
+  "confidence": 0.8,
+  "evidenceRefs": [
+    "source:neko-us-preventive-care-demand:2026"
+  ],
+  "validFrom": "2026-10-03T14:00:00Z",
+  "validTo": null
+}

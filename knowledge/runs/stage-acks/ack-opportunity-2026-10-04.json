@@ -1,0 +1,36 @@
+{
+  "ackId": "ack:opportunity:2026-10-04",
+  "runId": "run:nightly:2026-10-04",
+  "stage": "opportunity",
+  "status": "passed",
+  "startedAt": "2026-10-04T19:19:42-04:00",
+  "completedAt": "2026-10-04T19:19:42-04:00",
+  "inputs": [
+    "ack:pattern:2026-10-04"
+  ],
+  "outputs": [
+    "stage:opportunity:2026-10-04"
+  ],
+  "checks": [
+    {
+      "name": "opportunity-boundary",
+      "result": "pass",
+      "detail": "Opportunities remain proposals."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "No external action."
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence-automation",
+    "method": "consultancy opportunity mapping",
+    "inputHashes": [
+      "sha256:research-window-2026-10-04"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

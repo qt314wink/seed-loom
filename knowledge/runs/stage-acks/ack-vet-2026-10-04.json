@@ -1,0 +1,36 @@
+{
+  "ackId": "ack:vet:2026-10-04",
+  "runId": "run:nightly:2026-10-04",
+  "stage": "vet",
+  "status": "passed",
+  "startedAt": "2026-10-04T19:19:42-04:00",
+  "completedAt": "2026-10-04T19:19:42-04:00",
+  "inputs": [
+    "ack:collect:2026-10-04"
+  ],
+  "outputs": [
+    "stage:vet:2026-10-04"
+  ],
+  "checks": [
+    {
+      "name": "source-quality",
+      "result": "pass",
+      "detail": "Primary, official and direct press sources preferred."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Candidate-only run."
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence-automation",
+    "method": "bounded source vetting",
+    "inputHashes": [
+      "sha256:research-window-2026-10-04"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

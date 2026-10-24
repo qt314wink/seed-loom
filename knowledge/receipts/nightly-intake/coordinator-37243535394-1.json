@@ -1,0 +1,54 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-10-04T23:22:53.163Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-10-04",
+      "bundlePath": "knowledge/intake/nightly/2026-10-04/nightly-run-bundle-2026-10-04.json",
+      "bundleSha256": "ced8e7845ef5cacb1d2f70f7ac2098449a4552f23a337755c786e963563a3d4a",
+      "normalizedDigest": "73c32cef536787b7d6015a5fb84c38e36e0abfc2154c54803269dfc30ed04e5c",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-supabase-turso-agent-databases-2026.json",
+        "knowledge/sources/source-amazon-data-center-nda-shift-2026.json",
+        "knowledge/sources/source-neko-us-preventive-care-demand-2026.json",
+        "knowledge/sources/source-vessev-electric-hydrofoil-urban-transit-2026.json",
+        "knowledge/sources/source-qnetic-crowdfunding-close-2026.json",
+        "knowledge/observations/obs-agent-database-infrastructure-2026-10-04.json",
+        "knowledge/observations/obs-data-center-social-license-2026-10-04.json",
+        "knowledge/observations/obs-preventive-health-compute-model-2026-10-04.json",
+        "knowledge/observations/obs-integrated-electric-mobility-system-2026-10-04.json",
+        "knowledge/observations/obs-mechanical-storage-ai-grid-2026-10-04.json",
+        "knowledge/relationships/rel-supabase-refines-agent-infrastructure-2026-10-04.json",
+        "knowledge/relationships/rel-civic-evidence-enables-compute-advisory-2026-10-04.json",
+        "knowledge/relationships/rel-preventive-evidence-refines-translation-2026-10-04.json",
+        "knowledge/relationships/rel-hydrofoil-refines-physical-system-proof-2026-10-04.json",
+        "knowledge/relationships/rel-storage-refines-regenerative-infrastructure-2026-10-04.json",
+        "knowledge/runs/run-nightly-2026-10-04.json",
+        "knowledge/runs/stage-acks/ack-collect-2026-10-04.json",
+        "knowledge/runs/stage-acks/ack-vet-2026-10-04.json",
+        "knowledge/runs/stage-acks/ack-normalize-2026-10-04.json",
+        "knowledge/runs/stage-acks/ack-observe-2026-10-04.json",
+        "knowledge/runs/stage-acks/ack-inquire-2026-10-04.json",
+        "knowledge/runs/stage-acks/ack-interpret-2026-10-04.json",
+        "knowledge/runs/stage-acks/ack-relate-2026-10-04.json",
+        "knowledge/runs/stage-acks/ack-pattern-2026-10-04.json",
+        "knowledge/runs/stage-acks/ack-opportunity-2026-10-04.json",
+        "knowledge/runs/stage-acks/ack-strategy-2026-10-04.json",
+        "knowledge/runs/stage-acks/ack-experiment-2026-10-04.json",
+        "knowledge/runs/stage-acks/ack-genesis-2026-10-04.json",
+        "knowledge/runs/stage-acks/ack-publish-2026-10-04.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-10-04-ingest.json",
+      "generatedRecordCount": 29
+    }
+  ]
+}

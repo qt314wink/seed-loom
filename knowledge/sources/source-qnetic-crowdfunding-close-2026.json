@@ -1,0 +1,29 @@
+{
+  "id": "source:qnetic-crowdfunding-close:2026",
+  "type": "Source",
+  "schemaVersion": "1.1.0",
+  "url": "https://invest.qnetic.energy/",
+  "publisher": "Qnetic",
+  "publishedAt": "2026-10-04T00:00:00Z",
+  "retrievedAt": "2026-10-04T19:19:42-04:00",
+  "sourceClass": "primary",
+  "independenceKey": "qnetic-crowdfunding-close-2026-10-04",
+  "contentHash": null,
+  "title": "Qnetic Regulation CF offering",
+  "lead": "Qnetic's current public offering shows a live raise with a target close on October 4.",
+  "analystNote": "Issuer source; engineering and demand claims are explicitly risk-qualified.",
+  "syndicatedFrom": null,
+  "doi": null,
+  "upstreamReport": null,
+  "policyDocument": null,
+  "upstream": {
+    "doi": null,
+    "report": null,
+    "policyDocument": null,
+    "announcement": null,
+    "study": null
+  },
+  "cites": [],
+  "citedBy": [],
+  "notes": "Current offering page retrieved Oct 4."
+}
