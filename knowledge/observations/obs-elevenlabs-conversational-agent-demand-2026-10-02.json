@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:elevenlabs-conversational-agent-demand-2026-10-02",
+  "type": "Observation",
+  "capturedAt": "2026-10-02T19:04:47-04:00",
+  "claim": "ElevenLabs' $22B valuation and new voice models indicate that conversational-agent infrastructure is being valued as an enterprise interaction layer, not merely as text-to-speech tooling.",
+  "verifiedFacts": [
+    "ElevenLabs announced a $300M employee tender at a $22B valuation on September 30, 2026.",
+    "ElevenLabs linked the valuation to enterprise demand for conversational agents.",
+    "ElevenLabs released Eleven v4 and v4 Turbo and says they are available in ElevenAgents, ElevenCreative and via API."
+  ],
+  "inference": [
+    "Voice becomes strategically useful when attached to governed knowledge and workflow context rather than treated as a standalone media feature.",
+    "Advisory mapping: Prototype a voice-enabled consultancy intake/briefing interface where every spoken request resolves to a cited knowledge object, explicit action boundary, and human approval gate."
+  ],
+  "significance": "This reinforces a product direction around multimodal, human-readable interfaces to governed knowledge systems.",
+  "confidence": 0.88,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "validFrom": "2026-10-02T19:04:47-04:00",
+  "validUntil": null,
+  "reviewBy": null,
+  "termsChangedAt": null,
+  "closedAt": null,
+  "closureRef": null,
+  "supersededBy": null,
+  "sourceRefs": [
+    "source:elevenlabs-tender-2026-09-30"
+  ],
+  "actorRefs": [
+    "ElevenLabs",
+    "Wellington",
+    "T. Rowe Price",
+    "enterprise buyers"
+  ],
+  "affectedRepositories": [
+    "MelodicBloom/eve",
+    "MelodicBloom/eve-slack-agent",
+    "MelodicBloom/Content-Weaver",
+    "qt314wink/seed-loom"
+  ],
+  "assumptions": [
+    "Enterprise demand is durable."
+  ],
+  "knownLimitations": [
+    "The valuation is based on a secondary employee tender, not a new primary financing round.",
+    "High valuation does not prove broad customer profitability or retention."
+  ],
+  "counterevidenceRefs": [
+    "source:elevenlabs-tender-2026-09-30"
+  ],
+  "approvalState": "candidate"
+}

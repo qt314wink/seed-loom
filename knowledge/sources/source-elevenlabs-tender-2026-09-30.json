@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:elevenlabs-tender-2026-09-30",
+  "type": "Source",
+  "url": "https://elevenlabs.io/blog/tender-22bn",
+  "publisher": "ElevenLabs",
+  "publishedAt": "2026-09-30T12:00:00Z",
+  "retrievedAt": "2026-10-02T23:04:47Z",
+  "sourceClass": "financial",
+  "independenceKey": "elevenlabs.io:source:elevenlabs-tender-2026-09-30",
+  "contentHash": null,
+  "title": "ElevenLabs announced a $300M employee tender valuing the company at $22B and linked the valuation to enterprise demand for conversational agents; Eleven v4 and v4 Turbo were also released.",
+  "lead": "ElevenLabs announced a $300M employee tender valuing the company at $22B and linked the valuation to enterprise demand for conversational agents; Eleven v4 and v4 Turbo were also released.",
+  "analystNote": null,
+  "syndicatedFrom": null,
+  "doi": null,
+  "upstreamReport": null,
+  "policyDocument": null,
+  "upstream": {},
+  "cites": [],
+  "citedBy": [],
+  "notes": null
+}

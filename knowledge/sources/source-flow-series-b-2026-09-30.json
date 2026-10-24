@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:flow-series-b-2026-09-30",
+  "type": "Source",
+  "url": "https://www.flowengineering.com/blog/series-b-press-release",
+  "publisher": "Flow Engineering",
+  "publishedAt": "2026-09-30T12:00:00Z",
+  "retrievedAt": "2026-10-02T23:04:47Z",
+  "sourceClass": "financial",
+  "independenceKey": "flowengineering.com:source:flow-series-b-2026-09-30",
+  "contentHash": null,
+  "title": "Flow Engineering announced a $50M Series B at a $750M valuation and described customers using agents to connect requirements, CAD, simulation, code and tests.",
+  "lead": "Flow Engineering announced a $50M Series B at a $750M valuation and described customers using agents to connect requirements, CAD, simulation, code and tests.",
+  "analystNote": null,
+  "syndicatedFrom": null,
+  "doi": null,
+  "upstreamReport": null,
+  "policyDocument": null,
+  "upstream": {},
+  "cites": [],
+  "citedBy": [],
+  "notes": null
+}

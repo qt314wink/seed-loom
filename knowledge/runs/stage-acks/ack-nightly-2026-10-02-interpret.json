@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.1.0",
+  "ackId": "ack:nightly-2026-10-02-interpret",
+  "runId": "run:nightly:2026-10-02",
+  "stage": "interpret",
+  "status": "passed",
+  "startedAt": "2026-10-02T19:04:47-04:00",
+  "completedAt": "2026-10-02T19:04:47-04:00",
+  "inputs": [
+    "nightly-window:2026-09-30T19:04:47-04:00/2026-10-02T19:04:47-04:00"
+  ],
+  "outputs": [
+    "observations:5"
+  ],
+  "checks": [
+    {
+      "name": "provenance available",
+      "result": "pass",
+      "detail": "Source records include URL, publisher, retrieval time and source class."
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": false,
+    "boundaryNotes": [
+      "Daily intake cannot accept knowledge or advance Genesis.",
+      "Repository actions remain proposals with executed=false."
+    ]
+  },
+  "provenance": {
+    "producer": "Nightly Consultancy Intelligence & Graph Intake",
+    "method": "48-hour bounded web research + live GitHub authority inspection",
+    "inputHashes": [
+      "89ee4b3fd8fac4424cd5f1026fafd21bfd4e0b0dab26b7710dede77ce6c283d3"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "obs:vercel-node20-deprecation-2026-10-02",
+  "type": "Observation",
+  "capturedAt": "2026-10-02T19:04:47-04:00",
+  "claim": "Vercel's October 1, 2026 Node.js 20 deployment deprecation turns runtime-version drift into an immediate web-delivery risk and creates a concrete QA opportunity across the portfolio.",
+  "verifiedFacts": [
+    "Vercel states Node.js 20 was disabled for new Builds and Functions deployments on October 1, 2026.",
+    "Vercel recommends upgrading affected projects to Node 24 or using a container where necessary.",
+    "Seed Loom's current root package permits Node ^20.19.0 or >=22.12.0, while its analyzer-core package requires >=22; its current main deployment status is successful on Vercel."
+  ],
+  "inference": [
+    "The portfolio is already partly aligned with the migration, but broad repo-level runtime policy is inconsistent.",
+    "Advisory mapping: Run a bounded runtime/deployment audit: enumerate engines, lockfiles, CI runtimes and Vercel project settings; patch only explicitly affected files on branch PRs; verify build, typecheck and preview."
+  ],
+  "significance": "This is a concrete web-engineering hygiene task with portfolio-wide leverage and a defensible QA artifact.",
+  "confidence": 0.97,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "provider-terms",
+  "validFrom": "2026-10-02T19:04:47-04:00",
+  "validUntil": null,
+  "reviewBy": null,
+  "termsChangedAt": null,
+  "closedAt": null,
+  "closureRef": null,
+  "supersededBy": null,
+  "sourceRefs": [
+    "source:vercel-node20-deprecation-2026-10-01"
+  ],
+  "actorRefs": [
+    "Vercel",
+    "qt314wink",
+    "MelodicBloom"
+  ],
+  "affectedRepositories": [
+    "qt314wink/seed-loom",
+    "qt314wink/neobrutalism-lab",
+    "qt314wink/nextjs-boilerplate",
+    "qt314wink/observation-ad-pipeline",
+    "MelodicBloom/Design-Fusion-Studio"
+  ],
+  "assumptions": [
+    "Vercel's stated deprecation applies to the portfolio's relevant deployment surfaces."
+  ],
+  "knownLimitations": [
+    "Not every repository deploys through Vercel.",
+    "The search snapshot does not establish every repository's exact runtime configuration."
+  ],
+  "counterevidenceRefs": [
+    "source:vercel-node20-deprecation-2026-10-01"
+  ],
+  "approvalState": "candidate"
+}
