@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "rel:nightly:2026-09-16:4",
+  "type": "Relationship",
+  "from": "obs:nightly:2026-09-16:xenocortical-model",
+  "predicate": "SUPPORTED_BY",
+  "to": "source:nightly:2026-09-16:stanford",
+  "confidence": 0.98,
+  "evidenceRefs": [
+    "source:nightly:2026-09-16:stanford"
+  ]
+}

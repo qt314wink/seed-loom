@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.1.0",
+  "id": "source:nightly:2026-09-16:traefik",
+  "type": "Source",
+  "url": "https://traefik.io/press/traefik-labs-introduces-the-sovereign-trust-plane-bringing-verifiable-evidence-to-ai-agent-governance",
+  "publisher": "Traefik Labs",
+  "publishedAt": "2026-09-15T13:00:00Z",
+  "retrievedAt": "2026-09-16T23:42:56Z",
+  "sourceClass": "primary",
+  "independenceKey": "traefik-stp",
+  "title": "Traefik Labs Introduces the Sovereign Trust Plane"
+}

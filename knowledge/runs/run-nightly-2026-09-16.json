@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "1.1.0",
+  "runId": "run:nightly:2026-09-16",
+  "type": "ResearchRun",
+  "ingestionMode": "delivered",
+  "retrievalWindow": {
+    "from": "2026-09-14T23:42:56Z",
+    "to": "2026-09-16T23:42:56Z"
+  },
+  "newObservations": [
+    "obs:nightly:2026-09-16:agent-control-plane",
+    "obs:nightly:2026-09-16:artifact-workspace",
+    "obs:nightly:2026-09-16:irrigation-boundary",
+    "obs:nightly:2026-09-16:xenocortical-model",
+    "obs:nightly:2026-09-16:deployment-boundary"
+  ],
+  "updatedObservations": [],
+  "candidatePatterns": [
+    "Agent governance is converging on identity, policy, isolation, evaluation and durable evidence.",
+    "Artifact generation is commoditizing while provenance and handoff integrity remain differentiators.",
+    "System and deployment boundaries are first-class decision variables."
+  ],
+  "newRelationships": [
+    "rel:nightly:2026-09-16:1",
+    "rel:nightly:2026-09-16:2",
+    "rel:nightly:2026-09-16:3",
+    "rel:nightly:2026-09-16:4",
+    "rel:nightly:2026-09-16:5"
+  ],
+  "contradictions": [
+    "Agent-governance suppliers claim accountability benefits but independent incident-reduction evidence remains missing."
+  ],
+  "opportunities": [
+    "Benchmark Seed Loom authority fixtures against WSO2 and Traefik without copying their ontology.",
+    "Differentiate evidence-to-client-artifact compilation on provenance and editability.",
+    "Add boundary and counterfactual controls to Project Constellation's ecological fixture.",
+    "Test institutional-intelligence portability across deployment boundaries."
+  ],
+  "proposedExperiments": [
+    "agent-control-plane-crosswalk-v0",
+    "regenerative-boundary-counterfactual-v0"
+  ],
+  "repositoryActions": [
+    {
+      "status": "proposed",
+      "executed": false,
+      "repository": "qt314wink/seed-loom",
+      "action": "Crosswalk WSO2 and Traefik controls against approved #55/#57 fixtures."
+    },
+    {
+      "status": "proposed",
+      "executed": false,
+      "repository": "MelodicBloom/project-constellation",
+      "action": "Add a system-boundary/counterfactual control to the approved synthetic ecological fixture."
+    }
+  ],
+  "noChangeReceipts": [
+    "Do not create another agent-runtime product identity.",
+    "Biomedical signal remains research-only; no biomedical product line proposed."
+  ],
+  "collectionFailures": [
+    "GitHub user-wide repository listing was unavailable through the connected fetch surface; repository watch is bounded to directly inspected Seed Loom and provenance-visible activity.",
+    "Exact current-event representative images were not reliably available for every signal."
+  ]
+}

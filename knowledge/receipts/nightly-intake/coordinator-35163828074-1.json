@@ -1,0 +1,55 @@
+{
+  "type": "NightlyIntakeCoordinatorReceipt",
+  "schemaVersion": "1.0.0",
+  "createdAt": "2026-09-16T23:47:47.580Z",
+  "mode": "selected",
+  "selectedBundleCount": 1,
+  "statusCounts": {
+    "INGESTED_WITH_RECEIPT": 1
+  },
+  "overallStatus": "COMPLETE",
+  "results": [
+    {
+      "status": "INGESTED_WITH_RECEIPT",
+      "runId": "run:nightly:2026-09-16",
+      "bundlePath": "knowledge/intake/nightly/2026-09-16/nightly-run-bundle-2026-09-16.json",
+      "bundleSha256": "b7f27c6e03b39d1a01737b5df176cfdbd14780b1b6476ad3205f0bff7d2e8b10",
+      "normalizedDigest": "8674e9e0a894d50d2608f8858e1629c4be9a063618c0864a162cc83564e5781e",
+      "dryRunResult": "validated",
+      "plannedFiles": [
+        "knowledge/sources/source-nightly-2026-09-16-wso2.json",
+        "knowledge/sources/source-nightly-2026-09-16-traefik.json",
+        "knowledge/sources/source-nightly-2026-09-16-claude-work.json",
+        "knowledge/sources/source-nightly-2026-09-16-irrigation.json",
+        "knowledge/sources/source-nightly-2026-09-16-stanford.json",
+        "knowledge/sources/source-nightly-2026-09-16-anthropic-aws.json",
+        "knowledge/observations/obs-nightly-2026-09-16-agent-control-plane.json",
+        "knowledge/observations/obs-nightly-2026-09-16-artifact-workspace.json",
+        "knowledge/observations/obs-nightly-2026-09-16-irrigation-boundary.json",
+        "knowledge/observations/obs-nightly-2026-09-16-xenocortical-model.json",
+        "knowledge/observations/obs-nightly-2026-09-16-deployment-boundary.json",
+        "knowledge/relationships/rel-nightly-2026-09-16-1.json",
+        "knowledge/relationships/rel-nightly-2026-09-16-2.json",
+        "knowledge/relationships/rel-nightly-2026-09-16-3.json",
+        "knowledge/relationships/rel-nightly-2026-09-16-4.json",
+        "knowledge/relationships/rel-nightly-2026-09-16-5.json",
+        "knowledge/runs/run-nightly-2026-09-16.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-16-collect.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-16-vet.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-16-normalize.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-16-observe.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-16-inquire.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-16-interpret.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-16-relate.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-16-pattern.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-16-opportunity.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-16-strategy.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-16-experiment.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-16-genesis.json",
+        "knowledge/runs/stage-acks/ack-nightly-2026-09-16-publish.json"
+      ],
+      "ingestReceiptPath": "knowledge/receipts/run-nightly-2026-09-16-ingest.json",
+      "generatedRecordCount": 30
+    }
+  ]
+}
