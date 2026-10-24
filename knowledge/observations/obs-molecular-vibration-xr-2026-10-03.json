@@ -1,0 +1,51 @@
+{
+  "id": "obs:molecular-vibration-xr:2026-10-03",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-03T19:42:57-04:00",
+  "claim": "MIT Future Fest is demonstrating translation of molecular structure and vibration into spatial sound, imagery and embodied XR interaction.",
+  "verifiedFacts": [
+    "Amphibian Drift premiered October 2-3.",
+    "It uses a caddisfly silk-protein model and vibrational behavior.",
+    "Collaborators span molecular modeling, sound, XR and biotech."
+  ],
+  "inference": [
+    "Verified: science, sonification, XR and ecological material context are combined.",
+    "Inferred: this is a strong science-to-experience precedent.",
+    "Unknown: whether it improves learning or repeatable commercial demand."
+  ],
+  "significance": "Strongly reinforces the governed visual/compiler thesis.",
+  "confidence": 0.95,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "default",
+  "validFrom": "2026-10-02T00:00:00Z",
+  "validUntil": null,
+  "reviewBy": "2026-10-31T23:59:59-04:00",
+  "termsChangedAt": null,
+  "closedAt": null,
+  "closureRef": null,
+  "supersededBy": null,
+  "sourceRefs": [
+    "source:mit-amphibian-drift:2026"
+  ],
+  "actorRefs": [
+    "actor:mit-act",
+    "actor:scientists",
+    "actor:xr-developers",
+    "actor:artists"
+  ],
+  "affectedRepositories": [
+    "qt314wink/omni-loom",
+    "qt314wink/aether",
+    "qt314wink/Helix-AudioGenesis-Sync-Visualizer",
+    "MelodicBloom/shader-gallery"
+  ],
+  "assumptions": [
+    "Rigorously sourced scientific data can support defensible interactive translation."
+  ],
+  "knownLimitations": [
+    "Public art/research precedent, not market validation."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

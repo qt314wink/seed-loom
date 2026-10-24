@@ -1,0 +1,35 @@
+{
+  "ackId": "ack:inquire:2026-10-03",
+  "runId": "run:nightly:2026-10-03",
+  "stage": "inquire",
+  "status": "passed",
+  "startedAt": "2026-10-03T19:42:57-04:00",
+  "completedAt": "2026-10-03T19:42:57-04:00",
+  "inputs": [
+    "run:nightly:2026-10-03"
+  ],
+  "outputs": [
+    "bounded Socratic assessments"
+  ],
+  "checks": [
+    {
+      "name": "evidence-stop",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "unknowns explicit"
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence-runtime",
+    "method": "bounded Socratic descent",
+    "inputHashes": [
+      "20d58193d6277a783f60c469efbbdf5fef75f7b"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

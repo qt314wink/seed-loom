@@ -1,0 +1,51 @@
+{
+  "id": "obs:living-fabrication:2026-10-03",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-03T19:42:57-04:00",
+  "claim": "Professional building-technology programming is coupling engineered living materials, adaptive facades and robotic construction.",
+  "verifiedFacts": [
+    "CMU lists engineered living materials for adaptive facades.",
+    "The program also included robotic construction and climate/building science.",
+    "The congress convened professionals, academics and industry participants."
+  ],
+  "inference": [
+    "Verified: living materials and robotic fabrication are active professional research topics.",
+    "Inferred: this supports regenerative fabrication demonstrations.",
+    "Unknown: code acceptance, durability, procurement and lifecycle economics."
+  ],
+  "significance": "Reinforces the regenerative fabrication thesis.",
+  "confidence": 0.9,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "opportunity",
+  "validFrom": "2026-09-29T00:00:00Z",
+  "validUntil": null,
+  "reviewBy": "2026-11-01T23:59:59-04:00",
+  "termsChangedAt": null,
+  "closedAt": null,
+  "closureRef": null,
+  "supersededBy": null,
+  "sourceRefs": [
+    "source:cmu-facade-tectonics:2026"
+  ],
+  "actorRefs": [
+    "actor:cmu-architecture",
+    "actor:researchers",
+    "actor:architects",
+    "actor:industry-leaders"
+  ],
+  "affectedRepositories": [
+    "qt314wink/fabricate",
+    "qt314wink/omni-loom",
+    "MelodicBloom/omni-loom-case-study",
+    "MelodicBloom/adriens-farm"
+  ],
+  "assumptions": [
+    "Computational fabrication demos can communicate value before deployment readiness."
+  ],
+  "knownLimitations": [
+    "Event participation is not procurement evidence."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}

@@ -1,0 +1,35 @@
+{
+  "ackId": "ack:opportunity:2026-10-03",
+  "runId": "run:nightly:2026-10-03",
+  "stage": "opportunity",
+  "status": "passed",
+  "startedAt": "2026-10-03T19:42:57-04:00",
+  "completedAt": "2026-10-03T19:42:57-04:00",
+  "inputs": [
+    "run:nightly:2026-10-03"
+  ],
+  "outputs": [
+    "four candidate opportunities"
+  ],
+  "checks": [
+    {
+      "name": "client-problem-boundary",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "no outreach or spending"
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence-runtime",
+    "method": "consultancy opportunity mapping",
+    "inputHashes": [
+      "run:nightly:2026-10-03"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

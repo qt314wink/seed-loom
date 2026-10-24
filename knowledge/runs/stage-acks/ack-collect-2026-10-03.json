@@ -1,0 +1,39 @@
+{
+  "ackId": "ack:collect:2026-10-03",
+  "runId": "run:nightly:2026-10-03",
+  "stage": "collect",
+  "status": "passed",
+  "startedAt": "2026-10-03T19:42:57-04:00",
+  "completedAt": "2026-10-03T19:42:57-04:00",
+  "inputs": [
+    "source:mongodb-agent-engine:2026",
+    "source:elevenlabs-tender:2026",
+    "source:volantis-vcsel:2026",
+    "source:mit-amphibian-drift:2026",
+    "source:cmu-facade-tectonics:2026"
+  ],
+  "outputs": [
+    "five sources"
+  ],
+  "checks": [
+    {
+      "name": "source-access",
+      "result": "pass"
+    }
+  ],
+  "governance": {
+    "allowedTransition": true,
+    "approvalRequired": true,
+    "boundaryNotes": [
+      "collection only"
+    ]
+  },
+  "provenance": {
+    "producer": "nightly-intelligence-runtime",
+    "method": "bounded web collection",
+    "inputHashes": [
+      "c077126fc67d0efcceb9e8c114c1e9c09f8fa3c8"
+    ]
+  },
+  "schemaVersion": "1.1.0"
+}

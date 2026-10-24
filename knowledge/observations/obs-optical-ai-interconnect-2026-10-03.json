@@ -1,0 +1,50 @@
+{
+  "id": "obs:optical-ai-interconnect:2026-10-03",
+  "type": "Observation",
+  "schemaVersion": "1.1.0",
+  "capturedAt": "2026-10-03T19:42:57-04:00",
+  "claim": "AI infrastructure funding is reaching optical interconnects aimed at the memory-bandwidth bottleneck.",
+  "verifiedFacts": [
+    "Reuters reported Volantis raised $88M.",
+    "Volantis is developing VCSEL optical interconnects for AI memory.",
+    "Reuters reported a target of up to 220 memory chips around a GPU."
+  ],
+  "inference": [
+    "Verified: investors are funding physical-layer AI infrastructure.",
+    "Inferred: optical and wave engineering broadens the demonstration vocabulary.",
+    "Unknown: commercial readiness and customer commitments."
+  ],
+  "significance": "Expands the technical thesis toward physical signal paths.",
+  "confidence": 0.86,
+  "evidenceMaturity": "source-backed",
+  "evidenceClass": "funding",
+  "validFrom": "2026-10-01T00:00:00Z",
+  "validUntil": null,
+  "reviewBy": "2026-10-31T23:59:59-04:00",
+  "termsChangedAt": null,
+  "closedAt": null,
+  "closureRef": null,
+  "supersededBy": null,
+  "sourceRefs": [
+    "source:volantis-vcsel:2026"
+  ],
+  "actorRefs": [
+    "actor:volantis",
+    "actor:venture-investors",
+    "actor:ai-hardware-builders"
+  ],
+  "affectedRepositories": [
+    "qt314wink/omni-loom",
+    "qt314wink/aether",
+    "qt314wink/fabricate",
+    "MelodicBloom/mandala-laser-system"
+  ],
+  "assumptions": [
+    "Small systems demonstrations can extract useful physical-infrastructure lessons."
+  ],
+  "knownLimitations": [
+    "Targets are not independent validation."
+  ],
+  "counterevidenceRefs": [],
+  "approvalState": "candidate"
+}
